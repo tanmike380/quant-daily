@@ -211,7 +211,6 @@ function dimClass(label) {
   if (!label) return 'dim-medium';
   const l = label.toLowerCase();
   if (l === 'strong' || l === 'leader') return 'dim-strong';
-  if (l === 'leader') return 'dim-leader';
   if (l === 'weak' || l === 'laggard' || l === 'concept_only') return 'dim-weak';
   return 'dim-medium';
 }
