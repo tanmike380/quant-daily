@@ -1,0 +1,854 @@
+{
+  "oneil_top_stock_selection_result": {
+    "trade_week": "2026-W21",
+    "source_candidate_count": 20,
+    "selected_count": 8,
+    "selected_top_8": [
+      {
+        "final_rank": 1,
+        "stock_code": "601138",
+        "stock_name": "工业富联",
+        "oneil_candidate_score": 92,
+        "selection_score": 238,
+        "final_bucket": "A",
+        "primary_theme": "光通信/AI算力",
+        "matched_theme_list": [
+          "光通信",
+          "人形机器人",
+          "消费电子",
+          "半导体",
+          "CPO",
+          "算力租赁"
+        ],
+        "holding_style": [
+          "中线投资"
+        ],
+        "external_research_need": {
+          "need_external_research": false,
+          "needed_dimension_list": [],
+          "reason_text": "CAN/SLIM research DB 已提供极为详尽的财报、订单、产业地位及资金流向数据，各维度证据充分支撑强候选判断，无需额外外部复核。"
+        },
+        "external_recheck_meta": {},
+        "oneil_canslim_verdict": {
+          "C_current_earnings": "strong",
+          "A_annual_growth": "strong",
+          "N_new_factor": "strong",
+          "S_supply_demand": "strong",
+          "L_leader_laggard": "leader",
+          "I_institutional_sponsorship": "strong",
+          "M_market_theme": "strong"
+        },
+        "why_selected": [
+          "M(主线)：命中光通信、算力、机器人等多条前排主线，共振类型为strong，且为核心业务相关，完美受益于全球AI算力建设大周期。",
+          "C(当前业绩)：最近一期营收增速56.51%，利润增速102.54%，扣非净利增速109.05%，毛利率与净利率双升，经营现金流极为充沛，业绩兑现确定性极高。",
+          "A(年度成长)：三年营收与净利CAGR均超20%，ROE单季年化达24%，属于AI算力驱动的结构性高质量成长，非一次性收益。",
+          "N(新变量)：CPO交换机已开始真实出货，解决AI算力集群网络传输瓶颈，AI服务器强劲增长，新业务已进入财报放量期而非纯概念。",
+          "S(供需承接)：日均成交额超180亿，换手率1.36%体现典型的大资金机构票特征，融资余额持续增加，大盘股资金承接力极强。",
+          "L(龙头地位)：全球领先的AI服务器与CPO交换机制造商，主线纯度极高，作为超大盘容量核心与定海神针，辨识度与地位无可争议。",
+          "I(机构认可)：融资余额大幅增加，单日获资金巨额净流入，多家券商深度覆盖并给予买入评级，聪明钱与大资金共振明显。"
+        ],
+        "growth_value_judgment": {
+          "future_demand_expansion": "strong",
+          "business_quality": "strong",
+          "scarcity_and_anti_involution": "strong",
+          "china_strategy_alignment": "medium",
+          "order_or_capacity_visibility": "strong"
+        },
+        "risk_judgment": {
+          "shareholder_reduction_risk": "low",
+          "valuation_or_overheat_risk": "medium",
+          "concept_noise_risk": "low",
+          "fundamental_miss_risk": "low",
+          "main_risk_text": "短期核心风险在于涨幅累积后的获利盘抛压（半日抛售24亿），以及海外地缘政治对AI芯片及服务器供应链的潜在制裁风险。"
+        },
+        "operation_view": {
+          "action": "wait_for_pullback",
+          "position_preference": "normal",
+          "entry_condition": "当前股价已有一定涨幅，建议等待缩量回调至20日均线附近或短期抛压释放后的企稳区间再行介入，大致在近5日调整低点至20日线区间。",
+          "invalid_condition": "若AI算力资本开支增速放缓，或海外制裁实质性落地导致供应链断裂，以及股价放量跌破关键支撑位，则逻辑失效。",
+          "stop_loss_suggestion": "-8%"
+        },
+        "evidence_gap": [
+          "CPO交换机及AI服务器的具体新增订单金额及核心客户名称未完全披露",
+          "新产能投放的具体规划与节奏未提供",
+          "新业务收入占比的具体精确数据缺失"
+        ]
+      },
+      {
+        "final_rank": 2,
+        "stock_code": "002156",
+        "stock_name": "通富微电",
+        "oneil_candidate_score": 85,
+        "selection_score": 202,
+        "final_bucket": "A",
+        "primary_theme": "光通信",
+        "matched_theme_list": [
+          "半导体",
+          "光通信",
+          "消费电子"
+        ],
+        "holding_style": [
+          "中线投资"
+        ],
+        "external_research_need": {
+          "need_external_research": false,
+          "needed_dimension_list": [],
+          "reason_text": "CAN/SLIM research DB 已提供充分的业绩、产业地位、资金流向和新变量证据，足以支撑入选判断；虽具体订单金额和先进封装收入占比缺失，但不影响其作为封测龙头及容量核心的中期逻辑确认。"
+        },
+        "external_recheck_meta": {},
+        "oneil_canslim_verdict": {
+          "C_current_earnings": "strong",
+          "A_annual_growth": "strong",
+          "N_new_factor": "strong",
+          "S_supply_demand": "strong",
+          "L_leader_laggard": "leader",
+          "I_institutional_sponsorship": "strong",
+          "M_market_theme": "strong"
+        },
+        "why_selected": [
+          "M(主线)：命中半导体、光通信、消费电子三大主线，共振类型为strong，主营核心相关，先进封装与CPO技术直接支撑算力与光通信主线，虽半导体退潮但光通信逻辑极强。",
+          "C(当前业绩)：最近一期净利润同比大增224.55%，扣非净利增长64.78%，经营现金流达9.42亿元远超净利润，利润质量极高，业绩强力支撑主线兑现。",
+          "A(年度成长)：近三年净利CAGR高达34.40%，属于AI算力驱动的结构性成长，毛利率趋势稳定，未来产能扩张与需求消化逻辑清晰，非一次性爆发。",
+          "N(新变量)：加码2.5D/3D先进封装技术解决算力芯片瓶颈，拟定增扩产开启资本开支新周期，且间接受益大客户大单，新因子极强且已进入商业化放量阶段。",
+          "S(供需承接)：日均成交额超110亿，融资余额近20日大增25.82亿，交易承接极强；业务端封测需求旺盛，供需双强，属于高质量供需共振。",
+          "L(龙头地位)：本土半导体封测绝对龙头，主线纯度清晰，在板块中充当容量核心与中军，大市值高成交辨识度极高，同主题比较中占据绝对代表地位。",
+          "I(机构认可)：融资资金大幅流入，多家券商深度覆盖并给予买入评级，龙虎榜显示机构与大资金参与度极深，聪明钱认可度极高。"
+        ],
+        "growth_value_judgment": {
+          "future_demand_expansion": "strong",
+          "business_quality": "strong",
+          "scarcity_and_anti_involution": "strong",
+          "china_strategy_alignment": "strong",
+          "order_or_capacity_visibility": "medium"
+        },
+        "risk_judgment": {
+          "shareholder_reduction_risk": "medium",
+          "valuation_or_overheat_risk": "high",
+          "concept_noise_risk": "low",
+          "fundamental_miss_risk": "low",
+          "main_risk_text": "短期涨幅过大带来的高位兑现与估值过热风险，以及半导体主线退潮引发的情绪杀跌风险；大基金后续减持预期亦构成股价压制。"
+        },
+        "operation_view": {
+          "action": "wait_for_pullback",
+          "position_preference": "normal",
+          "entry_condition": "等待股价缩量回调至20日均线附近或短期涨幅消化后的震荡企稳区，结合当时收盘价向下5%-10%的价格区间考虑低吸。",
+          "invalid_condition": "半导体主线全面退潮且光通信算力逻辑证伪，股价放量跌破20日均线关键支撑，或先进封装订单/需求明显不及预期。",
+          "stop_loss_suggestion": "-8%"
+        },
+        "evidence_gap": [
+          "缺少AMD等大客户具体新增订单金额及排产可见度数据",
+          "缺少先进封装业务具体收入占比及毛利率变动数据",
+          "大基金后续减持计划及时间表不明确"
+        ]
+      },
+      {
+        "final_rank": 3,
+        "stock_code": "600011",
+        "stock_name": "华能国际",
+        "oneil_candidate_score": 85,
+        "selection_score": 130,
+        "final_bucket": "A",
+        "primary_theme": "电力",
+        "matched_theme_list": [
+          "电力",
+          "绿电"
+        ],
+        "holding_style": [
+          "中线投资"
+        ],
+        "external_research_need": {
+          "need_external_research": false,
+          "needed_dimension_list": [],
+          "reason_text": "CAN/SLIM DB已提供足够的核心基本面、资金面和主线地位证据。虽然新能源收入占比等细节缺失，但不影响其作为火电龙头在迎峰度夏主线下的入选逻辑，无需额外外部复核。"
+        },
+        "external_recheck_meta": {},
+        "oneil_canslim_verdict": {
+          "C_current_earnings": "medium",
+          "A_annual_growth": "weak",
+          "N_new_factor": "medium",
+          "S_supply_demand": "strong",
+          "L_leader_laggard": "leader",
+          "I_institutional_sponsorship": "medium",
+          "M_market_theme": "strong"
+        },
+        "why_selected": [
+          "M(主线)：强共振。公司主营电力生产，完全契合当前排名第一的电力主线及绿电概念，属于core_business_related，无概念噪声，主线纯度极高。",
+          "C(当前业绩)：中等。虽然最近一期营收和净利润同比下滑，但毛利率和净利率均同比改善，且经营现金流极好（与利润比率达2.77），盈利质量高；迎峰度夏及煤价下行预期对下一季度业绩有支撑。",
+          "A(年度成长)：偏弱。近三年营收CAGR为负，ROE仅3.24%，属于周期性公用事业，不具备高成长特征，未来需求消化逻辑偏稳健而非高增长。",
+          "N(新变量)：中等。新因子主要体现在电价弹性与新能源转型，公募REITs盘活资产，迎峰度夏提供周期催化，已部分转化为盈利质量改善和现金流提升，但新能源收入占比仍需验证。",
+          "S(供需承接)：极强。近20日涨幅达28.36%且出现涨停，融资余额增加，资金承接极强；同时迎峰度夏电力供需偏紧预期强烈，业务需求确定性高，实现交易与业务供需双强。",
+          "L(龙头地位)：绝对龙头。国内最大的上市发电公司之一，主线纯度极高，5月29日涨停领涨火电板块，充当涨停先锋与情绪风向标，板块辨识度极高。",
+          "I(机构认可)：中等。券商研报认可高股息与盈利韧性，但龙虎榜显示机构与沪股通净卖出，游资与融资盘承接积极，机构资金有兑现迹象，聪明钱持股稳定性一般。"
+        ],
+        "growth_value_judgment": {
+          "future_demand_expansion": "medium",
+          "business_quality": "medium",
+          "scarcity_and_anti_involution": "medium",
+          "china_strategy_alignment": "medium",
+          "order_or_capacity_visibility": "medium"
+        },
+        "risk_judgment": {
+          "shareholder_reduction_risk": "low",
+          "valuation_or_overheat_risk": "medium",
+          "concept_noise_risk": "low",
+          "fundamental_miss_risk": "medium",
+          "main_risk_text": "煤价反弹侵蚀利润的风险；机构资金兑现带来的短期抛压；20日涨幅近30%存在短期技术过热后的回调风险。"
+        },
+        "operation_view": {
+          "action": "wait_for_pullback",
+          "position_preference": "normal",
+          "entry_condition": "缩量回调至10日或20日均线附近企稳时考虑介入，预计价格区间在7.80-8.20元之间。",
+          "invalid_condition": "煤价出现超预期大幅反弹，或迎峰度夏电力供需偏紧逻辑被证伪，或板块龙头地位被其他个股取代。",
+          "stop_loss_suggestion": "-8%"
+        },
+        "evidence_gap": [
+          "新能源业务收入占比具体数据及转型进度",
+          "近期是否有大额减持或解禁计划",
+          "迎峰度夏期间具体的排产和电量签约数据"
+        ]
+      },
+      {
+        "final_rank": 4,
+        "stock_code": "002436",
+        "stock_name": "兴森科技",
+        "oneil_candidate_score": 83,
+        "selection_score": 202,
+        "final_bucket": "A",
+        "primary_theme": "PCB",
+        "matched_theme_list": [
+          "PCB",
+          "光通信",
+          "半导体",
+          "人形机器人"
+        ],
+        "holding_style": [
+          "中线投资"
+        ],
+        "external_research_need": {
+          "need_external_research": false,
+          "needed_dimension_list": [],
+          "reason_text": "CAN/SLIM DB已提供足够的主线共振、资金流向、产业逻辑和财报基本面数据，足以支撑当前入选判断。虽然缺少具体订单金额，但产业趋势和龙头地位已确认，无需额外外部复核。"
+        },
+        "external_recheck_meta": {},
+        "oneil_canslim_verdict": {
+          "C_current_earnings": "medium",
+          "A_annual_growth": "medium",
+          "N_new_factor": "strong",
+          "S_supply_demand": "strong",
+          "L_leader_laggard": "leader",
+          "I_institutional_sponsorship": "strong",
+          "M_market_theme": "strong"
+        },
+        "why_selected": [
+          "M(主线)：命中PCB、光通信、半导体、人形机器人四大当前周级主线，共振类型为strong，且主营核心相关，产业链路径从AI算力到CPO再到PCB封装极其清晰，属于市场最强主线核心承载。",
+          "C(当前业绩)：最近一期扣非净利大增308.32%实现扭亏，营收增长15.10%，业绩出现反转迹象；但净利率仍为负且经营现金流净流出2.47亿，利润质量不佳，对主线兑现的支撑力度有限，给予medium。",
+          "A(年度成长)：近三年营收CAGR为10.35%，但净利CAGR为-36.44%，ROE仅0.35%极低，毛利率呈下降趋势；当前成长属于行业周期底部反转而非纯结构性增长，未来需求消化逻辑虽清晰但自身盈利质量偏弱，给予medium。",
+          "N(新变量)：mSAP工艺突破赋能高端IC载板放量，BT载板迎来强势增长期，且处于AI驱动的IC载板涨价周期；新因子直接解决AI算力芯片对高端载板的需求痛点，已从概念转化为业绩反转动力，给予strong。",
+          "S(供需承接)：日均成交额55.59亿，换手率10.80%，融资余额大增8.80亿，资金承接极强；业务端IC载板涨价潮持续，主营业务未来需求扩大预期明确；但短期涨幅近39%存在拥挤风险，综合给予strong。",
+          "L(龙头地位)：公司在IC载板领域具备技术壁垒，主线纯度高；5月29日午后PCB概念回暖时率先封涨停，属于板块涨停先锋与龙头，相比同板块个股基本面支撑更强，辨识度极高，给予leader。",
+          "I(机构认可)：近20日融资余额大幅增加8.80亿，5月29日主力资金净流入12.95亿，特大单净流入14.66亿；华鑫、东兴、开源等多家券商覆盖并给出买入评级，机构与大资金参与迹象明显，给予strong。"
+        ],
+        "growth_value_judgment": {
+          "future_demand_expansion": "strong",
+          "business_quality": "weak",
+          "scarcity_and_anti_involution": "medium",
+          "china_strategy_alignment": "strong",
+          "order_or_capacity_visibility": "insufficient_data"
+        },
+        "risk_judgment": {
+          "shareholder_reduction_risk": "insufficient_data",
+          "valuation_or_overheat_risk": "high",
+          "concept_noise_risk": "low",
+          "fundamental_miss_risk": "medium",
+          "main_risk_text": "短期涨幅过大导致估值与交易拥挤双重过热风险，且当前盈利质量（净利率负、现金流差）无法支撑高PE，若下季度业绩及现金流无法持续验证主线逻辑，将面临戴维斯双杀；同时半导体主线退潮可能拖累估值。"
+        },
+        "operation_view": {
+          "action": "wait_for_pullback",
+          "position_preference": "half",
+          "entry_condition": "等待短期缩量回调至20日均线附近或5日、10日均线纠缠企稳时介入，预计价格区间在近期涨幅的0.382回撤位附近（约对应20日均线支撑位）。",
+          "invalid_condition": "放量跌破20日均线且无法快速收回，或半导体主线持续退潮拖累PCB及封装分支，或下季度财报现金流未见改善且净利率无法转正。",
+          "stop_loss_suggestion": "-8%"
+        },
+        "evidence_gap": [
+          "mSAP工艺及BT载板的具体新订单金额与大客户验证",
+          "新产能投放进度与当前产能利用率数据",
+          "近期是否存在大股东减持或限售股解禁计划"
+        ]
+      },
+      {
+        "final_rank": 5,
+        "stock_code": "601179",
+        "stock_name": "中国西电",
+        "oneil_candidate_score": 82,
+        "selection_score": 138,
+        "final_bucket": "A",
+        "primary_theme": "电力",
+        "matched_theme_list": [
+          "电力",
+          "智能电网",
+          "特高压"
+        ],
+        "holding_style": [
+          "中线投资"
+        ],
+        "external_research_need": {
+          "need_external_research": false,
+          "needed_dimension_list": [],
+          "reason_text": "CAN/SLIM research DB 已提供充分的当前业绩、年度成长、新订单及行业地位线索，足以支撑主线逻辑与基本面判断，暂无需外部复核。"
+        },
+        "external_recheck_meta": {},
+        "oneil_canslim_verdict": {
+          "C_current_earnings": "strong",
+          "A_annual_growth": "strong",
+          "N_new_factor": "strong",
+          "S_supply_demand": "medium",
+          "L_leader_laggard": "capacity_core",
+          "I_institutional_sponsorship": "medium",
+          "M_market_theme": "strong"
+        },
+        "why_selected": [
+          "M(主线)：命中当前排名第一的电力主线，且与智能电网、特高压形成强共振，主营核心相关，无概念噪声，迎峰度夏与电网升级逻辑顺畅。",
+          "C(当前业绩)：一季度扣非净利增长26.33%，远超营收增速，盈利能力显著提升；经营现金流为负受行业季节性回款影响，属正常现象，券商预测未来EPS持续增长支撑业绩兑现。",
+          "A(年度成长)：近三年净利CAGR达27.51%，毛利率改善，属于电网投资加速带来的结构性成长，而非单纯周期反弹，未来需求消化逻辑清晰。",
+          "N(新变量)：“十五五”开局电网投资加速，公司近期斩获大额订单，出海与新领域拓展成为新增长点，新变量已从概念转化为实际订单支撑。",
+          "S(供需承接)：换手率4.13%符合机构票特征，120日涨幅翻倍说明长线资金沉淀；但近20日大单与融资净流出，短期资金承接一般，需等待筹码交换完成后的企稳。",
+          "L(龙头地位)：特高压输配电设备绝对龙头，主线纯度极高，在电力板块中扮演容量核心与中军角色，辨识度与行业地位稳固，抗内卷能力强。",
+          "I(机构认可)：东吴、国金等券商给予买入评级，认可其盈利改善与出海逻辑；但短期主力资金与融资盘呈流出状态，机构资金存在短期分歧，需等待资金面重新共振。"
+        ],
+        "growth_value_judgment": {
+          "future_demand_expansion": "strong",
+          "business_quality": "strong",
+          "scarcity_and_anti_involution": "strong",
+          "china_strategy_alignment": "strong",
+          "order_or_capacity_visibility": "strong"
+        },
+        "risk_judgment": {
+          "shareholder_reduction_risk": "insufficient_data",
+          "valuation_or_overheat_risk": "high",
+          "concept_noise_risk": "low",
+          "fundamental_miss_risk": "medium",
+          "main_risk_text": "短期估值偏高且涨幅较大，资金兑现意愿增强；电网投资进度若受宏观影响放缓，或特高压订单确认周期拉长，可能导致业绩兑现不及预期。"
+        },
+        "operation_view": {
+          "action": "wait_for_pullback",
+          "position_preference": "normal",
+          "entry_condition": "等待股价缩量回调至20日均线附近或关键支撑位企稳，且大单资金流出减缓或转为流入时考虑介入，当前收盘价向下3%-5%的震荡区间内分批低吸。",
+          "invalid_condition": "股价放量跌破60日均线，或电力主线整体退潮资金大幅出逃，或电网投资相关宏观数据严重不及预期。",
+          "stop_loss_suggestion": "-8%"
+        },
+        "evidence_gap": [
+          "缺乏新业务（如出海、新领域）收入占比的具体数据以评估第二增长曲线的贡献度。",
+          "缺乏明确的产能投放规划线索以验证未来订单的交付能力。",
+          "缺乏近期股东增减持及解禁的详细数据。"
+        ]
+      },
+      {
+        "final_rank": 6,
+        "stock_code": "000021",
+        "stock_name": "深科技",
+        "oneil_candidate_score": 80,
+        "selection_score": 160,
+        "final_bucket": "B",
+        "primary_theme": "电力+存储半导体",
+        "matched_theme_list": [
+          "电力",
+          "消费电子",
+          "半导体",
+          "智能电网",
+          "存储芯片"
+        ],
+        "holding_style": [
+          "中线投资"
+        ],
+        "external_research_need": {
+          "need_external_research": false,
+          "needed_dimension_list": [],
+          "reason_text": "CAN/SLIM DB已提供关键的14.7亿扩产公告及当前财报细节，足以支撑N和L的判断；虽缺具体客户订单细节，但扩产本身已构成强N因子，当前证据足以决定入选观察，无需额外外部复核。"
+        },
+        "external_recheck_meta": {},
+        "oneil_canslim_verdict": {
+          "C_current_earnings": "medium",
+          "A_annual_growth": "medium",
+          "N_new_factor": "strong",
+          "S_supply_demand": "strong",
+          "L_leader_laggard": "capacity_core",
+          "I_institutional_sponsorship": "strong",
+          "M_market_theme": "strong"
+        },
+        "why_selected": [
+          "M(主线)：命中电力(Rank1)、半导体(Rank4)、消费电子(Rank6)三大周级主线，且主营智能电表与存储封测与主线高度相关，形成强共振，非纯概念炒作。",
+          "C(当前业绩)：最近一期净利润增长35.35%，但扣非仅增14.93%，且毛利率和净利率双降，经营现金流覆盖度仅0.47，业绩兑现质量一般，需降权观察。",
+          "A(年度成长)：三年营收CAGR为-0.77%处于停滞，净利CAGR达19.89%但受周期复苏及非经常性损益影响，ROE仅1.83%绝对值偏低，成长质量偏弱，属于周期性成长。",
+          "N(新变量)：5月27日公告14.7亿高端存储封测扩产项目是强N因子，距上次扩产仅半年，直接对应AI算力与国产替代的产能瓶颈，重资产投入业务真实性强。",
+          "S(供需承接)：近20日涨幅达39.13%，日均成交68.46亿，融资余额暴增11.35亿，交易供需极旺；业务端存储与电表双重需求扩张，属于高质量供需共振，但需警惕过热。",
+          "L(龙头地位)：国内存储封测前排，欧洲智能电表优势地位，主线纯度高，属于存储与电力板块的容量核心，辨识度强，比纯概念股基本面支撑更实。",
+          "I(机构认可)：机构参与度达43.78%，融资盘大幅流入，大资金认可度强，但龙虎榜显示资金净卖出，存在短线资金兑现与中线资金接力的分歧。"
+        ],
+        "growth_value_judgment": {
+          "future_demand_expansion": "strong",
+          "business_quality": "medium",
+          "scarcity_and_anti_involution": "medium",
+          "china_strategy_alignment": "strong",
+          "order_or_capacity_visibility": "medium"
+        },
+        "risk_judgment": {
+          "shareholder_reduction_risk": "insufficient_data",
+          "valuation_or_overheat_risk": "high",
+          "concept_noise_risk": "medium",
+          "fundamental_miss_risk": "medium",
+          "main_risk_text": "短期涨幅过大（20日近40%）带来的高位获利盘兑现及融资盘踩踏风险；激进扩产可能导致资产负债率抬升及毛利率继续下滑的业绩雷风险。"
+        },
+        "operation_view": {
+          "action": "wait_for_pullback",
+          "position_preference": "half",
+          "entry_condition": "当前处于高位放量阶段，切勿追涨。需等待缩量回踩10日或20日均线企稳时再考虑介入，按当前价格测算，回调至18.5-19.5元区间具备较好盈亏比。",
+          "invalid_condition": "跌破20日均线且半导体/电力主线退潮；扩产项目进度不及预期或存储芯片价格周期见顶回落。",
+          "stop_loss_suggestion": "-8%"
+        },
+        "evidence_gap": [
+          "14.7亿扩产项目对应的具体大客户订单或意向协议缺失，产能消化确定性需验证；",
+          "毛利率下滑的具体原因及未来企稳节点不明；",
+          "近期是否存在大股东减持或解禁计划的数据缺失。"
+        ]
+      },
+      {
+        "final_rank": 7,
+        "stock_code": "002202",
+        "stock_name": "金风科技",
+        "oneil_candidate_score": 80,
+        "selection_score": 130,
+        "final_bucket": "B",
+        "primary_theme": "电力",
+        "matched_theme_list": [
+          "电力",
+          "智能电网",
+          "绿电"
+        ],
+        "holding_style": [
+          "中线投资"
+        ],
+        "external_research_need": {
+          "need_external_research": false,
+          "needed_dimension_list": [],
+          "reason_text": "CAN/SLIM DB已提供充分的业绩、订单、新业务逻辑及机构观点，核心逻辑闭环完整，无需额外外部复核。"
+        },
+        "external_recheck_meta": {},
+        "oneil_canslim_verdict": {
+          "C_current_earnings": "strong",
+          "A_annual_growth": "medium",
+          "N_new_factor": "strong",
+          "S_supply_demand": "weak",
+          "L_leader_laggard": "capacity_core",
+          "I_institutional_sponsorship": "strong",
+          "M_market_theme": "strong"
+        },
+        "why_selected": [
+          "M(主线)：命中当前排名第一的电力主线，且与智能电网、绿电形成强共振，主营高度相关，无噪声，主线逻辑极其坚实。",
+          "C(当前业绩)：最近一期营收与归母净利润同步高增超60%，扣非净利增长65.54%，毛利率与净利率双升，风机盈利拐点确认，下一季有在手订单强支撑。",
+          "A(年度成长)：近三年营收CAGR为16.29%，但净利CAGR仅5.19%，单季ROE绝对值偏低，成长属性更偏周期性回暖而非纯内生高成长，给予降权。",
+          "N(新变量)：风机毛利率迎拐点，绿醇新业务放量解决绿电消纳痛点，切入乌兰察布低碳算力基地源网荷储项目，新变量真实且具商业化路径，非纯概念。",
+          "S(供需承接)：短期资金供需偏弱，近20日融资余额流出1790万，大单净流出，股价20日跌8.19%、60日跌16.68%，交易承接明显不足，需等待资金面右侧确认。",
+          "L(龙头地位)：国内风电整机绝对龙头，主线纯度极高，在电力及绿电板块中起容量核心与中军作用，辨识度强，非短线情绪先锋。",
+          "I(机构认可)：东吴、国金等券商给予增持买入评级，公司实施3-5亿元回购注销且H股亦持续回购，彰显管理层与大资金强力看好。"
+        ],
+        "growth_value_judgment": {
+          "future_demand_expansion": "strong",
+          "business_quality": "medium",
+          "scarcity_and_anti_involution": "strong",
+          "china_strategy_alignment": "strong",
+          "order_or_capacity_visibility": "medium"
+        },
+        "risk_judgment": {
+          "shareholder_reduction_risk": "low",
+          "valuation_or_overheat_risk": "low",
+          "concept_noise_risk": "low",
+          "fundamental_miss_risk": "medium",
+          "main_risk_text": "电网消纳能力受限可能反噬风电装机需求；短期资金持续流出导致股价阴跌不止，缺乏承接。"
+        },
+        "operation_view": {
+          "action": "wait_for_pullback",
+          "position_preference": "normal",
+          "entry_condition": "等待股价企稳止跌，且出现放量阳线或缩量筑底信号，资金面出现明确承接时考虑介入，预计在近期调整低位支撑区间（参考20日均线附近或前期放量起涨点）分批建仓。",
+          "invalid_condition": "风机毛利率再次下滑，或风电装机数据大幅不及预期，或股价跌破关键支撑位且资金加速流出。",
+          "stop_loss_suggestion": "-10%"
+        },
+        "evidence_gap": [
+          "绿醇等新业务收入占比具体数据不明",
+          "新产能投放具体规划与时间表缺失"
+        ]
+      },
+      {
+        "final_rank": 8,
+        "stock_code": "002335",
+        "stock_name": "科华数据",
+        "oneil_candidate_score": 78,
+        "selection_score": 190,
+        "final_bucket": "B",
+        "primary_theme": "电力",
+        "matched_theme_list": [
+          "电力",
+          "光通信"
+        ],
+        "holding_style": [
+          "中线投资"
+        ],
+        "external_research_need": {
+          "need_external_research": false,
+          "needed_dimension_list": [],
+          "reason_text": "CAN/SLIM DB已提供充分的C/A/N基本面和主线逻辑证据，当前核心矛盾在于股价暴跌后的交易供需企稳，而非基本面证伪，暂无需外部复核。"
+        },
+        "external_recheck_meta": {},
+        "oneil_canslim_verdict": {
+          "C_current_earnings": "strong",
+          "A_annual_growth": "strong",
+          "N_new_factor": "strong",
+          "S_supply_demand": "medium",
+          "L_leader_laggard": "leader",
+          "I_institutional_sponsorship": "medium",
+          "M_market_theme": "strong"
+        },
+        "why_selected": [
+          "M(主线)：命中当前排名前二的电力与光通信双主线，且为核心业务相关，共振类型为strong，属于市场最强主线方向。",
+          "C(当前业绩)：最近一期营收增17.57%，净利增13.15%，毛利率与净利率双升，经营现金流1.21亿远超净利润7800万，业绩兑现真实且强劲。",
+          "A(年度成长)：三年利润CAGR达18.95%，属于智算中心与新能源的结构性成长，毛利率趋势改善，未来需求消化逻辑清晰。",
+          "N(新变量)：具备SST（固态变压器）技术储备解决智算中心高功率供电痛点，智算客户储备充分且新能源出海加速，新变量已从概念走向业务储备。",
+          "S(供需承接)：业务需求端强劲，但交易供需端存在隐患，近20日股价暴跌36.18%且大单资金持续净流出，卖压较重，需等待筹码交换完成。",
+          "L(龙头地位)：在智算中心供电与高端电源领域具备技术储备和客户基础，主线纯度高，属于电力与算力双主线的容量核心中军。",
+          "I(机构认可)：有东吴证券买入评级且融资余额增加，但近期大单资金呈现净流出，机构与大资金当前存在分歧，尚未形成向上共振。"
+        ],
+        "growth_value_judgment": {
+          "future_demand_expansion": "strong",
+          "business_quality": "strong",
+          "scarcity_and_anti_involution": "medium",
+          "china_strategy_alignment": "strong",
+          "order_or_capacity_visibility": "medium"
+        },
+        "risk_judgment": {
+          "shareholder_reduction_risk": "insufficient_data",
+          "valuation_or_overheat_risk": "high",
+          "concept_noise_risk": "low",
+          "fundamental_miss_risk": "low",
+          "main_risk_text": "短期资金踩踏出逃及估值消化风险。PE高达69倍，且股价处于剧烈下跌通道，趋势转弱后极易引发融资盘平仓或机构进一步减仓的负反馈。"
+        },
+        "operation_view": {
+          "action": "wait_for_pullback",
+          "position_preference": "small",
+          "entry_condition": "需等待股价缩量止跌企稳，且大单资金停止净流出并转为净流入。在底部形态构建完成前不可左侧重仓抄底，观察区间需根据企稳后的20日均线偏离度动态确认。",
+          "invalid_condition": "电力或AI算力主线逻辑退潮，或大单资金持续大幅净流出不回头，股价无法有效收复20日均线。",
+          "stop_loss_suggestion": "-10%"
+        },
+        "evidence_gap": [
+          "缺少SST（固态变压器）技术的具体订单转化金额与商业化时间表。",
+          "缺少智算中心新签订单的具体客户名称与合同金额验证。",
+          "缺少新产能投放规划及股东减持/解禁的具体时间表。"
+        ]
+      }
+    ],
+    "rejected_stocks": [
+      {
+        "stock_code": "600869",
+        "stock_name": "远东股份",
+        "oneil_candidate_score": 78,
+        "selection_score": 146,
+        "candidate_action": "backup",
+        "final_bucket": "B",
+        "primary_theme": "电力",
+        "external_research_need": {
+          "need_external_research": false,
+          "needed_dimension_list": [],
+          "reason_text": "外部复核已获取券商盈利预测与减持结果公告，核心证据缺口已填补。虽然中标金额仍不明确，但现有证据足以支撑当前判断，无需进一步外部复核。"
+        },
+        "external_recheck_meta": {
+          "status": "completed",
+          "used_external_research_signal": true,
+          "requested_reason_text": "控股股东近期多次减持且触及权益变动，需外部复核具体减持比例与剩余计划，这直接影响供给压力；5月7日中标重大项目需核实具体金额，以评估对冲高估值的能力。"
+        },
+        "main_reject_reason": "外部证据显示机构预测2026-2027年PE将大幅降至20-50倍，高TTM PE系利润低谷所致，估值消化逻辑通畅；且控股股东减持结果已公告，短期减持压力暂告一段落。但120日涨幅仍超250%，短期过热风险依然显著，且中标项目具体金额未披露，业绩弹性缺乏精确测算，直接入选顶级候选的风险收益比仍不匹配，需等待回调确认。",
+        "evidence_gap": [
+          "5月7日中标项目的具体金额及对年度营收的弹性测算",
+          "人形机器人线缆与液冷电缆等新业务的当前收入占比及放量节奏",
+          "控股股东后续是否有新的减持计划"
+        ]
+      },
+      {
+        "stock_code": "002185",
+        "stock_name": "华天科技",
+        "oneil_candidate_score": 72,
+        "selection_score": 238,
+        "candidate_action": "backup",
+        "final_bucket": "B",
+        "primary_theme": "光通信",
+        "external_research_need": {
+          "need_external_research": false,
+          "needed_dimension_list": [],
+          "reason_text": "外部研报与公告已验证N因子产能扩张与订单稳健，并揭示短期极端波动及股东持股变动风险，当前证据已足够判断其高位兑现风险，无需进一步外部复核。"
+        },
+        "external_recheck_meta": {
+          "status": "completed",
+          "used_external_research_signal": true,
+          "requested_reason_text": "CAN/SLIM DB显示公司在2.5D/3D先进封装及存储封测领域有新产能投放，但具体新增订单金额、大客户名称及新业务收入占比数据缺失，这些证据对于验证N因子是否真正转化为当期收入至关重要，将显著影响其作为核心弹性股的入选权重。"
+        },
+        "main_reject_reason": "外部证据显示短期股价极端波动（涨停后跌停，单日换手超24%），筹码结构严重恶化，游资化特征明显；同时控股股东持股变动触及1%整数倍及重组问询函延期增加不确定性，高净值客户此时介入风险极大，不符合稳健要求，需降权处理。",
+        "evidence_gap": [
+          "控股股东持股变动触及1%整数倍的具体性质（增持/减持）及后续计划缺失",
+          "重组问询函延期的具体原因及对重组进程的影响缺失"
+        ]
+      },
+      {
+        "stock_code": "600498",
+        "stock_name": "烽火通信",
+        "oneil_candidate_score": 63,
+        "selection_score": 138,
+        "candidate_action": "backup",
+        "final_bucket": "B",
+        "primary_theme": "光通信",
+        "external_research_need": {
+          "need_external_research": false,
+          "needed_dimension_list": [],
+          "reason_text": "外部证据已补充券商盈利预测与资金流数据，虽未提供直接订单公告，但结合一季报与新闻已能判断当前业绩兑现期未至，无需进一步外部复核。"
+        },
+        "external_recheck_meta": {
+          "status": "completed",
+          "used_external_research_signal": true,
+          "requested_reason_text": "当前C和A维度极弱，需外部证据确认是否有新增大订单或产能投放能扭转利润下滑和现金流恶化的趋势，否则高估值无法支撑主线逻辑。"
+        },
+        "main_reject_reason": "外部证据未能填补业绩与订单缺口，反而确认了资金大幅流出和间接订单的现实。C和A同时为weak，当前利润与现金流无法匹配高估值；券商给出的2026年PE估值仍在70倍左右，并不具备估值优势；同时360亿信贷额度与交易异常波动增加了杠杆与投机风险，不符合CAN SLIM对当季盈利强劲和资金承接的要求，因此不能作为最优先候选。",
+        "evidence_gap": [
+          "缺乏公司直接的新增大额订单或客户验证（算力订单仅为间接）",
+          "缺乏360亿信贷额度的具体用途与对财务费用的影响评估",
+          "缺乏新业务收入占比及产能投放的具体数据"
+        ]
+      },
+      {
+        "stock_code": "603459",
+        "stock_name": "红板科技",
+        "oneil_candidate_score": 62,
+        "selection_score": 162,
+        "candidate_action": "backup",
+        "final_bucket": "B",
+        "primary_theme": "PCB",
+        "external_research_need": {
+          "need_external_research": false,
+          "needed_dimension_list": [],
+          "reason_text": "外部证据已补充，华金证券无盈利预测且无评级，公告确认竞拍仍在进行中且无新订单，龙虎榜证实纯游资炒作与高换手，证据已足够判断其当前缺乏中线机构基本面支撑，无需进一步外部复核。"
+        },
+        "external_recheck_meta": {
+          "status": "completed",
+          "used_external_research_signal": true,
+          "requested_reason_text": "当前CAN/SLIM DB显示下季度订单证据不足，且公司正在竞拍江西志浩股权，该外延扩张的落地节奏和对业绩的增厚需要外部研报验证；同时次新股需确认是否有解禁或减持压力，这将显著影响其估值承接。"
+        },
+        "main_reject_reason": "外部证据不仅未能弥补基本面缺口，反而证实了最差的情况：无新订单落地、无机构盈利预测、无评级，且龙虎榜数据暴露出典型的游资高位出货特征（连续多日20%+换手率且股价高位回落）。当前142倍的PE估值完全缺乏基本面与机构资金的支撑，对于高净值客户而言，这种纯筹码博弈的标的风险收益比极差，不适合作为顶级候选。竞拍江西志浩股权仍在进行中，整合效果存疑。",
+        "evidence_gap": [
+          "竞拍江西志浩股权的最终结果及并表时间表",
+          "机构调研活动（05-15）的具体纪要内容，是否有订单或产能指引",
+          "限售股解禁时间表及股东减持计划",
+          "下季度业绩预告或新增大额订单证据"
+        ]
+      },
+      {
+        "stock_code": "002929",
+        "stock_name": "润建股份",
+        "oneil_candidate_score": 58,
+        "selection_score": 230,
+        "candidate_action": "reject",
+        "final_bucket": "reject",
+        "primary_theme": "光通信",
+        "external_research_need": {
+          "need_external_research": true,
+          "needed_dimension_list": [
+            "new_order_or_customer",
+            "current_earnings"
+          ],
+          "reason_text": "当前C和A维度极弱，唯一支撑逻辑是算力新业务的放量预期，但输入中缺乏具体订单金额、排产节奏及新业务收入占比数据。若外部证据能证明新订单可在一两个季度内彻底扭转财报颓势，则需上调评分；否则当前基本面完全无法支撑主线逻辑。"
+        },
+        "external_recheck_meta": {},
+        "main_reject_reason": "C和A双弱是核心减分项。PE高达570倍，净利润大幅下滑且经营现金流严重恶化，当前基本面完全无法支撑其双主线龙头的估值溢价。这属于典型的情绪博弈和资金炒作，而非基本面驱动的成长股。一旦主线情绪退潮或新业务订单无法兑现，将面临极大的戴维斯双杀风险，不符合高净值客户慎重考核的要求。",
+        "evidence_gap": [
+          "算力业务的具体订单金额、排产节奏与收入确认周期缺失",
+          "新业务收入占比及毛利率变化数据缺失",
+          "经营现金流大幅恶化的具体原因及改善预期不明",
+          "H股上市再融资对当前供给端的具体影响未知"
+        ]
+      },
+      {
+        "stock_code": "603773",
+        "stock_name": "沃格光电",
+        "oneil_candidate_score": 55,
+        "selection_score": 222,
+        "candidate_action": "reject",
+        "final_bucket": "reject",
+        "primary_theme": "PCB/玻璃基板",
+        "external_research_need": {
+          "need_external_research": false,
+          "needed_dimension_list": [],
+          "reason_text": "CAN/SLIM DB已提供充分的负面证据（业绩严重亏损、无机构覆盖、无订单证据、证监会立案），足以支撑淘汰决策，无需额外外部复核。"
+        },
+        "external_recheck_meta": {},
+        "main_reject_reason": "C/A/N/I四个核心维度全面弱势，当前业绩严重亏损，成长质量差，新变量缺乏实质订单/产能证据且被证监会立案风险对冲，机构资金完全不认可。虽然M主线共振极强且L具备高弹性辨识度，但这只反映了短期的游资情绪炒作，缺乏基本面支撑的中端期成长逻辑，极易在主线退潮或情绪反转时出现大幅回撤，不符合高净值客户的稳健成长股筛选标准。",
+        "evidence_gap": [
+          "缺乏玻璃基板在先进封装领域的新增订单、客户验证及产能投放具体数据",
+          "缺乏证监会立案调查的具体事由及潜在处罚影响评估",
+          "缺乏机构调研记录及券商盈利预测以验证未来业绩拐点"
+        ]
+      },
+      {
+        "stock_code": "002579",
+        "stock_name": "中京电子",
+        "oneil_candidate_score": 55,
+        "selection_score": 202,
+        "candidate_action": "reject",
+        "final_bucket": "reject",
+        "primary_theme": "PCB",
+        "external_research_need": {
+          "need_external_research": false,
+          "needed_dimension_list": [],
+          "reason_text": "CAN/SLIM DB已充分暴露其C/A/N/I维度的硬伤（微利、营收停滞、无实质新变量、无机构认可），外部研报或公告难以在短期内扭转其基本面弱势与高估值现状，无需额外复核即可判定淘汰。"
+        },
+        "external_recheck_meta": {},
+        "main_reject_reason": "C/A/N/I四项核心基本面维度均显弱势，当前PE高达383倍且处于微利状态，业绩无法兑现；新因子纯属概念映射无实质订单支撑；资金面呈现游资主导、大单流出的短线博弈特征。符合'C和A同时weak'及'N weak且无重新定价逻辑'的淘汰倾向，不适合高净值客户的中期成长持仓，面临概念退潮杀估值风险。",
+        "evidence_gap": [
+          "缺乏AI终端及机器人相关FPC/HDI产品的具体订单金额与收入占比数据",
+          "缺乏新产能投放进度与消化能力的明确证据",
+          "缺乏机构调研与券商研报对行业地位与技术壁垒的权威评估"
+        ]
+      },
+      {
+        "stock_code": "002957",
+        "stock_name": "科瑞技术",
+        "oneil_candidate_score": 55,
+        "selection_score": 162,
+        "candidate_action": "reject",
+        "final_bucket": "reject",
+        "primary_theme": "光通信",
+        "external_research_need": {
+          "need_external_research": false,
+          "needed_dimension_list": [],
+          "reason_text": "公司自身公告已明确澄清半导体与光模块业务收入占比较小，CAN/SLIM DB证据已足够证伪其主线逻辑，无需外部复核即可判定为概念炒作。"
+        },
+        "external_recheck_meta": {},
+        "main_reject_reason": "核心逻辑被公司自身公告证伪。公司明确提示半导体与光模块业务收入规模及占比小，属于典型的概念炒作，不符合CAN SLIM对新变量(N)必须转化为实质业务贡献的要求。同时，年度成长(A)弱，扣非增速(C)一般，当前上涨完全依赖资金情绪(S/I)，一旦主线退潮或情绪转弱，极易面临A杀风险。坚决淘汰。",
+        "evidence_gap": [
+          "缺乏光模块与半导体业务的真实订单金额、客户验证及产能投放数据，且公司公告已暗示该部分证据短期内无法兑现。"
+        ]
+      },
+      {
+        "stock_code": "600330",
+        "stock_name": "天通股份",
+        "oneil_candidate_score": 38,
+        "selection_score": 134,
+        "candidate_action": "reject",
+        "final_bucket": "reject",
+        "primary_theme": "PCB",
+        "external_research_need": {
+          "need_external_research": false,
+          "needed_dimension_list": [],
+          "reason_text": "CAN/SLIM DB 已提供充分的当前业绩、年度成长和减持风险证据，C/A/N 三个核心维度均判定为 weak，且存在实控人减持和高位拥挤风险，基本面逻辑完全无法支撑当前主线炒作，足以做出淘汰决策，无需外部复核。"
+        },
+        "external_recheck_meta": {},
+        "main_reject_reason": "C和A同时weak，严重违背CAN SLIM核心原则；N因子weak且无实质性新变量，仅靠概念炒作；实控人一致行动人减持释放负面信号；120日涨幅高达239.52%且换手率极高，属于典型的高位拥挤短线投机，基本面与估值严重背离，一旦主线退潮或情绪反转，极易遭遇戴维斯双杀。",
+        "evidence_gap": [
+          "实控人一致行动人减持的完整计划及后续进展",
+          "新产能投放进度及产能利用率数据",
+          "下游PCB和消费电子客户的具体订单验证"
+        ]
+      },
+      {
+        "stock_code": "000062",
+        "stock_name": "深圳华强",
+        "oneil_candidate_score": 35,
+        "selection_score": 133,
+        "candidate_action": "reject",
+        "final_bucket": "reject",
+        "primary_theme": "半导体",
+        "external_research_need": {
+          "need_external_research": false,
+          "needed_dimension_list": [],
+          "reason_text": "CAN/SLIM DB已提供充分的负面证据（L为laggard、A/N/S/I全面弱势、现金流恶化、概念拼凑、控股股东减持预期），足以做出明确淘汰决策，无需额外外部复核。"
+        },
+        "external_recheck_meta": {},
+        "main_reject_reason": "公司属于产业链分销环节，利润率薄且缺乏壁垒；L为后排跟风，A/N/S/I全面弱势；概念极多且杂，属于典型的概念拼凑；经营现金流与利润严重不匹配，且存在控股股东减持风险，不符合中端期成长股标准，坚决淘汰。",
+        "evidence_gap": [
+          "下一季度订单及业绩预告线索不足",
+          "控股股东可交换债券发行的具体进度与影响评估"
+        ]
+      },
+      {
+        "stock_code": "000586",
+        "stock_name": "汇源通信",
+        "oneil_candidate_score": 25,
+        "selection_score": 190,
+        "candidate_action": "reject",
+        "final_bucket": "reject",
+        "primary_theme": "光通信",
+        "external_research_need": {
+          "need_external_research": false,
+          "needed_dimension_list": [],
+          "reason_text": "CAN/SLIM DB 已提供充分的业绩亏损、治理动荡及资金流出证据，足以判定该股基本面和机构认可度完全不满足中线成长股标准，无需外部复核。"
+        },
+        "external_recheck_meta": {},
+        "main_reject_reason": "尽管M维度强共振命中双主线，但C/A双弱且主业持续亏损，N维度出现控制权变更及司法执行等严重治理隐患，L为后排跟风股，I无机构认可。属于典型的'强主线、弱基本面、差治理'的蹭概念标的，无法支撑中线成长逻辑，坚决淘汰。",
+        "evidence_gap": [
+          "控制权变更后的具体经营战略及资产注入预期不明确",
+          "股东司法强制执行的具体股数与减持节奏缺乏详细数据"
+        ]
+      },
+      {
+        "stock_code": "603220",
+        "stock_name": "中贝通信",
+        "oneil_candidate_score": 25,
+        "selection_score": 157,
+        "candidate_action": "reject",
+        "final_bucket": "reject",
+        "primary_theme": "光通信",
+        "external_research_need": {
+          "need_external_research": false,
+          "needed_dimension_list": [],
+          "reason_text": "CAN/SLIM DB 已提供充分的财务恶化、资金流出及业务真实性争议证据，各项维度均指向明确淘汰，无需外部复核即可做出坚决拒绝的判断。"
+        },
+        "external_recheck_meta": {},
+        "main_reject_reason": "核心业务与主线仅为部分相关且存在明显概念拼凑，C/A/N/S/I全线弱势，L为后排跟风。基本面严重恶化且现金流枯竭，同时面临供应商中寅贸易争议等重大信任风险，完全不符合大牛股早期特征，坚决淘汰。",
+        "evidence_gap": [
+          "算力租赁业务真实的收入占比与商业实质",
+          "供应商中寅贸易争议的最终定性与审计意见影响"
+        ]
+      }
+    ],
+    "selection_summary": {
+      "method_text": "先对每只股票独立进行 O'Neil/CAN SLIM 单股评审，再按模型单股评分、候选动作和主线 selection_score 做稳定排序，取前 8 只。",
+      "data_source_policy": "最终层默认只读取最新 stock_selection_result 与 can_slim_research_db；外部研报/公告库只作为 CAN/SLIM 调研层的上游证据。",
+      "selected_stock_name_list": [
+        "工业富联",
+        "通富微电",
+        "华能国际",
+        "兴森科技",
+        "中国西电",
+        "深科技",
+        "金风科技",
+        "科华数据"
+      ],
+      "rejected_stock_name_list": [
+        "远东股份",
+        "华天科技",
+        "烽火通信",
+        "红板科技",
+        "润建股份",
+        "沃格光电",
+        "中京电子",
+        "科瑞技术",
+        "天通股份",
+        "深圳华强",
+        "汇源通信",
+        "中贝通信"
+      ],
+      "summary_text": "本轮从 20 只主线候选中筛出 8 只 O'Neil/CAN SLIM 高优先级候选。"
+    },
+    "source_result_date": "2026-06-01",
+    "stock_selection_result_file": "output/stock_selection_result_2026-06-01.json",
+    "investment_thesis_memory_update_meta": {
+      "memory_lib_file": "references/investment_thesis_memory_lib.json",
+      "before_count": 0,
+      "after_count": 20,
+      "added_count": 20
+    }
+  }
+}

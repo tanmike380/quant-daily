@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>大A智能体 - O'Neil Top 8 选股结果</title>
+<style>
+:root {
+  --bg: #0d1117;
+  --card: #161b22;
+  --border: #30363d;
+  --text: #e6edf3;
+  --text2: #8b949e;
+  --green: #3fb950;
+  --red: #f85149;
+  --yellow: #d29922;
+  --blue: #58a6ff;
+  --purple: #bc8cff;
+  --orange: #f0883e;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+h1 { font-size: 1.5em; margin-bottom: 4px; }
+h2 { font-size: 1.15em; margin-bottom: 12px; color: var(--blue); }
+.subtitle { color: var(--text2); font-size: 0.85em; margin-bottom: 20px; }
+.section { margin-bottom: 28px; }
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+.rank-badge {
+  background: var(--blue);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.8em;
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.rank-badge.rank-1 { background: #f0883e; }
+.rank-badge.rank-2 { background: #8b949e; }
+.rank-badge.rank-3 { background: #a0522d; }
+.stock-name { font-size: 1.1em; font-weight: 600; }
+.stock-code { color: var(--text2); font-size: 0.8em; }
+.score-badge {
+  font-size: 0.75em;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+.score-high { background: rgba(63,185,80,0.15); color: var(--green); }
+.score-mid { background: rgba(210,153,34,0.15); color: var(--yellow); }
+.score-low { background: rgba(248,81,73,0.15); color: var(--red); }
+.bucket-A { background: rgba(63,185,80,0.15); color: var(--green); }
+.bucket-B { background: rgba(210,153,34,0.15); color: var(--yellow); }
+.bucket-C { background: rgba(248,81,73,0.15); color: var(--red); }
+.theme-tag {
+  display: inline-block;
+  font-size: 0.7em;
+  padding: 2px 8px;
+  border-radius: 10px;
+  background: rgba(88,166,255,0.12);
+  color: var(--blue);
+  margin: 2px 2px;
+}
+.canslim-row {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin: 8px 0;
+}
+.canslim-dim {
+  font-size: 0.7em;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+.dim-strong { background: rgba(63,185,80,0.15); color: var(--green); }
+.dim-medium { background: rgba(210,153,34,0.15); color: var(--yellow); }
+.dim-weak { background: rgba(248,81,73,0.15); color: var(--red); }
+.dim-leader { background: rgba(63,185,80,0.15); color: var(--green); }
+.dim-laggard { background: rgba(248,81,73,0.15); color: var(--red); }
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 10px;
+}
+.detail-item {
+  font-size: 0.78em;
+  color: var(--text2);
+}
+.detail-item strong { color: var(--text); font-weight: 500; }
+.why-list { margin-top: 6px; }
+.why-item {
+  font-size: 0.78em;
+  color: var(--text2);
+  padding: 3px 0 3px 12px;
+  position: relative;
+}
+.why-item::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--blue);
+}
+.risk-text { color: var(--red); font-size: 0.78em; margin-top: 4px; }
+.operation-box {
+  background: rgba(88,166,255,0.06);
+  border-left: 3px solid var(--blue);
+  padding: 8px 12px;
+  margin-top: 8px;
+  font-size: 0.78em;
+}
+.operation-box .label { color: var(--blue); font-weight: 600; }
+.rejected-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.78em;
+}
+.rejected-table th {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text2);
+  font-weight: 500;
+}
+.rejected-table td {
+  padding: 6px 8px;
+  border-bottom: 1px solid rgba(48,54,61,0.5);
+  color: var(--text2);
+}
+.rejected-table tr:hover td { color: var(--text); }
+.theme-bar {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.theme-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 10px 14px;
+  flex: 1;
+  min-width: 150px;
+}
+.theme-rank { color: var(--orange); font-weight: 700; font-size: 0.85em; }
+.theme-name { font-weight: 600; margin: 2px 0; }
+.theme-type { font-size: 0.7em; color: var(--text2); }
+.event-list { margin-top: 8px; }
+.event-item {
+  display: flex;
+  gap: 10px;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(48,54,61,0.3);
+  font-size: 0.78em;
+}
+.event-date { color: var(--orange); font-weight: 600; white-space: nowrap; min-width: 75px; }
+.event-name { color: var(--text); }
+.event-themes { color: var(--blue); }
+.footer { text-align: center; color: var(--text2); font-size: 0.7em; margin-top: 30px; padding: 20px 0; border-top: 1px solid var(--border); }
+.collapsible { cursor: pointer; user-select: none; }
+.collapsible:hover { opacity: 0.8; }
+.collapsible-content { display: none; }
+.collapsible-content.open { display: block; }
+.collapse-icon { font-size: 0.7em; color: var(--text2); margin-left: 4px; }
+@media (max-width: 600px) {
+  .detail-grid { grid-template-columns: 1fr; }
+  body { padding: 12px; }
+}
+</style>
+</head>
+<body>
+
+<div id="app">加载中...</div>
+
+<script>
+const DATA_URL = 'oneil_top_stock_selection_result.json';
+const FUTURE_URL = 'future_events.json';
+const THEME_URL = 'final_result.json';
+
+async function loadJSON(url) {
+  try {
+    const r = await fetch(url);
+    if (!r.ok) return null;
+    return await r.json();
+  } catch { return null; }
+}
+
+function dimClass(label) {
+  if (!label) return 'dim-medium';
+  const l = label.toLowerCase();
+  if (l === 'strong' || l === 'leader') return 'dim-strong';
+  if (l === 'leader') return 'dim-leader';
+  if (l === 'weak' || l === 'laggard' || l === 'concept_only') return 'dim-weak';
+  return 'dim-medium';
+}
+
+function bucketClass(bucket) {
+  if (bucket === 'A') return 'bucket-A';
+  if (bucket === 'B') return 'bucket-B';
+  return 'bucket-C';
+}
+
+function scoreClass(score) {
+  if (score >= 80) return 'score-high';
+  if (score >= 60) return 'score-mid';
+  return 'score-low';
+}
+
+function esc(s) {
+  if (!s) return '';
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function renderCANSLIM(verdict) {
+  if (!verdict) return '';
+  const dims = [
+    ['C', verdict.C_current_earnings],
+    ['A', verdict.A_annual_growth],
+    ['N', verdict.N_new_factor],
+    ['S', verdict.S_supply_demand],
+    ['L', verdict.L_leader_laggard],
+    ['I', verdict.I_institutional_sponsorship],
+    ['M', verdict.M_market_theme],
+  ];
+  return '<div class="canslim-row">' + dims.map(([k,v]) =>
+    `<span class="canslim-dim ${dimClass(v)}">${k}: ${esc(v)}</span>`
+  ).join('') + '</div>';
+}
+
+function renderStock(stock) {
+  const rank = stock.final_rank || 0;
+  const verdict = stock.oneil_canslim_verdict || {};
+  const why = stock.why_selected || [];
+  const risk = stock.risk_judgment || {};
+  const op = stock.operation_view || {};
+  const themes = stock.matched_theme_list || [];
+  const gaps = stock.evidence_gap || [];
+
+  return `
+  <div class="card">
+    <div class="card-header">
+      <span class="rank-badge ${rank <= 3 ? 'rank-' + rank : ''}">${rank}</span>
+      <span class="stock-name">${esc(stock.stock_name)}</span>
+      <span class="stock-code">${esc(stock.stock_code)}</span>
+      <span class="score-badge ${scoreClass(stock.oneil_candidate_score)}">O'Neil ${stock.oneil_candidate_score}</span>
+      <span class="score-badge ${bucketClass(stock.final_bucket)}">Bucket ${stock.final_bucket}</span>
+      <span class="score-badge" style="background:rgba(188,140,255,0.12);color:var(--purple)">SS ${stock.selection_score}</span>
+    </div>
+    <div style="margin-bottom:6px">${themes.map(t => `<span class="theme-tag">${esc(t)}</span>`).join('')}
+      <span class="theme-tag" style="background:rgba(240,136,62,0.12);color:var(--orange)">${esc(stock.primary_theme)}</span>
+    </div>
+    ${renderCANSLIM(verdict)}
+    <div class="collapsible" onclick="toggleCollapse(this)">
+      <strong style="font-size:0.85em">入选理由</strong><span class="collapse-icon">▶</span>
+    </div>
+    <div class="collapsible-content">
+      <div class="why-list">${why.map(w => `<div class="why-item">${esc(w)}</div>`).join('')}</div>
+      ${risk.main_risk_text ? `<div class="risk-text">⚠ ${esc(risk.main_risk_text)}</div>` : ''}
+      <div class="operation-box">
+        <span class="label">操作:</span> ${esc(op.action)} &nbsp;|&nbsp;
+        <span class="label">止损:</span> ${esc(op.stop_loss_suggestion)}<br>
+        <span class="label">入场:</span> ${esc(op.entry_condition)}<br>
+        <span class="label">失效:</span> ${esc(op.invalid_condition)}
+      </div>
+      ${gaps.length ? `<div style="margin-top:6px;font-size:0.72em;color:var(--yellow)">证据缺口: ${gaps.map(g => esc(g)).join('；')}</div>` : ''}
+    </div>
+  </div>`;
+}
+
+function renderRejected(stocks) {
+  if (!stocks || !stocks.length) return '';
+  return `
+  <div class="section">
+    <h2 class="collapsible" onclick="toggleCollapse(this)">淘汰候选 (${stocks.length})<span class="collapse-icon">▶</span></h2>
+    <div class="collapsible-content">
+      <table class="rejected-table">
+        <tr><th>股票</th><th>O'Neil分</th><th>SS</th><th>主线</th><th>淘汰原因</th></tr>
+        ${stocks.map(s => `<tr>
+          <td>${esc(s.stock_name)}<br><span style="color:var(--text2)">${esc(s.stock_code)}</span></td>
+          <td>${s.oneil_candidate_score || '-'}</td>
+          <td>${s.selection_score || '-'}</td>
+          <td>${esc(s.primary_theme)}</td>
+          <td style="max-width:300px">${esc(s.main_reject_reason)}</td>
+        </tr>`).join('')}
+      </table>
+    </div>
+  </div>`;
+}
+
+function renderThemes(themeData) {
+  if (!themeData) return '';
+  const themes = themeData.theme_list || [];
+  if (!themes.length) return '';
+  return `
+  <div class="section">
+    <h2>周度主线</h2>
+    <div class="theme-bar">
+      ${themes.map(t => `<div class="theme-card">
+        <div class="theme-rank">#${t.rank_no}</div>
+        <div class="theme-name">${esc(t.theme_name)}</div>
+        <div class="theme-type">${esc(t.strength_level)}</div>
+      </div>`).join('')}
+    </div>
+  </div>`;
+}
+
+function renderFutureEvents(futureData) {
+  if (!futureData) return '';
+  const root = futureData.future_events_scan_result;
+  if (!root) return '';
+  const events = root.event_list || [];
+  if (!events.length) return '';
+  return `
+  <div class="section">
+    <h2>下月前瞻事件 (${esc(root.target_month)})</h2>
+    <div class="event-list">
+      ${events.map(e => `<div class="event-item">
+        <span class="event-date">${esc(e.event_date)}</span>
+        <span class="event-name">${esc(e.event_name)}</span>
+        <span class="event-themes">${(e.catalyzed_theme_list||[]).map(t => esc(t.catalyzed_theme_name)).join('、')}</span>
+      </div>`).join('')}
+    </div>
+    <div style="margin-top:6px;font-size:0.75em;color:var(--text2)">${esc(root.summary_text)}</div>
+  </div>`;
+}
+
+function toggleCollapse(el) {
+  const content = el.nextElementSibling;
+  const icon = el.querySelector('.collapse-icon');
+  if (content.classList.contains('open')) {
+    content.classList.remove('open');
+    if (icon) icon.textContent = '▶';
+  } else {
+    content.classList.add('open');
+    if (icon) icon.textContent = '▼';
+  }
+}
+
+async function render() {
+  const [data, futureData, themeData] = await Promise.all([
+    loadJSON(DATA_URL),
+    loadJSON(FUTURE_URL),
+    loadJSON(THEME_URL),
+  ]);
+
+  const app = document.getElementById('app');
+
+  if (!data) {
+    app.innerHTML = '<p style="color:var(--red)">无法加载数据，请确认 JSON 文件是否存在。</p>';
+    return;
+  }
+
+  const root = data.oneil_top_stock_selection_result || {};
+  const selected = root.selected_top_8 || [];
+  const rejected = root.rejected_stocks || [];
+  const summary = root.selection_summary || {};
+  const sourceDate = root.source_result_date || '';
+
+  let html = `
+    <h1>O'Neil / CAN SLIM Top 8</h1>
+    <div class="subtitle">
+      数据日期: ${esc(sourceDate)} &nbsp;|&nbsp; 交易周: ${esc(root.trade_week)} &nbsp;|&nbsp;
+      候选池: ${root.source_candidate_count}只 → 入选: ${root.selected_count}只
+    </div>`;
+
+  html += renderThemes(themeData);
+  html += renderFutureEvents(futureData);
+
+  html += `<div class="section"><h2>入选 Top 8</h2>`;
+  html += selected.map(s => renderStock(s)).join('');
+  html += `</div>`;
+
+  html += renderRejected(rejected);
+
+  if (summary.summary_text) {
+    html += `<div class="section"><div class="card" style="font-size:0.8em;color:var(--text2)">${esc(summary.summary_text)}</div></div>`;
+  }
+
+  html += `<div class="footer">大A智能体 · O'Neil/CAN SLIM 研究系统 · 数据仅供参考，不构成投资建议</div>`;
+
+  app.innerHTML = html;
+}
+
+render();
+</script>
+</body>
+</html>

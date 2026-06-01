@@ -1,0 +1,191 @@
+{
+  "future_events_scan_result": {
+    "target_month": "2026-06",
+    "scan_date": "2026-05-29",
+    "event_list": [
+      {
+        "event_date": "2026-06-01",
+        "event_name": "宇树科技科创板IPO上会",
+        "event_type": "ipo_listing",
+        "event_detail_text": "宇树科技科创板IPO将于6月1日上会审核，人形机器人独角兽登陆资本市场。",
+        "catalyzed_theme_list": [
+          {
+            "catalyzed_theme_name": "人形机器人",
+            "is_current_theme_match": false,
+            "catalysis_strength": "strong",
+            "catalysis_reason_text": "人形机器人龙头IPO上会，直接催化板块情绪和估值锚。"
+          }
+        ],
+        "before_days": 5,
+        "after_days": 2,
+        "source_text": "交易所公告"
+      },
+      {
+        "event_date": "2026-06-01",
+        "event_name": "英伟达GTC Taipei 2026大会",
+        "event_type": "product_launch",
+        "event_detail_text": "英伟达6月1日至4日举办GTC Taipei 2026，黄仁勋6月1日主题演讲，揭晓驱动新一代AI的突破性技术进展。",
+        "catalyzed_theme_list": [
+          {
+            "catalyzed_theme_name": "光通信",
+            "is_current_theme_match": true,
+            "catalysis_strength": "strong",
+            "catalysis_reason_text": "新一代AI芯片和算力架构发布，直接拉动高速光模块和CPO需求预期。"
+          },
+          {
+            "catalyzed_theme_name": "半导体设备",
+            "is_current_theme_match": true,
+            "catalysis_strength": "medium",
+            "catalysis_reason_text": "先进封装和芯片技术路线更新，间接催化国产设备材料替代逻辑。"
+          }
+        ],
+        "before_days": 5,
+        "after_days": 3,
+        "source_text": "Nvidia官方预告"
+      },
+      {
+        "event_date": "2026-06-01",
+        "event_name": "住友电本上调半导体封装材料价格",
+        "event_type": "other",
+        "event_detail_text": "住友电本上调半导体封装用环氧树脂成形材料价格，涨幅约10%-20%，6月1日起执行新价格。",
+        "catalyzed_theme_list": [
+          {
+            "catalyzed_theme_name": "半导体设备",
+            "is_current_theme_match": true,
+            "catalysis_strength": "medium",
+            "catalysis_reason_text": "海外封装材料涨价，利好国产替代和先进封装材料方向。"
+          }
+        ],
+        "before_days": 3,
+        "after_days": 2,
+        "source_text": "住友电本公告"
+      },
+      {
+        "event_date": "2026-06-02",
+        "event_name": "台北电脑展Computex 2026",
+        "event_type": "industry_conference",
+        "event_detail_text": "Computex 2026于6月2日至5日举行，全球PC和消费电子产业链核心厂商参展。",
+        "catalyzed_theme_list": [
+          {
+            "catalyzed_theme_name": "消费电子",
+            "is_current_theme_match": true,
+            "catalysis_strength": "strong",
+            "catalysis_reason_text": "新品发布和技术趋势展示，直接催化消费电子和PC产业链。"
+          },
+          {
+            "catalyzed_theme_name": "半导体设备",
+            "is_current_theme_match": true,
+            "catalysis_strength": "medium",
+            "catalysis_reason_text": "PC芯片和AI处理器更新路线间接催化半导体板块。"
+          }
+        ],
+        "before_days": 5,
+        "after_days": 3,
+        "source_text": "Computex官方日程"
+      },
+      {
+        "event_date": "2026-06-08",
+        "event_name": "LME调整铅和锌合约涨跌幅限制",
+        "event_type": "other",
+        "event_detail_text": "LME将铅和锌直接合约单日涨跌幅限制从15%下调至12%，6月8日起生效。",
+        "catalyzed_theme_list": [
+          {
+            "catalyzed_theme_name": "有色金属",
+            "is_current_theme_match": false,
+            "catalysis_strength": "weak",
+            "catalysis_reason_text": "交易规则调整可能影响铅锌品种的波动率和套利行为，间接影响有色板块。"
+          }
+        ],
+        "before_days": 3,
+        "after_days": 2,
+        "source_text": "LME公告"
+      },
+      {
+        "event_date": "2026-06-11",
+        "event_name": "SpaceX IPO定价",
+        "event_type": "ipo_listing",
+        "event_detail_text": "SpaceX最早将于6月11日确定首次公开发行价格，股票6月12日上市。",
+        "catalyzed_theme_list": [
+          {
+            "catalyzed_theme_name": "商业航天",
+            "is_current_theme_match": false,
+            "catalysis_strength": "strong",
+            "catalysis_reason_text": "全球航天龙头上市，直接催化A股商业航天和卫星互联网板块情绪。"
+          }
+        ],
+        "before_days": 5,
+        "after_days": 3,
+        "source_text": "公开信息"
+      },
+      {
+        "event_date": "2026-06-11",
+        "event_name": "2026年世界杯开幕",
+        "event_type": "other",
+        "event_detail_text": "2026年世界杯6月11日至7月19日举行，全球体育盛事。",
+        "catalyzed_theme_list": [
+          {
+            "catalyzed_theme_name": "体育产业",
+            "is_current_theme_match": false,
+            "catalysis_strength": "medium",
+            "catalysis_reason_text": "世界杯开幕催化体育概念、传媒、啤酒、彩票等短期主题。"
+          }
+        ],
+        "before_days": 5,
+        "after_days": 5,
+        "source_text": "FIFA官方"
+      },
+      {
+        "event_date": "2026-06-18",
+        "event_name": "美联储FOMC利率决议",
+        "event_type": "macro_event",
+        "event_detail_text": "美联储FOMC公布利率决议和经济预期摘要，主席召开货币政策新闻发布会。",
+        "catalyzed_theme_list": [
+          {
+            "catalyzed_theme_name": "有色金属",
+            "is_current_theme_match": false,
+            "catalysis_strength": "medium",
+            "catalysis_reason_text": "利率决议影响全球流动性预期和美元走势，间接影响有色金属定价。"
+          }
+        ],
+        "before_days": 3,
+        "after_days": 2,
+        "source_text": "美联储日程"
+      },
+      {
+        "event_date": "2026-06-18",
+        "event_name": "2026国际汽车及供应链博览会(香港)",
+        "event_type": "industry_conference",
+        "event_detail_text": "中汽协6月18日至22日举办国际汽车及供应链博览会，聚焦新能源汽车产业链。",
+        "catalyzed_theme_list": [
+          {
+            "catalyzed_theme_name": "新能源汽车",
+            "is_current_theme_match": false,
+            "catalysis_strength": "medium",
+            "catalysis_reason_text": "展会聚焦新能源车和供应链，催化智能化和零部件方向。"
+          }
+        ],
+        "before_days": 5,
+        "after_days": 3,
+        "source_text": "中汽协公告"
+      },
+      {
+        "event_date": "2026-06-23",
+        "event_name": "2026大连夏季达沃斯论坛",
+        "event_type": "macro_event",
+        "event_detail_text": "2026大连夏季达沃斯论坛6月23日至25日举办，聚焦全球经济和科技议题。",
+        "catalyzed_theme_list": [
+          {
+            "catalyzed_theme_name": "人形机器人",
+            "is_current_theme_match": false,
+            "catalysis_strength": "weak",
+            "catalysis_reason_text": "达沃斯通常讨论AI和前沿科技，可能间接催化机器人等新兴方向。"
+          }
+        ],
+        "before_days": 3,
+        "after_days": 2,
+        "source_text": "达沃斯官方"
+      }
+    ],
+    "summary_text": "2026年6月前瞻事件：科技线（GTC Taipei+Computex催化光通信/消费电子/半导体）、IPO线（宇树科技催化人形机器人、SpaceX催化商业航天）、产业线（汽车博览会催化新能源车）、宏观线（美联储议息+达沃斯）。科技催化最密集在6月第1-2周。"
+  }
+}
