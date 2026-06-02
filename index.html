@@ -212,10 +212,19 @@ const THEME_URL = 'final_result.json';
 
 async function loadJSON(url) {
   try {
-    const r = await fetch(url);
-    if (!r.ok) return null;
-    return await r.json();
-  } catch { return null; }
+    const separator = url.includes('?') ? '&' : '?';
+    const bustUrl = url + separator + '_t=' + Date.now();
+    const r = await fetch(bustUrl);
+    if (!r.ok) {
+      console.error('fetch failed:', url, r.status, r.statusText);
+      return null;
+    }
+    const data = await r.json();
+    return data;
+  } catch (e) {
+    console.error('loadJSON error:', url, e);
+    return null;
+  }
 }
 
 function dimClass(label) {
