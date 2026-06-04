@@ -132,14 +132,24 @@ h2 { font-size: 1.15em; margin-bottom: 12px; color: var(--blue); }
   font-size: 0.78em;
 }
 .operation-box .label { color: var(--blue); font-weight: 600; }
-.stoploss-box {
+.stoploss-box,
+.open-dip-box {
   background: rgba(210,153,34,0.06);
   border-left: 3px solid var(--yellow);
   padding: 8px 12px;
   margin-top: 8px;
   font-size: 0.78em;
 }
-.stoploss-box .label { color: var(--yellow); font-weight: 600; }
+.stoploss-box {
+  background: rgba(63,185,80,0.06);
+  border-left-color: var(--green);
+}
+.stoploss-box .label { color: var(--green); font-weight: 600; }
+.open-dip-box {
+  background: rgba(248,81,73,0.06);
+  border-left-color: var(--red);
+}
+.open-dip-box .label { color: var(--red); font-weight: 600; }
 .freshness-ok { color: var(--green); }
 .freshness-warn { color: var(--yellow); }
 .rejected-table {
@@ -215,14 +225,16 @@ const INLINE_ONEIL = {
         "final_rank": 1,
         "stock_code": "601138",
         "stock_name": "工业富联",
-        "oneil_candidate_score": 92,
-        "selection_score": 174,
+        "oneil_candidate_score": 85,
+        "selection_score": 208,
         "final_bucket": "A",
-        "primary_theme": "CPO",
+        "primary_theme": "光通信",
         "matched_theme_list": [
+          "光通信",
+          "消费电子",
+          "PCB",
           "CPO",
-          "AI PC",
-          "先进封装"
+          "算力租赁"
         ],
         "holding_style": [
           "中线投资"
@@ -230,46 +242,46 @@ const INLINE_ONEIL = {
         "external_research_need": {
           "need_external_research": false,
           "needed_dimension_list": [],
-          "reason_text": "CAN/SLIM research DB 已提供充分的当前业绩、年度成长、新变量及资金供需数据，历史投资记忆也提供了完整的模式参考与风险校正，当前证据足以支撑入选判断，无需额外外部复核。"
+          "reason_text": "CAN/SLIM DB 已提供充分的财报、产业逻辑和资金面数据，足以支撑入选判断。虽然具体CPO订单金额和新产能线索存在证据缺口，但不影响其作为主线龙头的核心逻辑确立，仅影响估值上限和节奏把握，暂不需要外部复核。"
         },
         "external_recheck_meta": {},
         "oneil_canslim_verdict": {
           "C_current_earnings": "strong",
           "A_annual_growth": "strong",
           "N_new_factor": "strong",
-          "S_supply_demand": "strong",
+          "S_supply_demand": "medium",
           "L_leader_laggard": "leader",
-          "I_institutional_sponsorship": "strong",
+          "I_institutional_sponsorship": "medium",
           "M_market_theme": "strong"
         },
         "why_selected": [
-          "M(主线)：公司同时命中CPO(排名1)、AI PC(排名6)和先进封装(排名3)三大周级确认主线，共振类型为strong，且业务相关度为核心主营，无概念噪声，主线逻辑极其纯正且具备多主线共振防御力。",
-          "C(当前业绩)：最近一期营收增速56.52%，净利润翻倍增长102.55%，扣非增速109.05%，EPS同比增长103.85%，远超25%强增长门槛；毛利率与净利率双升；经营现金流是净利润的2.36倍，盈利质量极高，当前业绩强力兑现主线逻辑。",
-          "A(年度成长)：近三年营收CAGR为20.83%，净利CAGR为20.69%，属于由AI产业趋势驱动的结构性成长，未来需求消化确定性极强，非一次性收益或周期反弹，成长质量极高。",
+          "M(主线)：公司同时命中光通信(排名1)、消费电子(排名4)、PCB(排名6)三大周级主线，并与CPO、算力租赁高度共振，共振类型为strong，主营核心相关且无概念噪声，主线逻辑极其纯正。",
+          "C(当前业绩)：最近一期营收增速56.52%，净利润翻倍增长102.55%，扣非增速109.05%，EPS增速103.85%远超25%门槛；毛利率与净利率双升；经营现金流是净利润的2.36倍，盈利质量极高，当前业绩强力兑现主线逻辑。",
+          "A(年度成长)：近三年营收CAGR为20.83%，净利CAGR为20.69%，属于由AI产业趋势驱动的结构性成长，ROE单季年化约24%处于优秀水平，未来需求消化确定性极强，非一次性收益。",
           "N(新变量)：CPO交换机已开始出货，AI服务器与高速交换机成为新增长引擎，直接解决算力集群带宽与功耗瓶颈，新业务已从概念完全转化为真实财报利润，属于强业务相关的新增长阶段。",
-          "S(供需承接)：近20日日均成交额约199亿元，换手率1.42%呈现典型机构票特征，资金承接极强；业务层面AI服务器与CPO需求爆发，量价齐升，供需双重强劲，但需防范短期高位资金分歧。",
-          "L(龙头地位)：公司是全球算力基础设施龙头，在AI服务器和高速交换机占据核心市场份额，主线纯度极高，是算力与光通信板块的绝对容量核心与定海神针，具备显著的龙头属性。",
-          "I(机构认可)：融资余额近期虽有下降但大单净流入明显，单日曾获主力净流入超35亿元；多家券商覆盖并给出买入评级及高盈利预测，成交额持续居市场前列，机构与聪明钱高度认可。"
+          "S(供需承接)：业务供需极强，AI服务器与CPO需求爆发量价齐升；但交易层面近20日涨幅达28.49%，融资余额近20日下降约3.93亿，短期高位资金分歧明显，结合历史记忆中高位兑现教训，供需质量从强降为中。",
+          "L(龙头地位)：公司是全球算力基础设施龙头，在AI服务器和高速交换机占据核心市场份额，主线纯度极高，是光通信与算力板块的绝对容量核心与定海神针，具备显著的龙头属性。",
+          "I(机构认可)：多家券商覆盖并给出买入评级，单日曾获主力大幅净流入；但历史记忆提示短期高位时所谓的机构强可能成为获利盘兑现的借口，近期融资余额下降显示大资金分歧，机构认可度降为中。"
         ],
         "growth_value_judgment": {
           "future_demand_expansion": "strong",
-          "business_quality": "strong",
+          "business_quality": "medium",
           "scarcity_and_anti_involution": "strong",
           "china_strategy_alignment": "strong",
           "order_or_capacity_visibility": "medium"
         },
         "risk_judgment": {
           "shareholder_reduction_risk": "low",
-          "valuation_or_overheat_risk": "medium",
+          "valuation_or_overheat_risk": "high",
           "concept_noise_risk": "low",
           "fundamental_miss_risk": "medium",
-          "main_risk_text": "核心风险在于短期高位过热与资金分歧带来的获利回吐压力；基本面上需警惕全球AI算力资本开支周期见顶、大客户砍单或海外制裁加剧导致业绩下修的风险；同时代工模式毛利率若无法持续提升可能压制估值上限。"
+          "main_risk_text": "短期高位过热与资金分歧风险：近20日涨幅较大且融资余额下降，历史记忆表明此阶段极易遭遇获利回吐；此外，大客户集中度风险及海外制裁对供应链的具体影响程度需持续跟踪。"
         },
         "operation_view": {
           "action": "wait_for_pullback",
           "position_preference": "normal",
           "entry_condition": "由于当前处于短期高位且资金有分歧，需等待股价回调至20日均线附近缩量企稳，或放量突破近期高点压力位形成右侧确认后再考虑介入，切忌高位追涨。建议在当日收盘价下浮5%-8%的区间寻找左侧支撑或右侧放量确认点。",
-          "invalid_condition": "若下一季度财报AI服务器增速显著放缓，或CPO交换机出货量不及预期，或算力/半导体主线整体退潮资金大幅流出，则候选逻辑失效。",
+          "invalid_condition": "若下一季度财报AI服务器增速显著放缓，或CPO交换机出货量不及预期，或算力/光通信主线整体退潮资金大幅流出，则候选逻辑失效。",
           "stop_loss_suggestion": "-8%"
         },
         "evidence_gap": [
@@ -286,7 +298,7 @@ const INLINE_ONEIL = {
           "method_label": "daily_low_open_recovery",
           "reason_text": "近157个交易日样本中，日内最低点触发-3.0% 后，收盘重新回到开盘价的概率为0.0，未能收回开盘价的概率为1.0；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.4336%，期望值参考为0.2836%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
           "status": "ready",
-          "source_result_date": "2026-06-03"
+          "source_result_date": "2026-06-04"
         }
       },
       {
@@ -294,14 +306,14 @@ const INLINE_ONEIL = {
         "stock_code": "002156",
         "stock_name": "通富微电",
         "oneil_candidate_score": 85,
-        "selection_score": 184,
-        "final_bucket": "A",
-        "primary_theme": "先进封装",
+        "selection_score": 153,
+        "final_bucket": "B",
+        "primary_theme": "半导体设备",
         "matched_theme_list": [
-          "CPO",
+          "半导体设备",
+          "消费电子",
           "先进封装",
-          "AI PC",
-          "半导体"
+          "存储半导体"
         ],
         "holding_style": [
           "中线投资"
@@ -309,54 +321,56 @@ const INLINE_ONEIL = {
         "external_research_need": {
           "need_external_research": false,
           "needed_dimension_list": [],
-          "reason_text": "外部证据已补充了定增进展、券商盈利预测及最新资金流向，前期证据缺口已得到有效填补，CAN/SLIM DB结合外部证据已足够支撑当前判断。"
+          "reason_text": "外部证据已补充券商盈利预测、定增审核进度及最新资金流向，核心证据缺口已大幅填补。虽然先进封装精确收入占比仍缺，但券商深度研报与定增问询函回复已能间接印证其放量趋势，当前证据足以支撑入选与风险判断。"
         },
         "external_recheck_meta": {
           "status": "completed",
           "used_external_research_signal": true,
-          "requested_reason_text": "CAN/SLIM DB已提供核心基本面和资金信号，但先进封装业务的具体收入占比及毛利率水平数据缺失，无法精确评估新变量对盈利的实际拉动；定增方案的具体落地时间、解禁安排及对股本的摊薄影响细节尚不明确；控股股东担保及质押的具体风险敞口缺乏量化数据。这些将显著影响估值判断和入场时机。"
+          "requested_reason_text": "当前CAN/SLIM DB缺乏先进封装业务的具体收入占比及毛利率数据，无法精确评估N因子对盈利的实际拉动；定增方案的具体落地时间、发行价及股本摊薄影响尚不明确；国家大基金后续减持计划与节奏缺乏量化数据，对筹码面压力难以评估，这些将显著影响入场时机与风险收益比。"
         },
         "oneil_canslim_verdict": {
           "C_current_earnings": "medium",
           "A_annual_growth": "medium",
           "N_new_factor": "strong",
-          "S_supply_demand": "strong",
+          "S_supply_demand": "medium",
           "L_leader_laggard": "capacity_core",
           "I_institutional_sponsorship": "strong",
           "M_market_theme": "strong"
         },
         "why_selected": [
-          "M(主线)：同时命中CPO(排名1)、先进封装(排名3)和AI PC(排名6)三大周级主线，产业链路径清晰指向AI算力先进封装，主营核心相关且无概念噪声，主线共振极强。",
-          "C(当前业绩)：最近一期归母净利同比大增224.55%，营收增22.80%，经营现金流是净利2.86倍；外部券商研报确认'业绩重回增长快车道'，2026年一致预期EPS在0.91-1.24元间，业绩兑现逻辑清晰，但毛利率同比下滑仍制约评级，维持medium。",
-          "A(年度成长)：近三年净利CAGR达34.40%，具备AI算力拉动的结构性成长特征；外部券商预测2026-2028年EPS复合增速超25%，成长性获机构背书，但ROE绝对值偏低且毛利率呈下降趋势，维持medium。",
-          "N(新变量)：加码2.5D/3D先进封装解决AI算力瓶颈，AMD获Meta大单使公司间接受益；外部公告显示6月2日公司发布定增募集说明书修订稿及审核问询函回复，证实定增扩产正在积极推进落地，新因子已转化为实质扩产动作，维持strong。",
-          "S(供需承接)：外部新闻显示6月3日该股涨停，获主力资金净流入超30亿元，特大单净流入42.3亿元，主力资金净流入率达28.83%；这扭转了前期主力流出的担忧，显示高质量供需共振，由medium上调至strong。",
-          "L(龙头地位)：国内封测头部企业，大基金持股，主线纯度高；6月3日涨停引领板块，在半导体封测板块中充当容量核心与中军角色，辨识度极高，维持capacity_core。",
-          "I(机构认可)：开源、国信、群益、中邮等多家券商给予买入/增持评级，并提供明确盈利预测支撑；6月3日龙虎榜及资金流向显示机构与主力资金大幅净流入，聪明钱认可度从分化转为共振做多，由medium上调至strong。"
+          "M(主线)：同时命中排名第2的半导体设备与第4的消费电子两大周级主线，并与先进封装、存储半导体等高景气参考主题形成强共振，产业链路径清晰指向AI算力，主营核心相关且无概念噪声，主线共振极强。",
+          "C(当前业绩)：最近一期归母净利同比大增224.55%，EPS大增224.55%，经营现金流极好（是净利2.86倍）；但扣非增速仅64.78%，且毛利率和净利率同比下滑，业绩催化存在结构性瑕疵，降级为medium。",
+          "A(年度成长)：近三年净利CAGR达34.40%，具备AI算力拉动的结构性成长特征；开源、国信等券商给出2026-2028年明确盈利预测，2027年PE预期降至26-43倍区间，成长性获机构背书；但ROE绝对值极低，毛利率呈下降趋势，成长质量有待验证，维持medium。",
+          "N(新变量)：加码2.5D/3D先进封装解决AI算力瓶颈，AMD获Meta大单使公司间接受益；最新公告显示定增已收到审核中心意见告知函，扩产逻辑从规划进入落地前夕，新因子重新定价逻辑强劲，维持strong。",
+          "S(供需承接)：流通市值约959亿，日均成交123.36亿，流动性极佳；6月3日龙虎榜显示机构与深股通大举扫货，承接力极强；但当前换手率依然高达11.63%，短期筹码大换手，博弈剧烈，一旦主线分化极易引发踩踏，维持medium。",
+          "L(龙头地位)：本土半导体封测龙头，大基金持股，主线纯度高；历史记忆纠正其属于板块容量核心或强跟风，定为capacity_core。",
+          "I(机构认可)：6月3日龙虎榜显示机构净买入第一，深股通净买入8.28亿，聪明钱态度从前期分化转为强烈共振做多；多家券商给予买入评级并发布深度研报，机构认可度显著提升，上调为strong。"
         ],
         "growth_value_judgment": {
           "future_demand_expansion": "strong",
           "business_quality": "medium",
           "scarcity_and_anti_involution": "medium",
           "china_strategy_alignment": "strong",
-          "order_or_capacity_visibility": "strong"
+          "order_or_capacity_visibility": "medium"
         },
         "risk_judgment": {
           "shareholder_reduction_risk": "medium",
           "valuation_or_overheat_risk": "high",
           "concept_noise_risk": "low",
           "fundamental_miss_risk": "medium",
-          "main_risk_text": "短期涨停后估值与交易过热风险加剧；定增方案落地后带来的潜在解禁与股本摊薄压力；毛利率下滑是否反映成本承压或竞争加剧仍需中报验证。"
+          "main_risk_text": "1. 定增落地在即带来的股本摊薄与资金面恶化风险（已收到审核中心意见告知函）；2. 天量成交与高换手带来的短期交易拥挤及高位踩踏风险；3. 毛利率持续下滑反映的成本端承压或竞争加剧风险。"
         },
         "operation_view": {
           "action": "wait_for_pullback",
           "position_preference": "half",
-          "entry_condition": "6月3日涨停后不宜追高，需等待缩量回踩企稳信号。若主线强势延续，可在股价回调至10日均线附近（参考65-68元区间）且换手率回落至8%以下时低吸；若主线分化，则需等待更深幅回调至60日均线附近确认支撑。",
-          "invalid_condition": "半导体/算力主线退潮，AMD等大客户订单不及预期，毛利率持续大幅下滑，或定增引发大规模减持及资金面恶化，股价跌破关键支撑位且无法收回。",
+          "entry_condition": "6月3日天量涨停后，短期处于高位加速段，不宜追涨。需等待缩量企稳信号（如换手率从11%以上回落至6%以下且单日成交额缩至60-80亿级别），或半导体/算力主线重新放量上攻时，可考虑沿5日或10日均线附近低吸，价格区间参考5日均线正负3%以内。",
+          "invalid_condition": "半导体/算力主线退潮，AMD等大客户订单不及预期，毛利率持续大幅下滑，大基金宣布大规模减持，或定增正式落地引发资金面恶化，股价跌破关键支撑位且无法收回。",
           "stop_loss_suggestion": "-8%"
         },
         "evidence_gap": [
-          "先进封装业务的具体收入占比及毛利率水平数据依然缺失，无法精确评估新变量对盈利的实际拉动弹性。"
+          "先进封装业务的具体收入占比及毛利率水平数据依然缺失，无法精确评估新变量对盈利的实际拉动。",
+          "定增方案的具体发行价、发行时点及对股本的摊薄影响细节尚待最终注册稿明确。",
+          "国家大基金后续减持计划与节奏缺乏明确数据，对筹码面压力难以量化。"
         ],
         "intraday_stop_loss_signal": {
           "stock_code": "002156",
@@ -367,22 +381,21 @@ const INLINE_ONEIL = {
           "method_label": "daily_low_open_recovery",
           "reason_text": "近157个交易日样本中，日内最低点触发-4.0% 后，收盘重新回到开盘价的概率为0.087，未能收回开盘价的概率为0.913；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.7741%，期望值参考为-0.3759%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
           "status": "ready",
-          "source_result_date": "2026-06-03"
+          "source_result_date": "2026-06-04"
         }
       },
       {
         "final_rank": 3,
-        "stock_code": "002436",
-        "stock_name": "兴森科技",
-        "oneil_candidate_score": 82,
-        "selection_score": 200,
-        "final_bucket": "A",
-        "primary_theme": "CPO",
+        "stock_code": "002185",
+        "stock_name": "华天科技",
+        "oneil_candidate_score": 78,
+        "selection_score": 140,
+        "final_bucket": "B",
+        "primary_theme": "半导体设备",
         "matched_theme_list": [
-          "CPO",
-          "先进封装",
-          "PCB",
-          "半导体"
+          "半导体设备",
+          "消费电子",
+          "先进封装"
         ],
         "holding_style": [
           "中线投资"
@@ -390,49 +403,205 @@ const INLINE_ONEIL = {
         "external_research_need": {
           "need_external_research": false,
           "needed_dimension_list": [],
-          "reason_text": "外部研报已确认新变量逻辑及远期盈利预测，公告验证回购进展且无减持风险，新闻验证主力资金流出；虽FCBGA具体订单、产能利用率及现金流改善的量化证据仍缺，但核心主线逻辑与风险已被验证，无需再次请求外部复核。"
+          "reason_text": "CAN/SLIM DB 及历史投资记忆已提供充分的业绩、新产能投资、估值及筹码结构风险信息，当前证据足以支撑入选/淘汰及操作判断，无需额外外部复核。"
+        },
+        "external_recheck_meta": {},
+        "oneil_canslim_verdict": {
+          "C_current_earnings": "medium",
+          "A_annual_growth": "weak",
+          "N_new_factor": "strong",
+          "S_supply_demand": "medium",
+          "L_leader_laggard": "capacity_core",
+          "I_institutional_sponsorship": "medium",
+          "M_market_theme": "strong"
+        },
+        "why_selected": [
+          "M(主线)：命中半导体设备(排名2)和消费电子(排名4)两大核心周级主线，共振类型为strong，主营核心相关且无概念噪声，产业链路径清晰指向先进封装，主线逻辑极硬。",
+          "C(当前业绩)：最近一期扣非净利增速113.77%，营收增速34.49%，经营现金流极佳，主线逻辑正在兑现；但净利率仅1.57%极低且未改善，利润高增受低基数影响大，盈利质量需持续验证，给予medium。",
+          "A(年度成长)：近三年营收CAGR为13.08%尚可，但净利CAGR为-1.96%，ROE仅0.49%，属于典型的周期底部反弹而非结构性持续成长；但历史记忆提示在强M和强N驱动下A弱可被容忍，不构成致命缺陷。",
+          "N(新变量)：2.5D/3D先进封装技术及30亿存储封测新产能投资与AI算力主线高度相关，新因子已从概念走向实质资本开支，是重新定价的核心驱动，给予strong。",
+          "S(供需承接)：业务需求端扩张确定性高；但交易层面近期出现极端波动（历史记忆提示5月底巨量换手后跌停），短期获利盘兑现与供给压力极大，大单净流出，筹码结构恶化，给予medium但风险极高。",
+          "L(龙头地位)：国内头部封测企业，主线纯度清晰，属于半导体板块的容量核心或中军，资金承载能力强，虽非绝对龙头但产业地位稳固，辨识度高。",
+          "I(机构认可)：近期有券商买入/增持评级，融资余额增加；但当前PE(89.62倍)远超券商预测上限(42.4倍)，估值透支明显，大单整体呈净流出，聪明钱认可度中等且存在分歧。"
+        ],
+        "growth_value_judgment": {
+          "future_demand_expansion": "strong",
+          "business_quality": "medium",
+          "scarcity_and_anti_involution": "medium",
+          "china_strategy_alignment": "strong",
+          "order_or_capacity_visibility": "medium"
+        },
+        "risk_judgment": {
+          "shareholder_reduction_risk": "insufficient_data",
+          "valuation_or_overheat_risk": "high",
+          "concept_noise_risk": "low",
+          "fundamental_miss_risk": "medium",
+          "main_risk_text": "估值严重透支风险（当前PE远超券商盈利预测上限）；5月底极端换手后的筹码结构恶化与获利盘抛压风险；净利率极低下的盈利兑现风险，若先进封装产能爬坡期毛利率无法提升，将面临业绩与估值双杀。"
+        },
+        "operation_view": {
+          "action": "wait_for_pullback",
+          "position_preference": "half",
+          "entry_condition": "5月底极端波动后筹码结构受损，坚决不追高。建议等待缩量回踩重要均线（如20日或60日均线）且不破起涨平台时考虑低吸，确认资金承接恢复（融资余额企稳、大单转为净流入）后再介入。价格区间参考15.5-16.5元。",
+          "invalid_condition": "半导体/算力主线退潮，或先进封装订单/排产数据明显不及预期，或股价放量跌破关键支撑位（如60日均线）且主力资金持续出逃。",
+          "stop_loss_suggestion": "-8%"
+        },
+        "evidence_gap": [
+          "30亿新产能具体投产时间节点、产能爬坡节奏及具体客户订单绑定情况依然缺失；",
+          "下一季度毛利率与净利率能否实质性改善的趋势性证据不足，需等中报验证；",
+          "先进封装及存储封测新业务当前的具体收入占比数据缺失。"
+        ],
+        "intraday_stop_loss_signal": {
+          "stock_code": "002185",
+          "stock_name": "华天科技",
+          "optimal_stop_loss_pct": -5.0,
+          "optimal_expected_value_pct": 1.0268,
+          "confidence_label": "statistical",
+          "method_label": "daily_low_open_recovery",
+          "reason_text": "近151个交易日样本中，日内最低点触发-5.0% 后，收盘重新回到开盘价的概率为0.0，未能收回开盘价的概率为1.0；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-6.1768%，期望值参考为1.0268%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+          "status": "ready",
+          "source_result_date": "2026-06-04"
+        }
+      },
+      {
+        "final_rank": 4,
+        "stock_code": "600863",
+        "stock_name": "华能蒙电",
+        "oneil_candidate_score": 75,
+        "selection_score": 141,
+        "final_bucket": "B",
+        "primary_theme": "电力",
+        "matched_theme_list": [
+          "电力",
+          "煤炭"
+        ],
+        "holding_style": [
+          "中线投资"
+        ],
+        "external_research_need": {
+          "need_external_research": false,
+          "needed_dimension_list": [],
+          "reason_text": "CAN/SLIM DB 已提供充分的业绩、估值、资金流及主线地位数据，足以判断该股为电力主线的中军/修复型标的，而非高爆发成长股，无需额外外部研报复核。"
+        },
+        "external_recheck_meta": {},
+        "oneil_canslim_verdict": {
+          "C_current_earnings": "medium",
+          "A_annual_growth": "medium",
+          "N_new_factor": "medium",
+          "S_supply_demand": "medium",
+          "L_leader_laggard": "capacity_core",
+          "I_institutional_sponsorship": "medium",
+          "M_market_theme": "strong"
+        },
+        "why_selected": [
+          "M(主线)：命中电力和煤炭双周级主线，共振类型为strong，主营核心相关且无概念噪声，迎峰度夏逻辑下主线支撑极硬。",
+          "C(当前业绩)：最近一期利润同比下滑24.6%，EPS下滑17.86%，未达CAN SLIM强增长门槛；但扣非净利仅下滑6.82%，且毛利率和净利率双升，经营现金流匹配度高，盈利质量实质改善，给予medium降权。",
+          "A(年度成长)：近三年营收CAGR为-3.0%，净利CAGR为12.16%，ROE仅3.69%水平一般。成长主要受煤电价格周期及产量波动影响，属于周期性成长而非结构性爆发，年度成长质量中等。",
+          "N(新变量)：迎峰度夏预期构成行业共性催化，收购资产有三年业绩承诺保障未来盈利，期待煤炭产量恢复；但缺乏明确的新技术、新产能或新订单证据，新因子偏向存量修复而非新业务爆发。",
+          "S(供需承接)：近20日涨幅41.86%且4次涨停，融资余额增加2.76亿，资金承接较强；但龙虎榜显示营业部净卖出，大单资金呈净流出，短期资金分歧明显，历史记忆警示需警惕高位兑现风险。",
+          "L(龙头地位)：内蒙古煤电一体化企业，主线纯度清晰，在板块内属于活跃的中军角色；但弹性和领涨效应弱于京能电力，非绝对龙头，综合判断为容量核心(capacity_core)。",
+          "I(机构认可)：华源证券给予买入评级，融资余额增加显示杠杆资金参与；但大单资金净流出且龙虎榜营业部净卖出，主力资金存在分歧，机构认可度一般。"
+        ],
+        "growth_value_judgment": {
+          "future_demand_expansion": "medium",
+          "business_quality": "medium",
+          "scarcity_and_anti_involution": "medium",
+          "china_strategy_alignment": "medium",
+          "order_or_capacity_visibility": "medium"
+        },
+        "risk_judgment": {
+          "shareholder_reduction_risk": "insufficient_data",
+          "valuation_or_overheat_risk": "medium",
+          "concept_noise_risk": "low",
+          "fundamental_miss_risk": "medium",
+          "main_risk_text": "短期涨幅超40%后大单资金净流出与游资兑现带来的高位震荡风险；煤炭产量恢复不及预期或电价市场化波动导致业绩修复落空的风险。"
+        },
+        "operation_view": {
+          "action": "wait_for_pullback",
+          "position_preference": "half",
+          "entry_condition": "近期涨幅较大且资金有分歧，切忌追高。需等待股价缩量回踩10日或20日均线企稳，且大单资金停止净流出时，在当日收盘价下浮5%-8%的区间寻找左侧支撑或右侧确认点。",
+          "invalid_condition": "若煤炭产量恢复数据证伪，或电力/煤炭主线整体退潮资金大幅流出，或跌破20日均线且无法快速收回，则候选逻辑失效。",
+          "stop_loss_suggestion": "-8%"
+        },
+        "evidence_gap": [
+          "收购资产的具体煤炭产量恢复节奏及实际兑现数据",
+          "大单资金净流出背后的机构持仓变动细节",
+          "未来新产能投放或新能源转型的具体规划与时间表"
+        ],
+        "intraday_stop_loss_signal": {
+          "stock_code": "600863",
+          "stock_name": "华能蒙电",
+          "optimal_stop_loss_pct": -3.0,
+          "optimal_expected_value_pct": -0.458,
+          "confidence_label": "statistical",
+          "method_label": "daily_low_open_recovery",
+          "reason_text": "近157个交易日样本中，日内最低点触发-3.0% 后，收盘重新回到开盘价的概率为0.1538，未能收回开盘价的概率为0.8462；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-2.692%，期望值参考为-0.458%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+          "status": "ready",
+          "source_result_date": "2026-06-04"
+        }
+      },
+      {
+        "final_rank": 5,
+        "stock_code": "002436",
+        "stock_name": "兴森科技",
+        "oneil_candidate_score": 70,
+        "selection_score": 150,
+        "final_bucket": "B",
+        "primary_theme": "PCB",
+        "matched_theme_list": [
+          "PCB",
+          "半导体设备",
+          "CPO",
+          "先进封装"
+        ],
+        "holding_style": [
+          "中线投资"
+        ],
+        "external_research_need": {
+          "need_external_research": false,
+          "needed_dimension_list": [],
+          "reason_text": "外部证据已补充券商盈利预测与资金流向数据，虽未填补订单/产能的具体缺口，但已足够判断当前高位兑现风险加大，无需进一步外部复核。"
         },
         "external_recheck_meta": {
           "status": "completed",
           "used_external_research_signal": true,
-          "requested_reason_text": "当前CAN/SLIM DB显示新变量极强但缺乏订单、产能和收入占比的量化证据支撑；同时当期经营现金流大幅流出且净利率为负，需外部证据查证现金流恶化原因及是否有改善预期，这将显著影响其中线基本面支撑逻辑及入选评级。"
+          "requested_reason_text": "当前C端业绩极弱，现金流大幅流出，急需外部证据验证FCBGA新产能投放节奏、核心大客户订单落地情况以及经营现金流转正的时间表，以判断新变量N能否真正修复基本面硬伤。"
         },
         "oneil_canslim_verdict": {
           "C_current_earnings": "weak",
           "A_annual_growth": "medium",
           "N_new_factor": "strong",
-          "S_supply_demand": "strong",
+          "S_supply_demand": "medium",
           "L_leader_laggard": "leader",
-          "I_institutional_sponsorship": "strong",
+          "I_institutional_sponsorship": "medium",
           "M_market_theme": "strong"
         },
         "why_selected": [
-          "M(主线)：命中CPO(排名第1)和先进封装(排名第3)两大核心周级主线，产业链路径(AI算力-CPO-先进封装-PCB/IC载板)极其清晰，主营核心相关且无概念噪声，形成极强共振。",
-          "C(当前业绩)：最近一期扣非净利大增308.32%看似极高，但绝对值极低(EPS仅0.01元，同比增速0%)，净利率仍为负(-2.52%)，且经营现金流大额流出2.47亿与利润严重背离，盈利质量存在明显硬伤，给予weak降权。",
-          "A(年度成长)：近三年营收CAGR为10.35%尚可，但净利CAGR为-36.44%，ROE仅0.35%极低，毛利率呈下降趋势。当前属于AI算力需求拉动的周期底部反转，而非稳定结构性成长，维持medium。",
-          "N(新变量)：外部券商研报(华鑫/东兴/开源)进一步确认mSAP工艺突破赋能高端IC载板放量及BT载板强势增长逻辑，并给出2026-2028年持续高增的盈利预测，新变量极强且正从概念转化为业务驱动与涨价逻辑。",
-          "S(供需承接)：交易层面资金承接极强，近20日日均成交63亿，融资余额大增11亿；业务端AI算力需求扩张确定性高。但外部新闻验证6月3日主力资金大幅净流出8.33亿元，交易供需存在短线过热与高位兑现压力。",
-          "L(龙头地位)：公司是国内IC载板领域龙头，在FCBGA等高端载板具备核心技术壁垒；近期作为涨停先锋带动板块回暖，主线纯度极高，板块辨识度与情绪龙头地位确立。",
-          "I(机构认可)：外部研报确认华鑫、东兴、开源等多家券商覆盖给予买入/增持评级，并给出远期盈利预测；5月29日特大单净流入14.66亿，聪明钱认可度极高，但需防范过度拥挤后的分歧。"
+          "M(主线)：命中PCB与半导体设备双周级主线，且与CPO、先进封装等参考主题强共振，产业链路径从AI算力至PCB/IC载板极其清晰，主营核心相关，无概念噪声，形成极强共振。",
+          "C(当前业绩)：外部券商预测2026年EPS为0.25-0.31元，对应PE仍高达68-107倍，当期净利绝对值极小且经营现金流大额流出，盈利质量硬伤未解，维持weak降权。",
+          "A(年度成长)：券商预测2028年PE可降至36.6倍，远期成长预期改善，但当前近三年净利CAGR为-36.44%且ROE极低，仍属周期底部反转而非稳定结构性成长，维持medium。",
+          "N(新变量)：外部研报(华鑫/东兴/开源)进一步确认mSAP工艺突破赋能高端IC载板放量及AI驱动IC载板涨价潮，新变量极强且正从概念转化为业务驱动与涨价逻辑。",
+          "S(供需承接)：外部新闻证实6月3日主力资金净流出超8亿元，高位兑现压力实锤，交易供需明显恶化；虽业务端需求扩张，但交易层面过热风险正在释放，下调至medium。",
+          "L(龙头地位)：公司是国内IC载板领域龙头，在FCBGA等高端载板具备核心技术壁垒；近期在PCB概念反弹中仍具辨识度，维持leader。",
+          "I(机构认可)：华鑫、东兴、开源等多家券商覆盖并给予买入/增持评级，但大资金大幅净流出显示机构分歧与兑现意愿强烈，聪明钱认可度下降，下调至medium。"
         ],
         "growth_value_judgment": {
           "future_demand_expansion": "strong",
-          "business_quality": "medium",
-          "scarcity_and_anti_involution": "strong",
+          "business_quality": "weak",
+          "scarcity_and_anti_involution": "medium",
           "china_strategy_alignment": "strong",
           "order_or_capacity_visibility": "insufficient_data"
         },
         "risk_judgment": {
-          "shareholder_reduction_risk": "low",
+          "shareholder_reduction_risk": "medium",
           "valuation_or_overheat_risk": "high",
           "concept_noise_risk": "low",
           "fundamental_miss_risk": "high",
-          "main_risk_text": "估值严重透支（券商预测2026年PE 68-107倍）与短期高位兑现回撤风险（6月3日主力净流出8.33亿印证）；经营现金流持续恶化及净利率为负带来的业绩雷风险。"
+          "main_risk_text": "主力资金大幅净流出验证的高位兑现回撤风险；经营现金流持续大幅流出与净利率为负的业绩雷风险；估值严重透支未来成长，若后续战略投入无法转化为真实回款，将面临估值与业绩双杀。"
         },
         "operation_view": {
           "action": "wait_for_pullback",
           "position_preference": "half",
-          "entry_condition": "股价缩量回踩关键均线（如20日或60日均线）企稳，且单季经营现金流明显转正时；或FCBGA大客户订单得到公告证实时，可考虑介入。按照当前收盘价回撤10%-15%的支撑区间作为观察买点。",
+          "entry_condition": "股价缩量回踩关键均线（如20日或60日均线）企稳，且单季经营现金流明显转正时；或FCBGA大客户订单得到公告证实时，可考虑介入。按照近期回购均价27元附近及高位回撤15%-20%的支撑区间作为观察买点。",
           "invalid_condition": "连续两季经营现金流无改善或扣非净利环比下滑，或AI算力/CPO主线退潮，或跌破关键均线支撑且短期无法收复。",
           "stop_loss_suggestion": "-10%"
         },
@@ -451,379 +620,132 @@ const INLINE_ONEIL = {
           "method_label": "daily_low_open_recovery",
           "reason_text": "近157个交易日样本中，日内最低点触发-5.0% 后，收盘重新回到开盘价的概率为0.0667，未能收回开盘价的概率为0.9333；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-4.3578%，期望值参考为-0.7922%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
           "status": "ready",
-          "source_result_date": "2026-06-03"
-        }
-      },
-      {
-        "final_rank": 4,
-        "stock_code": "002185",
-        "stock_name": "华天科技",
-        "oneil_candidate_score": 80,
-        "selection_score": 148,
-        "final_bucket": "A",
-        "primary_theme": "CPO",
-        "matched_theme_list": [
-          "CPO",
-          "先进封装",
-          "半导体"
-        ],
-        "holding_style": [
-          "中线投资"
-        ],
-        "external_research_need": {
-          "need_external_research": false,
-          "needed_dimension_list": [],
-          "reason_text": "外部证据已补充券商观点、公告和新闻，确认了订单稳健和30亿投资落地，但也暴露了估值透支、筹码极端松动、控股股东持股变动及重组延期等风险。核心证据缺口（先进封装收入占比、毛利率改善）虽未完全填补，但现有证据已足以判断当前处于高风险博弈区，无需进一步外部复核。"
-        },
-        "external_recheck_meta": {
-          "status": "completed",
-          "used_external_research_signal": true,
-          "requested_reason_text": "当前PE估值严重透支，需要外部研报和公告确认30亿新产能的投产时间、客户绑定情况以及先进封装收入占比，以验证盈利兑现能力和估值消化路径；同时需确认毛利率改善趋势，判断是否从周期反弹走向结构性成长。"
-        },
-        "oneil_canslim_verdict": {
-          "C_current_earnings": "strong",
-          "A_annual_growth": "medium",
-          "N_new_factor": "strong",
-          "S_supply_demand": "strong",
-          "L_leader_laggard": "core_elastic",
-          "I_institutional_sponsorship": "medium",
-          "M_market_theme": "strong"
-        },
-        "why_selected": [
-          "M(主线)：外部研报与新闻持续验证CPO与先进封装主线逻辑，华龙证券深度研报标题直指“聚焦先进封装”，主线共振极强，逻辑未被破坏。",
-          "C(当前业绩)：华金证券研报明确指出“25H1订单/业绩稳健增长”，外部证据支撑了当前业绩高增（扣非113.77%）的可持续性，主线逻辑正在兑现。",
-          "A(年度成长)：近三年净利CAGR为负，ROE极低，外部证据未提供年度成长质变的线索，仍属于周期底部反弹，维持medium降权判断。",
-          "N(新变量)：5月22日公告及新闻确认控股子公司拟投资30亿元建设存储封测项目，新产能投资落地验证了N因子从概念走向实质资本开支，是重新定价的核心驱动。",
-          "S(供需承接)：5月底龙虎榜及新闻证实了极端的交易供需：5月25-27日连续大涨换手率超37%，5月29日跌停换手24.55%且龙虎榜净买入5.75亿。交易极度活跃，资金承接强，但筹码结构严重受损，属于高风险高波动的供需状态。",
-          "L(龙头地位)：华龙证券深度研报确认公司“迈向全球领先封测企业”，在板块内充当涨停先锋，弹性强，主线纯度清晰，维持核心弹性股判断。",
-          "I(机构认可)：华龙证券与华金证券给出买入/增持评级，但券商2026年PE预测上限仅为42.4倍，显著低于当前89.6倍PE，估值透支严重；龙虎榜显示游资与机构分歧极大，聪明钱认可度中等偏博弈。"
-        ],
-        "growth_value_judgment": {
-          "future_demand_expansion": "strong",
-          "business_quality": "medium",
-          "scarcity_and_anti_involution": "medium",
-          "china_strategy_alignment": "strong",
-          "order_or_capacity_visibility": "medium"
-        },
-        "risk_judgment": {
-          "shareholder_reduction_risk": "medium",
-          "valuation_or_overheat_risk": "high",
-          "concept_noise_risk": "low",
-          "fundamental_miss_risk": "medium",
-          "main_risk_text": "估值严重透支（当前PE远超券商预测上限）；5月底极端换手后的筹码结构极度不稳，跌停释放了大量抛压；控股股东持股变动触及1%整数倍及重组问询函延期带来额外不确定性。"
-        },
-        "operation_view": {
-          "action": "wait_for_pullback",
-          "position_preference": "half",
-          "entry_condition": "外部证据证实5月底极端波动后筹码结构受损，坚决不追高。建议等待缩量回踩重要均线（如20日或60日均线）且不破起涨平台时考虑低吸，确认资金承接恢复后再介入，价格区间参考20日均线附近企稳区域（约15.5-16.5元）。",
-          "invalid_condition": "半导体/算力主线退潮，或先进封装订单/排产数据明显不及预期，或股价放量跌破关键支撑位（如60日均线）且主力资金持续出逃，或控股股东出现实质性大额减持。",
-          "stop_loss_suggestion": "-8%"
-        },
-        "evidence_gap": [
-          "先进封装及存储封测新业务当前的具体收入占比数据依然缺失",
-          "下一季度毛利率与净利率能否实质性改善的趋势性证据不足",
-          "控股股东持股变动触及1%整数倍的具体性质（是否减持）需后续公告确认",
-          "重组问询函延期的具体原因及潜在影响不明"
-        ],
-        "intraday_stop_loss_signal": {
-          "stock_code": "002185",
-          "stock_name": "华天科技",
-          "optimal_stop_loss_pct": -5.0,
-          "optimal_expected_value_pct": 1.0268,
-          "confidence_label": "statistical",
-          "method_label": "daily_low_open_recovery",
-          "reason_text": "近151个交易日样本中，日内最低点触发-5.0% 后，收盘重新回到开盘价的概率为0.0，未能收回开盘价的概率为1.0；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-6.1768%，期望值参考为1.0268%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
-          "status": "ready",
-          "source_result_date": "2026-06-03"
-        }
-      },
-      {
-        "final_rank": 5,
-        "stock_code": "603061",
-        "stock_name": "金海通",
-        "oneil_candidate_score": 76,
-        "selection_score": 130,
-        "final_bucket": "B",
-        "primary_theme": "先进封装",
-        "matched_theme_list": [
-          "先进封装",
-          "半导体材料",
-          "半导体",
-          "半导体设备"
-        ],
-        "holding_style": [
-          "中线投资"
-        ],
-        "external_research_need": {
-          "need_external_research": false,
-          "needed_dimension_list": [],
-          "reason_text": "外部证据已补充减持细节、机构资金流向及券商估值预测，关键证据缺口已补齐，无需二次复核。"
-        },
-        "external_recheck_meta": {
-          "status": "completed",
-          "used_external_research_signal": true,
-          "requested_reason_text": "虽然CAN/SLIM DB提供了基本面和资金概况，但高端分选机具体订单金额及新客户线索缺失，且股东南通华泓减持1%的具体节奏和影响需外部公告验证，这将显著影响短期供需判断与入场时点选择。"
-        },
-        "oneil_canslim_verdict": {
-          "C_current_earnings": "strong",
-          "A_annual_growth": "medium",
-          "N_new_factor": "strong",
-          "S_supply_demand": "weak",
-          "L_leader_laggard": "capacity_core",
-          "I_institutional_sponsorship": "weak",
-          "M_market_theme": "strong"
-        },
-        "why_selected": [
-          "M(主线)：命中先进封装和半导体材料双周级主线，共振类型strong，主营测试分选机核心相关，无概念噪声，主线逻辑极硬。",
-          "C(当前业绩)：最近一期营收增120.77%，净利增221.54%，EPS增速超215%；外部研报确认高端分选机销量大增与GPU算力需求提升，业绩强力兑现主线。",
-          "A(年度成长)：近三年营收CAGR为17.9%，净利CAGR偏低(4.67%)，ROE处于上升期，属于AI算力及半导体周期复苏驱动的结构性成长，年度成长质量中等。",
-          "N(新变量)：外部公告确认全资子公司购买土地使用权投资建设上海澜博半导体设备制造中心，新产能落地支撑未来需求，新变量强劲。",
-          "S(供需承接)：外部证据确认股东南通华泓6月12日起减持1%，且5月21日股价大跌9.35%伴随机构净卖出，短期抛压与交易供需显著恶化，降权为weak。",
-          "L(龙头地位)：公司在半导体测试分选机细分领域地位核心，主线纯度清晰；但近期相对强度偏弱，板块内充当中军角色而非绝对先锋，判断为容量核心。",
-          "I(机构认可)：虽有中邮、国金等券商买入评级，但当前PE(146倍)远超券商2026年PE预测上限(38倍)，且龙虎榜显示机构净卖出，聪明钱短期兑现意愿强，降权为weak。"
-        ],
-        "growth_value_judgment": {
-          "future_demand_expansion": "strong",
-          "business_quality": "medium",
-          "scarcity_and_anti_involution": "strong",
-          "china_strategy_alignment": "strong",
-          "order_or_capacity_visibility": "medium"
-        },
-        "risk_judgment": {
-          "shareholder_reduction_risk": "high",
-          "valuation_or_overheat_risk": "high",
-          "concept_noise_risk": "low",
-          "fundamental_miss_risk": "low",
-          "main_risk_text": "股东减持即将落地（6月12日起）且机构已出现净卖出，叠加当前估值严重透支券商盈利预测，短期面临戴维斯双杀与筹码松动风险。"
-        },
-        "operation_view": {
-          "action": "wait_for_pullback",
-          "position_preference": "small",
-          "entry_condition": "等待6月12日减持期开始后抛压释放，股价缩量企稳且大单资金停止流出时考虑低吸，价格区间参考60日均线附近。",
-          "invalid_condition": "先进封装主线退潮，或减持期间股价放量破位下跌，或高端分选机订单落地不及预期。",
-          "stop_loss_suggestion": "-8%"
-        },
-        "evidence_gap": [
-          "高端分选机具体新增订单金额及客户结构仍缺失",
-          "券商盈利预测差异极大（2026年EPS从4.3到12.57不等），需确认最新一致预期"
-        ],
-        "intraday_stop_loss_signal": {
-          "stock_code": "603061",
-          "stock_name": "金海通",
-          "optimal_stop_loss_pct": -4.0,
-          "optimal_expected_value_pct": -0.5064,
-          "confidence_label": "statistical",
-          "method_label": "daily_low_open_recovery",
-          "reason_text": "近211个交易日样本中，日内最低点触发-4.0% 后，收盘重新回到开盘价的概率为0.0882，未能收回开盘价的概率为0.9118；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.6436%，期望值参考为-0.5064%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
-          "status": "ready",
-          "source_result_date": "2026-06-03"
+          "source_result_date": "2026-06-04"
         }
       },
       {
         "final_rank": 6,
-        "stock_code": "605358",
-        "stock_name": "立昂微",
-        "oneil_candidate_score": 75,
-        "selection_score": 187,
+        "stock_code": "600578",
+        "stock_name": "京能电力",
+        "oneil_candidate_score": 65,
+        "selection_score": 141,
         "final_bucket": "B",
-        "primary_theme": "半导体材料",
+        "primary_theme": "电力",
         "matched_theme_list": [
-          "CPO",
-          "先进封装",
-          "半导体材料"
-        ],
-        "holding_style": [
-          "中线投资"
-        ],
-        "external_research_need": {
-          "need_external_research": false,
-          "needed_dimension_list": [],
-          "reason_text": "CAN/SLIM research DB 已提供充分的业绩反转、订单饱满度、机构调研及估值风险线索，历史记忆也充分警示了其高估值和跟涨属性，当前证据足以做出入选及风险控制判断，无需额外外部复核。"
-        },
-        "external_recheck_meta": {},
-        "oneil_canslim_verdict": {
-          "C_current_earnings": "medium",
-          "A_annual_growth": "medium",
-          "N_new_factor": "strong",
-          "S_supply_demand": "medium",
-          "L_leader_laggard": "capacity_core",
-          "I_institutional_sponsorship": "medium",
-          "M_market_theme": "strong"
-        },
-        "why_selected": [
-          "M(主线)：命中CPO、先进封装、半导体材料三大周级主线，主营半导体硅片为核心上游材料，形成强共振且无概念噪声，主线驱动极强。",
-          "C(当前业绩)：最近一期利润与扣非净利均实现超100%强劲扭亏，毛利率与净利率大幅改善，经营现金流匹配良好；但绝对利润极低（EPS仅0.01元），业绩容错率差，降为medium。",
-          "A(年度成长)：近三年营收CAGR仅7.21%，当前高增属于半导体周期底部的修复而非强结构性成长，ROE刚恢复至10%，年度成长质量中等。",
-          "N(新变量)：12英寸硅片进入放量期，外延片订单饱满且交期延长，射频业务快速起量，新变量已实质转化为财报收入创新高，解决国产替代与算力衬底供应痛点，新因子极强。",
-          "S(供需承接)：业务供需极强（订单饱满交期延长），交易供需活跃（日均成交额超33亿，融资余额大增4.43亿）；但20日涨幅超34%存在短期过热，且股东减持带来微小供给压力，综合降为medium。",
-          "L(龙头地位)：在重掺硅片细分领域有技术壁垒，但在板块内多作为中军跟涨，缺乏龙头先锋辨识度，历史记忆多次验证其涨幅通常不及绝对龙头，判断为capacity_core。",
-          "I(机构认可)：券商覆盖并给予增持评级，近期接待18家机构调研，融资余额大幅增加；但机构盈利预测下修且对应PE高达137倍，大资金真实承接力度在极高估值下存疑，降为medium。"
-        ],
-        "growth_value_judgment": {
-          "future_demand_expansion": "strong",
-          "business_quality": "medium",
-          "scarcity_and_anti_involution": "medium",
-          "china_strategy_alignment": "strong",
-          "order_or_capacity_visibility": "strong"
-        },
-        "risk_judgment": {
-          "shareholder_reduction_risk": "medium",
-          "valuation_or_overheat_risk": "high",
-          "concept_noise_risk": "low",
-          "fundamental_miss_risk": "high",
-          "main_risk_text": "估值极高（PE 137倍）且绝对利润极低，业绩容错率极差，易发生戴维斯双杀；短期涨幅过大存在交易拥挤回调风险；股东减持虽比例不大但高位易引发情绪抛压。"
-        },
-        "operation_view": {
-          "action": "wait_for_pullback",
-          "position_preference": "small",
-          "entry_condition": "需等待高管减持落地及短期过热风险释放后，股价缩量回踩20日均线或近期调整低点支撑位企稳时考虑低吸，当前估值极高风险大，不建议追高。",
-          "invalid_condition": "半导体主线退潮，或12英寸硅片订单饱满度下降/交期缩短，或主力资金持续大幅流出，或出现超预期减持。",
-          "stop_loss_suggestion": "-8%"
-        },
-        "evidence_gap": [
-          "12英寸硅片新产能投放的具体时间表及产能爬坡数据",
-          "外延片订单的具体新增金额和头部客户细节",
-          "可转债转股剩余规模及转股抛压的具体量化数据"
-        ],
-        "intraday_stop_loss_signal": {
-          "stock_code": "605358",
-          "stock_name": "立昂微",
-          "optimal_stop_loss_pct": -3.0,
-          "optimal_expected_value_pct": -0.1049,
-          "confidence_label": "statistical",
-          "method_label": "daily_low_open_recovery",
-          "reason_text": "近157个交易日样本中，日内最低点触发-3.0% 后，收盘重新回到开盘价的概率为0.0526，未能收回开盘价的概率为0.9474；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.0451%，期望值参考为-0.1049%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
-          "status": "ready",
-          "source_result_date": "2026-06-03"
-        }
-      },
-      {
-        "final_rank": 7,
-        "stock_code": "000021",
-        "stock_name": "深科技",
-        "oneil_candidate_score": 75,
-        "selection_score": 155,
-        "final_bucket": "B",
-        "primary_theme": "CPO与先进封装",
-        "matched_theme_list": [
-          "CPO",
-          "先进封装",
-          "存储半导体",
-          "智能电网"
-        ],
-        "holding_style": [
-          "中线投资"
-        ],
-        "external_research_need": {
-          "need_external_research": false,
-          "needed_dimension_list": [],
-          "reason_text": "外部证据已完整获取并复核，完美印证了上一轮对游资恶劣筹码博弈和被动激进扩产风险的判断，未提供改变原评分的新增利好信息，原证据缺口（大客户订单、财务公司风险）在外部渠道亦无披露，维持原判断。"
-        },
-        "external_recheck_meta": {
-          "status": "completed",
-          "used_external_research_signal": true,
-          "requested_reason_text": "历史记忆与当前数据均显示14.7亿扩产项目缺乏具体大客户订单细节验证，且激进扩产对资产负债率和毛利率的定量影响不足；同时关联财务公司风险需明确规模，这些将显著影响中线持仓的风险收益比。"
-        },
-        "oneil_canslim_verdict": {
-          "C_current_earnings": "medium",
-          "A_annual_growth": "medium",
-          "N_new_factor": "strong",
-          "S_supply_demand": "medium",
-          "L_leader_laggard": "capacity_core",
-          "I_institutional_sponsorship": "weak",
-          "M_market_theme": "strong"
-        },
-        "why_selected": [
-          "M(主线)：命中CPO(Rank 1)与先进封装(Rank 3)等核心周级主线，主营存储半导体及智能电表核心相关，共振类型为strong，完全契合当前AI算力与国产替代核心方向。",
-          "C(当前业绩)：最近一期净利润同比增长35.35%，EPS增长34.18%达到强增长门槛，但扣非净利仅增14.93%且毛利率与经营现金流承压，业绩兑现质量一般，需新产能释放后验证改善情况。",
-          "A(年度成长)：近三年营收CAGR停滞，但净利CAGR达19.89%，呈现向高端存储封测升级的结构性成长特征，只是ROE绝对值极低且毛利率下滑是明显短板，周期性特征明显。",
-          "N(新变量)：5月27日公告及外部新闻实锤子公司拟投14.7亿元实施高端存储芯片封测产能扩充项目，直接对应AI算力高带宽存储需求瓶颈，重资产投入业务真实性强，新产能投放将直接推动未来收入增长。",
-          "S(供需承接)：近20日成交额与换手率活跃，融资余额暴增提供承接；但外部新闻实锤了05-26'尾盘抢跑+盘后发利好+次日砸盘'的恶劣博弈模式，龙虎榜净卖出4.61亿，换手率高达17.06%，筹码极不稳定，对高净值客户极不友好，维持medium降级判断。",
-          "L(龙头地位)：位列国内存储封测领域前排，主线纯度清晰，在存储与电力交叉主线中属于容量核心，辨识度高，但股价相对强度偏弱尚不足以支撑绝对龙头判断。",
-          "I(机构认可)：外部证据实锤近一年无券商研报覆盖，东财机构参与度仅43.78%，龙虎榜显示游资借利好巨额兑现且机构资金完全缺席，真实机构认可度弱，这是当前最大的短板。"
-        ],
-        "growth_value_judgment": {
-          "future_demand_expansion": "strong",
-          "business_quality": "medium",
-          "scarcity_and_anti_involution": "medium",
-          "china_strategy_alignment": "strong",
-          "order_or_capacity_visibility": "medium"
-        },
-        "risk_judgment": {
-          "shareholder_reduction_risk": "low",
-          "valuation_or_overheat_risk": "high",
-          "concept_noise_risk": "medium",
-          "fundamental_miss_risk": "high",
-          "main_risk_text": "核心风险在于外部证据实锤的游资主导恶劣筹码博弈环境（尾盘抢跑+发利好+次日砸盘），以及被动激进扩产在当前现金流不佳背景下导致资产负债率抬升的财务风险；同时机构资金完全缺席，缺乏稳定承接盘。"
-        },
-        "operation_view": {
-          "action": "wait_for_pullback",
-          "position_preference": "small",
-          "entry_condition": "需等待游资筹码沉淀及恐慌盘释放，观察05-26长上影线被消化或缩量回踩20日均线企稳时考虑小仓位介入，预计价格区间在近期放量均价下沿（回调8%-12%区间），坚决避免追高。",
-          "invalid_condition": "半导体/CPO主线退潮，或跌破关键支撑位放量下跌，或扩产项目进度不及预期、大客户订单落空，或资产负债率恶化导致评级下调，或关联财务公司出现风险事件。",
-          "stop_loss_suggestion": "-8%"
-        },
-        "evidence_gap": [
-          "14.7亿扩产项目对应的具体大客户绑定订单细节依然缺失",
-          "激进扩产后未来毛利率改善和资产负债率抬升的定量测算依据不足",
-          "关联交易及《中国电子财务有限责任公司风险评估专项审计报告》的具体风险内容与资金占用规模未获取"
-        ],
-        "intraday_stop_loss_signal": {
-          "stock_code": "000021",
-          "stock_name": "深科技",
-          "optimal_stop_loss_pct": -6.0,
-          "optimal_expected_value_pct": -0.2825,
-          "confidence_label": "statistical",
-          "method_label": "daily_low_open_recovery",
-          "reason_text": "近157个交易日样本中，日内最低点触发-6.0% 后，收盘重新回到开盘价的概率为0.1，未能收回开盘价的概率为0.9；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-5.8675%，期望值参考为-0.2825%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
-          "status": "ready",
-          "source_result_date": "2026-06-03"
-        }
-      },
-      {
-        "final_rank": 8,
-        "stock_code": "002636",
-        "stock_name": "金安国纪",
-        "oneil_candidate_score": 72,
-        "selection_score": 139,
-        "final_bucket": "B",
-        "primary_theme": "CPO",
-        "matched_theme_list": [
-          "CPO",
-          "MLCC",
-          "PCB"
+          "电力",
+          "煤炭",
+          "绿电"
         ],
         "holding_style": [
           "中线投资",
           "短线投机"
         ],
         "external_research_need": {
-          "need_external_research": true,
-          "needed_dimension_list": [
-            "current_quarterly_earnings",
-            "new_product_new_high_new_story",
-            "shareholder_reduction"
-          ],
-          "reason_text": "经营现金流严重背离利润的原因、定增募投的具体产能规划及新订单情况、以及是否存在未披露的减持或解禁计划，将显著影响该股的风险定价及入选/淘汰决策。"
+          "need_external_research": false,
+          "needed_dimension_list": [],
+          "reason_text": "CAN/SLIM DB 已提供足够的基本面与交易数据，且历史记忆提供了明确的高位兑现风险校正，当前证据足以判断其属于高位情绪先锋且基本面支撑不足，无需额外外部复核即可做出降级观察决策。"
         },
         "external_recheck_meta": {},
         "oneil_canslim_verdict": {
           "C_current_earnings": "medium",
           "A_annual_growth": "medium",
           "N_new_factor": "medium",
-          "S_supply_demand": "medium",
-          "L_leader_laggard": "core_elastic",
-          "I_institutional_sponsorship": "weak",
+          "S_supply_demand": "strong",
+          "L_leader_laggard": "leader",
+          "I_institutional_sponsorship": "medium",
           "M_market_theme": "strong"
         },
         "why_selected": [
-          "M(主线)：命中CPO和MLCC双周级主线，主营覆铜板是PCB核心上游材料，业务高度相关，形成强共振，无概念噪声。",
-          "C(当前业绩)：最近一期利润暴增763%，EPS增速极强，毛利率和净利率大幅改善；但经营现金流为负，利润质量存疑，下一季支撑证据不足，给予medium。",
-          "A(年度成长)：近三年净利CAGR达51%，但营收CAGR仅6%，属于典型的周期提价带来的盈利爆发，非结构性成长，未来需求消化受制于价格周期，给予medium。",
-          "N(新变量)：AI算力硬件需求爆发是明确的产业趋势支撑，但缺乏新订单、新产能、新客户的具体公告证据，定增推进但细节不明，新变量尚未完全转化为可见的持续扩张，给予medium。",
-          "S(供需承接)：近期成交额和融资余额增加，但板块回调时跟跌明显，大单资金呈净流出，短期RS排名仅30较弱，资金承接力度有所减弱，给予medium。",
-          "L(龙头地位)：结合历史记忆修正，在覆铜板涨价行情中具有核心弹性，游资主导下I弱反而可能转化为筹码优势，但板块辨识度仍偏跟随，非机构认可的产业龙头，给予core_elastic。",
-          "I(机构认可)：近一年无券商研报覆盖，大单净流出，聪明钱认可度极低，机构参与度弱，但在游资主导的周期弹性行情中属于常见特征。"
+          "M(主线)：命中电力和煤炭两大周级主线，主营火电与供热核心相关，兼具高股息防御与迎峰度夏事件催化，共振类型为strong，主线逻辑极硬。",
+          "C(当前业绩)：最近一期利润增1.50%，营收增2.21%，EPS增6.67%，经营现金流充沛。虽未达CAN SLIM 25%+强增长门槛，但业绩稳健且现金流极佳，给予medium降权。",
+          "A(年度成长)：近三年净利CAGR高达63.79%，但主要受前期低基数及煤价周期影响，属于典型的周期性成长而非结构性扩张，ROE仅3.78%偏低，给予medium。",
+          "N(新变量)：乌兰察布1500MW风光火储一体化项目获核准，迎峰度夏预期构成催化；但缺乏明确的新技术、新订单或新业务收入占比证据，投产节奏尚需时间，给予medium。",
+          "S(供需承接)：近20日涨幅高达83.53%，7次涨停，换手率4.97%，融资余额增加，RS综合排名84且20日RS达99，资金承接与交易供需极强，但需警惕短期严重过热风险。",
+          "L(龙头地位)：主线纯度清晰，近20日7次涨停充当电力板块绝对的涨停先锋与情绪龙头，同主题比较中领涨明显，辨识度极高，判断为leader。",
+          "I(机构认可)：近20日融资余额小幅增加，杠杆资金参与；但近一年无券商研报覆盖，大单资金呈净流出，机构认同度一般，主要为游资与情绪资金主导，给予medium。"
+        ],
+        "growth_value_judgment": {
+          "future_demand_expansion": "medium",
+          "business_quality": "medium",
+          "scarcity_and_anti_involution": "weak",
+          "china_strategy_alignment": "medium",
+          "order_or_capacity_visibility": "weak"
+        },
+        "risk_judgment": {
+          "shareholder_reduction_risk": "insufficient_data",
+          "valuation_or_overheat_risk": "high",
+          "concept_noise_risk": "low",
+          "fundamental_miss_risk": "medium",
+          "main_risk_text": "短期涨幅巨大（20日涨83.53%）带来的高位获利盘兑现与情绪退潮风险，且大单资金净流出、机构缺位，极易发生戴维斯双杀；煤价若超预期上涨将侵蚀火电利润。"
+        },
+        "operation_view": {
+          "action": "wait_for_pullback",
+          "position_preference": "small",
+          "entry_condition": "坚决切忌高位追涨。需等待股价回调至20日均线附近缩量企稳，且大单资金停止净流出或转为净流入时考虑低吸；在当日收盘价下浮15%-20%的区间寻找左侧支撑或右侧放量确认点。",
+          "invalid_condition": "若电力/煤炭主线整体退潮资金大幅流出，或跌破关键均线支撑且无法快速收回，或煤价超预期大涨侵蚀利润预期，则候选逻辑失效。",
+          "stop_loss_suggestion": "-8%"
+        },
+        "evidence_gap": [
+          "乌兰察布1500MW风光火储一体化项目的具体投产时间表与资本开支规划",
+          "下一季度煤价趋势及公司长协煤锁定比例的具体数据",
+          "大单资金流出与游资博弈的持续性及筹码沉淀情况"
+        ],
+        "intraday_stop_loss_signal": {
+          "stock_code": "600578",
+          "stock_name": "京能电力",
+          "optimal_stop_loss_pct": -2.0,
+          "optimal_expected_value_pct": -1.0362,
+          "confidence_label": "statistical",
+          "method_label": "daily_low_open_recovery",
+          "reason_text": "近157个交易日样本中，日内最低点触发-2.0% 后，收盘重新回到开盘价的概率为0.2391，未能收回开盘价的概率为0.7609；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-1.1138%，期望值参考为-1.0362%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+          "status": "ready",
+          "source_result_date": "2026-06-04"
+        }
+      },
+      {
+        "final_rank": 7,
+        "stock_code": "600184",
+        "stock_name": "光电股份",
+        "oneil_candidate_score": 65,
+        "selection_score": 169,
+        "final_bucket": "B",
+        "primary_theme": "光通信",
+        "matched_theme_list": [
+          "光通信",
+          "消费电子",
+          "CPO",
+          "人形机器人"
+        ],
+        "holding_style": [
+          "中线投资"
+        ],
+        "external_research_need": {
+          "need_external_research": false,
+          "needed_dimension_list": [],
+          "reason_text": "外部券商研报与公告已补充完毕。民生证券提供了2026-2027年盈利预测，缓解了部分静态高估值压力；公告验证了近期无重大订单及产能扩张，仅有闲置资金理财及交易异常波动风险提示。证据缺口已补齐，无需二次复核。"
+        },
+        "external_recheck_meta": {
+          "status": "completed",
+          "used_external_research_signal": true,
+          "requested_reason_text": "当前N因子（新变量）缺乏订单、客户及收入占比的量化证据，C因子（当前业绩）微利且高估值，急需外部研报或公告验证AI眼镜及防务新型号是否具有实质性订单支撑及未来业绩指引，以判断是否存在戴维斯双杀风险。"
+        },
+        "oneil_canslim_verdict": {
+          "C_current_earnings": "medium",
+          "A_annual_growth": "weak",
+          "N_new_factor": "medium",
+          "S_supply_demand": "medium",
+          "L_leader_laggard": "middle_rank",
+          "I_institutional_sponsorship": "medium",
+          "M_market_theme": "strong"
+        },
+        "why_selected": [
+          "M(主线)：命中光通信（排名第1）和消费电子（排名第4）两大周级主线，且与CPO、人形机器人等未来主题强共振，主营光学玻璃及光电材料属于上游核心，共振极强。",
+          "C(当前业绩)：外部研报确认2025年业绩爆发（1H25净利润增93%，3Q25营收增69%），2026E PE降至53倍，缓解了静态PE 309倍的估值杀压力；但2026一季报EPS仅0.0019且营收微增3%，当前业绩兑现仍处于空窗期，维持medium降权。",
+          "A(年度成长)：券商预测2026-2027年EPS为0.34/0.61，对应PE 53/29倍，远期成长预期改善；但近三年CAGR为负且一季报平淡，年度成长反转尚待中报验证，维持weak。",
+          "N(新变量)：券商研报确认防务新型号与机器视觉传感系统布局，但近期公告仅为闲置资金理财及交易异常波动提示，缺乏新增订单、产能投放或大客户验证的实质性公告，新变量尚未触发重新定价，维持medium。",
+          "S(供需承接)：新闻验证5月29日曾跟随光纤概念涨停，但6月3日资金流向平淡（主力净流出），换手率7.85%偏高且发布交易异常波动公告，短期交易拥挤与波动风险并存，维持medium。",
+          "L(龙头地位)：在光纤概念拉升中属于跟随涨停角色，非连板先锋，防务业务占比高稀释了光通信主线纯度，相对强度与板块辨识度中等，维持middle_rank。",
+          "I(机构认可)：民生证券覆盖并给出买入评级，提供了明确的远期盈利预测；但缺乏更多机构共振与大资金持续流入证据，融资盘增加但大单净流出，聪明钱认可度一般，维持medium。"
         ],
         "growth_value_judgment": {
           "future_demand_expansion": "medium",
@@ -833,287 +755,230 @@ const INLINE_ONEIL = {
           "order_or_capacity_visibility": "insufficient_data"
         },
         "risk_judgment": {
-          "shareholder_reduction_risk": "insufficient_data",
-          "valuation_or_overheat_risk": "high",
+          "shareholder_reduction_risk": "low",
+          "valuation_or_overheat_risk": "medium",
+          "concept_noise_risk": "medium",
+          "fundamental_miss_risk": "medium",
+          "main_risk_text": "静态估值极高但远期估值尚可，核心风险在于2026年中报能否兑现券商0.34元的EPS预测；若业绩继续像一季报般平淡，将面临戴维斯双杀；同时交易异常波动公告提示短期投机资金博弈剧烈。"
+        },
+        "operation_view": {
+          "action": "watch_only",
+          "position_preference": "small",
+          "entry_condition": "需等待2026年中报预告验证净利润是否如期爆发，或出现防务新型号/机器视觉的实质性大单公告；股价缩量回踩至60日均线附近企稳且大单资金停止流出时，方可考虑小仓位观察。",
+          "invalid_condition": "光通信与消费电子主线退潮，或2026年中报业绩无法兑现券商预测导致估值杀，或跌破关键均线支撑且交易异常波动加剧。",
+          "stop_loss_suggestion": "-8%"
+        },
+        "evidence_gap": [
+          "2026年中报业绩是否能兑现券商0.34元年EPS的预测进度",
+          "防务新型号与机器视觉业务的具体订单金额与收入占比",
+          "近期交易异常波动背后的主力资金动向及游资接力情况"
+        ],
+        "intraday_stop_loss_signal": {
+          "stock_code": "600184",
+          "stock_name": "光电股份",
+          "optimal_stop_loss_pct": -3.0,
+          "optimal_expected_value_pct": -0.3824,
+          "confidence_label": "statistical",
+          "method_label": "daily_low_open_recovery",
+          "reason_text": "近157个交易日样本中，日内最低点触发-3.0% 后，收盘重新回到开盘价的概率为0.0976，未能收回开盘价的概率为0.9024；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-2.7676%，期望值参考为-0.3824%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+          "status": "ready",
+          "source_result_date": "2026-06-04"
+        }
+      },
+      {
+        "final_rank": 8,
+        "stock_code": "002049",
+        "stock_name": "紫光国微",
+        "oneil_candidate_score": 62,
+        "selection_score": 153,
+        "final_bucket": "B",
+        "primary_theme": "半导体设备",
+        "matched_theme_list": [
+          "半导体设备",
+          "消费电子",
+          "存储芯片"
+        ],
+        "holding_style": [
+          "中线投资"
+        ],
+        "external_research_need": {
+          "need_external_research": false,
+          "needed_dimension_list": [],
+          "reason_text": "CAN/SLIM DB 已提供充分的当期财报、并购新变量及资金面数据，且历史记忆提供了充分的风险校正模式，当前证据足以做出降级和备选判断，无需额外外部复核。"
+        },
+        "external_recheck_meta": {},
+        "oneil_canslim_verdict": {
+          "C_current_earnings": "medium",
+          "A_annual_growth": "medium",
+          "N_new_factor": "medium",
+          "S_supply_demand": "weak",
+          "L_leader_laggard": "strong_follower",
+          "I_institutional_sponsorship": "medium",
+          "M_market_theme": "strong"
+        },
+        "why_selected": [
+          "M(主线)：命中半导体设备(Rank2)和消费电子(Rank4)双周级主线，主营特种集成电路与智能安全芯片是国产替代核心环节，共振类型为strong，业务支撑极强。",
+          "C(当前业绩)：当期利润与营收增速爆发（+180%，+46%），毛利率52.58%与净利率22.23%极高且稳定；但一季报经营现金流净流出3.5亿且同比恶化，利润含金量存疑，故降权为medium。",
+          "A(年度成长)：近三年营收与利润CAGR均为负，当前高增属于行业周期底部的结构性复苏；券商预测未来EPS持续增长有望恢复长期成长，但需验证，评级medium。",
+          "N(新变量)：拟19亿收购瑞能半导属于真实的外延扩张新变量，拓展功率半导体业务；但现金对价与配套融资加剧现金流紧张与摊薄风险，且历史记忆验证该股新变量常未获资金持续认可，维持medium。",
+          "S(供需承接)：近20日平均换手率仅5.36%，无涨停，20日涨幅为-2.48%，RS综合排名极低；尽管融资余额增加，但大单净流出，资金供需偏弱，评级weak。",
+          "L(龙头地位)：公司是特种IC与安全芯片龙头，主线纯度极高；但历史记忆明确提示其存在'伪强势'特征，走势屡次落后于板块，非资金聚焦的核心先锋，综合判断为strong_follower。",
+          "I(机构认可)：东吴、民生、信达等券商给予买入评级，融资余额增加；但一季报现金流恶化事实与资金面分歧仍在，大单净流出表明大资金尚未形成强共识推升，评级medium。"
+        ],
+        "growth_value_judgment": {
+          "future_demand_expansion": "medium",
+          "business_quality": "medium",
+          "scarcity_and_anti_involution": "medium",
+          "china_strategy_alignment": "strong",
+          "order_or_capacity_visibility": "insufficient_data"
+        },
+        "risk_judgment": {
+          "shareholder_reduction_risk": "medium",
+          "valuation_or_overheat_risk": "low",
           "concept_noise_risk": "low",
           "fundamental_miss_risk": "high",
-          "main_risk_text": "高位筹码松动叠加经营现金流为负，在主线退潮或周期提价见顶时，极易出现无承接的快速杀跌。"
+          "main_risk_text": "经营现金流持续大幅流出叠加并购现金对价与再融资摊薄，可能导致基本面miss；且股价呈现伪强势，易落后于板块。"
         },
         "operation_view": {
           "action": "wait_for_pullback",
           "position_preference": "small",
-          "entry_condition": "股价缩量回踩关键均线（如20日或60日均线）企稳，且单季经营现金流明显转正时；或覆铜板涨价逻辑得到新订单公告证实时。按照近期高点回撤15%-20%的支撑区间作为观察买点，切忌追高。",
-          "invalid_condition": "连续两季经营现金流无改善或扣非净利环比下滑，或AI算力/CPO主线退潮，或覆铜板价格出现明显下调，或跌破关键均线支撑。",
+          "entry_condition": "需等待中报现金流实质性改善的信号，或股价回调至60日均线附近且缩量企稳，价格区间参考70-75元附近支撑。",
+          "invalid_condition": "中报经营现金流继续大幅流出，或收购方案因监管/市场原因终止导致利好落空，或半导体主线退潮。",
           "stop_loss_suggestion": "-8%"
         },
         "evidence_gap": [
-          "经营现金流为负的具体原因及应收账款/存货变化细节",
-          "定增募投具体产能规划及新订单情况",
-          "是否存在未披露的股东减持或解禁计划"
+          "中报经营现金流是否出现拐点改善",
+          "特种IC新订单的预收款或合同负债变化情况",
+          "收购瑞能半导的整合进展及现金对价支付对流动性的具体影响"
         ],
         "intraday_stop_loss_signal": {
-          "stock_code": "002636",
-          "stock_name": "金安国纪",
-          "optimal_stop_loss_pct": -6.0,
-          "optimal_expected_value_pct": 0.3513,
+          "stock_code": "002049",
+          "stock_name": "紫光国微",
+          "optimal_stop_loss_pct": -2.0,
+          "optimal_expected_value_pct": 0.4103,
           "confidence_label": "statistical",
           "method_label": "daily_low_open_recovery",
-          "reason_text": "近157个交易日样本中，日内最低点触发-6.0% 后，收盘重新回到开盘价的概率为0.0，未能收回开盘价的概率为1.0；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-6.5013%，期望值参考为0.3513%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+          "reason_text": "近147个交易日样本中，日内最低点触发-2.0% 后，收盘重新回到开盘价的概率为0.0652，未能收回开盘价的概率为0.9348；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-2.5603%，期望值参考为0.4103%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
           "status": "ready",
-          "source_result_date": "2026-06-03"
+          "source_result_date": "2026-06-04"
         }
       }
     ],
     "rejected_stocks": [
       {
-        "stock_code": "603228",
-        "stock_name": "景旺电子",
-        "oneil_candidate_score": 65,
-        "selection_score": 161,
-        "candidate_action": "backup",
-        "final_bucket": "B",
-        "primary_theme": "CPO",
-        "external_research_need": {
-          "need_external_research": true,
-          "needed_dimension_list": [
-            "最新业绩预告或中报快报验证利润修复情况",
-            "港股上市具体时间表与潜在摊薄比例测算",
-            "AI PCB业务具体订单金额及核心客户验证"
-          ],
-          "reason_text": "当前C(业绩)极弱且机构EPS预测分歧巨大，历史记忆显示公司未量化原材料与汇兑对利润的拖累。若中报能验证毛利率企稳或AI PCB订单放量，将显著改变入选评级；港股上市进展则直接影响估值与资金分流风险测算。"
-        },
-        "external_recheck_meta": {},
-        "main_reject_reason": "C(当前业绩)极弱且I(机构认可)偏弱，历史记忆反复证明该组合极易遭遇基本面与资金面双杀（如前期暴跌8.52%）；当前PE高达59倍但利润大幅下滑，估值与业绩严重不匹配；筹码极度分散且港股上市带来潜在分流压力，当前处于左侧，缺乏右侧确认信号，不适合进入Top 8。",
-        "evidence_gap": [
-          "缺少AI PCB具体订单金额与核心客户名称验证",
-          "缺少原材料与汇兑对利润影响的量化拆分数据",
-          "缺少港股上市具体时间表与摊薄比例测算",
-          "缺少机构最新一致预期EPS的修正情况"
-        ]
-      },
-      {
-        "stock_code": "600487",
-        "stock_name": "亨通光电",
-        "oneil_candidate_score": 65,
-        "selection_score": 150,
-        "candidate_action": "backup",
-        "final_bucket": "B",
-        "primary_theme": "CPO",
-        "external_research_need": {
-          "need_external_research": false,
-          "needed_dimension_list": [],
-          "reason_text": "CAN/SLIM DB及长期投资记忆已提供充分的业绩、筹码、风险及历史误判信息，当前核心矛盾是高位过热与现金流瑕疵，无需额外外部证据即可做出降权与观望判断。"
-        },
-        "external_recheck_meta": {},
-        "main_reject_reason": "120日涨幅极度过大（超355%），且经营现金流巨额为负，历史记忆多次证明该股在高位极易发生机构兑现踩踏，当前追涨风险极高，不具备高位接力价值，因此不作为顶层A类候选。",
-        "evidence_gap": [
-          "经营现金流巨额为负的具体原因及未来改善节奏；",
-          "分拆亨通华海上市的股东大会及监管审核时间表；",
-          "充沛订单的具体金额、核心客户名称及新业务收入占比数据；",
-          "控股股东高质押的具体风险敞口与进一步解除计划。"
-        ]
-      },
-      {
-        "stock_code": "002025",
-        "stock_name": "航天电器",
-        "oneil_candidate_score": 65,
-        "selection_score": 124,
-        "candidate_action": "backup",
-        "final_bucket": "B",
-        "primary_theme": "CPO",
-        "external_research_need": {
-          "need_external_research": true,
-          "needed_dimension_list": [
-            "经营现金流大幅流出原因及回款预期",
-            "AI算力高速连接器新业务订单金额、客户明细及收入占比",
-            "机构EPS预测极端分歧的深层原因"
-          ],
-          "reason_text": "当前CAN/SLIM DB显示公司经营现金流极差且机构盈利预测分歧巨大，这两点将直接决定主线逻辑能否转化为真实业绩。需要外部证据解释现金流恶化的真实原因（是军品回款周期还是新业务投入），以及验证'订货创历史新高'中AI算力业务的具体量化贡献。"
-        },
-        "external_recheck_meta": {},
-        "main_reject_reason": "虽然主线逻辑极硬且产业地位核心，但年度成长质量极弱（A弱），当前业绩现金流极差且估值极高（PE 162x），机构对盈利预测分歧巨大；同时短期资金面退潮明显（S弱），处于回调趋势中无企稳迹象。基本面兑现能见度低，存在估值双杀风险，不适合作为顶层高优先级候选，降为备选观察。",
-        "evidence_gap": [
-          "缺少经营现金流大幅流出（-12.36倍）的合理解释及未来改善预期",
-          "缺少AI算力高速连接器新业务的具体订单金额、客户明细及收入占比数据",
-          "缺少新产能投放的具体线索和达产时间表",
-          "缺少机构EPS预测极端分歧的深层基本面原因"
-        ]
-      },
-      {
-        "stock_code": "002049",
-        "stock_name": "紫光国微",
-        "oneil_candidate_score": 62,
-        "selection_score": 137,
-        "candidate_action": "backup",
-        "final_bucket": "B",
-        "primary_theme": "CPO",
-        "external_research_need": {
-          "need_external_research": true,
-          "needed_dimension_list": [
-            "中报经营现金流拐点验证",
-            "收购瑞能半导的现金对价支付安排及再融资摊薄影响"
-          ],
-          "reason_text": "当前一季报经营现金流严重恶化且大额流出，同时19亿收购方案包含现金对价与配套融资，对资金链和股本摊薄影响巨大。必须通过外部最新研报或公告确认中报现金流是否改善以及收购资金安排，否则无法排除基本面爆雷风险。"
-        },
-        "external_recheck_meta": {},
-        "main_reject_reason": "核心硬伤在于经营现金流持续为负且同比恶化，与高增利润严重不匹配，利润含金量极低；同时历史交易记忆反复验证该股在强主线中表现滞后（伪强势），RS极弱且大单流出，缺乏资金攻击性。在C/A/S/L均无强势支撑的情况下，仅靠M强无法支撑其进入Top 8候选。",
-        "evidence_gap": [
-          "中报经营现金流是否出现拐点改善",
-          "特种IC新订单的预收款或合同负债变化情况",
-          "收购瑞能半导的整合进展及现金对价支付对流动性的具体影响"
-        ]
-      },
-      {
-        "stock_code": "605376",
-        "stock_name": "博迁新材",
-        "oneil_candidate_score": 62,
-        "selection_score": 130,
-        "candidate_action": "reject",
-        "final_bucket": "reject",
-        "primary_theme": "MLCC",
-        "external_research_need": {
-          "need_external_research": false,
-          "needed_dimension_list": [],
-          "reason_text": "外部证据已明确补充了关键风险点（控股股东权益变动触及5%刻度，暗示高位减持），且券商盈利预测已提供估值参考，当前证据足以做出淘汰判断，无需进一步外部复核。"
-        },
-        "external_recheck_meta": {
-          "status": "completed",
-          "used_external_research_signal": true,
-          "requested_reason_text": "经营现金流为负且与利润严重不匹配，需外部复核是否因备货导致；120日涨幅巨大，需复核是否有大股东减持或解禁压力；需复核具体大订单公告以验证券商说辞。"
-        },
-        "main_reject_reason": "外部证据暴露出致命风险：公司在股价120日暴涨283%及屡创历史新高的背景下，控股股东及其一致行动人权益变动触及5%刻度，这是极其典型的高位派发信号。结合10%以上的超高换手率、龙虎榜游资炒作特征以及经营现金流为负的基本面硬伤，当前走势属于典型的情绪博弈末期，极易遭遇内部人减持与获利盘的双重踩踏。历史记忆（亨通光电等）强烈警示此类‘高位过热+内部人兑现’标的的风险，因此坚决从备选剔除，转为reject。",
-        "evidence_gap": [
-          "控股股东权益变动的具体方式（大宗交易、集中竞价还是协议转让）及后续减持计划细节；",
-          "经营现金流为负是否因存货备货大幅增加所致，需后续财报验证；",
-          "替银化铜粉业务的具体收入占比及毛利率贡献数据。"
-        ]
-      },
-      {
-        "stock_code": "603459",
-        "stock_name": "红板科技",
+        "stock_code": "600171",
+        "stock_name": "上海贝岭",
         "oneil_candidate_score": 58,
-        "selection_score": 240,
-        "candidate_action": "reject",
-        "final_bucket": "reject",
-        "primary_theme": "CPO",
+        "selection_score": 221,
+        "candidate_action": "backup",
+        "final_bucket": "B",
+        "primary_theme": "半导体设备",
         "external_research_need": {
           "need_external_research": true,
           "needed_dimension_list": [
-            "current_earnings",
-            "new_factor",
-            "institutional_sponsorship"
+            "C_current_earnings",
+            "N_new_factor",
+            "I_institutional_sponsorship"
           ],
-          "reason_text": "需要外部证据验证经营现金流极差的详细原因及改善预期、竞拍江西志浩股权的具体进展与产能整合效果、以及是否有新增大客户或大额订单的公告，这些将显著影响其从纯投机向基本面成长的证伪或证实。"
+          "reason_text": "当前归母净利与扣非净利严重背离，需外部证据查明非经常性损益构成及消除可能性；AFE新产品缺乏订单、客户验证及收入占比证据，需研报或公告验证其商业化路径；近一年无机构研报覆盖，需确认是否有潜在机构关注或盈利预测修正。这些证据将显著影响其是否能从情绪溢价转向基本面兑现。"
         },
         "external_recheck_meta": {},
-        "main_reject_reason": "历史投资记忆多次明确提示该股属于'M极强但C/I极弱'的纯筹码博弈品种。当前C端现金流极差且盈利质量下滑，I端无机构认可，超高换手率意味着极高的短期兑现与回撤风险（历史回撤超10%），完全不符合高净值客户中端期成长股的风控与持仓标准，同主线中存在更优的基本面龙头标的。",
+        "main_reject_reason": "虽然M主线极强，但C/A双弱（ROE极低、净利CAGR为负、现金流差），S/I双弱（资金流出、无机构覆盖），且L仅为中后排跟随者。当前PE高达85.98倍，与弱基本面严重错配。历史投资记忆反复提示该类'高选股得分但弱证据闭环'的标的极易误判，虽在强主线驱动下有短期情绪溢价，但缺乏基本面和资金共振难以走出持续大牛行情，因此不宜作为顶层A类候选，降为B类备选。",
         "evidence_gap": [
-          "经营现金流与净利润严重背离的详细原因及改善时间表",
-          "高端HDI/IC载板的具体订单金额与大客户验证公告",
-          "竞拍江西志浩股权的具体进展、投产节奏及整合效果",
-          "限售股解禁节奏与股东减持预告"
+          "AFE新产品的具体订单金额、客户验证进度及收入占比数据缺失",
+          "一季报非经常性损益的具体构成及后续是否消除的确定性说明缺失",
+          "近一年无券商研报覆盖，缺乏机构盈利预测与估值锚",
+          "缺乏新产能投放与消化进度的具体数据",
+          "缺乏大单资金流向反转或机构建仓的交易层面证据"
+        ]
+      },
+      {
+        "stock_code": "600353",
+        "stock_name": "旭光电子",
+        "oneil_candidate_score": 58,
+        "selection_score": 146,
+        "candidate_action": "reject",
+        "final_bucket": "reject",
+        "primary_theme": "电力",
+        "external_research_need": {
+          "need_external_research": true,
+          "needed_dimension_list": [
+            "new_business_revenue_share",
+            "order_or_customer",
+            "operating_cashflow_reason"
+          ],
+          "reason_text": "半导体业务占比及订单兑现情况是核心新变量，当前证据不足；经营现金流巨额为负的原因未明，需确认是否有实质性营收转化及财务风险，这些将显著影响其是否为纯概念炒作。"
+        },
+        "external_recheck_meta": {},
+        "main_reject_reason": "C/A双弱，经营现金流巨额为负，PE高达135倍，基本面无法支撑当前极高估值；历史记忆明确警示'C/A弱+S强'多为短线投机陷阱（如润建股份），当前20日涨幅近48%处于高位过热区，极易遭遇获利盘踩踏，不符合中端期成长股标准，建议剔除。",
+        "evidence_gap": [
+          "半导体新业务的具体收入占比及毛利率数据",
+          "近期新增订单金额及核心客户名称",
+          "经营现金流大幅为负的具体原因及改善预期",
+          "是否存在潜在的股东减持或解禁计划"
+        ]
+      },
+      {
+        "stock_code": "600089",
+        "stock_name": "特变电工",
+        "oneil_candidate_score": 58,
+        "selection_score": 141,
+        "candidate_action": "reject",
+        "final_bucket": "reject",
+        "primary_theme": "电力",
+        "external_research_need": {
+          "need_external_research": true,
+          "needed_dimension_list": [
+            "new_order_or_customer_text",
+            "annual_earnings_growth"
+          ],
+          "reason_text": "需要外部复核验证沙特大单的具体金额、交付周期及利润率，以判断N因子的实际业绩贡献；同时需确认多晶硅业务的盈亏平衡点及减值风险，以评估A维度周期拖累是否见底。"
+        },
+        "external_recheck_meta": {},
+        "main_reject_reason": "核心短板在于A维度极弱（多晶硅周期下行严重拖累业绩，净利CAGR为负，ROE极低）且S/I维度呈现资金流出与股价弱势。历史投资记忆多次验证'A弱+I弱'的组合在主线行情中极易导致阴跌，该股属于主线退潮期的受损中军，缺乏大牛股早期的高成长与资金共振特征。",
+        "evidence_gap": [
+          "沙特大单的具体金额、交付周期及利润率水平",
+          "多晶硅业务盈亏平衡点及未来减值风险的具体数据",
+          "经营现金流偏弱的具体原因及改善预期"
         ]
       },
       {
         "stock_code": "002428",
         "stock_name": "云南锗业",
         "oneil_candidate_score": 55,
-        "selection_score": 160,
+        "selection_score": 186,
         "candidate_action": "reject",
         "final_bucket": "reject",
-        "primary_theme": "CPO",
+        "primary_theme": "光通信",
         "external_research_need": {
           "need_external_research": false,
           "needed_dimension_list": [],
-          "reason_text": "CAN/SLIM DB 已充分暴露其业绩极弱、估值极高和纯游资博弈的致命短板，历史记忆也反复验证了其情绪退潮后的杀估值风险，无需外部研报即可得出明确淘汰结论。"
+          "reason_text": "当前CAN/SLIM DB及历史记忆已充分暴露该股C/A双弱、纯游资博弈、高位杀估值的致命风险，即使外部研报提供再多的概念利好，也无法改变其当前无业绩支撑和高PE的事实，无需额外复核。"
         },
         "external_recheck_meta": {},
-        "main_reject_reason": "C和A双弱是致命短板，PE高达2885倍且ROE仅0.62%，业绩完全无法支撑当前估值；I缺失导致纯游资博弈属性重。历史记忆多次验证该股在情绪退潮后极易遭遇杀估值和杀逻辑的双重打击（如跌停出货），风险收益比极差，不符合高净值客户中线稳健成长的要求。",
+        "main_reject_reason": "虽然具备强主线(M)、情绪龙头(L)和活跃供需(S)，但存在致命短板：1) C/A双弱，PE极高且增收不增利，业绩完全无法兑现主线逻辑；2) 历史记忆多次验证该股在情绪退潮后极易遭遇杀估值和杀逻辑的双重打击（如06-01跌停且主力净卖出2.9亿）；3) 纯游资博弈属性重，无机构托底，下行风险不可控，完全不符合高净值客户中线稳健成长的要求。",
         "evidence_gap": [
-          "缺乏磷化铟/深加工业务的具体新增订单金额与大客户名称验证",
+          "缺乏磷化铟/光纤材料具体新增订单金额与大客户名称验证",
           "缺乏新产能投放计划及当前产能利用率数据",
+          "缺乏深加工业务具体收入占比及毛利贡献数据",
           "缺乏机构股东最新持仓变化数据"
-        ]
-      },
-      {
-        "stock_code": "002579",
-        "stock_name": "中京电子",
-        "oneil_candidate_score": 45,
-        "selection_score": 197,
-        "candidate_action": "reject",
-        "final_bucket": "reject",
-        "primary_theme": "CPO",
-        "external_research_need": {
-          "need_external_research": false,
-          "needed_dimension_list": [],
-          "reason_text": "CAN/SLIM DB及历史记忆已充分证明该股C/A双弱、I极弱的本质，且公司自身发布异常波动公告提示风险，外部研报也无覆盖。即使补充外部订单或产能证据，其极低的净利率和微利现状也无法在短期扭转CAN SLIM基本面闭环缺失的致命伤，无需浪费外部复核资源。"
-        },
-        "external_recheck_meta": {},
-        "main_reject_reason": "C/A双弱且I极弱，严重违背CAN SLIM中端期成长股标准。公司净利率仅0.63%，主业盈利极薄，无法证明主线逻辑正在转化为真实业绩；无机构研报覆盖，纯靠游资接力炒作；历史投资记忆多次明确提示该股属于纯概念投机，存在业绩雷与概念退潮双重风险。虽然强主线情绪高潮期可能因筹码轻被游资爆炒，但当前已处于高位（20日涨53%），极易出现A杀，不适合高净值客户的中端期成长股持仓要求。",
-        "evidence_gap": [
-          "缺乏CPO/高速互联PCB相关的具体订单细节与大客户验证",
-          "缺乏新产能（如半导体先进封装载板）投产节奏与产能消化情况数据",
-          "缺乏未来1-2个季度的业绩指引、排产数据或机构调研纪要",
-          "缺乏股东减持或解禁计划的具体公告"
-        ]
-      },
-      {
-        "stock_code": "603773",
-        "stock_name": "沃格光电",
-        "oneil_candidate_score": 45,
-        "selection_score": 139,
-        "candidate_action": "reject",
-        "final_bucket": "reject",
-        "primary_theme": "CPO",
-        "external_research_need": {
-          "need_external_research": false,
-          "needed_dimension_list": [],
-          "reason_text": "当前CAN/SLIM DB已提供充分的致命缺陷证据（业绩严重亏损、控股股东被立案、概念未量产），足以支撑针对高净值客户的淘汰决策，无需额外外部复核。"
-        },
-        "external_recheck_meta": {},
-        "main_reject_reason": "核心原因在于C/A/N/I四个维度全面崩塌，当前上涨纯粹是游资情绪博弈。对于高净值客户的中期成长股筛选，面临控股股东被证监会立案、业绩严重亏损、高位极度拥挤（20日涨幅近80%）的标的，一旦主线退潮极易发生A杀，风险收益比极度不匹配，必须坚决淘汰。",
-        "evidence_gap": [
-          "缺乏TGV玻璃基板量产时间表及潜在客户验证",
-          "缺乏未来1-2个季度的业绩指引或订单落地证据",
-          "缺乏证监会立案调查的具体事由及潜在处罚影响评估"
-        ]
-      },
-      {
-        "stock_code": "600498",
-        "stock_name": "烽火通信",
-        "oneil_candidate_score": 45,
-        "selection_score": 137,
-        "candidate_action": "reject",
-        "final_bucket": "reject",
-        "primary_theme": "CPO",
-        "external_research_need": {
-          "need_external_research": false,
-          "needed_dimension_list": [],
-          "reason_text": "CAN/SLIM DB 及长期记忆已充分证明该股C/A双弱、现金流恶化及高估值风险，历史多次因相同逻辑被精准规避，无需外部复核即可做出淘汰判断。"
-        },
-        "external_recheck_meta": {},
-        "main_reject_reason": "C和A双弱是核心硬伤，一季报增收不增利且经营现金流大额流出；PE高达162倍严重透支未来预期，存在戴维斯双杀风险；历史记忆多次提示该股为“有产业逻辑但财务未验证的容量核心”，在业绩拐点确认前坚决回避。",
-        "evidence_gap": [
-          "400G超高速光传输系统及空芯光纤技术的具体新增订单金额或客户名称",
-          "新业务收入占比提升的量化数据",
-          "公司拟申请360亿元信贷额度的具体用途及对债务压力的影响"
         ]
       },
       {
         "stock_code": "600330",
         "stock_name": "天通股份",
-        "oneil_candidate_score": 45,
-        "selection_score": 128,
+        "oneil_candidate_score": 55,
+        "selection_score": 143,
         "candidate_action": "reject",
         "final_bucket": "reject",
-        "primary_theme": "先进封装",
+        "primary_theme": "PCB",
         "external_research_need": {
           "need_external_research": false,
           "needed_dimension_list": [],
-          "reason_text": "当前CAN/SLIM DB已提供充分的业绩亏损、主营萎缩及实控人减持证据，且历史记忆明确提示该股多次因C/A/N弱势被剔除，当前120日涨幅超220%处于高位情绪博弈期，证据足以支撑淘汰决策，无需额外外部复核。"
+          "reason_text": "CAN/SLIM DB 已充分证明当前基本面严重恶化（C/A双弱）、新因子缺乏实质证据（N弱）且存在实控人减持风险，叠加股价120日暴涨超220%的高位拥挤特征，证据足以做出淘汰决策，无需外部复核。"
         },
         "external_recheck_meta": {},
-        "main_reject_reason": "C/A/N三维同时弱势，严重违背CAN SLIM核心原则，公司当前处于亏损状态无法兑现主线逻辑；股价120日已暴涨221%，完全脱离'大牛股早期特征'，处于高位情绪博弈阶段；实控人一致行动人减持叠加融资盘激增，存在极大的高位兑现和踩踏风险；历史投资记忆也明确提示'避免只因主题命中高就入选'，且当前高位拥挤度远超此前，不适合高净值客户的中期成长配置。",
+        "main_reject_reason": "核心原因为C/A/N三维同时弱势，严重违背CAN SLIM基本面与成长性原则；股价120日已暴涨221.1%，完全脱离'大牛股早期特征'，处于高位情绪博弈阶段；实控人一致行动人减持叠加融资盘激增，存在极大的高位兑现和踩踏风险；历史投资记忆也明确提示'避免只因主题命中高就入选'，且当前高位拥挤度远超此前，不适合高净值客户的中期成长配置。",
         "evidence_gap": [
           "缺乏能够证明主线逻辑转化为收入的新增重大订单或客户线索",
           "缺乏新产能投放时间表及产能爬坡数据",
@@ -1122,24 +987,147 @@ const INLINE_ONEIL = {
         ]
       },
       {
-        "stock_code": "002929",
-        "stock_name": "润建股份",
-        "oneil_candidate_score": 35,
-        "selection_score": 128,
+        "stock_code": "603773",
+        "stock_name": "沃格光电",
+        "oneil_candidate_score": 45,
+        "selection_score": 212,
         "candidate_action": "reject",
         "final_bucket": "reject",
-        "primary_theme": "CPO",
+        "primary_theme": "光通信",
         "external_research_need": {
           "need_external_research": false,
           "needed_dimension_list": [],
-          "reason_text": "CAN/SLIM DB与长期记忆已充分证明该股C/A极度弱势且存在筹码崩塌风险，证据足以支撑淘汰决策，无需额外外部复核。"
+          "reason_text": "当前C/A极弱且亏损扩大，N因子无实质订单验证，且存在证监会立案的严重合规风险，基本面和合规风险已足以作为淘汰依据，无需再通过外部研报寻找增量证据来挽救。"
         },
         "external_recheck_meta": {},
-        "main_reject_reason": "核心原因为C和A维度极度弱势且存在筹码崩塌风险。长期记忆明确警示：遇到'C和A均为weak且存在解禁/跌停抛压'的股票，即使M主线强，也必须一票否决，因为基本面的弱势和筹码的崩盘会瞬间击穿供需与主线庇护效应。当前PE高达512倍，业绩严重恶化与极高估值形成戴维斯双杀风险，属于典型的高位博弈标的，不符合中端期成长股稳健要求。",
+        "main_reject_reason": "虽然M极强且S/L显示其作为短线情绪先锋的弹性，但C/A同时极弱且亏损扩大，N因子无订单/量产验证且面临证监会立案的严重合规风险，I极弱且大单流出。历史投资记忆虽提示该类标的在极强主线下游资情绪博弈下可能产生巨大短线涨幅，但作为高净值客户的中期成长股筛选，这种无业绩兑现、高位拥挤、带合规风险的纯情绪标的完全不符合标准，存在极大的主线退潮与情绪崩塌风险，必须坚决淘汰。",
         "evidence_gap": [
-          "算力业务的具体订单金额、排产数据及新业务收入占比的硬数据依然缺失",
-          "经营现金流大幅恶化及计提减值的具体原因及改善路径说明不足",
-          "限售股解禁后的具体减持意愿与剩余抛压规模需持续跟踪"
+          "缺乏TGV玻璃基板量产时间表及潜在客户导入证据",
+          "缺乏未来1-2个季度的业绩指引或订单落地证据",
+          "缺乏证监会立案调查的具体事由及潜在处罚影响评估"
+        ]
+      },
+      {
+        "stock_code": "002929",
+        "stock_name": "润建股份",
+        "oneil_candidate_score": 45,
+        "selection_score": 187,
+        "candidate_action": "reject",
+        "final_bucket": "reject",
+        "primary_theme": "光通信",
+        "external_research_need": {
+          "need_external_research": false,
+          "needed_dimension_list": [],
+          "reason_text": "CAN/SLIM DB及历史记忆已提供充分的业绩恶化、现金流崩塌及筹码风险证据，C/A双弱触发一票否决条件，无需外部复核即可做出淘汰判断。"
+        },
+        "external_recheck_meta": {},
+        "main_reject_reason": "C和A同时为weak，触发单股淘汰倾向。历史记忆明确提示该股在C/A弱势且存在解禁抛压时，曾出现筹码崩塌与跌停，主线逻辑无法庇护基本面弱势。当前PE超500倍，业绩严重恶化且经营现金流大幅为负，存在戴维斯双杀风险。即使身处强主线，基本面和筹码的恶化会瞬间击穿供需与主线庇护效应，坚决回避。",
+        "evidence_gap": [
+          "算力业务及Token工厂的具体订单金额、排产数据及新业务收入占比的硬数据依然缺失",
+          "与安顺市、怡亚通等战略合作协议对应的实质性营收转化周期与规模预测缺乏",
+          "经营现金流大幅恶化及计提减值的具体原因及改善路径说明不足"
+        ]
+      },
+      {
+        "stock_code": "001896",
+        "stock_name": "豫能控股",
+        "oneil_candidate_score": 40,
+        "selection_score": 141,
+        "candidate_action": "reject",
+        "final_bucket": "reject",
+        "primary_theme": "电力",
+        "external_research_need": {
+          "need_external_research": false,
+          "needed_dimension_list": [],
+          "reason_text": "CAN/SLIM DB及长期记忆已提供充分的负面证据（C/A双弱、高负债、低ROE、概念堆砌遭监管处罚），足以支撑淘汰决策，无需额外外部复核。"
+        },
+        "external_recheck_meta": {},
+        "main_reject_reason": "C/A双弱且基本面极差（高负债、低ROE、利润大幅下滑）；N因子属于典型的概念堆砌且遭监管警示，存在合规风险；I无机构认可。长期记忆多次明确提示该股属于'概念堆砌+高负债+低ROE'的短线情绪博弈标的，历史上虽偶有短线脉冲，但随后常出现A杀暴跌，完全不符合中端期高质量成长股标准，坚决淘汰。",
+        "evidence_gap": [
+          "算力业务真实收入占比及合规整改具体进度（虽不影响当前淘汰决策，但为未来观察该股是否发生质变的关键指标）",
+          "未来火电业务盈利修复的具体驱动因素及煤价敏感度测算"
+        ]
+      },
+      {
+        "stock_code": "002579",
+        "stock_name": "中京电子",
+        "oneil_candidate_score": 35,
+        "selection_score": 179,
+        "candidate_action": "reject",
+        "final_bucket": "reject",
+        "primary_theme": "PCB",
+        "external_research_need": {
+          "need_external_research": false,
+          "needed_dimension_list": [],
+          "reason_text": "CAN/SLIM research DB 已充分证明该股 C/A 双弱、I 极弱且 N 停留在概念层面，PE 高达 435 倍与微利现实严重背离，历史记忆也多次验证其纯概念投机属性，证据足以支撑淘汰决策，无需额外外部复核。"
+        },
+        "external_recheck_meta": {},
+        "main_reject_reason": "C/A双弱且I极弱，严重违背CAN SLIM中端期成长股标准。公司净利率仅0.63%，无法证明主线逻辑正在转化为真实利润；无机构研报覆盖，纯靠游资接力炒作；历史投资记忆多次明确提示该股属于纯概念投机，存在业绩雷与概念退潮双重风险。虽然短期可能受主线情绪带动反弹，但高selection_score不等于基本面闭环，坚决淘汰。",
+        "evidence_gap": [
+          "缺乏CPO/高速互联PCB相关的具体订单或客户验证",
+          "缺乏新产能投产节奏与产能消化情况数据",
+          "缺乏未来1-2个季度的业绩指引或排产数据"
+        ]
+      },
+      {
+        "stock_code": "002957",
+        "stock_name": "科瑞技术",
+        "oneil_candidate_score": 35,
+        "selection_score": 156,
+        "candidate_action": "reject",
+        "final_bucket": "reject",
+        "primary_theme": "光通信",
+        "external_research_need": {
+          "need_external_research": false,
+          "needed_dimension_list": [],
+          "reason_text": "CAN/SLIM research DB 已包含公司自身公告对核心炒作逻辑的澄清（半导体与光模块业务占比极小），这是最权威的证伪证据，无需再通过外部研报寻找预期差。"
+        },
+        "external_recheck_meta": {},
+        "main_reject_reason": "核心原因为“概念大于实质”。公司自身公告已明确提示半导体与光模块业务占比极小，N因子（新变量）被直接证伪，当前业绩与主线逻辑脱节，A因子（年度成长）持续负增长。历史投资记忆也强烈提示需警惕“只因主题命中高就入选”的误判，该股属于典型的蹭概念炒作，缺乏基本面支撑，不符合中端期成长股标准，予以淘汰。",
+        "evidence_gap": [
+          "公司半导体与光模块业务的具体收入占比精确数据",
+          "近期非经常性损益的具体来源及后续是否可持续",
+          "大单资金净流出与融资盘增加背后的筹码交换细节"
+        ]
+      },
+      {
+        "stock_code": "000066",
+        "stock_name": "中国长城",
+        "oneil_candidate_score": 35,
+        "selection_score": 147,
+        "candidate_action": "reject",
+        "final_bucket": "reject",
+        "primary_theme": "半导体设备",
+        "external_research_need": {
+          "need_external_research": false,
+          "needed_dimension_list": [],
+          "reason_text": "CAN/SLIM DB 及长期投资记忆已提供充分的拒绝证据。该股呈现典型的'A weak + 极高估值 + 概念炒作'结构，历史记忆多次验证此结构必然导致戴维斯双杀，当前基本面与资金面数据也完全印证了这一风险，无需外部复核即可坚决淘汰。"
+        },
+        "external_recheck_meta": {},
+        "main_reject_reason": "核心被拒绝原因是典型的“A weak + 极高估值 + 概念炒作”结构。历史投资记忆多次强烈提示该股在此结构下极易发生戴维斯双杀，且近期实盘已验证（20日跌幅25.14%，历史多次T+10暴跌超10%）。当前基本面（净利为负、现金流巨幅流出）完全无法支撑其高估值，资金大幅出逃，坚决规避。",
+        "evidence_gap": [
+          "GB200电源柜等新业务的具体订单金额、客户验证及收入占比数据",
+          "经营现金流巨额流出的详细原因及财务公司关联交易风险敞口",
+          "近期股东减持、解禁及机构真实持仓变动的详细数据"
+        ]
+      },
+      {
+        "stock_code": "000586",
+        "stock_name": "汇源通信",
+        "oneil_candidate_score": 15,
+        "selection_score": 161,
+        "candidate_action": "reject",
+        "final_bucket": "reject",
+        "primary_theme": "光通信",
+        "external_research_need": {
+          "need_external_research": false,
+          "needed_dimension_list": [],
+          "reason_text": "CAN/SLIM DB 已提供充分的财务恶化、负面事件（终止定增、控制权变更失败、股东司法执行）及极弱的资金与机构数据，历史投资记忆也多次验证了该股的淘汰逻辑，证据链完整且足以支撑坚决淘汰，无需外部复核。"
+        },
+        "external_recheck_meta": {},
+        "main_reject_reason": "C/A/N三大核心基本面维度全面走弱且处于持续亏损状态，完全无法将主线高景气转化为真实利润；L为后排跟风，I无机构认可，S筹码恶化且面临司法抛压。近期终止定增及控制权变更失败带来极大经营不确定性。历史投资记忆多次精准提示该股属于'高selection_score但CAN SLIM证据链断裂'的典型情绪炒作标的，过去多次成功规避其大跌，坚决剔除。",
+        "evidence_gap": [
+          "无关键证据缺口。当前财务恶化、负面事件及极弱的资金与机构数据已足够支撑淘汰决策。"
         ]
       }
     ],
@@ -1149,34 +1137,34 @@ const INLINE_ONEIL = {
       "selected_stock_name_list": [
         "工业富联",
         "通富微电",
-        "兴森科技",
         "华天科技",
-        "金海通",
-        "立昂微",
-        "深科技",
-        "金安国纪"
+        "华能蒙电",
+        "兴森科技",
+        "京能电力",
+        "光电股份",
+        "紫光国微"
       ],
       "rejected_stock_name_list": [
-        "景旺电子",
-        "亨通光电",
-        "航天电器",
-        "紫光国微",
-        "博迁新材",
-        "红板科技",
+        "上海贝岭",
+        "旭光电子",
+        "特变电工",
         "云南锗业",
-        "中京电子",
-        "沃格光电",
-        "烽火通信",
         "天通股份",
-        "润建股份"
+        "沃格光电",
+        "润建股份",
+        "豫能控股",
+        "中京电子",
+        "科瑞技术",
+        "中国长城",
+        "汇源通信"
       ],
       "summary_text": "本轮从 20 只主线候选中筛出 8 只 O'Neil/CAN SLIM 高优先级候选。"
     },
-    "source_result_date": "2026-06-03",
-    "stock_selection_result_file": "output/latest_output/stock_selection_result_2026-06-03.json",
+    "source_result_date": "2026-06-04",
+    "stock_selection_result_file": "output/latest_output/stock_selection_result_2026-06-04.json",
     "intraday_stop_loss_backtest_signal": {
       "status": "ready",
-      "source_result_date": "2026-06-03",
+      "source_result_date": "2026-06-04",
       "source": "intraday_stop_loss_db",
       "stock_stop_loss_signal_list": [
         {
@@ -1188,7 +1176,7 @@ const INLINE_ONEIL = {
           "method_label": "daily_low_open_recovery",
           "reason_text": "近157个交易日样本中，日内最低点触发-3.0% 后，收盘重新回到开盘价的概率为0.0，未能收回开盘价的概率为1.0；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.4336%，期望值参考为0.2836%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
           "status": "ready",
-          "source_result_date": "2026-06-03"
+          "source_result_date": "2026-06-04"
         },
         {
           "stock_code": "002156",
@@ -1199,18 +1187,7 @@ const INLINE_ONEIL = {
           "method_label": "daily_low_open_recovery",
           "reason_text": "近157个交易日样本中，日内最低点触发-4.0% 后，收盘重新回到开盘价的概率为0.087，未能收回开盘价的概率为0.913；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.7741%，期望值参考为-0.3759%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
           "status": "ready",
-          "source_result_date": "2026-06-03"
-        },
-        {
-          "stock_code": "002436",
-          "stock_name": "兴森科技",
-          "optimal_stop_loss_pct": -5.0,
-          "optimal_expected_value_pct": -0.7922,
-          "confidence_label": "statistical",
-          "method_label": "daily_low_open_recovery",
-          "reason_text": "近157个交易日样本中，日内最低点触发-5.0% 后，收盘重新回到开盘价的概率为0.0667，未能收回开盘价的概率为0.9333；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-4.3578%，期望值参考为-0.7922%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
-          "status": "ready",
-          "source_result_date": "2026-06-03"
+          "source_result_date": "2026-06-04"
         },
         {
           "stock_code": "002185",
@@ -1221,60 +1198,71 @@ const INLINE_ONEIL = {
           "method_label": "daily_low_open_recovery",
           "reason_text": "近151个交易日样本中，日内最低点触发-5.0% 后，收盘重新回到开盘价的概率为0.0，未能收回开盘价的概率为1.0；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-6.1768%，期望值参考为1.0268%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
           "status": "ready",
-          "source_result_date": "2026-06-03"
+          "source_result_date": "2026-06-04"
         },
         {
-          "stock_code": "603061",
-          "stock_name": "金海通",
-          "optimal_stop_loss_pct": -4.0,
-          "optimal_expected_value_pct": -0.5064,
-          "confidence_label": "statistical",
-          "method_label": "daily_low_open_recovery",
-          "reason_text": "近211个交易日样本中，日内最低点触发-4.0% 后，收盘重新回到开盘价的概率为0.0882，未能收回开盘价的概率为0.9118；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.6436%，期望值参考为-0.5064%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
-          "status": "ready",
-          "source_result_date": "2026-06-03"
-        },
-        {
-          "stock_code": "605358",
-          "stock_name": "立昂微",
+          "stock_code": "600863",
+          "stock_name": "华能蒙电",
           "optimal_stop_loss_pct": -3.0,
-          "optimal_expected_value_pct": -0.1049,
+          "optimal_expected_value_pct": -0.458,
           "confidence_label": "statistical",
           "method_label": "daily_low_open_recovery",
-          "reason_text": "近157个交易日样本中，日内最低点触发-3.0% 后，收盘重新回到开盘价的概率为0.0526，未能收回开盘价的概率为0.9474；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.0451%，期望值参考为-0.1049%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+          "reason_text": "近157个交易日样本中，日内最低点触发-3.0% 后，收盘重新回到开盘价的概率为0.1538，未能收回开盘价的概率为0.8462；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-2.692%，期望值参考为-0.458%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
           "status": "ready",
-          "source_result_date": "2026-06-03"
+          "source_result_date": "2026-06-04"
         },
         {
-          "stock_code": "000021",
-          "stock_name": "深科技",
-          "optimal_stop_loss_pct": -6.0,
-          "optimal_expected_value_pct": -0.2825,
+          "stock_code": "002436",
+          "stock_name": "兴森科技",
+          "optimal_stop_loss_pct": -5.0,
+          "optimal_expected_value_pct": -0.7922,
           "confidence_label": "statistical",
           "method_label": "daily_low_open_recovery",
-          "reason_text": "近157个交易日样本中，日内最低点触发-6.0% 后，收盘重新回到开盘价的概率为0.1，未能收回开盘价的概率为0.9；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-5.8675%，期望值参考为-0.2825%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+          "reason_text": "近157个交易日样本中，日内最低点触发-5.0% 后，收盘重新回到开盘价的概率为0.0667，未能收回开盘价的概率为0.9333；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-4.3578%，期望值参考为-0.7922%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
           "status": "ready",
-          "source_result_date": "2026-06-03"
+          "source_result_date": "2026-06-04"
         },
         {
-          "stock_code": "002636",
-          "stock_name": "金安国纪",
-          "optimal_stop_loss_pct": -6.0,
-          "optimal_expected_value_pct": 0.3513,
+          "stock_code": "600578",
+          "stock_name": "京能电力",
+          "optimal_stop_loss_pct": -2.0,
+          "optimal_expected_value_pct": -1.0362,
           "confidence_label": "statistical",
           "method_label": "daily_low_open_recovery",
-          "reason_text": "近157个交易日样本中，日内最低点触发-6.0% 后，收盘重新回到开盘价的概率为0.0，未能收回开盘价的概率为1.0；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-6.5013%，期望值参考为0.3513%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+          "reason_text": "近157个交易日样本中，日内最低点触发-2.0% 后，收盘重新回到开盘价的概率为0.2391，未能收回开盘价的概率为0.7609；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-1.1138%，期望值参考为-1.0362%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
           "status": "ready",
-          "source_result_date": "2026-06-03"
+          "source_result_date": "2026-06-04"
+        },
+        {
+          "stock_code": "600184",
+          "stock_name": "光电股份",
+          "optimal_stop_loss_pct": -3.0,
+          "optimal_expected_value_pct": -0.3824,
+          "confidence_label": "statistical",
+          "method_label": "daily_low_open_recovery",
+          "reason_text": "近157个交易日样本中，日内最低点触发-3.0% 后，收盘重新回到开盘价的概率为0.0976，未能收回开盘价的概率为0.9024；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-2.7676%，期望值参考为-0.3824%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+          "status": "ready",
+          "source_result_date": "2026-06-04"
+        },
+        {
+          "stock_code": "002049",
+          "stock_name": "紫光国微",
+          "optimal_stop_loss_pct": -2.0,
+          "optimal_expected_value_pct": 0.4103,
+          "confidence_label": "statistical",
+          "method_label": "daily_low_open_recovery",
+          "reason_text": "近147个交易日样本中，日内最低点触发-2.0% 后，收盘重新回到开盘价的概率为0.0652，未能收回开盘价的概率为0.9348；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-2.5603%，期望值参考为0.4103%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+          "status": "ready",
+          "source_result_date": "2026-06-04"
         }
       ],
       "fallback_count": 0
     },
     "investment_thesis_memory_update_meta": {
       "memory_lib_file": "references/training/investment_thesis_memory_lib.json",
-      "before_count": 639,
-      "after_count": 645,
-      "added_count": 6
+      "before_count": 645,
+      "after_count": 665,
+      "added_count": 20
     }
   }
 };
@@ -1471,131 +1459,142 @@ const INLINE_FUTURE = {
   }
 };
 const INLINE_THEME = {
-  "week_start_date": "2026-05-21",
-  "week_end_date": "2026-06-03",
-  "weekly_summary_text": "本周市场震荡分化，成长风格占优，创业板指在周初和周末两度引领反弹。主线由前期的防御避险（高股息/电力）向后半周的科技成长（AI算力硬件/半导体材料）明显切换，CPO与被动元件在周末形成强共振。",
+  "week_start_date": "2026-05-22",
+  "week_end_date": "2026-06-04",
+  "weekly_summary_text": "本周市场整体呈现成长主导格局，创业板指显著强于主板。主线聚焦于AI算力硬件扩散（光通信、半导体设备）与防御性顺周期（电力、煤炭），消费电子及PCB等细分环节在近3日资金共识度明显提升。",
   "industry_list": [
     {
       "rank_no": 1,
       "industry_name": "通信设备",
-      "strength_level": "周末龙头中际旭创涨近7%创20日新高",
-      "reason_text": "CPO与光通信方向资金高度共识，高动量股与涨停股均集中于此，是本周成长反弹的核心引擎",
+      "strength_level": "周内通信ETF多次大涨超5.5%",
+      "reason_text": "光通信与CPO方向资金高度共识，多只龙头股创20日新高，与创业板成长风格强烈共振。",
       "reference_list": [
-        "06-03中际旭创、新易盛等创20日新高",
-        "06-02通信ETF大涨6.72%",
-        "06-03亨通光电涨停封单超8.5亿"
+        "06-02 通信ETF国泰大涨6.72%",
+        "06-04 亨通光电涨7.04%创20日新高",
+        "06-03 手工投研提及光纤光缆"
       ]
     },
     {
       "rank_no": 2,
-      "industry_name": "元件",
-      "strength_level": "06-03 MLCC板块单日涨超4.8%",
-      "reason_text": "被动元件及MLCC方向在周末爆发，板块涨幅居前，与AI算力硬件扩散逻辑共振",
+      "industry_name": "半导体",
+      "strength_level": "半导体设备ETF单日大涨超3%",
+      "reason_text": "全球半导体景气周期预期上行，设备与存储方向获资金重点布局，高动量股集中。",
       "reference_list": [
-        "06-03 MLCC板块涨幅4.82%居前",
-        "06-03被动元件概念涨4.37%",
-        "06-02及06-03手工投研连续提及MLCC"
+        "06-04 半导体设备ETF大涨",
+        "06-04 兆易创新涨7.53%创20日新高",
+        "06-04 新闻提及全球半导体规模预计增近九成"
       ]
     },
     {
       "rank_no": 3,
-      "industry_name": "半导体",
-      "strength_level": "06-03先进封装相关板块涨超3%",
-      "reason_text": "先进封装（HBM、玻璃基板）及半导体材料受AI需求催化，资金在周末明显回流",
+      "industry_name": "电力",
+      "strength_level": "豫能控股等电力股涨停",
+      "reason_text": "迎峰度夏用电负荷预期大增，绿电与火电板块反复活跃，兼具防御与景气属性。",
       "reference_list": [
-        "06-03高带宽内存板块涨4.17%",
-        "06-03通富微电涨停",
-        "06-04新闻提及全球半导体规模将增近九成"
+        "06-04 豫能控股涨停",
+        "06-04 新闻提及今夏国家电网最大用电负荷将超13亿千瓦",
+        "06-01/06-04 手工投研提及电力"
       ]
     },
     {
       "rank_no": 4,
-      "industry_name": "电力",
-      "strength_level": "周内豫能控股等个股连板",
-      "reason_text": "贯穿全周的防御与进攻双属性，夏季用电高峰预期提供催化，连板股集中",
+      "industry_name": "光学光电",
+      "strength_level": "京东方A涨停封单超12亿",
+      "reason_text": "面板及光学元件放量大涨，AI终端换机及新型显示驱动逻辑明确。",
       "reference_list": [
-        "06-03豫能控股及京能电力涨停",
-        "06-01煤炭ETF大涨6.62%",
-        "新闻催化夏季国家电网最大用电负荷将超13亿千瓦"
+        "06-04 京东方A涨停封单12亿",
+        "06-04 三安光电涨停",
+        "06-03 新闻提及光学光电子放量拉升"
       ]
     },
     {
       "rank_no": 5,
-      "industry_name": "消费电子",
-      "strength_level": "05-22消费电子ETF涨超6.7%",
-      "reason_text": "AI PC与AI眼镜新品发布期临近，资金在周初和周末均有试探性布局",
+      "industry_name": "煤炭",
+      "strength_level": "煤炭ETF周初大涨6.62%",
+      "reason_text": "高股息红利防御逻辑受资金追捧，在市场调整时体现避险属性。",
       "reference_list": [
-        "05-22消费电子ETF大涨6.72%",
-        "06-01及06-02手工投研提及AI PC",
-        "06-04新闻提及AI眼镜新品密集发布"
+        "06-01 煤炭ETF国泰大涨6.62%",
+        "06-01 国企红利ETF大涨9.41%",
+        "06-04 手工投研提及煤炭"
+      ]
+    },
+    {
+      "rank_no": 6,
+      "industry_name": "元件",
+      "strength_level": "东山精密等多股创20日新高",
+      "reason_text": "AI算力服务器升级驱动PCB及元器件量价齐升，高动量龙头趋势向好。",
+      "reference_list": [
+        "06-04 东山精密涨6.17%创20日新高",
+        "06-04 江海股份涨停",
+        "06-03 手工投研提及MLCC"
       ]
     }
   ],
   "theme_list": [
     {
       "rank_no": 1,
-      "theme_name": "CPO",
-      "strength_level": "周末龙头中际旭创涨近7%创20日新高",
-      "reason_text": "通信ETF周内反复走强，周末中际旭创等龙头创20日新高，板块与基金形成强共振，是当前市场最具共识的趋势主线",
+      "theme_name": "光通信",
+      "strength_level": "周内代表基金涨6.72%",
+      "reason_text": "AI算力硬件核心方向，通信ETF周内反复大涨，中际旭创等龙头创20日新高，近3日持续走强且手工投研多日验证。",
       "reference_list": [
-        "06-03中际旭创等高动量股创20日新高",
-        "06-02通信ETF大涨6.72%",
-        "06-03手工投研备注CPO"
+        "06-02/06-03 daily_theme指向AI算力硬件/光通信",
+        "06-04 中际旭创、亨通光电创20日新高",
+        "06-03/06-04 手工投研提及光通信/光纤光缆"
       ]
     },
     {
       "rank_no": 2,
-      "theme_name": "MLCC",
-      "strength_level": "06-03板块涨幅达4.82%",
-      "reason_text": "周末板块涨幅居前，手工投研多日提及，与AI算力硬件扩散逻辑共振，资金从光模块向被动元件扩散迹象明显",
+      "theme_name": "半导体设备",
+      "strength_level": "代表ETF单日涨超3.4%",
+      "reason_text": "全球半导体景气周期向上，设备端率先受益，近2日资金流入加速，高动量股共振明显。",
       "reference_list": [
-        "06-03 MLCC板块涨幅4.82%居前",
-        "06-02及06-03手工投研连续提及MLCC",
-        "06-03被动元件概念涨4.37%"
+        "06-04 daily_theme指向半导体设备",
+        "06-04 新闻提及全球半导体市场规模预计增近九成",
+        "06-04 兆易创新、佰维存储创20日新高"
       ]
     },
     {
       "rank_no": 3,
-      "theme_name": "先进封装",
-      "strength_level": "06-03高带宽内存及玻璃基板板块涨幅超3%",
-      "reason_text": "HBM与玻璃基板概念受资金关注，半导体景气周期向上，通富微电等标的涨停验证资金介入",
+      "theme_name": "电力",
+      "strength_level": "龙头股豫能控股涨停",
+      "reason_text": "迎峰度夏用电负荷预期催化，电力板块全周反复活跃，兼具防御属性与事件驱动，手工投研持续验证。",
       "reference_list": [
-        "06-03高带宽内存板块涨4.17%",
-        "06-03玻璃基板板块涨3.43%",
-        "05-21及05-22手工投研提及玻璃基板"
+        "06-04 豫能控股涨停",
+        "06-04 新闻提及今夏国家电网最大用电负荷将超13亿千瓦",
+        "06-01/06-04 手工投研提及电力"
       ]
     },
     {
       "rank_no": 4,
-      "theme_name": "电力",
-      "strength_level": "周内豫能控股等个股连板",
-      "reason_text": "夏季用电高峰催化，兼具防御与进攻属性，全周反复活跃，连板股高度集中",
+      "theme_name": "消费电子",
+      "strength_level": "京东方A涨停封单超12亿",
+      "reason_text": "AI终端及AI眼镜新品密集发布催化换机逻辑，光学光电与消费电子龙头放量突破，近3日升温明显。",
       "reference_list": [
-        "06-03豫能控股及京能电力涨停",
-        "06-01煤炭ETF大涨6.62%",
-        "新闻催化夏季用电负荷超13亿千瓦"
+        "05-22/06-04 daily_theme指向AI终端/消费电子",
+        "06-04 新闻提及AI眼镜新品密集发布",
+        "06-04 京东方A涨停"
       ]
     },
     {
       "rank_no": 5,
-      "theme_name": "半导体材料",
-      "strength_level": "06-03工业气体板块涨3.35%",
-      "reason_text": "工业气体、特种气体板块异动，受全球半导体规模扩张消息驱动，属于半导体产业链的补涨扩散方向",
+      "theme_name": "煤炭",
+      "strength_level": "周初代表基金涨6.62%",
+      "reason_text": "高股息防御逻辑在市场调整时受资金青睐，前半周极强，后半周随成长股回暖略有降温但趋势未坏。",
       "reference_list": [
-        "06-03工业气体及氦气概念进入板块前十",
-        "06-04新闻提及全球半导体规模将增近九成",
-        "06-03科创成长ETF大涨"
+        "06-01 daily_theme指向高股息/红利防御",
+        "06-01 煤炭ETF国泰大涨6.62%",
+        "06-01/06-04 手工投研提及煤炭"
       ]
     },
     {
       "rank_no": 6,
-      "theme_name": "AI PC",
-      "strength_level": "05-22消费电子ETF涨超6.7%",
-      "reason_text": "消费电子ETF走强及新品发布催化，但板块共振尚在初期，更多受短期事件驱动",
+      "theme_name": "PCB",
+      "strength_level": "胜宏科技等多股创20日新高",
+      "reason_text": "AI算力服务器升级驱动PCB量价齐升，高动量龙头趋势向好，手工投研近期反复提及。",
       "reference_list": [
-        "06-01及06-02手工投研提及AI PC",
-        "06-04新闻提及AI眼镜新品密集发布",
-        "05-22消费电子ETF大涨6.72%"
+        "06-04 胜宏科技涨3.76%且高动量",
+        "06-04 江海股份涨停",
+        "05-25/05-29/06-03 手工投研提及PCB/MLCC"
       ]
     }
   ]
@@ -1625,8 +1624,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -5.0,
         "optimal_next_close_net_return_pct": -0.6915,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0948,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-5.0% 低吸阈值的次数为20，触发概率为0.0948；按该阈值买入并持有到下一交易日收盘的平均收益为1.3085%，扣除2.0% 买入损耗后的平均净收益为-0.6915%，下一交易日收盘胜率为0.55。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -1656,8 +1657,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -6.0,
         "optimal_next_close_net_return_pct": 1.1685,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0379,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-6.0% 低吸阈值的次数为8，触发概率为0.0379；按该阈值买入并持有到下一交易日收盘的平均收益为3.1685%，扣除2.0% 买入损耗后的平均净收益为1.1685%，下一交易日收盘胜率为0.625。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -1687,8 +1690,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -3.5,
         "optimal_next_close_net_return_pct": -0.7581,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.1374,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-3.5% 低吸阈值的次数为29，触发概率为0.1374；按该阈值买入并持有到下一交易日收盘的平均收益为1.2419%，扣除2.0% 买入损耗后的平均净收益为-0.7581%，下一交易日收盘胜率为0.5714。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -1718,8 +1723,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -3.0,
         "optimal_next_close_net_return_pct": -1.6643,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.2133,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-3.0% 低吸阈值的次数为45，触发概率为0.2133；按该阈值买入并持有到下一交易日收盘的平均收益为0.3357%，扣除2.0% 买入损耗后的平均净收益为-1.6643%，下一交易日收盘胜率为0.5778。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -1749,8 +1756,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -0.5,
         "optimal_next_close_net_return_pct": -1.46,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.8436,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-0.5% 低吸阈值的次数为178，触发概率为0.8436；按该阈值买入并持有到下一交易日收盘的平均收益为0.54%，扣除2.0% 买入损耗后的平均净收益为-1.46%，下一交易日收盘胜率为0.5537。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -1780,8 +1789,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -7.0,
         "optimal_next_close_net_return_pct": 0.6479,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0569,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-7.0% 低吸阈值的次数为12，触发概率为0.0569；按该阈值买入并持有到下一交易日收盘的平均收益为2.6479%，扣除2.0% 买入损耗后的平均净收益为0.6479%，下一交易日收盘胜率为0.5833。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -1811,8 +1822,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -3.0,
         "optimal_next_close_net_return_pct": -1.2174,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0711,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-3.0% 低吸阈值的次数为15，触发概率为0.0711；按该阈值买入并持有到下一交易日收盘的平均收益为0.7826%，扣除2.0% 买入损耗后的平均净收益为-1.2174%，下一交易日收盘胜率为0.6667。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -1842,8 +1855,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -2.0,
         "optimal_next_close_net_return_pct": -1.7373,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.4126,
         "confidence_label": "statistical",
         "reason_text": "近206个交易日样本中，开盘后触发-2.0% 低吸阈值的次数为85，触发概率为0.4126；按该阈值买入并持有到下一交易日收盘的平均收益为0.2627%，扣除2.0% 买入损耗后的平均净收益为-1.7373%，下一交易日收盘胜率为0.6。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -1873,8 +1888,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -7.0,
         "optimal_next_close_net_return_pct": 1.1047,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0766,
         "confidence_label": "statistical",
         "reason_text": "近209个交易日样本中，开盘后触发-7.0% 低吸阈值的次数为16，触发概率为0.0766；按该阈值买入并持有到下一交易日收盘的平均收益为3.1047%，扣除2.0% 买入损耗后的平均净收益为1.1047%，下一交易日收盘胜率为0.75。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -1904,8 +1921,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -8.0,
         "optimal_next_close_net_return_pct": -1.125,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0332,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-8.0% 低吸阈值的次数为7，触发概率为0.0332；按该阈值买入并持有到下一交易日收盘的平均收益为0.875%，扣除2.0% 买入损耗后的平均净收益为-1.125%，下一交易日收盘胜率为0.4286。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -1935,8 +1954,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -8.0,
         "optimal_next_close_net_return_pct": 0.6141,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0237,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-8.0% 低吸阈值的次数为5，触发概率为0.0237；按该阈值买入并持有到下一交易日收盘的平均收益为2.6141%，扣除2.0% 买入损耗后的平均净收益为0.6141%，下一交易日收盘胜率为0.6。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -1966,8 +1987,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -0.5,
         "optimal_next_close_net_return_pct": -1.1437,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.8389,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-0.5% 低吸阈值的次数为177，触发概率为0.8389；按该阈值买入并持有到下一交易日收盘的平均收益为0.8563%，扣除2.0% 买入损耗后的平均净收益为-1.1437%，下一交易日收盘胜率为0.4943。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -1997,8 +2020,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -5.0,
         "optimal_next_close_net_return_pct": -0.265,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0427,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-5.0% 低吸阈值的次数为9，触发概率为0.0427；按该阈值买入并持有到下一交易日收盘的平均收益为1.735%，扣除2.0% 买入损耗后的平均净收益为-0.265%，下一交易日收盘胜率为0.4444。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -2028,8 +2053,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -4.0,
         "optimal_next_close_net_return_pct": -1.3299,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.1564,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-4.0% 低吸阈值的次数为33，触发概率为0.1564；按该阈值买入并持有到下一交易日收盘的平均收益为0.6701%，扣除2.0% 买入损耗后的平均净收益为-1.3299%，下一交易日收盘胜率为0.3939。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -2059,8 +2086,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -6.0,
         "optimal_next_close_net_return_pct": 1.7193,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.1043,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-6.0% 低吸阈值的次数为22，触发概率为0.1043；按该阈值买入并持有到下一交易日收盘的平均收益为3.7193%，扣除2.0% 买入损耗后的平均净收益为1.7193%，下一交易日收盘胜率为0.6364。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -2090,8 +2119,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -2.0,
         "optimal_next_close_net_return_pct": -1.4449,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.09,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-2.0% 低吸阈值的次数为19，触发概率为0.09；按该阈值买入并持有到下一交易日收盘的平均收益为0.5551%，扣除2.0% 买入损耗后的平均净收益为-1.4449%，下一交易日收盘胜率为0.5789。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -2121,8 +2152,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -2.0,
         "optimal_next_close_net_return_pct": -0.5994,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.5166,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-2.0% 低吸阈值的次数为109，触发概率为0.5166；按该阈值买入并持有到下一交易日收盘的平均收益为1.4006%，扣除2.0% 买入损耗后的平均净收益为-0.5994%，下一交易日收盘胜率为0.6296。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -2152,8 +2185,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -1.0,
         "optimal_next_close_net_return_pct": -1.7832,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.4692,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-1.0% 低吸阈值的次数为99，触发概率为0.4692；按该阈值买入并持有到下一交易日收盘的平均收益为0.2168%，扣除2.0% 买入损耗后的平均净收益为-1.7832%，下一交易日收盘胜率为0.5102。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -2183,8 +2218,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -8.0,
         "optimal_next_close_net_return_pct": 1.1456,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0435,
         "confidence_label": "statistical",
         "reason_text": "近207个交易日样本中，开盘后触发-8.0% 低吸阈值的次数为9，触发概率为0.0435；按该阈值买入并持有到下一交易日收盘的平均收益为3.1456%，扣除2.0% 买入损耗后的平均净收益为1.1456%，下一交易日收盘胜率为0.7778。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -2214,8 +2251,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -7.0,
         "optimal_next_close_net_return_pct": 0.4461,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0284,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-7.0% 低吸阈值的次数为6，触发概率为0.0284；按该阈值买入并持有到下一交易日收盘的平均收益为2.4461%，扣除2.0% 买入损耗后的平均净收益为0.4461%，下一交易日收盘胜率为0.8333。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -2245,8 +2284,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -5.0,
         "optimal_next_close_net_return_pct": 2.332,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.1232,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-5.0% 低吸阈值的次数为26，触发概率为0.1232；按该阈值买入并持有到下一交易日收盘的平均收益为4.332%，扣除2.0% 买入损耗后的平均净收益为2.332%，下一交易日收盘胜率为0.6538。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -2276,8 +2317,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -2.5,
         "optimal_next_close_net_return_pct": -1.23,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.2844,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-2.5% 低吸阈值的次数为60，触发概率为0.2844；按该阈值买入并持有到下一交易日收盘的平均收益为0.77%，扣除2.0% 买入损耗后的平均净收益为-1.23%，下一交易日收盘胜率为0.5。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -2307,8 +2350,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -2.5,
         "optimal_next_close_net_return_pct": -1.9316,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.2139,
         "confidence_label": "statistical",
         "reason_text": "近201个交易日样本中，开盘后触发-2.5% 低吸阈值的次数为43，触发概率为0.2139；按该阈值买入并持有到下一交易日收盘的平均收益为0.0684%，扣除2.0% 买入损耗后的平均净收益为-1.9316%，下一交易日收盘胜率为0.5349。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -2338,8 +2383,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -0.5,
         "optimal_next_close_net_return_pct": -1.3614,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.8294,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-0.5% 低吸阈值的次数为175，触发概率为0.8294；按该阈值买入并持有到下一交易日收盘的平均收益为0.6386%，扣除2.0% 买入损耗后的平均净收益为-1.3614%，下一交易日收盘胜率为0.5172。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -2369,8 +2416,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -6.0,
         "optimal_next_close_net_return_pct": -0.2399,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0948,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-6.0% 低吸阈值的次数为20，触发概率为0.0948；按该阈值买入并持有到下一交易日收盘的平均收益为1.7601%，扣除2.0% 买入损耗后的平均净收益为-0.2399%，下一交易日收盘胜率为0.65。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -2400,8 +2449,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -5.0,
         "optimal_next_close_net_return_pct": -0.5606,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.1095,
         "confidence_label": "statistical",
         "reason_text": "近210个交易日样本中，开盘后触发-5.0% 低吸阈值的次数为23，触发概率为0.1095；按该阈值买入并持有到下一交易日收盘的平均收益为1.4394%，扣除2.0% 买入损耗后的平均净收益为-0.5606%，下一交易日收盘胜率为0.6522。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -2431,8 +2482,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -0.5,
         "optimal_next_close_net_return_pct": -1.6566,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.8269,
         "confidence_label": "statistical",
         "reason_text": "近208个交易日样本中，开盘后触发-0.5% 低吸阈值的次数为172，触发概率为0.8269；按该阈值买入并持有到下一交易日收盘的平均收益为0.3434%，扣除2.0% 买入损耗后的平均净收益为-1.6566%，下一交易日收盘胜率为0.5088。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -2462,8 +2515,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -3.0,
         "optimal_next_close_net_return_pct": -0.3078,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.2227,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-3.0% 低吸阈值的次数为47，触发概率为0.2227；按该阈值买入并持有到下一交易日收盘的平均收益为1.6922%，扣除2.0% 买入损耗后的平均净收益为-0.3078%，下一交易日收盘胜率为0.617。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -2493,8 +2548,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -4.0,
         "optimal_next_close_net_return_pct": -0.4392,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.1754,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-4.0% 低吸阈值的次数为37，触发概率为0.1754；按该阈值买入并持有到下一交易日收盘的平均收益为1.5608%，扣除2.0% 买入损耗后的平均净收益为-0.4392%，下一交易日收盘胜率为0.5405。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -2524,8 +2581,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -4.0,
         "optimal_next_close_net_return_pct": -0.3269,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0896,
         "confidence_label": "statistical",
         "reason_text": "近201个交易日样本中，开盘后触发-4.0% 低吸阈值的次数为18，触发概率为0.0896；按该阈值买入并持有到下一交易日收盘的平均收益为1.6731%，扣除2.0% 买入损耗后的平均净收益为-0.3269%，下一交易日收盘胜率为0.5556。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -2555,8 +2614,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -6.0,
         "optimal_next_close_net_return_pct": -1.1801,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0569,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-6.0% 低吸阈值的次数为12，触发概率为0.0569；按该阈值买入并持有到下一交易日收盘的平均收益为0.8199%，扣除2.0% 买入损耗后的平均净收益为-1.1801%，下一交易日收盘胜率为0.5。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -2586,8 +2647,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -5.0,
         "optimal_next_close_net_return_pct": -0.0932,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.1137,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-5.0% 低吸阈值的次数为24，触发概率为0.1137；按该阈值买入并持有到下一交易日收盘的平均收益为1.9068%，扣除2.0% 买入损耗后的平均净收益为-0.0932%，下一交易日收盘胜率为0.5833。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -2617,8 +2680,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -0.5,
         "optimal_next_close_net_return_pct": -0.9823,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.8389,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-0.5% 低吸阈值的次数为177，触发概率为0.8389；按该阈值买入并持有到下一交易日收盘的平均收益为1.0177%，扣除2.0% 买入损耗后的平均净收益为-0.9823%，下一交易日收盘胜率为0.5284。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -2648,8 +2713,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -8.0,
         "optimal_next_close_net_return_pct": -0.0812,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0379,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-8.0% 低吸阈值的次数为8，触发概率为0.0379；按该阈值买入并持有到下一交易日收盘的平均收益为1.9188%，扣除2.0% 买入损耗后的平均净收益为-0.0812%，下一交易日收盘胜率为0.625。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -2679,8 +2746,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -8.0,
         "optimal_next_close_net_return_pct": 3.4928,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0427,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-8.0% 低吸阈值的次数为9，触发概率为0.0427；按该阈值买入并持有到下一交易日收盘的平均收益为5.4928%，扣除2.0% 买入损耗后的平均净收益为3.4928%，下一交易日收盘胜率为0.6667。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -2710,8 +2779,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -8.0,
         "optimal_next_close_net_return_pct": 0.3217,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0474,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-8.0% 低吸阈值的次数为10，触发概率为0.0474；按该阈值买入并持有到下一交易日收盘的平均收益为2.3217%，扣除2.0% 买入损耗后的平均净收益为0.3217%，下一交易日收盘胜率为0.5。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -2741,8 +2812,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -1.5,
         "optimal_next_close_net_return_pct": -0.8375,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.6066,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-1.5% 低吸阈值的次数为128，触发概率为0.6066；按该阈值买入并持有到下一交易日收盘的平均收益为1.1625%，扣除2.0% 买入损耗后的平均净收益为-0.8375%，下一交易日收盘胜率为0.5078。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -2772,8 +2845,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -4.0,
         "optimal_next_close_net_return_pct": -0.3837,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.1896,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-4.0% 低吸阈值的次数为40，触发概率为0.1896；按该阈值买入并持有到下一交易日收盘的平均收益为1.6163%，扣除2.0% 买入损耗后的平均净收益为-0.3837%，下一交易日收盘胜率为0.641。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -2803,8 +2878,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -4.0,
         "optimal_next_close_net_return_pct": -0.8301,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.1327,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-4.0% 低吸阈值的次数为28，触发概率为0.1327；按该阈值买入并持有到下一交易日收盘的平均收益为1.1699%，扣除2.0% 买入损耗后的平均净收益为-0.8301%，下一交易日收盘胜率为0.6429。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -2834,8 +2911,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -3.5,
         "optimal_next_close_net_return_pct": 0.5253,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.2227,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-3.5% 低吸阈值的次数为47，触发概率为0.2227；按该阈值买入并持有到下一交易日收盘的平均收益为2.5253%，扣除2.0% 买入损耗后的平均净收益为0.5253%，下一交易日收盘胜率为0.5652。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -2865,8 +2944,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -1.5,
         "optimal_next_close_net_return_pct": -1.799,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.3886,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-1.5% 低吸阈值的次数为82，触发概率为0.3886；按该阈值买入并持有到下一交易日收盘的平均收益为0.201%，扣除2.0% 买入损耗后的平均净收益为-1.799%，下一交易日收盘胜率为0.5556。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -2896,8 +2977,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -4.0,
         "optimal_next_close_net_return_pct": -1.5874,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.1327,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-4.0% 低吸阈值的次数为28，触发概率为0.1327；按该阈值买入并持有到下一交易日收盘的平均收益为0.4126%，扣除2.0% 买入损耗后的平均净收益为-1.5874%，下一交易日收盘胜率为0.6429。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -2927,8 +3010,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -2.5,
         "optimal_next_close_net_return_pct": -1.5348,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.1469,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-2.5% 低吸阈值的次数为31，触发概率为0.1469；按该阈值买入并持有到下一交易日收盘的平均收益为0.4652%，扣除2.0% 买入损耗后的平均净收益为-1.5348%，下一交易日收盘胜率为0.6452。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -2958,8 +3043,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -4.0,
         "optimal_next_close_net_return_pct": 0.6828,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.09,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-4.0% 低吸阈值的次数为19，触发概率为0.09；按该阈值买入并持有到下一交易日收盘的平均收益为2.6828%，扣除2.0% 买入损耗后的平均净收益为0.6828%，下一交易日收盘胜率为0.7222。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -2989,8 +3076,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -4.0,
         "optimal_next_close_net_return_pct": 0.1848,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.1659,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-4.0% 低吸阈值的次数为35，触发概率为0.1659；按该阈值买入并持有到下一交易日收盘的平均收益为2.1848%，扣除2.0% 买入损耗后的平均净收益为0.1848%，下一交易日收盘胜率为0.6。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -3020,8 +3109,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -7.0,
         "optimal_next_close_net_return_pct": 0.1811,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0284,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-7.0% 低吸阈值的次数为6，触发概率为0.0284；按该阈值买入并持有到下一交易日收盘的平均收益为2.1811%，扣除2.0% 买入损耗后的平均净收益为0.1811%，下一交易日收盘胜率为0.6667。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -3051,8 +3142,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -1.0,
         "optimal_next_close_net_return_pct": -1.7216,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.5735,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-1.0% 低吸阈值的次数为121，触发概率为0.5735；按该阈值买入并持有到下一交易日收盘的平均收益为0.2784%，扣除2.0% 买入损耗后的平均净收益为-1.7216%，下一交易日收盘胜率为0.5417。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -3082,8 +3175,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -6.0,
         "optimal_next_close_net_return_pct": -1.1053,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0711,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-6.0% 低吸阈值的次数为15，触发概率为0.0711；按该阈值买入并持有到下一交易日收盘的平均收益为0.8947%，扣除2.0% 买入损耗后的平均净收益为-1.1053%，下一交易日收盘胜率为0.5333。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -3113,8 +3208,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -1.0,
         "optimal_next_close_net_return_pct": -1.985,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.4645,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-1.0% 低吸阈值的次数为98，触发概率为0.4645；按该阈值买入并持有到下一交易日收盘的平均收益为0.015%，扣除2.0% 买入损耗后的平均净收益为-1.985%，下一交易日收盘胜率为0.433。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -3144,8 +3241,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -4.0,
         "optimal_next_close_net_return_pct": 0.9322,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.2139,
         "confidence_label": "statistical",
         "reason_text": "近201个交易日样本中，开盘后触发-4.0% 低吸阈值的次数为43，触发概率为0.2139；按该阈值买入并持有到下一交易日收盘的平均收益为2.9322%，扣除2.0% 买入损耗后的平均净收益为0.9322%，下一交易日收盘胜率为0.6977。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -3175,8 +3274,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -5.0,
         "optimal_next_close_net_return_pct": -0.6666,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0945,
         "confidence_label": "statistical",
         "reason_text": "近201个交易日样本中，开盘后触发-5.0% 低吸阈值的次数为19，触发概率为0.0945；按该阈值买入并持有到下一交易日收盘的平均收益为1.3334%，扣除2.0% 买入损耗后的平均净收益为-0.6666%，下一交易日收盘胜率为0.6842。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -3206,8 +3307,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -5.0,
         "optimal_next_close_net_return_pct": -1.0838,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.1137,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-5.0% 低吸阈值的次数为24，触发概率为0.1137；按该阈值买入并持有到下一交易日收盘的平均收益为0.9162%，扣除2.0% 买入损耗后的平均净收益为-1.0838%，下一交易日收盘胜率为0.6667。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -3237,8 +3340,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -7.0,
         "optimal_next_close_net_return_pct": 3.485,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0474,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-7.0% 低吸阈值的次数为10，触发概率为0.0474；按该阈值买入并持有到下一交易日收盘的平均收益为5.485%，扣除2.0% 买入损耗后的平均净收益为3.485%，下一交易日收盘胜率为0.7778。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -3268,8 +3373,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -5.0,
         "optimal_next_close_net_return_pct": -0.3589,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0569,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-5.0% 低吸阈值的次数为12，触发概率为0.0569；按该阈值买入并持有到下一交易日收盘的平均收益为1.6411%，扣除2.0% 买入损耗后的平均净收益为-0.3589%，下一交易日收盘胜率为0.75。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -3299,8 +3406,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -2.5,
         "optimal_next_close_net_return_pct": -0.6492,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.2333,
         "confidence_label": "statistical",
         "reason_text": "近210个交易日样本中，开盘后触发-2.5% 低吸阈值的次数为49，触发概率为0.2333；按该阈值买入并持有到下一交易日收盘的平均收益为1.3508%，扣除2.0% 买入损耗后的平均净收益为-0.6492%，下一交易日收盘胜率为0.6122。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -3330,8 +3439,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -3.0,
         "optimal_next_close_net_return_pct": -0.388,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.3365,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-3.0% 低吸阈值的次数为71，触发概率为0.3365；按该阈值买入并持有到下一交易日收盘的平均收益为1.612%，扣除2.0% 买入损耗后的平均净收益为-0.388%，下一交易日收盘胜率为0.6。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -3361,8 +3472,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -2.5,
         "optimal_next_close_net_return_pct": -0.5347,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.3318,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-2.5% 低吸阈值的次数为70，触发概率为0.3318；按该阈值买入并持有到下一交易日收盘的平均收益为1.4653%，扣除2.0% 买入损耗后的平均净收益为-0.5347%，下一交易日收盘胜率为0.5857。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -3392,8 +3505,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -0.5,
         "optimal_next_close_net_return_pct": -0.597,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.8436,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-0.5% 低吸阈值的次数为178，触发概率为0.8436；按该阈值买入并持有到下一交易日收盘的平均收益为1.403%，扣除2.0% 买入损耗后的平均净收益为-0.597%，下一交易日收盘胜率为0.5311。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -3423,8 +3538,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -1.0,
         "optimal_next_close_net_return_pct": -1.5217,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.4408,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-1.0% 低吸阈值的次数为93，触发概率为0.4408；按该阈值买入并持有到下一交易日收盘的平均收益为0.4783%，扣除2.0% 买入损耗后的平均净收益为-1.5217%，下一交易日收盘胜率为0.5109。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -3454,8 +3571,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -5.0,
         "optimal_next_close_net_return_pct": 1.1336,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0332,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-5.0% 低吸阈值的次数为7，触发概率为0.0332；按该阈值买入并持有到下一交易日收盘的平均收益为3.1336%，扣除2.0% 买入损耗后的平均净收益为1.1336%，下一交易日收盘胜率为0.8571。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -3485,8 +3604,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -2.0,
         "optimal_next_close_net_return_pct": -2.1458,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.1422,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-2.0% 低吸阈值的次数为30，触发概率为0.1422；按该阈值买入并持有到下一交易日收盘的平均收益为-0.1458%，扣除2.0% 买入损耗后的平均净收益为-2.1458%，下一交易日收盘胜率为0.4333。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -3516,8 +3637,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -7.0,
         "optimal_next_close_net_return_pct": -0.8131,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0474,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-7.0% 低吸阈值的次数为10，触发概率为0.0474；按该阈值买入并持有到下一交易日收盘的平均收益为1.1869%，扣除2.0% 买入损耗后的平均净收益为-0.8131%，下一交易日收盘胜率为0.6。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -3547,8 +3670,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -0.5,
         "optimal_next_close_net_return_pct": -1.8994,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.8199,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-0.5% 低吸阈值的次数为173，触发概率为0.8199；按该阈值买入并持有到下一交易日收盘的平均收益为0.1006%，扣除2.0% 买入损耗后的平均净收益为-1.8994%，下一交易日收盘胜率为0.4767。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -3578,8 +3703,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -3.5,
         "optimal_next_close_net_return_pct": -1.916,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0711,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-3.5% 低吸阈值的次数为15，触发概率为0.0711；按该阈值买入并持有到下一交易日收盘的平均收益为0.084%，扣除2.0% 买入损耗后的平均净收益为-1.916%，下一交易日收盘胜率为0.6。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -3609,8 +3736,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -3.5,
         "optimal_next_close_net_return_pct": -0.9538,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.1991,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-3.5% 低吸阈值的次数为42，触发概率为0.1991；按该阈值买入并持有到下一交易日收盘的平均收益为1.0462%，扣除2.0% 买入损耗后的平均净收益为-0.9538%，下一交易日收盘胜率为0.5714。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -3640,8 +3769,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -7.0,
         "optimal_next_close_net_return_pct": 1.5128,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0237,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-7.0% 低吸阈值的次数为5，触发概率为0.0237；按该阈值买入并持有到下一交易日收盘的平均收益为3.5128%，扣除2.0% 买入损耗后的平均净收益为1.5128%，下一交易日收盘胜率为0.6。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -3671,8 +3802,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -8.0,
         "optimal_next_close_net_return_pct": 0.8376,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0474,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-8.0% 低吸阈值的次数为10，触发概率为0.0474；按该阈值买入并持有到下一交易日收盘的平均收益为2.8376%，扣除2.0% 买入损耗后的平均净收益为0.8376%，下一交易日收盘胜率为0.7778。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -3702,8 +3835,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -4.0,
         "optimal_next_close_net_return_pct": -1.3066,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.2038,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-4.0% 低吸阈值的次数为43，触发概率为0.2038；按该阈值买入并持有到下一交易日收盘的平均收益为0.6934%，扣除2.0% 买入损耗后的平均净收益为-1.3066%，下一交易日收盘胜率为0.5581。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -3733,8 +3868,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -6.0,
         "optimal_next_close_net_return_pct": -1.1777,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0616,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-6.0% 低吸阈值的次数为13，触发概率为0.0616；按该阈值买入并持有到下一交易日收盘的平均收益为0.8223%，扣除2.0% 买入损耗后的平均净收益为-1.1777%，下一交易日收盘胜率为0.5385。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -3764,8 +3901,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -4.0,
         "optimal_next_close_net_return_pct": -1.2119,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0631,
         "confidence_label": "statistical",
         "reason_text": "近206个交易日样本中，开盘后触发-4.0% 低吸阈值的次数为13，触发概率为0.0631；按该阈值买入并持有到下一交易日收盘的平均收益为0.7881%，扣除2.0% 买入损耗后的平均净收益为-1.2119%，下一交易日收盘胜率为0.4615。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -3795,8 +3934,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -8.0,
         "optimal_next_close_net_return_pct": 5.9094,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0284,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-8.0% 低吸阈值的次数为6，触发概率为0.0284；按该阈值买入并持有到下一交易日收盘的平均收益为7.9094%，扣除2.0% 买入损耗后的平均净收益为5.9094%，下一交易日收盘胜率为0.8333。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -3826,8 +3967,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -6.0,
         "optimal_next_close_net_return_pct": -0.4325,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0995,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-6.0% 低吸阈值的次数为21，触发概率为0.0995；按该阈值买入并持有到下一交易日收盘的平均收益为1.5675%，扣除2.0% 买入损耗后的平均净收益为-0.4325%，下一交易日收盘胜率为0.6667。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -3857,8 +4000,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -6.0,
         "optimal_next_close_net_return_pct": 2.8392,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0711,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-6.0% 低吸阈值的次数为15，触发概率为0.0711；按该阈值买入并持有到下一交易日收盘的平均收益为4.8392%，扣除2.0% 买入损耗后的平均净收益为2.8392%，下一交易日收盘胜率为0.8667。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -3888,8 +4033,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -8.0,
         "optimal_next_close_net_return_pct": 0.7998,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0427,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-8.0% 低吸阈值的次数为9，触发概率为0.0427；按该阈值买入并持有到下一交易日收盘的平均收益为2.7998%，扣除2.0% 买入损耗后的平均净收益为0.7998%，下一交易日收盘胜率为0.7778。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -3919,8 +4066,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -3.5,
         "optimal_next_close_net_return_pct": -0.9656,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.2133,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-3.5% 低吸阈值的次数为45，触发概率为0.2133；按该阈值买入并持有到下一交易日收盘的平均收益为1.0344%，扣除2.0% 买入损耗后的平均净收益为-0.9656%，下一交易日收盘胜率为0.5333。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -3950,8 +4099,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -5.0,
         "optimal_next_close_net_return_pct": 3.5958,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0332,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-5.0% 低吸阈值的次数为7，触发概率为0.0332；按该阈值买入并持有到下一交易日收盘的平均收益为5.5958%，扣除2.0% 买入损耗后的平均净收益为3.5958%，下一交易日收盘胜率为0.5714。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -3981,8 +4132,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -4.0,
         "optimal_next_close_net_return_pct": 1.428,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0853,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-4.0% 低吸阈值的次数为18，触发概率为0.0853；按该阈值买入并持有到下一交易日收盘的平均收益为3.428%，扣除2.0% 买入损耗后的平均净收益为1.428%，下一交易日收盘胜率为0.6111。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -4012,8 +4165,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -6.0,
         "optimal_next_close_net_return_pct": 2.2753,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0569,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-6.0% 低吸阈值的次数为12，触发概率为0.0569；按该阈值买入并持有到下一交易日收盘的平均收益为4.2753%，扣除2.0% 买入损耗后的平均净收益为2.2753%，下一交易日收盘胜率为0.8333。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -4043,8 +4198,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -3.5,
         "optimal_next_close_net_return_pct": -1.2054,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.1991,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-3.5% 低吸阈值的次数为42，触发概率为0.1991；按该阈值买入并持有到下一交易日收盘的平均收益为0.7946%，扣除2.0% 买入损耗后的平均净收益为-1.2054%，下一交易日收盘胜率为0.4762。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -4074,8 +4231,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -3.0,
         "optimal_next_close_net_return_pct": -0.4356,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.2322,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-3.0% 低吸阈值的次数为49，触发概率为0.2322；按该阈值买入并持有到下一交易日收盘的平均收益为1.5644%，扣除2.0% 买入损耗后的平均净收益为-0.4356%，下一交易日收盘胜率为0.5306。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -4105,8 +4264,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -2.0,
         "optimal_next_close_net_return_pct": -0.4497,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.3934,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-2.0% 低吸阈值的次数为83，触发概率为0.3934；按该阈值买入并持有到下一交易日收盘的平均收益为1.5503%，扣除2.0% 买入损耗后的平均净收益为-0.4497%，下一交易日收盘胜率为0.5904。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -4136,8 +4297,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -5.0,
         "optimal_next_close_net_return_pct": -0.0872,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0569,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-5.0% 低吸阈值的次数为12，触发概率为0.0569；按该阈值买入并持有到下一交易日收盘的平均收益为1.9128%，扣除2.0% 买入损耗后的平均净收益为-0.0872%，下一交易日收盘胜率为0.6667。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -4167,8 +4330,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -3.5,
         "optimal_next_close_net_return_pct": 0.3599,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0569,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-3.5% 低吸阈值的次数为12，触发概率为0.0569；按该阈值买入并持有到下一交易日收盘的平均收益为2.3599%，扣除2.0% 买入损耗后的平均净收益为0.3599%，下一交易日收盘胜率为0.6364。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -4198,8 +4363,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -5.0,
         "optimal_next_close_net_return_pct": -0.0327,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0948,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-5.0% 低吸阈值的次数为20，触发概率为0.0948；按该阈值买入并持有到下一交易日收盘的平均收益为1.9673%，扣除2.0% 买入损耗后的平均净收益为-0.0327%，下一交易日收盘胜率为0.5。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -4229,8 +4396,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -6.0,
         "optimal_next_close_net_return_pct": -0.93,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0379,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-6.0% 低吸阈值的次数为8，触发概率为0.0379；按该阈值买入并持有到下一交易日收盘的平均收益为1.07%，扣除2.0% 买入损耗后的平均净收益为-0.93%，下一交易日收盘胜率为0.625。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -4260,8 +4429,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -8.0,
         "optimal_next_close_net_return_pct": 0.359,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0284,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-8.0% 低吸阈值的次数为6，触发概率为0.0284；按该阈值买入并持有到下一交易日收盘的平均收益为2.359%，扣除2.0% 买入损耗后的平均净收益为0.359%，下一交易日收盘胜率为0.6667。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -4291,8 +4462,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -1.0,
         "optimal_next_close_net_return_pct": -2.0111,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.5592,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-1.0% 低吸阈值的次数为118，触发概率为0.5592；按该阈值买入并持有到下一交易日收盘的平均收益为-0.0111%，扣除2.0% 买入损耗后的平均净收益为-2.0111%，下一交易日收盘胜率为0.4444。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -4322,8 +4495,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -2.0,
         "optimal_next_close_net_return_pct": -1.329,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.1343,
         "confidence_label": "statistical",
         "reason_text": "近201个交易日样本中，开盘后触发-2.0% 低吸阈值的次数为27，触发概率为0.1343；按该阈值买入并持有到下一交易日收盘的平均收益为0.671%，扣除2.0% 买入损耗后的平均净收益为-1.329%，下一交易日收盘胜率为0.5556。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -4353,8 +4528,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -4.0,
         "optimal_next_close_net_return_pct": -0.3182,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.1346,
         "confidence_label": "statistical",
         "reason_text": "近208个交易日样本中，开盘后触发-4.0% 低吸阈值的次数为28，触发概率为0.1346；按该阈值买入并持有到下一交易日收盘的平均收益为1.6818%，扣除2.0% 买入损耗后的平均净收益为-0.3182%，下一交易日收盘胜率为0.6429。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -4384,8 +4561,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -7.0,
         "optimal_next_close_net_return_pct": 0.7568,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0474,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-7.0% 低吸阈值的次数为10，触发概率为0.0474；按该阈值买入并持有到下一交易日收盘的平均收益为2.7568%，扣除2.0% 买入损耗后的平均净收益为0.7568%，下一交易日收盘胜率为0.6。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -4415,8 +4594,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -5.0,
         "optimal_next_close_net_return_pct": 0.8794,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0616,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-5.0% 低吸阈值的次数为13，触发概率为0.0616；按该阈值买入并持有到下一交易日收盘的平均收益为2.8794%，扣除2.0% 买入损耗后的平均净收益为0.8794%，下一交易日收盘胜率为0.6923。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -4446,8 +4627,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -3.0,
         "optimal_next_close_net_return_pct": -2.0089,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0664,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-3.0% 低吸阈值的次数为14，触发概率为0.0664；按该阈值买入并持有到下一交易日收盘的平均收益为-0.0089%，扣除2.0% 买入损耗后的平均净收益为-2.0089%，下一交易日收盘胜率为0.5714。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -4477,8 +4660,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -1.0,
         "optimal_next_close_net_return_pct": -1.1544,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.654,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-1.0% 低吸阈值的次数为138，触发概率为0.654；按该阈值买入并持有到下一交易日收盘的平均收益为0.8456%，扣除2.0% 买入损耗后的平均净收益为-1.1544%，下一交易日收盘胜率为0.587。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -4508,8 +4693,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -2.5,
         "optimal_next_close_net_return_pct": -1.5887,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.2275,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-2.5% 低吸阈值的次数为48，触发概率为0.2275；按该阈值买入并持有到下一交易日收盘的平均收益为0.4113%，扣除2.0% 买入损耗后的平均净收益为-1.5887%，下一交易日收盘胜率为0.5208。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -4539,8 +4726,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -0.5,
         "optimal_next_close_net_return_pct": -1.4859,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.7536,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-0.5% 低吸阈值的次数为159，触发概率为0.7536；按该阈值买入并持有到下一交易日收盘的平均收益为0.5141%，扣除2.0% 买入损耗后的平均净收益为-1.4859%，下一交易日收盘胜率为0.5。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -4570,8 +4759,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -3.5,
         "optimal_next_close_net_return_pct": 0.5461,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0948,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-3.5% 低吸阈值的次数为20，触发概率为0.0948；按该阈值买入并持有到下一交易日收盘的平均收益为2.5461%，扣除2.0% 买入损耗后的平均净收益为0.5461%，下一交易日收盘胜率为0.55。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -4601,8 +4792,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -8.0,
         "optimal_next_close_net_return_pct": 0.9801,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0284,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-8.0% 低吸阈值的次数为6，触发概率为0.0284；按该阈值买入并持有到下一交易日收盘的平均收益为2.9801%，扣除2.0% 买入损耗后的平均净收益为0.9801%，下一交易日收盘胜率为0.6667。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -4632,8 +4825,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -8.0,
         "optimal_next_close_net_return_pct": -0.2752,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0711,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-8.0% 低吸阈值的次数为15，触发概率为0.0711；按该阈值买入并持有到下一交易日收盘的平均收益为1.7248%，扣除2.0% 买入损耗后的平均净收益为-0.2752%，下一交易日收盘胜率为0.6。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -4663,8 +4858,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -4.0,
         "optimal_next_close_net_return_pct": -1.5462,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.1232,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-4.0% 低吸阈值的次数为26，触发概率为0.1232；按该阈值买入并持有到下一交易日收盘的平均收益为0.4538%，扣除2.0% 买入损耗后的平均净收益为-1.5462%，下一交易日收盘胜率为0.5。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -4694,8 +4891,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -6.0,
         "optimal_next_close_net_return_pct": -1.0632,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0616,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-6.0% 低吸阈值的次数为13，触发概率为0.0616；按该阈值买入并持有到下一交易日收盘的平均收益为0.9368%，扣除2.0% 买入损耗后的平均净收益为-1.0632%，下一交易日收盘胜率为0.5385。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -4725,8 +4924,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -1.5,
         "optimal_next_close_net_return_pct": -1.5511,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.5213,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-1.5% 低吸阈值的次数为110，触发概率为0.5213；按该阈值买入并持有到下一交易日收盘的平均收益为0.4489%，扣除2.0% 买入损耗后的平均净收益为-1.5511%，下一交易日收盘胜率为0.4954。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -4756,8 +4957,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -7.0,
         "optimal_next_close_net_return_pct": -0.159,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0237,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-7.0% 低吸阈值的次数为5，触发概率为0.0237；按该阈值买入并持有到下一交易日收盘的平均收益为1.841%，扣除2.0% 买入损耗后的平均净收益为-0.159%，下一交易日收盘胜率为0.6。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -4787,8 +4990,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -3.5,
         "optimal_next_close_net_return_pct": -0.3121,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.2038,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-3.5% 低吸阈值的次数为43，触发概率为0.2038；按该阈值买入并持有到下一交易日收盘的平均收益为1.6879%，扣除2.0% 买入损耗后的平均净收益为-0.3121%，下一交易日收盘胜率为0.6047。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -4818,8 +5023,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -4.0,
         "optimal_next_close_net_return_pct": -0.5536,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.1611,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-4.0% 低吸阈值的次数为34，触发概率为0.1611；按该阈值买入并持有到下一交易日收盘的平均收益为1.4464%，扣除2.0% 买入损耗后的平均净收益为-0.5536%，下一交易日收盘胜率为0.6176。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -4849,8 +5056,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -3.5,
         "optimal_next_close_net_return_pct": 0.8176,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.1165,
         "confidence_label": "statistical",
         "reason_text": "近206个交易日样本中，开盘后触发-3.5% 低吸阈值的次数为24，触发概率为0.1165；按该阈值买入并持有到下一交易日收盘的平均收益为2.8176%，扣除2.0% 买入损耗后的平均净收益为0.8176%，下一交易日收盘胜率为0.5652。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -4880,8 +5089,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -6.0,
         "optimal_next_close_net_return_pct": -1.7427,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0332,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-6.0% 低吸阈值的次数为7，触发概率为0.0332；按该阈值买入并持有到下一交易日收盘的平均收益为0.2573%，扣除2.0% 买入损耗后的平均净收益为-1.7427%，下一交易日收盘胜率为0.5714。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -4911,8 +5122,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -8.0,
         "optimal_next_close_net_return_pct": 1.186,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0284,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-8.0% 低吸阈值的次数为6，触发概率为0.0284；按该阈值买入并持有到下一交易日收盘的平均收益为3.186%，扣除2.0% 买入损耗后的平均净收益为1.186%，下一交易日收盘胜率为0.6667。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -4942,8 +5155,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -6.0,
         "optimal_next_close_net_return_pct": 1.0738,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0474,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-6.0% 低吸阈值的次数为10，触发概率为0.0474；按该阈值买入并持有到下一交易日收盘的平均收益为3.0738%，扣除2.0% 买入损耗后的平均净收益为1.0738%，下一交易日收盘胜率为0.7。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -4973,8 +5188,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -0.5,
         "optimal_next_close_net_return_pct": -2.0137,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.7725,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-0.5% 低吸阈值的次数为163，触发概率为0.7725；按该阈值买入并持有到下一交易日收盘的平均收益为-0.0137%，扣除2.0% 买入损耗后的平均净收益为-2.0137%，下一交易日收盘胜率为0.4383。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -5004,8 +5221,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -6.0,
         "optimal_next_close_net_return_pct": 2.7603,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.1579,
         "confidence_label": "statistical",
         "reason_text": "近38个交易日样本中，开盘后触发-6.0% 低吸阈值的次数为6，触发概率为0.1579；按该阈值买入并持有到下一交易日收盘的平均收益为4.7603%，扣除2.0% 买入损耗后的平均净收益为2.7603%，下一交易日收盘胜率为0.8333。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -5035,8 +5254,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -6.0,
         "optimal_next_close_net_return_pct": 1.6053,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0521,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-6.0% 低吸阈值的次数为11，触发概率为0.0521；按该阈值买入并持有到下一交易日收盘的平均收益为3.6053%，扣除2.0% 买入损耗后的平均净收益为1.6053%，下一交易日收盘胜率为0.6364。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -5066,8 +5287,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -7.0,
         "optimal_next_close_net_return_pct": 1.6067,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0616,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-7.0% 低吸阈值的次数为13，触发概率为0.0616；按该阈值买入并持有到下一交易日收盘的平均收益为3.6067%，扣除2.0% 买入损耗后的平均净收益为1.6067%，下一交易日收盘胜率为0.6154。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -5097,8 +5320,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -7.0,
         "optimal_next_close_net_return_pct": -0.3083,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0485,
         "confidence_label": "statistical",
         "reason_text": "近206个交易日样本中，开盘后触发-7.0% 低吸阈值的次数为10，触发概率为0.0485；按该阈值买入并持有到下一交易日收盘的平均收益为1.6917%，扣除2.0% 买入损耗后的平均净收益为-0.3083%，下一交易日收盘胜率为0.5。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -5128,8 +5353,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -7.0,
         "optimal_next_close_net_return_pct": 2.859,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0379,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-7.0% 低吸阈值的次数为8，触发概率为0.0379；按该阈值买入并持有到下一交易日收盘的平均收益为4.859%，扣除2.0% 买入损耗后的平均净收益为2.859%，下一交易日收盘胜率为0.75。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -5159,8 +5386,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -5.0,
         "optimal_next_close_net_return_pct": -0.4819,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0616,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-5.0% 低吸阈值的次数为13，触发概率为0.0616；按该阈值买入并持有到下一交易日收盘的平均收益为1.5181%，扣除2.0% 买入损耗后的平均净收益为-0.4819%，下一交易日收盘胜率为0.5385。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -5190,8 +5419,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -5.0,
         "optimal_next_close_net_return_pct": 0.7919,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0758,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-5.0% 低吸阈值的次数为16，触发概率为0.0758；按该阈值买入并持有到下一交易日收盘的平均收益为2.7919%，扣除2.0% 买入损耗后的平均净收益为0.7919%，下一交易日收盘胜率为0.6875。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -5221,8 +5452,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -6.0,
         "optimal_next_close_net_return_pct": 1.8016,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0806,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-6.0% 低吸阈值的次数为17，触发概率为0.0806；按该阈值买入并持有到下一交易日收盘的平均收益为3.8016%，扣除2.0% 买入损耗后的平均净收益为1.8016%，下一交易日收盘胜率为0.6471。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -5252,8 +5485,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -5.0,
         "optimal_next_close_net_return_pct": -0.049,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0332,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-5.0% 低吸阈值的次数为7，触发概率为0.0332；按该阈值买入并持有到下一交易日收盘的平均收益为1.951%，扣除2.0% 买入损耗后的平均净收益为-0.049%，下一交易日收盘胜率为0.5714。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -5283,8 +5518,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -5.0,
         "optimal_next_close_net_return_pct": -0.565,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0474,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-5.0% 低吸阈值的次数为10，触发概率为0.0474；按该阈值买入并持有到下一交易日收盘的平均收益为1.435%，扣除2.0% 买入损耗后的平均净收益为-0.565%，下一交易日收盘胜率为0.7778。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -5314,8 +5551,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -3.5,
         "optimal_next_close_net_return_pct": -0.8972,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.2464,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-3.5% 低吸阈值的次数为52，触发概率为0.2464；按该阈值买入并持有到下一交易日收盘的平均收益为1.1028%，扣除2.0% 买入损耗后的平均净收益为-0.8972%，下一交易日收盘胜率为0.5385。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -5345,8 +5584,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -5.0,
         "optimal_next_close_net_return_pct": 1.5558,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0796,
         "confidence_label": "statistical",
         "reason_text": "近201个交易日样本中，开盘后触发-5.0% 低吸阈值的次数为16，触发概率为0.0796；按该阈值买入并持有到下一交易日收盘的平均收益为3.5558%，扣除2.0% 买入损耗后的平均净收益为1.5558%，下一交易日收盘胜率为0.75。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -5376,8 +5617,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -3.5,
         "optimal_next_close_net_return_pct": -0.6526,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0616,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-3.5% 低吸阈值的次数为13，触发概率为0.0616；按该阈值买入并持有到下一交易日收盘的平均收益为1.3474%，扣除2.0% 买入损耗后的平均净收益为-0.6526%，下一交易日收盘胜率为0.5385。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -5407,8 +5650,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -5.0,
         "optimal_next_close_net_return_pct": -0.4738,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.0474,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-5.0% 低吸阈值的次数为10，触发概率为0.0474；按该阈值买入并持有到下一交易日收盘的平均收益为1.5262%，扣除2.0% 买入损耗后的平均净收益为-0.4738%，下一交易日收盘胜率为0.5。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -5438,8 +5683,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -2.0,
         "optimal_next_close_net_return_pct": -1.2944,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.5071,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-2.0% 低吸阈值的次数为107，触发概率为0.5071；按该阈值买入并持有到下一交易日收盘的平均收益为0.7056%，扣除2.0% 买入损耗后的平均净收益为-1.2944%，下一交易日收盘胜率为0.5234。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -5469,8 +5716,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -4.0,
         "optimal_next_close_net_return_pct": -0.7506,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.1043,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-4.0% 低吸阈值的次数为22，触发概率为0.1043；按该阈值买入并持有到下一交易日收盘的平均收益为1.2494%，扣除2.0% 买入损耗后的平均净收益为-0.7506%，下一交易日收盘胜率为0.5。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -5500,8 +5749,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -0.5,
         "optimal_next_close_net_return_pct": -1.8351,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.8389,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-0.5% 低吸阈值的次数为177，触发概率为0.8389；按该阈值买入并持有到下一交易日收盘的平均收益为0.1649%，扣除2.0% 买入损耗后的平均净收益为-1.8351%，下一交易日收盘胜率为0.5057。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -5531,8 +5782,10 @@ const INLINE_OPEN_DIP = {
           }
         ],
         "entry_cost_pct": 2.0,
+        "max_open_dip_abs_pct": null,
         "optimal_open_dip_buy_pct": -4.0,
         "optimal_next_close_net_return_pct": -0.0872,
+        "optimal_execution_expected_return_pct": null,
         "optimal_trigger_probability": 0.1896,
         "confidence_label": "statistical",
         "reason_text": "近211个交易日样本中，开盘后触发-4.0% 低吸阈值的次数为40，触发概率为0.1896；按该阈值买入并持有到下一交易日收盘的平均收益为1.9128%，扣除2.0% 买入损耗后的平均净收益为-0.0872%，下一交易日收盘胜率为0.641。该结论基于日线 open/low/close 估算，只能确认当天最低价触及阈值，不能确认真实分钟级成交顺序。",
@@ -5636,10 +5889,11 @@ function buildOpenDipReasonText(signal, stat) {
   const avgReturn = formatPct(stat.avg_next_close_return_pct);
   const entryCost = formatPct(signal.entry_cost_pct);
   const netReturn = formatPct(stat.avg_next_close_net_return_pct);
+  const executionExpected = formatPct(stat.execution_expected_return_pct);
   const winRate = stat.next_close_win_rate !== undefined
     ? formatPct(Number(stat.next_close_win_rate) * 100)
     : '-';
-  return `近${lookback || '-'}个交易日样本中，开盘后触发${threshold}低吸阈值的次数为${triggerCount || 0}，触发概率为${triggerProbability}；按该阈值买入并持有到下一交易日收盘的平均收益为${avgReturn}，扣除${entryCost}买入损耗后的平均净收益为${netReturn}，下一交易日收盘胜率为${winRate}。`;
+  return `近${lookback || '-'}个交易日样本中，开盘后触发${threshold}低吸阈值的次数为${triggerCount || 0}，触发概率为${triggerProbability}；按该阈值买入并持有到下一交易日收盘的平均收益为${avgReturn}，扣除${entryCost}买入损耗后的平均净收益为${netReturn}，按触发概率加权后的执行期望为${executionExpected}，下一交易日收盘胜率为${winRate}。`;
 }
 
 function renderOpenDipSignal(stock, openDipData) {
@@ -5647,13 +5901,15 @@ function renderOpenDipSignal(stock, openDipData) {
   if (!signal || signal.optimal_open_dip_buy_pct === undefined || signal.optimal_open_dip_buy_pct === null) return '';
   const optimal = formatPct(signal.optimal_open_dip_buy_pct);
   const netReturn = formatPct(signal.optimal_next_close_net_return_pct);
+  const executionExpected = formatPct(signal.optimal_execution_expected_return_pct);
   const confidence = signal.confidence_label || signal.status || '';
   const stat = findThresholdStat(signal, signal.optimal_open_dip_buy_pct) || {};
   const reasonText = buildOpenDipReasonText(signal, stat);
   return `
-    <div class="stoploss-box">
+    <div class="open-dip-box">
       <span class="label">统计低吸:</span> ${optimal} &nbsp;|&nbsp;
-      <span class="label">净收益:</span> ${netReturn} &nbsp;|&nbsp;
+      <span class="label">单次净收益:</span> ${netReturn} &nbsp;|&nbsp;
+      <span class="label">执行期望:</span> ${executionExpected} &nbsp;|&nbsp;
       <span class="label">置信度:</span> ${esc(confidence)}
       ${reasonText ? `<div style="margin-top:4px;color:var(--text2)">${esc(reasonText)}</div>` : ''}
     </div>`;
