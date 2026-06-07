@@ -132,6 +132,32 @@ h2 { font-size: 1.15em; margin-bottom: 12px; color: var(--blue); }
   font-size: 0.78em;
 }
 .operation-box .label { color: var(--blue); font-weight: 600; }
+.target-price-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 8px;
+}
+.target-price-box {
+  background: rgba(88,166,255,0.06);
+  border-left: 3px solid var(--blue);
+  padding: 8px 12px;
+  font-size: 0.78em;
+}
+.target-price-box.oneil {
+  background: rgba(63,185,80,0.06);
+  border-left-color: var(--green);
+}
+.target-price-title {
+  color: var(--blue);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.target-price-box.oneil .target-price-title { color: var(--green); }
+.target-price-meta { color: var(--text2); margin-top: 4px; }
+@media (max-width: 700px) {
+  .target-price-grid { grid-template-columns: 1fr; }
+}
 .stoploss-box,
 .open-dip-box {
   background: rgba(210,153,34,0.06);
@@ -217,7 +243,7 @@ h2 { font-size: 1.15em; margin-bottom: 12px; color: var(--blue); }
 <script>
 const INLINE_ONEIL = {
   "oneil_top_stock_selection_result": {
-    "trade_week": "2026-W21",
+    "trade_week": "2026-W22",
     "source_candidate_count": 20,
     "selected_count": 8,
     "selected_top_8": [
@@ -225,17 +251,16 @@ const INLINE_ONEIL = {
         "final_rank": 1,
         "stock_code": "601138",
         "stock_name": "工业富联",
-        "oneil_candidate_score": 80,
-        "selection_score": 263,
+        "oneil_candidate_score": 85,
+        "selection_score": 200,
         "final_bucket": "A",
         "primary_theme": "光通信",
         "matched_theme_list": [
           "光通信",
-          "半导体设备",
-          "PCB",
+          "人形机器人",
+          "AI应用",
           "CPO",
-          "算力租赁",
-          "消费电子"
+          "算力租赁"
         ],
         "holding_style": [
           "中线投资"
@@ -243,13 +268,9 @@ const INLINE_ONEIL = {
         "external_research_need": {
           "need_external_research": false,
           "needed_dimension_list": [],
-          "reason_text": "外部券商研报与新闻已补充了业绩兑现、机构观点和短期资金情绪的验证，虽然CPO具体订单和产能数据仍有缺口，但当前外部证据已足以支撑CAN SLIM核心维度的判断，无需进一步外部复核。"
+          "reason_text": "CAN/SLIM research DB 已提供充分的业绩、产业逻辑和资金数据，虽然CPO具体订单客户和产能利用率细节缺失，但现有证据足以支撑其作为主线容量核心的入选判断，无需额外外部复核。"
         },
-        "external_recheck_meta": {
-          "status": "completed",
-          "used_external_research_signal": true,
-          "requested_reason_text": "虽然当前CAN SLIM DB已证明业绩强劲，但CPO交换机具体客户名单和订单金额尚缺明确公告验证；新产能投放线索不足；大客户集中度风险及海外制裁对供应链的具体影响程度需外部研报/公告进一步确认，这些将显著影响其中期成长估值上限。"
-        },
+        "external_recheck_meta": {},
         "oneil_canslim_verdict": {
           "C_current_earnings": "strong",
           "A_annual_growth": "strong",
@@ -259,19 +280,50 @@ const INLINE_ONEIL = {
           "I_institutional_sponsorship": "medium",
           "M_market_theme": "strong"
         },
+        "target_price_judgment": {
+          "institutional_expert_view": {
+            "level": "medium",
+            "target_price_range": {
+              "low": 92.9,
+              "high": 92.9,
+              "center": 92.9,
+              "currency": "CNY"
+            },
+            "source_name": "高盛",
+            "source_url": "https://www.sohu.com/a/990213032_121210484",
+            "source_title": "高盛：工业富联盈利能力迈入结构性提升新周期 目标价92.9元",
+            "source_observed_at": "2026-02-26",
+            "evidence_type": "explicit_broker_research",
+            "evidence_age_days": 99,
+            "evidence_freshness_label": "older_half_year_reference",
+            "reason_text": "高盛基于AI服务器驱动盈利结构性提升及算力基建核心资产重定价给出92.9元目标价。距今约99天，属于较旧参考。其核心逻辑与当前C/A/N维度的强劲兑现高度一致，但未完全反映近期CPO交换机出货带来的增量弹性。"
+          },
+          "oneil_canslim_view": {
+            "level": "strong",
+            "target_price_range": {
+              "low": 90.0,
+              "high": 105.0,
+              "currency": "CNY"
+            },
+            "bull_case_text": "若AI算力资本开支持续超预期，CPO交换机出货量呈现爆发式增长，且公司毛利率在产品结构优化下持续改善，市场将给予其更高的成长股估值溢价，股价有望突破105元甚至更高。",
+            "reason_text": "基于C(净利翻倍)、A(结构性成长20%+)、N(CPO新变量兑现)的强劲表现，当前44倍PE在超100%的利润增速下具备合理性。以2026年预期EPS 2.2-2.5元计算，给予40-42倍PE，合理估值区间在90-105元。"
+          },
+          "comparison_text": "O'Neil区间（90-105元）中枢略高于高盛的92.9元。高盛报告距今已超一季，未能包含最新一季财报的极强兑现及CPO出货的实质性进展，因此O'Neil区间更反映当前基本面的加速状态，更信任当前CAN SLIM证据推导的区间。",
+          "invalid_condition": "若后续季度AI服务器增速显著放缓、CPO出货量不及预期、或算力主线整体退潮导致估值杀跌，该目标区间将失效。"
+        },
         "why_selected": [
-          "M(主线)：外部新闻验证了公司作为AI算力核心主线的市场地位，市值超越茅台成为A股前列，光通信、半导体设备及CPO等多主线强共振逻辑被市场广泛认可，主线纯正度极高。",
-          "C(当前业绩)：外部券商研报（信达、国金等）确认26Q1业绩翻倍增长，CPO交换机开始出货，产品结构升级释放利润弹性。2026年一致预期EPS在3.0-3.35之间，对应PE仅18-20倍，强烈验证了当前业绩的高增长与估值合理性。",
-          "A(年度成长)：券商盈利预测显示2026-2028年EPS复合增速极高，信达预测2028年EPS达6.1元，印证了AI算力驱动的结构性成长逻辑，年度成长质量被外部证据强确认。",
-          "N(新变量)：外部研报标题明确指出'CPO交换机开始出货'、'高速交换机成为新增长引擎'，新变量已从概念完全转化为真实出货和财报利润，新因子逻辑坚不可摧。",
-          "S(供需承接)：外部新闻显示6月2日-3日股价冲击涨停，单日成交额近294亿，主力净流入超35亿，交易承接极强；但市值超越茅台、股民情绪亢奋（'当初不该离开你'）等新闻信号是典型的短期过热标志，结合融资余额下降，供需质量仍定为medium，警惕高位派发。",
-          "L(龙头地位)：外部新闻证实公司总市值突破1.68万亿超越贵州茅台，位居A股第八，确立了其作为A股科技股绝对龙头与容量核心的定位，龙头辨识度达到极致。",
-          "I(机构认可)：多家券商给予买入评级并发布深度研报，短期主力资金大幅净流入；但历史记忆与新闻情绪共振提示，极度亢奋下的机构强推往往伴随获利盘兑现，机构认可度维持medium以防范高位接盘风险。"
+          "M(主线)：公司同时命中光通信(排名第1)、人形机器人(排名第2)和AI应用(排名第5)三大周级主线，共振类型为strong，且为核心业务相关，无概念噪声，主线逻辑极其纯正。",
+          "C(当前业绩)：最近一期营收增速56.52%，净利润翻倍增长102.55%，扣非增速109.05%，EPS同比增长103.85%，远超25%门槛；经营现金流是净利润的2.36倍，盈利质量极高，强力兑现主线逻辑。",
+          "A(年度成长)：近三年营收CAGR为20.83%，净利CAGR为20.69%，属于由AI产业趋势驱动的结构性成长，未来需求消化确定性极强，非一次性收益。",
+          "N(新变量)：CPO交换机已开始出货，AI服务器与高速交换机成为新增长引擎，直接解决算力集群带宽与功耗瓶颈，新业务已从概念完全转化为真实财报利润。",
+          "S(供需承接)：业务供需极强，AI服务器与CPO需求爆发；但交易层面近20日涨幅达17.04%，融资余额下降约3.6亿，短期高位资金存在分歧，交易供需质量降为中等，需防范获利回吐。",
+          "L(龙头地位)：公司是全球算力基础设施龙头，在AI服务器和高速交换机占据核心市场份额，主线纯度极高，是算力与光通信板块的绝对容量核心与定海神针。",
+          "I(机构认可)：多家头部券商覆盖并给出买入评级，大资金参与迹象明显；但历史记忆提示短期高位时主力资金易出现分歧或抛售，近期融资余额下降印证了这一点，机构认可度受短期交易拥挤影响降为中等。"
         ],
         "growth_value_judgment": {
           "future_demand_expansion": "strong",
-          "business_quality": "strong",
-          "scarcity_and_anti_involution": "medium",
+          "business_quality": "medium",
+          "scarcity_and_anti_involution": "strong",
           "china_strategy_alignment": "strong",
           "order_or_capacity_visibility": "medium"
         },
@@ -279,20 +331,20 @@ const INLINE_ONEIL = {
           "shareholder_reduction_risk": "low",
           "valuation_or_overheat_risk": "high",
           "concept_noise_risk": "low",
-          "fundamental_miss_risk": "low",
-          "main_risk_text": "短期极度过热与派发风险：外部新闻证实市值超越茅台、股民情绪亢奋，这是经典的短期见顶或高位剧烈震荡信号；虽然工业富联减持鼎捷数智是其自身资金安排不构成直接利空，但大市值股在情绪极点后的资金分歧往往引发急跌。"
+          "fundamental_miss_risk": "medium",
+          "main_risk_text": "短期高位过热与资金分歧风险：近60日涨幅超40%，融资盘流出，历史记忆表明此阶段极易遭遇获利回吐和剧烈洗盘；同时需警惕大客户集中度风险及海外制裁对供应链的潜在影响。"
         },
         "operation_view": {
           "action": "wait_for_pullback",
           "position_preference": "half",
-          "entry_condition": "外部证据显示股价已冲击84元历史高位，切忌追涨。必须等待股价回调至20日均线附近（约75-78元区间）缩量企稳，或在此区间形成右侧放量确认后再考虑介入。",
+          "entry_condition": "由于当前处于短期高位且资金有分歧，需等待股价回调至20日均线附近缩量企稳，或放量突破近期高点压力位形成右侧确认后再考虑介入，切忌高位追涨。建议在当日收盘价下浮5%-8%的区间寻找左侧支撑或右侧放量确认点。",
           "invalid_condition": "若下一季度财报AI服务器增速显著放缓，或CPO交换机出货量不及预期，或算力/光通信主线整体退潮资金大幅流出，则候选逻辑失效。",
           "stop_loss_suggestion": "-8%"
         },
         "evidence_gap": [
-          "CPO交换机具体客户名单和订单金额尚缺明确公告验证",
-          "新产能投放线索不足，现有产能利用率数据需进一步确认",
-          "大客户集中度风险及海外制裁对供应链的具体影响程度需持续跟踪"
+          "CPO交换机具体客户名单和订单金额尚缺明确公告验证；",
+          "新产能投放线索不足，现有产能利用率数据需进一步确认；",
+          "大客户集中度风险及海外制裁对供应链的具体影响程度需持续跟踪。"
         ],
         "intraday_stop_loss_signal": {
           "stock_code": "601138",
@@ -303,21 +355,22 @@ const INLINE_ONEIL = {
           "method_label": "daily_low_open_recovery",
           "reason_text": "近157个交易日样本中，日内最低点触发-3.0% 后，收盘重新回到开盘价的概率为0.0，未能收回开盘价的概率为1.0；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.4336%，期望值参考为0.2836%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
           "status": "ready",
-          "source_result_date": "2026-06-04"
+          "source_result_date": "2026-06-05"
         }
       },
       {
         "final_rank": 2,
-        "stock_code": "600584",
-        "stock_name": "长电科技",
-        "oneil_candidate_score": 80,
-        "selection_score": 187,
+        "stock_code": "603083",
+        "stock_name": "剑桥科技",
+        "oneil_candidate_score": 82,
+        "selection_score": 143,
         "final_bucket": "A",
-        "primary_theme": "半导体设备",
+        "primary_theme": "光通信",
         "matched_theme_list": [
-          "半导体设备",
           "光通信",
-          "PCB"
+          "CPO",
+          "5G",
+          "6G"
         ],
         "holding_style": [
           "中线投资"
@@ -325,116 +378,57 @@ const INLINE_ONEIL = {
         "external_research_need": {
           "need_external_research": false,
           "needed_dimension_list": [],
-          "reason_text": "外部证据已补充券商盈利预测、新厂房启用新闻及风险提示公告，关键证据缺口已部分填补，剩余订单与产能利用率细节需等中报验证，当前无需再次外部复核。"
+          "reason_text": "CAN/SLIM DB 已提供详细的财报、研报线索、H股配售及减持风险提示，历史记忆也充分警示了供给冲击风险，当前证据足以支撑判断，无需额外外部复核。"
         },
-        "external_recheck_meta": {
-          "status": "completed",
-          "used_external_research_signal": true,
-          "requested_reason_text": "当前营收同比仍为负，需外部复核先进封装新厂房的具体产能爬坡数据、大客户订单签约情况及产能利用率，以确认营收端能否在下一季度转正，这是验证算力需求向封测订单传导的关键证据。"
-        },
-        "oneil_canslim_verdict": {
-          "C_current_earnings": "medium",
-          "A_annual_growth": "strong",
-          "N_new_factor": "strong",
-          "S_supply_demand": "medium",
-          "L_leader_laggard": "leader",
-          "I_institutional_sponsorship": "medium",
-          "M_market_theme": "strong"
-        },
-        "why_selected": [
-          "M(主线)：命中排名第一的半导体设备、第二的光通信和第五的PCB三大周级主线，共振类型为strong，且主营核心相关，产业链路径清晰指向先进封装，主线逻辑极硬。",
-          "C(当前业绩)：最近一期EPS同比增长45.45%，达到CAN SLIM强增长门槛，经营现金流极佳；但一季报营收同比微降1.76%，营收拐点仍需等待中报确认，故维持medium。",
-          "A(年度成长)：外部券商研报给出2026-2028年EPS复合增速超20%的明确预测，且运算电子增速达42.6%，验证了先进封装结构性增量对年度成长的扭转，结合历史记忆教训，上调至strong。",
-          "N(新变量)：2.5D/3D先进封装技术解决AI算力瓶颈；外部新闻证实高密度3D系统集成新厂房正式启用并实现首批设备进场，百亿资本开支落地得到验证，新变量极强且持续兑现。",
-          "S(供需承接)：业务需求端强劲；但交易供需端外部证据显示近5日主力资金净流出超13亿元，且龙虎榜显示换手率高达18.99%，公司多次发布异常波动及风险提示公告，高位派发风险显著，维持medium。",
-          "L(龙头地位)：全球封测龙头及先进封装龙头，主线纯度极高，在板块中充当容量核心与领涨中军，属于绝对的leader。",
-          "I(机构认可)：外部券商（华鑫、华源、开源、国信）密集覆盖并给出买入/增持评级，盈利预测乐观；但大单与主力资金连续大幅净流出，机构资金动向与研报观点背离，筹码松动，维持medium。"
-        ],
-        "growth_value_judgment": {
-          "future_demand_expansion": "strong",
-          "business_quality": "strong",
-          "scarcity_and_anti_involution": "strong",
-          "china_strategy_alignment": "strong",
-          "order_or_capacity_visibility": "medium"
-        },
-        "risk_judgment": {
-          "shareholder_reduction_risk": "low",
-          "valuation_or_overheat_risk": "high",
-          "concept_noise_risk": "low",
-          "fundamental_miss_risk": "medium",
-          "main_risk_text": "高位派发风险：外部新闻显示近期主力资金净流出超13亿元，且公司连续发布股票交易异常波动及风险提示公告，短期获利盘兑现压力极大；基本面风险：营收端拐点尚未在财报确认，若中报营收未能转正，可能证伪算力需求传导逻辑。"
-        },
-        "operation_view": {
-          "action": "wait_for_pullback",
-          "position_preference": "half",
-          "entry_condition": "股价缩量回踩重要均线（如20日或60日均线）企稳，大单资金停止净流出或转为净流入，融资盘抛压显著减轻时考虑低吸，价格区间参考20日均线附近。",
-          "invalid_condition": "半导体与AI算力主线退潮，先进封装订单或产能利用率明显下滑，营收连续下滑证明需求传导不畅，股价跌破关键支撑位且无法快速收回。",
-          "stop_loss_suggestion": "-8%"
-        },
-        "evidence_gap": [
-          "新厂房启用后的具体产能爬坡数据与当前产能利用率",
-          "大客户订单的签约金额与交付周期",
-          "中报营收拐点确认的高频数据"
-        ],
-        "intraday_stop_loss_signal": {
-          "stock_code": "600584",
-          "stock_name": "长电科技",
-          "optimal_stop_loss_pct": -5.0,
-          "optimal_expected_value_pct": 0.1598,
-          "confidence_label": "statistical",
-          "method_label": "daily_low_open_recovery",
-          "reason_text": "近157个交易日样本中，日内最低点触发-5.0% 后，收盘重新回到开盘价的概率为0.0，未能收回开盘价的概率为1.0；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-5.3098%，期望值参考为0.1598%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
-          "status": "ready",
-          "source_result_date": "2026-06-04"
-        }
-      },
-      {
-        "final_rank": 3,
-        "stock_code": "002156",
-        "stock_name": "通富微电",
-        "oneil_candidate_score": 78,
-        "selection_score": 140,
-        "final_bucket": "B",
-        "primary_theme": "半导体设备",
-        "matched_theme_list": [
-          "半导体设备",
-          "CPO",
-          "存储半导体",
-          "消费电子"
-        ],
-        "holding_style": [
-          "中线投资"
-        ],
-        "external_research_need": {
-          "need_external_research": true,
-          "needed_dimension_list": [
-            "N_new_factor",
-            "risk_judgment"
-          ],
-          "reason_text": "需要外部复核确认先进封装业务的具体收入占比及毛利率变动情况，以及定增方案的具体落地时间、解禁安排对股本的摊薄影响，这些直接关系到新变量对盈利的真实拉动和未来供给压力。"
-        },
-        "external_recheck_meta": {
-          "status": "failed_fallback_to_first_pass",
-          "used_external_research_signal": false,
-          "error_text": "GLM request failed model_name=glm-5.1 status_code=429 response_body={\"error\":{\"code\":\"1113\",\"message\":\"余额不足或无可用资源包,请充值。\"}}"
-        },
+        "external_recheck_meta": {},
         "oneil_canslim_verdict": {
           "C_current_earnings": "medium",
           "A_annual_growth": "medium",
           "N_new_factor": "strong",
           "S_supply_demand": "medium",
-          "L_leader_laggard": "capacity_core",
-          "I_institutional_sponsorship": "medium",
+          "L_leader_laggard": "leader",
+          "I_institutional_sponsorship": "strong",
           "M_market_theme": "strong"
         },
+        "target_price_judgment": {
+          "institutional_expert_view": {
+            "level": "medium",
+            "target_price_range": {
+              "low": 161.0,
+              "high": 161.0,
+              "center": 161.0,
+              "currency": "CNY"
+            },
+            "source_name": "国泰海通",
+            "source_url": "https://news.qq.com/rain/a/20260123A05SFP00",
+            "source_title": "国泰海通：予剑桥科技“增持”评级，目标价161元",
+            "source_observed_at": "2026-01-23",
+            "evidence_type": "explicit_broker_research",
+            "evidence_age_days": 133,
+            "evidence_freshness_label": "older_half_year_reference",
+            "reason_text": "国泰海通基于2026年PE 32.13x给予161元目标价，认可AI驱动光模块超预期潜力；该证据距今133天，属于较旧参考，逻辑与1.6T放量一致，但未充分反映H股折价配售及减持带来的估值锚下移风险。"
+          },
+          "oneil_canslim_view": {
+            "level": "medium",
+            "target_price_range": {
+              "low": 150.0,
+              "high": 180.0,
+              "currency": "CNY"
+            },
+            "bull_case_text": "若1.6T光模块订单超预期放量，且AI算力主线情绪持续高涨，2027年EPS有望达到4.37元甚至更高，届时市场可能给予45-50倍PE，股价存在突破180元冲击200元的可能。",
+            "reason_text": "基于1.6T/800G光模块放量带来的强N因子和主线龙头地位，参考华鑫证券2027年EPS预测4.37元，给予35-40倍PE，推导基础目标区间为150-180元；但当前PE高达268倍且经营现金流为负，需警惕估值下修风险。"
+          },
+          "comparison_text": "O'Neil区间下限略低于机构目标价，体现了对H股配售折价、减持压力及高估值风险的更谨慎态度；两者中枢接近，均认可AI光模块的长期成长空间，但当前时点更信任结合了最新供给冲击风险校正后的O'Neil区间。",
+          "invalid_condition": "1.6T/800G光模块订单或排产不及预期；经营现金流持续恶化且应收账款暴增；H股配售引发A股股价破位下跌；光通信/CPO主线退潮。"
+        },
         "why_selected": [
-          "M(主线)：命中排名第2的半导体设备周级主线，并与CPO、存储半导体等高景气参考主题强共振，主营核心相关且无概念噪声，产业链路径清晰指向AI算力先进封装，主线逻辑极硬。",
-          "C(当前业绩)：最近一期归母净利同比大增224.55%，EPS大增，经营现金流极好（2.86倍）；但扣非增速仅64.78%，且毛利率和净利率同比下滑，业绩兑现存在结构性瑕疵，降级为medium。",
-          "A(年度成长)：近三年净利CAGR达34.40%，具备AI算力拉动的结构性成长特征；但营收CAGR仅9.22%，ROE绝对值极低(2.11%)，毛利率呈下降趋势，盈利能力仍处周期修复初期，成长质量有待验证。",
-          "N(新变量)：加码2.5D/3D先进封装解决AI算力瓶颈，AMD获Meta大单使公司间接受益，拟定增加码先进封装开启资本开支新周期，新因子已转化为实质订单与扩产动作，重新定价逻辑强劲。",
-          "S(供需承接)：流通市值近960亿，日均成交超120亿，资金承接极强，业务需求扩张确定性高；但换手率高达12.66%，近20日涨幅23.3%且融资余额暴增16.66亿，历史记忆警示融资暴增后极易出现筹码松动与高位兑现，交易供需偏拥挤，降级为medium。",
-          "L(龙头地位)：国内封测头部企业，大基金持股，主线纯度高；但在板块中属于容量核心与中军，走势相对稳健而非急涨领涨，辨识度与抗跌性逊于绝对先锋龙头，定为capacity_core。",
-          "I(机构认可)：多家券商给予买入评级，融资余额大幅增加；但大单资金呈净流出，机构与游资在高位存在分歧，筹码结构因融资盘暴增而极不稳定，聪明钱认可度分化，降级为medium。"
+          "M(主线)：命中当前周级排名第1的光通信主线及CPO核心概念，共振类型为strong，主营核心相关且无噪声标签，完美契合AI算力硬件建设大方向，主线逻辑极硬。",
+          "C(当前业绩)：最近一期营收同比增长43.98%，归母净利润同比大增276.44%，EPS同比增长183.33%，远超CAN SLIM的25%+强增长门槛；但经营现金流为负且PE高达268倍，盈利质量存疑，给予降权至medium。",
+          "A(年度成长)：近三年营收CAGR为8.41%，净利CAGR为15.40%，受AI算力结构性需求驱动；但ROE仅1.58%绝对值偏低，历史CAGR绝对值不高，成长质量有瑕疵，给予medium。",
+          "N(新变量)：1.6T光模块放量在即，800G及400G系列新品已量产，直接解决算力网络瓶颈；H股配售净筹资约19.67亿港元用于扩产，新因子推动力极强，给予strong。",
+          "S(供需承接)：近20日日均换手率高达12.01%，资金交投极度活跃，融资余额增加2.63亿；但董事减持计划及H股配售新增股本带来短期股票供给压力与估值锚下移风险，历史记忆警示该供给冲击曾导致股价大跌，给予medium。",
+          "L(龙头地位)：公司是CPO和光模块方向的核心标的，主线纯度极高，近期作为板块涨停先锋与情绪风向标，辨识度最优；但在利空下表现出向下弹性，抗跌属性不足，属于典型的核心弹性龙头角色。",
+          "I(机构认可)：华鑫证券与国泰海通均给予买入或增持评级，H股配售获霸菱、摩根士丹利等16家顶级机构认购，募资19.67亿港元，机构认可度极高；但大股东减持与H股折价配售分流机构资金，短期主力和大资金参与存在分歧。"
         ],
         "growth_value_judgment": {
           "future_demand_expansion": "strong",
@@ -444,23 +438,139 @@ const INLINE_ONEIL = {
           "order_or_capacity_visibility": "medium"
         },
         "risk_judgment": {
-          "shareholder_reduction_risk": "medium",
+          "shareholder_reduction_risk": "high",
           "valuation_or_overheat_risk": "high",
           "concept_noise_risk": "low",
           "fundamental_miss_risk": "medium",
-          "main_risk_text": "短期估值过热与交易拥挤风险：融资盘暴增后一旦主线分化极易引发资金踩踏；毛利率下滑是否反映竞争加剧或成本承压；定增方案落地可能带来的短期供给端解禁与减持压力。"
+          "main_risk_text": "最核心风险是H股折价配售与董事减持构成的短期供给冲击，以及经营现金流为负与极高PE带来的盈利质量与估值杀跌风险；历史记忆警示该股在供给冲击下抗跌性极差。"
         },
         "operation_view": {
           "action": "wait_for_pullback",
           "position_preference": "half",
-          "entry_condition": "前期高位回撤后，需等待缩量企稳信号（如换手率回落至5%以下且单日成交额缩至30-40亿级别），或半导体/算力主线重新放量上攻时，可考虑沿60日均线附近低吸，价格区间参考回调至60日均线正负3%以内。",
+          "entry_condition": "需等待H股配售落地带来的供给压力与折价心理冲击被市场充分消化，股价缩量回踩重要均线（如60日均线）企稳，且大单资金转为持续净流入时的右侧低吸确认机会。按照当前走势，可在较近期高点回撤15%-20%的价格区间分批观察，约在110-120元区间。",
+          "invalid_condition": "CPO/光通信主线退潮或龙头地位被同板块其他标的取代；1.6T/800G光模块订单或排产不及预期；经营现金流持续恶化且应收账款暴增；H股配售引发A股股价破位下跌。",
+          "stop_loss_suggestion": "-8%"
+        },
+        "evidence_gap": [
+          "1.6T/800G光模块的具体新增订单金额及排产数据缺失",
+          "H股配售的具体落地时间表及控股股东减持进度细节",
+          "新业务（高速光模块）收入占比的具体数据需后续查证"
+        ],
+        "intraday_stop_loss_signal": {
+          "stock_code": "603083",
+          "stock_name": "剑桥科技",
+          "optimal_stop_loss_pct": -6.0,
+          "optimal_expected_value_pct": 0.0609,
+          "confidence_label": "statistical",
+          "method_label": "daily_low_open_recovery",
+          "reason_text": "近157个交易日样本中，日内最低点触发-6.0% 后，收盘重新回到开盘价的概率为0.0556，未能收回开盘价的概率为0.9444；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-6.2109%，期望值参考为0.0609%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+          "status": "ready",
+          "source_result_date": "2026-06-05"
+        }
+      },
+      {
+        "final_rank": 3,
+        "stock_code": "002156",
+        "stock_name": "通富微电",
+        "oneil_candidate_score": 82,
+        "selection_score": 188,
+        "final_bucket": "B",
+        "primary_theme": "半导体设备",
+        "matched_theme_list": [
+          "半导体设备",
+          "光通信",
+          "AI应用",
+          "CPO",
+          "存储半导体",
+          "半导体",
+          "消费电子"
+        ],
+        "holding_style": [
+          "中线投资"
+        ],
+        "external_research_need": {
+          "need_external_research": false,
+          "needed_dimension_list": [],
+          "reason_text": "外部复核已补充定增审核进展、券商盈利预测及龙虎榜机构大买证据，前期证据缺口中的定增落地时间已明确，当前CAN/SLIM DB与外部证据已足够支撑判断。"
+        },
+        "external_recheck_meta": {
+          "status": "completed",
+          "used_external_research_signal": true,
+          "requested_reason_text": "虽然CAN/SLIM DB已提供核心基本面和资金信号，但历史记忆多次指出先进封装收入占比、定增摊薄影响及控股股东风险敞口缺失，这些数据将显著影响A(年度成长)和N(新变量)的持续性判断，以及S(供需)的解禁风险评估，需外部复核补充。"
+        },
+        "oneil_canslim_verdict": {
+          "C_current_earnings": "strong",
+          "A_annual_growth": "medium",
+          "N_new_factor": "strong",
+          "S_supply_demand": "medium",
+          "L_leader_laggard": "capacity_core",
+          "I_institutional_sponsorship": "medium",
+          "M_market_theme": "strong"
+        },
+        "target_price_judgment": {
+          "institutional_expert_view": {
+            "level": "medium",
+            "target_price_range": {
+              "low": 65.0,
+              "high": 65.0,
+              "center": 65.0,
+              "currency": "CNY"
+            },
+            "source_name": "群益证券",
+            "source_url": "https://www.sohu.com/a/978014573_115377",
+            "source_title": "群益证券：上调通富微电目标价至65.0元，给予增持评级",
+            "source_observed_at": "2026-01-20",
+            "evidence_type": "explicit_broker_research",
+            "evidence_age_days": 136,
+            "evidence_freshness_label": "older_half_year_reference",
+            "reason_text": "群益证券基于定增扩产及AMD大客户逻辑给出65元目标价，但该证据距今136天，属于较旧参考。当前股价已突破70元，远超该目标价。近期开源、国信等券商虽给予买入评级并预测2026年EPS在0.91-1.24元，但未给出最新明确目标价区间，旧目标价已无法反映当前AI算力主线爆发与资金面剧烈变化。"
+          },
+          "oneil_canslim_view": {
+            "level": "medium",
+            "target_price_range": {
+              "low": 65,
+              "high": 80,
+              "currency": "CNY"
+            },
+            "bull_case_text": "若AI算力与光通信主线情绪持续高涨，AMD等大客户订单落地超预期，且先进封装产能释放顺利，毛利率企稳回升，股价有望在资金推动下挑战80元高位，对应2026年PE约65-70倍。",
+            "reason_text": "基于C(当前业绩强劲)和N(先进封装新变量)的强支撑，结合M(多主线共振)的极高辨识度，公司具备估值上修基础。参考券商2026年EPS预测0.91-1.24元，给予55-65倍PE，合理区间在50-80元。但考虑到A(年度成长)中ROE偏低及毛利率下滑风险，以及S(供需)中融资盘拥挤与定增摊薄带来的高波动，下限设定为65元，上限设定为80元，呈现宽幅震荡特征。"
+          },
+          "comparison_text": "机构目标价65元已被当前市场价突破，属于失效的旧参考。O'Neil区间(65-80元)更侧重当前AI主线情绪溢价、机构大买承接与高波动特征，上限更高；同时考虑到旧目标价时效性不足，当前更信任基于最新CAN SLIM证据推导的O'Neil区间。",
+          "invalid_condition": "半导体/算力主线退潮，AMD等大客户订单不及预期，毛利率持续大幅下滑反映竞争恶化，或定增引发大规模减持及资金面恶化，股价跌破关键支撑位且无法收回。"
+        },
+        "why_selected": [
+          "M(主线)：同时命中半导体设备、光通信、AI应用三大当前周级主线，且与CPO、存储半导体等高景气参考主题强共振，产业链路径清晰指向先进封装，主营核心相关且无概念噪声，主线共振极强。",
+          "C(当前业绩)：最近一期归母净利同比大增224.55%，EPS同比增长224.55%，远超25%强增长门槛；经营现金流极其充沛（为利润2.86倍），利润质量极高；开源、国信等券商2026年EPS一致预期0.91-1.24元，验证业绩重回增长快车道，虽毛利率微降，但主业强劲兑现主线逻辑。",
+          "A(年度成长)：近三年净利CAGR达34.40%，具备AI算力拉动的结构性成长特征；但ROE绝对值极低(2.11%)且毛利率呈下降趋势，定增落地后将进一步摊薄ROE，盈利能力仍处周期修复初期，成长质量有待验证，暂定medium。",
+          "N(新变量)：加码2.5D/3D先进封装解决AI算力瓶颈，AMD获Meta大单使公司间接受益；外部证据确认定增申请已获深交所审核通过并提交注册稿，资本开支开启新周期，新因子已转化为实质扩产与订单预期，逻辑强劲。",
+          "S(供需承接)：流通市值近千亿，日均成交额超百亿，6月3日龙虎榜显示机构净买入高达16.22亿元，资金承接极强；但换手率极高（11.63%），融资盘短期暴增，历史记忆警示极易引发踩踏式回调，且定增落地带来潜在供给压力，交易供需失衡风险大，降级为medium。",
+          "L(龙头地位)：国内封测头部企业，大基金持股，主线纯度高；但历史记忆多次纠正其并非真正领涨先锋，走势相对同业偏弱，属于板块容量核心与中军，辨识度逊于绝对龙头，定为capacity_core。",
+          "I(机构认可)：6月3日龙虎榜机构净买入16.22亿元，大资金参与迹象明显；但群益证券目标价已较旧(136天)且被现价击穿，且历史记忆提示高位机构态度易分化兑现，聪明钱认可度存在不确定性，定为medium。"
+        ],
+        "growth_value_judgment": {
+          "future_demand_expansion": "strong",
+          "business_quality": "medium",
+          "scarcity_and_anti_involution": "medium",
+          "china_strategy_alignment": "strong",
+          "order_or_capacity_visibility": "medium"
+        },
+        "risk_judgment": {
+          "shareholder_reduction_risk": "low",
+          "valuation_or_overheat_risk": "high",
+          "concept_noise_risk": "low",
+          "fundamental_miss_risk": "medium",
+          "main_risk_text": "核心风险在于高位涨幅过大、换手率极高与融资盘暴增带来的交易拥挤踩踏风险，一旦半导体主线分化极易引发剧烈回调；同时定增注册稿已提交，落地后对股本的摊薄影响临近；毛利率下滑是否反映成本承压或竞争加剧也构成潜在基本面压力。"
+        },
+        "operation_view": {
+          "action": "wait_for_pullback",
+          "position_preference": "half",
+          "entry_condition": "前期高位回撤后，需等待缩量企稳信号（如换手率回落至6%以下且单日成交额缩至稳定水平），或半导体/算力主线重新放量上攻时，可考虑沿60日均线附近低吸，价格区间参考回调至60日均线正负3%以内。",
           "invalid_condition": "半导体/算力主线退潮，AMD等大客户订单不及预期，毛利率持续大幅下滑，或定增引发大规模减持及资金面恶化，股价跌破关键支撑位且无法收回。",
           "stop_loss_suggestion": "-10%"
         },
         "evidence_gap": [
           "先进封装业务的具体收入占比及毛利率水平数据缺失，无法精确评估新变量对盈利的实际拉动。",
-          "定增方案的具体落地时间、解禁安排及对股本的摊薄影响细节尚不明确。",
-          "AMD等大客户订单的具体金额及排产可见度缺乏量化数据支撑。"
+          "控股股东解除质押及为下属企业担保的具体风险敞口缺乏量化数据。"
         ],
         "intraday_stop_loss_signal": {
           "stock_code": "002156",
@@ -471,22 +581,23 @@ const INLINE_ONEIL = {
           "method_label": "daily_low_open_recovery",
           "reason_text": "近157个交易日样本中，日内最低点触发-4.0% 后，收盘重新回到开盘价的概率为0.087，未能收回开盘价的概率为0.913；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.7741%，期望值参考为-0.3759%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
           "status": "ready",
-          "source_result_date": "2026-06-04"
+          "source_result_date": "2026-06-05"
         }
       },
       {
         "final_rank": 4,
-        "stock_code": "603228",
-        "stock_name": "景旺电子",
-        "oneil_candidate_score": 68,
-        "selection_score": 174,
+        "stock_code": "605358",
+        "stock_name": "立昂微",
+        "oneil_candidate_score": 75,
+        "selection_score": 206,
         "final_bucket": "B",
-        "primary_theme": "PCB",
+        "primary_theme": "半导体设备",
         "matched_theme_list": [
-          "PCB",
+          "半导体设备",
           "光通信",
-          "光学光电",
-          "消费电子"
+          "人形机器人",
+          "CPO",
+          "半导体"
         ],
         "holding_style": [
           "中线投资"
@@ -494,11 +605,11 @@ const INLINE_ONEIL = {
         "external_research_need": {
           "need_external_research": false,
           "needed_dimension_list": [],
-          "reason_text": "CAN/SLIM DB及长期记忆已提供充分的业绩下滑、机构分歧、筹码分散及港股上市风险证据，足以支撑当前降权及备选判断，无需额外外部复核。"
+          "reason_text": "CAN/SLIM DB 已提供足够的业绩反转、新变量(12寸硅片放量)及交易过热风险证据，历史记忆也充分警示了高估值与中军定位的回调风险，当前信息足以做出降级观察的判断，无需额外外部复核。"
         },
         "external_recheck_meta": {},
         "oneil_canslim_verdict": {
-          "C_current_earnings": "weak",
+          "C_current_earnings": "medium",
           "A_annual_growth": "medium",
           "N_new_factor": "strong",
           "S_supply_demand": "medium",
@@ -506,65 +617,98 @@ const INLINE_ONEIL = {
           "I_institutional_sponsorship": "medium",
           "M_market_theme": "strong"
         },
+        "target_price_judgment": {
+          "institutional_expert_view": {
+            "level": "insufficient_data",
+            "target_price_range": {
+              "low": null,
+              "high": null,
+              "center": null,
+              "currency": "CNY"
+            },
+            "source_name": "",
+            "source_url": "",
+            "source_title": "",
+            "source_observed_at": "",
+            "evidence_type": "insufficient_data",
+            "evidence_age_days": null,
+            "evidence_freshness_label": "insufficient_data",
+            "reason_text": "近半年未抓到可核验的机构目标区间，无法作为机构认可增强证据。"
+          },
+          "oneil_canslim_view": {
+            "level": "medium",
+            "target_price_range": {
+              "low": 28.0,
+              "high": 35.0,
+              "currency": "CNY"
+            },
+            "bull_case_text": "若12英寸硅片产能释放超预期且下游AI算力与光通信需求持续爆发，订单饱满度进一步提升，同时半导体主线情绪维持高位，股价有望突破基础区间上沿，挑战前高压力位。",
+            "reason_text": "基于公司12英寸硅片放量及射频业务起量的强N因子，结合周期底部反转的C因子趋势，给予中期成长溢价；但考虑到当前绝对利润极低、PE极高（超百倍）以及近20日涨幅已达33%的过热风险，目标区间不宜过度乐观，主要基于技术面趋势与基本面改善幅度的综合推测。"
+          },
+          "comparison_text": "缺少可核验的机构目标区间，只能评价 O'Neil 基于 CAN SLIM 证据独立推测的区间；不得将 EPS、PE 或现价换算结果表述为机构目标区间。",
+          "invalid_condition": "半导体硅片价格复苏不及预期、12英寸硅片订单饱满度下降或交期缩短、公司出现超预期减持或可转债大规模转股砸盘、主线退潮导致戴维斯双杀。"
+        },
         "why_selected": [
-          "M(主线)：命中PCB、光通信、光学光电三大周级主线，主营核心相关，共振类型为strong，无概念噪声，处于AI算力产业链上游核心环节。",
-          "C(当前业绩)：最近一期净利润同比下滑28.37%，EPS下滑38.46%，毛利率与净利率双降，PE高达59.43，当前业绩与估值严重不匹配，主线逻辑尚未在财报上兑现。",
-          "A(年度成长)：三年营收CAGR为13.34%，净利CAGR为4.92%，具备一定结构性成长基础，但ROE仅1.76%且毛利率呈下滑趋势，成长质量受传统业务拖累。",
-          "N(新变量)：新增50亿AI PCB扩产规划，解决算力硬件高频高速瓶颈，新变量极强且已进入实质扩产阶段，有望推动重新定价。",
-          "S(供需承接)：近20日换手率4.69%尚可，但RS综合排名仅17相对强度较弱，融资余额下降且主力资金呈净流出，叠加历史记忆提示筹码极度分散，交易承接偏弱。",
-          "L(龙头地位)：全球PCB领先企业，主线纯度清晰，在板块中充当容量核心与中军，但近期股价表现滞后，相对强度不具备领涨特征。",
-          "I(机构认可)：券商给予买入评级，但机构对2026年EPS预测分歧极大（2.0至4.14），且近期融资余额下降、大单资金流出，机构共识与资金承接尚未形成共振。"
+          "M(主线)：命中半导体设备、光通信、人形机器人三大周级主线，主营硅片为上游核心材料，业务相关度极高，形成强共振，无概念噪声。",
+          "C(当前业绩)：最近一期利润同比增速108.92%，扣非净利增速114.40%，实现强劲扭亏；毛利率与净利率显著改善，经营现金流同步转正。但绝对利润规模极小，EPS绝对值低，容错率较差，降为medium。",
+          "A(年度成长)：近三年营收CAGR为7.21%，毛利率趋势改善，ROE恢复至10.03%；但2025年亏损导致利润CAGR缺失，当前高增属于周期底部修复而非强结构性成长，年度成长质量中等。",
+          "N(新变量)：12英寸硅片进入放量期，外延片订单饱满且交期延长，射频业务快速放量，新变量已实质转化为财报收入创新高，解决国产替代与AI算力衬底供应问题，新因子极强。",
+          "S(供需承接)：业务供需极强（订单饱满交期延长），交易供需近期显著改善，融资余额大增；但近20日涨幅已达33.59%，短期交易过热，且股东及董监高拟减持0.12%带来微小瑕疵，供需综合降为medium。",
+          "L(龙头地位)：在重掺硅片细分领域有技术壁垒与产能优势，板块内充当中军角色；但交易层面缺乏涨停先锋辨识度，历史走势多次印证其多作为跟涨的中军，综合判断为capacity_core。",
+          "I(机构认可)：国信、中邮等券商覆盖并接待机构调研，融资余额大幅增加；但大单资金呈小幅净流出，且近半年缺乏明确的机构目标价证据，历史记忆警示高估值下机构真实承接力度存疑，降为medium。"
         ],
         "growth_value_judgment": {
           "future_demand_expansion": "strong",
-          "business_quality": "weak",
+          "business_quality": "medium",
           "scarcity_and_anti_involution": "medium",
           "china_strategy_alignment": "strong",
           "order_or_capacity_visibility": "medium"
         },
         "risk_judgment": {
-          "shareholder_reduction_risk": "medium",
+          "shareholder_reduction_risk": "low",
           "valuation_or_overheat_risk": "high",
           "concept_noise_risk": "low",
-          "fundamental_miss_risk": "high",
-          "main_risk_text": "业绩兑现不可测（公司拒绝对利润拖累因素量化拆分）、高估值与利润下滑的错配风险、港股上市带来的股权摊薄与资金分流压力、筹码极度分散导致的拉升阻力。"
+          "fundamental_miss_risk": "medium",
+          "main_risk_text": "高估值与短期暴涨叠加带来的交易拥挤及戴维斯双杀风险；绝对利润规模极小，业绩容错率低，一旦订单或周期复苏不及预期极易大幅回调。"
         },
         "operation_view": {
           "action": "wait_for_pullback",
-          "position_preference": "small",
-          "entry_condition": "必须等待2026年中报或季报确认毛利率企稳回升及利润端修复，或股价止跌且大单资金转为持续净流入时考虑低吸。价格区间建议等待回调至60日均线附近且缩量企稳。",
-          "invalid_condition": "连续季度扣非净利润下滑且毛利率未见改善，或AI算力资本开支放缓导致高端PCB订单不及预期，或港股上市引发重大抛压。",
+          "position_preference": "half",
+          "entry_condition": "需等待高管减持落地及交易异常波动风险释放后，股价缩量回踩20日均线或近期调整低点支撑位企稳时考虑低吸，当前估值极高风险大，不建议追高。价格区间建议在20日均线附近或近期调整低点支撑位。",
+          "invalid_condition": "半导体主线退潮，或12英寸硅片订单饱满度下降/交期缩短，或主力资金持续大幅流出，或出现超预期减持及可转债大规模转股砸盘。",
           "stop_loss_suggestion": "-8%"
         },
         "evidence_gap": [
-          "AI PCB具体订单金额与核心客户名称验证",
-          "原材料与汇兑对利润影响的量化拆分数据",
-          "港股上市具体时间表与摊薄比例测算"
+          "12英寸硅片新产能投放的具体时间表及产能爬坡数据",
+          "外延片订单的具体新增金额和头部客户细节",
+          "可转债转股剩余规模及转股抛压的具体量化数据"
         ],
         "intraday_stop_loss_signal": {
-          "stock_code": "603228",
-          "stock_name": "景旺电子",
-          "optimal_stop_loss_pct": -4.0,
-          "optimal_expected_value_pct": -0.2608,
+          "stock_code": "605358",
+          "stock_name": "立昂微",
+          "optimal_stop_loss_pct": -3.0,
+          "optimal_expected_value_pct": -0.1049,
           "confidence_label": "statistical",
           "method_label": "daily_low_open_recovery",
-          "reason_text": "近157个交易日样本中，日内最低点触发-4.0% 后，收盘重新回到开盘价的概率为0.0323，未能收回开盘价的概率为0.9677；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.8892%，期望值参考为-0.2608%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+          "reason_text": "近157个交易日样本中，日内最低点触发-3.0% 后，收盘重新回到开盘价的概率为0.0526，未能收回开盘价的概率为0.9474；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.0451%，期望值参考为-0.1049%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
           "status": "ready",
-          "source_result_date": "2026-06-04"
+          "source_result_date": "2026-06-05"
         }
       },
       {
         "final_rank": 5,
-        "stock_code": "300054",
-        "stock_name": "鼎龙股份",
-        "oneil_candidate_score": 65,
-        "selection_score": 148,
+        "stock_code": "002436",
+        "stock_name": "兴森科技",
+        "oneil_candidate_score": 68,
+        "selection_score": 173,
         "final_bucket": "B",
-        "primary_theme": "半导体设备",
+        "primary_theme": "光通信",
         "matched_theme_list": [
+          "光通信",
           "半导体设备",
-          "光学光电",
-          "先进封装",
+          "CPO",
+          "PCB",
+          "6G",
           "存储半导体"
         ],
         "holding_style": [
@@ -573,180 +717,126 @@ const INLINE_ONEIL = {
         "external_research_need": {
           "need_external_research": false,
           "needed_dimension_list": [],
-          "reason_text": "CAN/SLIM DB 已提供充分的业绩、订单和资金流向数据，且长期投资记忆提供了极强的高位回撤风险校正，当前证据足以判断其处于高位兑现风险期，无需额外外部复核。"
-        },
-        "external_recheck_meta": {},
-        "oneil_canslim_verdict": {
-          "C_current_earnings": "strong",
-          "A_annual_growth": "strong",
-          "N_new_factor": "strong",
-          "S_supply_demand": "weak",
-          "L_leader_laggard": "capacity_core",
-          "I_institutional_sponsorship": "weak",
-          "M_market_theme": "strong"
-        },
-        "why_selected": [
-          "M(主线)：公司精准命中排名第2的半导体设备和排名第3的光学光电双周级主线，共振类型为strong，主营核心相关且无概念噪声，产业链路径清晰，主线逻辑极硬。",
-          "C(当前业绩)：最近一期净利润大增77.99%，扣非净利增75.24%，营收增23.82%，EPS同比大增72.99%；毛利率与净利率双双显著改善；经营现金流匹配良好，当前业绩强力兑现主线逻辑。",
-          "A(年度成长)：近三年净利CAGR为22.68%，属于半导体材料国产替代驱动的结构性成长；毛利率趋势持续改善，未来产业需求消化逻辑清晰，非一次性收益，年度成长质量高。",
-          "N(新变量)：CMP抛光液持续突破并获头部晶圆厂批量订单，碳化硅衬底抛光液落地切入第三代半导体；新业务收入占比已超50%，从概念完全转化为真实财报利润，重新定价逻辑极强。",
-          "S(供需承接)：虽然日均成交额超33亿且业务需求扩张明确，但120日涨幅超107%、60日涨幅超71%，PE近100倍，且大单资金近期呈净流出态势；历史记忆多次警示此形态下极易遭遇获利盘踩踏，交易供需存在严重过热风险，给予weak降权。",
-          "L(龙头地位)：国内CMP材料核心供应商，主线纯度高，在板块中充当容量核心；但历史记忆明确提示该股在高位下跌时缺乏抗跌韧性，走势常落后于先锋，并非情绪真龙头，故定位为capacity_core。",
-          "I(机构认可)：近期有5家券商覆盖并给予买入评级，融资余额小幅增加；但大单资金呈净流出态势，聪明钱在高位存在分歧和兑现出逃现象，机构短期认可度实质动摇，给予weak降权。"
-        ],
-        "growth_value_judgment": {
-          "future_demand_expansion": "strong",
-          "business_quality": "strong",
-          "scarcity_and_anti_involution": "strong",
-          "china_strategy_alignment": "strong",
-          "order_or_capacity_visibility": "medium"
-        },
-        "risk_judgment": {
-          "shareholder_reduction_risk": "medium",
-          "valuation_or_overheat_risk": "high",
-          "concept_noise_risk": "low",
-          "fundamental_miss_risk": "low",
-          "main_risk_text": "核心风险在于估值极高（PE 96倍）与短期涨幅过大（120日+107%）带来的获利盘兑现与估值消化双重压力；大单资金持续净流出印证了抛压；此外控股股东存在股份质押情况，需警惕衍生风险。"
-        },
-        "operation_view": {
-          "action": "wait_for_pullback",
-          "position_preference": "half",
-          "entry_condition": "坚决避免追高。建议等待股价缩量回踩重要均线（如60日均线）企稳，且主力资金停止净流出、板块主线再次共振时考虑低吸。价格区间参考20日均线至60日均线之间。",
-          "invalid_condition": "半导体主线整体退潮资金大幅流出，或公司CMP抛光液/光刻胶新订单落地不及预期，或季度财报增速显著放缓，或控股股东质押出现平仓风险。",
-          "stop_loss_suggestion": "-8%"
-        },
-        "evidence_gap": [
-          "控股股东股份质押的具体比例、用途及是否存在平仓风险需持续跟踪。",
-          "缺少公司新产能投放节奏及产能利用率的具体细节验证，影响未来业绩释放斜率判断。"
-        ],
-        "intraday_stop_loss_signal": {
-          "stock_code": "300054",
-          "stock_name": "鼎龙股份",
-          "optimal_stop_loss_pct": -4.0,
-          "optimal_expected_value_pct": -0.0696,
-          "confidence_label": "statistical",
-          "method_label": "daily_low_open_recovery",
-          "reason_text": "近157个交易日样本中，日内最低点触发-4.0% 后，收盘重新回到开盘价的概率为0.0417，未能收回开盘价的概率为0.9583；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-4.0804%，期望值参考为-0.0696%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
-          "status": "ready",
-          "source_result_date": "2026-06-04"
-        }
-      },
-      {
-        "final_rank": 6,
-        "stock_code": "600601",
-        "stock_name": "方正科技",
-        "oneil_candidate_score": 65,
-        "selection_score": 137,
-        "final_bucket": "B",
-        "primary_theme": "PCB",
-        "matched_theme_list": [
-          "PCB",
-          "光通信"
-        ],
-        "holding_style": [
-          "中线投资",
-          "短线投机"
-        ],
-        "external_research_need": {
-          "need_external_research": true,
-          "needed_dimension_list": [
-            "shareholder_reduction",
-            "new_orders",
-            "corporate_governance"
-          ],
-          "reason_text": "历史记忆多次警告高折价大宗交易和公司治理风险，当前数据仍显示大宗折价11.68%及股东权益变动触及1%刻度。必须通过外部证据确认是否为实质性大股东减持，以及是否有新订单或产能数据对冲该风险，否则无法支持中线持仓。"
+          "reason_text": "外部证据已补充券商盈利预测与资金流向数据，CAN/SLIM DB结合外部证据已足够判断当前高位派发风险与基本面硬伤，无需进一步外部复核。"
         },
         "external_recheck_meta": {
-          "status": "failed_fallback_to_first_pass",
-          "used_external_research_signal": false,
-          "error_text": "GLM request failed model_name=glm-5.1 status_code=429 response_body={\"error\":{\"code\":\"1113\",\"message\":\"余额不足或无可用资源包,请充值。\"}}"
+          "status": "completed",
+          "used_external_research_signal": true,
+          "requested_reason_text": "当前C/A维度极弱且现金流大幅为负，需要外部证据验证FCBGA等新业务的具体订单金额、大客户验证及产能投放节奏，同时需查明经营现金流大幅流出是否危及公司正常运营及改善时间表，这直接决定其能否从周期底部真正反转。"
         },
         "oneil_canslim_verdict": {
-          "C_current_earnings": "strong",
+          "C_current_earnings": "weak",
           "A_annual_growth": "weak",
-          "N_new_factor": "medium",
-          "S_supply_demand": "weak",
-          "L_leader_laggard": "capacity_core",
+          "N_new_factor": "strong",
+          "S_supply_demand": "medium",
+          "L_leader_laggard": "leader",
           "I_institutional_sponsorship": "medium",
           "M_market_theme": "strong"
         },
+        "target_price_judgment": {
+          "institutional_expert_view": {
+            "level": "insufficient_data",
+            "target_price_range": {
+              "low": null,
+              "high": null,
+              "center": null,
+              "currency": "CNY"
+            },
+            "source_name": "",
+            "source_url": "",
+            "source_title": "",
+            "source_observed_at": "",
+            "evidence_type": "insufficient_data",
+            "evidence_age_days": null,
+            "evidence_freshness_label": "insufficient_data",
+            "reason_text": "近半年未抓到可核验的机构目标区间，无法作为机构认可增强证据。"
+          },
+          "oneil_canslim_view": {
+            "level": "medium",
+            "target_price_range": {
+              "low": 8.5,
+              "high": 11.0,
+              "currency": "CNY"
+            },
+            "bull_case_text": "若AI算力主线情绪持续高涨，且公司FCBGA载板订单实现实质性落地、单季经营现金流显著转正，市场将按2026年高增长预期给予估值溢价，届时股价可能突破基础区间上沿。",
+            "reason_text": "外部券商一致预测2026年EPS在0.23-0.31元之间，验证了新变量(N)的兑现逻辑。若按半导体成长股30-35倍合理PE测算，对应目标区间约在8.5-11.0元。当前股价已远超此区间上沿，估值严重透支，该区间仅作为基本面价值锚定。"
+          },
+          "comparison_text": "缺少可核验的机构目标区间，只能评价 O'Neil 基于 CAN SLIM 证据独立推测的区间；不得将 EPS、PE 或现价换算结果表述为机构目标区间。",
+          "invalid_condition": "若后续季度扣非净利润环比下滑、经营现金流继续大幅流出，或AI算力/CPO主线退潮，则目标区间完全失效。"
+        },
         "why_selected": [
-          "M(主线)：命中PCB与光通信双主线，且为主营核心业务，产业链路径清晰（AI服务器->CPO/光模块->PCB），共振类型为strong。",
-          "C(当前业绩)：最近一期利润增速195.16%，扣非净利增速225.51%，EPS增速150%，经营现金流匹配，当期业绩兑现极强。",
-          "A(年度成长)：三年营收CAGR仅0.34%，当前高增主要源于极低基数下的周期反转，非结构性成长，年度成长质量偏弱。",
-          "N(新变量)：高端PCB受益AI算力浪潮逻辑成立，但缺乏明确的新增订单、新客户或新产能投放的微观证据，新因子对业绩拉动仍需验证。",
-          "S(供需承接)：虽然融资余额大增且成交活跃，但RS综合排名仅27（偏弱），且频繁出现11.68%高折价大宗交易，筹码松动与派发风险极大，供需结构不健康。",
-          "L(龙头地位)：在PCB细分方向具备容量核心特征，主线纯度清晰，但非板块先锋弹性龙头，涨停属性弱。",
-          "I(机构认可)：融资盘大幅涌入，有券商买入评级，但大宗交易有机构席位卖出，多空分歧严重，机构资金并未形成一致看多的健康承接。"
+          "M(主线)：命中光通信(排名第1)与半导体设备(排名第4)双周级主线，且与CPO、PCB等参考主题强共振，产业链路径极其清晰，主营核心相关，无概念噪声，形成极强共振。",
+          "C(当前业绩)：最近一期利润与扣非净利看似高增，但绝对值极小（净利仅1874万元），EPS同比增速为0%；净利率为负（-2.52%），经营现金流大幅流出2.47亿且与利润严重背离，外部研报亦指出FCBGA业务仍未大批量量产且拖累盈利，盈利质量极差，给予weak降权。",
+          "A(年度成长)：近三年营收CAGR为10.35%，但净利CAGR为-36.44%，ROE仅0.35%极低，毛利率呈下降趋势。当前属于AI需求拉动的周期底部反转，而非稳定结构性成长，历史成长质量差，给予weak。",
+          "N(新变量)：外部研报(中航/华鑫/东兴/开源)一致确认mSAP工艺突破赋能高端IC载板放量，AI驱动IC载板涨价潮持续，BT载板迎来强势增长期。新变量极强且正从概念转化为业务驱动与涨价逻辑，是推动下一阶段增长的核心动力。",
+          "S(供需承接)：流通市值大，日均成交额超65亿，融资余额大幅增加11.37亿，业务需求扩张逻辑清晰；但外部新闻明确验证6月3日、5日主力资金连续大幅净流出（超8亿），交易层面存在显著的高位派发与兑现压力，维持medium。",
+          "L(龙头地位)：公司是国内IC载板领域龙头，在FCBGA等高端载板具备核心技术壁垒；5月29日率先封涨停带动板块回暖，属于PCB及半导体封装分支的龙头与情绪先锋，辨识度极高。",
+          "I(机构认可)：外部证据显示中航、华鑫、东兴、开源等多家券商覆盖并给予买入/增持评级，且给出2026年EPS预测，机构研报认可度较之前提升；但近期主力资金连续大幅净流出，聪明钱获利了结迹象明显，综合给予medium。"
         ],
         "growth_value_judgment": {
-          "future_demand_expansion": "medium",
+          "future_demand_expansion": "strong",
           "business_quality": "weak",
-          "scarcity_and_anti_involution": "weak",
-          "china_strategy_alignment": "medium",
+          "scarcity_and_anti_involution": "medium",
+          "china_strategy_alignment": "strong",
           "order_or_capacity_visibility": "insufficient_data"
         },
         "risk_judgment": {
-          "shareholder_reduction_risk": "high",
+          "shareholder_reduction_risk": "low",
           "valuation_or_overheat_risk": "high",
           "concept_noise_risk": "low",
-          "fundamental_miss_risk": "medium",
-          "main_risk_text": "高估值下的股东高折价大宗交易减持派发风险，以及低基数效应消退后业绩增速可能断崖式回落的风险。"
+          "fundamental_miss_risk": "high",
+          "main_risk_text": "核心风险在于高位派发与基本面硬伤。外部证据证实近期主力资金大幅流出，存在强烈的高位兑现回撤风险；同时FCBGA业务未量产且持续亏损，经营现金流大幅流出，若战略投入无法转化为真实回款，将面临业绩雷与估值双杀。"
         },
         "operation_view": {
           "action": "wait_for_pullback",
           "position_preference": "small",
-          "entry_condition": "需等待大宗减持压力释放、股价缩量回踩重要均线（如60日线）企稳，且PE回落至80倍以内时，方可考虑小仓位试探，当前不宜追高。",
-          "invalid_condition": "若出现大股东明确减持公告，或下季度财报营收增速大幅回落至个位数，则逻辑失效。",
+          "entry_condition": "股价缩量回踩关键均线（如20日或60日均线）企稳，且单季经营现金流明显转正时；或FCBGA大客户订单得到公告证实时，可考虑介入。按照近期高位回撤15%-20%的支撑区间作为观察买点，大致在4.00-4.50元区间。",
+          "invalid_condition": "连续两季经营现金流无改善或扣非净利环比下滑，或AI算力/CPO主线退潮，或跌破关键均线支撑且短期无法收复。",
           "stop_loss_suggestion": "-8%"
         },
         "evidence_gap": [
-          "高端PCB具体订单金额及核心客户结构验证",
-          "大宗交易背后的股东意图及未来减持计划",
-          "新产能投放节奏及产能利用率数据",
-          "公司治理隐患（一致行动协议到期、非经营性资金占用）的最新进展"
+          "缺乏FCBGA具体新增订单金额和核心大客户验证公告",
+          "缺乏新产能投放节奏和产能利用率的具体数据",
+          "缺乏高端IC载板业务具体收入占比提升的量化数据",
+          "缺乏经营现金流大幅流出的详细原因及改善时间表"
         ],
         "intraday_stop_loss_signal": {
-          "stock_code": "600601",
-          "stock_name": "方正科技",
-          "optimal_stop_loss_pct": -4.0,
-          "optimal_expected_value_pct": -0.0949,
+          "stock_code": "002436",
+          "stock_name": "兴森科技",
+          "optimal_stop_loss_pct": -5.0,
+          "optimal_expected_value_pct": -0.7922,
           "confidence_label": "statistical",
           "method_label": "daily_low_open_recovery",
-          "reason_text": "近157个交易日样本中，日内最低点触发-4.0% 后，收盘重新回到开盘价的概率为0.0455，未能收回开盘价的概率为0.9545；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-4.0551%，期望值参考为-0.0949%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+          "reason_text": "近157个交易日样本中，日内最低点触发-5.0% 后，收盘重新回到开盘价的概率为0.0667，未能收回开盘价的概率为0.9333；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-4.3578%，期望值参考为-0.7922%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
           "status": "ready",
-          "source_result_date": "2026-06-04"
+          "source_result_date": "2026-06-05"
         }
       },
       {
-        "final_rank": 7,
+        "final_rank": 6,
         "stock_code": "605111",
         "stock_name": "新洁能",
-        "oneil_candidate_score": 65,
-        "selection_score": 137,
+        "oneil_candidate_score": 68,
+        "selection_score": 150,
         "final_bucket": "B",
         "primary_theme": "半导体设备",
         "matched_theme_list": [
           "半导体设备",
-          "电力",
-          "算力租赁"
+          "智能电网",
+          "人形机器人"
         ],
         "holding_style": [
           "中线投资"
         ],
         "external_research_need": {
-          "need_external_research": true,
-          "needed_dimension_list": [
-            "new_order_or_capacity",
-            "shareholder_reduction",
-            "institutional_position_change"
-          ],
-          "reason_text": "当前N维度缺乏明确的新增订单、大客户验证及新产能投放的硬数据，且股价短期涨幅巨大，急需外部证据核实是否存在大股东减持/解禁抛压以及机构资金的真实买卖结构，以防高位接盘。"
+          "need_external_research": false,
+          "needed_dimension_list": [],
+          "reason_text": "外部证据已补充，券商研报确认了需求复苏预期，龙虎榜与资金流数据证实了高位派发风险，当前证据已足够支持降级与风险判断。"
         },
         "external_recheck_meta": {
-          "status": "failed_fallback_to_first_pass",
-          "used_external_research_signal": false,
-          "error_text": "GLM request failed model_name=glm-5.1 status_code=429 response_body={\"error\":{\"code\":\"1113\",\"message\":\"余额不足或无可用资源包,请充值。\"}}"
+          "status": "completed",
+          "used_external_research_signal": true,
+          "requested_reason_text": "当前N维度缺乏明确的新增大额订单、新客户及新产能投放线索，无法验证AI算力供电逻辑是否正在转化为实际收入；同时缺乏近期大股东减持、解禁抛压及龙虎榜游资兑现细节的排查数据，这些证据将显著影响高位股的入选与淘汰决策。"
         },
         "oneil_canslim_verdict": {
           "C_current_earnings": "medium",
@@ -754,43 +844,74 @@ const INLINE_ONEIL = {
           "N_new_factor": "medium",
           "S_supply_demand": "strong",
           "L_leader_laggard": "leader",
-          "I_institutional_sponsorship": "strong",
+          "I_institutional_sponsorship": "medium",
           "M_market_theme": "strong"
         },
+        "target_price_judgment": {
+          "institutional_expert_view": {
+            "level": "insufficient_data",
+            "target_price_range": {
+              "low": null,
+              "high": null,
+              "center": null,
+              "currency": "CNY"
+            },
+            "source_name": "",
+            "source_url": "",
+            "source_title": "",
+            "source_observed_at": "",
+            "evidence_type": "insufficient_data",
+            "evidence_age_days": null,
+            "evidence_freshness_label": "insufficient_data",
+            "reason_text": "近半年未抓到可核验的机构目标区间，无法作为机构认可增强证据。"
+          },
+          "oneil_canslim_view": {
+            "level": "medium",
+            "target_price_range": {
+              "low": 55.0,
+              "high": 80.0,
+              "currency": "CNY"
+            },
+            "bull_case_text": "若AI算力供电需求持续爆发，且公司3Q25财报验证利润反转、毛利率企稳回升，同时伴随新增大客户或产能落地，市场将给予更高的成长性估值溢价，股价有望突破当前高点向80元迈进。",
+            "reason_text": "当前PE高达67倍但利润下滑，估值严重透支。基于CAN SLIM框架，55元对应前期强势支撑位及20日均线回踩区域，具备较高的安全边际；80元则对应若周期复苏逻辑兑现、EPS恢复增长后的合理估值修复空间。"
+          },
+          "comparison_text": "缺少可核验的机构目标区间，只能评价 O'Neil 基于 CAN SLIM 证据独立推测的区间；不得将 EPS、PE 或现价换算结果表述为机构目标区间。",
+          "invalid_condition": "若下一季报利润继续下滑证伪复苏逻辑，或半导体/算力主线退潮资金大幅流出，或出现大股东减持及解禁抛压，目标区间失效。"
+        },
         "why_selected": [
-          "M(主线)：命中半导体设备、电力两条周级主线及算力租赁参考主线，共振类型为strong。公司主营MOSFET/IGBT是AI算力供电核心上游，主营高度相关，无概念噪声，主线逻辑极硬。",
-          "C(当前业绩)：最近一期营收同比增长15.14%，显示需求端有所回暖；但利润同比下滑12.68%，扣非净利下滑14.84%，EPS下滑11.54%，毛利率和净利率双降。业绩尚未反转，无法完全支撑当前估值，给予medium降权。",
-          "A(年度成长)：近三年营收CAGR仅1.20%，净利CAGR为-3.29%，ROE仅2.18%极低，毛利率呈下滑趋势。当前处于半导体周期底部，属于周期性震荡而非结构性成长，年度成长质量偏弱。",
-          "N(新变量)：公司产品解决算力中心高能耗供电瓶颈，受益于AI算力建设与国产替代趋势。但当前公告缺乏明确的新增大额订单、新客户或新产能投放线索，新因子尚未转化为财报利润，停留在逻辑推演阶段。",
-          "S(供需承接)：近20日涨幅高达52.47%，融资余额大增2.52亿，换手率9.12%，RS_20d高达84，资金承接极强。但短期涨幅严重透支，公司已发布异常波动公告提示风险，成交额创新高后面临极大的获利盘兑现压力，交易供需过热。",
-          "L(龙头地位)：在半导体功率器件细分领域行业地位扎实，主线纯度清晰。5月27日充当板块涨停先锋，近期股价强度极高，辨识度处于领先地位，判断为leader。",
-          "I(机构认可)：近20日融资余额大幅增加，大单资金净流入，且东海证券、中邮证券等5家券商给予买入/增持评级，机构与游资共振明显，聪明钱关注度高。"
+          "M(主线)：命中半导体设备、智能电网、人形机器人三大周级主线，主营MOSFET/IGBT高度相关，共振类型strong，无概念噪声，主线逻辑极硬。",
+          "C(当前业绩)：最近一期营收增长15.14%显示需求回暖，但利润下滑12.68%，毛利率净利率双降；外部券商研报虽指出下游需求向好、预计3Q25起抬头向上，但当前业绩尚未反转，无法完全支撑当前估值，给予medium降权。",
+          "A(年度成长)：近三年营收CAGR仅1.20%，净利CAGR为-3.29%，ROE极低，处于半导体周期底部，年度成长质量偏弱，缺乏结构性持续成长能力。",
+          "N(新变量)：产品解决算力中心供电瓶颈，受益AI算力与国产替代；外部券商研报强化了需求向好预期，但近期公告仍缺乏明确的新增大额订单或新产能投放线索，新因子尚未转化为财报利润，停留在逻辑推演阶段。",
+          "S(供需承接)：近20日涨幅高达34.95%，融资余额大增，资金承接极强；但外部证据证实5月27日换手率高达14.89%且成交额创上市新高，随后6月初主力资金转为净流出，短期涨幅严重透支，面临极大的获利盘兑现压力。",
+          "L(龙头地位)：在半导体功率器件细分领域行业地位扎实，主线纯度清晰，5月27日充当板块涨停先锋，近期股价强度极高，辨识度处于领先地位，判断为leader。",
+          "I(机构认可)：近期获5家券商买入评级，融资余额大幅增加；但外部证据显示东财机构参与度仅32.3%且近期主力资金净流出，高位天量换手后聪明钱大概率在派发兑现，机构认可度存疑，从strong降级为medium。"
         ],
         "growth_value_judgment": {
-          "future_demand_expansion": "medium",
-          "business_quality": "weak",
+          "future_demand_expansion": "strong",
+          "business_quality": "medium",
           "scarcity_and_anti_involution": "medium",
           "china_strategy_alignment": "strong",
-          "order_or_capacity_visibility": "insufficient_data"
+          "order_or_capacity_visibility": "weak"
         },
         "risk_judgment": {
-          "shareholder_reduction_risk": "insufficient_data",
+          "shareholder_reduction_risk": "medium",
           "valuation_or_overheat_risk": "high",
           "concept_noise_risk": "low",
-          "fundamental_miss_risk": "medium",
-          "main_risk_text": "短期涨幅过大（20日超52%）导致的高位获利盘兑现与派发风险；PE高达67倍但业绩下滑，存在戴维斯双杀风险；半导体周期复苏不及预期导致业绩持续无法兑现的风险。"
+          "fundamental_miss_risk": "high",
+          "main_risk_text": "高位派发与戴维斯双杀风险。外部证据证实5月27日天量换手后主力资金净流出，公司自我提示业绩下滑及估值过高风险，若半导体周期复苏不及预期或订单落空，高估值将面临剧烈回调。同时股票期权行权价29.05元存在潜在抛压。"
         },
         "operation_view": {
           "action": "wait_for_pullback",
           "position_preference": "small",
-          "entry_condition": "必须等待股价缩量回踩重要均线（如20日或60日均线）企稳，且换手率回落至5%以下、融资盘抛压减轻时方可考虑。按照当前高位回撤10%-15%的支撑区间作为观察买点。",
+          "entry_condition": "必须等待股价缩量回踩重要均线（如20日或60日均线）企稳，且换手率回落至5%以下、融资盘抛压减轻时方可考虑。按照当前高位回撤15%-20%的支撑区间（约55-58元）作为观察买点。",
           "invalid_condition": "若跌破20日均线且短期无法收复，或半导体/算力主线退潮，或下一季报利润继续下滑证伪复苏逻辑，则候选逻辑失效。",
           "stop_loss_suggestion": "-8%"
         },
         "evidence_gap": [
           "缺乏AI算力供电相关产品的新增大额订单、核心大客户验证及具体收入占比数据。",
           "缺乏新产能投放节奏及产能利用率的高频数据。",
-          "缺乏近期大股东减持、解禁抛压及龙虎榜游资兑现细节的排查数据。"
+          "缺乏大股东减持或期权行权对市场抛压的具体影响量化数据。"
         ],
         "intraday_stop_loss_signal": {
           "stock_code": "605111",
@@ -801,21 +922,133 @@ const INLINE_ONEIL = {
           "method_label": "daily_low_open_recovery",
           "reason_text": "近211个交易日样本中，日内最低点触发-4.0% 后，收盘重新回到开盘价的概率为0.0952，未能收回开盘价的概率为0.9048；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.334%，期望值参考为-0.816%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
           "status": "ready",
-          "source_result_date": "2026-06-04"
+          "source_result_date": "2026-06-05"
+        }
+      },
+      {
+        "final_rank": 7,
+        "stock_code": "600184",
+        "stock_name": "光电股份",
+        "oneil_candidate_score": 65,
+        "selection_score": 148,
+        "final_bucket": "B",
+        "primary_theme": "光通信",
+        "matched_theme_list": [
+          "光通信",
+          "人形机器人"
+        ],
+        "holding_style": [
+          "中线投资"
+        ],
+        "external_research_need": {
+          "need_external_research": true,
+          "needed_dimension_list": [
+            "订单与产能",
+            "中报业绩预告"
+          ],
+          "reason_text": "当前业绩极弱且估值极高，急需验证防务新型号与机器视觉业务的订单转化及中报EPS兑现进度，否则面临戴维斯双杀，外部证据对入选/淘汰具有决定性影响。"
+        },
+        "external_recheck_meta": {},
+        "oneil_canslim_verdict": {
+          "C_current_earnings": "medium",
+          "A_annual_growth": "weak",
+          "N_new_factor": "medium",
+          "S_supply_demand": "medium",
+          "L_leader_laggard": "middle_rank",
+          "I_institutional_sponsorship": "medium",
+          "M_market_theme": "strong"
+        },
+        "target_price_judgment": {
+          "institutional_expert_view": {
+            "level": "insufficient_data",
+            "target_price_range": {
+              "low": null,
+              "high": null,
+              "center": null,
+              "currency": "CNY"
+            },
+            "source_name": "",
+            "source_url": "",
+            "source_title": "",
+            "source_observed_at": "",
+            "evidence_type": "insufficient_data",
+            "evidence_age_days": null,
+            "evidence_freshness_label": "insufficient_data",
+            "reason_text": "近半年未抓到可核验的机构目标区间，无法作为机构认可增强证据。"
+          },
+          "oneil_canslim_view": {
+            "level": "weak",
+            "target_price_range": {
+              "low": 13.6,
+              "high": 17.0,
+              "currency": "CNY"
+            },
+            "bull_case_text": "若防务新型号与机器视觉订单超预期放量，2026年EPS达到0.5元以上，且市场给予50倍估值，股价有望突破25元。",
+            "reason_text": "基于券商2026年EPS预测0.34元，给予40-50倍合理PE，推导目标区间为13.6-17.0元。当前PE超300倍严重透支，需业绩爆发消化估值。"
+          },
+          "comparison_text": "缺少可核验的机构目标区间，只能评价 O'Neil 基于 CAN SLIM 证据独立推测的区间；不得将 EPS、PE 或现价换算结果表述为机构目标区间。",
+          "invalid_condition": "2026年中报EPS远低于0.17元（0.34元的一半），或防务/机器视觉订单无实质落地，导致高估值无法消化。"
+        },
+        "why_selected": [
+          "M(主线)：命中光通信(Rank 1)和人形机器人(Rank 2)双主线，主营光学材料属上游核心，共振极强。",
+          "C(当前业绩)：扣非净利大增但基数极低，EPS同比无增长，当前业绩尚不足以支撑主线兑现预期，给予medium降权。",
+          "A(年度成长)：近三年营收与净利CAGR均为负，ROE极低，缺乏结构性成长特征，年度成长质量偏弱。",
+          "N(新变量)：防务新型号与机器视觉布局有明确的产业趋势，但订单与收入占比未验证，新因子尚未完全转化为财报支撑。",
+          "S(供需承接)：融资余额增加有承接，但大单净流出且换手偏高，交易异常波动提示短期筹码松动风险。",
+          "L(龙头地位)：板块内属跟随涨停的中军角色，非连板先锋，主线纯度受防务业务稀释，相对强度中性。",
+          "I(机构认可)：有券商覆盖及定增引入机构，但缺乏明确目标价共振，大单资金流出显示聪明钱分歧。"
+        ],
+        "growth_value_judgment": {
+          "future_demand_expansion": "medium",
+          "business_quality": "weak",
+          "scarcity_and_anti_involution": "medium",
+          "china_strategy_alignment": "medium",
+          "order_or_capacity_visibility": "weak"
+        },
+        "risk_judgment": {
+          "shareholder_reduction_risk": "low",
+          "valuation_or_overheat_risk": "high",
+          "concept_noise_risk": "low",
+          "fundamental_miss_risk": "high",
+          "main_risk_text": "业绩兑现不及预期导致的戴维斯双杀风险，以及大单资金流出带来的短期抛压。"
+        },
+        "operation_view": {
+          "action": "wait_for_pullback",
+          "position_preference": "small",
+          "entry_condition": "需等待2026年中报预告验证净利润是否如期爆发，股价缩量回踩至60日均线附近企稳且大单资金停止流出时，方可考虑小仓位观察，价格区间参考回调至60日均线±3%的位置。",
+          "invalid_condition": "光通信与机器人主线退潮，或中报业绩无法兑现券商预测导致估值杀，或跌破关键均线支撑且交易异常波动加剧。",
+          "stop_loss_suggestion": "-8%"
+        },
+        "evidence_gap": [
+          "防务新型号与机器视觉业务的具体订单金额与收入占比",
+          "2026年中报单季度EPS及净利润数据",
+          "近期交易异常波动背后的主力资金动向及游资接力情况"
+        ],
+        "intraday_stop_loss_signal": {
+          "stock_code": "600184",
+          "stock_name": "光电股份",
+          "optimal_stop_loss_pct": -3.0,
+          "optimal_expected_value_pct": -0.3824,
+          "confidence_label": "statistical",
+          "method_label": "daily_low_open_recovery",
+          "reason_text": "近157个交易日样本中，日内最低点触发-3.0% 后，收盘重新回到开盘价的概率为0.0976，未能收回开盘价的概率为0.9024；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-2.7676%，期望值参考为-0.3824%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+          "status": "ready",
+          "source_result_date": "2026-06-05"
         }
       },
       {
         "final_rank": 8,
-        "stock_code": "600869",
-        "stock_name": "远东股份",
-        "oneil_candidate_score": 65,
-        "selection_score": 134,
+        "stock_code": "603459",
+        "stock_name": "红板科技",
+        "oneil_candidate_score": 63,
+        "selection_score": 169,
         "final_bucket": "B",
         "primary_theme": "光通信",
         "matched_theme_list": [
-          "电力",
           "光通信",
-          "PCB"
+          "半导体设备",
+          "PCB",
+          "CPO"
         ],
         "holding_style": [
           "短线投机"
@@ -823,335 +1056,733 @@ const INLINE_ONEIL = {
         "external_research_need": {
           "need_external_research": false,
           "needed_dimension_list": [],
-          "reason_text": "CAN/SLIM DB 已提供充分的业绩、订单、减持和负债数据，且历史投资记忆提供了深刻的风险校正模式，当前证据足以做出降权判断，无需额外外部复核。"
+          "reason_text": "外部证据已补充，但主要印证了游资炒作和高位分歧的风险，未提供基本面改善或订单落地的有效增量信息。公司自身频繁发布风险提示公告，进一步证实了短期过热风险，无需进一步外部复核。"
         },
-        "external_recheck_meta": {},
+        "external_recheck_meta": {
+          "status": "completed",
+          "used_external_research_signal": true,
+          "requested_reason_text": "需要外部复核：1. 公司经营现金流与净利润严重背离（比率0.28）的具体原因及改善预期；2. 竞拍江西志浩股权的进展、对产能的实际贡献及整合风险；3. 是否存在未披露的大客户订单或限售股解禁/减持计划。这些证据将显著影响其从纯筹码博弈向基本面成长的验证闭环。"
+        },
         "oneil_canslim_verdict": {
-          "C_current_earnings": "strong",
-          "A_annual_growth": "weak",
-          "N_new_factor": "strong",
-          "S_supply_demand": "medium",
-          "L_leader_laggard": "core_elastic",
-          "I_institutional_sponsorship": "medium",
+          "C_current_earnings": "medium",
+          "A_annual_growth": "medium",
+          "N_new_factor": "medium",
+          "S_supply_demand": "strong",
+          "L_leader_laggard": "middle_rank",
+          "I_institutional_sponsorship": "weak",
           "M_market_theme": "strong"
         },
+        "target_price_judgment": {
+          "institutional_expert_view": {
+            "level": "insufficient_data",
+            "target_price_range": {
+              "low": null,
+              "high": null,
+              "center": null,
+              "currency": "CNY"
+            },
+            "source_name": "",
+            "source_url": "",
+            "source_title": "",
+            "source_observed_at": "",
+            "evidence_type": "insufficient_data",
+            "evidence_age_days": null,
+            "evidence_freshness_label": "insufficient_data",
+            "reason_text": "近半年未抓到可核验的机构目标区间，无法作为机构认可增强证据。"
+          },
+          "oneil_canslim_view": {
+            "level": "weak",
+            "target_price_range": {
+              "low": null,
+              "high": null,
+              "currency": "CNY"
+            },
+            "bull_case_text": "若光通信/CPO主线情绪持续亢奋，且公司竞拍产能落地顺利、未来季度财报显示现金流改善及利润增速扩大，可能存在高于基础区间的情绪溢价，但当前基本面无法支撑可靠的上行空间测算。",
+            "reason_text": "当前PE估值高达149倍，而利润增速仅14%，经营现金流极差，基本面与估值严重背离。缺乏当前股价锚定及可靠的盈利预测数据，无法推导合理的目标区间，输出NULL。"
+          },
+          "comparison_text": "缺少可核验的机构目标区间，只能评价 O'Neil 基于 CAN SLIM 证据独立推测的区间；不得将 EPS、PE 或现价换算结果表述为机构目标区间。",
+          "invalid_condition": "若后续季度财报显示现金流持续恶化、毛利率继续下滑、或AI算力硬件链订单不及预期，任何基于主线的估值预期都将失效。"
+        },
         "why_selected": [
-          "M(主线)：命中电力、光通信、PCB三大周级主线，主营线缆与算力基础设施需求高度契合，共振类型为strong。",
-          "C(当前业绩)：最近一期净利润和扣非净利均实现翻倍以上增长，EPS同比增长103.86%达强增长门槛，且5月大单落地支撑下季兑现。",
-          "A(年度成长)：近三年净利CAGR为-52.58%，ROE仅2.29%，资产负债率高达80.26%，当前高增仅为低基数周期修复，缺乏结构性持续成长能力，严重拖后腿。",
-          "N(新变量)：算力AI业务订单环比暴增354.81%，液冷与光纤产品解决算力中心痛点，新变量已从概念转化为实质大单。",
-          "S(供需承接)：交易层面增量资金承接极强，融资大幅流入；但120日涨幅近3倍处于绝对高位，且控股股东减持与高担保构成明确抛压隐患，供需随时可能逆转，综合判断为medium。",
-          "L(龙头地位)：在光通信与算力线缆细分领域属于资金辨识度高的核心弹性股，近期多次涨停创历史新高，但传统业务占比大致主线纯度受拖累，抗跌性较差。",
-          "I(机构认可)：融资资金大幅流入且多家券商给予买入评级；但PE极高(近1000倍)，机构筹码极易松动，历史记忆预警'I strong'常沦为出货掩护，综合判断为medium。"
+          "M(主线)：命中光通信、半导体设备两大周级主线，且主营PCB及IC载板是算力硬件核心上游，业务相关度极高，形成强共振。",
+          "C(当前业绩)：最近一期营收增长22.88%尚可，但利润增长14.36%未达强门槛，且毛利率/净利率双降，经营现金流极差；外部证据未提供任何业绩改善或大订单落地的利好，业绩对主线的兑现力度依然不足。",
+          "A(年度成长)：三年利润CAGR高达126.83%，但受低基数效应影响大，ROE仅5.2%且毛利率趋势下滑，成长质量偏弱，持续性存疑。",
+          "N(新变量)：公告显示竞拍江西志浩股权仍在推进中（5/28进展公告），属于外延式产能扩张，但尚未落地；近期无明确的新技术突破或大额订单公告，新因子推动力仍需验证。",
+          "S(供需承接)：外部龙虎榜数据证实近20日换手率极高（多日近30%，周换手超100%），增量资金承接极强；但完全是营业部游资主导（6/4营业部净买入1.31亿，6/3机构小买但营业部大卖1.55亿），交易极度拥挤，高位派发风险被进一步证实。",
+          "L(龙头地位)：主线纯度高，作为次新股具有板块涨停先锋的辨识度；但行业地位证据不足，非绝对龙头，判断为板块中坚力量(middle_rank)。",
+          "I(机构认可)：外部证据显示龙虎榜以营业部游资为主，机构偶尔参与但净流入极小；华金证券研报无评级无预测；公司自身连发异常波动及风险提示公告，机构认可度极弱，属纯筹码博弈特征。"
         ],
         "growth_value_judgment": {
           "future_demand_expansion": "strong",
           "business_quality": "weak",
-          "scarcity_and_anti_involution": "weak",
-          "china_strategy_alignment": "medium",
-          "order_or_capacity_visibility": "strong"
+          "scarcity_and_anti_involution": "medium",
+          "china_strategy_alignment": "strong",
+          "order_or_capacity_visibility": "weak"
         },
         "risk_judgment": {
-          "shareholder_reduction_risk": "high",
+          "shareholder_reduction_risk": "insufficient_data",
           "valuation_or_overheat_risk": "high",
-          "concept_noise_risk": "medium",
+          "concept_noise_risk": "low",
           "fundamental_miss_risk": "high",
-          "main_risk_text": "高位派发与估值双杀风险。120日涨幅近3倍，PE近1000倍，控股股东存在减持计划，高负债率(80.26%)下的担保代偿风险可能挤压现金流，一旦订单增速放缓或主线退潮，极易遭遇戴维斯双杀。"
+          "main_risk_text": "高位派发与基本面脱节风险。外部龙虎榜数据证实游资主导且分歧巨大（如6/3营业部净卖出1.55亿），公司连发异常波动及风险提示公告印证炒作过热；PE估值149倍但利润增速仅14%，一旦主线情绪退潮或筹码松动，极易出现剧烈回撤。"
         },
         "operation_view": {
           "action": "wait_for_pullback",
           "position_preference": "small",
-          "entry_condition": "鉴于A维度弱势与高位减持风险，坚决不追高。需等待股价缩量回踩20日均线附近，且大股东未出现大宗折价抛售时，方可考虑小仓位试错，价格区间参考回调至20日均线±3%的位置。",
-          "invalid_condition": "若出现大股东加速减持、大宗交易持续折价、AI算力订单环比增速显著放缓，或负债率进一步攀升引发财务担忧，则逻辑失效。",
+          "entry_condition": "仅在光通信主线整体强势且该股出现深幅回调（如回调至20日均线附近）并缩量企稳时，可考虑极小仓位短线博弈，切勿追高。当前价格区间约90-107元，波动极大，需等待情绪退潮后的企稳信号。",
+          "invalid_condition": "若光通信/CPO主线退潮，或股价放量跌破20日均线且无法快速收回，说明筹码彻底松动，候选逻辑失效。",
           "stop_loss_suggestion": "-8%"
         },
         "evidence_gap": [
-          "AI算力与光通信业务在总营收中的确切占比及该细分业务的毛利率水平",
-          "控股股东解除质押后的具体减持时间表与剩余额度",
-          "为宜宾远东铜箔与江西远东锂电提供担保的潜在代偿风险对自由现金流的挤压影响"
+          "经营现金流与净利润严重背离的详细原因及改善时间表",
+          "竞拍江西志浩股权的具体落地时间、产能投产节奏及整合效果",
+          "高端HDI/IC载板的具体订单金额和核心大客户验证",
+          "限售股解禁节奏与股东减持预告"
         ],
         "intraday_stop_loss_signal": {
-          "stock_code": "600869",
-          "stock_name": "远东股份",
-          "optimal_stop_loss_pct": -6.0,
-          "optimal_expected_value_pct": 0.9317,
+          "stock_code": "603459",
+          "stock_name": "红板科技",
+          "optimal_stop_loss_pct": -4.0,
+          "optimal_expected_value_pct": -0.8207,
           "confidence_label": "statistical",
           "method_label": "daily_low_open_recovery",
-          "reason_text": "近157个交易日样本中，日内最低点触发-6.0% 后，收盘重新回到开盘价的概率为0.0，未能收回开盘价的概率为1.0；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-7.0817%，期望值参考为0.9317%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+          "reason_text": "近37个交易日样本中，日内最低点触发-4.0% 后，收盘重新回到开盘价的概率为0.0909，未能收回开盘价的概率为0.9091；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.3293%，期望值参考为-0.8207%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
           "status": "ready",
-          "source_result_date": "2026-06-04"
+          "source_result_date": "2026-06-05"
         }
       }
     ],
     "rejected_stocks": [
       {
-        "stock_code": "002025",
-        "stock_name": "航天电器",
-        "oneil_candidate_score": 65,
-        "selection_score": 130,
-        "candidate_action": "backup",
-        "final_bucket": "B",
-        "primary_theme": "光通信",
-        "external_research_need": {
-          "need_external_research": true,
-          "needed_dimension_list": [
-            "current_earnings",
-            "new_factor"
-          ],
-          "reason_text": "需要外部证据核实经营现金流大幅为负的具体原因及回款预期，同时需要验证券商提及的'订货创历史新高'中AI算力连接器的具体订单金额、客户及新业务收入占比，以判断新变量能否实质性修复年度成长质量。"
-        },
-        "external_recheck_meta": {
-          "status": "failed_fallback_to_first_pass",
-          "used_external_research_signal": false,
-          "error_text": "GLM request failed model_name=glm-5.1 status_code=429 response_body={\"error\":{\"code\":\"1113\",\"message\":\"余额不足或无可用资源包,请充值。\"}}"
-        },
-        "main_reject_reason": "虽然主线逻辑极硬且行业地位核心，但近期走势严重破位，RS排名极弱，资金大幅流出，交易层面供需恶化；同时基本面存在硬伤，经营现金流巨额流出且机构盈利预测分歧极大，当前PE估值高达169倍，若后续订单转化不及预期将面临估值双杀风险。短期不具备Top8的强势特征，降为备选。",
-        "evidence_gap": [
-          "缺少AI算力高速连接器业务的具体订单金额、客户结构及新业务收入占比的量化数据。",
-          "缺少经营现金流大幅为负（-12.36倍）的官方解释及回款周期预期。",
-          "缺少机构资金流向分歧的更详细数据（如前十大流通股东变化）。"
-        ]
-      },
-      {
         "stock_code": "600487",
         "stock_name": "亨通光电",
         "oneil_candidate_score": 62,
-        "selection_score": 163,
+        "selection_score": 210,
         "candidate_action": "backup",
         "final_bucket": "B",
         "primary_theme": "光通信",
         "external_research_need": {
-          "need_external_research": true,
-          "needed_dimension_list": [
-            "operating_cashflow_detail",
-            "shareholder_pledge_liquidation_risk",
-            "institutional_real_position_change"
-          ],
-          "reason_text": "历史记忆多次警示该股存在'券商唱多但机构实则兑现'的陷阱，且当前经营现金流巨额为负、控股股东质押近六成。必须通过外部证据核实现金流恶化的真实原因、质押平仓线及机构真实持仓变化，以防再次踏入高位派发陷阱。"
+          "need_external_research": false,
+          "needed_dimension_list": [],
+          "reason_text": "外部证据已充分证实高位派发风险、机构估值与现价严重背离以及公司自身对产品单价波动的担忧，CAN SLIM DB与外部证据已足够支撑当前降级与淘汰边缘的判断，无需进一步复核。"
         },
-        "external_recheck_meta": {},
-        "main_reject_reason": "虽然M和N维度极强，但该股当前面临致命的高位派发风险：120日涨幅超355%，短期极度拥挤；经营现金流巨额为负与利润背离；历史投资记忆多次证明该股在高位存在'伪龙头补跌'和'机构明买暗卖'的陷阱，极易引发融资盘踩踏。涨幅过大且业绩质量存疑，不能用主线强行覆盖，必须降至备选。",
+        "external_recheck_meta": {
+          "status": "completed",
+          "used_external_research_signal": true,
+          "requested_reason_text": "当前经营现金流与利润严重背离，需查明是应收账款暴增还是存货积压；120日涨幅近400%且机构目标价远低于现价，需确认最新一季报机构持仓是否已在大幅兑现；控股股东质押近六成，需评估平仓风险敞口。这些证据将显著影响其是否应被彻底淘汰。"
+        },
+        "main_reject_reason": "核心原因为高位派发与流动性踩踏风险极大，且基本面出现隐忧。外部证据证实：1) 近期两连板加速赶顶，严重脱离机构合理估值区间（上限44元 vs 现价91元）；2) 公司自己提示'部分产品单价波动对未来业绩影响需综合判断'，说明高毛利与高增长可能无法持续；3) 经营现金流巨额为负与利润背离；4) 控股股东累计质押近六成。历史记忆多次实锤该股在高位常出现'券商唱多但机构实则兑现'的陷阱，不适合作为Top8首选，只宜作为回调后的备选观察。",
+        "target_price_judgment": {
+          "institutional_expert_view": {
+            "level": "medium",
+            "target_price_range": {
+              "low": 32.0,
+              "high": 32.0,
+              "center": 32.0,
+              "currency": "CNY"
+            },
+            "source_name": "群益证券",
+            "source_url": "https://www.sohu.com/a/968577640_115377",
+            "source_title": "群益证券：上调亨通光电目标价至32.0元，给予增持评级",
+            "source_observed_at": "2025-12-23",
+            "evidence_type": "explicit_broker_research",
+            "evidence_age_days": 164,
+            "evidence_freshness_label": "older_half_year_reference",
+            "reason_text": "群益证券给出32.0元目标价（较旧参考）；东兴证券最新研报（2026-03-26）预测2026年EPS为2.12元，给予PE 20.91倍，对应合理估值上限约44.3元。即便取最乐观的东兴证券预测，当前91.43元的股价也已严重透支机构合理估值区间一倍以上，进一步证实聪明钱大概率在借机兑现。"
+          },
+          "oneil_canslim_view": {
+            "level": "medium",
+            "target_price_range": {
+              "low": 55.0,
+              "high": 70.0,
+              "currency": "CNY"
+            },
+            "bull_case_text": "若光通信主线情绪极度狂热且下一季度财报现金流显著改善、分拆上市顺利落地，股价可能在超跌反弹中冲击70元，但在当前公司提示单价波动及机构大幅兑现的背景下，极难突破前高。",
+            "reason_text": "基于CAN SLIM独立推导：当前120日涨幅近388%，2连板加速赶顶后极易见顶。即便考虑98%的净利增速，84倍PE已严重透支。结合公司提示产品单价波动风险及经营现金流为负，业绩高增持续性存疑。若股价从高位回调30%-40%挤出泡沫，55-70元区间是相对合理的基础情景下限。"
+          },
+          "comparison_text": "投研团队区间(32-44.3元)与O'Neil区间(55-70元)存在部分重合但整体偏低，均远低于当前91.43元的现价。这反映了当前市场定价已严重脱离基本面估值体系。O'Neil区间考虑了主线溢价与高位回撤后的技术支撑，相对更乐观，但绝不认可当前高位定价。",
+          "invalid_condition": "若下一季度经营现金流继续为负且恶化，或光通信/CPO主线退潮导致订单取消，或产品单价大幅下滑侵蚀毛利率，或跌破55元关键支撑位，则目标区间失效。"
+        },
         "evidence_gap": [
-          "经营现金流巨额为负的具体原因（应收账款或存货占用）及未来改善节奏",
-          "控股股东高质押的具体风险敞口、平仓线与进一步解除计划",
-          "充沛订单的具体金额、核心客户名称及新业务收入占比数据",
-          "机构资金近期的真实净买卖方向（验证是否为明买暗卖）"
+          "公司提示的'部分产品单价波动'对毛利率的具体影响量化",
+          "经营现金流巨额为负的具体原因及未来改善节奏",
+          "分拆亨通华海上市的股东大会及监管审核时间表",
+          "控股股东高质押的具体风险敞口与进一步解除计划",
+          "近期龙虎榜或大宗交易是否显示机构资金在真实流出"
         ]
       },
       {
-        "stock_code": "603459",
-        "stock_name": "红板科技",
+        "stock_code": "600171",
+        "stock_name": "上海贝岭",
         "oneil_candidate_score": 62,
-        "selection_score": 129,
+        "selection_score": 154,
         "candidate_action": "backup",
         "final_bucket": "B",
-        "primary_theme": "PCB",
+        "primary_theme": "半导体设备",
         "external_research_need": {
-          "need_external_research": true,
-          "needed_dimension_list": [
-            "new_order_or_customer",
-            "operating_cashflow_reason",
-            "shareholder_reduction"
-          ],
-          "reason_text": "当前经营现金流与净利润严重背离（比率0.28），需外部研报解释原因及改善预期；缺乏下一季度订单支撑证据，需验证AI算力需求是否已转化为实际排产或大额订单；近期涨幅巨大，需确认是否有限售股解禁或大股东减持计划。"
+          "need_external_research": false,
+          "needed_dimension_list": [],
+          "reason_text": "CAN/SLIM DB 已充分暴露公司 C/A 双弱、S 资金流出及 I 机构不认可的核心短板，即使外部补充订单或产能证据，也难以在短期扭转增收不增利和现金流为负的基本面硬伤，当前证据已足够支持降级判断。"
         },
         "external_recheck_meta": {},
-        "main_reject_reason": "核心短板在于基本面闭环缺失与高位拥挤风险。当前近20日涨幅已达45.89%，属于明显的高位加速阶段，但C端利润增速仅14.36%且现金流极差，A端ROE仅5.2%，I端无机构承接，属于典型的'涨幅过大但业绩不强'的筹码博弈品种。历史投资记忆多次印证该股在暴涨后伴随巨大回撤，风险收益比对高净值客户极不友好。根据'涨幅过大但业绩不强不能用主线强行覆盖'的纪律，不可作为Top8首选，仅作为备选观察。",
+        "main_reject_reason": "虽然M主线极强，但公司基本面（A极弱/ROE仅0.49%、C盈利质量差/现金流负）和资金面（S极弱/资金流出、I极弱/无机构覆盖）无法支撑其成为主线龙头或核心弹性标的。当前PE高达86倍与弱基本面严重不匹配，且L仅为中后排跟随者。历史投资记忆反复提示该类“高选股得分但弱证据闭环”的标的极易误判，当前仍处于主线逻辑强但业绩与资金兑现弱的错配期，坚决降级为B类备选。",
+        "target_price_judgment": {
+          "institutional_expert_view": {
+            "level": "insufficient_data",
+            "target_price_range": {
+              "low": null,
+              "high": null,
+              "center": null,
+              "currency": "CNY"
+            },
+            "source_name": "",
+            "source_url": "",
+            "source_title": "",
+            "source_observed_at": "",
+            "evidence_type": "insufficient_data",
+            "evidence_age_days": null,
+            "evidence_freshness_label": "insufficient_data",
+            "reason_text": "近半年未抓到可核验的机构目标区间，无法作为机构认可增强证据。"
+          },
+          "oneil_canslim_view": {
+            "level": "weak",
+            "target_price_range": {
+              "low": null,
+              "high": null,
+              "currency": "CNY"
+            },
+            "bull_case_text": "若半导体设备及智能电网主线情绪极度爆发，且公司AFE新产品意外获得大额订单验证，可能存在情绪溢价推动的阶段性上攻，但缺乏基本面支撑的空间不可预测。",
+            "reason_text": "公司当前PE高达86倍，但ROE仅0.49%，净利CAGR为负，经营现金流为负，属于典型的高估值与弱基本面错配。在缺乏业绩兑现和资金承接的背景下，无法基于CAN SLIM推导出合理的目标区间，估值锚缺失。"
+          },
+          "comparison_text": "缺少可核验的机构目标区间，只能评价 O'Neil 基于 CAN SLIM 证据独立推测的区间；不得将 EPS、PE 或现价换算结果表述为机构目标区间。",
+          "invalid_condition": "若后续财报继续呈现增收不增利、现金流持续为负，或半导体主线退潮，任何基于情绪的估值预期都将失效。"
+        },
         "evidence_gap": [
-          "经营现金流与净利润严重背离（0.28倍）的具体原因及改善时间表",
-          "竞拍江西志浩股权的后续进展及对产能和业绩的具体增厚预测",
-          "AI算力/HDI板相关的核心大客户验证及具体新增订单金额",
-          "近期是否存在限售股解禁或大股东减持预告"
+          "AFE等新产品放量的具体订单金额或收入占比证据",
+          "一季报非经常性损益的具体构成及后续是否消除的确定性说明",
+          "新产能投放与消化进度的具体数据",
+          "机构调研细节与券商盈利预测覆盖情况"
         ]
       },
       {
-        "stock_code": "002579",
-        "stock_name": "中京电子",
-        "oneil_candidate_score": 50,
-        "selection_score": 138,
+        "stock_code": "600869",
+        "stock_name": "远东股份",
+        "oneil_candidate_score": 60,
+        "selection_score": 203,
         "candidate_action": "backup",
         "final_bucket": "B",
-        "primary_theme": "PCB",
+        "primary_theme": "光通信",
         "external_research_need": {
-          "need_external_research": true,
-          "needed_dimension_list": [
-            "new_order_or_customer",
-            "new_capacity"
-          ],
-          "reason_text": "近20日涨幅高达53%且存在异动公告，需紧急确认是否存在未公开的重大订单（特别是AIPC或人形机器人FPC/HDI领域）或新产能投产证据。若仍为纯概念炒作，则应坚决剔除；若有实质性订单支撑，则需重新评估其N因子和未来业绩弹性。"
+          "need_external_research": false,
+          "needed_dimension_list": [],
+          "reason_text": "外部证据已补充控股股东减持实锤及券商盈利预测，虽然担保代偿风险细节仍缺，但当前证据已足以判定该股高位派发风险极高，无需进一步外部复核即可做出降级判断。"
+        },
+        "external_recheck_meta": {
+          "status": "completed",
+          "used_external_research_signal": true,
+          "requested_reason_text": "历史记忆多次预警控股股东减持及高负债下的担保代偿风险，且AI算力与光通信业务的具体收入占比及毛利率缺乏精确数据，这些将显著影响估值与风险判定，需外部证据复核。"
+        },
+        "main_reject_reason": "外部证据实锤了控股股东在5月的密集减持（多次发布减持进展及结果公告），且股价年内涨幅超250%处于绝对高位，估值严重透支券商盈利预测。A维度存在致命硬伤（高负债、低ROE），'A weak + 高位减持'的组合极易导致估值双杀与严重回撤，因此不适合作为Top8首选，降级为备选观察。",
+        "target_price_judgment": {
+          "institutional_expert_view": {
+            "level": "insufficient_data",
+            "target_price_range": {
+              "low": null,
+              "high": null,
+              "center": null,
+              "currency": "CNY"
+            },
+            "source_name": "",
+            "source_url": "",
+            "source_title": "",
+            "source_observed_at": "",
+            "evidence_type": "insufficient_data",
+            "evidence_age_days": null,
+            "evidence_freshness_label": "insufficient_data",
+            "reason_text": "近半年未抓到可核验的机构目标区间，无法作为机构认可增强证据。"
+          },
+          "oneil_canslim_view": {
+            "level": "weak",
+            "target_price_range": {
+              "low": 13.8,
+              "high": 18.4,
+              "currency": "CNY"
+            },
+            "bull_case_text": "若AI算力与光通信订单持续爆发，且人形机器人线缆实现大规模放量，市场可能给予更高的成长溢价，存在情绪推动高于基础区间的可能，但控股股东密集减持实锤将极大压制估值上限。",
+            "reason_text": "基于券商2026年EPS预测上限0.46元，给予成长股合理的30-40倍PE，推导基础目标区间为13.8-18.4元。当前股价28.51元远超此区间，属于纯情绪与资金博弈阶段，缺乏基本面锚定。"
+          },
+          "comparison_text": "缺少可核验的机构目标区间，只能评价 O'Neil 基于 CAN SLIM 证据独立推测的区间；不得将 EPS、PE 或现价换算结果表述为机构目标区间。",
+          "invalid_condition": "若AI算力订单环比增速放缓、大股东继续大宗折价减持、或高负债引发财务担忧，则当前情绪溢价将迅速崩塌，任何目标价均失效。"
+        },
+        "evidence_gap": [
+          "为宜宾远东铜箔与江西远东锂电提供担保的潜在代偿风险对自由现金流的挤压影响",
+          "控股股东解除质押后的后续减持计划"
+        ]
+      },
+      {
+        "stock_code": "002049",
+        "stock_name": "紫光国微",
+        "oneil_candidate_score": 55,
+        "selection_score": 173,
+        "candidate_action": "reject",
+        "final_bucket": "reject",
+        "primary_theme": "半导体设备",
+        "external_research_need": {
+          "need_external_research": false,
+          "needed_dimension_list": [],
+          "reason_text": "CAN/SLIM DB 及长期记忆已充分暴露该股核心硬伤（现金流恶化、资金出逃、走势伪强势），无需外部复核即可做出淘汰决策。"
         },
         "external_recheck_meta": {},
-        "main_reject_reason": "C/A双弱且I极弱，严重违背CAN SLIM中端期成长股标准；近20日涨幅高达53%且大单净流出，触发“高位分歧/派发风险”和“涨幅过大但业绩不强”的强制扣分规则。虽然历史投资记忆提示强主线贝塔可能拉动低质股反弹，但当前处于高位加速后的分歧期，微利基本面无法支撑435倍PE，追涨风险极大，不具备Top8候选的基本面闭环，故降级为备选观察。",
+        "main_reject_reason": "核心原因为'伪强势'陷阱与现金流硬伤。历史记忆多次验证，该股虽身处强主线且表面业绩高增，但经营现金流持续恶化、大单资金持续出逃，导致股价表现极度疲软。N因子（收购）带来的不是预期差而是现金流压力与摊薄风险。在S极弱、L仅为跟风、C有硬伤的背景下，强主线M无法转化为股价上涨动力，坚决规避。",
+        "target_price_judgment": {
+          "institutional_expert_view": {
+            "level": "weak",
+            "target_price_range": {
+              "low": 96.0,
+              "high": 96.0,
+              "center": 96.0,
+              "currency": "CNY"
+            },
+            "source_name": "国泰海通",
+            "source_url": "https://news.qq.com/rain/a/20251222A054FZ00",
+            "source_title": "国泰海通：首予紫光国微“增持”评级，目标价96元",
+            "source_observed_at": "2025-12-22",
+            "evidence_type": "explicit_broker_research",
+            "evidence_age_days": 165,
+            "evidence_freshness_label": "older_half_year_reference",
+            "reason_text": "国泰海通基于特种IC龙头地位给出96元目标价，但该证据距今已165天，属于较旧参考；且同期大摩给出57元与减持评级，机构分歧巨大，与当前资金净流出现状严重冲突，参考价值极低。"
+          },
+          "oneil_canslim_view": {
+            "level": "weak",
+            "target_price_range": {
+              "low": 65.0,
+              "high": 75.0,
+              "currency": "CNY"
+            },
+            "bull_case_text": "若中报经营现金流出现实质性拐点、收购瑞能半导顺利并表且无重大商誉减值，同时半导体主线爆发带动大资金重新回流，股价可能冲击75元甚至更高，但当前毫无证据支持此乐观情景。",
+            "reason_text": "基于当前极弱的RS排名（综合23）、持续的主力资金净流出、一季报现金流硬伤以及历史记忆中反复验证的'伪强势'回落规律，该股短期缺乏估值扩张动力，合理区间应向支撑位下移，判断为65-75元。"
+          },
+          "comparison_text": "投研团队区间（96元）严重脱离当前资金面与基本面现实，属于半年前的旧观点；O'Neil区间（65-75元）更贴近当前弱势走势与现金流恶化的定价逻辑，两者严重冲突，完全信任O'Neil基于最新CAN SLIM证据的推导。",
+          "invalid_condition": "中报经营现金流继续大幅流出、重组方案终止或出现重大商誉减值、半导体主线退潮，将使所有目标区间失效，股价面临戴维斯双杀。"
+        },
         "evidence_gap": [
-          "缺乏AIPC/人形机器人相关的新订单、新客户验证",
-          "缺乏新产能投产节奏与产能消化情况数据",
-          "缺乏未来1-2个季度的业绩指引或排产数据",
-          "缺乏机构调研纪要或券商研报对产业地位的权威评估"
+          "中报经营现金流是否出现拐点改善的具体数据",
+          "收购瑞能半导的整合进展及现金对价支付对流动性的具体影响时间表",
+          "主力资金连续流出的深层原因是否涉及未披露的基本面利空"
         ]
       },
       {
         "stock_code": "002428",
         "stock_name": "云南锗业",
-        "oneil_candidate_score": 45,
-        "selection_score": 177,
+        "oneil_candidate_score": 55,
+        "selection_score": 153,
         "candidate_action": "reject",
         "final_bucket": "reject",
         "primary_theme": "光通信",
         "external_research_need": {
           "need_external_research": false,
           "needed_dimension_list": [],
-          "reason_text": "当前CAN/SLIM DB已提供充分的业绩疲软、估值极高和资金派发证据，且历史记忆多次验证该股在情绪退潮后的杀估值风险，外部研报无法改变其C/A双弱和高位派发的核心风险，无需额外复核。"
+          "reason_text": "CAN SLIM DB 及历史投资记忆已充分证明该股'增收不增利+纯游资博弈+高位派发'的特征，当前证据足以支撑淘汰决策，无需外部复核。"
         },
         "external_recheck_meta": {},
-        "main_reject_reason": "核心原因为高位派发风险与基本面严重不匹配。1) 涨幅过大但业绩极弱：120日涨幅超241%，但PE高达2872倍，扣非净利大幅下滑，属于典型的'涨幅过大但业绩不强'，不能用主线强行覆盖；2) 高位分歧/派发风险显著：深股通净卖出2.9亿，高换手率叠加异常波动公告，历史记忆多次验证该股在情绪退潮后极易遭遇杀估值和杀逻辑的双重打击（如跌停出货）；3) C/A/I三维度均为weak，不符合高净值客户中线稳健成长的标准，纯游资短线博弈风险收益比极差。",
+        "main_reject_reason": "核心原因为C/A双弱且I缺失。PE高达2872倍，业绩严重无法支撑当前市值；60日涨幅超100%且深股通净卖出2.9亿，高位派发风险极大。历史投资记忆多次验证该股在'无业绩支撑+游资出货'后遭遇杀估值暴跌（如06-01跌停，T+10大跌-16.9%）。虽然M强且L为龙头，但'涨幅过大但业绩不强不能用主线强行覆盖'，不符合高净值客户中线稳健成长要求，坚决剔除。",
+        "target_price_judgment": {
+          "institutional_expert_view": {
+            "level": "insufficient_data",
+            "target_price_range": {
+              "low": null,
+              "high": null,
+              "center": null,
+              "currency": "CNY"
+            },
+            "source_name": "",
+            "source_url": "",
+            "source_title": "",
+            "source_observed_at": "",
+            "evidence_type": "insufficient_data",
+            "evidence_age_days": null,
+            "evidence_freshness_label": "insufficient_data",
+            "reason_text": "近半年未抓到可核验的机构目标区间，无法作为机构认可增强证据。"
+          },
+          "oneil_canslim_view": {
+            "level": "weak",
+            "target_price_range": {
+              "low": null,
+              "high": null,
+              "currency": "CNY"
+            },
+            "bull_case_text": "若光通信主线情绪极度亢奋且锗价持续暴涨，股价可能短期内依靠资金博弈继续冲高，但在无业绩支撑下属于纯情绪溢价，无法测算合理上行空间。",
+            "reason_text": "当前PE高达2872倍，ROE仅0.62%，净利润微薄且扣非下滑，传统估值模型完全失效。基本面无法提供任何估值锚，目标区间无法给出。"
+          },
+          "comparison_text": "缺少可核验的机构目标区间，只能评价 O'Neil 基于 CAN SLIM 证据独立推测的区间；不得将 EPS、PE 或现价换算结果表述为机构目标区间。",
+          "invalid_condition": "锗产品价格下跌、光通信/半导体主线情绪退潮、游资大举撤离，将导致当前纯情绪定价逻辑彻底失效，面临杀估值与杀逻辑双重打击。"
+        },
         "evidence_gap": [
-          "磷化铟晶片等深加工业务的具体新增订单金额与大客户名称验证",
-          "新产能投放计划及当前产能利用率数据",
-          "锗涨价向利润端传导的毛利贡献数据",
-          "机构股东最新持仓变化及深股通资金后续流向数据"
+          "缺乏磷化铟/锗产品具体新增订单金额与大客户名称验证",
+          "缺乏新产能投放计划及当前产能利用率数据",
+          "缺乏深加工业务具体收入占比及毛利贡献数据"
         ]
       },
       {
-        "stock_code": "002335",
-        "stock_name": "科华数据",
+        "stock_code": "002579",
+        "stock_name": "中京电子",
         "oneil_candidate_score": 45,
-        "selection_score": 150,
-        "candidate_action": "reject",
-        "final_bucket": "reject",
-        "primary_theme": "电力",
-        "external_research_need": {
-          "need_external_research": false,
-          "needed_dimension_list": [],
-          "reason_text": "CAN/SLIM DB 已提供充分的业绩、资金流和筹码结构数据，且历史记忆多次验证该股'逻辑好但资金差'的失败模式，当前极度弱势的供需数据（20日暴跌42%、RS排名5）已足以做出淘汰决策，无需外部复核增加冗余信息。"
-        },
-        "external_recheck_meta": {},
-        "main_reject_reason": "核心原因为资金面与股价表现的严重恶化。近20日暴跌42.29%且RS排名跌至极弱区间，说明主力资金正在坚决撤离。历史记忆多次明确警示该股'逻辑好但筹码差'的陷阱，在筹码极度分散且资金持续流出时，任何基本面亮点都会被估值消化抵消。当前PE 71倍与0%的EPS增速严重不匹配，存在戴维斯双杀风险。在CAN SLIM体系中，S和I极弱的标的即使M强也必须坚决回避，不可轻易抄底。",
-        "evidence_gap": [
-          "最新股东户数变化数据，验证筹码是否从12.4万户的极度分散状态开始集中。",
-          "智算中心及SST新业务的具体新增大额订单金额、客户线索及新业务收入占比数据。",
-          "券商对2026年EPS预测的动态调整情况，是否存在进一步下修风险。"
-        ]
-      },
-      {
-        "stock_code": "600498",
-        "stock_name": "烽火通信",
-        "oneil_candidate_score": 45,
-        "selection_score": 137,
+        "selection_score": 242,
         "candidate_action": "reject",
         "final_bucket": "reject",
         "primary_theme": "光通信",
         "external_research_need": {
           "need_external_research": false,
           "needed_dimension_list": [],
-          "reason_text": "CAN/SLIM research DB 及长期投资记忆已充分证明该股当前 C/A 双弱、现金流恶化且高位筹码拥挤，历史多次因相同结构导致回撤，无需外部复核即可做出淘汰决策。"
+          "reason_text": "CAN/SLIM DB 已充分证明该股 C/A/N/I 四个核心维度全面弱势，PE 高达 435 倍且净利率仅 0.63%，微利现实与高估值严重背离，基本面完全无法支撑中端期成长股标准，无需外部复核即可做出淘汰决策。"
         },
         "external_recheck_meta": {},
-        "main_reject_reason": "C/A双弱是核心硬伤，增收不增利且经营现金流严重恶化，PE高达164倍严重透支未来预期，存在极大的戴维斯双杀风险；120日涨幅翻倍导致高位筹码拥挤，主力资金持续流出印证兑现压力。历史记忆多次提示该股为“有产业逻辑但财务未验证的容量核心”，在业绩拐点确认前不适合作为顶层强候选，过去类似结构已导致超10%的回撤。",
+        "main_reject_reason": "C/A双弱且I极弱，严重违背CAN SLIM中端期成长股标准。公司净利率仅0.63%，主业盈利极薄，PE高达435倍，无法证明主线逻辑正在转化为真实业绩；无机构研报覆盖，纯靠游资接力炒作；历史投资记忆多次明确提示该股属于纯概念投机，存在业绩雷与概念退潮双重风险。虽强主线情绪扩散期可能带来短期暴涨，但极易出现A杀，不符合高净值客户中端期成长配置要求，坚决淘汰出最终8只。",
+        "target_price_judgment": {
+          "institutional_expert_view": {
+            "level": "insufficient_data",
+            "target_price_range": {
+              "low": null,
+              "high": null,
+              "center": null,
+              "currency": "CNY"
+            },
+            "source_name": "",
+            "source_url": "",
+            "source_title": "",
+            "source_observed_at": "",
+            "evidence_type": "insufficient_data",
+            "evidence_age_days": null,
+            "evidence_freshness_label": "insufficient_data",
+            "reason_text": "近半年未抓到可核验的机构目标区间，无法作为机构认可增强证据。"
+          },
+          "oneil_canslim_view": {
+            "level": "weak",
+            "target_price_range": {
+              "low": null,
+              "high": null,
+              "currency": "CNY"
+            },
+            "bull_case_text": "仅在光通信或人形机器人主线情绪极度亢奋、游资持续接力炒作的极端情景下，股价可能凭借弹性继续冲高，但这属于纯情绪博弈，无基本面支撑。",
+            "reason_text": "公司当前处于微利状态（净利率0.63%，净利仅562万），PE高达435倍，营收与利润双下滑，三年营收CAGR近乎停滞。在缺乏订单、产能和业绩兑现证据的情况下，无法使用常规估值模型推导合理目标价，任何基于主线的估值假设均属空中楼阁。"
+          },
+          "comparison_text": "缺少可核验的机构目标区间，只能评价 O'Neil 基于 CAN SLIM 证据独立推测的区间；不得将 EPS、PE 或现价换算结果表述为机构目标区间。",
+          "invalid_condition": "主线情绪退潮、游资撤离或大盘风险偏好下降，均会导致纯概念炒作逻辑瞬间失效，股价面临极大回撤风险。"
+        },
         "evidence_gap": [
-          "400G超高速光传输系统及空芯光纤技术的具体新增订单金额或客户名称",
-          "新业务收入占比提升的量化数据",
-          "公司拟申请360亿元信贷额度的具体用途及对债务压力的影响"
+          "缺乏CPO/高速互联PCB相关的具体订单或大客户验证",
+          "缺乏新产能（如半导体先进封装载板）投产节奏与产能消化情况数据",
+          "缺乏未来1-2个季度的业绩指引或排产数据",
+          "缺乏股东减持或解禁计划的具体公告"
         ]
       },
       {
         "stock_code": "603773",
         "stock_name": "沃格光电",
         "oneil_candidate_score": 45,
-        "selection_score": 130,
-        "candidate_action": "reject",
-        "final_bucket": "reject",
-        "primary_theme": "光学光电",
-        "external_research_need": {
-          "need_external_research": false,
-          "needed_dimension_list": [],
-          "reason_text": "CAN/SLIM DB已提供充分的当前业绩亏损、合规风险（证监会立案）及资金派发（大单净流出）证据，足以判定其不符合高净值客户中端期成长股标准，无需外部复核。"
-        },
-        "external_recheck_meta": {},
-        "main_reject_reason": "C/A/N/I四个核心维度均极弱，当前上涨纯粹是概念炒作与游资情绪博弈。近20日涨幅巨大且大单净流出，存在极大的高位派发与A杀风险。此外，控股股东及实控人收到证监会立案告知书带来重大合规风险。历史记忆虽提示该类情绪龙头在狂热期有极高溢价，但这属于短线投机范畴，严重违背高净值客户中端期成长股的慎重考核标准，坚决淘汰。",
-        "evidence_gap": [
-          "缺乏TGV玻璃基板量产时间表及大客户验证证据",
-          "缺乏未来1-2个季度的业绩指引或订单落地证据",
-          "缺乏证监会立案调查的具体事由及潜在处罚影响评估"
-        ]
-      },
-      {
-        "stock_code": "002929",
-        "stock_name": "润建股份",
-        "oneil_candidate_score": 38,
-        "selection_score": 137,
+        "selection_score": 186,
         "candidate_action": "reject",
         "final_bucket": "reject",
         "primary_theme": "光通信",
         "external_research_need": {
           "need_external_research": false,
           "needed_dimension_list": [],
-          "reason_text": "CAN/SLIM DB已提供充分的当期财务恶化证据（C/A双弱），且长期记忆明确警示了该股在基本面弱势下叠加主线炒作的失败模式与筹码崩塌风险，证据足以支撑淘汰决策，无需外部复核。"
+          "reason_text": "CAN/SLIM DB已明确显示公司当前业绩严重亏损、扣非净利大幅下滑、控股股东遭证监会立案且无机构覆盖，核心维度C/A/N/I均极弱，证据已足够支持淘汰决策，无需外部复核。"
         },
         "external_recheck_meta": {},
-        "main_reject_reason": "C和A同时严重弱势（利润下滑超80%，现金流大幅为负），PE高达500倍以上，属于典型的'涨幅过大但业绩不强'标的。历史投资记忆多次明确警告：对于C/A双弱的股票，即使M主线极强，也极易遭遇戴维斯双杀和筹码崩塌（如前期高位跌停、限售股解禁抛压）。当前算力合作缺乏订单硬数据支撑，主力资金净流出，概念炒作嫌疑重，不符合中端期成长股标准，坚决剔除。",
+        "main_reject_reason": "虽然历史投资记忆提示该股在极强主线行情下容易走出超预期的情绪爆发，但当前C/A/N/I四个核心维度均极弱，基本面全面崩塌且无业绩兑现路径。控股股东及实控人收到证监会立案告知书带来重大合规风险。近20日涨幅超80%导致交易极度拥挤，大单资金持续流出。对于高净值客户的中端期成长股筛选要求而言，这种纯概念炒作与游资情绪博弈的标的，一旦主线退潮或情绪反转，极易遭遇A杀，风险收益比极差，因此坚决淘汰。",
+        "target_price_judgment": {
+          "institutional_expert_view": {
+            "level": "insufficient_data",
+            "target_price_range": {
+              "low": null,
+              "high": null,
+              "center": null,
+              "currency": "CNY"
+            },
+            "source_name": "",
+            "source_url": "",
+            "source_title": "",
+            "source_observed_at": "",
+            "evidence_type": "insufficient_data",
+            "evidence_age_days": null,
+            "evidence_freshness_label": "insufficient_data",
+            "reason_text": "近半年未抓到可核验的机构目标区间，无法作为机构认可增强证据。"
+          },
+          "oneil_canslim_view": {
+            "level": "insufficient_data",
+            "target_price_range": {
+              "low": null,
+              "high": null,
+              "currency": "CNY"
+            },
+            "bull_case_text": "若玻璃基板在先进封装渗透率超预期突破，且公司能获得实质性大客户订单，情绪溢价可能继续推高股价，但当前无基本面锚定，纯情绪博弈无法测算上行空间。",
+            "reason_text": "公司当前处于亏损状态，EPS为负，ROE为负，且新业务收入占比不明，缺乏基于盈利预测的估值锚。在C/A/N均弱的情况下，无法用常规PE/PS推导合理目标区间，属于纯情绪炒作定价。"
+          },
+          "comparison_text": "缺少可核验的机构目标区间，只能评价 O'Neil 基于 CAN SLIM 证据独立推测的区间；不得将 EPS、PE 或现价换算结果表述为机构目标区间。",
+          "invalid_condition": "若光通信/CPO主线情绪退潮，或公司财报继续亏损、立案调查出现实质性处罚，当前情绪溢价将迅速崩塌，任何基于概念的估值逻辑均会失效。"
+        },
         "evidence_gap": [
-          "算力业务的具体订单金额、排产数据及新业务收入占比的硬数据依然缺失。",
-          "与安顺市、怡亚通等战略合作协议对应的实质性营收转化周期与规模预测缺乏。",
-          "经营现金流大幅恶化及计提减值的具体原因及改善路径说明不足。"
+          "缺乏TGV玻璃基板明确的大客户验证及量产时间表",
+          "缺乏未来1-2个季度的业绩指引或订单落地证据",
+          "缺乏证监会立案调查的具体事由及潜在处罚影响评估",
+          "缺乏公司应对高负债率(71.6%)及对外担保风险的具体措施"
         ]
       },
       {
-        "stock_code": "600330",
-        "stock_name": "天通股份",
-        "oneil_candidate_score": 38,
-        "selection_score": 135,
+        "stock_code": "002929",
+        "stock_name": "润建股份",
+        "oneil_candidate_score": 45,
+        "selection_score": 176,
         "candidate_action": "reject",
         "final_bucket": "reject",
-        "primary_theme": "PCB",
+        "primary_theme": "光通信",
         "external_research_need": {
           "need_external_research": false,
           "needed_dimension_list": [],
-          "reason_text": "CAN/SLIM DB 已清晰显示公司当期严重亏损、扣非净利暴跌、三年营收负增长以及实控人减持，基本面和估值风险证据确凿，无需外部研报即可判定其不符合中端期成长股标准。"
+          "reason_text": "CAN/SLIM DB 及历史记忆已充分暴露其基本面恶化(C/A weak)、筹码崩塌(S weak)及概念兑现风险，当前证据足以做出淘汰决策，无需外部复核。"
         },
         "external_recheck_meta": {},
-        "main_reject_reason": "C/A/N三维同时弱势，严重违背CAN SLIM核心原则。公司当前处于严重亏损状态，基本面恶化无法将主线逻辑转化为真实业绩；120日股价已暴涨221%，完全脱离'大牛股早期特征'，处于高位情绪博弈阶段；实控人一致行动人减持叠加融资盘激增，存在极大的高位兑现和踩踏风险。历史投资记忆也明确提示'避免只因主题命中高就入选'，涨幅过大但业绩不强不能用主线强行覆盖，必须作为高位兑现风险处理并剔除。",
+        "main_reject_reason": "C和A同时为weak，且经营现金流大幅恶化，不符合CAN SLIM对基本面兑现的核心要求；历史记忆多次验证该股在基本面弱势下极易出现高位筹码崩塌和戴维斯双杀；当前PE极高且业绩大幅下滑，涨幅主要靠主线情绪支撑，一旦主线退潮或情绪回落，缺乏估值底线。属于典型的“涨幅过大但业绩不强”的高位兑现风险股，必须淘汰。",
+        "target_price_judgment": {
+          "institutional_expert_view": {
+            "level": "insufficient_data",
+            "target_price_range": {
+              "low": null,
+              "high": null,
+              "center": null,
+              "currency": "CNY"
+            },
+            "source_name": "",
+            "source_url": "",
+            "source_title": "",
+            "source_observed_at": "",
+            "evidence_type": "insufficient_data",
+            "evidence_age_days": null,
+            "evidence_freshness_label": "insufficient_data",
+            "reason_text": "近半年未抓到可核验的机构目标区间，无法作为机构认可增强证据。"
+          },
+          "oneil_canslim_view": {
+            "level": "weak",
+            "target_price_range": {
+              "low": null,
+              "high": null,
+              "currency": "CNY"
+            },
+            "bull_case_text": "若算力订单出现爆发式落地且现金流显著回正，可能存在情绪驱动的超预期上涨，但当前缺乏基本面锚定，无法给出可靠的目标区间。",
+            "reason_text": "当前PE高达503倍，最近一期净利润下滑81.82%，经营现金流大幅流出，三年净利CAGR为-55.29%。在C/A双弱且现金流恶化的背景下，传统估值体系失效，无法基于CAN SLIM推导出合理的目标价格，属于纯情绪博弈阶段。"
+          },
+          "comparison_text": "缺少可核验的机构目标区间，只能评价 O'Neil 基于 CAN SLIM 证据独立推测的区间；不得将 EPS、PE 或现价换算结果表述为机构目标区间。",
+          "invalid_condition": "若算力合作始终停留在框架协议无实质订单转化，或现金流持续恶化、出现债务违约风险，则任何基于情绪的估值逻辑均失效。"
+        },
         "evidence_gap": [
-          "缺乏能够证明主线逻辑转化为收入的新增重大订单或客户线索",
-          "缺乏新产能投放时间表及产能爬坡数据",
-          "缺乏实控人后续减持计划的明确边界"
+          "算力业务的具体订单金额、排产数据及新业务收入占比的硬数据依然缺失。",
+          "与安顺市、怡亚通等战略合作协议对应的实质性营收转化周期与规模预测缺乏。",
+          "经营现金流大幅恶化及计提减值的具体原因及改善路径说明不足。",
+          "限售股解禁后的具体减持意愿与抛压规模需持续跟踪。"
         ]
       },
       {
         "stock_code": "000062",
         "stock_name": "深圳华强",
         "oneil_candidate_score": 35,
-        "selection_score": 131,
+        "selection_score": 146,
         "candidate_action": "reject",
         "final_bucket": "reject",
-        "primary_theme": "PCB",
+        "primary_theme": "半导体设备",
         "external_research_need": {
           "need_external_research": false,
           "needed_dimension_list": [],
-          "reason_text": "CAN/SLIM DB 已提供充分的业绩、现金流、资金流和机构数据，且历史投资记忆多次验证了其基本面弱势和后排属性，当前证据已足够支撑淘汰决策，无需外部复核。"
+          "reason_text": "CAN/SLIM DB 及历史投资记忆已充分证明该股在A、N、I、S维度存在硬伤，且现金流与利润严重背离，24亿可交换债券减持压力明确，无需外部复核即可做出坚决淘汰判断。"
         },
         "external_recheck_meta": {},
-        "main_reject_reason": "核心短板在于A(年度成长差)、N(无新变量)、I(机构不认可)且现金流与利润严重背离。分销业务低毛利、抗内卷能力弱，历史记忆提示24亿可交换债券带来明确供给端减持压力。近期基本面未见实质性改善，资金呈净流出状态，属于情绪炒作而非高质量成长，坚决淘汰。",
+        "main_reject_reason": "核心短板在于A（年度成长差）、N（无新变量）、I（机构不认可）且现金流与利润严重背离。分销业务低毛利、抗内卷能力弱，24亿可交换债券带来明确供给端减持压力。历史投资记忆多次因其弱证据和后排属性将其剔除，并成功规避了10%-20%以上的回撤。当前基本面未见实质性改善，近期股价暴涨仅由杠杆资金驱动，存在严重的交易拥挤和过热风险，不符合大牛股早期高质量成长特征，坚决淘汰。",
+        "target_price_judgment": {
+          "institutional_expert_view": {
+            "level": "insufficient_data",
+            "target_price_range": {
+              "low": null,
+              "high": null,
+              "center": null,
+              "currency": "CNY"
+            },
+            "source_name": "",
+            "source_url": "",
+            "source_title": "",
+            "source_observed_at": "",
+            "evidence_type": "insufficient_data",
+            "evidence_age_days": null,
+            "evidence_freshness_label": "insufficient_data",
+            "reason_text": "近半年未抓到可核验的机构目标区间，无法作为机构认可增强证据。"
+          },
+          "oneil_canslim_view": {
+            "level": "weak",
+            "target_price_range": {
+              "low": null,
+              "high": null,
+              "currency": "CNY"
+            },
+            "bull_case_text": "仅在半导体或人形机器人主线情绪极度亢奋、游资持续强行拉升的极端情况下，可能存在短期情绪溢价，但缺乏基本面支撑，不可持续。",
+            "reason_text": "由于公司年度成长极弱、现金流大幅为负、无实质新变量且存在明确减持压力，无法基于CAN SLIM框架推导出具备安全边际和成长逻辑的中期目标价，给出null。"
+          },
+          "comparison_text": "缺少可核验的机构目标区间，只能评价 O'Neil 基于 CAN SLIM 证据独立推测的区间；不得将 EPS、PE 或现价换算结果表述为机构目标区间。",
+          "invalid_condition": "主线情绪退潮、大单资金持续净流出、可交换债券持有人实施换股减持、经营现金流持续恶化，均会令任何情绪化目标区间失效。"
+        },
         "evidence_gap": [
-          "经营现金流大幅为负的具体原因及营运资金占用情况需财报细节验证",
-          "24亿可交换债券的当前转股及减持进度细节",
-          "缺乏具体新增大客户或长单证据以验证业绩持续性"
+          "缺乏具体新增大客户或长单证据以验证业绩持续性",
+          "缺乏未来产能扩张或高毛利新业务结构优化的指引",
+          "缺乏机构调研纪要与券商深度研报对市占率及技术壁垒的论证",
+          "经营现金流与利润背离的具体原因及营运资金占用情况需财报细节验证"
         ]
       },
       {
-        "stock_code": "603220",
-        "stock_name": "中贝通信",
-        "oneil_candidate_score": 15,
-        "selection_score": 137,
+        "stock_code": "000066",
+        "stock_name": "中国长城",
+        "oneil_candidate_score": 35,
+        "selection_score": 142,
+        "candidate_action": "reject",
+        "final_bucket": "reject",
+        "primary_theme": "AI应用",
+        "external_research_need": {
+          "need_external_research": false,
+          "needed_dimension_list": [],
+          "reason_text": "当前CAN SLIM DB及长期投资记忆已提供充分的负面证据（C/A双弱、现金流巨额为负、RS极弱、历史戴维斯双杀模式），足以做出淘汰决策，无需额外外部复核。"
+        },
+        "external_recheck_meta": {},
+        "main_reject_reason": "核心被拒绝原因是C与A双弱，且存在严重的戴维斯双杀风险。公司当前净利率为负、ROE极低、经营现金流巨额流出，基本面无法支撑当前估值；近20日股价暴跌25%且资金大幅出逃，印证了长期投资记忆中'A weak + 极高估值 + 概念炒作'极易暴跌的教训。涨幅过大但业绩不强，不能用主线强行覆盖。属于典型的高位兑现风险股，坚决剔除。",
+        "target_price_judgment": {
+          "institutional_expert_view": {
+            "level": "insufficient_data",
+            "target_price_range": {
+              "low": null,
+              "high": null,
+              "center": null,
+              "currency": "CNY"
+            },
+            "source_name": "",
+            "source_url": "",
+            "source_title": "",
+            "source_observed_at": "",
+            "evidence_type": "insufficient_data",
+            "evidence_age_days": null,
+            "evidence_freshness_label": "insufficient_data",
+            "reason_text": "近半年未抓到可核验的机构目标区间，无法作为机构认可增强证据。"
+          },
+          "oneil_canslim_view": {
+            "level": "weak",
+            "target_price_range": {
+              "low": null,
+              "high": null,
+              "currency": "CNY"
+            },
+            "bull_case_text": "若信创与AI算力出现超大规模国家级采购，且公司GB200电源柜及飞腾CPU服务器实现海量出货并实质性扭亏，可能存在高于基础区间的可能，但当前毫无财报与订单证据支撑此假设。",
+            "reason_text": "公司当前EPS为负，净利率为负，经营现金流巨额流出，无法使用常规PE/PS进行基本面估值。任何基于主线的目标价均属纯概念博弈，缺乏盈利锚定，因此不给出具体目标区间。"
+          },
+          "comparison_text": "缺少可核验的机构目标区间，只能评价 O'Neil 基于 CAN SLIM 证据独立推测的区间；不得将 EPS、PE 或现价换算结果表述为机构目标区间。",
+          "invalid_condition": "若公司持续亏损、经营现金流无法转正，或信创/AI算力订单落地不及预期，任何基于概念的目标区间均失效。"
+        },
+        "evidence_gap": [
+          "GB200电源柜等新业务的具体订单金额、客户验证及收入占比数据缺失",
+          "经营现金流巨额流出原因的详细拆解及财务公司关联交易风险敞口说明缺失",
+          "当前真实的PE水平及机构真实持仓变动数据缺失"
+        ]
+      },
+      {
+        "stock_code": "000586",
+        "stock_name": "汇源通信",
+        "oneil_candidate_score": 20,
+        "selection_score": 150,
         "candidate_action": "reject",
         "final_bucket": "reject",
         "primary_theme": "光通信",
         "external_research_need": {
           "need_external_research": false,
           "needed_dimension_list": [],
-          "reason_text": "CAN/SLIM DB及长期记忆已提供极其充分且一致的负面证据（C/A双弱、现金流巨额流出、N维度供应商空壳争议、I机构撤离），证据链完全断裂，无需外部复核即可坚决淘汰。"
+          "reason_text": "CAN/SLIM DB 已提供充分的财务恶化、负面事件及资金流出证据，历史记忆也多次验证了该股的淘汰逻辑，无需外部复核即可做出坚决淘汰决策。"
         },
         "external_recheck_meta": {},
-        "main_reject_reason": "C/A双弱且现金流巨额流出，基本面严重恶化；N维度深陷供应商空壳争议导致证据链断裂，存在重大财务真实性与概念炒作风险；L为后排跟风且I维度机构撤离。历史投资记忆多次印证该股因'C/A双弱+N证据链断裂+机构撤离'被正确剔除，并成功规避了9%-23%的暴跌。完全不符合高净值客户慎重考核及成长股标准，属于高危雷区，必须一票否决。",
+        "main_reject_reason": "C/A/N三大核心维度全面走弱且处于亏损状态，完全无法将主线高景气转化为真实利润；L为后排跟风，I无机构认可，S筹码恶化。近期终止定增及控制权变更失败带来极大经营不确定性，历史投资记忆多次精准提示该股属于情绪炒作标的并成功规避其大跌。坚决剔除。",
+        "target_price_judgment": {
+          "institutional_expert_view": {
+            "level": "insufficient_data",
+            "target_price_range": {
+              "low": null,
+              "high": null,
+              "center": null,
+              "currency": "CNY"
+            },
+            "source_name": "",
+            "source_url": "",
+            "source_title": "",
+            "source_observed_at": "",
+            "evidence_type": "insufficient_data",
+            "evidence_age_days": null,
+            "evidence_freshness_label": "insufficient_data",
+            "reason_text": "近半年未抓到可核验的机构目标区间，无法作为机构认可增强证据。"
+          },
+          "oneil_canslim_view": {
+            "level": "weak",
+            "target_price_range": {
+              "low": null,
+              "high": null,
+              "currency": "CNY"
+            },
+            "bull_case_text": "由于公司连亏两年、控制权变更失败且股东股份遭司法执行，基本面极度恶化，不存在主线情绪与业绩共振的基础情景，无法推导合理上行空间。",
+            "reason_text": "公司C/A/N三大核心维度全面崩塌，处于持续亏损状态；S筹码恶化且资金大幅流出；L为后排跟风；I无机构认可。基本面无法支撑任何估值模型，因此不给出目标区间。"
+          },
+          "comparison_text": "缺少可核验的机构目标区间，只能评价 O'Neil 基于 CAN SLIM 证据独立推测的区间；不得将 EPS、PE 或现价换算结果表述为机构目标区间。",
+          "invalid_condition": "若公司未来发布扭亏为盈的财报、新订单实质性落地或控制权成功变更并带来资源注入，当前失效逻辑才可能被重新评估。"
+        },
+        "evidence_gap": [
+          "当前证据已足够支撑淘汰决策，无关键证据缺口。"
+        ]
+      },
+      {
+        "stock_code": "603220",
+        "stock_name": "中贝通信",
+        "oneil_candidate_score": 15,
+        "selection_score": 163,
+        "candidate_action": "reject",
+        "final_bucket": "reject",
+        "primary_theme": "光通信",
+        "external_research_need": {
+          "need_external_research": false,
+          "needed_dimension_list": [],
+          "reason_text": "CAN/SLIM DB 及长期记忆已提供极其充分的负面证据（C/A双弱、现金流巨额流出、N维度供应商空壳争议、L后排跟风、I机构撤离），证据链完整指向高危雷区，无需外部复核即可坚决淘汰。"
+        },
+        "external_recheck_meta": {},
+        "main_reject_reason": "C/A双弱且现金流巨额流出，基本面严重恶化；N维度深陷供应商空壳争议导致证据链断裂，存在重大财务真实性与概念炒作风险；L为后排跟风且I/S双弱。历史投资记忆多次印证该股因证据闭环断裂被正确剔除并成功规避暴跌（T+5多次暴跌超20%），完全不符合高净值客户慎重考核及成长股标准，属于'C/A双弱+N证据链断裂+机构撤离'的高危雷区，必须一票否决。",
+        "target_price_judgment": {
+          "institutional_expert_view": {
+            "level": "insufficient_data",
+            "target_price_range": {
+              "low": null,
+              "high": null,
+              "center": null,
+              "currency": "CNY"
+            },
+            "source_name": "",
+            "source_url": "",
+            "source_title": "",
+            "source_observed_at": "",
+            "evidence_type": "insufficient_data",
+            "evidence_age_days": null,
+            "evidence_freshness_label": "insufficient_data",
+            "reason_text": "近半年未抓到可核验的机构目标区间，无法作为机构认可增强证据。"
+          },
+          "oneil_canslim_view": {
+            "level": "weak",
+            "target_price_range": {
+              "low": null,
+              "high": null,
+              "currency": "CNY"
+            },
+            "bull_case_text": "在当前财务真实性存疑、业绩严重亏损且资金大幅流出的背景下，不存在主线情绪、业绩和资金同时强化的基础情景，无看涨逻辑支撑。",
+            "reason_text": "公司最近一期净利润转亏，EPS同比下滑100%，经营现金流巨额流出，且深陷供应商空壳争议，财务基本面全面恶化。CAN SLIM框架下C/A/N/S/I/L六个维度均弱，无法基于任何成长或盈利逻辑推导出合理的目标区间。"
+          },
+          "comparison_text": "缺少可核验的机构目标区间，只能评价 O'Neil 基于 CAN SLIM 证据独立推测的区间；不得将 EPS、PE 或现价换算结果表述为机构目标区间。",
+          "invalid_condition": "若财务造假被监管部门立案查实，或主业持续亏损导致退市风险，任何估值逻辑都将彻底失效。"
+        },
         "evidence_gap": [
           "算力业务真实收入确认的审计级证据",
           "新供应商进展及算力产能具体投放数据",
@@ -1164,35 +1795,35 @@ const INLINE_ONEIL = {
       "data_source_policy": "最终层默认只读取最新 stock_selection_result 与 can_slim_research_db；外部研报/公告库只作为 CAN/SLIM 调研层的上游证据。",
       "selected_stock_name_list": [
         "工业富联",
-        "长电科技",
+        "剑桥科技",
         "通富微电",
-        "景旺电子",
-        "鼎龙股份",
-        "方正科技",
+        "立昂微",
+        "兴森科技",
         "新洁能",
-        "远东股份"
+        "光电股份",
+        "红板科技"
       ],
       "rejected_stock_name_list": [
-        "航天电器",
         "亨通光电",
-        "红板科技",
-        "中京电子",
+        "上海贝岭",
+        "远东股份",
+        "紫光国微",
         "云南锗业",
-        "科华数据",
-        "烽火通信",
+        "中京电子",
         "沃格光电",
         "润建股份",
-        "天通股份",
         "深圳华强",
+        "中国长城",
+        "汇源通信",
         "中贝通信"
       ],
       "summary_text": "本轮从 20 只主线候选中筛出 8 只 O'Neil/CAN SLIM 高优先级候选。"
     },
-    "source_result_date": "2026-06-04",
-    "stock_selection_result_file": "output/latest_output/stock_selection_result_2026-06-04.json",
+    "source_result_date": "2026-06-05",
+    "stock_selection_result_file": "output/latest_output/stock_selection_result_2026-06-05.json",
     "intraday_stop_loss_backtest_signal": {
       "status": "ready",
-      "source_result_date": "2026-06-04",
+      "source_result_date": "2026-06-05",
       "source": "intraday_stop_loss_db",
       "stock_stop_loss_signal_list": [
         {
@@ -1204,18 +1835,18 @@ const INLINE_ONEIL = {
           "method_label": "daily_low_open_recovery",
           "reason_text": "近157个交易日样本中，日内最低点触发-3.0% 后，收盘重新回到开盘价的概率为0.0，未能收回开盘价的概率为1.0；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.4336%，期望值参考为0.2836%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
           "status": "ready",
-          "source_result_date": "2026-06-04"
+          "source_result_date": "2026-06-05"
         },
         {
-          "stock_code": "600584",
-          "stock_name": "长电科技",
-          "optimal_stop_loss_pct": -5.0,
-          "optimal_expected_value_pct": 0.1598,
+          "stock_code": "603083",
+          "stock_name": "剑桥科技",
+          "optimal_stop_loss_pct": -6.0,
+          "optimal_expected_value_pct": 0.0609,
           "confidence_label": "statistical",
           "method_label": "daily_low_open_recovery",
-          "reason_text": "近157个交易日样本中，日内最低点触发-5.0% 后，收盘重新回到开盘价的概率为0.0，未能收回开盘价的概率为1.0；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-5.3098%，期望值参考为0.1598%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+          "reason_text": "近157个交易日样本中，日内最低点触发-6.0% 后，收盘重新回到开盘价的概率为0.0556，未能收回开盘价的概率为0.9444；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-6.2109%，期望值参考为0.0609%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
           "status": "ready",
-          "source_result_date": "2026-06-04"
+          "source_result_date": "2026-06-05"
         },
         {
           "stock_code": "002156",
@@ -1226,40 +1857,29 @@ const INLINE_ONEIL = {
           "method_label": "daily_low_open_recovery",
           "reason_text": "近157个交易日样本中，日内最低点触发-4.0% 后，收盘重新回到开盘价的概率为0.087，未能收回开盘价的概率为0.913；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.7741%，期望值参考为-0.3759%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
           "status": "ready",
-          "source_result_date": "2026-06-04"
+          "source_result_date": "2026-06-05"
         },
         {
-          "stock_code": "603228",
-          "stock_name": "景旺电子",
-          "optimal_stop_loss_pct": -4.0,
-          "optimal_expected_value_pct": -0.2608,
+          "stock_code": "605358",
+          "stock_name": "立昂微",
+          "optimal_stop_loss_pct": -3.0,
+          "optimal_expected_value_pct": -0.1049,
           "confidence_label": "statistical",
           "method_label": "daily_low_open_recovery",
-          "reason_text": "近157个交易日样本中，日内最低点触发-4.0% 后，收盘重新回到开盘价的概率为0.0323，未能收回开盘价的概率为0.9677；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.8892%，期望值参考为-0.2608%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+          "reason_text": "近157个交易日样本中，日内最低点触发-3.0% 后，收盘重新回到开盘价的概率为0.0526，未能收回开盘价的概率为0.9474；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.0451%，期望值参考为-0.1049%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
           "status": "ready",
-          "source_result_date": "2026-06-04"
+          "source_result_date": "2026-06-05"
         },
         {
-          "stock_code": "300054",
-          "stock_name": "鼎龙股份",
-          "optimal_stop_loss_pct": -4.0,
-          "optimal_expected_value_pct": -0.0696,
+          "stock_code": "002436",
+          "stock_name": "兴森科技",
+          "optimal_stop_loss_pct": -5.0,
+          "optimal_expected_value_pct": -0.7922,
           "confidence_label": "statistical",
           "method_label": "daily_low_open_recovery",
-          "reason_text": "近157个交易日样本中，日内最低点触发-4.0% 后，收盘重新回到开盘价的概率为0.0417，未能收回开盘价的概率为0.9583；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-4.0804%，期望值参考为-0.0696%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+          "reason_text": "近157个交易日样本中，日内最低点触发-5.0% 后，收盘重新回到开盘价的概率为0.0667，未能收回开盘价的概率为0.9333；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-4.3578%，期望值参考为-0.7922%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
           "status": "ready",
-          "source_result_date": "2026-06-04"
-        },
-        {
-          "stock_code": "600601",
-          "stock_name": "方正科技",
-          "optimal_stop_loss_pct": -4.0,
-          "optimal_expected_value_pct": -0.0949,
-          "confidence_label": "statistical",
-          "method_label": "daily_low_open_recovery",
-          "reason_text": "近157个交易日样本中，日内最低点触发-4.0% 后，收盘重新回到开盘价的概率为0.0455，未能收回开盘价的概率为0.9545；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-4.0551%，期望值参考为-0.0949%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
-          "status": "ready",
-          "source_result_date": "2026-06-04"
+          "source_result_date": "2026-06-05"
         },
         {
           "stock_code": "605111",
@@ -1270,27 +1890,32 @@ const INLINE_ONEIL = {
           "method_label": "daily_low_open_recovery",
           "reason_text": "近211个交易日样本中，日内最低点触发-4.0% 后，收盘重新回到开盘价的概率为0.0952，未能收回开盘价的概率为0.9048；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.334%，期望值参考为-0.816%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
           "status": "ready",
-          "source_result_date": "2026-06-04"
+          "source_result_date": "2026-06-05"
         },
         {
-          "stock_code": "600869",
-          "stock_name": "远东股份",
-          "optimal_stop_loss_pct": -6.0,
-          "optimal_expected_value_pct": 0.9317,
+          "stock_code": "600184",
+          "stock_name": "光电股份",
+          "optimal_stop_loss_pct": -3.0,
+          "optimal_expected_value_pct": -0.3824,
           "confidence_label": "statistical",
           "method_label": "daily_low_open_recovery",
-          "reason_text": "近157个交易日样本中，日内最低点触发-6.0% 后，收盘重新回到开盘价的概率为0.0，未能收回开盘价的概率为1.0；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-7.0817%，期望值参考为0.9317%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+          "reason_text": "近157个交易日样本中，日内最低点触发-3.0% 后，收盘重新回到开盘价的概率为0.0976，未能收回开盘价的概率为0.9024；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-2.7676%，期望值参考为-0.3824%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
           "status": "ready",
-          "source_result_date": "2026-06-04"
+          "source_result_date": "2026-06-05"
+        },
+        {
+          "stock_code": "603459",
+          "stock_name": "红板科技",
+          "optimal_stop_loss_pct": -4.0,
+          "optimal_expected_value_pct": -0.8207,
+          "confidence_label": "statistical",
+          "method_label": "daily_low_open_recovery",
+          "reason_text": "近37个交易日样本中，日内最低点触发-4.0% 后，收盘重新回到开盘价的概率为0.0909，未能收回开盘价的概率为0.9091；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.3293%，期望值参考为-0.8207%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+          "status": "ready",
+          "source_result_date": "2026-06-05"
         }
       ],
       "fallback_count": 0
-    },
-    "investment_thesis_memory_update_meta": {
-      "memory_lib_file": "references/training/investment_thesis_memory_lib.json",
-      "before_count": 665,
-      "after_count": 678,
-      "added_count": 13
     }
   }
 };
@@ -1487,63 +2112,59 @@ const INLINE_FUTURE = {
   }
 };
 const INLINE_THEME = {
-  "week_start_date": "2026-05-22",
-  "week_end_date": "2026-06-04",
-  "weekly_summary_text": "本周市场成长风格占优，创业板指明显领涨，科技主线共振强烈；AI算力与光通信反复走强，半导体设备与光学光电后半周加速爆发，电力及高股息煤炭作为防御穿插后降温。",
+  "week_start_date": "2026-05-25",
+  "week_end_date": "2026-06-05",
+  "weekly_summary_text": "本周市场震荡分化，成长与防御风格交替。光通信与AI算力硬件链在多日共振中确立趋势主线地位，人形机器人周五逆势爆发成为最强支线；防御端煤炭与高股息反复活跃；半导体设备冲高回落，AI应用与智能电网局部走强。",
   "industry_list": [
     {
       "rank_no": 1,
       "industry_name": "通信设备",
-      "strength_level": "周内多只通信ETF大涨，龙头创20日新高",
-      "reason_text": "通信方向在6月2日、3日连续出现强共振，高动量股中际旭创、亨通光电创20日新高，是本周最持续的成长主线。",
+      "strength_level": "龙头中兴通讯创20日新高，武汉凡谷涨停",
+      "reason_text": "光通信与算力硬件是本周最强主线，高动量股与涨停股均集中于该行业，且在周五调整中仍有逆势表现",
       "reference_list": [
-        "6月2日通信ETF大涨6.72%形成强共振",
-        "6月4日亨通光电涨7.04%创20日新高",
-        "手工备注5.25、5.28、6.02、6.03、6.05反复提及光通信/CPO"
+        "06-05 武汉凡谷涨停封单1.5亿",
+        "06-05 中兴通讯涨3.68%创20日新高",
+        "06-02 通信ETF大涨6.72%"
       ]
     },
     {
       "rank_no": 2,
-      "industry_name": "半导体",
-      "strength_level": "6月4日多只半导体设备ETF强共振，龙头大涨",
-      "reason_text": "半导体产业链本周后半周集中爆发，6月4日半导体设备ETF强共振，高动量股兆易创新、佰维存储大涨并创20日新高，产业景气度持续上行。",
+      "industry_name": "自动化设备",
+      "strength_level": "绿的谐波涨停封单超2.8亿",
+      "reason_text": "人形机器人方向周五逆势暴涨，核心标的封单坚决，与大盘风险偏好下行形成强烈对比",
       "reference_list": [
-        "6月4日半导体设备ETF大幅上涨形成强共振",
-        "6月4日兆易创新涨7.53%、佰维存储涨8.70%创20日新高",
-        "新闻称WSTS大幅上调全球半导体行业增长预期"
+        "06-05 绿的谐波涨停封单2.8亿",
+        "06-05 机器人ETF逆势暴涨"
       ]
     },
     {
       "rank_no": 3,
-      "industry_name": "光学光电",
-      "strength_level": "龙头京东方A封单超12亿，板块放量拉升",
-      "reason_text": "光学光电板块6月4日异动明显，京东方A等大单封死涨停，消费电子与面板景气度回升，与AI终端需求形成共振。",
+      "industry_name": "煤炭",
+      "strength_level": "06-01煤炭ETF大涨6.62%",
+      "reason_text": "在市场risk_off阶段表现强势，红利与煤炭ETF形成强共振，防御属性突出",
       "reference_list": [
-        "6月4日京东方A涨停封单12亿、三安光电涨停封单4.4亿",
-        "6月4日东山精密涨6.17%创20日新高",
-        "新闻称光学光电子板块放量拉升，面板景气受驱动"
+        "06-01 煤炭ETF大涨6.62%",
+        "06-01 国企红利ETF大涨9.41%"
       ]
     },
     {
       "rank_no": 4,
-      "industry_name": "电力设备",
-      "strength_level": "手工投研高频提及，新闻催化算电协同",
-      "reason_text": "电力方向在手工投研备注中高频出现，虽然单日爆发力不如科技，但AI能耗驱动电力重估的逻辑持续发酵，资金连续布局绿色电力ETF。",
+      "industry_name": "半导体",
+      "strength_level": "06-04设备ETF大涨，06-05兆易创新大跌7.8%",
+      "reason_text": "前半周及周四有表现，但周五龙头股大幅补跌，行业内部出现分化与调整",
       "reference_list": [
-        "手工备注5.12至6.01期间多次提及电力/智能电网",
-        "新闻称AI正拉动电力需求走出十年停滞期",
-        "新闻称绿色电力ETF连续6日获资金净流入"
+        "06-04 半导体设备ETF大幅上涨",
+        "06-05 兆易创新大跌7.80%"
       ]
     },
     {
       "rank_no": 5,
-      "industry_name": "元器件",
-      "strength_level": "产业景气度高企，核心个股趋势向上",
-      "reason_text": "元器件产业处于通胀期，价格持续上涨，PCB及被动元件在手工备注中反复出现，受益于算力与消费电子双重拉动。",
+      "industry_name": "电网设备",
+      "strength_level": "06-05中超控股涨停，ETF获主力净流入",
+      "reason_text": "周五盘面表现强势，有资金流入和涨停股验证，但全周频次不高",
       "reference_list": [
-        "新闻称深圳华强表示电子元器件产业景气度高企，大部分价格在上涨",
-        "手工备注5.22、5.25、6.02、6.03反复提及PCB/MLCC",
-        "6月4日江海股份涨停，胜宏科技涨3.76%"
+        "06-05 中超控股涨停",
+        "06-05 电网设备ETF主力净流入3429万"
       ]
     }
   ],
@@ -1551,67 +2172,69 @@ const INLINE_THEME = {
     {
       "rank_no": 1,
       "theme_name": "光通信",
-      "strength_level": "周内代表基金涨 6.72%，龙头亨通光电涨 7.04%",
-      "reason_text": "光通信是本周持续性最强的主线，6月2日至3日连续强共振，4日高动量股继续创20日新高，且手工备注多日反复验证，具备清晰产业链逻辑。",
+      "strength_level": "周内通信ETF多次大涨，龙头中兴通讯创20日新高",
+      "reason_text": "一周内多次出现在主线和强势基金中，近3日虽大盘调整但武汉凡谷涨停、中兴通讯逆势新高，资金共识极强，符合趋势主线特征",
       "reference_list": [
-        "6月2日4只通信ETF同步大涨形成强共振",
-        "6月4日亨通光电涨7.04%创20日新高",
-        "手工备注5.25、5.28、6.02、6.03、6.05反复提及光通信/CPO"
+        "06-02 通信ETF大涨6.72%",
+        "06-05 武汉凡谷涨停封单1.5亿",
+        "06-05 中兴通讯涨3.68%创20日新高",
+        "06-03 手工备注：CPO，光纤光缆"
       ]
     },
     {
       "rank_no": 2,
-      "theme_name": "半导体设备",
-      "strength_level": "6月4日板块强共振，龙头兆易创新涨 7.53%",
-      "reason_text": "半导体设备在6月4日出现强共振，高动量股兆易创新、佰维存储大涨创新高，WSTS上调行业预期提供景气支撑，属于近期加速确认的趋势主线。",
+      "theme_name": "人形机器人",
+      "strength_level": "周五逆势爆发，绿的谐波涨停封单超2.8亿",
+      "reason_text": "05-29/30及06-05反复活跃，周五在市场大跌中多只ETF暴涨，绿的谐波等核心股涨停，具备逆势韧性与产业催化",
       "reference_list": [
-        "6月4日多只半导体及设备ETF大幅上涨强共振",
-        "6月4日兆易创新涨7.53%、佰维存储涨8.70%创20日新高",
-        "新闻称WSTS大幅上调2026及2027年全球半导体增长预期"
+        "06-05 绿的谐波涨停封单2.8亿",
+        "06-05 机器人ETF逆势暴涨",
+        "06-04 新闻：中信证券称具身智能产业将迎重要进展",
+        "05-29/30 手工备注：机器人"
       ]
     },
     {
       "rank_no": 3,
-      "theme_name": "光学光电",
-      "strength_level": "龙头京东方A封单超12亿，板块半日成交逼近700亿",
-      "reason_text": "光学光电6月初持续放量拉升，6月4日京东方A等大单涨停，具备消费电子与AI终端双重驱动，从连板股和高动量股看资金集中度极高。",
+      "theme_name": "煤炭",
+      "strength_level": "06-01煤炭ETF大涨6.62%，周内多次作为防御主线",
+      "reason_text": "在市场risk_off时反复走强，06-01基金端强共振，06-04手工备注再次提及，防御趋势确立",
       "reference_list": [
-        "6月4日京东方A涨停封单12亿，三安光电涨停封单4.4亿",
-        "6月3日新闻称光学光电子放量拉升，半日成交逼近700亿元",
-        "6月4日东山精密涨6.17%创20日新高"
+        "06-01 煤炭ETF大涨6.62%",
+        "06-01 国企红利ETF大涨9.41%",
+        "06-04 手工备注：煤炭"
       ]
     },
     {
       "rank_no": 4,
-      "theme_name": "电力",
-      "strength_level": "绿色电力ETF连续6日获资金净流入约3.7亿",
-      "reason_text": "电力方向在手工投研中高频出现，AI能耗驱动算电协同逻辑，资金持续布局绿色电力ETF，属于趋势性扩散主线。",
+      "theme_name": "半导体设备",
+      "strength_level": "06-04多只ETF大幅上涨，但06-05龙头大跌7.8%",
+      "reason_text": "周初及06-04有较强表现，但06-05随市场大幅回调，近期强度衰减，从主线降温为扩散观察",
       "reference_list": [
-        "手工备注5.12至6.01期间超过7次提及电力/智能电网",
-        "新闻称AI正拉动电力需求，算电协同打开第二成长曲线",
-        "新闻称绿色电力ETF连续6日获资金净流入合计3.7亿元"
+        "06-04 半导体设备ETF大幅上涨",
+        "06-05 兆易创新大跌7.80%",
+        "06-04 手工备注：半导体"
       ]
     },
     {
       "rank_no": 5,
-      "theme_name": "PCB",
-      "strength_level": "元器件产业景气度高企，核心个股趋势上涨",
-      "reason_text": "PCB及被动元件受算力硬件与消费电子需求拉动，手工备注反复提及，产业调研证实元器件价格普涨，具备基本面支撑。",
+      "theme_name": "AI应用",
+      "strength_level": "06-05中青宝等涨停，AI短剧及A2A助手催化",
+      "reason_text": "06-01及06-05受消息催化走强，属于事件驱动，缺乏持续多日的板块共振，暂作为事件题材观察",
       "reference_list": [
-        "手工备注5.22、5.25、6.02、6.03反复提及PCB/MLCC",
-        "新闻称深圳华强表示目前电子元器件产业景气度高企，大部分价格在上涨",
-        "6月4日江海股份涨停，胜宏科技涨3.76%"
+        "06-05 中青宝涨停",
+        "06-05 新闻：微信正与多家手机厂商合作推出A2A助手功能",
+        "06-01 手工备注：AI应用"
       ]
     },
     {
       "rank_no": 6,
-      "theme_name": "煤炭",
-      "strength_level": "6月1日煤炭ETF大涨6.62%，后半周明显降温",
-      "reason_text": "煤炭在6月1日市场避险时随高股息同步大涨，但后半周随着成长风格回暖明显退潮，缺乏持续产业催化，属于情绪避险退潮题材。",
+      "theme_name": "智能电网",
+      "strength_level": "06-05中超控股涨停，电网设备ETF获主力净流入",
+      "reason_text": "06-05盘面表现强势，有新闻和涨停股验证，但全周频次不高，暂作为事件题材观察",
       "reference_list": [
-        "6月1日煤炭ETF大涨6.62%，国企红利ETF大涨9.41%",
-        "6月1日市场缩量下跌，风险偏好降至冰点",
-        "6月2日起市场重回成长主导，煤炭信号消失"
+        "06-05 中超控股涨停",
+        "06-05 电网设备ETF主力净流入3429万",
+        "06-05 新闻：华为联合深圳地铁发布车地Wi-Fi 7轨交无线创新成果"
       ]
     }
   ]
@@ -6997,6 +7620,48 @@ function renderCANSLIM(verdict) {
   ).join('') + '</div>';
 }
 
+function formatTargetRange(targetRange) {
+  if (!targetRange) return '证据不足';
+  const low = targetRange.low === null || targetRange.low === undefined
+    ? NaN : Number(targetRange.low);
+  const high = targetRange.high === null || targetRange.high === undefined
+    ? NaN : Number(targetRange.high);
+  const center = targetRange.center === null || targetRange.center === undefined
+    ? NaN : Number(targetRange.center);
+  const currency = targetRange.currency || 'CNY';
+  if (Number.isFinite(low) && Number.isFinite(high)) {
+    return `${low}-${high} ${esc(currency)}`;
+  }
+  if (Number.isFinite(center)) return `${center} ${esc(currency)}`;
+  return '证据不足';
+}
+
+function renderTargetPriceJudgment(judgment) {
+  if (!judgment) return '';
+  const expert = judgment.institutional_expert_view || {};
+  const oneil = judgment.oneil_canslim_view || {};
+  const expertFreshness = expert.evidence_freshness_label === 'older_half_year_reference'
+    ? ' · 较旧参考'
+    : '';
+  return `
+    <div class="target-price-grid">
+      <div class="target-price-box">
+        <div class="target-price-title">投研团队目标区间 · ${esc(expert.level || 'insufficient_data')}${expertFreshness}</div>
+        <div>${formatTargetRange(expert.target_price_range)}</div>
+        ${expert.source_name ? `<div class="target-price-meta">来源: ${esc(expert.source_name)} · ${esc(expert.source_observed_at)}${expert.evidence_age_days !== null && expert.evidence_age_days !== undefined && Number.isFinite(Number(expert.evidence_age_days)) ? ` · 距今 ${esc(expert.evidence_age_days)} 天` : ''}</div>` : ''}
+        ${expert.reason_text ? `<div class="target-price-meta">${esc(expert.reason_text)}</div>` : ''}
+      </div>
+      <div class="target-price-box oneil">
+        <div class="target-price-title">CAN SLIM 推测区间 · ${esc(oneil.level || 'insufficient_data')}</div>
+        <div>${formatTargetRange(oneil.target_price_range)}</div>
+        ${oneil.reason_text ? `<div class="target-price-meta">${esc(oneil.reason_text)}</div>` : ''}
+        ${oneil.bull_case_text ? `<div class="target-price-meta">强势情景: ${esc(oneil.bull_case_text)}</div>` : ''}
+      </div>
+    </div>
+    ${judgment.comparison_text ? `<div class="target-price-meta">区间比较: ${esc(judgment.comparison_text)}</div>` : ''}
+  `;
+}
+
 function renderStock(stock, openDipData) {
   const rank = stock.final_rank || 0;
   const verdict = stock.oneil_canslim_verdict || {};
@@ -7006,6 +7671,7 @@ function renderStock(stock, openDipData) {
   const stopLossSignal = stock.intraday_stop_loss_signal || null;
   const themes = stock.matched_theme_list || [];
   const gaps = stock.evidence_gap || [];
+  const targetPriceJudgment = stock.target_price_judgment || null;
 
   return `
   <div class="card">
@@ -7021,6 +7687,7 @@ function renderStock(stock, openDipData) {
       <span class="theme-tag" style="background:rgba(240,136,62,0.12);color:var(--orange)">${esc(stock.primary_theme)}</span>
     </div>
     ${renderCANSLIM(verdict)}
+    ${renderTargetPriceJudgment(targetPriceJudgment)}
     <div class="collapsible" onclick="toggleCollapse(this)">
       <strong style="font-size:0.85em">入选理由</strong><span class="collapse-icon">▶</span>
     </div>
