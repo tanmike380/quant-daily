@@ -287,21 +287,21 @@ const INLINE_ONEIL = {
         },
         "target_price_judgment": {
           "institutional_expert_view": {
-            "level": "insufficient_data",
+            "level": "medium",
             "target_price_range": {
-              "low": null,
-              "high": null,
-              "center": null,
+              "low": 92.9,
+              "high": 92.9,
+              "center": 92.9,
               "currency": "CNY"
             },
-            "source_name": "",
-            "source_url": "",
-            "source_title": "",
-            "source_observed_at": "",
-            "evidence_type": "insufficient_data",
-            "evidence_age_days": null,
-            "evidence_freshness_label": "insufficient_data",
-            "reason_text": "近一年未抓到可核验的机构目标区间，无法作为机构认可增强证据。"
+            "source_name": "高盛",
+            "source_url": "https://www.sohu.com/a/990213032_121210484",
+            "source_title": "高盛：工业富联盈利能力迈入结构性提升新周期 目标价92.9元",
+            "source_observed_at": "2026-02-26",
+            "evidence_type": "explicit_broker_research",
+            "evidence_age_days": 103,
+            "evidence_freshness_label": "recent_half_year",
+            "reason_text": "高盛于2026-02-26给出92.9元目标价，来源为已抓取的网页研报证据；其逻辑聚焦AI服务器成为核心增长引擎、CSP客户结构改善、利润率重塑和算力基础设施重估。该证据在一年有效窗口内，仅作为机构预期证据，不代表收益承诺。"
           },
           "oneil_canslim_view": {
             "level": "medium",
@@ -314,7 +314,7 @@ const INLINE_ONEIL = {
             "bull_case_text": "目标区间由 oneil_calculator_signal 锁定；Top selector 只判断该区间是否能被 CAN SLIM 证据支持，不再自行改写数值。",
             "reason_text": "已读取最新收盘价，预估增长50.8099%，CAN SLIM 重估溢价26.985%，估值/风险折价0.0%；根据增长兑现、估值重估、主线相关度、相对强度和风险惩罚计算参考上行区间为 +34.89% 至 +40.83%，未融合有效机构目标区间；目标价锚点状态=active_anchor。"
           },
-          "comparison_text": "缺少可核验的机构目标区间，只能评价 calculator 基于 CAN SLIM 证据计算的区间；不得将 EPS、PE 或现价换算结果表述为机构目标区间。",
+          "comparison_text": "机构侧高盛目标价为92.9元，calculator 当前锚定区间为100.82-105.26元；两者方向一致，但 calculator 更乐观，主要来自最新 CAN/SLIM 强兑现和目标价锚点。",
           "invalid_condition": "若下一季度财报AI服务器增速显著放缓，或CPO交换机出货量不及预期，或算力/光通信主线整体退潮资金大幅流出，则目标区间失效。",
           "calculator_lock_status": "locked",
           "current_price_reference": {
@@ -402,10 +402,11 @@ const INLINE_ONEIL = {
           "weighted_factor_score": 25.7,
           "risk_penalty_score": 0.0,
           "model_upside_center_pct": 45.0,
-          "expert_upside_center_pct": null,
+          "expert_upside_center_pct": 24.2976,
           "expert_target_validation_signal": {
-            "status": "missing",
-            "reason_text": "机构目标区间没有可用中枢。"
+            "status": "valid",
+            "expert_target_center": 92.9,
+            "reason_text": "已恢复高盛92.9元目标价证据，作为机构预期参考。"
           },
           "confidence_label": "medium",
           "formula_text": "target_return = (1 + expected_growth_pct * growth_capture_ratio) * (1 + can_slim_premium_pct - valuation_discount_pct) - 1；如存在有效机构目标区间，再按 expert_blend_weight 与机构隐含涨幅做融合。",
