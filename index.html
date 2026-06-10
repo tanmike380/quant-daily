@@ -5695,6 +5695,7 @@ const STOCK_SEARCH_INDEX_URL = 'data/stock_search_index.json';
 const OPEN_DIP_DB_URL = 'data/open_dip_buy_db.json';
 const STOP_LOSS_DB_URL = 'data/intraday_stop_loss_db.json';
 const CAN_SLIM_RESEARCH_DB_URL = 'data/can_slim_research_db.json';
+const TARGET_PRICE_CALCULATOR_DB_URL = 'data/target_price_calculator_db.json';
 
 async function loadJSON(url) {
   try {
@@ -5906,15 +5907,17 @@ let STATIC_DATABASE_CACHE = null;
 
 async function loadStaticDatabaseMap() {
   if (STATIC_DATABASE_CACHE) return STATIC_DATABASE_CACHE;
-  const [openDipData, stopLossData, canSlimData] = await Promise.all([
+  const [openDipData, stopLossData, canSlimData, targetPriceData] = await Promise.all([
     loadJSON(OPEN_DIP_DB_URL),
     loadJSON(STOP_LOSS_DB_URL),
     loadJSON(CAN_SLIM_RESEARCH_DB_URL),
+    loadJSON(TARGET_PRICE_CALCULATOR_DB_URL),
   ]);
   STATIC_DATABASE_CACHE = {
     open_dip_buy_db: openDipData && openDipData.open_dip_buy_db ? openDipData.open_dip_buy_db : {},
     intraday_stop_loss_db: stopLossData && stopLossData.intraday_stop_loss_db ? stopLossData.intraday_stop_loss_db : {},
     can_slim_research_db: canSlimData && canSlimData.can_slim_research_db ? canSlimData.can_slim_research_db : {},
+    target_price_calculator_db: targetPriceData && targetPriceData.target_price_calculator_db ? targetPriceData.target_price_calculator_db : {},
   };
   return STATIC_DATABASE_CACHE;
 }
@@ -6003,6 +6006,31 @@ function renderResearchBox(title, item, fieldList) {
     </div>`;
 }
 
+function renderStaticTargetPriceCalculatorBox(record) {
+  if (!record) return '';
+  const signal = record.target_price_calculator_signal || {};
+  const profile = signal.weight_profile_signal || {};
+  const anchor = signal.target_price_anchor_signal || {};
+  const meta = [
+    record.updated_at ? `更新 ${record.updated_at}` : '',
+    record.latest_trade_date ? `行情日 ${record.latest_trade_date}` : '',
+    record.research_coverage_status ? `覆盖 ${record.research_coverage_status}` : '',
+    profile.profile_name ? `模型 ${profile.profile_name}` : '',
+    anchor.status ? `锚点 ${anchor.status}` : '',
+  ].filter(Boolean).join(' · ');
+  return `
+    <div class="target-price-box calculator" style="margin-top:8px">
+      <div class="target-price-title">Calculator 目标区间 · ${esc(signal.confidence_label || 'insufficient_data')}</div>
+      <div>${formatTargetRange(signal.predicted_target_price_range)}</div>
+      <div class="target-price-meta">
+        当前价: ${record.latest_close_price === null || record.latest_close_price === undefined ? '缺失' : esc(record.latest_close_price)}
+        ${signal.predicted_upside_pct_range && signal.predicted_upside_pct_range.low !== undefined && signal.predicted_upside_pct_range.high !== undefined ? ` · 参考涨幅: ${formatPct(signal.predicted_upside_pct_range.low)}-${formatPct(signal.predicted_upside_pct_range.high)}` : ''}
+      </div>
+      ${meta ? `<div class="target-price-meta">${esc(meta)}</div>` : ''}
+      ${signal.reason_text ? `<div class="target-price-meta">${esc(signal.reason_text)}</div>` : ''}
+    </div>`;
+}
+
 function renderStaticSearchResult(record, databaseMap) {
   if (!record) {
     return '<div class="stock-library-box">没有找到这只股票。可以确认代码是否已加入 stock DB，并重新发布静态库。</div>';
@@ -6014,6 +6042,7 @@ function renderStaticSearchResult(record, databaseMap) {
   const targetView = institutional.institutional_target_price_view || {};
   const stopSignal = ((databaseMap.intraday_stop_loss_db || {})[code] || {}).intraday_stop_loss_signal || stock.intraday_stop_loss_signal || null;
   const openDipSignal = ((databaseMap.open_dip_buy_db || {})[code] || {}).open_dip_buy_signal || null;
+  const targetCalculatorRecord = ((databaseMap.target_price_calculator_db || {})[code]) || null;
   const topStatus = stock.stock_code
     ? `最新 TOP8 第 ${stock.final_rank || '-'} 名 · ${stock.primary_theme || ''}`
     : '不在最新 TOP8，展示静态调研库资料';
@@ -6025,6 +6054,7 @@ function renderStaticSearchResult(record, databaseMap) {
         <span class="stock-code">${esc(record.stock_code)}</span>
         <span class="score-badge ${stock.stock_code ? 'score-high' : 'score-mid'}">${esc(topStatus)}</span>
       </div>
+      ${renderStaticTargetPriceCalculatorBox(targetCalculatorRecord)}
       ${stock.target_price_judgment || stock.oneil_calculator_signal ? renderTargetPriceJudgment(stock.target_price_judgment, stock.oneil_calculator_signal) : ''}
       ${!stock.target_price_judgment && targetView ? `
         <div class="target-price-box">
