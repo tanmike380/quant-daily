@@ -12154,6 +12154,29 @@ function findStockInSearchLibrary(query, searchLibrary) {
     || null;
 }
 
+function formatStructuredResearchValue(key, value) {
+  if (!value || typeof value !== 'object') return value;
+  if (key === 'relative_strength_signal') {
+    const parts = [
+      value.rs_composite_rank !== undefined ? `综合RS ${value.rs_composite_rank}` : '',
+      value.rs_rank_20d !== undefined ? `20日 ${value.rs_rank_20d}` : '',
+      value.rs_rank_60d !== undefined ? `60日 ${value.rs_rank_60d}` : '',
+      value.rs_rank_120d !== undefined ? `120日 ${value.rs_rank_120d}` : '',
+      value.rs_label ? String(value.rs_label) : '',
+    ].filter(Boolean);
+    return parts.join(' / ');
+  }
+  if (key === 'eps_signal') {
+    const parts = [
+      value.latest_eps !== undefined ? `EPS ${value.latest_eps}` : '',
+      value.eps_growth_yoy !== undefined ? `同比 ${formatPct(value.eps_growth_yoy)}` : '',
+      value.eps_growth_label ? String(value.eps_growth_label) : '',
+    ].filter(Boolean);
+    return parts.join(' / ');
+  }
+  return '';
+}
+
 function renderResearchBox(title, item, fieldList) {
   if (!item) return '';
   const meta = [
@@ -12165,7 +12188,11 @@ function renderResearchBox(title, item, fieldList) {
     .map(([label, key]) => {
       const value = item[key];
       if (value === undefined || value === null || value === '') return '';
-      if (typeof value === 'object') return `<span class="stock-library-pill">${esc(label)}: ${esc(JSON.stringify(value))}</span>`;
+      if (typeof value === 'object') {
+        const formattedValue = formatStructuredResearchValue(key, value);
+        if (!formattedValue) return '';
+        return `<span class="stock-library-pill">${esc(label)}: ${esc(formattedValue)}</span>`;
+      }
       return `<span class="stock-library-pill">${esc(label)}: ${esc(value)}</span>`;
     })
     .filter(Boolean)
