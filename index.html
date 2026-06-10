@@ -224,6 +224,78 @@ h2 { font-size: 1.15em; margin-bottom: 12px; color: var(--blue); }
 .event-date { color: var(--orange); font-weight: 600; white-space: nowrap; min-width: 75px; }
 .event-name { color: var(--text); }
 .event-themes { color: var(--blue); }
+.stock-search-panel {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px;
+}
+.stock-search-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.stock-search-input {
+  flex: 1;
+  min-width: 220px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: #0d1117;
+  color: var(--text);
+  padding: 9px 10px;
+  font-size: 0.9em;
+  outline: none;
+}
+.stock-search-input:focus { border-color: var(--blue); }
+.stock-search-button {
+  border: 1px solid var(--blue);
+  border-radius: 6px;
+  background: rgba(88,166,255,0.12);
+  color: var(--blue);
+  padding: 8px 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.stock-search-button:hover { background: rgba(88,166,255,0.2); }
+.stock-search-hint {
+  color: var(--text2);
+  font-size: 0.76em;
+  margin-top: 8px;
+}
+.stock-search-result { margin-top: 12px; }
+.stock-library-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 8px;
+}
+.stock-library-box {
+  border: 1px solid rgba(48,54,61,0.8);
+  border-radius: 6px;
+  padding: 10px;
+  background: rgba(13,17,23,0.55);
+  font-size: 0.78em;
+}
+.stock-library-title {
+  color: var(--blue);
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.stock-library-meta {
+  color: var(--text2);
+  font-size: 0.92em;
+  margin-bottom: 4px;
+}
+.stock-library-text { color: var(--text2); }
+.stock-library-pill {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 1px 7px;
+  margin: 1px 2px 1px 0;
+  background: rgba(88,166,255,0.12);
+  color: var(--blue);
+  font-size: 0.86em;
+}
 .footer { text-align: center; color: var(--text2); font-size: 0.7em; margin-top: 30px; padding: 20px 0; border-top: 1px solid var(--border); }
 .collapsible { cursor: pointer; user-select: none; }
 .collapsible:hover { opacity: 0.8; }
@@ -232,6 +304,7 @@ h2 { font-size: 1.15em; margin-bottom: 12px; color: var(--blue); }
 .collapse-icon { font-size: 0.7em; color: var(--text2); margin-left: 4px; }
 @media (max-width: 600px) {
   .detail-grid { grid-template-columns: 1fr; }
+  .stock-library-grid { grid-template-columns: 1fr; }
   body { padding: 12px; }
 }
 </style>
@@ -10993,9 +11066,811 @@ const INLINE_OPEN_DIP = {
         "reason_text": "近220个交易日样本中，次日开盘相对前一交易日收盘低开达到-2.5% 的次数为6，触发概率为0.0273；其中当日收盘重新高于开盘的概率为0.8333。按次日开盘价买入并持有到下一交易日收盘的平均收益为0.7769%，扣除2.0% 买入损耗后的平均净收益为-1.2231%，按触发概率加权后的下一日执行期望为-0.0334%；5日平均净收益为-0.0859%，5日执行期望为-0.0023%，混合执行期望为-0.0132%，下一交易日收盘胜率为0.6667。该结论基于日线 open/close 统计，低吸含义是低开买入，不再假设盘中最低点附近可以成交。",
         "status": "ready"
       }
+    },
+    "002947": {
+      "stock_code": "002947",
+      "stock_name": "恒铭达",
+      "open_dip_buy_signal": {
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -1.5,
+            "trigger_count": 13,
+            "trigger_probability": 0.0591,
+            "same_day_rebound_count": 7,
+            "same_day_rebound_probability": 0.5385,
+            "avg_same_day_close_return_pct": 1.044,
+            "avg_same_day_close_net_return_pct": -0.956,
+            "avg_next_close_return_pct": 2.6969,
+            "avg_next_close_net_return_pct": 0.6969,
+            "execution_expected_return_pct": 0.0412,
+            "swing_execution_expected_return_pct": 0.1814,
+            "blended_execution_expected_return_pct": 0.1323,
+            "next_close_win_rate": 0.6923,
+            "avg_2d_close_return_pct": 3.6236,
+            "avg_2d_close_net_return_pct": 1.6236,
+            "avg_5d_close_return_pct": 5.0694,
+            "avg_5d_close_net_return_pct": 3.0694
+          }
+        ],
+        "entry_cost_pct": 2.0,
+        "min_open_dip_abs_pct": 1.5,
+        "max_open_dip_abs_pct": 5.0,
+        "optimal_open_dip_buy_pct": -1.5,
+        "optimal_next_close_net_return_pct": 0.6969,
+        "optimal_execution_expected_return_pct": 0.0412,
+        "optimal_swing_execution_expected_return_pct": 0.1814,
+        "optimal_blended_execution_expected_return_pct": 0.1323,
+        "optimal_trigger_probability": 0.0591,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，次日开盘相对前一交易日收盘低开达到-1.5% 的次数为13，触发概率为0.0591；其中当日收盘重新高于开盘的概率为0.5385。按次日开盘价买入并持有到下一交易日收盘的平均收益为2.6969%，扣除2.0% 买入损耗后的平均净收益为0.6969%，按触发概率加权后的下一日执行期望为0.0412%；5日平均净收益为3.0694%，5日执行期望为0.1814%，混合执行期望为0.1323%，下一交易日收盘胜率为0.6923。该结论基于日线 open/close 统计，低吸含义是低开买入，不再假设盘中最低点附近可以成交。",
+        "status": "ready"
+      }
+    },
+    "000681": {
+      "stock_code": "000681",
+      "stock_name": "视觉中国",
+      "open_dip_buy_signal": {
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -4.0,
+            "trigger_count": 6,
+            "trigger_probability": 0.0273,
+            "same_day_rebound_count": 2,
+            "same_day_rebound_probability": 0.3333,
+            "avg_same_day_close_return_pct": 3.4228,
+            "avg_same_day_close_net_return_pct": 1.4228,
+            "avg_next_close_return_pct": 2.7732,
+            "avg_next_close_net_return_pct": 0.7732,
+            "execution_expected_return_pct": 0.0211,
+            "swing_execution_expected_return_pct": -0.2129,
+            "blended_execution_expected_return_pct": -0.131,
+            "next_close_win_rate": 0.5,
+            "avg_2d_close_return_pct": -0.7892,
+            "avg_2d_close_net_return_pct": -2.7892,
+            "avg_5d_close_return_pct": -5.8082,
+            "avg_5d_close_net_return_pct": -7.8082
+          }
+        ],
+        "entry_cost_pct": 2.0,
+        "min_open_dip_abs_pct": 1.5,
+        "max_open_dip_abs_pct": 5.0,
+        "optimal_open_dip_buy_pct": -4.0,
+        "optimal_next_close_net_return_pct": 0.7732,
+        "optimal_execution_expected_return_pct": 0.0211,
+        "optimal_swing_execution_expected_return_pct": -0.2129,
+        "optimal_blended_execution_expected_return_pct": -0.131,
+        "optimal_trigger_probability": 0.0273,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，次日开盘相对前一交易日收盘低开达到-4.0% 的次数为6，触发概率为0.0273；其中当日收盘重新高于开盘的概率为0.3333。按次日开盘价买入并持有到下一交易日收盘的平均收益为2.7732%，扣除2.0% 买入损耗后的平均净收益为0.7732%，按触发概率加权后的下一日执行期望为0.0211%；5日平均净收益为-7.8082%，5日执行期望为-0.2129%，混合执行期望为-0.131%，下一交易日收盘胜率为0.5。该结论基于日线 open/close 统计，低吸含义是低开买入，不再假设盘中最低点附近可以成交。",
+        "status": "ready"
+      }
+    },
+    "603005": {
+      "stock_code": "603005",
+      "stock_name": "晶方科技",
+      "open_dip_buy_signal": {
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -3.0,
+            "trigger_count": 5,
+            "trigger_probability": 0.0227,
+            "same_day_rebound_count": 4,
+            "same_day_rebound_probability": 0.8,
+            "avg_same_day_close_return_pct": 3.3141,
+            "avg_same_day_close_net_return_pct": 1.3141,
+            "avg_next_close_return_pct": 4.4774,
+            "avg_next_close_net_return_pct": 2.4774,
+            "execution_expected_return_pct": 0.0563,
+            "swing_execution_expected_return_pct": -0.0469,
+            "blended_execution_expected_return_pct": -0.0108,
+            "next_close_win_rate": 1.0,
+            "avg_2d_close_return_pct": 0.6748,
+            "avg_2d_close_net_return_pct": -1.3252,
+            "avg_5d_close_return_pct": -0.0651,
+            "avg_5d_close_net_return_pct": -2.0651
+          }
+        ],
+        "entry_cost_pct": 2.0,
+        "min_open_dip_abs_pct": 1.5,
+        "max_open_dip_abs_pct": 5.0,
+        "optimal_open_dip_buy_pct": -3.0,
+        "optimal_next_close_net_return_pct": 2.4774,
+        "optimal_execution_expected_return_pct": 0.0563,
+        "optimal_swing_execution_expected_return_pct": -0.0469,
+        "optimal_blended_execution_expected_return_pct": -0.0108,
+        "optimal_trigger_probability": 0.0227,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，次日开盘相对前一交易日收盘低开达到-3.0% 的次数为5，触发概率为0.0227；其中当日收盘重新高于开盘的概率为0.8。按次日开盘价买入并持有到下一交易日收盘的平均收益为4.4774%，扣除2.0% 买入损耗后的平均净收益为2.4774%，按触发概率加权后的下一日执行期望为0.0563%；5日平均净收益为-2.0651%，5日执行期望为-0.0469%，混合执行期望为-0.0108%，下一交易日收盘胜率为1.0。该结论基于日线 open/close 统计，低吸含义是低开买入，不再假设盘中最低点附近可以成交。",
+        "status": "ready"
+      }
+    },
+    "000001": {
+      "stock_code": "000001",
+      "stock_name": "平安银行",
+      "open_dip_buy_signal": {
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -1.5,
+            "trigger_count": 1,
+            "trigger_probability": 0.0045,
+            "same_day_rebound_count": 1,
+            "same_day_rebound_probability": 1.0,
+            "avg_same_day_close_return_pct": 0.5291,
+            "avg_same_day_close_net_return_pct": -1.4709,
+            "avg_next_close_return_pct": 1.7637,
+            "avg_next_close_net_return_pct": -0.2363,
+            "execution_expected_return_pct": -0.0011,
+            "swing_execution_expected_return_pct": -0.0019,
+            "blended_execution_expected_return_pct": -0.0016,
+            "next_close_win_rate": 1.0,
+            "avg_2d_close_return_pct": 0.5291,
+            "avg_2d_close_net_return_pct": -1.4709,
+            "avg_5d_close_return_pct": 1.5873,
+            "avg_5d_close_net_return_pct": -0.4127
+          }
+        ],
+        "entry_cost_pct": 2.0,
+        "min_open_dip_abs_pct": 1.5,
+        "max_open_dip_abs_pct": 5.0,
+        "optimal_open_dip_buy_pct": -1.5,
+        "optimal_next_close_net_return_pct": -0.2363,
+        "optimal_execution_expected_return_pct": -0.0011,
+        "optimal_swing_execution_expected_return_pct": -0.0019,
+        "optimal_blended_execution_expected_return_pct": -0.0016,
+        "optimal_trigger_probability": 0.0045,
+        "confidence_label": "low_sample_statistical",
+        "reason_text": "近220个交易日样本中，次日开盘相对前一交易日收盘低开达到-1.5% 的次数为1，触发概率为0.0045；其中当日收盘重新高于开盘的概率为1.0。按次日开盘价买入并持有到下一交易日收盘的平均收益为1.7637%，扣除2.0% 买入损耗后的平均净收益为-0.2363%，按触发概率加权后的下一日执行期望为-0.0011%；5日平均净收益为-0.4127%，5日执行期望为-0.0019%，混合执行期望为-0.0016%，下一交易日收盘胜率为1.0。该结论基于日线 open/close 统计，低吸含义是低开买入，不再假设盘中最低点附近可以成交。",
+        "status": "ready"
+      }
+    },
+    "000002": {
+      "stock_code": "000002",
+      "stock_name": "万科A",
+      "open_dip_buy_signal": {
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -2.5,
+            "trigger_count": 5,
+            "trigger_probability": 0.0227,
+            "same_day_rebound_count": 3,
+            "same_day_rebound_probability": 0.6,
+            "avg_same_day_close_return_pct": -0.2514,
+            "avg_same_day_close_net_return_pct": -2.2514,
+            "avg_next_close_return_pct": -1.7905,
+            "avg_next_close_net_return_pct": -3.7905,
+            "execution_expected_return_pct": -0.0861,
+            "swing_execution_expected_return_pct": -0.1418,
+            "blended_execution_expected_return_pct": -0.1223,
+            "next_close_win_rate": 0.2,
+            "avg_2d_close_return_pct": -2.2568,
+            "avg_2d_close_net_return_pct": -4.2568,
+            "avg_5d_close_return_pct": -4.2378,
+            "avg_5d_close_net_return_pct": -6.2378
+          }
+        ],
+        "entry_cost_pct": 2.0,
+        "min_open_dip_abs_pct": 1.5,
+        "max_open_dip_abs_pct": 5.0,
+        "optimal_open_dip_buy_pct": -2.5,
+        "optimal_next_close_net_return_pct": -3.7905,
+        "optimal_execution_expected_return_pct": -0.0861,
+        "optimal_swing_execution_expected_return_pct": -0.1418,
+        "optimal_blended_execution_expected_return_pct": -0.1223,
+        "optimal_trigger_probability": 0.0227,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，次日开盘相对前一交易日收盘低开达到-2.5% 的次数为5，触发概率为0.0227；其中当日收盘重新高于开盘的概率为0.6。按次日开盘价买入并持有到下一交易日收盘的平均收益为-1.7905%，扣除2.0% 买入损耗后的平均净收益为-3.7905%，按触发概率加权后的下一日执行期望为-0.0861%；5日平均净收益为-6.2378%，5日执行期望为-0.1418%，混合执行期望为-0.1223%，下一交易日收盘胜率为0.2。该结论基于日线 open/close 统计，低吸含义是低开买入，不再假设盘中最低点附近可以成交。",
+        "status": "ready"
+      }
+    },
+    "000725": {
+      "stock_code": "000725",
+      "stock_name": "京东方A",
+      "open_dip_buy_signal": {
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -2.0,
+            "trigger_count": 1,
+            "trigger_probability": 0.0045,
+            "same_day_rebound_count": 1,
+            "same_day_rebound_probability": 1.0,
+            "avg_same_day_close_return_pct": 0.7353,
+            "avg_same_day_close_net_return_pct": -1.2647,
+            "avg_next_close_return_pct": -0.4902,
+            "avg_next_close_net_return_pct": -2.4902,
+            "execution_expected_return_pct": -0.0113,
+            "swing_execution_expected_return_pct": -0.018,
+            "blended_execution_expected_return_pct": -0.0157,
+            "next_close_win_rate": 0.0,
+            "avg_2d_close_return_pct": 0.4902,
+            "avg_2d_close_net_return_pct": -1.5098,
+            "avg_5d_close_return_pct": -1.9608,
+            "avg_5d_close_net_return_pct": -3.9608
+          }
+        ],
+        "entry_cost_pct": 2.0,
+        "min_open_dip_abs_pct": 1.5,
+        "max_open_dip_abs_pct": 5.0,
+        "optimal_open_dip_buy_pct": -2.0,
+        "optimal_next_close_net_return_pct": -2.4902,
+        "optimal_execution_expected_return_pct": -0.0113,
+        "optimal_swing_execution_expected_return_pct": -0.018,
+        "optimal_blended_execution_expected_return_pct": -0.0157,
+        "optimal_trigger_probability": 0.0045,
+        "confidence_label": "low_sample_statistical",
+        "reason_text": "近220个交易日样本中，次日开盘相对前一交易日收盘低开达到-2.0% 的次数为1，触发概率为0.0045；其中当日收盘重新高于开盘的概率为1.0。按次日开盘价买入并持有到下一交易日收盘的平均收益为-0.4902%，扣除2.0% 买入损耗后的平均净收益为-2.4902%，按触发概率加权后的下一日执行期望为-0.0113%；5日平均净收益为-3.9608%，5日执行期望为-0.018%，混合执行期望为-0.0157%，下一交易日收盘胜率为0.0。该结论基于日线 open/close 统计，低吸含义是低开买入，不再假设盘中最低点附近可以成交。",
+        "status": "ready"
+      }
+    },
+    "002415": {
+      "stock_code": "002415",
+      "stock_name": "海康威视",
+      "open_dip_buy_signal": {
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -2.5,
+            "trigger_count": 1,
+            "trigger_probability": 0.0045,
+            "same_day_rebound_count": 1,
+            "same_day_rebound_probability": 1.0,
+            "avg_same_day_close_return_pct": 1.8626,
+            "avg_same_day_close_net_return_pct": -0.1374,
+            "avg_next_close_return_pct": 1.5267,
+            "avg_next_close_net_return_pct": -0.4733,
+            "execution_expected_return_pct": -0.0022,
+            "swing_execution_expected_return_pct": -0.0145,
+            "blended_execution_expected_return_pct": -0.0102,
+            "next_close_win_rate": 1.0,
+            "avg_2d_close_return_pct": 1.8931,
+            "avg_2d_close_net_return_pct": -0.1069,
+            "avg_5d_close_return_pct": -1.1908,
+            "avg_5d_close_net_return_pct": -3.1908
+          }
+        ],
+        "entry_cost_pct": 2.0,
+        "min_open_dip_abs_pct": 1.5,
+        "max_open_dip_abs_pct": 5.0,
+        "optimal_open_dip_buy_pct": -2.5,
+        "optimal_next_close_net_return_pct": -0.4733,
+        "optimal_execution_expected_return_pct": -0.0022,
+        "optimal_swing_execution_expected_return_pct": -0.0145,
+        "optimal_blended_execution_expected_return_pct": -0.0102,
+        "optimal_trigger_probability": 0.0045,
+        "confidence_label": "low_sample_statistical",
+        "reason_text": "近220个交易日样本中，次日开盘相对前一交易日收盘低开达到-2.5% 的次数为1，触发概率为0.0045；其中当日收盘重新高于开盘的概率为1.0。按次日开盘价买入并持有到下一交易日收盘的平均收益为1.5267%，扣除2.0% 买入损耗后的平均净收益为-0.4733%，按触发概率加权后的下一日执行期望为-0.0022%；5日平均净收益为-3.1908%，5日执行期望为-0.0145%，混合执行期望为-0.0102%，下一交易日收盘胜率为1.0。该结论基于日线 open/close 统计，低吸含义是低开买入，不再假设盘中最低点附近可以成交。",
+        "status": "ready"
+      }
+    },
+    "600019": {
+      "stock_code": "600019",
+      "stock_name": "宝钢股份",
+      "open_dip_buy_signal": {
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -1.5,
+            "trigger_count": 2,
+            "trigger_probability": 0.0091,
+            "same_day_rebound_count": 2,
+            "same_day_rebound_probability": 1.0,
+            "avg_same_day_close_return_pct": 1.419,
+            "avg_same_day_close_net_return_pct": -0.581,
+            "avg_next_close_return_pct": 0.4843,
+            "avg_next_close_net_return_pct": -1.5157,
+            "execution_expected_return_pct": -0.0138,
+            "swing_execution_expected_return_pct": 0.0084,
+            "blended_execution_expected_return_pct": 0.0007,
+            "next_close_win_rate": 0.5,
+            "avg_2d_close_return_pct": 1.9428,
+            "avg_2d_close_net_return_pct": -0.0572,
+            "avg_5d_close_return_pct": 2.927,
+            "avg_5d_close_net_return_pct": 0.927
+          }
+        ],
+        "entry_cost_pct": 2.0,
+        "min_open_dip_abs_pct": 1.5,
+        "max_open_dip_abs_pct": 5.0,
+        "optimal_open_dip_buy_pct": -1.5,
+        "optimal_next_close_net_return_pct": -1.5157,
+        "optimal_execution_expected_return_pct": -0.0138,
+        "optimal_swing_execution_expected_return_pct": 0.0084,
+        "optimal_blended_execution_expected_return_pct": 0.0007,
+        "optimal_trigger_probability": 0.0091,
+        "confidence_label": "low_sample_statistical",
+        "reason_text": "近220个交易日样本中，次日开盘相对前一交易日收盘低开达到-1.5% 的次数为2，触发概率为0.0091；其中当日收盘重新高于开盘的概率为1.0。按次日开盘价买入并持有到下一交易日收盘的平均收益为0.4843%，扣除2.0% 买入损耗后的平均净收益为-1.5157%，按触发概率加权后的下一日执行期望为-0.0138%；5日平均净收益为0.927%，5日执行期望为0.0084%，混合执行期望为0.0007%，下一交易日收盘胜率为0.5。该结论基于日线 open/close 统计，低吸含义是低开买入，不再假设盘中最低点附近可以成交。",
+        "status": "ready"
+      }
+    },
+    "600048": {
+      "stock_code": "600048",
+      "stock_name": "保利发展",
+      "open_dip_buy_signal": {
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -1.5,
+            "trigger_count": 5,
+            "trigger_probability": 0.0227,
+            "same_day_rebound_count": 2,
+            "same_day_rebound_probability": 0.4,
+            "avg_same_day_close_return_pct": -0.2003,
+            "avg_same_day_close_net_return_pct": -2.2003,
+            "avg_next_close_return_pct": 0.4663,
+            "avg_next_close_net_return_pct": -1.5337,
+            "execution_expected_return_pct": -0.0349,
+            "swing_execution_expected_return_pct": -0.0108,
+            "blended_execution_expected_return_pct": -0.0192,
+            "next_close_win_rate": 0.6,
+            "avg_2d_close_return_pct": 1.8061,
+            "avg_2d_close_net_return_pct": -0.1939,
+            "avg_5d_close_return_pct": 1.5254,
+            "avg_5d_close_net_return_pct": -0.4746
+          }
+        ],
+        "entry_cost_pct": 2.0,
+        "min_open_dip_abs_pct": 1.5,
+        "max_open_dip_abs_pct": 5.0,
+        "optimal_open_dip_buy_pct": -1.5,
+        "optimal_next_close_net_return_pct": -1.5337,
+        "optimal_execution_expected_return_pct": -0.0349,
+        "optimal_swing_execution_expected_return_pct": -0.0108,
+        "optimal_blended_execution_expected_return_pct": -0.0192,
+        "optimal_trigger_probability": 0.0227,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，次日开盘相对前一交易日收盘低开达到-1.5% 的次数为5，触发概率为0.0227；其中当日收盘重新高于开盘的概率为0.4。按次日开盘价买入并持有到下一交易日收盘的平均收益为0.4663%，扣除2.0% 买入损耗后的平均净收益为-1.5337%，按触发概率加权后的下一日执行期望为-0.0349%；5日平均净收益为-0.4746%，5日执行期望为-0.0108%，混合执行期望为-0.0192%，下一交易日收盘胜率为0.6。该结论基于日线 open/close 统计，低吸含义是低开买入，不再假设盘中最低点附近可以成交。",
+        "status": "ready"
+      }
+    },
+    "600050": {
+      "stock_code": "600050",
+      "stock_name": "中国联通",
+      "open_dip_buy_signal": {
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -2.0,
+            "trigger_count": 2,
+            "trigger_probability": 0.0091,
+            "same_day_rebound_count": 1,
+            "same_day_rebound_probability": 0.5,
+            "avg_same_day_close_return_pct": -0.2091,
+            "avg_same_day_close_net_return_pct": -2.2092,
+            "avg_next_close_return_pct": -0.5025,
+            "avg_next_close_net_return_pct": -2.5025,
+            "execution_expected_return_pct": -0.0228,
+            "swing_execution_expected_return_pct": -0.0224,
+            "blended_execution_expected_return_pct": -0.0225,
+            "next_close_win_rate": 0.5,
+            "avg_2d_close_return_pct": 0.0058,
+            "avg_2d_close_net_return_pct": -1.9942,
+            "avg_5d_close_return_pct": -0.4661,
+            "avg_5d_close_net_return_pct": -2.4661
+          }
+        ],
+        "entry_cost_pct": 2.0,
+        "min_open_dip_abs_pct": 1.5,
+        "max_open_dip_abs_pct": 5.0,
+        "optimal_open_dip_buy_pct": -2.0,
+        "optimal_next_close_net_return_pct": -2.5025,
+        "optimal_execution_expected_return_pct": -0.0228,
+        "optimal_swing_execution_expected_return_pct": -0.0224,
+        "optimal_blended_execution_expected_return_pct": -0.0225,
+        "optimal_trigger_probability": 0.0091,
+        "confidence_label": "low_sample_statistical",
+        "reason_text": "近220个交易日样本中，次日开盘相对前一交易日收盘低开达到-2.0% 的次数为2，触发概率为0.0091；其中当日收盘重新高于开盘的概率为0.5。按次日开盘价买入并持有到下一交易日收盘的平均收益为-0.5025%，扣除2.0% 买入损耗后的平均净收益为-2.5025%，按触发概率加权后的下一日执行期望为-0.0228%；5日平均净收益为-2.4661%，5日执行期望为-0.0224%，混合执行期望为-0.0225%，下一交易日收盘胜率为0.5。该结论基于日线 open/close 统计，低吸含义是低开买入，不再假设盘中最低点附近可以成交。",
+        "status": "ready"
+      }
+    },
+    "600115": {
+      "stock_code": "600115",
+      "stock_name": "中国东航",
+      "open_dip_buy_signal": {
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -2.0,
+            "trigger_count": 8,
+            "trigger_probability": 0.0364,
+            "same_day_rebound_count": 5,
+            "same_day_rebound_probability": 0.625,
+            "avg_same_day_close_return_pct": 0.6506,
+            "avg_same_day_close_net_return_pct": -1.3494,
+            "avg_next_close_return_pct": 0.3521,
+            "avg_next_close_net_return_pct": -1.6479,
+            "execution_expected_return_pct": -0.0599,
+            "swing_execution_expected_return_pct": -0.1157,
+            "blended_execution_expected_return_pct": -0.0962,
+            "next_close_win_rate": 0.5,
+            "avg_2d_close_return_pct": 1.0548,
+            "avg_2d_close_net_return_pct": -0.9452,
+            "avg_5d_close_return_pct": -1.1807,
+            "avg_5d_close_net_return_pct": -3.1807
+          }
+        ],
+        "entry_cost_pct": 2.0,
+        "min_open_dip_abs_pct": 1.5,
+        "max_open_dip_abs_pct": 5.0,
+        "optimal_open_dip_buy_pct": -2.0,
+        "optimal_next_close_net_return_pct": -1.6479,
+        "optimal_execution_expected_return_pct": -0.0599,
+        "optimal_swing_execution_expected_return_pct": -0.1157,
+        "optimal_blended_execution_expected_return_pct": -0.0962,
+        "optimal_trigger_probability": 0.0364,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，次日开盘相对前一交易日收盘低开达到-2.0% 的次数为8，触发概率为0.0364；其中当日收盘重新高于开盘的概率为0.625。按次日开盘价买入并持有到下一交易日收盘的平均收益为0.3521%，扣除2.0% 买入损耗后的平均净收益为-1.6479%，按触发概率加权后的下一日执行期望为-0.0599%；5日平均净收益为-3.1807%，5日执行期望为-0.1157%，混合执行期望为-0.0962%，下一交易日收盘胜率为0.5。该结论基于日线 open/close 统计，低吸含义是低开买入，不再假设盘中最低点附近可以成交。",
+        "status": "ready"
+      }
+    },
+    "600426": {
+      "stock_code": "600426",
+      "stock_name": "华鲁恒升",
+      "open_dip_buy_signal": {
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -2.5,
+            "trigger_count": 5,
+            "trigger_probability": 0.0227,
+            "same_day_rebound_count": 3,
+            "same_day_rebound_probability": 0.6,
+            "avg_same_day_close_return_pct": 1.414,
+            "avg_same_day_close_net_return_pct": -0.586,
+            "avg_next_close_return_pct": 3.231,
+            "avg_next_close_net_return_pct": 1.231,
+            "execution_expected_return_pct": 0.028,
+            "swing_execution_expected_return_pct": -0.0985,
+            "blended_execution_expected_return_pct": -0.0543,
+            "next_close_win_rate": 0.6,
+            "avg_2d_close_return_pct": 2.0321,
+            "avg_2d_close_net_return_pct": 0.0321,
+            "avg_5d_close_return_pct": -2.3357,
+            "avg_5d_close_net_return_pct": -4.3357
+          }
+        ],
+        "entry_cost_pct": 2.0,
+        "min_open_dip_abs_pct": 1.5,
+        "max_open_dip_abs_pct": 5.0,
+        "optimal_open_dip_buy_pct": -2.5,
+        "optimal_next_close_net_return_pct": 1.231,
+        "optimal_execution_expected_return_pct": 0.028,
+        "optimal_swing_execution_expected_return_pct": -0.0985,
+        "optimal_blended_execution_expected_return_pct": -0.0543,
+        "optimal_trigger_probability": 0.0227,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，次日开盘相对前一交易日收盘低开达到-2.5% 的次数为5，触发概率为0.0227；其中当日收盘重新高于开盘的概率为0.6。按次日开盘价买入并持有到下一交易日收盘的平均收益为3.231%，扣除2.0% 买入损耗后的平均净收益为1.231%，按触发概率加权后的下一日执行期望为0.028%；5日平均净收益为-4.3357%，5日执行期望为-0.0985%，混合执行期望为-0.0543%，下一交易日收盘胜率为0.6。该结论基于日线 open/close 统计，低吸含义是低开买入，不再假设盘中最低点附近可以成交。",
+        "status": "ready"
+      }
+    },
+    "600941": {
+      "stock_code": "600941",
+      "stock_name": "中国移动",
+      "open_dip_buy_signal": {
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -2.5,
+            "trigger_count": 1,
+            "trigger_probability": 0.0045,
+            "same_day_rebound_count": 0,
+            "same_day_rebound_probability": 0.0,
+            "avg_same_day_close_return_pct": -0.4726,
+            "avg_same_day_close_net_return_pct": -2.4726,
+            "avg_next_close_return_pct": -1.1063,
+            "avg_next_close_net_return_pct": -3.1063,
+            "execution_expected_return_pct": -0.0141,
+            "swing_execution_expected_return_pct": -0.0035,
+            "blended_execution_expected_return_pct": -0.0072,
+            "next_close_win_rate": 0.0,
+            "avg_2d_close_return_pct": 1.9656,
+            "avg_2d_close_net_return_pct": -0.0344,
+            "avg_5d_close_return_pct": 1.2245,
+            "avg_5d_close_net_return_pct": -0.7755
+          }
+        ],
+        "entry_cost_pct": 2.0,
+        "min_open_dip_abs_pct": 1.5,
+        "max_open_dip_abs_pct": 5.0,
+        "optimal_open_dip_buy_pct": -2.5,
+        "optimal_next_close_net_return_pct": -3.1063,
+        "optimal_execution_expected_return_pct": -0.0141,
+        "optimal_swing_execution_expected_return_pct": -0.0035,
+        "optimal_blended_execution_expected_return_pct": -0.0072,
+        "optimal_trigger_probability": 0.0045,
+        "confidence_label": "low_sample_statistical",
+        "reason_text": "近220个交易日样本中，次日开盘相对前一交易日收盘低开达到-2.5% 的次数为1，触发概率为0.0045；其中当日收盘重新高于开盘的概率为0.0。按次日开盘价买入并持有到下一交易日收盘的平均收益为-1.1063%，扣除2.0% 买入损耗后的平均净收益为-3.1063%，按触发概率加权后的下一日执行期望为-0.0141%；5日平均净收益为-0.7755%，5日执行期望为-0.0035%，混合执行期望为-0.0072%，下一交易日收盘胜率为0.0。该结论基于日线 open/close 统计，低吸含义是低开买入，不再假设盘中最低点附近可以成交。",
+        "status": "ready"
+      }
+    },
+    "601012": {
+      "stock_code": "601012",
+      "stock_name": "隆基绿能",
+      "open_dip_buy_signal": {
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -1.5,
+            "trigger_count": 12,
+            "trigger_probability": 0.0545,
+            "same_day_rebound_count": 7,
+            "same_day_rebound_probability": 0.5833,
+            "avg_same_day_close_return_pct": 0.3813,
+            "avg_same_day_close_net_return_pct": -1.6187,
+            "avg_next_close_return_pct": 0.3471,
+            "avg_next_close_net_return_pct": -1.6529,
+            "execution_expected_return_pct": -0.0902,
+            "swing_execution_expected_return_pct": -0.0302,
+            "blended_execution_expected_return_pct": -0.0512,
+            "next_close_win_rate": 0.75,
+            "avg_2d_close_return_pct": 1.6039,
+            "avg_2d_close_net_return_pct": -0.3961,
+            "avg_5d_close_return_pct": 1.4468,
+            "avg_5d_close_net_return_pct": -0.5532
+          }
+        ],
+        "entry_cost_pct": 2.0,
+        "min_open_dip_abs_pct": 1.5,
+        "max_open_dip_abs_pct": 5.0,
+        "optimal_open_dip_buy_pct": -1.5,
+        "optimal_next_close_net_return_pct": -1.6529,
+        "optimal_execution_expected_return_pct": -0.0902,
+        "optimal_swing_execution_expected_return_pct": -0.0302,
+        "optimal_blended_execution_expected_return_pct": -0.0512,
+        "optimal_trigger_probability": 0.0545,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，次日开盘相对前一交易日收盘低开达到-1.5% 的次数为12，触发概率为0.0545；其中当日收盘重新高于开盘的概率为0.5833。按次日开盘价买入并持有到下一交易日收盘的平均收益为0.3471%，扣除2.0% 买入损耗后的平均净收益为-1.6529%，按触发概率加权后的下一日执行期望为-0.0902%；5日平均净收益为-0.5532%，5日执行期望为-0.0302%，混合执行期望为-0.0512%，下一交易日收盘胜率为0.75。该结论基于日线 open/close 统计，低吸含义是低开买入，不再假设盘中最低点附近可以成交。",
+        "status": "ready"
+      }
+    },
+    "601186": {
+      "stock_code": "601186",
+      "stock_name": "中国铁建",
+      "open_dip_buy_signal": {
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -1.5,
+            "trigger_count": 1,
+            "trigger_probability": 0.0045,
+            "same_day_rebound_count": 1,
+            "same_day_rebound_probability": 1.0,
+            "avg_same_day_close_return_pct": 3.8915,
+            "avg_same_day_close_net_return_pct": 1.8915,
+            "avg_next_close_return_pct": -0.5896,
+            "avg_next_close_net_return_pct": -2.5896,
+            "execution_expected_return_pct": -0.0118,
+            "swing_execution_expected_return_pct": -0.0252,
+            "blended_execution_expected_return_pct": -0.0205,
+            "next_close_win_rate": 0.0,
+            "avg_2d_close_return_pct": -0.2358,
+            "avg_2d_close_net_return_pct": -2.2358,
+            "avg_5d_close_return_pct": -3.5377,
+            "avg_5d_close_net_return_pct": -5.5377
+          }
+        ],
+        "entry_cost_pct": 2.0,
+        "min_open_dip_abs_pct": 1.5,
+        "max_open_dip_abs_pct": 5.0,
+        "optimal_open_dip_buy_pct": -1.5,
+        "optimal_next_close_net_return_pct": -2.5896,
+        "optimal_execution_expected_return_pct": -0.0118,
+        "optimal_swing_execution_expected_return_pct": -0.0252,
+        "optimal_blended_execution_expected_return_pct": -0.0205,
+        "optimal_trigger_probability": 0.0045,
+        "confidence_label": "low_sample_statistical",
+        "reason_text": "近220个交易日样本中，次日开盘相对前一交易日收盘低开达到-1.5% 的次数为1，触发概率为0.0045；其中当日收盘重新高于开盘的概率为1.0。按次日开盘价买入并持有到下一交易日收盘的平均收益为-0.5896%，扣除2.0% 买入损耗后的平均净收益为-2.5896%，按触发概率加权后的下一日执行期望为-0.0118%；5日平均净收益为-5.5377%，5日执行期望为-0.0252%，混合执行期望为-0.0205%，下一交易日收盘胜率为0.0。该结论基于日线 open/close 统计，低吸含义是低开买入，不再假设盘中最低点附近可以成交。",
+        "status": "ready"
+      }
+    },
+    "601618": {
+      "stock_code": "601618",
+      "stock_name": "中国中冶",
+      "open_dip_buy_signal": {
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -1.5,
+            "trigger_count": 8,
+            "trigger_probability": 0.0364,
+            "same_day_rebound_count": 4,
+            "same_day_rebound_probability": 0.5,
+            "avg_same_day_close_return_pct": -0.8414,
+            "avg_same_day_close_net_return_pct": -2.8414,
+            "avg_next_close_return_pct": -2.267,
+            "avg_next_close_net_return_pct": -4.267,
+            "execution_expected_return_pct": -0.1552,
+            "swing_execution_expected_return_pct": -0.2251,
+            "blended_execution_expected_return_pct": -0.2006,
+            "next_close_win_rate": 0.25,
+            "avg_2d_close_return_pct": -2.7403,
+            "avg_2d_close_net_return_pct": -4.7403,
+            "avg_5d_close_return_pct": -4.1902,
+            "avg_5d_close_net_return_pct": -6.1902
+          }
+        ],
+        "entry_cost_pct": 2.0,
+        "min_open_dip_abs_pct": 1.5,
+        "max_open_dip_abs_pct": 5.0,
+        "optimal_open_dip_buy_pct": -1.5,
+        "optimal_next_close_net_return_pct": -4.267,
+        "optimal_execution_expected_return_pct": -0.1552,
+        "optimal_swing_execution_expected_return_pct": -0.2251,
+        "optimal_blended_execution_expected_return_pct": -0.2006,
+        "optimal_trigger_probability": 0.0364,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，次日开盘相对前一交易日收盘低开达到-1.5% 的次数为8，触发概率为0.0364；其中当日收盘重新高于开盘的概率为0.5。按次日开盘价买入并持有到下一交易日收盘的平均收益为-2.267%，扣除2.0% 买入损耗后的平均净收益为-4.267%，按触发概率加权后的下一日执行期望为-0.1552%；5日平均净收益为-6.1902%，5日执行期望为-0.2251%，混合执行期望为-0.2006%，下一交易日收盘胜率为0.25。该结论基于日线 open/close 统计，低吸含义是低开买入，不再假设盘中最低点附近可以成交。",
+        "status": "ready"
+      }
+    },
+    "601669": {
+      "stock_code": "601669",
+      "stock_name": "中国电建",
+      "open_dip_buy_signal": {
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -1.5,
+            "trigger_count": 10,
+            "trigger_probability": 0.0455,
+            "same_day_rebound_count": 5,
+            "same_day_rebound_probability": 0.5,
+            "avg_same_day_close_return_pct": 0.1095,
+            "avg_same_day_close_net_return_pct": -1.8905,
+            "avg_next_close_return_pct": 0.3727,
+            "avg_next_close_net_return_pct": -1.6273,
+            "execution_expected_return_pct": -0.074,
+            "swing_execution_expected_return_pct": -0.0748,
+            "blended_execution_expected_return_pct": -0.0745,
+            "next_close_win_rate": 0.4,
+            "avg_2d_close_return_pct": 0.4895,
+            "avg_2d_close_net_return_pct": -1.5105,
+            "avg_5d_close_return_pct": 0.3547,
+            "avg_5d_close_net_return_pct": -1.6453
+          }
+        ],
+        "entry_cost_pct": 2.0,
+        "min_open_dip_abs_pct": 1.5,
+        "max_open_dip_abs_pct": 5.0,
+        "optimal_open_dip_buy_pct": -1.5,
+        "optimal_next_close_net_return_pct": -1.6273,
+        "optimal_execution_expected_return_pct": -0.074,
+        "optimal_swing_execution_expected_return_pct": -0.0748,
+        "optimal_blended_execution_expected_return_pct": -0.0745,
+        "optimal_trigger_probability": 0.0455,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，次日开盘相对前一交易日收盘低开达到-1.5% 的次数为10，触发概率为0.0455；其中当日收盘重新高于开盘的概率为0.5。按次日开盘价买入并持有到下一交易日收盘的平均收益为0.3727%，扣除2.0% 买入损耗后的平均净收益为-1.6273%，按触发概率加权后的下一日执行期望为-0.074%；5日平均净收益为-1.6453%，5日执行期望为-0.0748%，混合执行期望为-0.0745%，下一交易日收盘胜率为0.4。该结论基于日线 open/close 统计，低吸含义是低开买入，不再假设盘中最低点附近可以成交。",
+        "status": "ready"
+      }
+    },
+    "601728": {
+      "stock_code": "601728",
+      "stock_name": "中国电信",
+      "open_dip_buy_signal": {
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -3.0,
+            "trigger_count": 1,
+            "trigger_probability": 0.0045,
+            "same_day_rebound_count": 0,
+            "same_day_rebound_probability": 0.0,
+            "avg_same_day_close_return_pct": -1.0345,
+            "avg_same_day_close_net_return_pct": -3.0345,
+            "avg_next_close_return_pct": -2.4138,
+            "avg_next_close_net_return_pct": -4.4138,
+            "execution_expected_return_pct": -0.0201,
+            "swing_execution_expected_return_pct": -0.0122,
+            "blended_execution_expected_return_pct": -0.015,
+            "next_close_win_rate": 0.0,
+            "avg_2d_close_return_pct": -0.8621,
+            "avg_2d_close_net_return_pct": -2.8621,
+            "avg_5d_close_return_pct": -0.6897,
+            "avg_5d_close_net_return_pct": -2.6897
+          }
+        ],
+        "entry_cost_pct": 2.0,
+        "min_open_dip_abs_pct": 1.5,
+        "max_open_dip_abs_pct": 5.0,
+        "optimal_open_dip_buy_pct": -3.0,
+        "optimal_next_close_net_return_pct": -4.4138,
+        "optimal_execution_expected_return_pct": -0.0201,
+        "optimal_swing_execution_expected_return_pct": -0.0122,
+        "optimal_blended_execution_expected_return_pct": -0.015,
+        "optimal_trigger_probability": 0.0045,
+        "confidence_label": "low_sample_statistical",
+        "reason_text": "近220个交易日样本中，次日开盘相对前一交易日收盘低开达到-3.0% 的次数为1，触发概率为0.0045；其中当日收盘重新高于开盘的概率为0.0。按次日开盘价买入并持有到下一交易日收盘的平均收益为-2.4138%，扣除2.0% 买入损耗后的平均净收益为-4.4138%，按触发概率加权后的下一日执行期望为-0.0201%；5日平均净收益为-2.6897%，5日执行期望为-0.0122%，混合执行期望为-0.015%，下一交易日收盘胜率为0.0。该结论基于日线 open/close 统计，低吸含义是低开买入，不再假设盘中最低点附近可以成交。",
+        "status": "ready"
+      }
+    },
+    "601985": {
+      "stock_code": "601985",
+      "stock_name": "中国核电",
+      "open_dip_buy_signal": {
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -1.5,
+            "trigger_count": 0,
+            "trigger_probability": 0.0,
+            "same_day_rebound_count": 0,
+            "same_day_rebound_probability": 0.0,
+            "avg_same_day_close_return_pct": 0.0,
+            "avg_same_day_close_net_return_pct": null,
+            "avg_next_close_return_pct": 0.0,
+            "avg_next_close_net_return_pct": null,
+            "execution_expected_return_pct": null,
+            "swing_execution_expected_return_pct": null,
+            "blended_execution_expected_return_pct": null,
+            "next_close_win_rate": 0.0,
+            "avg_2d_close_return_pct": 0.0,
+            "avg_2d_close_net_return_pct": null,
+            "avg_5d_close_return_pct": 0.0,
+            "avg_5d_close_net_return_pct": null
+          }
+        ],
+        "entry_cost_pct": 2.0,
+        "min_open_dip_abs_pct": 1.5,
+        "max_open_dip_abs_pct": 5.0,
+        "optimal_open_dip_buy_pct": -1.5,
+        "optimal_next_close_net_return_pct": null,
+        "optimal_execution_expected_return_pct": null,
+        "optimal_swing_execution_expected_return_pct": null,
+        "optimal_blended_execution_expected_return_pct": null,
+        "optimal_trigger_probability": 0.0,
+        "confidence_label": "fallback",
+        "reason_text": "过去样本中没有触发候选低吸阈值，暂不形成统计结论。",
+        "status": "ready"
+      }
+    },
+    "603931": {
+      "stock_code": "603931",
+      "stock_name": "格林达",
+      "open_dip_buy_signal": {
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -2.5,
+            "trigger_count": 8,
+            "trigger_probability": 0.0364,
+            "same_day_rebound_count": 7,
+            "same_day_rebound_probability": 0.875,
+            "avg_same_day_close_return_pct": 2.723,
+            "avg_same_day_close_net_return_pct": 0.723,
+            "avg_next_close_return_pct": 3.5137,
+            "avg_next_close_net_return_pct": 1.5137,
+            "execution_expected_return_pct": 0.055,
+            "swing_execution_expected_return_pct": 0.481,
+            "blended_execution_expected_return_pct": 0.3319,
+            "next_close_win_rate": 0.75,
+            "avg_2d_close_return_pct": 7.0441,
+            "avg_2d_close_net_return_pct": 5.0441,
+            "avg_5d_close_return_pct": 15.2286,
+            "avg_5d_close_net_return_pct": 13.2286
+          }
+        ],
+        "entry_cost_pct": 2.0,
+        "min_open_dip_abs_pct": 1.5,
+        "max_open_dip_abs_pct": 5.0,
+        "optimal_open_dip_buy_pct": -2.5,
+        "optimal_next_close_net_return_pct": 1.5137,
+        "optimal_execution_expected_return_pct": 0.055,
+        "optimal_swing_execution_expected_return_pct": 0.481,
+        "optimal_blended_execution_expected_return_pct": 0.3319,
+        "optimal_trigger_probability": 0.0364,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，次日开盘相对前一交易日收盘低开达到-2.5% 的次数为8，触发概率为0.0364；其中当日收盘重新高于开盘的概率为0.875。按次日开盘价买入并持有到下一交易日收盘的平均收益为3.5137%，扣除2.0% 买入损耗后的平均净收益为1.5137%，按触发概率加权后的下一日执行期望为0.055%；5日平均净收益为13.2286%，5日执行期望为0.481%，混合执行期望为0.3319%，下一交易日收盘胜率为0.75。该结论基于日线 open/close 统计，低吸含义是低开买入，不再假设盘中最低点附近可以成交。",
+        "status": "ready"
+      }
     }
   }
 };
+
+const STATIC_STOCK_LIBRARY_URL = 'data/stock_static_library.json';
 
 async function loadJSON(url) {
   try {
@@ -11078,6 +11953,12 @@ function findOpenDipSignal(stockCode, openDipData) {
   const db = openDipData && openDipData.open_dip_buy_db ? openDipData.open_dip_buy_db : {};
   const record = db[String(stockCode || '').trim()] || {};
   return record.open_dip_buy_signal || record;
+}
+
+function findStopLossSignal(stockCode, stopLossData) {
+  const db = stopLossData && stopLossData.intraday_stop_loss_db ? stopLossData.intraday_stop_loss_db : {};
+  const record = db[String(stockCode || '').trim()] || {};
+  return record.intraday_stop_loss_signal || null;
 }
 
 function buildOpenDipReasonText(signal, stat) {
@@ -11195,13 +12076,228 @@ function renderTargetPriceJudgment(judgment, calculatorSignal) {
   `;
 }
 
-function renderStock(stock, openDipData) {
+function normalizeSearchText(value) {
+  return String(value || '').trim().toLowerCase();
+}
+
+function getCanSlimDb(staticLibraryData) {
+  return staticLibraryData && staticLibraryData.can_slim_research_db
+    ? staticLibraryData.can_slim_research_db
+    : {};
+}
+
+function getStopLossDb(staticLibraryData) {
+  return staticLibraryData && staticLibraryData.intraday_stop_loss_db
+    ? staticLibraryData.intraday_stop_loss_db
+    : {};
+}
+
+function getOpenDipDb(staticLibraryData, fallbackOpenDipData) {
+  if (staticLibraryData && staticLibraryData.open_dip_buy_db) return staticLibraryData.open_dip_buy_db;
+  return fallbackOpenDipData && fallbackOpenDipData.open_dip_buy_db ? fallbackOpenDipData.open_dip_buy_db : {};
+}
+
+function buildStaticLibraryFallback(selected, openDipData) {
+  const fallback = {
+    generated_at: '',
+    open_dip_buy_db: openDipData && openDipData.open_dip_buy_db ? openDipData.open_dip_buy_db : {},
+    intraday_stop_loss_db: {},
+    can_slim_research_db: {},
+  };
+  (selected || []).forEach(stock => {
+    const code = String(stock.stock_code || '').trim();
+    if (!code) return;
+    if (stock.intraday_stop_loss_signal) {
+      fallback.intraday_stop_loss_db[code] = {
+        stock_code: code,
+        stock_name: stock.stock_name,
+        intraday_stop_loss_signal: stock.intraday_stop_loss_signal,
+      };
+    }
+  });
+  return fallback;
+}
+
+function buildSearchLibrary(root, staticLibraryData, openDipData) {
+  const searchMap = {};
+  function ensureStock(stockCode, stockName) {
+    const code = String(stockCode || '').trim();
+    if (!code) return null;
+    if (!searchMap[code]) {
+      searchMap[code] = { stock_code: code, stock_name: stockName || '', top_stock: null };
+    }
+    if (stockName && !searchMap[code].stock_name) searchMap[code].stock_name = stockName;
+    return searchMap[code];
+  }
+  (root.selected_top_8 || []).forEach(stock => {
+    const item = ensureStock(stock.stock_code, stock.stock_name);
+    if (item) item.top_stock = stock;
+  });
+  Object.entries(getOpenDipDb(staticLibraryData, openDipData)).forEach(([code, record]) => {
+    const item = ensureStock(code, record.stock_name || (record.open_dip_buy_signal || {}).stock_name);
+    if (item) item.open_dip_record = record;
+  });
+  Object.entries(getStopLossDb(staticLibraryData)).forEach(([code, record]) => {
+    const item = ensureStock(code, record.stock_name || (record.intraday_stop_loss_signal || {}).stock_name);
+    if (item) item.stop_loss_record = record;
+  });
+  Object.entries(getCanSlimDb(staticLibraryData)).forEach(([code, record]) => {
+    const item = ensureStock(code, record.stock_name);
+    if (item) item.can_slim_record = record;
+  });
+  return searchMap;
+}
+
+function findStockInSearchLibrary(query, searchLibrary) {
+  const q = normalizeSearchText(query);
+  if (!q) return null;
+  if (searchLibrary[q]) return searchLibrary[q];
+  const stockList = Object.values(searchLibrary);
+  return stockList.find(item => normalizeSearchText(item.stock_name) === q)
+    || stockList.find(item => normalizeSearchText(item.stock_code).includes(q))
+    || stockList.find(item => normalizeSearchText(item.stock_name).includes(q))
+    || null;
+}
+
+function renderResearchBox(title, item, fieldList) {
+  if (!item) return '';
+  const meta = [
+    item.source_result_date ? `调研日 ${item.source_result_date}` : '',
+    item.updated_at ? `更新 ${item.updated_at}` : '',
+    item.label ? `标签 ${item.label}` : '',
+  ].filter(Boolean).join(' · ');
+  const fieldText = fieldList
+    .map(([label, key]) => {
+      const value = item[key];
+      if (value === undefined || value === null || value === '') return '';
+      if (typeof value === 'object') return `<span class="stock-library-pill">${esc(label)}: ${esc(JSON.stringify(value))}</span>`;
+      return `<span class="stock-library-pill">${esc(label)}: ${esc(value)}</span>`;
+    })
+    .filter(Boolean)
+    .join('');
+  return `
+    <div class="stock-library-box">
+      <div class="stock-library-title">${esc(title)}</div>
+      ${meta ? `<div class="stock-library-meta">${esc(meta)}</div>` : ''}
+      ${fieldText ? `<div>${fieldText}</div>` : ''}
+      ${item.reason_text ? `<div class="stock-library-text" style="margin-top:5px">${esc(item.reason_text)}</div>` : ''}
+    </div>`;
+}
+
+function renderStaticSearchResult(record) {
+  if (!record) {
+    return '<div class="stock-library-box">没有找到这只股票。可以确认代码是否已加入 stock DB，并重新发布静态库。</div>';
+  }
+  const stock = record.top_stock || {};
+  const canSlim = record.can_slim_record || {};
+  const institutional = canSlim.institutional_sponsorship || {};
+  const targetView = institutional.institutional_target_price_view || {};
+  const stopSignal = (record.stop_loss_record || {}).intraday_stop_loss_signal || stock.intraday_stop_loss_signal || null;
+  const openDipSignal = (record.open_dip_record || {}).open_dip_buy_signal || null;
+  const topStatus = stock.stock_code
+    ? `最新 TOP8 第 ${stock.final_rank || '-'} 名 · ${stock.primary_theme || ''}`
+    : '不在最新 TOP8，展示静态调研库资料';
+  const expertRange = targetView.expert_target_price_range || {};
+  return `
+    <div class="stock-library-box">
+      <div class="card-header" style="margin-bottom:6px">
+        <span class="stock-name">${esc(record.stock_name || stock.stock_name || '-')}</span>
+        <span class="stock-code">${esc(record.stock_code)}</span>
+        <span class="score-badge ${stock.stock_code ? 'score-high' : 'score-mid'}">${esc(topStatus)}</span>
+      </div>
+      ${stock.target_price_judgment || stock.oneil_calculator_signal ? renderTargetPriceJudgment(stock.target_price_judgment, stock.oneil_calculator_signal) : ''}
+      ${!stock.target_price_judgment && targetView ? `
+        <div class="target-price-box">
+          <div class="target-price-title">投研团队目标区间 · ${esc(targetView.evidence_freshness_label || 'insufficient_data')}</div>
+          <div>${formatTargetRange(expertRange)}</div>
+          ${targetView.source_name ? `<div class="target-price-meta">来源: ${esc(targetView.source_name)} · ${esc(targetView.source_observed_at || '')}</div>` : ''}
+          ${targetView.reason_text ? `<div class="target-price-meta">${esc(targetView.reason_text)}</div>` : ''}
+        </div>` : ''}
+      ${renderOpenDipSignal({stock_code: record.stock_code}, {open_dip_buy_db: {[record.stock_code]: {open_dip_buy_signal: openDipSignal}}})}
+      ${renderIntradayStopLoss(stopSignal)}
+    </div>
+    <div class="stock-library-grid">
+      ${renderResearchBox('C 当前业绩', canSlim.current_earnings, [
+        ['营收增速', 'latest_revenue_growth'],
+        ['利润增速', 'latest_profit_growth'],
+        ['扣非增速', 'deducted_profit_growth'],
+        ['现金流/利润', 'operating_cashflow_to_profit_ratio'],
+      ])}
+      ${renderResearchBox('A 年度成长', canSlim.annual_growth, [
+        ['营收CAGR', 'revenue_cagr_3y'],
+        ['净利CAGR', 'profit_cagr_3y'],
+        ['ROE', 'roe_status'],
+        ['成长类型', 'growth_type_label'],
+      ])}
+      ${renderResearchBox('N 新变量', canSlim.new_factor, [
+        ['技术/产品', 'new_product_or_technology_text'],
+        ['订单/客户', 'new_order_or_customer_text'],
+        ['产能', 'new_capacity_text'],
+        ['新业务占比', 'new_business_revenue_share_text'],
+      ])}
+      ${renderResearchBox('S 供需承接', canSlim.supply_demand, [
+        ['20日成交额', 'amount_avg_20d'],
+        ['20日换手', 'turnover_rate_avg_20d'],
+        ['20日涨幅', 'price_change_20d'],
+        ['RS', 'relative_strength_signal'],
+      ])}
+      ${renderResearchBox('L 龙头/后排', canSlim.leader_laggard, [
+        ['行业地位', 'industry_position_text'],
+        ['主线纯度', 'main_theme_purity_status'],
+        ['板块辨识度', 'board_recognition_status'],
+        ['同主题比较', 'same_theme_comparison_text'],
+      ])}
+      ${renderResearchBox('I 机构/大资金', institutional, [
+        ['机构标签', 'institutional_sponsorship_label'],
+      ])}
+    </div>`;
+}
+
+function renderStaticStockSearch(searchLibrary) {
+  const count = Object.keys(searchLibrary || {}).length;
+  return `
+    <div class="section">
+      <h2>静态股票库查询</h2>
+      <div class="stock-search-panel">
+        <div class="stock-search-row">
+          <input id="stockSearchInput" class="stock-search-input" placeholder="输入股票代码或名称，例如 601138 / 工业富联">
+          <button id="stockSearchButton" class="stock-search-button">查询</button>
+        </div>
+        <div class="stock-search-hint">已加载 ${count} 只股票的静态库：目标区间、统计低吸、统计止损、CAN/SLIM 调研日期与描述。</div>
+        <div id="stockSearchResult" class="stock-search-result"></div>
+      </div>
+    </div>`;
+}
+
+function bindStaticStockSearch(searchLibrary) {
+  const input = document.getElementById('stockSearchInput');
+  const button = document.getElementById('stockSearchButton');
+  const result = document.getElementById('stockSearchResult');
+  if (!input || !button || !result) return;
+  const runSearch = () => {
+    const query = input.value;
+    if (!normalizeSearchText(query)) {
+      result.innerHTML = '';
+      return;
+    }
+    result.innerHTML = renderStaticSearchResult(findStockInSearchLibrary(query, searchLibrary));
+  };
+  button.addEventListener('click', runSearch);
+  input.addEventListener('keydown', event => {
+    if (event.key === 'Enter') runSearch();
+  });
+  input.addEventListener('input', () => {
+    if (normalizeSearchText(input.value).length >= 2) runSearch();
+  });
+}
+
+function renderStock(stock, openDipData, stopLossData) {
   const rank = stock.final_rank || 0;
   const verdict = stock.oneil_canslim_verdict || {};
   const why = stock.why_selected || [];
   const risk = stock.risk_judgment || {};
   const op = stock.operation_view || {};
-  const stopLossSignal = stock.intraday_stop_loss_signal || null;
+  const stopLossSignal = findStopLossSignal(stock.stock_code, stopLossData) || stock.intraday_stop_loss_signal || null;
   const themes = stock.matched_theme_list || [];
   const gaps = stock.evidence_gap || [];
   const targetPriceJudgment = stock.target_price_judgment || null;
@@ -11308,7 +12404,7 @@ function toggleCollapse(el) {
   }
 }
 
-function render() {
+async function render() {
   const data = INLINE_ONEIL;
   const stockSelectionData = null;
   const futureData = INLINE_FUTURE;
@@ -11325,6 +12421,12 @@ function render() {
   const root = data.oneil_top_stock_selection_result || {};
   const selected = root.selected_top_8 || [];
   const rejected = root.rejected_stocks || [];
+  const staticLibraryData = await loadJSON(STATIC_STOCK_LIBRARY_URL)
+    || buildStaticLibraryFallback(selected, openDipData);
+  const stopLossData = {
+    intraday_stop_loss_db: getStopLossDb(staticLibraryData),
+  };
+  const searchLibrary = buildSearchLibrary(root, staticLibraryData, openDipData);
   const summary = root.selection_summary || {};
   const sourceDate = root.source_result_date || '';
   const stockSelectionRoot = stockSelectionData ? (stockSelectionData.stock_selection_result || {}) : {};
@@ -11346,9 +12448,10 @@ function render() {
 
   html += renderThemes(themeData);
   html += renderFutureEvents(futureData);
+  html += renderStaticStockSearch(searchLibrary);
 
   html += `<div class="section"><h2>入选 Top 8</h2>`;
-  html += selected.map(s => renderStock(s, openDipData)).join('');
+  html += selected.map(s => renderStock(s, openDipData, stopLossData)).join('');
   html += `</div>`;
 
   html += renderRejected(rejected);
@@ -11360,6 +12463,7 @@ function render() {
   html += `<div class="footer">大A智能体 · O'Neil/CAN SLIM 研究系统 · 数据仅供参考，不构成投资建议</div>`;
 
   app.innerHTML = html;
+  bindStaticStockSearch(searchLibrary);
 }
 
 function extractStockSelectionDate(stockSelectionRoot) {
