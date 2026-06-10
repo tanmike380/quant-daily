@@ -658,12 +658,12 @@ const INLINE_ONEIL = {
         "intraday_stop_loss_signal": {
           "stock_code": "002916",
           "stock_name": "深南电路",
-          "optimal_stop_loss_pct": -8.0,
-          "optimal_expected_value_pct": null,
-          "confidence_label": "fallback",
-          "method_label": "fallback_default",
-          "reason_text": "暂无该股日内止损统计库记录，先采用7%-8%区间的默认防守纪律；后续可通过 intraday_stop_loss_db 单独补齐日线低点或分钟线回测后再覆盖。",
-          "status": "fallback",
+          "optimal_stop_loss_pct": -4.0,
+          "optimal_expected_value_pct": -0.1757,
+          "confidence_label": "statistical",
+          "method_label": "daily_low_open_recovery",
+          "reason_text": "近220个交易日样本中，日内最低点触发-4.0% 后，收盘重新回到开盘价的概率为0.0244，未能收回开盘价的概率为0.9756；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.9743%，期望值参考为-0.1757%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+          "status": "ready",
           "source_result_date": "2026-06-09"
         }
       },
@@ -870,12 +870,12 @@ const INLINE_ONEIL = {
         "intraday_stop_loss_signal": {
           "stock_code": "603893",
           "stock_name": "瑞芯微",
-          "optimal_stop_loss_pct": -8.0,
-          "optimal_expected_value_pct": null,
-          "confidence_label": "fallback",
-          "method_label": "fallback_default",
-          "reason_text": "暂无该股日内止损统计库记录，先采用7%-8%区间的默认防守纪律；后续可通过 intraday_stop_loss_db 单独补齐日线低点或分钟线回测后再覆盖。",
-          "status": "fallback",
+          "optimal_stop_loss_pct": -3.0,
+          "optimal_expected_value_pct": 0.6666,
+          "confidence_label": "statistical",
+          "method_label": "daily_low_open_recovery",
+          "reason_text": "近220个交易日样本中，日内最低点触发-3.0% 后，收盘重新回到开盘价的概率为0.0606，未能收回开盘价的概率为0.9394；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.8166%，期望值参考为0.6666%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+          "status": "ready",
           "source_result_date": "2026-06-09"
         }
       },
@@ -1076,12 +1076,12 @@ const INLINE_ONEIL = {
         "intraday_stop_loss_signal": {
           "stock_code": "002384",
           "stock_name": "东山精密",
-          "optimal_stop_loss_pct": -8.0,
-          "optimal_expected_value_pct": null,
-          "confidence_label": "fallback",
-          "method_label": "fallback_default",
-          "reason_text": "暂无该股日内止损统计库记录，先采用7%-8%区间的默认防守纪律；后续可通过 intraday_stop_loss_db 单独补齐日线低点或分钟线回测后再覆盖。",
-          "status": "fallback",
+          "optimal_stop_loss_pct": -4.0,
+          "optimal_expected_value_pct": -0.6277,
+          "confidence_label": "statistical",
+          "method_label": "daily_low_open_recovery",
+          "reason_text": "近220个交易日样本中，日内最低点触发-4.0% 后，收盘重新回到开盘价的概率为0.0926，未能收回开盘价的概率为0.9074；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.5224%，期望值参考为-0.6277%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+          "status": "ready",
           "source_result_date": "2026-06-09"
         }
       },
@@ -1702,12 +1702,12 @@ const INLINE_ONEIL = {
         "intraday_stop_loss_signal": {
           "stock_code": "002008",
           "stock_name": "大族激光",
-          "optimal_stop_loss_pct": -8.0,
-          "optimal_expected_value_pct": null,
-          "confidence_label": "fallback",
-          "method_label": "fallback_default",
-          "reason_text": "暂无该股日内止损统计库记录，先采用7%-8%区间的默认防守纪律；后续可通过 intraday_stop_loss_db 单独补齐日线低点或分钟线回测后再覆盖。",
-          "status": "fallback",
+          "optimal_stop_loss_pct": -4.0,
+          "optimal_expected_value_pct": -0.1159,
+          "confidence_label": "statistical",
+          "method_label": "daily_low_open_recovery",
+          "reason_text": "近220个交易日样本中，日内最低点触发-4.0% 后，收盘重新回到开盘价的概率为0.0385，未能收回开盘价的概率为0.9615；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-4.0341%，期望值参考为-0.1159%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+          "status": "ready",
           "source_result_date": "2026-06-09"
         }
       },
@@ -5189,7 +5189,7 @@ const INLINE_ONEIL = {
     "source_result_date": "2026-06-09",
     "stock_selection_result_file": "output/latest_output/stock_selection_result_2026-06-09.json",
     "intraday_stop_loss_backtest_signal": {
-      "status": "partial_fallback",
+      "status": "ready",
       "source_result_date": "2026-06-09",
       "source": "intraday_stop_loss_db",
       "stock_stop_loss_signal_list": [
@@ -5207,34 +5207,34 @@ const INLINE_ONEIL = {
         {
           "stock_code": "002916",
           "stock_name": "深南电路",
-          "optimal_stop_loss_pct": -8.0,
-          "optimal_expected_value_pct": null,
-          "confidence_label": "fallback",
-          "method_label": "fallback_default",
-          "reason_text": "暂无该股日内止损统计库记录，先采用7%-8%区间的默认防守纪律；后续可通过 intraday_stop_loss_db 单独补齐日线低点或分钟线回测后再覆盖。",
-          "status": "fallback",
+          "optimal_stop_loss_pct": -4.0,
+          "optimal_expected_value_pct": -0.1757,
+          "confidence_label": "statistical",
+          "method_label": "daily_low_open_recovery",
+          "reason_text": "近220个交易日样本中，日内最低点触发-4.0% 后，收盘重新回到开盘价的概率为0.0244，未能收回开盘价的概率为0.9756；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.9743%，期望值参考为-0.1757%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+          "status": "ready",
           "source_result_date": "2026-06-09"
         },
         {
           "stock_code": "603893",
           "stock_name": "瑞芯微",
-          "optimal_stop_loss_pct": -8.0,
-          "optimal_expected_value_pct": null,
-          "confidence_label": "fallback",
-          "method_label": "fallback_default",
-          "reason_text": "暂无该股日内止损统计库记录，先采用7%-8%区间的默认防守纪律；后续可通过 intraday_stop_loss_db 单独补齐日线低点或分钟线回测后再覆盖。",
-          "status": "fallback",
+          "optimal_stop_loss_pct": -3.0,
+          "optimal_expected_value_pct": 0.6666,
+          "confidence_label": "statistical",
+          "method_label": "daily_low_open_recovery",
+          "reason_text": "近220个交易日样本中，日内最低点触发-3.0% 后，收盘重新回到开盘价的概率为0.0606，未能收回开盘价的概率为0.9394；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.8166%，期望值参考为0.6666%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+          "status": "ready",
           "source_result_date": "2026-06-09"
         },
         {
           "stock_code": "002384",
           "stock_name": "东山精密",
-          "optimal_stop_loss_pct": -8.0,
-          "optimal_expected_value_pct": null,
-          "confidence_label": "fallback",
-          "method_label": "fallback_default",
-          "reason_text": "暂无该股日内止损统计库记录，先采用7%-8%区间的默认防守纪律；后续可通过 intraday_stop_loss_db 单独补齐日线低点或分钟线回测后再覆盖。",
-          "status": "fallback",
+          "optimal_stop_loss_pct": -4.0,
+          "optimal_expected_value_pct": -0.6277,
+          "confidence_label": "statistical",
+          "method_label": "daily_low_open_recovery",
+          "reason_text": "近220个交易日样本中，日内最低点触发-4.0% 后，收盘重新回到开盘价的概率为0.0926，未能收回开盘价的概率为0.9074；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.5224%，期望值参考为-0.6277%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+          "status": "ready",
           "source_result_date": "2026-06-09"
         },
         {
@@ -5262,12 +5262,12 @@ const INLINE_ONEIL = {
         {
           "stock_code": "002008",
           "stock_name": "大族激光",
-          "optimal_stop_loss_pct": -8.0,
-          "optimal_expected_value_pct": null,
-          "confidence_label": "fallback",
-          "method_label": "fallback_default",
-          "reason_text": "暂无该股日内止损统计库记录，先采用7%-8%区间的默认防守纪律；后续可通过 intraday_stop_loss_db 单独补齐日线低点或分钟线回测后再覆盖。",
-          "status": "fallback",
+          "optimal_stop_loss_pct": -4.0,
+          "optimal_expected_value_pct": -0.1159,
+          "confidence_label": "statistical",
+          "method_label": "daily_low_open_recovery",
+          "reason_text": "近220个交易日样本中，日内最低点触发-4.0% 后，收盘重新回到开盘价的概率为0.0385，未能收回开盘价的概率为0.9615；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-4.0341%，期望值参考为-0.1159%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+          "status": "ready",
           "source_result_date": "2026-06-09"
         },
         {
@@ -5282,7 +5282,7 @@ const INLINE_ONEIL = {
           "source_result_date": "2026-06-09"
         }
       ],
-      "fallback_count": 4
+      "fallback_count": 0
     },
     "investment_thesis_memory_update_meta": {
       "memory_lib_file": "references/training/investment_thesis_memory_lib.json",
