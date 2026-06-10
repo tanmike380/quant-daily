@@ -10833,6 +10833,166 @@ const INLINE_OPEN_DIP = {
         "reason_text": "近220个交易日样本中，次日开盘相对前一交易日收盘低开达到-1.5% 的次数为40，触发概率为0.1818；其中当日收盘重新高于开盘的概率为0.55。按次日开盘价买入并持有到下一交易日收盘的平均收益为1.9438%，扣除2.0% 买入损耗后的平均净收益为-0.0562%，按触发概率加权后的下一日执行期望为-0.0102%；5日平均净收益为2.0279%，5日执行期望为0.3687%，混合执行期望为0.2361%，下一交易日收盘胜率为0.5128。该结论基于日线 open/close 统计，低吸含义是低开买入，不再假设盘中最低点附近可以成交。",
         "status": "ready"
       }
+    },
+    "002008": {
+      "stock_code": "002008",
+      "stock_name": "大族激光",
+      "open_dip_buy_signal": {
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -1.5,
+            "trigger_count": 17,
+            "trigger_probability": 0.0773,
+            "same_day_rebound_count": 12,
+            "same_day_rebound_probability": 0.7059,
+            "avg_same_day_close_return_pct": 2.0465,
+            "avg_same_day_close_net_return_pct": 0.0465,
+            "avg_next_close_return_pct": 3.7128,
+            "avg_next_close_net_return_pct": 1.7128,
+            "execution_expected_return_pct": 0.1324,
+            "swing_execution_expected_return_pct": 0.3388,
+            "blended_execution_expected_return_pct": 0.2666,
+            "next_close_win_rate": 0.7059,
+            "avg_2d_close_return_pct": 3.8485,
+            "avg_2d_close_net_return_pct": 1.8485,
+            "avg_5d_close_return_pct": 6.385,
+            "avg_5d_close_net_return_pct": 4.385
+          }
+        ],
+        "entry_cost_pct": 2.0,
+        "min_open_dip_abs_pct": 1.5,
+        "max_open_dip_abs_pct": 5.0,
+        "optimal_open_dip_buy_pct": -1.5,
+        "optimal_next_close_net_return_pct": 1.7128,
+        "optimal_execution_expected_return_pct": 0.1324,
+        "optimal_swing_execution_expected_return_pct": 0.3388,
+        "optimal_blended_execution_expected_return_pct": 0.2666,
+        "optimal_trigger_probability": 0.0773,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，次日开盘相对前一交易日收盘低开达到-1.5% 的次数为17，触发概率为0.0773；其中当日收盘重新高于开盘的概率为0.7059。按次日开盘价买入并持有到下一交易日收盘的平均收益为3.7128%，扣除2.0% 买入损耗后的平均净收益为1.7128%，按触发概率加权后的下一日执行期望为0.1324%；5日平均净收益为4.385%，5日执行期望为0.3388%，混合执行期望为0.2666%，下一交易日收盘胜率为0.7059。该结论基于日线 open/close 统计，低吸含义是低开买入，不再假设盘中最低点附近可以成交。",
+        "status": "ready"
+      }
+    },
+    "002384": {
+      "stock_code": "002384",
+      "stock_name": "东山精密",
+      "open_dip_buy_signal": {
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -1.5,
+            "trigger_count": 52,
+            "trigger_probability": 0.2364,
+            "same_day_rebound_count": 30,
+            "same_day_rebound_probability": 0.5769,
+            "avg_same_day_close_return_pct": 1.0439,
+            "avg_same_day_close_net_return_pct": -0.9561,
+            "avg_next_close_return_pct": 1.5582,
+            "avg_next_close_net_return_pct": -0.4418,
+            "execution_expected_return_pct": -0.1044,
+            "swing_execution_expected_return_pct": 0.7661,
+            "blended_execution_expected_return_pct": 0.4614,
+            "next_close_win_rate": 0.5769,
+            "avg_2d_close_return_pct": 2.6772,
+            "avg_2d_close_net_return_pct": 0.6772,
+            "avg_5d_close_return_pct": 5.2412,
+            "avg_5d_close_net_return_pct": 3.2412
+          }
+        ],
+        "entry_cost_pct": 2.0,
+        "min_open_dip_abs_pct": 1.5,
+        "max_open_dip_abs_pct": 5.0,
+        "optimal_open_dip_buy_pct": -1.5,
+        "optimal_next_close_net_return_pct": -0.4418,
+        "optimal_execution_expected_return_pct": -0.1044,
+        "optimal_swing_execution_expected_return_pct": 0.7661,
+        "optimal_blended_execution_expected_return_pct": 0.4614,
+        "optimal_trigger_probability": 0.2364,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，次日开盘相对前一交易日收盘低开达到-1.5% 的次数为52，触发概率为0.2364；其中当日收盘重新高于开盘的概率为0.5769。按次日开盘价买入并持有到下一交易日收盘的平均收益为1.5582%，扣除2.0% 买入损耗后的平均净收益为-0.4418%，按触发概率加权后的下一日执行期望为-0.1044%；5日平均净收益为3.2412%，5日执行期望为0.7661%，混合执行期望为0.4614%，下一交易日收盘胜率为0.5769。该结论基于日线 open/close 统计，低吸含义是低开买入，不再假设盘中最低点附近可以成交。",
+        "status": "ready"
+      }
+    },
+    "002916": {
+      "stock_code": "002916",
+      "stock_name": "深南电路",
+      "open_dip_buy_signal": {
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -4.0,
+            "trigger_count": 6,
+            "trigger_probability": 0.0273,
+            "same_day_rebound_count": 5,
+            "same_day_rebound_probability": 0.8333,
+            "avg_same_day_close_return_pct": 2.7087,
+            "avg_same_day_close_net_return_pct": 0.7087,
+            "avg_next_close_return_pct": 3.3829,
+            "avg_next_close_net_return_pct": 1.3829,
+            "execution_expected_return_pct": 0.0377,
+            "swing_execution_expected_return_pct": -0.039,
+            "blended_execution_expected_return_pct": -0.0121,
+            "next_close_win_rate": 0.5,
+            "avg_2d_close_return_pct": 0.9749,
+            "avg_2d_close_net_return_pct": -1.0251,
+            "avg_5d_close_return_pct": 0.5708,
+            "avg_5d_close_net_return_pct": -1.4292
+          }
+        ],
+        "entry_cost_pct": 2.0,
+        "min_open_dip_abs_pct": 1.5,
+        "max_open_dip_abs_pct": 5.0,
+        "optimal_open_dip_buy_pct": -4.0,
+        "optimal_next_close_net_return_pct": 1.3829,
+        "optimal_execution_expected_return_pct": 0.0377,
+        "optimal_swing_execution_expected_return_pct": -0.039,
+        "optimal_blended_execution_expected_return_pct": -0.0121,
+        "optimal_trigger_probability": 0.0273,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，次日开盘相对前一交易日收盘低开达到-4.0% 的次数为6，触发概率为0.0273；其中当日收盘重新高于开盘的概率为0.8333。按次日开盘价买入并持有到下一交易日收盘的平均收益为3.3829%，扣除2.0% 买入损耗后的平均净收益为1.3829%，按触发概率加权后的下一日执行期望为0.0377%；5日平均净收益为-1.4292%，5日执行期望为-0.039%，混合执行期望为-0.0121%，下一交易日收盘胜率为0.5。该结论基于日线 open/close 统计，低吸含义是低开买入，不再假设盘中最低点附近可以成交。",
+        "status": "ready"
+      }
+    },
+    "603893": {
+      "stock_code": "603893",
+      "stock_name": "瑞芯微",
+      "open_dip_buy_signal": {
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -2.5,
+            "trigger_count": 6,
+            "trigger_probability": 0.0273,
+            "same_day_rebound_count": 5,
+            "same_day_rebound_probability": 0.8333,
+            "avg_same_day_close_return_pct": 2.2122,
+            "avg_same_day_close_net_return_pct": 0.2122,
+            "avg_next_close_return_pct": 0.7769,
+            "avg_next_close_net_return_pct": -1.2231,
+            "execution_expected_return_pct": -0.0334,
+            "swing_execution_expected_return_pct": -0.0023,
+            "blended_execution_expected_return_pct": -0.0132,
+            "next_close_win_rate": 0.6667,
+            "avg_2d_close_return_pct": -1.3798,
+            "avg_2d_close_net_return_pct": -3.3798,
+            "avg_5d_close_return_pct": 1.9141,
+            "avg_5d_close_net_return_pct": -0.0859
+          }
+        ],
+        "entry_cost_pct": 2.0,
+        "min_open_dip_abs_pct": 1.5,
+        "max_open_dip_abs_pct": 5.0,
+        "optimal_open_dip_buy_pct": -2.5,
+        "optimal_next_close_net_return_pct": -1.2231,
+        "optimal_execution_expected_return_pct": -0.0334,
+        "optimal_swing_execution_expected_return_pct": -0.0023,
+        "optimal_blended_execution_expected_return_pct": -0.0132,
+        "optimal_trigger_probability": 0.0273,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，次日开盘相对前一交易日收盘低开达到-2.5% 的次数为6，触发概率为0.0273；其中当日收盘重新高于开盘的概率为0.8333。按次日开盘价买入并持有到下一交易日收盘的平均收益为0.7769%，扣除2.0% 买入损耗后的平均净收益为-1.2231%，按触发概率加权后的下一日执行期望为-0.0334%；5日平均净收益为-0.0859%，5日执行期望为-0.0023%，混合执行期望为-0.0132%，下一交易日收盘胜率为0.6667。该结论基于日线 open/close 统计，低吸含义是低开买入，不再假设盘中最低点附近可以成交。",
+        "status": "ready"
+      }
     }
   }
 };
