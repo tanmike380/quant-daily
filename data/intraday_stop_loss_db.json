@@ -1008,42 +1008,6 @@
         "status": "ready"
       }
     },
-    "002082": {
-      "stock_code": "002082",
-      "stock_name": "ST万邦",
-      "updated_at": "2026-06-02",
-      "source_result_date": "2026-06-02",
-      "intraday_stop_loss_signal": {
-        "method_label": "daily_low_open_recovery",
-        "lookback_trade_day_count": 156,
-        "threshold_stat_list": [
-          {
-            "threshold_pct": -5.0,
-            "trigger_count": 18,
-            "recover_to_open_count": 0,
-            "not_recover_to_open_count": 18,
-            "recover_to_open_probability": 0.0,
-            "not_recover_to_open_probability": 1.0,
-            "continue_down_count": 18,
-            "v_recovery_count": 0,
-            "continue_down_probability": 1.0,
-            "v_recovery_probability": 0.0,
-            "avg_low_return_from_open_pct": -6.4532,
-            "avg_close_return_from_open_pct": -3.6876,
-            "avg_avoided_loss_pct": 0.6333,
-            "avg_missed_gain_pct": 0.0,
-            "trading_cost_pct": 0.15,
-            "expected_value_pct": -1.4624,
-            "avg_max_drawdown_after_trigger_pct": -2.2799
-          }
-        ],
-        "optimal_stop_loss_pct": -5.0,
-        "optimal_expected_value_pct": -1.4624,
-        "confidence_label": "statistical",
-        "reason_text": "近156个交易日样本中，日内最低点触发-5.0% 后，收盘重新回到开盘价的概率为0.0，未能收回开盘价的概率为1.0；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.6876%，期望值参考为-1.4624%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
-        "status": "ready"
-      }
-    },
     "002131": {
       "stock_code": "002131",
       "stock_name": "利欧股份",
@@ -2049,78 +2013,6 @@
         "optimal_expected_value_pct": 0.1796,
         "confidence_label": "statistical",
         "reason_text": "近157个交易日样本中，日内最低点触发-5.0% 后，收盘重新回到开盘价的概率为0.0909，未能收回开盘价的概率为0.9091；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-5.3296%，期望值参考为0.1796%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
-        "status": "ready"
-      }
-    },
-    "300054": {
-      "stock_code": "300054",
-      "stock_name": "鼎龙股份",
-      "updated_at": "2026-06-02",
-      "source_result_date": "2026-06-02",
-      "intraday_stop_loss_signal": {
-        "method_label": "daily_low_open_recovery",
-        "lookback_trade_day_count": 157,
-        "threshold_stat_list": [
-          {
-            "threshold_pct": -4.0,
-            "trigger_count": 24,
-            "recover_to_open_count": 1,
-            "not_recover_to_open_count": 23,
-            "recover_to_open_probability": 0.0417,
-            "not_recover_to_open_probability": 0.9583,
-            "continue_down_count": 23,
-            "v_recovery_count": 1,
-            "continue_down_probability": 0.9583,
-            "v_recovery_probability": 0.0417,
-            "avg_low_return_from_open_pct": -5.6617,
-            "avg_close_return_from_open_pct": -4.0804,
-            "avg_avoided_loss_pct": 1.186,
-            "avg_missed_gain_pct": 9.364,
-            "trading_cost_pct": 0.15,
-            "expected_value_pct": -0.0696,
-            "avg_max_drawdown_after_trigger_pct": -2.0982
-          }
-        ],
-        "optimal_stop_loss_pct": -4.0,
-        "optimal_expected_value_pct": -0.0696,
-        "confidence_label": "statistical",
-        "reason_text": "近157个交易日样本中，日内最低点触发-4.0% 后，收盘重新回到开盘价的概率为0.0417，未能收回开盘价的概率为0.9583；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-4.0804%，期望值参考为-0.0696%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
-        "status": "ready"
-      }
-    },
-    "301021": {
-      "stock_code": "301021",
-      "stock_name": "英诺激光",
-      "updated_at": "2026-06-02",
-      "source_result_date": "2026-06-02",
-      "intraday_stop_loss_signal": {
-        "method_label": "daily_low_open_recovery",
-        "lookback_trade_day_count": 157,
-        "threshold_stat_list": [
-          {
-            "threshold_pct": -4.0,
-            "trigger_count": 25,
-            "recover_to_open_count": 0,
-            "not_recover_to_open_count": 25,
-            "recover_to_open_probability": 0.0,
-            "not_recover_to_open_probability": 1.0,
-            "continue_down_count": 25,
-            "v_recovery_count": 0,
-            "continue_down_probability": 1.0,
-            "v_recovery_probability": 0.0,
-            "avg_low_return_from_open_pct": -5.5098,
-            "avg_close_return_from_open_pct": -4.0661,
-            "avg_avoided_loss_pct": 0.6873,
-            "avg_missed_gain_pct": 0.0,
-            "trading_cost_pct": 0.15,
-            "expected_value_pct": -0.0839,
-            "avg_max_drawdown_after_trigger_pct": -1.1455
-          }
-        ],
-        "optimal_stop_loss_pct": -4.0,
-        "optimal_expected_value_pct": -0.0839,
-        "confidence_label": "statistical",
-        "reason_text": "近157个交易日样本中，日内最低点触发-4.0% 后，收盘重新回到开盘价的概率为0.0，未能收回开盘价的概率为1.0；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-4.0661%，期望值参考为-0.0839%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
         "status": "ready"
       }
     },
@@ -4536,42 +4428,6 @@
         "status": "ready"
       }
     },
-    "603061": {
-      "stock_code": "603061",
-      "stock_name": "金海通",
-      "updated_at": "2026-06-03",
-      "source_result_date": "2026-06-03",
-      "intraday_stop_loss_signal": {
-        "method_label": "daily_low_open_recovery",
-        "lookback_trade_day_count": 211,
-        "threshold_stat_list": [
-          {
-            "threshold_pct": -4.0,
-            "trigger_count": 34,
-            "recover_to_open_count": 3,
-            "not_recover_to_open_count": 31,
-            "recover_to_open_probability": 0.0882,
-            "not_recover_to_open_probability": 0.9118,
-            "continue_down_count": 31,
-            "v_recovery_count": 3,
-            "continue_down_probability": 0.9118,
-            "v_recovery_probability": 0.0882,
-            "avg_low_return_from_open_pct": -6.1294,
-            "avg_close_return_from_open_pct": -3.6436,
-            "avg_avoided_loss_pct": 1.1532,
-            "avg_missed_gain_pct": 8.1128,
-            "trading_cost_pct": 0.15,
-            "expected_value_pct": -0.5064,
-            "avg_max_drawdown_after_trigger_pct": -2.5534
-          }
-        ],
-        "optimal_stop_loss_pct": -4.0,
-        "optimal_expected_value_pct": -0.5064,
-        "confidence_label": "statistical",
-        "reason_text": "近211个交易日样本中，日内最低点触发-4.0% 后，收盘重新回到开盘价的概率为0.0882，未能收回开盘价的概率为0.9118；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.6436%，期望值参考为-0.5064%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
-        "status": "ready"
-      }
-    },
     "000700": {
       "stock_code": "000700",
       "stock_name": "模塑科技",
@@ -4785,42 +4641,6 @@
         "optimal_expected_value_pct": -0.6277,
         "confidence_label": "statistical",
         "reason_text": "近220个交易日样本中，日内最低点触发-4.0% 后，收盘重新回到开盘价的概率为0.0926，未能收回开盘价的概率为0.9074；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.5224%，期望值参考为-0.6277%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
-        "status": "ready"
-      }
-    },
-    "002916": {
-      "stock_code": "002916",
-      "stock_name": "深南电路",
-      "updated_at": "2026-06-09",
-      "source_result_date": "2026-06-09",
-      "intraday_stop_loss_signal": {
-        "method_label": "daily_low_open_recovery",
-        "lookback_trade_day_count": 220,
-        "threshold_stat_list": [
-          {
-            "threshold_pct": -4.0,
-            "trigger_count": 41,
-            "recover_to_open_count": 1,
-            "not_recover_to_open_count": 40,
-            "recover_to_open_probability": 0.0244,
-            "not_recover_to_open_probability": 0.9756,
-            "continue_down_count": 40,
-            "v_recovery_count": 1,
-            "continue_down_probability": 0.9756,
-            "v_recovery_probability": 0.0244,
-            "avg_low_return_from_open_pct": -5.7129,
-            "avg_close_return_from_open_pct": -3.9743,
-            "avg_avoided_loss_pct": 1.0252,
-            "avg_missed_gain_pct": 7.2947,
-            "trading_cost_pct": 0.15,
-            "expected_value_pct": -0.1757,
-            "avg_max_drawdown_after_trigger_pct": -2.0505
-          }
-        ],
-        "optimal_stop_loss_pct": -4.0,
-        "optimal_expected_value_pct": -0.1757,
-        "confidence_label": "statistical",
-        "reason_text": "近220个交易日样本中，日内最低点触发-4.0% 后，收盘重新回到开盘价的概率为0.0244，未能收回开盘价的概率为0.9756；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.9743%，期望值参考为-0.1757%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
         "status": "ready"
       }
     },
@@ -5577,6 +5397,222 @@
         "optimal_expected_value_pct": -0.3368,
         "confidence_label": "statistical",
         "reason_text": "近220个交易日样本中，日内最低点触发-3.0% 后，收盘重新回到开盘价的概率为0.0976，未能收回开盘价的概率为0.9024；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-2.8132%，期望值参考为-0.3368%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "600183": {
+      "stock_code": "600183",
+      "stock_name": "生益科技",
+      "updated_at": "2026-06-10",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -4.0,
+            "trigger_count": 38,
+            "recover_to_open_count": 2,
+            "not_recover_to_open_count": 36,
+            "recover_to_open_probability": 0.0526,
+            "not_recover_to_open_probability": 0.9474,
+            "continue_down_count": 36,
+            "v_recovery_count": 2,
+            "continue_down_probability": 0.9474,
+            "v_recovery_probability": 0.0526,
+            "avg_low_return_from_open_pct": -5.8858,
+            "avg_close_return_from_open_pct": -3.8544,
+            "avg_avoided_loss_pct": 0.9672,
+            "avg_missed_gain_pct": 6.0095,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": -0.2956,
+            "avg_max_drawdown_after_trigger_pct": -2.0481
+          }
+        ],
+        "optimal_stop_loss_pct": -4.0,
+        "optimal_expected_value_pct": -0.2956,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-4.0% 后，收盘重新回到开盘价的概率为0.0526，未能收回开盘价的概率为0.9474；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.8544%，期望值参考为-0.2956%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "600312": {
+      "stock_code": "600312",
+      "stock_name": "平高电气",
+      "updated_at": "2026-06-10",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -2.0,
+            "trigger_count": 61,
+            "recover_to_open_count": 4,
+            "not_recover_to_open_count": 57,
+            "recover_to_open_probability": 0.0656,
+            "not_recover_to_open_probability": 0.9344,
+            "continue_down_count": 57,
+            "v_recovery_count": 4,
+            "continue_down_probability": 0.9344,
+            "v_recovery_probability": 0.0656,
+            "avg_low_return_from_open_pct": -3.3334,
+            "avg_close_return_from_open_pct": -2.2368,
+            "avg_avoided_loss_pct": 0.7528,
+            "avg_missed_gain_pct": 2.9508,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": 0.0868,
+            "avg_max_drawdown_after_trigger_pct": -1.1597
+          }
+        ],
+        "optimal_stop_loss_pct": -2.0,
+        "optimal_expected_value_pct": 0.0868,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-2.0% 后，收盘重新回到开盘价的概率为0.0656，未能收回开盘价的概率为0.9344；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-2.2368%，期望值参考为0.0868%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "600580": {
+      "stock_code": "600580",
+      "stock_name": "卧龙电驱",
+      "updated_at": "2026-06-10",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -6.0,
+            "trigger_count": 9,
+            "recover_to_open_count": 1,
+            "not_recover_to_open_count": 8,
+            "recover_to_open_probability": 0.1111,
+            "not_recover_to_open_probability": 0.8889,
+            "continue_down_count": 8,
+            "v_recovery_count": 1,
+            "continue_down_probability": 0.8889,
+            "v_recovery_probability": 0.1111,
+            "avg_low_return_from_open_pct": -7.9853,
+            "avg_close_return_from_open_pct": -5.162,
+            "avg_avoided_loss_pct": 0.4819,
+            "avg_missed_gain_pct": 6.9083,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": -0.988,
+            "avg_max_drawdown_after_trigger_pct": -0.9637
+          }
+        ],
+        "optimal_stop_loss_pct": -6.0,
+        "optimal_expected_value_pct": -0.988,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-6.0% 后，收盘重新回到开盘价的概率为0.1111，未能收回开盘价的概率为0.8889；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-5.162%，期望值参考为-0.988%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "600765": {
+      "stock_code": "600765",
+      "stock_name": "中航重机",
+      "updated_at": "2026-06-10",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -2.0,
+            "trigger_count": 57,
+            "recover_to_open_count": 4,
+            "not_recover_to_open_count": 53,
+            "recover_to_open_probability": 0.0702,
+            "not_recover_to_open_probability": 0.9298,
+            "continue_down_count": 53,
+            "v_recovery_count": 4,
+            "continue_down_probability": 0.9298,
+            "v_recovery_probability": 0.0702,
+            "avg_low_return_from_open_pct": -3.0369,
+            "avg_close_return_from_open_pct": -2.0725,
+            "avg_avoided_loss_pct": 0.5966,
+            "avg_missed_gain_pct": 2.8721,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": -0.0775,
+            "avg_max_drawdown_after_trigger_pct": -1.2161
+          }
+        ],
+        "optimal_stop_loss_pct": -2.0,
+        "optimal_expected_value_pct": -0.0775,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-2.0% 后，收盘重新回到开盘价的概率为0.0702，未能收回开盘价的概率为0.9298；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-2.0725%，期望值参考为-0.0775%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "600845": {
+      "stock_code": "600845",
+      "stock_name": "宝信软件",
+      "updated_at": "2026-06-10",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -2.0,
+            "trigger_count": 51,
+            "recover_to_open_count": 2,
+            "not_recover_to_open_count": 49,
+            "recover_to_open_probability": 0.0392,
+            "not_recover_to_open_probability": 0.9608,
+            "continue_down_count": 49,
+            "v_recovery_count": 2,
+            "continue_down_probability": 0.9608,
+            "v_recovery_probability": 0.0392,
+            "avg_low_return_from_open_pct": -3.038,
+            "avg_close_return_from_open_pct": -2.3183,
+            "avg_avoided_loss_pct": 0.7329,
+            "avg_missed_gain_pct": 2.9318,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": 0.1683,
+            "avg_max_drawdown_after_trigger_pct": -1.2383
+          }
+        ],
+        "optimal_stop_loss_pct": -2.0,
+        "optimal_expected_value_pct": 0.1683,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-2.0% 后，收盘重新回到开盘价的概率为0.0392，未能收回开盘价的概率为0.9608；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-2.3183%，期望值参考为0.1683%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "601689": {
+      "stock_code": "601689",
+      "stock_name": "拓普集团",
+      "updated_at": "2026-06-10",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -3.0,
+            "trigger_count": 42,
+            "recover_to_open_count": 3,
+            "not_recover_to_open_count": 39,
+            "recover_to_open_probability": 0.0714,
+            "not_recover_to_open_probability": 0.9286,
+            "continue_down_count": 39,
+            "v_recovery_count": 3,
+            "continue_down_probability": 0.9286,
+            "v_recovery_probability": 0.0714,
+            "avg_low_return_from_open_pct": -4.6654,
+            "avg_close_return_from_open_pct": -3.2902,
+            "avg_avoided_loss_pct": 1.041,
+            "avg_missed_gain_pct": 3.6651,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": 0.1402,
+            "avg_max_drawdown_after_trigger_pct": -2.03
+          }
+        ],
+        "optimal_stop_loss_pct": -3.0,
+        "optimal_expected_value_pct": 0.1402,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-3.0% 后，收盘重新回到开盘价的概率为0.0714，未能收回开盘价的概率为0.9286；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.2902%，期望值参考为0.1402%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
         "status": "ready"
       }
     }

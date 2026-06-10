@@ -2070,53 +2070,6 @@
         "reason_text": "已读取最新收盘价，预估增长5.9825%，CAN SLIM 重估溢价-5.44%，估值/风险折价14.0%；根据增长兑现、估值重估、主线相关度、相对强度和风险惩罚计算参考上行区间为 +0.00% 至 +3.00%，未融合有效机构目标区间；目标区间计算状态=new_calculation。"
       }
     },
-    "001309": {
-      "stock_code": "001309",
-      "stock_name": "德明利",
-      "updated_at": "2026-06-10",
-      "source_result_date": "2026-06-10",
-      "latest_trade_date": "2026-06-10",
-      "latest_close_price": 627.95,
-      "research_coverage_status": "can_slim_available",
-      "target_price_calculator_signal": {
-        "version": "oneil_calculator_v2",
-        "weight_profile_signal": {
-          "profile_name": "institutional_capacity_core",
-          "source": "rule_fallback",
-          "reason_text": "近20日平均换手率约8.7055%，20日平均成交额约9410730.7136，20日平均流通市值约10680463.6276，符合低换手、高容量承接或容量核心识别的机构大票/中军特征。"
-        },
-        "current_price": 627.95,
-        "predicted_upside_pct_range": {
-          "low": 33.4899,
-          "center": 36.4902,
-          "high": 39.4888
-        },
-        "predicted_target_price_range": {
-          "low": 838.25,
-          "center": 857.09,
-          "high": 875.92,
-          "currency": "CNY"
-        },
-        "target_price_calculation_signal": {
-          "status": "new_calculation",
-          "source": "oneil_calculator",
-          "target_price_range": {
-            "low": 838.25,
-            "center": 857.09,
-            "high": 875.92,
-            "currency": "CNY"
-          },
-          "current_price": 627.95,
-          "reason_text": "使用本次 calculator 刷新计算区间。"
-        },
-        "expert_target_validation_signal": {
-          "status": "missing",
-          "reason_text": "机构目标区间没有可用中枢。"
-        },
-        "confidence_label": "medium",
-        "reason_text": "已读取最新收盘价，预估增长100.0%，CAN SLIM 重估溢价10.704%，估值/风险折价7.3029%；根据增长兑现、估值重估、主线相关度、相对强度和风险惩罚计算参考上行区间为 +33.49% 至 +39.49%，未融合有效机构目标区间；目标区间计算状态=new_calculation。"
-      }
-    },
     "001336": {
       "stock_code": "001336",
       "stock_name": "楚环科技",
@@ -3314,53 +3267,6 @@
         },
         "confidence_label": "low",
         "reason_text": "已读取最新收盘价，预估增长0.0%，CAN SLIM 重估溢价-0.44%，估值/风险折价0.0%；根据增长兑现、估值重估、主线相关度、相对强度和风险惩罚计算参考上行区间为 +0.00% 至 +3.98%，未融合有效机构目标区间；目标区间计算状态=new_calculation。"
-      }
-    },
-    "002371": {
-      "stock_code": "002371",
-      "stock_name": "北方华创",
-      "updated_at": "2026-06-10",
-      "source_result_date": "2026-06-10",
-      "latest_trade_date": "2026-06-10",
-      "latest_close_price": 619.2,
-      "research_coverage_status": "limited_fallback",
-      "target_price_calculator_signal": {
-        "version": "oneil_calculator_v2",
-        "weight_profile_signal": {
-          "profile_name": "high_beta_breakout",
-          "source": "rule_fallback",
-          "reason_text": "科技主线但龙头地位不够明确，按高波动弹性配置。"
-        },
-        "current_price": 619.2,
-        "predicted_upside_pct_range": {
-          "low": 0.0,
-          "center": 0.0,
-          "high": 5.0
-        },
-        "predicted_target_price_range": {
-          "low": 619.2,
-          "center": 619.2,
-          "high": 650.16,
-          "currency": "CNY"
-        },
-        "target_price_calculation_signal": {
-          "status": "new_calculation",
-          "source": "oneil_calculator",
-          "target_price_range": {
-            "low": 619.2,
-            "center": 619.2,
-            "high": 650.16,
-            "currency": "CNY"
-          },
-          "current_price": 619.2,
-          "reason_text": "使用本次 calculator 刷新计算区间。"
-        },
-        "expert_target_validation_signal": {
-          "status": "missing",
-          "reason_text": "机构目标区间没有可用中枢。"
-        },
-        "confidence_label": "low",
-        "reason_text": "已读取最新收盘价，预估增长0.0%，CAN SLIM 重估溢价-0.6%，估值/风险折价0.0%；根据增长兑现、估值重估、主线相关度、相对强度和风险惩罚计算参考上行区间为 +0.00% 至 +5.00%，未融合有效机构目标区间；目标区间计算状态=new_calculation。"
       }
     },
     "002378": {
@@ -4771,59 +4677,6 @@
         },
         "confidence_label": "medium",
         "reason_text": "已读取最新收盘价，预估增长-10.6287%，CAN SLIM 重估溢价5.04%，估值/风险折价0.0%；根据增长兑现、估值重估、主线相关度、相对强度和风险惩罚计算参考上行区间为 +0.00% 至 +4.13%，未融合有效机构目标区间；目标区间计算状态=new_calculation。"
-      }
-    },
-    "002916": {
-      "stock_code": "002916",
-      "stock_name": "深南电路",
-      "updated_at": "2026-06-10",
-      "source_result_date": "2026-06-10",
-      "latest_trade_date": "2026-06-10",
-      "latest_close_price": 383.06,
-      "research_coverage_status": "can_slim_available",
-      "target_price_calculator_signal": {
-        "version": "oneil_calculator_v2",
-        "weight_profile_signal": {
-          "profile_name": "institutional_capacity_core",
-          "source": "rule_fallback",
-          "reason_text": "近20日平均换手率约2.178%，20日平均成交额约5486476.811，20日平均流通市值约24748794.9142，符合低换手、高容量承接或容量核心识别的机构大票/中军特征。"
-        },
-        "current_price": 383.06,
-        "predicted_upside_pct_range": {
-          "low": 6.127,
-          "center": 9.1265,
-          "high": 12.126
-        },
-        "predicted_target_price_range": {
-          "low": 406.53,
-          "center": 418.02,
-          "high": 429.51,
-          "currency": "CNY"
-        },
-        "target_price_calculation_signal": {
-          "status": "new_calculation",
-          "source": "oneil_calculator",
-          "target_price_range": {
-            "low": 406.53,
-            "center": 418.02,
-            "high": 429.51,
-            "currency": "CNY"
-          },
-          "current_price": 383.06,
-          "reason_text": "使用本次 calculator 刷新计算区间。"
-        },
-        "expert_target_validation_signal": {
-          "status": "current_price_above_expert_target",
-          "expert_target_center": 263.15,
-          "current_price": 383.06,
-          "implied_upside_pct": -31.3032,
-          "source_name": "华创证券、招银国际",
-          "source_observed_at": "2025-12-30",
-          "evidence_freshness_label": "recent_half_year",
-          "training_usage_text": "不融合进当前预测；可在训练时使用目标发布日附近收盘价验证公式。"
-        },
-        "confidence_label": "medium",
-        "reason_text": "已读取最新收盘价，预估增长42.6825%，CAN SLIM 重估溢价14.24%，估值/风险折价18.2275%；根据增长兑现、估值重估、主线相关度、相对强度和风险惩罚计算参考上行区间为 +6.13% 至 +12.13%，未融合有效机构目标区间；目标区间计算状态=new_calculation。"
       }
     },
     "002920": {
@@ -6424,6 +6277,53 @@
         "reason_text": "已读取最新收盘价，预估增长19.3157%，CAN SLIM 重估溢价8.88%，估值/风险折价13.7429%；根据增长兑现、估值重估、主线相关度、相对强度和风险惩罚计算参考上行区间为 +0.00% 至 +4.01%，未融合有效机构目标区间；目标区间计算状态=new_calculation。"
       }
     },
+    "600183": {
+      "stock_code": "600183",
+      "stock_name": "生益科技",
+      "updated_at": "2026-06-10",
+      "source_result_date": "2026-06-10",
+      "latest_trade_date": "2026-06-10",
+      "latest_close_price": 146.9,
+      "research_coverage_status": "limited_fallback",
+      "target_price_calculator_signal": {
+        "version": "oneil_calculator_v2",
+        "weight_profile_signal": {
+          "profile_name": "high_beta_breakout",
+          "source": "rule_fallback",
+          "reason_text": "科技主线但龙头地位不够明确，按高波动弹性配置。"
+        },
+        "current_price": 146.9,
+        "predicted_upside_pct_range": {
+          "low": 0.0,
+          "center": 0.0,
+          "high": 5.0034
+        },
+        "predicted_target_price_range": {
+          "low": 146.9,
+          "center": 146.9,
+          "high": 154.25,
+          "currency": "CNY"
+        },
+        "target_price_calculation_signal": {
+          "status": "new_calculation",
+          "source": "oneil_calculator",
+          "target_price_range": {
+            "low": 146.9,
+            "center": 146.9,
+            "high": 154.25,
+            "currency": "CNY"
+          },
+          "current_price": 146.9,
+          "reason_text": "使用本次 calculator 刷新计算区间。"
+        },
+        "expert_target_validation_signal": {
+          "status": "missing",
+          "reason_text": "机构目标区间没有可用中枢。"
+        },
+        "confidence_label": "low",
+        "reason_text": "已读取最新收盘价，预估增长0.0%，CAN SLIM 重估溢价-0.6%，估值/风险折价0.0%；根据增长兑现、估值重估、主线相关度、相对强度和风险惩罚计算参考上行区间为 +0.00% 至 +5.00%，未融合有效机构目标区间；目标区间计算状态=new_calculation。"
+      }
+    },
     "600184": {
       "stock_code": "600184",
       "stock_name": "光电股份",
@@ -6751,6 +6651,53 @@
         },
         "confidence_label": "low",
         "reason_text": "已读取最新收盘价，预估增长0.0%，CAN SLIM 重估溢价-0.44%，估值/风险折价0.0%；根据增长兑现、估值重估、主线相关度、相对强度和风险惩罚计算参考上行区间为 +0.00% 至 +4.01%，未融合有效机构目标区间；目标区间计算状态=new_calculation。"
+      }
+    },
+    "600312": {
+      "stock_code": "600312",
+      "stock_name": "平高电气",
+      "updated_at": "2026-06-10",
+      "source_result_date": "2026-06-10",
+      "latest_trade_date": "2026-06-10",
+      "latest_close_price": 18.23,
+      "research_coverage_status": "limited_fallback",
+      "target_price_calculator_signal": {
+        "version": "oneil_calculator_v2",
+        "weight_profile_signal": {
+          "profile_name": "default_growth",
+          "source": "rule_fallback",
+          "reason_text": "未命中特定行业类型，使用默认成长股配置。"
+        },
+        "current_price": 18.23,
+        "predicted_upside_pct_range": {
+          "low": 0.0,
+          "center": 0.0,
+          "high": 3.017
+        },
+        "predicted_target_price_range": {
+          "low": 18.23,
+          "center": 18.23,
+          "high": 18.78,
+          "currency": "CNY"
+        },
+        "target_price_calculation_signal": {
+          "status": "new_calculation",
+          "source": "oneil_calculator",
+          "target_price_range": {
+            "low": 18.23,
+            "center": 18.23,
+            "high": 18.78,
+            "currency": "CNY"
+          },
+          "current_price": 18.23,
+          "reason_text": "使用本次 calculator 刷新计算区间。"
+        },
+        "expert_target_validation_signal": {
+          "status": "missing",
+          "reason_text": "机构目标区间没有可用中枢。"
+        },
+        "confidence_label": "low",
+        "reason_text": "已读取最新收盘价，预估增长0.0%，CAN SLIM 重估溢价-0.72%，估值/风险折价0.0%；根据增长兑现、估值重估、主线相关度、相对强度和风险惩罚计算参考上行区间为 +0.00% 至 +3.02%，未融合有效机构目标区间；目标区间计算状态=new_calculation。"
       }
     },
     "600316": {
@@ -7611,53 +7558,6 @@
         "reason_text": "已读取最新收盘价，预估增长-12.4626%，CAN SLIM 重估溢价0.144%，估值/风险折价0.0%；根据增长兑现、估值重估、主线相关度、相对强度和风险惩罚计算参考上行区间为 +0.00% 至 +3.00%，未融合有效机构目标区间；目标区间计算状态=new_calculation。"
       }
     },
-    "600519": {
-      "stock_code": "600519",
-      "stock_name": "贵州茅台",
-      "updated_at": "2026-06-10",
-      "source_result_date": "2026-06-10",
-      "latest_trade_date": "2026-06-10",
-      "latest_close_price": 1275.88,
-      "research_coverage_status": "limited_fallback",
-      "target_price_calculator_signal": {
-        "version": "oneil_calculator_v2",
-        "weight_profile_signal": {
-          "profile_name": "default_growth",
-          "source": "rule_fallback",
-          "reason_text": "未命中特定行业类型，使用默认成长股配置。"
-        },
-        "current_price": 1275.88,
-        "predicted_upside_pct_range": {
-          "low": 0.0,
-          "center": 0.0,
-          "high": 3.0003
-        },
-        "predicted_target_price_range": {
-          "low": 1275.88,
-          "center": 1275.88,
-          "high": 1314.16,
-          "currency": "CNY"
-        },
-        "target_price_calculation_signal": {
-          "status": "new_calculation",
-          "source": "oneil_calculator",
-          "target_price_range": {
-            "low": 1275.88,
-            "center": 1275.88,
-            "high": 1314.16,
-            "currency": "CNY"
-          },
-          "current_price": 1275.88,
-          "reason_text": "使用本次 calculator 刷新计算区间。"
-        },
-        "expert_target_validation_signal": {
-          "status": "missing",
-          "reason_text": "机构目标区间没有可用中枢。"
-        },
-        "confidence_label": "low",
-        "reason_text": "已读取最新收盘价，预估增长0.0%，CAN SLIM 重估溢价-0.72%，估值/风险折价0.0%；根据增长兑现、估值重估、主线相关度、相对强度和风险惩罚计算参考上行区间为 +0.00% 至 +3.00%，未融合有效机构目标区间；目标区间计算状态=new_calculation。"
-      }
-    },
     "600522": {
       "stock_code": "600522",
       "stock_name": "中天科技",
@@ -8085,6 +7985,53 @@
         },
         "confidence_label": "medium",
         "reason_text": "已读取最新收盘价，预估增长24.6202%，CAN SLIM 重估溢价9.36%，估值/风险折价0.0%；根据增长兑现、估值重估、主线相关度、相对强度和风险惩罚计算参考上行区间为 +14.96% 至 +20.92%，未融合有效机构目标区间；目标区间计算状态=new_calculation。"
+      }
+    },
+    "600580": {
+      "stock_code": "600580",
+      "stock_name": "卧龙电驱",
+      "updated_at": "2026-06-10",
+      "source_result_date": "2026-06-10",
+      "latest_trade_date": "2026-06-10",
+      "latest_close_price": 36.01,
+      "research_coverage_status": "limited_fallback",
+      "target_price_calculator_signal": {
+        "version": "oneil_calculator_v2",
+        "weight_profile_signal": {
+          "profile_name": "default_growth",
+          "source": "rule_fallback",
+          "reason_text": "未命中特定行业类型，使用默认成长股配置。"
+        },
+        "current_price": 36.01,
+        "predicted_upside_pct_range": {
+          "low": 0.0,
+          "center": 0.0,
+          "high": 2.9992
+        },
+        "predicted_target_price_range": {
+          "low": 36.01,
+          "center": 36.01,
+          "high": 37.09,
+          "currency": "CNY"
+        },
+        "target_price_calculation_signal": {
+          "status": "new_calculation",
+          "source": "oneil_calculator",
+          "target_price_range": {
+            "low": 36.01,
+            "center": 36.01,
+            "high": 37.09,
+            "currency": "CNY"
+          },
+          "current_price": 36.01,
+          "reason_text": "使用本次 calculator 刷新计算区间。"
+        },
+        "expert_target_validation_signal": {
+          "status": "missing",
+          "reason_text": "机构目标区间没有可用中枢。"
+        },
+        "confidence_label": "low",
+        "reason_text": "已读取最新收盘价，预估增长0.0%，CAN SLIM 重估溢价-0.72%，估值/风险折价0.0%；根据增长兑现、估值重估、主线相关度、相对强度和风险惩罚计算参考上行区间为 +0.00% 至 +3.00%，未融合有效机构目标区间；目标区间计算状态=new_calculation。"
       }
     },
     "600584": {
@@ -8745,6 +8692,53 @@
         "reason_text": "已读取最新收盘价，预估增长0.0%，CAN SLIM 重估溢价-0.72%，估值/风险折价0.0%；根据增长兑现、估值重估、主线相关度、相对强度和风险惩罚计算参考上行区间为 +0.00% 至 +3.00%，未融合有效机构目标区间；目标区间计算状态=new_calculation。"
       }
     },
+    "600765": {
+      "stock_code": "600765",
+      "stock_name": "中航重机",
+      "updated_at": "2026-06-10",
+      "source_result_date": "2026-06-10",
+      "latest_trade_date": "2026-06-10",
+      "latest_close_price": 13.21,
+      "research_coverage_status": "limited_fallback",
+      "target_price_calculator_signal": {
+        "version": "oneil_calculator_v2",
+        "weight_profile_signal": {
+          "profile_name": "default_growth",
+          "source": "rule_fallback",
+          "reason_text": "未命中特定行业类型，使用默认成长股配置。"
+        },
+        "current_price": 13.21,
+        "predicted_upside_pct_range": {
+          "low": 0.0,
+          "center": 0.0,
+          "high": 3.028
+        },
+        "predicted_target_price_range": {
+          "low": 13.21,
+          "center": 13.21,
+          "high": 13.61,
+          "currency": "CNY"
+        },
+        "target_price_calculation_signal": {
+          "status": "new_calculation",
+          "source": "oneil_calculator",
+          "target_price_range": {
+            "low": 13.21,
+            "center": 13.21,
+            "high": 13.61,
+            "currency": "CNY"
+          },
+          "current_price": 13.21,
+          "reason_text": "使用本次 calculator 刷新计算区间。"
+        },
+        "expert_target_validation_signal": {
+          "status": "missing",
+          "reason_text": "机构目标区间没有可用中枢。"
+        },
+        "confidence_label": "low",
+        "reason_text": "已读取最新收盘价，预估增长0.0%，CAN SLIM 重估溢价-0.72%，估值/风险折价0.0%；根据增长兑现、估值重估、主线相关度、相对强度和风险惩罚计算参考上行区间为 +0.00% 至 +3.03%，未融合有效机构目标区间；目标区间计算状态=new_calculation。"
+      }
+    },
     "600795": {
       "stock_code": "600795",
       "stock_name": "国电电力",
@@ -8837,6 +8831,53 @@
         },
         "confidence_label": "low",
         "reason_text": "已读取最新收盘价，预估增长0.0%，CAN SLIM 重估溢价-0.72%，估值/风险折价0.0%；根据增长兑现、估值重估、主线相关度、相对强度和风险惩罚计算参考上行区间为 +0.00% 至 +3.00%，未融合有效机构目标区间；目标区间计算状态=new_calculation。"
+      }
+    },
+    "600845": {
+      "stock_code": "600845",
+      "stock_name": "宝信软件",
+      "updated_at": "2026-06-10",
+      "source_result_date": "2026-06-10",
+      "latest_trade_date": "2026-06-10",
+      "latest_close_price": 19.01,
+      "research_coverage_status": "limited_fallback",
+      "target_price_calculator_signal": {
+        "version": "oneil_calculator_v2",
+        "weight_profile_signal": {
+          "profile_name": "high_beta_breakout",
+          "source": "rule_fallback",
+          "reason_text": "科技主线但龙头地位不够明确，按高波动弹性配置。"
+        },
+        "current_price": 19.01,
+        "predicted_upside_pct_range": {
+          "low": 0.0,
+          "center": 0.0,
+          "high": 4.9974
+        },
+        "predicted_target_price_range": {
+          "low": 19.01,
+          "center": 19.01,
+          "high": 19.96,
+          "currency": "CNY"
+        },
+        "target_price_calculation_signal": {
+          "status": "new_calculation",
+          "source": "oneil_calculator",
+          "target_price_range": {
+            "low": 19.01,
+            "center": 19.01,
+            "high": 19.96,
+            "currency": "CNY"
+          },
+          "current_price": 19.01,
+          "reason_text": "使用本次 calculator 刷新计算区间。"
+        },
+        "expert_target_validation_signal": {
+          "status": "missing",
+          "reason_text": "机构目标区间没有可用中枢。"
+        },
+        "confidence_label": "low",
+        "reason_text": "已读取最新收盘价，预估增长0.0%，CAN SLIM 重估溢价-0.6%，估值/风险折价0.0%；根据增长兑现、估值重估、主线相关度、相对强度和风险惩罚计算参考上行区间为 +0.00% 至 +5.00%，未融合有效机构目标区间；目标区间计算状态=new_calculation。"
       }
     },
     "600850": {
@@ -10960,6 +11001,53 @@
         "reason_text": "已读取最新收盘价，预估增长0.0%，CAN SLIM 重估溢价-0.72%，估值/风险折价0.0%；根据增长兑现、估值重估、主线相关度、相对强度和风险惩罚计算参考上行区间为 +0.00% 至 +2.99%，未融合有效机构目标区间；目标区间计算状态=new_calculation。"
       }
     },
+    "601689": {
+      "stock_code": "601689",
+      "stock_name": "拓普集团",
+      "updated_at": "2026-06-10",
+      "source_result_date": "2026-06-10",
+      "latest_trade_date": "2026-06-10",
+      "latest_close_price": 63.21,
+      "research_coverage_status": "limited_fallback",
+      "target_price_calculator_signal": {
+        "version": "oneil_calculator_v2",
+        "weight_profile_signal": {
+          "profile_name": "default_growth",
+          "source": "rule_fallback",
+          "reason_text": "未命中特定行业类型，使用默认成长股配置。"
+        },
+        "current_price": 63.21,
+        "predicted_upside_pct_range": {
+          "low": 0.0,
+          "center": 0.0,
+          "high": 3.0059
+        },
+        "predicted_target_price_range": {
+          "low": 63.21,
+          "center": 63.21,
+          "high": 65.11,
+          "currency": "CNY"
+        },
+        "target_price_calculation_signal": {
+          "status": "new_calculation",
+          "source": "oneil_calculator",
+          "target_price_range": {
+            "low": 63.21,
+            "center": 63.21,
+            "high": 65.11,
+            "currency": "CNY"
+          },
+          "current_price": 63.21,
+          "reason_text": "使用本次 calculator 刷新计算区间。"
+        },
+        "expert_target_validation_signal": {
+          "status": "missing",
+          "reason_text": "机构目标区间没有可用中枢。"
+        },
+        "confidence_label": "low",
+        "reason_text": "已读取最新收盘价，预估增长0.0%，CAN SLIM 重估溢价-0.72%，估值/风险折价0.0%；根据增长兑现、估值重估、主线相关度、相对强度和风险惩罚计算参考上行区间为 +0.00% 至 +3.01%，未融合有效机构目标区间；目标区间计算状态=new_calculation。"
+      }
+    },
     "601699": {
       "stock_code": "601699",
       "stock_name": "潞安环能",
@@ -11898,53 +11986,6 @@
         },
         "confidence_label": "low",
         "reason_text": "已读取最新收盘价，预估增长0.0%，CAN SLIM 重估溢价-0.6%，估值/风险折价0.0%；根据增长兑现、估值重估、主线相关度、相对强度和风险惩罚计算参考上行区间为 +0.00% 至 +5.01%，未融合有效机构目标区间；目标区间计算状态=new_calculation。"
-      }
-    },
-    "603061": {
-      "stock_code": "603061",
-      "stock_name": "金海通",
-      "updated_at": "2026-06-10",
-      "source_result_date": "2026-06-10",
-      "latest_trade_date": "2026-06-10",
-      "latest_close_price": 319.0,
-      "research_coverage_status": "can_slim_available",
-      "target_price_calculator_signal": {
-        "version": "oneil_calculator_v2",
-        "weight_profile_signal": {
-          "profile_name": "high_beta_breakout",
-          "source": "rule_fallback",
-          "reason_text": "科技主线但龙头地位不够明确，按高波动弹性配置。"
-        },
-        "current_price": 319.0,
-        "predicted_upside_pct_range": {
-          "low": 2.1975,
-          "center": 7.1975,
-          "high": 12.1975
-        },
-        "predicted_target_price_range": {
-          "low": 326.01,
-          "center": 341.96,
-          "high": 357.91,
-          "currency": "CNY"
-        },
-        "target_price_calculation_signal": {
-          "status": "new_calculation",
-          "source": "oneil_calculator",
-          "target_price_range": {
-            "low": 326.01,
-            "center": 341.96,
-            "high": 357.91,
-            "currency": "CNY"
-          },
-          "current_price": 319.0,
-          "reason_text": "使用本次 calculator 刷新计算区间。"
-        },
-        "expert_target_validation_signal": {
-          "status": "missing",
-          "reason_text": "机构目标区间没有可用中枢。"
-        },
-        "confidence_label": "medium",
-        "reason_text": "已读取最新收盘价，预估增长44.4795%，CAN SLIM 重估溢价8.085%，估值/风险折价12.0%；根据增长兑现、估值重估、主线相关度、相对强度和风险惩罚计算参考上行区间为 +2.20% 至 +12.20%，未融合有效机构目标区间；目标区间计算状态=new_calculation。"
       }
     },
     "603083": {
@@ -13802,59 +13843,6 @@
         },
         "confidence_label": "low",
         "reason_text": "已读取最新收盘价，预估增长0.0%，CAN SLIM 重估溢价-0.72%，估值/风险折价0.0%；根据增长兑现、估值重估、主线相关度、相对强度和风险惩罚计算参考上行区间为 +0.00% 至 +2.98%，未融合有效机构目标区间；目标区间计算状态=new_calculation。"
-      }
-    },
-    "603986": {
-      "stock_code": "603986",
-      "stock_name": "兆易创新",
-      "updated_at": "2026-06-10",
-      "source_result_date": "2026-06-10",
-      "latest_trade_date": "2026-06-10",
-      "latest_close_price": 480.84,
-      "research_coverage_status": "can_slim_available",
-      "target_price_calculator_signal": {
-        "version": "oneil_calculator_v2",
-        "weight_profile_signal": {
-          "profile_name": "institutional_capacity_core",
-          "source": "rule_fallback",
-          "reason_text": "近20日平均换手率约8.3319%，20日平均成交额约25810588.3943，20日平均流通市值约31039221.7655，符合低换手、高容量承接或容量核心识别的机构大票/中军特征。"
-        },
-        "current_price": 480.84,
-        "predicted_upside_pct_range": {
-          "low": 0.0,
-          "center": 0.0,
-          "high": 3.001
-        },
-        "predicted_target_price_range": {
-          "low": 480.84,
-          "center": 480.84,
-          "high": 495.27,
-          "currency": "CNY"
-        },
-        "target_price_calculation_signal": {
-          "status": "new_calculation",
-          "source": "oneil_calculator",
-          "target_price_range": {
-            "low": 480.84,
-            "center": 480.84,
-            "high": 495.27,
-            "currency": "CNY"
-          },
-          "current_price": 480.84,
-          "reason_text": "使用本次 calculator 刷新计算区间。"
-        },
-        "expert_target_validation_signal": {
-          "status": "current_price_above_expert_target",
-          "expert_target_center": 257.4,
-          "current_price": 480.84,
-          "implied_upside_pct": -46.4687,
-          "source_name": "东方证券",
-          "source_observed_at": "2025-12-30",
-          "evidence_freshness_label": "recent_half_year",
-          "training_usage_text": "不融合进当前预测；可在训练时使用目标发布日附近收盘价验证公式。"
-        },
-        "confidence_label": "medium",
-        "reason_text": "已读取最新收盘价，预估增长36.6623%，CAN SLIM 重估溢价13.28%，估值/风险折价34.9109%；根据增长兑现、估值重估、主线相关度、相对强度和风险惩罚计算参考上行区间为 +0.00% 至 +3.00%，未融合有效机构目标区间；目标区间计算状态=new_calculation。"
       }
     },
     "605098": {
