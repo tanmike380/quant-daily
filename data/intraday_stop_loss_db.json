@@ -111,36 +111,36 @@
     "002636": {
       "stock_code": "002636",
       "stock_name": "金安国纪",
-      "updated_at": "2026-06-02",
-      "source_result_date": "2026-06-02",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
       "intraday_stop_loss_signal": {
         "method_label": "daily_low_open_recovery",
-        "lookback_trade_day_count": 157,
+        "lookback_trade_day_count": 220,
         "threshold_stat_list": [
           {
-            "threshold_pct": -6.0,
-            "trigger_count": 14,
-            "recover_to_open_count": 0,
-            "not_recover_to_open_count": 14,
-            "recover_to_open_probability": 0.0,
-            "not_recover_to_open_probability": 1.0,
-            "continue_down_count": 14,
-            "v_recovery_count": 0,
-            "continue_down_probability": 1.0,
-            "v_recovery_probability": 0.0,
-            "avg_low_return_from_open_pct": -7.8816,
-            "avg_close_return_from_open_pct": -6.5013,
-            "avg_avoided_loss_pct": 1.0062,
-            "avg_missed_gain_pct": 0.0,
+            "threshold_pct": -5.0,
+            "trigger_count": 22,
+            "recover_to_open_count": 2,
+            "not_recover_to_open_count": 20,
+            "recover_to_open_probability": 0.0909,
+            "not_recover_to_open_probability": 0.9091,
+            "continue_down_count": 20,
+            "v_recovery_count": 2,
+            "continue_down_probability": 0.9091,
+            "v_recovery_probability": 0.0909,
+            "avg_low_return_from_open_pct": -7.0866,
+            "avg_close_return_from_open_pct": -5.4128,
+            "avg_avoided_loss_pct": 1.393,
+            "avg_missed_gain_pct": 6.1871,
             "trading_cost_pct": 0.15,
-            "expected_value_pct": 0.3513,
-            "avg_max_drawdown_after_trigger_pct": -2.0123
+            "expected_value_pct": 0.2628,
+            "avg_max_drawdown_after_trigger_pct": -1.8574
           }
         ],
-        "optimal_stop_loss_pct": -6.0,
-        "optimal_expected_value_pct": 0.3513,
+        "optimal_stop_loss_pct": -5.0,
+        "optimal_expected_value_pct": 0.2628,
         "confidence_label": "statistical",
-        "reason_text": "近157个交易日样本中，日内最低点触发-6.0% 后，收盘重新回到开盘价的概率为0.0，未能收回开盘价的概率为1.0；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-6.5013%，期望值参考为0.3513%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "reason_text": "近220个交易日样本中，日内最低点触发-5.0% 后，收盘重新回到开盘价的概率为0.0909，未能收回开盘价的概率为0.9091；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-5.4128%，期望值参考为0.2628%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
         "status": "ready"
       }
     },
@@ -1263,11 +1263,11 @@
     "002361": {
       "stock_code": "002361",
       "stock_name": "神剑股份",
-      "updated_at": "2026-06-02",
-      "source_result_date": "2026-06-02",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
       "intraday_stop_loss_signal": {
         "method_label": "daily_low_open_recovery",
-        "lookback_trade_day_count": 157,
+        "lookback_trade_day_count": 220,
         "threshold_stat_list": [
           {
             "threshold_pct": -6.0,
@@ -1292,7 +1292,7 @@
         "optimal_stop_loss_pct": -6.0,
         "optimal_expected_value_pct": -0.6148,
         "confidence_label": "statistical",
-        "reason_text": "近157个交易日样本中，日内最低点触发-6.0% 后，收盘重新回到开盘价的概率为0.1111，未能收回开盘价的概率为0.8889；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-5.5352%，期望值参考为-0.6148%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "reason_text": "近220个交易日样本中，日内最低点触发-6.0% 后，收盘重新回到开盘价的概率为0.1111，未能收回开盘价的概率为0.8889；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-5.5352%，期望值参考为-0.6148%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
         "status": "ready"
       }
     },
@@ -2343,36 +2343,36 @@
     "600345": {
       "stock_code": "600345",
       "stock_name": "长江通信",
-      "updated_at": "2026-06-02",
-      "source_result_date": "2026-06-02",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
       "intraday_stop_loss_signal": {
         "method_label": "daily_low_open_recovery",
-        "lookback_trade_day_count": 157,
+        "lookback_trade_day_count": 220,
         "threshold_stat_list": [
           {
-            "threshold_pct": -5.0,
-            "trigger_count": 22,
-            "recover_to_open_count": 1,
-            "not_recover_to_open_count": 21,
-            "recover_to_open_probability": 0.0455,
-            "not_recover_to_open_probability": 0.9545,
-            "continue_down_count": 21,
-            "v_recovery_count": 1,
-            "continue_down_probability": 0.9545,
-            "v_recovery_probability": 0.0455,
-            "avg_low_return_from_open_pct": -6.6533,
-            "avg_close_return_from_open_pct": -4.503,
-            "avg_avoided_loss_pct": 0.9609,
-            "avg_missed_gain_pct": 10.8824,
+            "threshold_pct": -4.0,
+            "trigger_count": 43,
+            "recover_to_open_count": 4,
+            "not_recover_to_open_count": 39,
+            "recover_to_open_probability": 0.093,
+            "not_recover_to_open_probability": 0.907,
+            "continue_down_count": 39,
+            "v_recovery_count": 4,
+            "continue_down_probability": 0.907,
+            "v_recovery_probability": 0.093,
+            "avg_low_return_from_open_pct": -5.793,
+            "avg_close_return_from_open_pct": -3.7213,
+            "avg_avoided_loss_pct": 1.0545,
+            "avg_missed_gain_pct": 6.3385,
             "trading_cost_pct": 0.15,
-            "expected_value_pct": -0.647,
-            "avg_max_drawdown_after_trigger_pct": -1.6816
+            "expected_value_pct": -0.4287,
+            "avg_max_drawdown_after_trigger_pct": -1.8694
           }
         ],
-        "optimal_stop_loss_pct": -5.0,
-        "optimal_expected_value_pct": -0.647,
+        "optimal_stop_loss_pct": -4.0,
+        "optimal_expected_value_pct": -0.4287,
         "confidence_label": "statistical",
-        "reason_text": "近157个交易日样本中，日内最低点触发-5.0% 后，收盘重新回到开盘价的概率为0.0455，未能收回开盘价的概率为0.9545；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-4.503%，期望值参考为-0.647%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "reason_text": "近220个交易日样本中，日内最低点触发-4.0% 后，收盘重新回到开盘价的概率为0.093，未能收回开盘价的概率为0.907；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.7213%，期望值参考为-0.4287%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
         "status": "ready"
       }
     },
@@ -2523,36 +2523,36 @@
     "600487": {
       "stock_code": "600487",
       "stock_name": "亨通光电",
-      "updated_at": "2026-06-02",
-      "source_result_date": "2026-06-02",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
       "intraday_stop_loss_signal": {
         "method_label": "daily_low_open_recovery",
-        "lookback_trade_day_count": 157,
+        "lookback_trade_day_count": 220,
         "threshold_stat_list": [
           {
-            "threshold_pct": -5.0,
-            "trigger_count": 21,
-            "recover_to_open_count": 2,
-            "not_recover_to_open_count": 19,
-            "recover_to_open_probability": 0.0952,
-            "not_recover_to_open_probability": 0.9048,
-            "continue_down_count": 19,
-            "v_recovery_count": 2,
-            "continue_down_probability": 0.9048,
-            "v_recovery_probability": 0.0952,
-            "avg_low_return_from_open_pct": -6.5693,
-            "avg_close_return_from_open_pct": -4.2551,
-            "avg_avoided_loss_pct": 0.7095,
-            "avg_missed_gain_pct": 9.4152,
+            "threshold_pct": -4.0,
+            "trigger_count": 34,
+            "recover_to_open_count": 3,
+            "not_recover_to_open_count": 31,
+            "recover_to_open_probability": 0.0882,
+            "not_recover_to_open_probability": 0.9118,
+            "continue_down_count": 31,
+            "v_recovery_count": 3,
+            "continue_down_probability": 0.9118,
+            "v_recovery_probability": 0.0882,
+            "avg_low_return_from_open_pct": -6.1364,
+            "avg_close_return_from_open_pct": -3.9215,
+            "avg_avoided_loss_pct": 1.0743,
+            "avg_missed_gain_pct": 7.0848,
             "trading_cost_pct": 0.15,
-            "expected_value_pct": -0.8949,
-            "avg_max_drawdown_after_trigger_pct": -1.3481
+            "expected_value_pct": -0.2285,
+            "avg_max_drawdown_after_trigger_pct": -1.8503
           }
         ],
-        "optimal_stop_loss_pct": -5.0,
-        "optimal_expected_value_pct": -0.8949,
+        "optimal_stop_loss_pct": -4.0,
+        "optimal_expected_value_pct": -0.2285,
         "confidence_label": "statistical",
-        "reason_text": "近157个交易日样本中，日内最低点触发-5.0% 后，收盘重新回到开盘价的概率为0.0952，未能收回开盘价的概率为0.9048；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-4.2551%，期望值参考为-0.8949%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "reason_text": "近220个交易日样本中，日内最低点触发-4.0% 后，收盘重新回到开盘价的概率为0.0882，未能收回开盘价的概率为0.9118；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.9215%，期望值参考为-0.2285%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
         "status": "ready"
       }
     },
@@ -2775,11 +2775,11 @@
     "600667": {
       "stock_code": "600667",
       "stock_name": "太极实业",
-      "updated_at": "2026-06-02",
-      "source_result_date": "2026-06-02",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
       "intraday_stop_loss_signal": {
         "method_label": "daily_low_open_recovery",
-        "lookback_trade_day_count": 157,
+        "lookback_trade_day_count": 220,
         "threshold_stat_list": [
           {
             "threshold_pct": -6.0,
@@ -2804,7 +2804,7 @@
         "optimal_stop_loss_pct": -6.0,
         "optimal_expected_value_pct": -0.1456,
         "confidence_label": "statistical",
-        "reason_text": "近157个交易日样本中，日内最低点触发-6.0% 后，收盘重新回到开盘价的概率为0.1111，未能收回开盘价的概率为0.8889；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-6.0044%，期望值参考为-0.1456%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "reason_text": "近220个交易日样本中，日内最低点触发-6.0% 后，收盘重新回到开盘价的概率为0.1111，未能收回开盘价的概率为0.8889；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-6.0044%，期望值参考为-0.1456%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
         "status": "ready"
       }
     },
@@ -2919,36 +2919,36 @@
     "600869": {
       "stock_code": "600869",
       "stock_name": "远东股份",
-      "updated_at": "2026-06-02",
-      "source_result_date": "2026-06-02",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
       "intraday_stop_loss_signal": {
         "method_label": "daily_low_open_recovery",
-        "lookback_trade_day_count": 157,
+        "lookback_trade_day_count": 220,
         "threshold_stat_list": [
           {
-            "threshold_pct": -6.0,
-            "trigger_count": 9,
-            "recover_to_open_count": 0,
-            "not_recover_to_open_count": 9,
-            "recover_to_open_probability": 0.0,
-            "not_recover_to_open_probability": 1.0,
-            "continue_down_count": 9,
-            "v_recovery_count": 0,
-            "continue_down_probability": 1.0,
-            "v_recovery_probability": 0.0,
-            "avg_low_return_from_open_pct": -8.6225,
-            "avg_close_return_from_open_pct": -7.0817,
-            "avg_avoided_loss_pct": 1.6001,
-            "avg_missed_gain_pct": 0.0,
+            "threshold_pct": -5.0,
+            "trigger_count": 21,
+            "recover_to_open_count": 2,
+            "not_recover_to_open_count": 19,
+            "recover_to_open_probability": 0.0952,
+            "not_recover_to_open_probability": 0.9048,
+            "continue_down_count": 19,
+            "v_recovery_count": 2,
+            "continue_down_probability": 0.9048,
+            "v_recovery_probability": 0.0952,
+            "avg_low_return_from_open_pct": -7.2366,
+            "avg_close_return_from_open_pct": -4.8153,
+            "avg_avoided_loss_pct": 1.4983,
+            "avg_missed_gain_pct": 9.8479,
             "trading_cost_pct": 0.15,
-            "expected_value_pct": 0.9317,
-            "avg_max_drawdown_after_trigger_pct": -1.8001
+            "expected_value_pct": -0.3347,
+            "avg_max_drawdown_after_trigger_pct": -2.0334
           }
         ],
-        "optimal_stop_loss_pct": -6.0,
-        "optimal_expected_value_pct": 0.9317,
+        "optimal_stop_loss_pct": -5.0,
+        "optimal_expected_value_pct": -0.3347,
         "confidence_label": "statistical",
-        "reason_text": "近157个交易日样本中，日内最低点触发-6.0% 后，收盘重新回到开盘价的概率为0.0，未能收回开盘价的概率为1.0；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-7.0817%，期望值参考为0.9317%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "reason_text": "近220个交易日样本中，日内最低点触发-5.0% 后，收盘重新回到开盘价的概率为0.0952，未能收回开盘价的概率为0.9048；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-4.8153%，期望值参考为-0.3347%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
         "status": "ready"
       }
     },
@@ -3639,36 +3639,36 @@
     "603318": {
       "stock_code": "603318",
       "stock_name": "水发燃气",
-      "updated_at": "2026-06-02",
-      "source_result_date": "2026-06-02",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
       "intraday_stop_loss_signal": {
         "method_label": "daily_low_open_recovery",
-        "lookback_trade_day_count": 157,
+        "lookback_trade_day_count": 220,
         "threshold_stat_list": [
           {
             "threshold_pct": -4.0,
-            "trigger_count": 25,
-            "recover_to_open_count": 4,
-            "not_recover_to_open_count": 21,
-            "recover_to_open_probability": 0.16,
-            "not_recover_to_open_probability": 0.84,
-            "continue_down_count": 21,
-            "v_recovery_count": 4,
-            "continue_down_probability": 0.84,
-            "v_recovery_probability": 0.16,
-            "avg_low_return_from_open_pct": -5.9201,
-            "avg_close_return_from_open_pct": -3.288,
-            "avg_avoided_loss_pct": 1.1684,
-            "avg_missed_gain_pct": 8.1136,
+            "trigger_count": 29,
+            "recover_to_open_count": 5,
+            "not_recover_to_open_count": 24,
+            "recover_to_open_probability": 0.1724,
+            "not_recover_to_open_probability": 0.8276,
+            "continue_down_count": 24,
+            "v_recovery_count": 5,
+            "continue_down_probability": 0.8276,
+            "v_recovery_probability": 0.1724,
+            "avg_low_return_from_open_pct": -5.8253,
+            "avg_close_return_from_open_pct": -2.9787,
+            "avg_avoided_loss_pct": 1.07,
+            "avg_missed_gain_pct": 8.5881,
             "trading_cost_pct": 0.15,
-            "expected_value_pct": -0.862,
-            "avg_max_drawdown_after_trigger_pct": -1.6357
+            "expected_value_pct": -1.1713,
+            "avg_max_drawdown_after_trigger_pct": -1.6051
           }
         ],
         "optimal_stop_loss_pct": -4.0,
-        "optimal_expected_value_pct": -0.862,
+        "optimal_expected_value_pct": -1.1713,
         "confidence_label": "statistical",
-        "reason_text": "近157个交易日样本中，日内最低点触发-4.0% 后，收盘重新回到开盘价的概率为0.16，未能收回开盘价的概率为0.84；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.288%，期望值参考为-0.862%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "reason_text": "近220个交易日样本中，日内最低点触发-4.0% 后，收盘重新回到开盘价的概率为0.1724，未能收回开盘价的概率为0.8276；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-2.9787%，期望值参考为-1.1713%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
         "status": "ready"
       }
     },
@@ -4107,36 +4107,36 @@
     "603890": {
       "stock_code": "603890",
       "stock_name": "春秋电子",
-      "updated_at": "2026-06-02",
-      "source_result_date": "2026-06-02",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
       "intraday_stop_loss_signal": {
         "method_label": "daily_low_open_recovery",
-        "lookback_trade_day_count": 157,
+        "lookback_trade_day_count": 220,
         "threshold_stat_list": [
           {
             "threshold_pct": -3.0,
-            "trigger_count": 25,
-            "recover_to_open_count": 0,
-            "not_recover_to_open_count": 25,
-            "recover_to_open_probability": 0.0,
-            "not_recover_to_open_probability": 1.0,
-            "continue_down_count": 25,
-            "v_recovery_count": 0,
-            "continue_down_probability": 1.0,
-            "v_recovery_probability": 0.0,
-            "avg_low_return_from_open_pct": -4.7158,
-            "avg_close_return_from_open_pct": -3.4814,
-            "avg_avoided_loss_pct": 0.9414,
-            "avg_missed_gain_pct": 0.0,
+            "trigger_count": 35,
+            "recover_to_open_count": 1,
+            "not_recover_to_open_count": 34,
+            "recover_to_open_probability": 0.0286,
+            "not_recover_to_open_probability": 0.9714,
+            "continue_down_count": 34,
+            "v_recovery_count": 1,
+            "continue_down_probability": 0.9714,
+            "v_recovery_probability": 0.0286,
+            "avg_low_return_from_open_pct": -4.7803,
+            "avg_close_return_from_open_pct": -3.3517,
+            "avg_avoided_loss_pct": 0.9642,
+            "avg_missed_gain_pct": 3.6514,
             "trading_cost_pct": 0.15,
-            "expected_value_pct": 0.3314,
-            "avg_max_drawdown_after_trigger_pct": -1.569
+            "expected_value_pct": 0.2017,
+            "avg_max_drawdown_after_trigger_pct": -1.5611
           }
         ],
         "optimal_stop_loss_pct": -3.0,
-        "optimal_expected_value_pct": 0.3314,
+        "optimal_expected_value_pct": 0.2017,
         "confidence_label": "statistical",
-        "reason_text": "近157个交易日样本中，日内最低点触发-3.0% 后，收盘重新回到开盘价的概率为0.0，未能收回开盘价的概率为1.0；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.4814%，期望值参考为0.3314%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "reason_text": "近220个交易日样本中，日内最低点触发-3.0% 后，收盘重新回到开盘价的概率为0.0286，未能收回开盘价的概率为0.9714；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.3517%，期望值参考为0.2017%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
         "status": "ready"
       }
     },
@@ -4323,36 +4323,36 @@
     "605358": {
       "stock_code": "605358",
       "stock_name": "立昂微",
-      "updated_at": "2026-06-02",
-      "source_result_date": "2026-06-02",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
       "intraday_stop_loss_signal": {
         "method_label": "daily_low_open_recovery",
-        "lookback_trade_day_count": 157,
+        "lookback_trade_day_count": 220,
         "threshold_stat_list": [
           {
             "threshold_pct": -3.0,
-            "trigger_count": 38,
-            "recover_to_open_count": 2,
-            "not_recover_to_open_count": 36,
-            "recover_to_open_probability": 0.0526,
-            "not_recover_to_open_probability": 0.9474,
-            "continue_down_count": 36,
-            "v_recovery_count": 2,
-            "continue_down_probability": 0.9474,
-            "v_recovery_probability": 0.0526,
-            "avg_low_return_from_open_pct": -4.4793,
-            "avg_close_return_from_open_pct": -3.0451,
-            "avg_avoided_loss_pct": 0.7738,
-            "avg_missed_gain_pct": 4.7872,
+            "trigger_count": 45,
+            "recover_to_open_count": 4,
+            "not_recover_to_open_count": 41,
+            "recover_to_open_probability": 0.0889,
+            "not_recover_to_open_probability": 0.9111,
+            "continue_down_count": 41,
+            "v_recovery_count": 4,
+            "continue_down_probability": 0.9111,
+            "v_recovery_probability": 0.0889,
+            "avg_low_return_from_open_pct": -4.5302,
+            "avg_close_return_from_open_pct": -2.5995,
+            "avg_avoided_loss_pct": 0.8068,
+            "avg_missed_gain_pct": 7.7612,
             "trading_cost_pct": 0.15,
-            "expected_value_pct": -0.1049,
-            "avg_max_drawdown_after_trigger_pct": -1.5477
+            "expected_value_pct": -0.5505,
+            "avg_max_drawdown_after_trigger_pct": -1.5753
           }
         ],
         "optimal_stop_loss_pct": -3.0,
-        "optimal_expected_value_pct": -0.1049,
+        "optimal_expected_value_pct": -0.5505,
         "confidence_label": "statistical",
-        "reason_text": "近157个交易日样本中，日内最低点触发-3.0% 后，收盘重新回到开盘价的概率为0.0526，未能收回开盘价的概率为0.9474；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.0451%，期望值参考为-0.1049%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "reason_text": "近220个交易日样本中，日内最低点触发-3.0% 后，收盘重新回到开盘价的概率为0.0889，未能收回开盘价的概率为0.9111；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-2.5995%，期望值参考为-0.5505%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
         "status": "ready"
       }
     },
@@ -4503,8 +4503,8 @@
     "002409": {
       "stock_code": "002409",
       "stock_name": "雅克科技",
-      "updated_at": "2026-06-05",
-      "source_result_date": "2026-06-04",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
       "intraday_stop_loss_signal": {
         "method_label": "daily_low_open_recovery",
         "lookback_trade_day_count": 220,
@@ -4719,36 +4719,36 @@
     "000681": {
       "stock_code": "000681",
       "stock_name": "视觉中国",
-      "updated_at": "2026-06-09",
-      "source_result_date": "2026-06-09",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
       "intraday_stop_loss_signal": {
         "method_label": "daily_low_open_recovery",
         "lookback_trade_day_count": 220,
         "threshold_stat_list": [
           {
             "threshold_pct": -4.0,
-            "trigger_count": 22,
+            "trigger_count": 23,
             "recover_to_open_count": 2,
-            "not_recover_to_open_count": 20,
-            "recover_to_open_probability": 0.0909,
-            "not_recover_to_open_probability": 0.9091,
-            "continue_down_count": 20,
+            "not_recover_to_open_count": 21,
+            "recover_to_open_probability": 0.087,
+            "not_recover_to_open_probability": 0.913,
+            "continue_down_count": 21,
             "v_recovery_count": 2,
-            "continue_down_probability": 0.9091,
-            "v_recovery_probability": 0.0909,
-            "avg_low_return_from_open_pct": -5.6309,
-            "avg_close_return_from_open_pct": -4.1719,
-            "avg_avoided_loss_pct": 1.0277,
+            "continue_down_probability": 0.913,
+            "v_recovery_probability": 0.087,
+            "avg_low_return_from_open_pct": -5.8249,
+            "avg_close_return_from_open_pct": -4.4293,
+            "avg_avoided_loss_pct": 1.2689,
             "avg_missed_gain_pct": 5.5465,
             "trading_cost_pct": 0.15,
-            "expected_value_pct": 0.0219,
-            "avg_max_drawdown_after_trigger_pct": -1.5812
+            "expected_value_pct": 0.2793,
+            "avg_max_drawdown_after_trigger_pct": -1.9033
           }
         ],
         "optimal_stop_loss_pct": -4.0,
-        "optimal_expected_value_pct": 0.0219,
+        "optimal_expected_value_pct": 0.2793,
         "confidence_label": "statistical",
-        "reason_text": "近220个交易日样本中，日内最低点触发-4.0% 后，收盘重新回到开盘价的概率为0.0909，未能收回开盘价的概率为0.9091；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-4.1719%，期望值参考为0.0219%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "reason_text": "近220个交易日样本中，日内最低点触发-4.0% 后，收盘重新回到开盘价的概率为0.087，未能收回开盘价的概率为0.913；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-4.4293%，期望值参考为0.2793%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
         "status": "ready"
       }
     },
@@ -5613,6 +5613,2490 @@
         "optimal_expected_value_pct": 0.1402,
         "confidence_label": "statistical",
         "reason_text": "近220个交易日样本中，日内最低点触发-3.0% 后，收盘重新回到开盘价的概率为0.0714，未能收回开盘价的概率为0.9286；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.2902%，期望值参考为0.1402%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "000037": {
+      "stock_code": "000037",
+      "stock_name": "深南电A",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -8.0,
+            "trigger_count": 2,
+            "recover_to_open_count": 0,
+            "not_recover_to_open_count": 2,
+            "recover_to_open_probability": 0.0,
+            "not_recover_to_open_probability": 1.0,
+            "continue_down_count": 2,
+            "v_recovery_count": 0,
+            "continue_down_probability": 1.0,
+            "v_recovery_probability": 0.0,
+            "avg_low_return_from_open_pct": -8.5519,
+            "avg_close_return_from_open_pct": -8.2736,
+            "avg_avoided_loss_pct": 0.2736,
+            "avg_missed_gain_pct": 0.0,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": 0.1236,
+            "avg_max_drawdown_after_trigger_pct": -0.2736
+          }
+        ],
+        "optimal_stop_loss_pct": -8.0,
+        "optimal_expected_value_pct": 0.1236,
+        "confidence_label": "low_sample_statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-8.0% 后，收盘重新回到开盘价的概率为0.0，未能收回开盘价的概率为1.0；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-8.2736%，期望值参考为0.1236%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。但该最优阈值触发样本少于5次，只能作为低样本统计参考。",
+        "status": "ready"
+      }
+    },
+    "000048": {
+      "stock_code": "000048",
+      "stock_name": "京基智农",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -3.0,
+            "trigger_count": 38,
+            "recover_to_open_count": 3,
+            "not_recover_to_open_count": 35,
+            "recover_to_open_probability": 0.0789,
+            "not_recover_to_open_probability": 0.9211,
+            "continue_down_count": 35,
+            "v_recovery_count": 3,
+            "continue_down_probability": 0.9211,
+            "v_recovery_probability": 0.0789,
+            "avg_low_return_from_open_pct": -4.6449,
+            "avg_close_return_from_open_pct": -2.907,
+            "avg_avoided_loss_pct": 0.8993,
+            "avg_missed_gain_pct": 5.7842,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": -0.243,
+            "avg_max_drawdown_after_trigger_pct": -1.4989
+          }
+        ],
+        "optimal_stop_loss_pct": -3.0,
+        "optimal_expected_value_pct": -0.243,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-3.0% 后，收盘重新回到开盘价的概率为0.0789，未能收回开盘价的概率为0.9211；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-2.907%，期望值参考为-0.243%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "000608": {
+      "stock_code": "000608",
+      "stock_name": "阳光股份",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -4.0,
+            "trigger_count": 31,
+            "recover_to_open_count": 2,
+            "not_recover_to_open_count": 29,
+            "recover_to_open_probability": 0.0645,
+            "not_recover_to_open_probability": 0.9355,
+            "continue_down_count": 29,
+            "v_recovery_count": 2,
+            "continue_down_probability": 0.9355,
+            "v_recovery_probability": 0.0645,
+            "avg_low_return_from_open_pct": -5.1585,
+            "avg_close_return_from_open_pct": -3.1449,
+            "avg_avoided_loss_pct": 0.4304,
+            "avg_missed_gain_pct": 5.5006,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": -1.0051,
+            "avg_max_drawdown_after_trigger_pct": -1.2483
+          }
+        ],
+        "optimal_stop_loss_pct": -4.0,
+        "optimal_expected_value_pct": -1.0051,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-4.0% 后，收盘重新回到开盘价的概率为0.0645，未能收回开盘价的概率为0.9355；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.1449%，期望值参考为-1.0051%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "000670": {
+      "stock_code": "000670",
+      "stock_name": "盈方微",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -3.0,
+            "trigger_count": 31,
+            "recover_to_open_count": 3,
+            "not_recover_to_open_count": 28,
+            "recover_to_open_probability": 0.0968,
+            "not_recover_to_open_probability": 0.9032,
+            "continue_down_count": 28,
+            "v_recovery_count": 3,
+            "continue_down_probability": 0.9032,
+            "v_recovery_probability": 0.0968,
+            "avg_low_return_from_open_pct": -5.4183,
+            "avg_close_return_from_open_pct": -4.0521,
+            "avg_avoided_loss_pct": 1.9679,
+            "avg_missed_gain_pct": 5.5332,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": 0.9021,
+            "avg_max_drawdown_after_trigger_pct": -2.7551
+          }
+        ],
+        "optimal_stop_loss_pct": -3.0,
+        "optimal_expected_value_pct": 0.9021,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-3.0% 后，收盘重新回到开盘价的概率为0.0968，未能收回开盘价的概率为0.9032；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-4.0521%，期望值参考为0.9021%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "000921": {
+      "stock_code": "000921",
+      "stock_name": "海信家电",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -2.0,
+            "trigger_count": 22,
+            "recover_to_open_count": 1,
+            "not_recover_to_open_count": 21,
+            "recover_to_open_probability": 0.0455,
+            "not_recover_to_open_probability": 0.9545,
+            "continue_down_count": 21,
+            "v_recovery_count": 1,
+            "continue_down_probability": 0.9545,
+            "v_recovery_probability": 0.0455,
+            "avg_low_return_from_open_pct": -2.5825,
+            "avg_close_return_from_open_pct": -1.792,
+            "avg_avoided_loss_pct": 0.1449,
+            "avg_missed_gain_pct": 2.2222,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": -0.358,
+            "avg_max_drawdown_after_trigger_pct": -0.3805
+          }
+        ],
+        "optimal_stop_loss_pct": -2.0,
+        "optimal_expected_value_pct": -0.358,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-2.0% 后，收盘重新回到开盘价的概率为0.0455，未能收回开盘价的概率为0.9545；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-1.792%，期望值参考为-0.358%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "000970": {
+      "stock_code": "000970",
+      "stock_name": "中科三环",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -2.0,
+            "trigger_count": 67,
+            "recover_to_open_count": 6,
+            "not_recover_to_open_count": 61,
+            "recover_to_open_probability": 0.0896,
+            "not_recover_to_open_probability": 0.9104,
+            "continue_down_count": 61,
+            "v_recovery_count": 6,
+            "continue_down_probability": 0.9104,
+            "v_recovery_probability": 0.0896,
+            "avg_low_return_from_open_pct": -3.2865,
+            "avg_close_return_from_open_pct": -2.0506,
+            "avg_avoided_loss_pct": 0.7305,
+            "avg_missed_gain_pct": 3.3703,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": -0.0994,
+            "avg_max_drawdown_after_trigger_pct": -1.2378
+          }
+        ],
+        "optimal_stop_loss_pct": -2.0,
+        "optimal_expected_value_pct": -0.0994,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-2.0% 后，收盘重新回到开盘价的概率为0.0896，未能收回开盘价的概率为0.9104；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-2.0506%，期望值参考为-0.0994%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "001210": {
+      "stock_code": "001210",
+      "stock_name": "金房能源",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -3.0,
+            "trigger_count": 31,
+            "recover_to_open_count": 3,
+            "not_recover_to_open_count": 28,
+            "recover_to_open_probability": 0.0968,
+            "not_recover_to_open_probability": 0.9032,
+            "continue_down_count": 28,
+            "v_recovery_count": 3,
+            "continue_down_probability": 0.9032,
+            "v_recovery_probability": 0.0968,
+            "avg_low_return_from_open_pct": -4.6645,
+            "avg_close_return_from_open_pct": -2.7169,
+            "avg_avoided_loss_pct": 0.756,
+            "avg_missed_gain_pct": 4.9913,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": -0.4331,
+            "avg_max_drawdown_after_trigger_pct": -1.512
+          }
+        ],
+        "optimal_stop_loss_pct": -3.0,
+        "optimal_expected_value_pct": -0.4331,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-3.0% 后，收盘重新回到开盘价的概率为0.0968，未能收回开盘价的概率为0.9032；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-2.7169%，期望值参考为-0.4331%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "001269": {
+      "stock_code": "001269",
+      "stock_name": "欧晶科技",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -3.0,
+            "trigger_count": 43,
+            "recover_to_open_count": 6,
+            "not_recover_to_open_count": 37,
+            "recover_to_open_probability": 0.1395,
+            "not_recover_to_open_probability": 0.8605,
+            "continue_down_count": 37,
+            "v_recovery_count": 6,
+            "continue_down_probability": 0.8605,
+            "v_recovery_probability": 0.1395,
+            "avg_low_return_from_open_pct": -4.0575,
+            "avg_close_return_from_open_pct": -2.2667,
+            "avg_avoided_loss_pct": 0.4315,
+            "avg_missed_gain_pct": 5.1454,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": -0.8833,
+            "avg_max_drawdown_after_trigger_pct": -0.8403
+          }
+        ],
+        "optimal_stop_loss_pct": -3.0,
+        "optimal_expected_value_pct": -0.8833,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-3.0% 后，收盘重新回到开盘价的概率为0.1395，未能收回开盘价的概率为0.8605；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-2.2667%，期望值参考为-0.8833%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "001400": {
+      "stock_code": "001400",
+      "stock_name": "江顺科技",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -4.0,
+            "trigger_count": 47,
+            "recover_to_open_count": 3,
+            "not_recover_to_open_count": 44,
+            "recover_to_open_probability": 0.0638,
+            "not_recover_to_open_probability": 0.9362,
+            "continue_down_count": 44,
+            "v_recovery_count": 3,
+            "continue_down_probability": 0.9362,
+            "v_recovery_probability": 0.0638,
+            "avg_low_return_from_open_pct": -6.7305,
+            "avg_close_return_from_open_pct": -4.4913,
+            "avg_avoided_loss_pct": 1.6311,
+            "avg_missed_gain_pct": 8.7681,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": 0.3413,
+            "avg_max_drawdown_after_trigger_pct": -2.3152
+          }
+        ],
+        "optimal_stop_loss_pct": -4.0,
+        "optimal_expected_value_pct": 0.3413,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-4.0% 后，收盘重新回到开盘价的概率为0.0638，未能收回开盘价的概率为0.9362；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-4.4913%，期望值参考为0.3413%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "001696": {
+      "stock_code": "001696",
+      "stock_name": "宗申动力",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -2.0,
+            "trigger_count": 62,
+            "recover_to_open_count": 6,
+            "not_recover_to_open_count": 56,
+            "recover_to_open_probability": 0.0968,
+            "not_recover_to_open_probability": 0.9032,
+            "continue_down_count": 56,
+            "v_recovery_count": 6,
+            "continue_down_probability": 0.9032,
+            "v_recovery_probability": 0.0968,
+            "avg_low_return_from_open_pct": -3.1183,
+            "avg_close_return_from_open_pct": -2.0645,
+            "avg_avoided_loss_pct": 0.6495,
+            "avg_missed_gain_pct": 3.2893,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": -0.0855,
+            "avg_max_drawdown_after_trigger_pct": -0.9094
+          }
+        ],
+        "optimal_stop_loss_pct": -2.0,
+        "optimal_expected_value_pct": -0.0855,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-2.0% 后，收盘重新回到开盘价的概率为0.0968，未能收回开盘价的概率为0.9032；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-2.0645%，期望值参考为-0.0855%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "002046": {
+      "stock_code": "002046",
+      "stock_name": "国机精工",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -5.0,
+            "trigger_count": 23,
+            "recover_to_open_count": 1,
+            "not_recover_to_open_count": 22,
+            "recover_to_open_probability": 0.0435,
+            "not_recover_to_open_probability": 0.9565,
+            "continue_down_count": 22,
+            "v_recovery_count": 1,
+            "continue_down_probability": 0.9565,
+            "v_recovery_probability": 0.0435,
+            "avg_low_return_from_open_pct": -7.382,
+            "avg_close_return_from_open_pct": -5.3744,
+            "avg_avoided_loss_pct": 1.2499,
+            "avg_missed_gain_pct": 5.9949,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": 0.2244,
+            "avg_max_drawdown_after_trigger_pct": -1.8331
+          }
+        ],
+        "optimal_stop_loss_pct": -5.0,
+        "optimal_expected_value_pct": 0.2244,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-5.0% 后，收盘重新回到开盘价的概率为0.0435，未能收回开盘价的概率为0.9565；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-5.3744%，期望值参考为0.2244%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "002051": {
+      "stock_code": "002051",
+      "stock_name": "中工国际",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -2.0,
+            "trigger_count": 54,
+            "recover_to_open_count": 4,
+            "not_recover_to_open_count": 50,
+            "recover_to_open_probability": 0.0741,
+            "not_recover_to_open_probability": 0.9259,
+            "continue_down_count": 50,
+            "v_recovery_count": 4,
+            "continue_down_probability": 0.9259,
+            "v_recovery_probability": 0.0741,
+            "avg_low_return_from_open_pct": -3.4365,
+            "avg_close_return_from_open_pct": -2.2636,
+            "avg_avoided_loss_pct": 0.8447,
+            "avg_missed_gain_pct": 3.1921,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": 0.1136,
+            "avg_max_drawdown_after_trigger_pct": -1.5643
+          }
+        ],
+        "optimal_stop_loss_pct": -2.0,
+        "optimal_expected_value_pct": 0.1136,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-2.0% 后，收盘重新回到开盘价的概率为0.0741，未能收回开盘价的概率为0.9259；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-2.2636%，期望值参考为0.1136%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "002081": {
+      "stock_code": "002081",
+      "stock_name": "金螳螂",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -5.0,
+            "trigger_count": 14,
+            "recover_to_open_count": 1,
+            "not_recover_to_open_count": 13,
+            "recover_to_open_probability": 0.0714,
+            "not_recover_to_open_probability": 0.9286,
+            "continue_down_count": 13,
+            "v_recovery_count": 1,
+            "continue_down_probability": 0.9286,
+            "v_recovery_probability": 0.0714,
+            "avg_low_return_from_open_pct": -7.0772,
+            "avg_close_return_from_open_pct": -5.0692,
+            "avg_avoided_loss_pct": 1.4651,
+            "avg_missed_gain_pct": 9.205,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": -0.0808,
+            "avg_max_drawdown_after_trigger_pct": -2.7209
+          }
+        ],
+        "optimal_stop_loss_pct": -5.0,
+        "optimal_expected_value_pct": -0.0808,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-5.0% 后，收盘重新回到开盘价的概率为0.0714，未能收回开盘价的概率为0.9286；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-5.0692%，期望值参考为-0.0808%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "002119": {
+      "stock_code": "002119",
+      "stock_name": "康强电子",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -6.0,
+            "trigger_count": 6,
+            "recover_to_open_count": 1,
+            "not_recover_to_open_count": 5,
+            "recover_to_open_probability": 0.1667,
+            "not_recover_to_open_probability": 0.8333,
+            "continue_down_count": 5,
+            "v_recovery_count": 1,
+            "continue_down_probability": 0.8333,
+            "v_recovery_probability": 0.1667,
+            "avg_low_return_from_open_pct": -7.9719,
+            "avg_close_return_from_open_pct": -5.6137,
+            "avg_avoided_loss_pct": 1.0598,
+            "avg_missed_gain_pct": 7.3812,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": -0.5363,
+            "avg_max_drawdown_after_trigger_pct": -1.7664
+          }
+        ],
+        "optimal_stop_loss_pct": -6.0,
+        "optimal_expected_value_pct": -0.5363,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-6.0% 后，收盘重新回到开盘价的概率为0.1667，未能收回开盘价的概率为0.8333；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-5.6137%，期望值参考为-0.5363%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "002137": {
+      "stock_code": "002137",
+      "stock_name": "实益达",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -3.0,
+            "trigger_count": 27,
+            "recover_to_open_count": 0,
+            "not_recover_to_open_count": 27,
+            "recover_to_open_probability": 0.0,
+            "not_recover_to_open_probability": 1.0,
+            "continue_down_count": 27,
+            "v_recovery_count": 0,
+            "continue_down_probability": 1.0,
+            "v_recovery_probability": 0.0,
+            "avg_low_return_from_open_pct": -4.8052,
+            "avg_close_return_from_open_pct": -3.6569,
+            "avg_avoided_loss_pct": 1.0585,
+            "avg_missed_gain_pct": 0.0,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": 0.5069,
+            "avg_max_drawdown_after_trigger_pct": -1.7863
+          }
+        ],
+        "optimal_stop_loss_pct": -3.0,
+        "optimal_expected_value_pct": 0.5069,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-3.0% 后，收盘重新回到开盘价的概率为0.0，未能收回开盘价的概率为1.0；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.6569%，期望值参考为0.5069%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "002138": {
+      "stock_code": "002138",
+      "stock_name": "顺络电子",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -3.0,
+            "trigger_count": 40,
+            "recover_to_open_count": 3,
+            "not_recover_to_open_count": 37,
+            "recover_to_open_probability": 0.075,
+            "not_recover_to_open_probability": 0.925,
+            "continue_down_count": 37,
+            "v_recovery_count": 3,
+            "continue_down_probability": 0.925,
+            "v_recovery_probability": 0.075,
+            "avg_low_return_from_open_pct": -4.3152,
+            "avg_close_return_from_open_pct": -2.6392,
+            "avg_avoided_loss_pct": 0.6184,
+            "avg_missed_gain_pct": 6.2184,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": -0.5108,
+            "avg_max_drawdown_after_trigger_pct": -1.2711
+          }
+        ],
+        "optimal_stop_loss_pct": -3.0,
+        "optimal_expected_value_pct": -0.5108,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-3.0% 后，收盘重新回到开盘价的概率为0.075，未能收回开盘价的概率为0.925；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-2.6392%，期望值参考为-0.5108%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "002254": {
+      "stock_code": "002254",
+      "stock_name": "泰和新材",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -4.0,
+            "trigger_count": 22,
+            "recover_to_open_count": 1,
+            "not_recover_to_open_count": 21,
+            "recover_to_open_probability": 0.0455,
+            "not_recover_to_open_probability": 0.9545,
+            "continue_down_count": 21,
+            "v_recovery_count": 1,
+            "continue_down_probability": 0.9545,
+            "v_recovery_probability": 0.0455,
+            "avg_low_return_from_open_pct": -5.7407,
+            "avg_close_return_from_open_pct": -3.9505,
+            "avg_avoided_loss_pct": 1.0401,
+            "avg_missed_gain_pct": 8.9721,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": -0.1995,
+            "avg_max_drawdown_after_trigger_pct": -1.8203
+          }
+        ],
+        "optimal_stop_loss_pct": -4.0,
+        "optimal_expected_value_pct": -0.1995,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-4.0% 后，收盘重新回到开盘价的概率为0.0455，未能收回开盘价的概率为0.9545；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.9505%，期望值参考为-0.1995%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "002471": {
+      "stock_code": "002471",
+      "stock_name": "中超控股",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -4.0,
+            "trigger_count": 34,
+            "recover_to_open_count": 3,
+            "not_recover_to_open_count": 31,
+            "recover_to_open_probability": 0.0882,
+            "not_recover_to_open_probability": 0.9118,
+            "continue_down_count": 31,
+            "v_recovery_count": 3,
+            "continue_down_probability": 0.9118,
+            "v_recovery_probability": 0.0882,
+            "avg_low_return_from_open_pct": -6.3872,
+            "avg_close_return_from_open_pct": -4.7486,
+            "avg_avoided_loss_pct": 1.8395,
+            "avg_missed_gain_pct": 7.7109,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": 0.5986,
+            "avg_max_drawdown_after_trigger_pct": -2.7154
+          }
+        ],
+        "optimal_stop_loss_pct": -4.0,
+        "optimal_expected_value_pct": 0.5986,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-4.0% 后，收盘重新回到开盘价的概率为0.0882，未能收回开盘价的概率为0.9118；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-4.7486%，期望值参考为0.5986%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "002490": {
+      "stock_code": "002490",
+      "stock_name": "山东墨龙",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -5.0,
+            "trigger_count": 16,
+            "recover_to_open_count": 1,
+            "not_recover_to_open_count": 15,
+            "recover_to_open_probability": 0.0625,
+            "not_recover_to_open_probability": 0.9375,
+            "continue_down_count": 15,
+            "v_recovery_count": 1,
+            "continue_down_probability": 0.9375,
+            "v_recovery_probability": 0.0625,
+            "avg_low_return_from_open_pct": -6.5093,
+            "avg_close_return_from_open_pct": -5.1009,
+            "avg_avoided_loss_pct": 1.031,
+            "avg_missed_gain_pct": 5.0,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": -0.0491,
+            "avg_max_drawdown_after_trigger_pct": -2.2092
+          }
+        ],
+        "optimal_stop_loss_pct": -5.0,
+        "optimal_expected_value_pct": -0.0491,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-5.0% 后，收盘重新回到开盘价的概率为0.0625，未能收回开盘价的概率为0.9375；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-5.1009%，期望值参考为-0.0491%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "002608": {
+      "stock_code": "002608",
+      "stock_name": "江苏国信",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -2.0,
+            "trigger_count": 33,
+            "recover_to_open_count": 3,
+            "not_recover_to_open_count": 30,
+            "recover_to_open_probability": 0.0909,
+            "not_recover_to_open_probability": 0.9091,
+            "continue_down_count": 30,
+            "v_recovery_count": 3,
+            "continue_down_probability": 0.9091,
+            "v_recovery_probability": 0.0909,
+            "avg_low_return_from_open_pct": -3.5259,
+            "avg_close_return_from_open_pct": -2.0875,
+            "avg_avoided_loss_pct": 0.8248,
+            "avg_missed_gain_pct": 4.6257,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": -0.0625,
+            "avg_max_drawdown_after_trigger_pct": -1.4555
+          }
+        ],
+        "optimal_stop_loss_pct": -2.0,
+        "optimal_expected_value_pct": -0.0625,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-2.0% 后，收盘重新回到开盘价的概率为0.0909，未能收回开盘价的概率为0.9091；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-2.0875%，期望值参考为-0.0625%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "002631": {
+      "stock_code": "002631",
+      "stock_name": "德尔未来",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -4.0,
+            "trigger_count": 27,
+            "recover_to_open_count": 0,
+            "not_recover_to_open_count": 27,
+            "recover_to_open_probability": 0.0,
+            "not_recover_to_open_probability": 1.0,
+            "continue_down_count": 27,
+            "v_recovery_count": 0,
+            "continue_down_probability": 1.0,
+            "v_recovery_probability": 0.0,
+            "avg_low_return_from_open_pct": -5.1998,
+            "avg_close_return_from_open_pct": -3.7437,
+            "avg_avoided_loss_pct": 0.4496,
+            "avg_missed_gain_pct": 0.0,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": -0.4063,
+            "avg_max_drawdown_after_trigger_pct": -1.2138
+          }
+        ],
+        "optimal_stop_loss_pct": -4.0,
+        "optimal_expected_value_pct": -0.4063,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-4.0% 后，收盘重新回到开盘价的概率为0.0，未能收回开盘价的概率为1.0；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.7437%，期望值参考为-0.4063%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "002645": {
+      "stock_code": "002645",
+      "stock_name": "华宏科技",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -3.0,
+            "trigger_count": 57,
+            "recover_to_open_count": 4,
+            "not_recover_to_open_count": 53,
+            "recover_to_open_probability": 0.0702,
+            "not_recover_to_open_probability": 0.9298,
+            "continue_down_count": 53,
+            "v_recovery_count": 4,
+            "continue_down_probability": 0.9298,
+            "v_recovery_probability": 0.0702,
+            "avg_low_return_from_open_pct": -5.1865,
+            "avg_close_return_from_open_pct": -3.2838,
+            "avg_avoided_loss_pct": 1.1293,
+            "avg_missed_gain_pct": 6.2027,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": 0.1338,
+            "avg_max_drawdown_after_trigger_pct": -1.8137
+          }
+        ],
+        "optimal_stop_loss_pct": -3.0,
+        "optimal_expected_value_pct": 0.1338,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-3.0% 后，收盘重新回到开盘价的概率为0.0702，未能收回开盘价的概率为0.9298；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.2838%，期望值参考为0.1338%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "002735": {
+      "stock_code": "002735",
+      "stock_name": "王子新材",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -4.0,
+            "trigger_count": 28,
+            "recover_to_open_count": 1,
+            "not_recover_to_open_count": 27,
+            "recover_to_open_probability": 0.0357,
+            "not_recover_to_open_probability": 0.9643,
+            "continue_down_count": 27,
+            "v_recovery_count": 1,
+            "continue_down_probability": 0.9643,
+            "v_recovery_probability": 0.0357,
+            "avg_low_return_from_open_pct": -5.3879,
+            "avg_close_return_from_open_pct": -3.7454,
+            "avg_avoided_loss_pct": 0.5134,
+            "avg_missed_gain_pct": 4.9291,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": -0.4046,
+            "avg_max_drawdown_after_trigger_pct": -0.9901
+          }
+        ],
+        "optimal_stop_loss_pct": -4.0,
+        "optimal_expected_value_pct": -0.4046,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-4.0% 后，收盘重新回到开盘价的概率为0.0357，未能收回开盘价的概率为0.9643；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.7454%，期望值参考为-0.4046%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "002824": {
+      "stock_code": "002824",
+      "stock_name": "和胜股份",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -3.0,
+            "trigger_count": 53,
+            "recover_to_open_count": 4,
+            "not_recover_to_open_count": 49,
+            "recover_to_open_probability": 0.0755,
+            "not_recover_to_open_probability": 0.9245,
+            "continue_down_count": 49,
+            "v_recovery_count": 4,
+            "continue_down_probability": 0.9245,
+            "v_recovery_probability": 0.0755,
+            "avg_low_return_from_open_pct": -4.9049,
+            "avg_close_return_from_open_pct": -3.1739,
+            "avg_avoided_loss_pct": 1.0789,
+            "avg_missed_gain_pct": 6.7169,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": 0.0239,
+            "avg_max_drawdown_after_trigger_pct": -1.7053
+          }
+        ],
+        "optimal_stop_loss_pct": -3.0,
+        "optimal_expected_value_pct": 0.0239,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-3.0% 后，收盘重新回到开盘价的概率为0.0755，未能收回开盘价的概率为0.9245；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.1739%，期望值参考为0.0239%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "002859": {
+      "stock_code": "002859",
+      "stock_name": "洁美科技",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -4.0,
+            "trigger_count": 25,
+            "recover_to_open_count": 2,
+            "not_recover_to_open_count": 23,
+            "recover_to_open_probability": 0.08,
+            "not_recover_to_open_probability": 0.92,
+            "continue_down_count": 23,
+            "v_recovery_count": 2,
+            "continue_down_probability": 0.92,
+            "v_recovery_probability": 0.08,
+            "avg_low_return_from_open_pct": -5.764,
+            "avg_close_return_from_open_pct": -3.6663,
+            "avg_avoided_loss_pct": 0.8205,
+            "avg_missed_gain_pct": 8.7895,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": -0.4837,
+            "avg_max_drawdown_after_trigger_pct": -1.4517
+          }
+        ],
+        "optimal_stop_loss_pct": -4.0,
+        "optimal_expected_value_pct": -0.4837,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-4.0% 后，收盘重新回到开盘价的概率为0.08，未能收回开盘价的概率为0.92；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.6663%，期望值参考为-0.4837%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "002896": {
+      "stock_code": "002896",
+      "stock_name": "中大力德",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -5.0,
+            "trigger_count": 11,
+            "recover_to_open_count": 0,
+            "not_recover_to_open_count": 11,
+            "recover_to_open_probability": 0.0,
+            "not_recover_to_open_probability": 1.0,
+            "continue_down_count": 11,
+            "v_recovery_count": 0,
+            "continue_down_probability": 1.0,
+            "v_recovery_probability": 0.0,
+            "avg_low_return_from_open_pct": -6.7622,
+            "avg_close_return_from_open_pct": -5.2848,
+            "avg_avoided_loss_pct": 0.9307,
+            "avg_missed_gain_pct": 0.0,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": 0.1348,
+            "avg_max_drawdown_after_trigger_pct": -1.4625
+          }
+        ],
+        "optimal_stop_loss_pct": -5.0,
+        "optimal_expected_value_pct": 0.1348,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-5.0% 后，收盘重新回到开盘价的概率为0.0，未能收回开盘价的概率为1.0；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-5.2848%，期望值参考为0.1348%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "002903": {
+      "stock_code": "002903",
+      "stock_name": "宇环数控",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -5.0,
+            "trigger_count": 17,
+            "recover_to_open_count": 1,
+            "not_recover_to_open_count": 16,
+            "recover_to_open_probability": 0.0588,
+            "not_recover_to_open_probability": 0.9412,
+            "continue_down_count": 16,
+            "v_recovery_count": 1,
+            "continue_down_probability": 0.9412,
+            "v_recovery_probability": 0.0588,
+            "avg_low_return_from_open_pct": -6.8436,
+            "avg_close_return_from_open_pct": -4.2572,
+            "avg_avoided_loss_pct": 0.8176,
+            "avg_missed_gain_pct": 15.3791,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": -0.8928,
+            "avg_max_drawdown_after_trigger_pct": -1.8689
+          }
+        ],
+        "optimal_stop_loss_pct": -5.0,
+        "optimal_expected_value_pct": -0.8928,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-5.0% 后，收盘重新回到开盘价的概率为0.0588，未能收回开盘价的概率为0.9412；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-4.2572%，期望值参考为-0.8928%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "002960": {
+      "stock_code": "002960",
+      "stock_name": "青鸟智控",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -2.0,
+            "trigger_count": 57,
+            "recover_to_open_count": 5,
+            "not_recover_to_open_count": 52,
+            "recover_to_open_probability": 0.0877,
+            "not_recover_to_open_probability": 0.9123,
+            "continue_down_count": 52,
+            "v_recovery_count": 5,
+            "continue_down_probability": 0.9123,
+            "v_recovery_probability": 0.0877,
+            "avg_low_return_from_open_pct": -3.432,
+            "avg_close_return_from_open_pct": -2.2621,
+            "avg_avoided_loss_pct": 0.9957,
+            "avg_missed_gain_pct": 4.6748,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": 0.1121,
+            "avg_max_drawdown_after_trigger_pct": -1.4382
+          }
+        ],
+        "optimal_stop_loss_pct": -2.0,
+        "optimal_expected_value_pct": 0.1121,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-2.0% 后，收盘重新回到开盘价的概率为0.0877，未能收回开盘价的概率为0.9123；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-2.2621%，期望值参考为0.1121%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "002965": {
+      "stock_code": "002965",
+      "stock_name": "祥鑫科技",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -2.0,
+            "trigger_count": 70,
+            "recover_to_open_count": 5,
+            "not_recover_to_open_count": 65,
+            "recover_to_open_probability": 0.0714,
+            "not_recover_to_open_probability": 0.9286,
+            "continue_down_count": 65,
+            "v_recovery_count": 5,
+            "continue_down_probability": 0.9286,
+            "v_recovery_probability": 0.0714,
+            "avg_low_return_from_open_pct": -3.2681,
+            "avg_close_return_from_open_pct": -2.0929,
+            "avg_avoided_loss_pct": 0.6255,
+            "avg_missed_gain_pct": 3.3334,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": -0.0571,
+            "avg_max_drawdown_after_trigger_pct": -1.1958
+          }
+        ],
+        "optimal_stop_loss_pct": -2.0,
+        "optimal_expected_value_pct": -0.0571,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-2.0% 后，收盘重新回到开盘价的概率为0.0714，未能收回开盘价的概率为0.9286；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-2.0929%，期望值参考为-0.0571%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "003009": {
+      "stock_code": "003009",
+      "stock_name": "中天火箭",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -4.0,
+            "trigger_count": 32,
+            "recover_to_open_count": 3,
+            "not_recover_to_open_count": 29,
+            "recover_to_open_probability": 0.0938,
+            "not_recover_to_open_probability": 0.9062,
+            "continue_down_count": 29,
+            "v_recovery_count": 3,
+            "continue_down_probability": 0.9062,
+            "v_recovery_probability": 0.0938,
+            "avg_low_return_from_open_pct": -5.7371,
+            "avg_close_return_from_open_pct": -3.8943,
+            "avg_avoided_loss_pct": 1.1563,
+            "avg_missed_gain_pct": 6.5926,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": -0.2557,
+            "avg_max_drawdown_after_trigger_pct": -1.8629
+          }
+        ],
+        "optimal_stop_loss_pct": -4.0,
+        "optimal_expected_value_pct": -0.2557,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-4.0% 后，收盘重新回到开盘价的概率为0.0938，未能收回开盘价的概率为0.9062；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.8943%，期望值参考为-0.2557%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "003026": {
+      "stock_code": "003026",
+      "stock_name": "中晶科技",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -4.0,
+            "trigger_count": 14,
+            "recover_to_open_count": 1,
+            "not_recover_to_open_count": 13,
+            "recover_to_open_probability": 0.0714,
+            "not_recover_to_open_probability": 0.9286,
+            "continue_down_count": 13,
+            "v_recovery_count": 1,
+            "continue_down_probability": 0.9286,
+            "v_recovery_probability": 0.0714,
+            "avg_low_return_from_open_pct": -5.8692,
+            "avg_close_return_from_open_pct": -3.8334,
+            "avg_avoided_loss_pct": 1.0484,
+            "avg_missed_gain_pct": 9.911,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": -0.3166,
+            "avg_max_drawdown_after_trigger_pct": -1.7036
+          }
+        ],
+        "optimal_stop_loss_pct": -4.0,
+        "optimal_expected_value_pct": -0.3166,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-4.0% 后，收盘重新回到开盘价的概率为0.0714，未能收回开盘价的概率为0.9286；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.8334%，期望值参考为-0.3166%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "003043": {
+      "stock_code": "003043",
+      "stock_name": "华亚智能",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -2.0,
+            "trigger_count": 64,
+            "recover_to_open_count": 6,
+            "not_recover_to_open_count": 58,
+            "recover_to_open_probability": 0.0938,
+            "not_recover_to_open_probability": 0.9062,
+            "continue_down_count": 58,
+            "v_recovery_count": 6,
+            "continue_down_probability": 0.9062,
+            "v_recovery_probability": 0.0938,
+            "avg_low_return_from_open_pct": -3.526,
+            "avg_close_return_from_open_pct": -1.9978,
+            "avg_avoided_loss_pct": 0.6409,
+            "avg_missed_gain_pct": 3.4551,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": -0.1522,
+            "avg_max_drawdown_after_trigger_pct": -1.2818
+          }
+        ],
+        "optimal_stop_loss_pct": -2.0,
+        "optimal_expected_value_pct": -0.1522,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-2.0% 后，收盘重新回到开盘价的概率为0.0938，未能收回开盘价的概率为0.9062；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-1.9978%，期望值参考为-0.1522%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "600063": {
+      "stock_code": "600063",
+      "stock_name": "皖维高新",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -5.0,
+            "trigger_count": 14,
+            "recover_to_open_count": 1,
+            "not_recover_to_open_count": 13,
+            "recover_to_open_probability": 0.0714,
+            "not_recover_to_open_probability": 0.9286,
+            "continue_down_count": 13,
+            "v_recovery_count": 1,
+            "continue_down_probability": 0.9286,
+            "v_recovery_probability": 0.0714,
+            "avg_low_return_from_open_pct": -6.5222,
+            "avg_close_return_from_open_pct": -4.7302,
+            "avg_avoided_loss_pct": 0.7586,
+            "avg_missed_gain_pct": 5.3783,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": -0.4198,
+            "avg_max_drawdown_after_trigger_pct": -1.9724
+          }
+        ],
+        "optimal_stop_loss_pct": -5.0,
+        "optimal_expected_value_pct": -0.4198,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-5.0% 后，收盘重新回到开盘价的概率为0.0714，未能收回开盘价的概率为0.9286；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-4.7302%，期望值参考为-0.4198%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "600110": {
+      "stock_code": "600110",
+      "stock_name": "诺德股份",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -5.0,
+            "trigger_count": 20,
+            "recover_to_open_count": 2,
+            "not_recover_to_open_count": 18,
+            "recover_to_open_probability": 0.1,
+            "not_recover_to_open_probability": 0.9,
+            "continue_down_count": 18,
+            "v_recovery_count": 2,
+            "continue_down_probability": 0.9,
+            "v_recovery_probability": 0.1,
+            "avg_low_return_from_open_pct": -7.0326,
+            "avg_close_return_from_open_pct": -4.5391,
+            "avg_avoided_loss_pct": 1.2922,
+            "avg_missed_gain_pct": 8.8588,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": -0.6109,
+            "avg_max_drawdown_after_trigger_pct": -2.5844
+          }
+        ],
+        "optimal_stop_loss_pct": -5.0,
+        "optimal_expected_value_pct": -0.6109,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-5.0% 后，收盘重新回到开盘价的概率为0.1，未能收回开盘价的概率为0.9；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-4.5391%，期望值参考为-0.6109%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "600121": {
+      "stock_code": "600121",
+      "stock_name": "郑州煤电",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -4.0,
+            "trigger_count": 26,
+            "recover_to_open_count": 1,
+            "not_recover_to_open_count": 25,
+            "recover_to_open_probability": 0.0385,
+            "not_recover_to_open_probability": 0.9615,
+            "continue_down_count": 25,
+            "v_recovery_count": 1,
+            "continue_down_probability": 0.9615,
+            "v_recovery_probability": 0.0385,
+            "avg_low_return_from_open_pct": -6.2004,
+            "avg_close_return_from_open_pct": -4.3317,
+            "avg_avoided_loss_pct": 1.2423,
+            "avg_missed_gain_pct": 12.6614,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": 0.1817,
+            "avg_max_drawdown_after_trigger_pct": -1.7254
+          }
+        ],
+        "optimal_stop_loss_pct": -4.0,
+        "optimal_expected_value_pct": 0.1817,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-4.0% 后，收盘重新回到开盘价的概率为0.0385，未能收回开盘价的概率为0.9615；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-4.3317%，期望值参考为0.1817%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "600162": {
+      "stock_code": "600162",
+      "stock_name": "香江控股",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -3.0,
+            "trigger_count": 39,
+            "recover_to_open_count": 7,
+            "not_recover_to_open_count": 32,
+            "recover_to_open_probability": 0.1795,
+            "not_recover_to_open_probability": 0.8205,
+            "continue_down_count": 32,
+            "v_recovery_count": 7,
+            "continue_down_probability": 0.8205,
+            "v_recovery_probability": 0.1795,
+            "avg_low_return_from_open_pct": -5.3184,
+            "avg_close_return_from_open_pct": -2.2436,
+            "avg_avoided_loss_pct": 0.8905,
+            "avg_missed_gain_pct": 6.7526,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": -0.9064,
+            "avg_max_drawdown_after_trigger_pct": -1.4998
+          }
+        ],
+        "optimal_stop_loss_pct": -3.0,
+        "optimal_expected_value_pct": -0.9064,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-3.0% 后，收盘重新回到开盘价的概率为0.1795，未能收回开盘价的概率为0.8205；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-2.2436%，期望值参考为-0.9064%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "600226": {
+      "stock_code": "600226",
+      "stock_name": "亨通股份",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -6.0,
+            "trigger_count": 5,
+            "recover_to_open_count": 0,
+            "not_recover_to_open_count": 5,
+            "recover_to_open_probability": 0.0,
+            "not_recover_to_open_probability": 1.0,
+            "continue_down_count": 5,
+            "v_recovery_count": 0,
+            "continue_down_probability": 1.0,
+            "v_recovery_probability": 0.0,
+            "avg_low_return_from_open_pct": -7.404,
+            "avg_close_return_from_open_pct": -6.2222,
+            "avg_avoided_loss_pct": 0.658,
+            "avg_missed_gain_pct": 0.0,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": 0.0722,
+            "avg_max_drawdown_after_trigger_pct": -1.6449
+          }
+        ],
+        "optimal_stop_loss_pct": -6.0,
+        "optimal_expected_value_pct": 0.0722,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-6.0% 后，收盘重新回到开盘价的概率为0.0，未能收回开盘价的概率为1.0；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-6.2222%，期望值参考为0.0722%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "600255": {
+      "stock_code": "600255",
+      "stock_name": "鑫科材料",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -3.0,
+            "trigger_count": 36,
+            "recover_to_open_count": 3,
+            "not_recover_to_open_count": 33,
+            "recover_to_open_probability": 0.0833,
+            "not_recover_to_open_probability": 0.9167,
+            "continue_down_count": 33,
+            "v_recovery_count": 3,
+            "continue_down_probability": 0.9167,
+            "v_recovery_probability": 0.0833,
+            "avg_low_return_from_open_pct": -4.2711,
+            "avg_close_return_from_open_pct": -3.0547,
+            "avg_avoided_loss_pct": 0.8025,
+            "avg_missed_gain_pct": 4.8658,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": -0.0953,
+            "avg_max_drawdown_after_trigger_pct": -1.1514
+          }
+        ],
+        "optimal_stop_loss_pct": -3.0,
+        "optimal_expected_value_pct": -0.0953,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-3.0% 后，收盘重新回到开盘价的概率为0.0833，未能收回开盘价的概率为0.9167；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.0547%，期望值参考为-0.0953%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "600280": {
+      "stock_code": "600280",
+      "stock_name": "中央商场",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -3.0,
+            "trigger_count": 33,
+            "recover_to_open_count": 3,
+            "not_recover_to_open_count": 30,
+            "recover_to_open_probability": 0.0909,
+            "not_recover_to_open_probability": 0.9091,
+            "continue_down_count": 30,
+            "v_recovery_count": 3,
+            "continue_down_probability": 0.9091,
+            "v_recovery_probability": 0.0909,
+            "avg_low_return_from_open_pct": -5.2075,
+            "avg_close_return_from_open_pct": -3.2722,
+            "avg_avoided_loss_pct": 1.5267,
+            "avg_missed_gain_pct": 8.4289,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": 0.1222,
+            "avg_max_drawdown_after_trigger_pct": -3.2715
+          }
+        ],
+        "optimal_stop_loss_pct": -3.0,
+        "optimal_expected_value_pct": 0.1222,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-3.0% 后，收盘重新回到开盘价的概率为0.0909，未能收回开盘价的概率为0.9091；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.2722%，期望值参考为0.1222%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "600293": {
+      "stock_code": "600293",
+      "stock_name": "三峡新材",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -3.0,
+            "trigger_count": 38,
+            "recover_to_open_count": 3,
+            "not_recover_to_open_count": 35,
+            "recover_to_open_probability": 0.0789,
+            "not_recover_to_open_probability": 0.9211,
+            "continue_down_count": 35,
+            "v_recovery_count": 3,
+            "continue_down_probability": 0.9211,
+            "v_recovery_probability": 0.0789,
+            "avg_low_return_from_open_pct": -4.5155,
+            "avg_close_return_from_open_pct": -3.0532,
+            "avg_avoided_loss_pct": 0.8662,
+            "avg_missed_gain_pct": 5.941,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": -0.0968,
+            "avg_max_drawdown_after_trigger_pct": -1.3781
+          }
+        ],
+        "optimal_stop_loss_pct": -3.0,
+        "optimal_expected_value_pct": -0.0968,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-3.0% 后，收盘重新回到开盘价的概率为0.0789，未能收回开盘价的概率为0.9211；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.0532%，期望值参考为-0.0968%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "600367": {
+      "stock_code": "600367",
+      "stock_name": "红星发展",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -7.0,
+            "trigger_count": 6,
+            "recover_to_open_count": 0,
+            "not_recover_to_open_count": 6,
+            "recover_to_open_probability": 0.0,
+            "not_recover_to_open_probability": 1.0,
+            "continue_down_count": 6,
+            "v_recovery_count": 0,
+            "continue_down_probability": 1.0,
+            "v_recovery_probability": 0.0,
+            "avg_low_return_from_open_pct": -8.5602,
+            "avg_close_return_from_open_pct": -6.4768,
+            "avg_avoided_loss_pct": 0.6786,
+            "avg_missed_gain_pct": 0.0,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": -0.6732,
+            "avg_max_drawdown_after_trigger_pct": -1.3572
+          }
+        ],
+        "optimal_stop_loss_pct": -7.0,
+        "optimal_expected_value_pct": -0.6732,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-7.0% 后，收盘重新回到开盘价的概率为0.0，未能收回开盘价的概率为1.0；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-6.4768%，期望值参考为-0.6732%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "600403": {
+      "stock_code": "600403",
+      "stock_name": "大有能源",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -7.0,
+            "trigger_count": 8,
+            "recover_to_open_count": 0,
+            "not_recover_to_open_count": 8,
+            "recover_to_open_probability": 0.0,
+            "not_recover_to_open_probability": 1.0,
+            "continue_down_count": 8,
+            "v_recovery_count": 0,
+            "continue_down_probability": 1.0,
+            "v_recovery_probability": 0.0,
+            "avg_low_return_from_open_pct": -9.3563,
+            "avg_close_return_from_open_pct": -7.918,
+            "avg_avoided_loss_pct": 1.1925,
+            "avg_missed_gain_pct": 0.0,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": 0.768,
+            "avg_max_drawdown_after_trigger_pct": -1.59
+          }
+        ],
+        "optimal_stop_loss_pct": -7.0,
+        "optimal_expected_value_pct": 0.768,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-7.0% 后，收盘重新回到开盘价的概率为0.0，未能收回开盘价的概率为1.0；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-7.918%，期望值参考为0.768%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "600459": {
+      "stock_code": "600459",
+      "stock_name": "贵研铂业",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -3.0,
+            "trigger_count": 47,
+            "recover_to_open_count": 3,
+            "not_recover_to_open_count": 44,
+            "recover_to_open_probability": 0.0638,
+            "not_recover_to_open_probability": 0.9362,
+            "continue_down_count": 44,
+            "v_recovery_count": 3,
+            "continue_down_probability": 0.9362,
+            "v_recovery_probability": 0.0638,
+            "avg_low_return_from_open_pct": -4.4925,
+            "avg_close_return_from_open_pct": -3.0166,
+            "avg_avoided_loss_pct": 0.7134,
+            "avg_missed_gain_pct": 3.2852,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": -0.1334,
+            "avg_max_drawdown_after_trigger_pct": -1.3079
+          }
+        ],
+        "optimal_stop_loss_pct": -3.0,
+        "optimal_expected_value_pct": -0.1334,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-3.0% 后，收盘重新回到开盘价的概率为0.0638，未能收回开盘价的概率为0.9362；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.0166%，期望值参考为-0.1334%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "600488": {
+      "stock_code": "600488",
+      "stock_name": "津药药业",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -3.0,
+            "trigger_count": 31,
+            "recover_to_open_count": 2,
+            "not_recover_to_open_count": 29,
+            "recover_to_open_probability": 0.0645,
+            "not_recover_to_open_probability": 0.9355,
+            "continue_down_count": 29,
+            "v_recovery_count": 2,
+            "continue_down_probability": 0.9355,
+            "v_recovery_probability": 0.0645,
+            "avg_low_return_from_open_pct": -4.6205,
+            "avg_close_return_from_open_pct": -2.8398,
+            "avg_avoided_loss_pct": 1.006,
+            "avg_missed_gain_pct": 9.6346,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": -0.3102,
+            "avg_max_drawdown_after_trigger_pct": -2.0838
+          }
+        ],
+        "optimal_stop_loss_pct": -3.0,
+        "optimal_expected_value_pct": -0.3102,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-3.0% 后，收盘重新回到开盘价的概率为0.0645，未能收回开盘价的概率为0.9355；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-2.8398%，期望值参考为-0.3102%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "600505": {
+      "stock_code": "600505",
+      "stock_name": "西昌电力",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -3.0,
+            "trigger_count": 24,
+            "recover_to_open_count": 0,
+            "not_recover_to_open_count": 24,
+            "recover_to_open_probability": 0.0,
+            "not_recover_to_open_probability": 1.0,
+            "continue_down_count": 24,
+            "v_recovery_count": 0,
+            "continue_down_probability": 1.0,
+            "v_recovery_probability": 0.0,
+            "avg_low_return_from_open_pct": -4.4068,
+            "avg_close_return_from_open_pct": -3.3341,
+            "avg_avoided_loss_pct": 0.7762,
+            "avg_missed_gain_pct": 0.0,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": 0.1841,
+            "avg_max_drawdown_after_trigger_pct": -1.4329
+          }
+        ],
+        "optimal_stop_loss_pct": -3.0,
+        "optimal_expected_value_pct": 0.1841,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-3.0% 后，收盘重新回到开盘价的概率为0.0，未能收回开盘价的概率为1.0；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.3341%，期望值参考为0.1841%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "600516": {
+      "stock_code": "600516",
+      "stock_name": "方大炭素",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -2.0,
+            "trigger_count": 66,
+            "recover_to_open_count": 4,
+            "not_recover_to_open_count": 62,
+            "recover_to_open_probability": 0.0606,
+            "not_recover_to_open_probability": 0.9394,
+            "continue_down_count": 62,
+            "v_recovery_count": 4,
+            "continue_down_probability": 0.9394,
+            "v_recovery_probability": 0.0606,
+            "avg_low_return_from_open_pct": -3.1811,
+            "avg_close_return_from_open_pct": -2.2488,
+            "avg_avoided_loss_pct": 0.6452,
+            "avg_missed_gain_pct": 2.3042,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": 0.0988,
+            "avg_max_drawdown_after_trigger_pct": -0.9525
+          }
+        ],
+        "optimal_stop_loss_pct": -2.0,
+        "optimal_expected_value_pct": 0.0988,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-2.0% 后，收盘重新回到开盘价的概率为0.0606，未能收回开盘价的概率为0.9394；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-2.2488%，期望值参考为0.0988%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "600683": {
+      "stock_code": "600683",
+      "stock_name": "京投发展",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -7.0,
+            "trigger_count": 13,
+            "recover_to_open_count": 2,
+            "not_recover_to_open_count": 11,
+            "recover_to_open_probability": 0.1538,
+            "not_recover_to_open_probability": 0.8462,
+            "continue_down_count": 11,
+            "v_recovery_count": 2,
+            "continue_down_probability": 0.8462,
+            "v_recovery_probability": 0.1538,
+            "avg_low_return_from_open_pct": -8.8487,
+            "avg_close_return_from_open_pct": -4.1943,
+            "avg_avoided_loss_pct": 0.3319,
+            "avg_missed_gain_pct": 7.1202,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": -2.9557,
+            "avg_max_drawdown_after_trigger_pct": -1.217
+          }
+        ],
+        "optimal_stop_loss_pct": -7.0,
+        "optimal_expected_value_pct": -2.9557,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-7.0% 后，收盘重新回到开盘价的概率为0.1538，未能收回开盘价的概率为0.8462；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-4.1943%，期望值参考为-2.9557%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "600688": {
+      "stock_code": "600688",
+      "stock_name": "上海石化",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -2.0,
+            "trigger_count": 42,
+            "recover_to_open_count": 4,
+            "not_recover_to_open_count": 38,
+            "recover_to_open_probability": 0.0952,
+            "not_recover_to_open_probability": 0.9048,
+            "continue_down_count": 38,
+            "v_recovery_count": 4,
+            "continue_down_probability": 0.9048,
+            "v_recovery_probability": 0.0952,
+            "avg_low_return_from_open_pct": -3.4937,
+            "avg_close_return_from_open_pct": -2.2769,
+            "avg_avoided_loss_pct": 0.8692,
+            "avg_missed_gain_pct": 3.1277,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": 0.1269,
+            "avg_max_drawdown_after_trigger_pct": -1.436
+          }
+        ],
+        "optimal_stop_loss_pct": -2.0,
+        "optimal_expected_value_pct": 0.1269,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-2.0% 后，收盘重新回到开盘价的概率为0.0952，未能收回开盘价的概率为0.9048；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-2.2769%，期望值参考为0.1269%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "600776": {
+      "stock_code": "600776",
+      "stock_name": "东方通信",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -3.0,
+            "trigger_count": 34,
+            "recover_to_open_count": 4,
+            "not_recover_to_open_count": 30,
+            "recover_to_open_probability": 0.1176,
+            "not_recover_to_open_probability": 0.8824,
+            "continue_down_count": 30,
+            "v_recovery_count": 4,
+            "continue_down_probability": 0.8824,
+            "v_recovery_probability": 0.1176,
+            "avg_low_return_from_open_pct": -4.8827,
+            "avg_close_return_from_open_pct": -2.8416,
+            "avg_avoided_loss_pct": 0.9753,
+            "avg_missed_gain_pct": 5.056,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": -0.3084,
+            "avg_max_drawdown_after_trigger_pct": -1.7211
+          }
+        ],
+        "optimal_stop_loss_pct": -3.0,
+        "optimal_expected_value_pct": -0.3084,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-3.0% 后，收盘重新回到开盘价的概率为0.1176，未能收回开盘价的概率为0.8824；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-2.8416%，期望值参考为-0.3084%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "601137": {
+      "stock_code": "601137",
+      "stock_name": "博威合金",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -3.0,
+            "trigger_count": 41,
+            "recover_to_open_count": 3,
+            "not_recover_to_open_count": 38,
+            "recover_to_open_probability": 0.0732,
+            "not_recover_to_open_probability": 0.9268,
+            "continue_down_count": 38,
+            "v_recovery_count": 3,
+            "continue_down_probability": 0.9268,
+            "v_recovery_probability": 0.0732,
+            "avg_low_return_from_open_pct": -4.1467,
+            "avg_close_return_from_open_pct": -2.3892,
+            "avg_avoided_loss_pct": 0.5145,
+            "avg_missed_gain_pct": 6.1138,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": -0.7608,
+            "avg_max_drawdown_after_trigger_pct": -1.3966
+          }
+        ],
+        "optimal_stop_loss_pct": -3.0,
+        "optimal_expected_value_pct": -0.7608,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-3.0% 后，收盘重新回到开盘价的概率为0.0732，未能收回开盘价的概率为0.9268；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-2.3892%，期望值参考为-0.7608%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "601869": {
+      "stock_code": "601869",
+      "stock_name": "长飞光纤",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -5.0,
+            "trigger_count": 36,
+            "recover_to_open_count": 2,
+            "not_recover_to_open_count": 34,
+            "recover_to_open_probability": 0.0556,
+            "not_recover_to_open_probability": 0.9444,
+            "continue_down_count": 34,
+            "v_recovery_count": 2,
+            "continue_down_probability": 0.9444,
+            "v_recovery_probability": 0.0556,
+            "avg_low_return_from_open_pct": -7.2966,
+            "avg_close_return_from_open_pct": -4.6368,
+            "avg_avoided_loss_pct": 1.0142,
+            "avg_missed_gain_pct": 9.4832,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": -0.5132,
+            "avg_max_drawdown_after_trigger_pct": -1.9158
+          }
+        ],
+        "optimal_stop_loss_pct": -5.0,
+        "optimal_expected_value_pct": -0.5132,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-5.0% 后，收盘重新回到开盘价的概率为0.0556，未能收回开盘价的概率为0.9444；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-4.6368%，期望值参考为-0.5132%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "603002": {
+      "stock_code": "603002",
+      "stock_name": "宏昌电子",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -4.0,
+            "trigger_count": 28,
+            "recover_to_open_count": 2,
+            "not_recover_to_open_count": 26,
+            "recover_to_open_probability": 0.0714,
+            "not_recover_to_open_probability": 0.9286,
+            "continue_down_count": 26,
+            "v_recovery_count": 2,
+            "continue_down_probability": 0.9286,
+            "v_recovery_probability": 0.0714,
+            "avg_low_return_from_open_pct": -5.7851,
+            "avg_close_return_from_open_pct": -4.1415,
+            "avg_avoided_loss_pct": 1.1237,
+            "avg_missed_gain_pct": 6.1977,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": -0.0085,
+            "avg_max_drawdown_after_trigger_pct": -1.7186
+          }
+        ],
+        "optimal_stop_loss_pct": -4.0,
+        "optimal_expected_value_pct": -0.0085,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-4.0% 后，收盘重新回到开盘价的概率为0.0714，未能收回开盘价的概率为0.9286；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-4.1415%，期望值参考为-0.0085%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "603011": {
+      "stock_code": "603011",
+      "stock_name": "合锻智能",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -4.0,
+            "trigger_count": 32,
+            "recover_to_open_count": 3,
+            "not_recover_to_open_count": 29,
+            "recover_to_open_probability": 0.0938,
+            "not_recover_to_open_probability": 0.9062,
+            "continue_down_count": 29,
+            "v_recovery_count": 3,
+            "continue_down_probability": 0.9062,
+            "v_recovery_probability": 0.0938,
+            "avg_low_return_from_open_pct": -7.5396,
+            "avg_close_return_from_open_pct": -4.3681,
+            "avg_avoided_loss_pct": 1.7021,
+            "avg_missed_gain_pct": 9.4821,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": 0.2181,
+            "avg_max_drawdown_after_trigger_pct": -2.2437
+          }
+        ],
+        "optimal_stop_loss_pct": -4.0,
+        "optimal_expected_value_pct": 0.2181,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-4.0% 后，收盘重新回到开盘价的概率为0.0938，未能收回开盘价的概率为0.9062；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-4.3681%，期望值参考为0.2181%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "603039": {
+      "stock_code": "603039",
+      "stock_name": "泛微网络",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -3.0,
+            "trigger_count": 45,
+            "recover_to_open_count": 4,
+            "not_recover_to_open_count": 41,
+            "recover_to_open_probability": 0.0889,
+            "not_recover_to_open_probability": 0.9111,
+            "continue_down_count": 41,
+            "v_recovery_count": 4,
+            "continue_down_probability": 0.9111,
+            "v_recovery_probability": 0.0889,
+            "avg_low_return_from_open_pct": -4.5791,
+            "avg_close_return_from_open_pct": -2.8869,
+            "avg_avoided_loss_pct": 0.8657,
+            "avg_missed_gain_pct": 5.0526,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": -0.2631,
+            "avg_max_drawdown_after_trigger_pct": -1.6133
+          }
+        ],
+        "optimal_stop_loss_pct": -3.0,
+        "optimal_expected_value_pct": -0.2631,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-3.0% 后，收盘重新回到开盘价的概率为0.0889，未能收回开盘价的概率为0.9111；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-2.8869%，期望值参考为-0.2631%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "603045": {
+      "stock_code": "603045",
+      "stock_name": "福达合金",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -5.0,
+            "trigger_count": 21,
+            "recover_to_open_count": 3,
+            "not_recover_to_open_count": 18,
+            "recover_to_open_probability": 0.1429,
+            "not_recover_to_open_probability": 0.8571,
+            "continue_down_count": 18,
+            "v_recovery_count": 3,
+            "continue_down_probability": 0.8571,
+            "v_recovery_probability": 0.1429,
+            "avg_low_return_from_open_pct": -6.3287,
+            "avg_close_return_from_open_pct": -3.7563,
+            "avg_avoided_loss_pct": 0.6053,
+            "avg_missed_gain_pct": 6.0635,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": -1.3937,
+            "avg_max_drawdown_after_trigger_pct": -1.5564
+          }
+        ],
+        "optimal_stop_loss_pct": -5.0,
+        "optimal_expected_value_pct": -1.3937,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-5.0% 后，收盘重新回到开盘价的概率为0.1429，未能收回开盘价的概率为0.8571；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.7563%，期望值参考为-1.3937%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "603135": {
+      "stock_code": "603135",
+      "stock_name": "中重科技",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -3.0,
+            "trigger_count": 25,
+            "recover_to_open_count": 3,
+            "not_recover_to_open_count": 22,
+            "recover_to_open_probability": 0.12,
+            "not_recover_to_open_probability": 0.88,
+            "continue_down_count": 22,
+            "v_recovery_count": 3,
+            "continue_down_probability": 0.88,
+            "v_recovery_probability": 0.12,
+            "avg_low_return_from_open_pct": -4.5181,
+            "avg_close_return_from_open_pct": -2.4138,
+            "avg_avoided_loss_pct": 0.5924,
+            "avg_missed_gain_pct": 8.0674,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": -0.7362,
+            "avg_max_drawdown_after_trigger_pct": -0.724
+          }
+        ],
+        "optimal_stop_loss_pct": -3.0,
+        "optimal_expected_value_pct": -0.7362,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-3.0% 后，收盘重新回到开盘价的概率为0.12，未能收回开盘价的概率为0.88；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-2.4138%，期望值参考为-0.7362%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "603155": {
+      "stock_code": "603155",
+      "stock_name": "新亚强",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -3.0,
+            "trigger_count": 27,
+            "recover_to_open_count": 1,
+            "not_recover_to_open_count": 26,
+            "recover_to_open_probability": 0.037,
+            "not_recover_to_open_probability": 0.963,
+            "continue_down_count": 26,
+            "v_recovery_count": 1,
+            "continue_down_probability": 0.963,
+            "v_recovery_probability": 0.037,
+            "avg_low_return_from_open_pct": -4.977,
+            "avg_close_return_from_open_pct": -3.4063,
+            "avg_avoided_loss_pct": 1.0069,
+            "avg_missed_gain_pct": 3.1112,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": 0.2563,
+            "avg_max_drawdown_after_trigger_pct": -1.87
+          }
+        ],
+        "optimal_stop_loss_pct": -3.0,
+        "optimal_expected_value_pct": 0.2563,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-3.0% 后，收盘重新回到开盘价的概率为0.037，未能收回开盘价的概率为0.963；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.4063%，期望值参考为0.2563%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "603236": {
+      "stock_code": "603236",
+      "stock_name": "移远通信",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -3.0,
+            "trigger_count": 32,
+            "recover_to_open_count": 1,
+            "not_recover_to_open_count": 31,
+            "recover_to_open_probability": 0.0312,
+            "not_recover_to_open_probability": 0.9688,
+            "continue_down_count": 31,
+            "v_recovery_count": 1,
+            "continue_down_probability": 0.9688,
+            "v_recovery_probability": 0.0312,
+            "avg_low_return_from_open_pct": -4.2024,
+            "avg_close_return_from_open_pct": -2.9087,
+            "avg_avoided_loss_pct": 0.6151,
+            "avg_missed_gain_pct": 3.651,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": -0.2413,
+            "avg_max_drawdown_after_trigger_pct": -1.2713
+          }
+        ],
+        "optimal_stop_loss_pct": -3.0,
+        "optimal_expected_value_pct": -0.2413,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-3.0% 后，收盘重新回到开盘价的概率为0.0312，未能收回开盘价的概率为0.9688；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-2.9087%，期望值参考为-0.2413%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "603330": {
+      "stock_code": "603330",
+      "stock_name": "天洋新材",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -4.0,
+            "trigger_count": 10,
+            "recover_to_open_count": 0,
+            "not_recover_to_open_count": 10,
+            "recover_to_open_probability": 0.0,
+            "not_recover_to_open_probability": 1.0,
+            "continue_down_count": 10,
+            "v_recovery_count": 0,
+            "continue_down_probability": 1.0,
+            "v_recovery_probability": 0.0,
+            "avg_low_return_from_open_pct": -6.3557,
+            "avg_close_return_from_open_pct": -5.2465,
+            "avg_avoided_loss_pct": 1.6804,
+            "avg_missed_gain_pct": 0.0,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": 1.0965,
+            "avg_max_drawdown_after_trigger_pct": -2.8007
+          }
+        ],
+        "optimal_stop_loss_pct": -4.0,
+        "optimal_expected_value_pct": 1.0965,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-4.0% 后，收盘重新回到开盘价的概率为0.0，未能收回开盘价的概率为1.0；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-5.2465%，期望值参考为1.0965%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "603500": {
+      "stock_code": "603500",
+      "stock_name": "祥和实业",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -3.0,
+            "trigger_count": 32,
+            "recover_to_open_count": 2,
+            "not_recover_to_open_count": 30,
+            "recover_to_open_probability": 0.0625,
+            "not_recover_to_open_probability": 0.9375,
+            "continue_down_count": 30,
+            "v_recovery_count": 2,
+            "continue_down_probability": 0.9375,
+            "v_recovery_probability": 0.0625,
+            "avg_low_return_from_open_pct": -4.4849,
+            "avg_close_return_from_open_pct": -2.9618,
+            "avg_avoided_loss_pct": 0.62,
+            "avg_missed_gain_pct": 4.5123,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": -0.1882,
+            "avg_max_drawdown_after_trigger_pct": -1.094
+          }
+        ],
+        "optimal_stop_loss_pct": -3.0,
+        "optimal_expected_value_pct": -0.1882,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-3.0% 后，收盘重新回到开盘价的概率为0.0625，未能收回开盘价的概率为0.9375；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-2.9618%，期望值参考为-0.1882%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "603618": {
+      "stock_code": "603618",
+      "stock_name": "杭电股份",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -6.0,
+            "trigger_count": 17,
+            "recover_to_open_count": 1,
+            "not_recover_to_open_count": 16,
+            "recover_to_open_probability": 0.0588,
+            "not_recover_to_open_probability": 0.9412,
+            "continue_down_count": 16,
+            "v_recovery_count": 1,
+            "continue_down_probability": 0.9412,
+            "v_recovery_probability": 0.0588,
+            "avg_low_return_from_open_pct": -8.3644,
+            "avg_close_return_from_open_pct": -5.1247,
+            "avg_avoided_loss_pct": 1.2159,
+            "avg_missed_gain_pct": 8.7964,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": -1.0253,
+            "avg_max_drawdown_after_trigger_pct": -2.4319
+          }
+        ],
+        "optimal_stop_loss_pct": -6.0,
+        "optimal_expected_value_pct": -1.0253,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-6.0% 后，收盘重新回到开盘价的概率为0.0588，未能收回开盘价的概率为0.9412；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-5.1247%，期望值参考为-1.0253%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "603678": {
+      "stock_code": "603678",
+      "stock_name": "火炬电子",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -3.0,
+            "trigger_count": 41,
+            "recover_to_open_count": 2,
+            "not_recover_to_open_count": 39,
+            "recover_to_open_probability": 0.0488,
+            "not_recover_to_open_probability": 0.9512,
+            "continue_down_count": 39,
+            "v_recovery_count": 2,
+            "continue_down_probability": 0.9512,
+            "v_recovery_probability": 0.0488,
+            "avg_low_return_from_open_pct": -4.7126,
+            "avg_close_return_from_open_pct": -3.3981,
+            "avg_avoided_loss_pct": 0.9389,
+            "avg_missed_gain_pct": 5.6419,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": 0.2481,
+            "avg_max_drawdown_after_trigger_pct": -1.5257
+          }
+        ],
+        "optimal_stop_loss_pct": -3.0,
+        "optimal_expected_value_pct": 0.2481,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-3.0% 后，收盘重新回到开盘价的概率为0.0488，未能收回开盘价的概率为0.9512；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.3981%，期望值参考为0.2481%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "603778": {
+      "stock_code": "603778",
+      "stock_name": "国晟科技",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -7.0,
+            "trigger_count": 25,
+            "recover_to_open_count": 4,
+            "not_recover_to_open_count": 21,
+            "recover_to_open_probability": 0.16,
+            "not_recover_to_open_probability": 0.84,
+            "continue_down_count": 21,
+            "v_recovery_count": 4,
+            "continue_down_probability": 0.84,
+            "v_recovery_probability": 0.16,
+            "avg_low_return_from_open_pct": -9.4196,
+            "avg_close_return_from_open_pct": -4.9701,
+            "avg_avoided_loss_pct": 0.849,
+            "avg_missed_gain_pct": 9.0078,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": -2.1799,
+            "avg_max_drawdown_after_trigger_pct": -1.7828
+          }
+        ],
+        "optimal_stop_loss_pct": -7.0,
+        "optimal_expected_value_pct": -2.1799,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-7.0% 后，收盘重新回到开盘价的概率为0.16，未能收回开盘价的概率为0.84；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-4.9701%，期望值参考为-2.1799%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "603859": {
+      "stock_code": "603859",
+      "stock_name": "能科科技",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -3.0,
+            "trigger_count": 57,
+            "recover_to_open_count": 2,
+            "not_recover_to_open_count": 55,
+            "recover_to_open_probability": 0.0351,
+            "not_recover_to_open_probability": 0.9649,
+            "continue_down_count": 55,
+            "v_recovery_count": 2,
+            "continue_down_probability": 0.9649,
+            "v_recovery_probability": 0.0351,
+            "avg_low_return_from_open_pct": -4.6902,
+            "avg_close_return_from_open_pct": -3.2146,
+            "avg_avoided_loss_pct": 0.8796,
+            "avg_missed_gain_pct": 4.9505,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": 0.0646,
+            "avg_max_drawdown_after_trigger_pct": -1.7278
+          }
+        ],
+        "optimal_stop_loss_pct": -3.0,
+        "optimal_expected_value_pct": 0.0646,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-3.0% 后，收盘重新回到开盘价的概率为0.0351，未能收回开盘价的概率为0.9649；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.2146%，期望值参考为0.0646%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "603929": {
+      "stock_code": "603929",
+      "stock_name": "亚翔集成",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -6.0,
+            "trigger_count": 20,
+            "recover_to_open_count": 1,
+            "not_recover_to_open_count": 19,
+            "recover_to_open_probability": 0.05,
+            "not_recover_to_open_probability": 0.95,
+            "continue_down_count": 19,
+            "v_recovery_count": 1,
+            "continue_down_probability": 0.95,
+            "v_recovery_probability": 0.05,
+            "avg_low_return_from_open_pct": -7.7597,
+            "avg_close_return_from_open_pct": -6.0114,
+            "avg_avoided_loss_pct": 1.0169,
+            "avg_missed_gain_pct": 7.0221,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": -0.1386,
+            "avg_max_drawdown_after_trigger_pct": -2.1469
+          }
+        ],
+        "optimal_stop_loss_pct": -6.0,
+        "optimal_expected_value_pct": -0.1386,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-6.0% 后，收盘重新回到开盘价的概率为0.05，未能收回开盘价的概率为0.95；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-6.0114%，期望值参考为-0.1386%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "605018": {
+      "stock_code": "605018",
+      "stock_name": "长华集团",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -3.0,
+            "trigger_count": 24,
+            "recover_to_open_count": 1,
+            "not_recover_to_open_count": 23,
+            "recover_to_open_probability": 0.0417,
+            "not_recover_to_open_probability": 0.9583,
+            "continue_down_count": 23,
+            "v_recovery_count": 1,
+            "continue_down_probability": 0.9583,
+            "v_recovery_probability": 0.0417,
+            "avg_low_return_from_open_pct": -4.4785,
+            "avg_close_return_from_open_pct": -3.0071,
+            "avg_avoided_loss_pct": 0.7157,
+            "avg_missed_gain_pct": 4.0212,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": -0.1429,
+            "avg_max_drawdown_after_trigger_pct": -2.3516
+          }
+        ],
+        "optimal_stop_loss_pct": -3.0,
+        "optimal_expected_value_pct": -0.1429,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-3.0% 后，收盘重新回到开盘价的概率为0.0417，未能收回开盘价的概率为0.9583；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.0071%，期望值参考为-0.1429%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "605162": {
+      "stock_code": "605162",
+      "stock_name": "新中港",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -6.0,
+            "trigger_count": 8,
+            "recover_to_open_count": 0,
+            "not_recover_to_open_count": 8,
+            "recover_to_open_probability": 0.0,
+            "not_recover_to_open_probability": 1.0,
+            "continue_down_count": 8,
+            "v_recovery_count": 0,
+            "continue_down_probability": 1.0,
+            "v_recovery_probability": 0.0,
+            "avg_low_return_from_open_pct": -7.9446,
+            "avg_close_return_from_open_pct": -6.2081,
+            "avg_avoided_loss_pct": 1.0488,
+            "avg_missed_gain_pct": 0.0,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": 0.0581,
+            "avg_max_drawdown_after_trigger_pct": -1.6781
+          }
+        ],
+        "optimal_stop_loss_pct": -6.0,
+        "optimal_expected_value_pct": 0.0581,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-6.0% 后，收盘重新回到开盘价的概率为0.0，未能收回开盘价的概率为1.0；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-6.2081%，期望值参考为0.0581%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "605318": {
+      "stock_code": "605318",
+      "stock_name": "法狮龙",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -5.0,
+            "trigger_count": 24,
+            "recover_to_open_count": 3,
+            "not_recover_to_open_count": 21,
+            "recover_to_open_probability": 0.125,
+            "not_recover_to_open_probability": 0.875,
+            "continue_down_count": 21,
+            "v_recovery_count": 3,
+            "continue_down_probability": 0.875,
+            "v_recovery_probability": 0.125,
+            "avg_low_return_from_open_pct": -6.5921,
+            "avg_close_return_from_open_pct": -3.7038,
+            "avg_avoided_loss_pct": 0.5341,
+            "avg_missed_gain_pct": 7.9336,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": -1.4462,
+            "avg_max_drawdown_after_trigger_pct": -1.4019
+          }
+        ],
+        "optimal_stop_loss_pct": -5.0,
+        "optimal_expected_value_pct": -1.4462,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-5.0% 后，收盘重新回到开盘价的概率为0.125，未能收回开盘价的概率为0.875；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-3.7038%，期望值参考为-1.4462%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
+        "status": "ready"
+      }
+    },
+    "605589": {
+      "stock_code": "605589",
+      "stock_name": "圣泉集团",
+      "updated_at": "2026-06-11",
+      "source_result_date": "2026-06-10",
+      "intraday_stop_loss_signal": {
+        "method_label": "daily_low_open_recovery",
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -3.0,
+            "trigger_count": 46,
+            "recover_to_open_count": 4,
+            "not_recover_to_open_count": 42,
+            "recover_to_open_probability": 0.087,
+            "not_recover_to_open_probability": 0.913,
+            "continue_down_count": 42,
+            "v_recovery_count": 4,
+            "continue_down_probability": 0.913,
+            "v_recovery_probability": 0.087,
+            "avg_low_return_from_open_pct": -4.6787,
+            "avg_close_return_from_open_pct": -2.8495,
+            "avg_avoided_loss_pct": 0.8646,
+            "avg_missed_gain_pct": 4.9947,
+            "trading_cost_pct": 0.15,
+            "expected_value_pct": -0.3005,
+            "avg_max_drawdown_after_trigger_pct": -1.5788
+          }
+        ],
+        "optimal_stop_loss_pct": -3.0,
+        "optimal_expected_value_pct": -0.3005,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，日内最低点触发-3.0% 后，收盘重新回到开盘价的概率为0.087，未能收回开盘价的概率为0.913；该阈值按“样本足够且回开盘价概率不高于0.1”的规则选出，用于识别跌破后大概率难以回到开盘价的防守点。触发样本平均收盘相对开盘-2.8495%，期望值参考为-0.3005%。该结论用日线 open/low/close 估算，适合作为分钟线限频时的防守兜底。",
         "status": "ready"
       }
     }
