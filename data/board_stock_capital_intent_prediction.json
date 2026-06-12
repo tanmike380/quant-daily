@@ -106,118 +106,22 @@
     "candidate_list": [
       {
         "rank": 1,
-        "stock_code": "002584",
-        "stock_name": "西陇科学",
+        "stock_code": "603931",
+        "stock_name": "格林达",
         "industry_name": "化工原料",
         "latest_trade_date": "2026-06-11",
-        "feature_summary_text": "近20日涨幅约2.24%，近60日涨幅约-3.63%，20/60日涨停记忆分别为1/1次，20日平均换手约7.08%，60日平均换手约4.61%，20日平均成交额约2.64亿元。",
+        "feature_summary_text": "近20日涨幅约35.90%，近60日涨幅约95.52%，20/60日涨停记忆分别为2/5次，20日平均换手约5.55%，60日平均换手约3.77%，20日平均成交额约6.36亿元。",
         "pre_ignition_setup": {
-          "pct_change_5d": 9.7463,
-          "pct_change_10d": 1.2315,
-          "pct_change_20d": 2.2388,
-          "pct_change_60d": -3.6342,
-          "position_in_60d_range": 0.7222
+          "pct_change_5d": -0.2502,
+          "pct_change_10d": -6.1657,
+          "pct_change_20d": 35.9009,
+          "pct_change_60d": 95.5214,
+          "position_in_60d_range": 0.8209
         },
         "capital_intent_prediction_signal": {
-          "capital_intent_score": 62.11,
-          "capital_intent_label": "medium",
-          "ignition_probability_1_3d": "medium",
-          "prediction_type": "second_wave_setup",
-          "theme_intent_signal": {
-            "theme_score": 100.0,
-            "theme_intent_label": "strong",
-            "matched_current_theme_list": [
-              "芯片",
-              "光刻",
-              "锂",
-              "PCB",
-              "光刻胶",
-              "氟化工"
-            ],
-            "matched_fine_grained_board_list": [
-              "光刻胶"
-            ],
-            "matched_top_board_signal_list": [
-              {
-                "context_rank_no": 2,
-                "trade_date": "2026-06-09",
-                "rank_no": 6,
-                "board_name": "光刻胶",
-                "board_type": "concept",
-                "pct_change": 5.1381,
-                "appearance_count": 4,
-                "average_rank_no": 9.25,
-                "signal_source": "ths_concept_board"
-              }
-            ],
-            "is_in_main_theme_top_candidates": true,
-            "main_theme_candidate_signal": {
-              "selection_score": 154,
-              "matched_theme_list": [
-                "光刻胶",
-                "氟化工",
-                "PCB",
-                "磷化工"
-              ],
-              "matched_weekly_theme_list": [
-                "光刻胶",
-                "氟化工",
-                "PCB"
-              ],
-              "business_relevance_label": "core_business_related",
-              "resonance_type": "strong"
-            }
-          },
-          "wash_or_distribution_signal": {
-            "wash_score": 56.0,
-            "wash_or_distribution_label": "controlled_pullback",
-            "pct_change_5d": 9.7463,
-            "pct_change_10d": 1.2315,
-            "pct_change_20d": 2.2388,
-            "recent_down_day_count_8d": 3,
-            "down_day_amount_ratio_vs_20d": 0.562,
-            "down_day_close_strength": 0.3061,
-            "pullback_from_20d_high_pct": -3.2941,
-            "has_broken_20d_support": false
-          },
-          "funding_willingness_signal": {
-            "funding_willingness_score": 31.8,
-            "funding_willingness_label": "weak",
-            "capital_absorption_score": 26.84,
-            "limit_up_count_60d": 1,
-            "amount_expansion_3d_vs_20d": 1.7267,
-            "avg_amount_20d_yi": 2.6442,
-            "avg_turnover_rate_20d": 7.081
-          },
-          "speculation_carrier_signal": {
-            "carrier_score": 90.0,
-            "carrier_label": "strong",
-            "latest_circ_mv_yi": 38.5047,
-            "avg_turnover_rate_20d": 7.081,
-            "concept_count": 18
-          },
-          "why_capital_may_choose_it": "西陇科学当前匹配主题为芯片、光刻、锂、PCB；前排细分概念命中光刻胶；近5/10/20日涨跌幅分别为9.75%/1.23%/2.24%，洗盘/出货判断为controlled_pullback；资金意愿为weak，60日涨停记忆1次，20日均成交额约2.64亿元；短线载体适配度为strong。",
-          "failure_condition": "股价继续放量下跌并跌破近20日支撑；下跌日成交额持续放大且收盘靠近低位。"
-        }
-      },
-      {
-        "rank": 2,
-        "stock_code": "603306",
-        "stock_name": "华懋科技",
-        "industry_name": "汽车配件",
-        "latest_trade_date": "2026-06-11",
-        "feature_summary_text": "近20日涨幅约-6.12%，近60日涨幅约16.48%，20/60日涨停记忆分别为0/3次，20日平均换手约4.82%，60日平均换手约4.71%，20日平均成交额约17.08亿元。",
-        "pre_ignition_setup": {
-          "pct_change_5d": -0.8974,
-          "pct_change_10d": -12.0418,
-          "pct_change_20d": -6.1243,
-          "pct_change_60d": 16.4795,
-          "position_in_60d_range": 0.6401
-        },
-        "capital_intent_prediction_signal": {
-          "capital_intent_score": 60.87,
-          "capital_intent_label": "medium",
-          "ignition_probability_1_3d": "medium",
+          "capital_intent_score": 53.59,
+          "capital_intent_label": "weak",
+          "ignition_probability_1_3d": "low",
           "prediction_type": "theme_pullback_repair",
           "theme_intent_signal": {
             "theme_score": 46.0,
@@ -247,76 +151,122 @@
             "main_theme_candidate_signal": {}
           },
           "wash_or_distribution_signal": {
-            "wash_score": 76.0,
-            "wash_or_distribution_label": "healthy_wash",
-            "pct_change_5d": -0.8974,
-            "pct_change_10d": -12.0418,
-            "pct_change_20d": -6.1243,
-            "recent_down_day_count_8d": 4,
-            "down_day_amount_ratio_vs_20d": 0.8118,
-            "down_day_close_strength": 0.2642,
-            "pullback_from_20d_high_pct": -14.5591,
+            "wash_score": 46.0,
+            "wash_or_distribution_label": "controlled_pullback",
+            "pct_change_5d": -0.2502,
+            "pct_change_10d": -6.1657,
+            "pct_change_20d": 35.9009,
+            "recent_down_day_count_8d": 5,
+            "down_day_amount_ratio_vs_20d": 1.0675,
+            "down_day_close_strength": 0.4027,
+            "pullback_from_20d_high_pct": -10.997,
             "has_broken_20d_support": false
           },
+          "pre_breakout_accumulation_signal": {
+            "accumulation_score": 52.0,
+            "accumulation_label": "controlled_pullback_watch",
+            "pullback_from_60d_high_pct": -10.997,
+            "ma20_distance_pct": 5.0173,
+            "has_broken_20d_support": false,
+            "consolidation_range_10d_pct": 24.4214,
+            "turnover_contraction_signal": {
+              "is_turnover_contracting": false,
+              "turnover_contraction_ratio": 1.4404,
+              "decreasing_step_count_5d": 1,
+              "recent_turnover_rate_list": [
+                4.4502,
+                3.4897,
+                4.4524,
+                4.6604,
+                6.7764
+              ]
+            },
+            "lower_shadow_support_signal": {
+              "lower_shadow_support_count_5d": 2,
+              "lower_shadow_ratio_list_5d": [
+                0.1463,
+                0.1911,
+                0.6199,
+                0.1803,
+                0.3756
+              ]
+            },
+            "volume_probe_signal": {
+              "has_volume_probe_without_breakout": false,
+              "latest_volume_probe_item": null,
+              "amount_sustain_after_probe_label": "no_probe",
+              "amount_sustain_after_probe_ratio": null,
+              "post_probe_pct_change": null
+            },
+            "recent_overheat_signal": {
+              "recent_overheat_penalty": 0.0,
+              "recent_overheat_reason_list": []
+            }
+          },
           "funding_willingness_signal": {
-            "funding_willingness_score": 54.57,
+            "funding_willingness_score": 58.62,
             "funding_willingness_label": "medium",
-            "capital_absorption_score": 50.15,
-            "limit_up_count_60d": 3,
-            "amount_expansion_3d_vs_20d": 0.8257,
-            "avg_amount_20d_yi": 17.0837,
-            "avg_turnover_rate_20d": 4.8204
+            "capital_absorption_score": 45.82,
+            "limit_up_count_60d": 5,
+            "limit_up_count_120d": 5,
+            "limit_up_count_240d": 8,
+            "amount_expansion_3d_vs_20d": 0.9768,
+            "avg_amount_20d_yi": 6.3571,
+            "avg_turnover_rate_20d": 5.5485
           },
           "speculation_carrier_signal": {
-            "carrier_score": 80.0,
+            "carrier_score": 90.0,
             "carrier_label": "strong",
-            "latest_circ_mv_yi": 338.3921,
-            "avg_turnover_rate_20d": 4.8204,
-            "concept_count": 13
+            "latest_circ_mv_yi": 119.3559,
+            "avg_turnover_rate_20d": 5.5485,
+            "concept_count": 3
           },
-          "why_capital_may_choose_it": "华懋科技当前匹配主题为芯片、光刻、光刻胶；前排细分概念命中光刻胶；近5/10/20日涨跌幅分别为-0.90%/-12.04%/-6.12%，洗盘/出货判断为healthy_wash；资金意愿为medium，60日涨停记忆3次，20日均成交额约17.08亿元；短线载体适配度为strong。",
+          "why_capital_may_choose_it": "格林达当前匹配主题为芯片、光刻、光刻胶；前排细分概念命中光刻胶；近5/10/20日涨跌幅分别为-0.25%/-6.17%/35.90%，洗盘/出货判断为controlled_pullback；提前点火蓄势判断为controlled_pullback_watch，距60日高点回撤-11.00%，距MA20为5.02%，换手收缩=False，放量不大涨=False；资金意愿为medium，60/120/240日涨停记忆分别为5/5/8次，20日均成交额约6.36亿元；短线载体适配度为strong。",
           "failure_condition": "当前主线继续退潮或主题前排不再修复；股价继续放量下跌并跌破近20日支撑；下跌日成交额持续放大且收盘靠近低位。"
         }
       },
       {
-        "rank": 3,
-        "stock_code": "002046",
-        "stock_name": "国机精工",
-        "industry_name": "机械基件",
+        "rank": 2,
+        "stock_code": "003022",
+        "stock_name": "联泓新科",
+        "industry_name": "化工原料",
         "latest_trade_date": "2026-06-11",
-        "feature_summary_text": "近20日涨幅约0.96%，近60日涨幅约22.31%，20/60日涨停记忆分别为3/4次，20日平均换手约4.41%，60日平均换手约3.30%，20日平均成交额约13.05亿元。",
+        "feature_summary_text": "近20日涨幅约-10.15%，近60日涨幅约16.40%，20/60日涨停记忆分别为0/2次，20日平均换手约2.52%，60日平均换手约2.01%，20日平均成交额约8.36亿元。",
         "pre_ignition_setup": {
-          "pct_change_5d": 2.759,
-          "pct_change_10d": 3.5516,
-          "pct_change_20d": 0.9619,
-          "pct_change_60d": 22.3093,
-          "position_in_60d_range": 0.6569
+          "pct_change_5d": 1.6043,
+          "pct_change_10d": -3.4402,
+          "pct_change_20d": -10.1491,
+          "pct_change_60d": 16.3996,
+          "position_in_60d_range": 0.6907
         },
         "capital_intent_prediction_signal": {
-          "capital_intent_score": 59.46,
-          "capital_intent_label": "medium",
+          "capital_intent_score": 46.22,
+          "capital_intent_label": "weak",
           "ignition_probability_1_3d": "low",
           "prediction_type": "theme_pullback_repair",
           "theme_intent_signal": {
-            "theme_score": 50.0,
+            "theme_score": 46.0,
             "theme_intent_label": "medium",
             "matched_current_theme_list": [
-              "半导体",
-              "芯片"
+              "芯片",
+              "光刻",
+              "先进封装",
+              "锂",
+              "光刻胶"
             ],
             "matched_fine_grained_board_list": [
-              "中芯国际概念"
+              "光刻胶"
             ],
             "matched_top_board_signal_list": [
               {
-                "context_rank_no": 1,
+                "context_rank_no": 2,
                 "trade_date": "2026-06-09",
-                "rank_no": 1,
-                "board_name": "中芯国际概念",
+                "rank_no": 6,
+                "board_name": "光刻胶",
                 "board_type": "concept",
-                "pct_change": 6.7106,
+                "pct_change": 5.1381,
                 "appearance_count": 4,
-                "average_rank_no": 7.25,
+                "average_rank_no": 9.25,
                 "signal_source": "ths_concept_board"
               }
             ],
@@ -326,54 +276,219 @@
           "wash_or_distribution_signal": {
             "wash_score": 56.0,
             "wash_or_distribution_label": "controlled_pullback",
-            "pct_change_5d": 2.759,
-            "pct_change_10d": 3.5516,
-            "pct_change_20d": 0.9619,
-            "recent_down_day_count_8d": 4,
-            "down_day_amount_ratio_vs_20d": 1.1371,
-            "down_day_close_strength": 0.2782,
-            "pullback_from_20d_high_pct": -12.8998,
+            "pct_change_5d": 1.6043,
+            "pct_change_10d": -3.4402,
+            "pct_change_20d": -10.1491,
+            "recent_down_day_count_8d": 3,
+            "down_day_amount_ratio_vs_20d": 1.0002,
+            "down_day_close_strength": 0.2609,
+            "pullback_from_20d_high_pct": -9.7882,
             "has_broken_20d_support": false
           },
+          "pre_breakout_accumulation_signal": {
+            "accumulation_score": 58.0,
+            "accumulation_label": "controlled_pullback_watch",
+            "pullback_from_60d_high_pct": -10.1491,
+            "ma20_distance_pct": 0.1703,
+            "has_broken_20d_support": false,
+            "consolidation_range_10d_pct": 20.9323,
+            "turnover_contraction_signal": {
+              "is_turnover_contracting": true,
+              "turnover_contraction_ratio": 0.6555,
+              "decreasing_step_count_5d": 3,
+              "recent_turnover_rate_list": [
+                3.3053,
+                2.1526,
+                2.0529,
+                1.7549,
+                1.8229
+              ]
+            },
+            "lower_shadow_support_signal": {
+              "lower_shadow_support_count_5d": 1,
+              "lower_shadow_ratio_list_5d": [
+                0.5618,
+                0.1395,
+                0.2788,
+                0.2759,
+                0.0442
+              ]
+            },
+            "volume_probe_signal": {
+              "has_volume_probe_without_breakout": false,
+              "latest_volume_probe_item": null,
+              "amount_sustain_after_probe_label": "no_probe",
+              "amount_sustain_after_probe_ratio": null,
+              "post_probe_pct_change": null
+            },
+            "recent_overheat_signal": {
+              "recent_overheat_penalty": 0.0,
+              "recent_overheat_reason_list": []
+            }
+          },
           "funding_willingness_signal": {
-            "funding_willingness_score": 62.39,
-            "funding_willingness_label": "medium",
-            "capital_absorption_score": 35.3,
-            "limit_up_count_60d": 4,
-            "amount_expansion_3d_vs_20d": 1.5419,
-            "avg_amount_20d_yi": 13.0469,
-            "avg_turnover_rate_20d": 4.4147
+            "funding_willingness_score": 46.53,
+            "funding_willingness_label": "weak",
+            "capital_absorption_score": 36.74,
+            "limit_up_count_60d": 2,
+            "limit_up_count_120d": 2,
+            "limit_up_count_240d": 6,
+            "amount_expansion_3d_vs_20d": 0.7177,
+            "avg_amount_20d_yi": 8.3632,
+            "avg_turnover_rate_20d": 2.523
           },
           "speculation_carrier_signal": {
             "carrier_score": 80.0,
             "carrier_label": "strong",
-            "latest_circ_mv_yi": 306.0717,
-            "avg_turnover_rate_20d": 4.4147,
-            "concept_count": 20
+            "latest_circ_mv_yi": 329.6047,
+            "avg_turnover_rate_20d": 2.523,
+            "concept_count": 13
           },
-          "why_capital_may_choose_it": "国机精工当前匹配主题为半导体、芯片；前排细分概念命中中芯国际概念；近5/10/20日涨跌幅分别为2.76%/3.55%/0.96%，洗盘/出货判断为controlled_pullback；资金意愿为medium，60日涨停记忆4次，20日均成交额约13.05亿元；短线载体适配度为strong。",
+          "why_capital_may_choose_it": "联泓新科当前匹配主题为芯片、光刻、先进封装、锂；前排细分概念命中光刻胶；近5/10/20日涨跌幅分别为1.60%/-3.44%/-10.15%，洗盘/出货判断为controlled_pullback；提前点火蓄势判断为controlled_pullback_watch，距60日高点回撤-10.15%，距MA20为0.17%，换手收缩=True，放量不大涨=False；资金意愿为weak，60/120/240日涨停记忆分别为2/2/6次，20日均成交额约8.36亿元；短线载体适配度为strong。",
+          "failure_condition": "当前主线继续退潮或主题前排不再修复；股价继续放量下跌并跌破近20日支撑；下跌日成交额持续放大且收盘靠近低位。"
+        }
+      },
+      {
+        "rank": 3,
+        "stock_code": "000758",
+        "stock_name": "中色股份",
+        "industry_name": "铅锌",
+        "latest_trade_date": "2026-06-11",
+        "feature_summary_text": "近20日涨幅约-14.46%，近60日涨幅约-15.37%，20/60日涨停记忆分别为0/0次，20日平均换手约2.32%，60日平均换手约2.27%，20日平均成交额约3.13亿元。",
+        "pre_ignition_setup": {
+          "pct_change_5d": -7.3206,
+          "pct_change_10d": -8.1277,
+          "pct_change_20d": -14.4595,
+          "pct_change_60d": -15.3743,
+          "position_in_60d_range": 0.1412
+        },
+        "capital_intent_prediction_signal": {
+          "capital_intent_score": 39.1,
+          "capital_intent_label": "weak",
+          "ignition_probability_1_3d": "low",
+          "prediction_type": "low_position_supplement",
+          "theme_intent_signal": {
+            "theme_score": 42.0,
+            "theme_intent_label": "medium",
+            "matched_current_theme_list": [
+              "小金属",
+              "稀土",
+              "钴"
+            ],
+            "matched_fine_grained_board_list": [
+              "稀土永磁"
+            ],
+            "matched_top_board_signal_list": [
+              {
+                "context_rank_no": 5,
+                "trade_date": "2026-06-11",
+                "rank_no": 8,
+                "board_name": "稀土永磁",
+                "board_type": "concept",
+                "pct_change": 4.47,
+                "appearance_count": 3,
+                "average_rank_no": 12.67,
+                "signal_source": "ths_concept_board"
+              }
+            ],
+            "is_in_main_theme_top_candidates": false,
+            "main_theme_candidate_signal": {}
+          },
+          "wash_or_distribution_signal": {
+            "wash_score": 56.0,
+            "wash_or_distribution_label": "controlled_pullback",
+            "pct_change_5d": -7.3206,
+            "pct_change_10d": -8.1277,
+            "pct_change_20d": -14.4595,
+            "recent_down_day_count_8d": 5,
+            "down_day_amount_ratio_vs_20d": 1.0192,
+            "down_day_close_strength": 0.4081,
+            "pullback_from_20d_high_pct": -14.3437,
+            "has_broken_20d_support": false
+          },
+          "pre_breakout_accumulation_signal": {
+            "accumulation_score": 44.0,
+            "accumulation_label": "controlled_pullback_watch",
+            "pullback_from_60d_high_pct": -18.742,
+            "ma20_distance_pct": -6.9528,
+            "has_broken_20d_support": false,
+            "consolidation_range_10d_pct": 18.2114,
+            "turnover_contraction_signal": {
+              "is_turnover_contracting": true,
+              "turnover_contraction_ratio": 0.5731,
+              "decreasing_step_count_5d": 3,
+              "recent_turnover_rate_list": [
+                2.6609,
+                2.8611,
+                1.8053,
+                1.5904,
+                1.5742
+              ]
+            },
+            "lower_shadow_support_signal": {
+              "lower_shadow_support_count_5d": 3,
+              "lower_shadow_ratio_list_5d": [
+                0.2258,
+                0.3077,
+                0.7083,
+                0.4091,
+                0.3529
+              ]
+            },
+            "volume_probe_signal": {
+              "has_volume_probe_without_breakout": false,
+              "latest_volume_probe_item": null,
+              "amount_sustain_after_probe_label": "no_probe",
+              "amount_sustain_after_probe_ratio": null,
+              "post_probe_pct_change": null
+            },
+            "recent_overheat_signal": {
+              "recent_overheat_penalty": 0.0,
+              "recent_overheat_reason_list": []
+            }
+          },
+          "funding_willingness_signal": {
+            "funding_willingness_score": 31.67,
+            "funding_willingness_label": "weak",
+            "capital_absorption_score": 28.15,
+            "limit_up_count_60d": 0,
+            "limit_up_count_120d": 2,
+            "limit_up_count_240d": 4,
+            "amount_expansion_3d_vs_20d": 0.663,
+            "avg_amount_20d_yi": 3.1344,
+            "avg_turnover_rate_20d": 2.3161
+          },
+          "speculation_carrier_signal": {
+            "carrier_score": 90.0,
+            "carrier_label": "strong",
+            "latest_circ_mv_yi": 125.5083,
+            "avg_turnover_rate_20d": 2.3161,
+            "concept_count": 13
+          },
+          "why_capital_may_choose_it": "中色股份当前匹配主题为小金属、稀土、钴；前排细分概念命中稀土永磁；近5/10/20日涨跌幅分别为-7.32%/-8.13%/-14.46%，洗盘/出货判断为controlled_pullback；提前点火蓄势判断为controlled_pullback_watch，距60日高点回撤-18.74%，距MA20为-6.95%，换手收缩=True，放量不大涨=False；资金意愿为weak，60/120/240日涨停记忆分别为0/2/4次，20日均成交额约3.13亿元；短线载体适配度为strong。",
           "failure_condition": "当前主线继续退潮或主题前排不再修复；股价继续放量下跌并跌破近20日支撑；下跌日成交额持续放大且收盘靠近低位。"
         }
       }
     ],
     "summary": {
       "total_stock_profile_count": 500,
-      "predicted_candidate_count": 41,
+      "predicted_candidate_count": 3,
       "selected_candidate_count": 3,
-      "strong_or_medium_intent_count": 3,
+      "strong_or_medium_intent_count": 0,
       "prediction_type_count_map": {
         "theme_pullback_repair": 2,
-        "second_wave_setup": 1
+        "low_position_supplement": 1
       },
       "theme_count_map": {
         "光刻胶": 4,
-        "芯片": 3,
+        "芯片": 2,
         "光刻": 2,
+        "先进封装": 1,
         "锂": 1,
-        "PCB": 1,
-        "氟化工": 1,
-        "半导体": 1,
-        "中芯国际概念": 1
+        "小金属": 1,
+        "稀土": 1,
+        "钴": 1,
+        "稀土永磁": 1
       }
     }
   }
