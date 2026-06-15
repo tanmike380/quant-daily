@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-06-11",
-  "source_result_date": "2026-06-11",
+  "updated_at": "2026-06-15",
+  "source_result_date": "2026-06-12",
   "target_price_calculator_db": {
     "000001": {
       "stock_code": "000001",
@@ -7003,48 +7003,54 @@
     "002475": {
       "stock_code": "002475",
       "stock_name": "立讯精密",
-      "updated_at": "2026-06-11",
-      "source_result_date": "2026-06-11",
-      "latest_trade_date": "2026-06-11",
-      "latest_close_price": 64.58,
-      "research_coverage_status": "limited_fallback",
+      "updated_at": "2026-06-15",
+      "source_result_date": "2026-06-12",
+      "latest_trade_date": "2026-06-12",
+      "latest_close_price": 63.76,
+      "research_coverage_status": "can_slim_available",
       "target_price_calculator_signal": {
         "version": "oneil_calculator_v2",
         "weight_profile_signal": {
-          "profile_name": "high_beta_breakout",
+          "profile_name": "institutional_capacity_core",
           "source": "rule_fallback",
-          "reason_text": "科技主线但龙头地位不够明确，按高波动弹性配置。"
+          "reason_text": "近20日平均换手率约2.5854%，20日平均成交额约13394167.7771，20日平均流通市值约51345429.3544，符合低换手、高容量承接或容量核心识别的机构大票/中军特征。"
         },
-        "current_price": 64.58,
+        "current_price": 63.76,
         "predicted_upside_pct_range": {
-          "low": 0.0,
-          "center": 0.0,
-          "high": 5.0015
+          "low": 14.7428,
+          "center": 17.7384,
+          "high": 20.7497
         },
         "predicted_target_price_range": {
-          "low": 64.58,
-          "center": 64.58,
-          "high": 67.81,
+          "low": 73.16,
+          "center": 75.07,
+          "high": 76.99,
           "currency": "CNY"
         },
         "target_price_calculation_signal": {
           "status": "new_calculation",
           "source": "oneil_calculator",
           "target_price_range": {
-            "low": 64.58,
-            "center": 64.58,
-            "high": 67.81,
+            "low": 73.16,
+            "center": 75.07,
+            "high": 76.99,
             "currency": "CNY"
           },
-          "current_price": 64.58,
+          "current_price": 63.76,
           "reason_text": "使用本次 calculator 刷新计算区间。"
         },
         "expert_target_validation_signal": {
-          "status": "missing",
-          "reason_text": "机构目标区间没有可用中枢。"
+          "status": "usable_for_live_blend",
+          "expert_target_center": 75.96,
+          "current_price": 63.76,
+          "implied_upside_pct": 19.1343,
+          "source_name": "东方证券/华兴证券",
+          "source_observed_at": "2025-11-04",
+          "evidence_freshness_label": "older_one_year_reference",
+          "training_usage_text": "可按配置权重融合进当前预测。"
         },
-        "confidence_label": "low",
-        "reason_text": "已读取最新收盘价，预估增长0.0%，CAN SLIM 重估溢价-0.6%，估值/风险折价0.0%；根据增长兑现、估值重估、主线相关度、相对强度和风险惩罚计算参考上行区间为 +0.00% 至 +5.00%，未融合有效机构目标区间；目标区间计算状态=new_calculation。"
+        "confidence_label": "high",
+        "reason_text": "已读取最新收盘价，预估增长17.6848%，CAN SLIM 重估溢价10.56%，估值/风险折价0.0%；根据增长兑现、估值重估、主线相关度、相对强度和风险惩罚计算参考上行区间为 +14.74% 至 +20.75%，并融合机构目标区间隐含涨幅 19.13%；目标区间计算状态=new_calculation。"
       }
     },
     "002490": {
@@ -13425,48 +13431,54 @@
     "600482": {
       "stock_code": "600482",
       "stock_name": "中国动力",
-      "updated_at": "2026-06-11",
-      "source_result_date": "2026-06-11",
-      "latest_trade_date": "2026-06-11",
-      "latest_close_price": 31.37,
-      "research_coverage_status": "limited_fallback",
+      "updated_at": "2026-06-15",
+      "source_result_date": "2026-06-12",
+      "latest_trade_date": "2026-06-12",
+      "latest_close_price": 31.22,
+      "research_coverage_status": "can_slim_available",
       "target_price_calculator_signal": {
         "version": "oneil_calculator_v2",
         "weight_profile_signal": {
-          "profile_name": "high_beta_breakout",
+          "profile_name": "institutional_capacity_core",
           "source": "rule_fallback",
-          "reason_text": "科技主线但龙头地位不够明确，按高波动弹性配置。"
+          "reason_text": "近20日平均换手率约1.88%，20日平均成交额约1541523.3468，20日平均流通市值约8169089.2944，符合低换手、高容量承接或容量核心识别的机构大票/中军特征。"
         },
-        "current_price": 31.37,
+        "current_price": 31.22,
         "predicted_upside_pct_range": {
-          "low": 0.0,
-          "center": 0.0,
-          "high": 5.0048
+          "low": 31.4862,
+          "center": 34.4971,
+          "high": 37.508
         },
         "predicted_target_price_range": {
-          "low": 31.37,
-          "center": 31.37,
-          "high": 32.94,
+          "low": 41.05,
+          "center": 41.99,
+          "high": 42.93,
           "currency": "CNY"
         },
         "target_price_calculation_signal": {
           "status": "new_calculation",
           "source": "oneil_calculator",
           "target_price_range": {
-            "low": 31.37,
-            "center": 31.37,
-            "high": 32.94,
+            "low": 41.05,
+            "center": 41.99,
+            "high": 42.93,
             "currency": "CNY"
           },
-          "current_price": 31.37,
+          "current_price": 31.22,
           "reason_text": "使用本次 calculator 刷新计算区间。"
         },
         "expert_target_validation_signal": {
-          "status": "missing",
-          "reason_text": "机构目标区间没有可用中枢。"
+          "status": "usable_for_live_blend",
+          "expert_target_center": 46.0667,
+          "current_price": 31.22,
+          "implied_upside_pct": 47.5551,
+          "source_name": "TradingView analyst consensus",
+          "source_observed_at": "2026-06-15",
+          "evidence_freshness_label": "recent_half_year",
+          "training_usage_text": "可按配置权重融合进当前预测。"
         },
-        "confidence_label": "low",
-        "reason_text": "已读取最新收盘价，预估增长0.0%，CAN SLIM 重估溢价-0.6%，估值/风险折价0.0%；根据增长兑现、估值重估、主线相关度、相对强度和风险惩罚计算参考上行区间为 +0.00% 至 +5.00%，未融合有效机构目标区间；目标区间计算状态=new_calculation。"
+        "confidence_label": "high",
+        "reason_text": "已读取最新收盘价，预估增长42.8041%，CAN SLIM 重估溢价10.64%，估值/风险折价0.0%；根据增长兑现、估值重估、主线相关度、相对强度和风险惩罚计算参考上行区间为 +31.49% 至 +37.51%，并融合机构目标区间隐含涨幅 47.56%；目标区间计算状态=new_calculation。"
       }
     },
     "600487": {
@@ -23632,6 +23644,59 @@
         },
         "confidence_label": "medium",
         "reason_text": "已读取最新收盘价，预估增长-3.7942%，CAN SLIM 重估溢价3.355%，估值/风险折价0.0%；根据增长兑现、估值重估、主线相关度、相对强度和风险惩罚计算参考上行区间为 +0.00% 至 +6.49%，未融合有效机构目标区间；目标区间计算状态=new_calculation。"
+      }
+    },
+    "002065": {
+      "stock_code": "002065",
+      "stock_name": "东华软件",
+      "updated_at": "2026-06-15",
+      "source_result_date": "2026-06-12",
+      "latest_trade_date": "2026-06-12",
+      "latest_close_price": 7.0,
+      "research_coverage_status": "can_slim_available",
+      "target_price_calculator_signal": {
+        "version": "oneil_calculator_v2",
+        "weight_profile_signal": {
+          "profile_name": "high_beta_breakout",
+          "source": "rule_fallback",
+          "reason_text": "科技主线但龙头地位不够明确，按高波动弹性配置。"
+        },
+        "current_price": 7.0,
+        "predicted_upside_pct_range": {
+          "low": 17.0,
+          "center": 22.0,
+          "high": 27.0
+        },
+        "predicted_target_price_range": {
+          "low": 8.19,
+          "center": 8.54,
+          "high": 8.89,
+          "currency": "CNY"
+        },
+        "target_price_calculation_signal": {
+          "status": "new_calculation",
+          "source": "oneil_calculator",
+          "target_price_range": {
+            "low": 8.19,
+            "center": 8.54,
+            "high": 8.89,
+            "currency": "CNY"
+          },
+          "current_price": 7.0,
+          "reason_text": "使用本次 calculator 刷新计算区间。"
+        },
+        "expert_target_validation_signal": {
+          "status": "usable_for_live_blend",
+          "expert_target_center": 11.41,
+          "current_price": 7.0,
+          "implied_upside_pct": 63.0,
+          "source_name": "TradingView analyst consensus",
+          "source_observed_at": "2026-06-15",
+          "evidence_freshness_label": "recent_half_year",
+          "training_usage_text": "可按配置权重融合进当前预测。"
+        },
+        "confidence_label": "high",
+        "reason_text": "已读取最新收盘价，预估增长3.5924%，CAN SLIM 重估溢价-8.025%，估值/风险折价12.0%；根据增长兑现、估值重估、主线相关度、相对强度和风险惩罚计算参考上行区间为 +17.00% 至 +27.00%，并融合机构目标区间隐含涨幅 63.00%；目标区间计算状态=new_calculation。"
       }
     }
   }

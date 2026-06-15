@@ -7561,13 +7561,13 @@
             "avg_next_close_return_pct": 1.6194,
             "avg_next_close_net_return_pct": 0.6194,
             "execution_expected_return_pct": 0.0619,
-            "swing_execution_expected_return_pct": 0.2331,
-            "blended_execution_expected_return_pct": 0.2331,
+            "swing_execution_expected_return_pct": 0.1531,
+            "blended_execution_expected_return_pct": 0.1531,
             "next_close_win_rate": 0.5,
-            "avg_2d_close_return_pct": 2.1155,
-            "avg_2d_close_net_return_pct": 1.1155,
-            "avg_5d_close_return_pct": 3.3307,
-            "avg_5d_close_net_return_pct": 2.3307
+            "avg_2d_close_return_pct": 1.7359,
+            "avg_2d_close_net_return_pct": 0.7359,
+            "avg_5d_close_return_pct": 2.5313,
+            "avg_5d_close_net_return_pct": 1.5313
           }
         ],
         "entry_cost_pct": 1.0,
@@ -7575,13 +7575,13 @@
         "max_open_dip_abs_pct": 5.0,
         "optimal_open_dip_buy_pct": -1.5,
         "optimal_next_close_net_return_pct": 0.6194,
-        "optimal_5d_close_net_return_pct": 2.3307,
+        "optimal_5d_close_net_return_pct": 1.5313,
         "optimal_execution_expected_return_pct": 0.0619,
-        "optimal_swing_execution_expected_return_pct": 0.2331,
-        "optimal_blended_execution_expected_return_pct": 0.2331,
+        "optimal_swing_execution_expected_return_pct": 0.1531,
+        "optimal_blended_execution_expected_return_pct": 0.1531,
         "optimal_trigger_probability": 0.1,
         "confidence_label": "statistical",
-        "reason_text": "近220个交易日样本中，次日开盘相对前一交易日收盘低开达到-1.5% 的次数为22，触发概率为0.1；其中当日收盘重新高于开盘的概率为0.6364。按次日开盘价买入并持有到T+5收盘的平均收益为3.3307%，扣除1.0% 买入损耗后的T+5平均净收益为2.3307%，按触发概率加权后的T+5执行期望为0.2331%。下一交易日平均净收益为0.6194%，仅作为短线波动参考。该结论基于日线 open/close 统计，低吸含义是低开买入，不再假设盘中最低点附近可以成交。",
+        "reason_text": "近220个交易日样本中，次日开盘相对前一交易日收盘低开达到-1.5% 的次数为22，触发概率为0.1；其中当日收盘重新高于开盘的概率为0.6364。按次日开盘价买入并持有到T+5收盘的平均收益为2.5313%，扣除1.0% 买入损耗后的T+5平均净收益为1.5313%，按触发概率加权后的T+5执行期望为0.1531%。下一交易日平均净收益为0.6194%，仅作为短线波动参考。该结论基于日线 open/close 统计，低吸含义是低开买入，不再假设盘中最低点附近可以成交。",
         "status": "ready"
       }
     },
@@ -20497,6 +20497,47 @@
         "optimal_trigger_probability": 0.0227,
         "confidence_label": "statistical",
         "reason_text": "近220个交易日样本中，次日开盘相对前一交易日收盘低开达到-2.0% 的次数为5，触发概率为0.0227；其中当日收盘重新高于开盘的概率为0.6。按次日开盘价买入并持有到T+5收盘的平均收益为1.2361%，扣除1.0% 买入损耗后的T+5平均净收益为0.2361%，按触发概率加权后的T+5执行期望为0.0054%。下一交易日平均净收益为0.1215%，仅作为短线波动参考。该结论基于日线 open/close 统计，低吸含义是低开买入，不再假设盘中最低点附近可以成交。",
+        "status": "ready"
+      }
+    },
+    "002065": {
+      "stock_code": "002065",
+      "stock_name": "东华软件",
+      "open_dip_buy_signal": {
+        "lookback_trade_day_count": 220,
+        "threshold_stat_list": [
+          {
+            "threshold_pct": -2.0,
+            "trigger_count": 5,
+            "trigger_probability": 0.0227,
+            "same_day_rebound_count": 1,
+            "same_day_rebound_probability": 0.2,
+            "avg_same_day_close_return_pct": -0.9019,
+            "avg_same_day_close_net_return_pct": -1.9019,
+            "avg_next_close_return_pct": -1.5992,
+            "avg_next_close_net_return_pct": -2.5992,
+            "execution_expected_return_pct": -0.0591,
+            "swing_execution_expected_return_pct": -0.0281,
+            "blended_execution_expected_return_pct": -0.0281,
+            "next_close_win_rate": 0.4,
+            "avg_2d_close_return_pct": -3.1865,
+            "avg_2d_close_net_return_pct": -4.1865,
+            "avg_5d_close_return_pct": -0.2345,
+            "avg_5d_close_net_return_pct": -1.2345
+          }
+        ],
+        "entry_cost_pct": 1.0,
+        "min_open_dip_abs_pct": 1.5,
+        "max_open_dip_abs_pct": 5.0,
+        "optimal_open_dip_buy_pct": -2.0,
+        "optimal_next_close_net_return_pct": -2.5992,
+        "optimal_5d_close_net_return_pct": -1.2345,
+        "optimal_execution_expected_return_pct": -0.0591,
+        "optimal_swing_execution_expected_return_pct": -0.0281,
+        "optimal_blended_execution_expected_return_pct": -0.0281,
+        "optimal_trigger_probability": 0.0227,
+        "confidence_label": "statistical",
+        "reason_text": "近220个交易日样本中，次日开盘相对前一交易日收盘低开达到-2.0% 的次数为5，触发概率为0.0227；其中当日收盘重新高于开盘的概率为0.2。按次日开盘价买入并持有到T+5收盘的平均收益为-0.2345%，扣除1.0% 买入损耗后的T+5平均净收益为-1.2345%，按触发概率加权后的T+5执行期望为-0.0281%。下一交易日平均净收益为-2.5992%，仅作为短线波动参考。该结论基于日线 open/close 统计，低吸含义是低开买入，不再假设盘中最低点附近可以成交。",
         "status": "ready"
       }
     }
