@@ -1,104 +1,93 @@
 {
   "board_stock_capital_intent_prediction_result": {
-    "published_source_date": "2026-06-13",
-    "result_date": "2026-06-12",
+    "published_source_date": "2026-06-16",
+    "result_date": "2026-06-16",
     "method": "board_db_all_top10_pre_breakout_v1",
     "scope_note": "独立短线资金意愿预测，不写入 CAN SLIM 主系统。该结果不是搜索近期成交额大，而是评估主线、洗盘/出货、股性、资金承接和未来1-3日可能被点火的概率。",
     "theme_context": {
-      "source_file": "output/latest_output/stock_selection_result_2026-06-12.json",
+      "source_file": "output/latest_output/stock_selection_result_2026-06-16.json",
       "trade_week": "2026-W23",
       "theme_pool": [
         {
-          "theme": "光刻机",
-          "source": "weekly_confirmed",
-          "rank": 1,
-          "reason_text": "大基金持股及中芯国际概念反复活跃，近3日持续爆发，获半导体设备ETF强验证，产业链逻辑硬。"
-        },
-        {
-          "theme": "工业金属",
-          "source": "weekly_confirmed",
-          "rank": 2,
-          "reason_text": "美伊局势缓解及供给约束催化，近3日持续爆发，获有色ETF大资金验证，与大盘价值风格高度共振。"
-        },
-        {
-          "theme": "氟化工",
-          "source": "weekly_confirmed",
-          "rank": 3,
-          "reason_text": "化工涨价链扩散，在弱势市场中逆势走强，具备顺周期防御属性。"
-        },
-        {
-          "theme": "航空发动机",
-          "source": "weekly_confirmed",
-          "rank": 4,
-          "reason_text": "军工信息化与航空发动机板块周内多次活跃，核心标的涨停，产业链订单饱满。"
-        },
-        {
           "theme": "CPO",
           "source": "weekly_confirmed",
-          "rank": 5,
-          "reason_text": "前半周强共振，但近3日随市场调整明显退潮，资金流出明显，进入冷却期。"
+          "rank": 1,
+          "reason_text": "来自 final_result. 的周级确认主线，AI算力拉动光互联需求"
         },
         {
           "theme": "PCB",
           "source": "weekly_confirmed",
+          "rank": 2,
+          "reason_text": "来自 final_result. 的周级确认主线，算力硬件产业链逻辑清晰"
+        },
+        {
+          "theme": "小金属",
+          "source": "weekly_and_reference",
+          "rank": 3,
+          "reason_text": "周级确认主线且在参考主题池中，AI驱动算力金属重估"
+        },
+        {
+          "theme": "电子化学品",
+          "source": "weekly_confirmed",
+          "rank": 4,
+          "reason_text": "来自 final_result. 的周级确认主线，与半导体材料联动"
+        },
+        {
+          "theme": "半导体设备",
+          "source": "weekly_confirmed",
+          "rank": 5,
+          "reason_text": "来自 final_result. 的周级确认主线，资金向下游扩散"
+        },
+        {
+          "theme": "固态电池",
+          "source": "weekly_confirmed",
           "rank": 6,
-          "reason_text": "受算力硬件带动前半周活跃，但近3日资金转向周期与半导体设备，板块热度下降。"
+          "reason_text": "来自 final_result. 的周级确认主线，事件驱动为主"
         }
       ],
       "fine_grained_top_board_signal_list": [
         {
           "context_rank_no": 1,
-          "trade_date": "2026-06-11",
-          "rank_no": 2,
-          "board_name": "氟化工概念",
+          "trade_date": "2026-06-16",
+          "rank_no": 1,
+          "board_name": "医美概念",
           "board_type": "concept",
-          "pct_change": 3.0204,
-          "appearance_count": 2,
-          "average_rank_no": 4.0,
+          "pct_change": -0.34,
+          "appearance_count": 1,
+          "average_rank_no": 1.0,
           "signal_source": "ths_concept_board"
         },
         {
           "context_rank_no": 2,
-          "trade_date": "2026-06-12",
-          "rank_no": 1,
-          "board_name": "金属锌",
+          "trade_date": "2026-06-16",
+          "rank_no": 2,
+          "board_name": "养鸡",
           "board_type": "concept",
-          "pct_change": 5.47,
-          "appearance_count": 3,
-          "average_rank_no": 6.0,
+          "pct_change": -0.34,
+          "appearance_count": 1,
+          "average_rank_no": 2.0,
           "signal_source": "ths_concept_board"
         },
         {
           "context_rank_no": 3,
-          "trade_date": "2026-06-09",
-          "rank_no": 6,
-          "board_name": "光刻胶",
+          "trade_date": "2026-06-16",
+          "rank_no": 3,
+          "board_name": "物业管理",
           "board_type": "concept",
-          "pct_change": 5.1381,
-          "appearance_count": 5,
-          "average_rank_no": 8.0,
+          "pct_change": -0.37,
+          "appearance_count": 1,
+          "average_rank_no": 3.0,
           "signal_source": "ths_concept_board"
         },
         {
           "context_rank_no": 4,
-          "trade_date": "2026-06-09",
-          "rank_no": 1,
-          "board_name": "中芯国际概念",
+          "trade_date": "2026-06-16",
+          "rank_no": 4,
+          "board_name": "露营经济",
           "board_type": "concept",
-          "pct_change": 6.7106,
-          "appearance_count": 5,
-          "average_rank_no": 5.8,
-          "signal_source": "ths_concept_board"
-        },
-        {
-          "context_rank_no": 5,
-          "trade_date": "2026-06-12",
-          "rank_no": 2,
-          "board_name": "金属铅",
-          "board_type": "concept",
-          "pct_change": 4.86,
-          "appearance_count": 3,
-          "average_rank_no": 8.0,
+          "pct_change": -0.38,
+          "appearance_count": 1,
+          "average_rank_no": 4.0,
           "signal_source": "ths_concept_board"
         }
       ]
@@ -106,63 +95,66 @@
     "candidate_list": [
       {
         "rank": 1,
-        "stock_code": "002903",
-        "stock_name": "宇环数控",
-        "industry_name": "机床制造",
-        "latest_trade_date": "2026-06-12",
-        "feature_summary_text": "近20日涨幅约-5.10%，近60日涨幅约49.51%，20/60日涨停记忆分别为2/5次，20日平均换手约9.60%，60日平均换手约11.03%，20日平均成交额约4.61亿元。",
+        "stock_code": "001269",
+        "stock_name": "欧晶科技",
+        "industry_name": "矿物制品",
+        "latest_trade_date": "2026-06-16",
+        "feature_summary_text": "近20日涨幅约22.82%，近60日涨幅约11.23%，20/60日涨停记忆分别为3/4次，20日平均换手约5.85%，60日平均换手约3.24%，20日平均成交额约3.00亿元。",
         "pre_ignition_setup": {
-          "pct_change_5d": -5.3225,
-          "pct_change_10d": 12.4164,
-          "pct_change_20d": -5.1046,
-          "pct_change_60d": 49.5056,
-          "position_in_60d_range": 0.8111
+          "pct_change_5d": -3.7663,
+          "pct_change_10d": 1.5225,
+          "pct_change_20d": 22.8212,
+          "pct_change_60d": 11.2286,
+          "position_in_60d_range": 0.6466
         },
         "ignition_signal": {
           "limit_up_count_3d": 0,
           "limit_up_count_5d": 0,
-          "limit_up_count_10d": 2,
-          "limit_up_count_20d": 2,
-          "limit_up_count_60d": 5,
-          "limit_up_count_120d": 9,
-          "limit_up_count_240d": 11,
-          "limit_up_count_300d": 14,
-          "latest_limit_up_date": "2026-06-05",
+          "limit_up_count_10d": 1,
+          "limit_up_count_20d": 3,
+          "limit_up_count_60d": 4,
+          "limit_up_count_120d": 5,
+          "limit_up_count_240d": 9,
+          "limit_up_count_300d": 13,
+          "latest_limit_up_date": "2026-06-09",
           "days_since_latest_limit_up": null
         },
         "intraday_reversal_proxy_signal": {
           "lookback_trade_days": 5,
           "latest_reversal_day_signal": {
-            "trade_date": "2026-06-12",
-            "reversal_proxy_score": 22.0,
+            "trade_date": "2026-06-16",
+            "reversal_proxy_score": 26.0,
             "reversal_proxy_label": "no_clear_reversal_proxy",
-            "low_to_close_rebound_pct": 1.3178,
-            "open_to_low_drawdown_pct": -1.8202,
-            "intraday_range_pct": 5.8298,
+            "low_to_close_rebound_pct": 2.2821,
+            "open_to_low_drawdown_pct": -1.3653,
+            "intraday_range_pct": 6.1728,
             "has_large_intraday_swing": true,
-            "has_large_low_to_close_rebound": false,
+            "has_large_low_to_close_rebound": true,
             "has_large_open_to_low_drawdown": false,
-            "close_location": 0.2261,
-            "lower_shadow_ratio": 0.2261,
-            "amount_ratio_vs_20d": 0.8311
+            "close_location": 0.3697,
+            "lower_shadow_ratio": 0.2242,
+            "amount_ratio_vs_20d": 0.9095
           },
-          "strong_reversal_day_count_5d": 3,
+          "strong_reversal_day_count_5d": 1,
           "large_swing_day_count_5d": 5,
-          "large_rebound_day_count_5d": 4,
-          "average_reversal_score_5d": 53.0,
-          "reversal_proxy_label": "medium_intraday_reversal_proxy",
+          "large_rebound_day_count_5d": 3,
+          "average_reversal_score_5d": 38.2,
+          "reversal_proxy_label": "weak_intraday_reversal_proxy",
           "large_swing_threshold_pct": 2.0,
           "method_note": "日线OHLC代理信号，只能判断低点是否被收回、是否长下影、是否放量但收盘不弱；不能证明盘中先急跌再急拉，也不能识别多次波动。"
         },
         "capital_intent_prediction_signal": {
-          "capital_intent_score": 72.61,
-          "capital_intent_label": "strong",
+          "capital_intent_score": 64.6,
+          "capital_intent_label": "medium",
           "ignition_probability_1_3d": "medium",
-          "prediction_type": "pre_breakout_accumulation",
+          "prediction_type": "theme_pullback_repair",
           "theme_intent_signal": {
-            "theme_score": 0.0,
+            "theme_score": 20.0,
             "theme_intent_label": "weak",
-            "matched_current_theme_list": [],
+            "matched_current_theme_list": [
+              "半导体",
+              "芯片"
+            ],
             "matched_fine_grained_board_list": [],
             "matched_top_board_signal_list": [],
             "is_in_main_theme_top_candidates": false,
@@ -170,58 +162,52 @@
           },
           "ignore_theme_score": true,
           "wash_or_distribution_signal": {
-            "wash_score": 42.0,
+            "wash_score": 56.0,
             "wash_or_distribution_label": "controlled_pullback",
-            "pct_change_5d": -5.3225,
-            "pct_change_10d": 12.4164,
-            "pct_change_20d": -5.1046,
-            "recent_down_day_count_8d": 4,
-            "down_day_amount_ratio_vs_20d": 1.1329,
-            "down_day_close_strength": 0.4015,
-            "pullback_from_20d_high_pct": -8.8791,
+            "pct_change_5d": -3.7663,
+            "pct_change_10d": 1.5225,
+            "pct_change_20d": 22.8212,
+            "recent_down_day_count_8d": 5,
+            "down_day_amount_ratio_vs_20d": 1.0359,
+            "down_day_close_strength": 0.2357,
+            "pullback_from_20d_high_pct": -12.4279,
             "has_broken_20d_support": false
           },
           "pre_breakout_accumulation_signal": {
-            "accumulation_score": 83.0,
-            "accumulation_label": "pre_breakout_accumulation",
-            "pullback_from_60d_high_pct": -9.4791,
-            "ma20_distance_pct": 1.7839,
+            "accumulation_score": 58.0,
+            "accumulation_label": "controlled_pullback_watch",
+            "pullback_from_60d_high_pct": -12.4279,
+            "ma20_distance_pct": 4.3014,
             "has_broken_20d_support": false,
-            "consolidation_range_10d_pct": 32.9594,
+            "consolidation_range_10d_pct": 24.88,
             "turnover_contraction_signal": {
               "is_turnover_contracting": true,
-              "turnover_contraction_ratio": 0.4797,
-              "decreasing_step_count_5d": 4,
+              "turnover_contraction_ratio": 0.5136,
+              "decreasing_step_count_5d": 3,
               "recent_turnover_rate_list": [
-                20.2119,
-                15.4476,
-                9.7167,
-                9.1233,
-                7.9817
+                12.0914,
+                6.7656,
+                5.9231,
+                4.6697,
+                5.0152
               ]
             },
             "lower_shadow_support_signal": {
-              "lower_shadow_support_count_5d": 2,
+              "lower_shadow_support_count_5d": 1,
               "lower_shadow_ratio_list_5d": [
-                0.4402,
-                0.415,
-                0.3924,
-                0.4086,
-                0.2261
+                0.0515,
+                0.2667,
+                0.0383,
+                0.6522,
+                0.2242
               ]
             },
             "volume_probe_signal": {
-              "has_volume_probe_without_breakout": true,
-              "latest_volume_probe_item": {
-                "trade_date": "2026-06-08",
-                "amount_ratio_vs_prior_20d": 2.0539,
-                "volume_probe_strength_label": "medium",
-                "pct_change": 0.5218,
-                "close_location": 0.6124
-              },
-              "amount_sustain_after_probe_label": "faded",
-              "amount_sustain_after_probe_ratio": 0.4979,
-              "post_probe_pct_change": -5.814
+              "has_volume_probe_without_breakout": false,
+              "latest_volume_probe_item": null,
+              "amount_sustain_after_probe_label": "no_probe",
+              "amount_sustain_after_probe_ratio": null,
+              "post_probe_pct_change": null
             },
             "recent_overheat_signal": {
               "recent_overheat_penalty": 0.0,
@@ -229,137 +215,137 @@
             }
           },
           "funding_willingness_signal": {
-            "funding_willingness_score": 77.78,
+            "funding_willingness_score": 74.18,
             "funding_willingness_label": "strong",
-            "capital_absorption_score": 48.17,
+            "capital_absorption_score": 44.92,
             "intraday_reversal_proxy_signal": {
               "lookback_trade_days": 5,
               "latest_reversal_day_signal": {
-                "trade_date": "2026-06-12",
-                "reversal_proxy_score": 22.0,
+                "trade_date": "2026-06-16",
+                "reversal_proxy_score": 26.0,
                 "reversal_proxy_label": "no_clear_reversal_proxy",
-                "low_to_close_rebound_pct": 1.3178,
-                "open_to_low_drawdown_pct": -1.8202,
-                "intraday_range_pct": 5.8298,
+                "low_to_close_rebound_pct": 2.2821,
+                "open_to_low_drawdown_pct": -1.3653,
+                "intraday_range_pct": 6.1728,
                 "has_large_intraday_swing": true,
-                "has_large_low_to_close_rebound": false,
+                "has_large_low_to_close_rebound": true,
                 "has_large_open_to_low_drawdown": false,
-                "close_location": 0.2261,
-                "lower_shadow_ratio": 0.2261,
-                "amount_ratio_vs_20d": 0.8311
+                "close_location": 0.3697,
+                "lower_shadow_ratio": 0.2242,
+                "amount_ratio_vs_20d": 0.9095
               },
-              "strong_reversal_day_count_5d": 3,
+              "strong_reversal_day_count_5d": 1,
               "large_swing_day_count_5d": 5,
-              "large_rebound_day_count_5d": 4,
-              "average_reversal_score_5d": 53.0,
-              "reversal_proxy_label": "medium_intraday_reversal_proxy",
+              "large_rebound_day_count_5d": 3,
+              "average_reversal_score_5d": 38.2,
+              "reversal_proxy_label": "weak_intraday_reversal_proxy",
               "large_swing_threshold_pct": 2.0,
               "recent_reversal_day_signal_list": [
                 {
-                  "trade_date": "2026-06-08",
-                  "reversal_proxy_score": 78.0,
-                  "reversal_proxy_label": "strong_intraday_reversal_proxy",
-                  "low_to_close_rebound_pct": 5.614,
-                  "open_to_low_drawdown_pct": -3.8786,
-                  "intraday_range_pct": 9.1667,
-                  "has_large_intraday_swing": true,
-                  "has_large_low_to_close_rebound": true,
-                  "has_large_open_to_low_drawdown": true,
-                  "close_location": 0.6124,
-                  "lower_shadow_ratio": 0.4402,
-                  "amount_ratio_vs_20d": 2.0539
-                },
-                {
-                  "trade_date": "2026-06-09",
-                  "reversal_proxy_score": 60.0,
-                  "reversal_proxy_label": "medium_intraday_reversal_proxy",
-                  "low_to_close_rebound_pct": 2.2851,
-                  "open_to_low_drawdown_pct": -3.6284,
-                  "intraday_range_pct": 5.506,
-                  "has_large_intraday_swing": true,
-                  "has_large_low_to_close_rebound": true,
-                  "has_large_open_to_low_drawdown": true,
-                  "close_location": 0.415,
-                  "lower_shadow_ratio": 0.415,
-                  "amount_ratio_vs_20d": 1.5151
-                },
-                {
                   "trade_date": "2026-06-10",
-                  "reversal_proxy_score": 48.0,
+                  "reversal_proxy_score": 44.0,
                   "reversal_proxy_label": "weak_intraday_reversal_proxy",
-                  "low_to_close_rebound_pct": 2.0899,
-                  "open_to_low_drawdown_pct": -5.0565,
-                  "intraday_range_pct": 5.3258,
+                  "low_to_close_rebound_pct": 2.4561,
+                  "open_to_low_drawdown_pct": -0.4888,
+                  "intraday_range_pct": 9.5439,
                   "has_large_intraday_swing": true,
                   "has_large_low_to_close_rebound": true,
-                  "has_large_open_to_low_drawdown": true,
-                  "close_location": 0.3924,
-                  "lower_shadow_ratio": 0.3924,
-                  "amount_ratio_vs_20d": 0.9477
+                  "has_large_open_to_low_drawdown": false,
+                  "close_location": 0.2574,
+                  "lower_shadow_ratio": 0.0515,
+                  "amount_ratio_vs_20d": 3.1145
                 },
                 {
                   "trade_date": "2026-06-11",
-                  "reversal_proxy_score": 57.0,
-                  "reversal_proxy_label": "medium_intraday_reversal_proxy",
-                  "low_to_close_rebound_pct": 3.3713,
-                  "open_to_low_drawdown_pct": -2.5821,
-                  "intraday_range_pct": 6.4869,
+                  "reversal_proxy_score": 30.0,
+                  "reversal_proxy_label": "no_clear_reversal_proxy",
+                  "low_to_close_rebound_pct": 1.1429,
+                  "open_to_low_drawdown_pct": -3.3149,
+                  "intraday_range_pct": 4.2857,
                   "has_large_intraday_swing": true,
-                  "has_large_low_to_close_rebound": true,
+                  "has_large_low_to_close_rebound": false,
                   "has_large_open_to_low_drawdown": true,
-                  "close_location": 0.5197,
-                  "lower_shadow_ratio": 0.4086,
-                  "amount_ratio_vs_20d": 0.9017
+                  "close_location": 0.2667,
+                  "lower_shadow_ratio": 0.2667,
+                  "amount_ratio_vs_20d": 1.4672
                 },
                 {
                   "trade_date": "2026-06-12",
                   "reversal_proxy_score": 22.0,
                   "reversal_proxy_label": "no_clear_reversal_proxy",
-                  "low_to_close_rebound_pct": 1.3178,
-                  "open_to_low_drawdown_pct": -1.8202,
-                  "intraday_range_pct": 5.8298,
+                  "low_to_close_rebound_pct": 0.3731,
+                  "open_to_low_drawdown_pct": -6.9767,
+                  "intraday_range_pct": 9.7388,
                   "has_large_intraday_swing": true,
                   "has_large_low_to_close_rebound": false,
+                  "has_large_open_to_low_drawdown": true,
+                  "close_location": 0.0383,
+                  "lower_shadow_ratio": 0.0383,
+                  "amount_ratio_vs_20d": 1.1771
+                },
+                {
+                  "trade_date": "2026-06-15",
+                  "reversal_proxy_score": 69.0,
+                  "reversal_proxy_label": "medium_intraday_reversal_proxy",
+                  "low_to_close_rebound_pct": 3.0827,
+                  "open_to_low_drawdown_pct": -2.7422,
+                  "intraday_range_pct": 4.3233,
+                  "has_large_intraday_swing": true,
+                  "has_large_low_to_close_rebound": true,
+                  "has_large_open_to_low_drawdown": true,
+                  "close_location": 0.713,
+                  "lower_shadow_ratio": 0.6522,
+                  "amount_ratio_vs_20d": 0.8725
+                },
+                {
+                  "trade_date": "2026-06-16",
+                  "reversal_proxy_score": 26.0,
+                  "reversal_proxy_label": "no_clear_reversal_proxy",
+                  "low_to_close_rebound_pct": 2.2821,
+                  "open_to_low_drawdown_pct": -1.3653,
+                  "intraday_range_pct": 6.1728,
+                  "has_large_intraday_swing": true,
+                  "has_large_low_to_close_rebound": true,
                   "has_large_open_to_low_drawdown": false,
-                  "close_location": 0.2261,
-                  "lower_shadow_ratio": 0.2261,
-                  "amount_ratio_vs_20d": 0.8311
+                  "close_location": 0.3697,
+                  "lower_shadow_ratio": 0.2242,
+                  "amount_ratio_vs_20d": 0.9095
                 }
               ],
               "method_note": "日线OHLC代理信号，只能判断低点是否被收回、是否长下影、是否放量但收盘不弱；不能证明盘中先急跌再急拉，也不能识别多次波动。"
             },
-            "limit_up_count_60d": 5,
-            "limit_up_count_120d": 9,
-            "limit_up_count_240d": 11,
-            "limit_up_count_300d": 14,
-            "amount_expansion_3d_vs_20d": 0.9332,
-            "avg_amount_20d_yi": 4.6107,
-            "avg_turnover_rate_20d": 9.6001
+            "limit_up_count_60d": 4,
+            "limit_up_count_120d": 5,
+            "limit_up_count_240d": 9,
+            "limit_up_count_300d": 13,
+            "amount_expansion_3d_vs_20d": 0.9161,
+            "avg_amount_20d_yi": 3.0009,
+            "avg_turnover_rate_20d": 5.8462
           },
           "speculation_carrier_signal": {
             "carrier_score": 90.0,
             "carrier_label": "strong",
-            "latest_circ_mv_yi": 48.3835,
-            "avg_turnover_rate_20d": 9.6001,
-            "concept_count": 16
+            "latest_circ_mv_yi": 52.6054,
+            "avg_turnover_rate_20d": 5.8462,
+            "concept_count": 4
           },
-          "why_capital_may_choose_it": "宇环数控当前匹配主题为未明显命中当前主线；近5/10/20日涨跌幅分别为-5.32%/12.42%/-5.10%，洗盘/出货判断为controlled_pullback；提前点火蓄势判断为pre_breakout_accumulation，距60日高点回撤-9.48%，距MA20为1.78%，换手收缩=True，放量不大涨=True；资金意愿为strong，日线急跌回拉代理为medium_intraday_reversal_proxy，近5日代理均分53.00，近5日大振幅/低点回拉天数为5/4；60/120/240/300日涨停记忆分别为5/9/11/14次，20日均成交额约4.61亿元；短线载体适配度为strong。",
+          "why_capital_may_choose_it": "欧晶科技当前匹配主题为半导体、芯片；近5/10/20日涨跌幅分别为-3.77%/1.52%/22.82%，洗盘/出货判断为controlled_pullback；提前点火蓄势判断为controlled_pullback_watch，距60日高点回撤-12.43%，距MA20为4.30%，换手收缩=True，放量不大涨=False；资金意愿为strong，日线急跌回拉代理为weak_intraday_reversal_proxy，近5日代理均分38.20，近5日大振幅/低点回拉天数为5/3；60/120/240/300日涨停记忆分别为4/5/9/13次，20日均成交额约3.00亿元；短线载体适配度为strong。",
           "failure_condition": "当前主线继续退潮或主题前排不再修复；股价继续放量下跌并跌破近20日支撑；下跌日成交额持续放大且收盘靠近低位。"
         }
       },
       {
         "rank": 2,
-        "stock_code": "600516",
-        "stock_name": "方大炭素",
-        "industry_name": "矿物制品",
-        "latest_trade_date": "2026-06-12",
-        "feature_summary_text": "近20日涨幅约5.17%，近60日涨幅约-13.77%，20/60日涨停记忆分别为2/2次，20日平均换手约2.46%，60日平均换手约1.91%，20日平均成交额约5.50亿元。",
+        "stock_code": "600505",
+        "stock_name": "西昌电力",
+        "industry_name": "水力发电",
+        "latest_trade_date": "2026-06-16",
+        "feature_summary_text": "近20日涨幅约6.30%，近60日涨幅约0.14%，20/60日涨停记忆分别为2/2次，20日平均换手约6.94%，60日平均换手约5.10%，20日平均成交额约3.55亿元。",
         "pre_ignition_setup": {
-          "pct_change_5d": -2.2298,
-          "pct_change_10d": 13.3201,
-          "pct_change_20d": 5.1661,
-          "pct_change_60d": -13.767,
-          "position_in_60d_range": 0.4457
+          "pct_change_5d": -1.4276,
+          "pct_change_10d": 11.1963,
+          "pct_change_20d": 6.305,
+          "pct_change_60d": 0.1381,
+          "position_in_60d_range": 0.6541
         },
         "ignition_signal": {
           "limit_up_count_3d": 0,
@@ -367,38 +353,38 @@
           "limit_up_count_10d": 2,
           "limit_up_count_20d": 2,
           "limit_up_count_60d": 2,
-          "limit_up_count_120d": 3,
-          "limit_up_count_240d": 8,
-          "limit_up_count_300d": 8,
-          "latest_limit_up_date": "2026-06-05",
+          "limit_up_count_120d": 2,
+          "limit_up_count_240d": 2,
+          "limit_up_count_300d": 7,
+          "latest_limit_up_date": "2026-06-08",
           "days_since_latest_limit_up": null
         },
         "intraday_reversal_proxy_signal": {
           "lookback_trade_days": 5,
           "latest_reversal_day_signal": {
-            "trade_date": "2026-06-12",
-            "reversal_proxy_score": 60.0,
-            "reversal_proxy_label": "medium_intraday_reversal_proxy",
-            "low_to_close_rebound_pct": 3.0741,
-            "open_to_low_drawdown_pct": -1.9504,
-            "intraday_range_pct": 6.1483,
+            "trade_date": "2026-06-16",
+            "reversal_proxy_score": 71.0,
+            "reversal_proxy_label": "strong_intraday_reversal_proxy",
+            "low_to_close_rebound_pct": 4.4669,
+            "open_to_low_drawdown_pct": -2.5281,
+            "intraday_range_pct": 6.3401,
             "has_large_intraday_swing": true,
             "has_large_low_to_close_rebound": true,
-            "has_large_open_to_low_drawdown": false,
-            "close_location": 0.5,
-            "lower_shadow_ratio": 0.3235,
-            "amount_ratio_vs_20d": 1.396
+            "has_large_open_to_low_drawdown": true,
+            "close_location": 0.7045,
+            "lower_shadow_ratio": 0.4091,
+            "amount_ratio_vs_20d": 1.2625
           },
           "strong_reversal_day_count_5d": 4,
           "large_swing_day_count_5d": 5,
-          "large_rebound_day_count_5d": 3,
-          "average_reversal_score_5d": 52.6,
+          "large_rebound_day_count_5d": 4,
+          "average_reversal_score_5d": 63.0,
           "reversal_proxy_label": "medium_intraday_reversal_proxy",
           "large_swing_threshold_pct": 2.0,
           "method_note": "日线OHLC代理信号，只能判断低点是否被收回、是否长下影、是否放量但收盘不弱；不能证明盘中先急跌再急拉，也不能识别多次波动。"
         },
         "capital_intent_prediction_signal": {
-          "capital_intent_score": 67.61,
+          "capital_intent_score": 64.45,
           "capital_intent_label": "medium",
           "ignition_probability_1_3d": "medium",
           "prediction_type": "pre_breakout_accumulation",
@@ -413,58 +399,58 @@
           },
           "ignore_theme_score": true,
           "wash_or_distribution_signal": {
-            "wash_score": 42.0,
-            "wash_or_distribution_label": "controlled_pullback",
-            "pct_change_5d": -2.2298,
-            "pct_change_10d": 13.3201,
-            "pct_change_20d": 5.1661,
-            "recent_down_day_count_8d": 4,
-            "down_day_amount_ratio_vs_20d": 1.5308,
-            "down_day_close_strength": 0.2636,
-            "pullback_from_20d_high_pct": -9.9526,
+            "wash_score": 58.0,
+            "wash_or_distribution_label": "healthy_wash",
+            "pct_change_5d": -1.4276,
+            "pct_change_10d": 11.1963,
+            "pct_change_20d": 6.305,
+            "recent_down_day_count_8d": 5,
+            "down_day_amount_ratio_vs_20d": 1.5386,
+            "down_day_close_strength": 0.5166,
+            "pullback_from_20d_high_pct": -4.6053,
             "has_broken_20d_support": false
           },
           "pre_breakout_accumulation_signal": {
-            "accumulation_score": 76.0,
+            "accumulation_score": 64.0,
             "accumulation_label": "pre_breakout_accumulation",
-            "pullback_from_60d_high_pct": -14.5427,
-            "ma20_distance_pct": 5.8692,
+            "pullback_from_60d_high_pct": -8.1115,
+            "ma20_distance_pct": 6.2077,
             "has_broken_20d_support": false,
-            "consolidation_range_10d_pct": 28.6585,
+            "consolidation_range_10d_pct": 18.9358,
             "turnover_contraction_signal": {
-              "is_turnover_contracting": true,
-              "turnover_contraction_ratio": 0.5312,
-              "decreasing_step_count_5d": 4,
+              "is_turnover_contracting": false,
+              "turnover_contraction_ratio": 0.7494,
+              "decreasing_step_count_5d": 2,
               "recent_turnover_rate_list": [
-                8.1587,
-                4.672,
-                3.6686,
-                3.5813,
-                3.2349
+                9.2588,
+                11.7854,
+                10.5491,
+                7.469,
+                8.3022
               ]
             },
             "lower_shadow_support_signal": {
-              "lower_shadow_support_count_5d": 1,
+              "lower_shadow_support_count_5d": 3,
               "lower_shadow_ratio_list_5d": [
-                0.129,
-                0.4545,
-                0.1,
-                0.1556,
-                0.3235
+                0.2871,
+                0.0,
+                0.6465,
+                0.4167,
+                0.4091
               ]
             },
             "volume_probe_signal": {
               "has_volume_probe_without_breakout": true,
               "latest_volume_probe_item": {
-                "trade_date": "2026-06-11",
-                "amount_ratio_vs_prior_20d": 1.6463,
+                "trade_date": "2026-06-12",
+                "amount_ratio_vs_prior_20d": 1.781,
                 "volume_probe_strength_label": "mild",
-                "pct_change": 1.2346,
-                "close_location": 0.5111
+                "pct_change": -1.4132,
+                "close_location": 0.9495
               },
               "amount_sustain_after_probe_label": "sustained",
-              "amount_sustain_after_probe_ratio": 0.8892,
-              "post_probe_pct_change": -0.6969
+              "amount_sustain_after_probe_ratio": 0.7488,
+              "post_probe_pct_change": -1.0239
             },
             "recent_overheat_signal": {
               "recent_overheat_penalty": 0.0,
@@ -472,285 +458,242 @@
             }
           },
           "funding_willingness_signal": {
-            "funding_willingness_score": 69.21,
-            "funding_willingness_label": "strong",
-            "capital_absorption_score": 45.13,
+            "funding_willingness_score": 61.03,
+            "funding_willingness_label": "medium",
+            "capital_absorption_score": 43.46,
             "intraday_reversal_proxy_signal": {
               "lookback_trade_days": 5,
               "latest_reversal_day_signal": {
-                "trade_date": "2026-06-12",
-                "reversal_proxy_score": 60.0,
-                "reversal_proxy_label": "medium_intraday_reversal_proxy",
-                "low_to_close_rebound_pct": 3.0741,
-                "open_to_low_drawdown_pct": -1.9504,
-                "intraday_range_pct": 6.1483,
+                "trade_date": "2026-06-16",
+                "reversal_proxy_score": 71.0,
+                "reversal_proxy_label": "strong_intraday_reversal_proxy",
+                "low_to_close_rebound_pct": 4.4669,
+                "open_to_low_drawdown_pct": -2.5281,
+                "intraday_range_pct": 6.3401,
                 "has_large_intraday_swing": true,
                 "has_large_low_to_close_rebound": true,
-                "has_large_open_to_low_drawdown": false,
-                "close_location": 0.5,
-                "lower_shadow_ratio": 0.3235,
-                "amount_ratio_vs_20d": 1.396
+                "has_large_open_to_low_drawdown": true,
+                "close_location": 0.7045,
+                "lower_shadow_ratio": 0.4091,
+                "amount_ratio_vs_20d": 1.2625
               },
               "strong_reversal_day_count_5d": 4,
               "large_swing_day_count_5d": 5,
-              "large_rebound_day_count_5d": 3,
-              "average_reversal_score_5d": 52.6,
+              "large_rebound_day_count_5d": 4,
+              "average_reversal_score_5d": 63.0,
               "reversal_proxy_label": "medium_intraday_reversal_proxy",
               "large_swing_threshold_pct": 2.0,
               "recent_reversal_day_signal_list": [
                 {
-                  "trade_date": "2026-06-08",
-                  "reversal_proxy_score": 56.0,
+                  "trade_date": "2026-06-10",
+                  "reversal_proxy_score": 51.0,
                   "reversal_proxy_label": "medium_intraday_reversal_proxy",
-                  "low_to_close_rebound_pct": 6.8301,
-                  "open_to_low_drawdown_pct": -1.3817,
-                  "intraday_range_pct": 10.8581,
+                  "low_to_close_rebound_pct": 3.2304,
+                  "open_to_low_drawdown_pct": -2.0394,
+                  "intraday_range_pct": 7.2505,
                   "has_large_intraday_swing": true,
                   "has_large_low_to_close_rebound": true,
-                  "has_large_open_to_low_drawdown": false,
-                  "close_location": 0.629,
-                  "lower_shadow_ratio": 0.129,
-                  "amount_ratio_vs_20d": 5.2757
-                },
-                {
-                  "trade_date": "2026-06-09",
-                  "reversal_proxy_score": 66.0,
-                  "reversal_proxy_label": "medium_intraday_reversal_proxy",
-                  "low_to_close_rebound_pct": 1.7483,
-                  "open_to_low_drawdown_pct": -3.0508,
-                  "intraday_range_pct": 3.8462,
-                  "has_large_intraday_swing": true,
-                  "has_large_low_to_close_rebound": false,
                   "has_large_open_to_low_drawdown": true,
-                  "close_location": 0.4545,
-                  "lower_shadow_ratio": 0.4545,
-                  "amount_ratio_vs_20d": 2.4664
-                },
-                {
-                  "trade_date": "2026-06-10",
-                  "reversal_proxy_score": 31.0,
-                  "reversal_proxy_label": "no_clear_reversal_proxy",
-                  "low_to_close_rebound_pct": 0.7105,
-                  "open_to_low_drawdown_pct": -2.087,
-                  "intraday_range_pct": 7.1048,
-                  "has_large_intraday_swing": true,
-                  "has_large_low_to_close_rebound": false,
-                  "has_large_open_to_low_drawdown": true,
-                  "close_location": 0.1,
-                  "lower_shadow_ratio": 0.1,
-                  "amount_ratio_vs_20d": 1.7714
+                  "close_location": 0.4455,
+                  "lower_shadow_ratio": 0.2871,
+                  "amount_ratio_vs_20d": 1.7656
                 },
                 {
                   "trade_date": "2026-06-11",
-                  "reversal_proxy_score": 50.0,
+                  "reversal_proxy_score": 64.0,
                   "reversal_proxy_label": "medium_intraday_reversal_proxy",
-                  "low_to_close_rebound_pct": 4.1742,
-                  "open_to_low_drawdown_pct": -1.2545,
-                  "intraday_range_pct": 8.167,
+                  "low_to_close_rebound_pct": 6.5233,
+                  "open_to_low_drawdown_pct": 0.0,
+                  "intraday_range_pct": 8.9606,
                   "has_large_intraday_swing": true,
                   "has_large_low_to_close_rebound": true,
                   "has_large_open_to_low_drawdown": false,
-                  "close_location": 0.5111,
-                  "lower_shadow_ratio": 0.1556,
-                  "amount_ratio_vs_20d": 1.6463
+                  "close_location": 0.728,
+                  "lower_shadow_ratio": 0.0,
+                  "amount_ratio_vs_20d": 2.2079
                 },
                 {
                   "trade_date": "2026-06-12",
-                  "reversal_proxy_score": 60.0,
-                  "reversal_proxy_label": "medium_intraday_reversal_proxy",
-                  "low_to_close_rebound_pct": 3.0741,
-                  "open_to_low_drawdown_pct": -1.9504,
-                  "intraday_range_pct": 6.1483,
+                  "reversal_proxy_score": 88.0,
+                  "reversal_proxy_label": "strong_intraday_reversal_proxy",
+                  "low_to_close_rebound_pct": 6.8563,
+                  "open_to_low_drawdown_pct": -4.4599,
+                  "intraday_range_pct": 7.221,
                   "has_large_intraday_swing": true,
                   "has_large_low_to_close_rebound": true,
+                  "has_large_open_to_low_drawdown": true,
+                  "close_location": 0.9495,
+                  "lower_shadow_ratio": 0.6465,
+                  "amount_ratio_vs_20d": 1.781
+                },
+                {
+                  "trade_date": "2026-06-15",
+                  "reversal_proxy_score": 41.0,
+                  "reversal_proxy_label": "weak_intraday_reversal_proxy",
+                  "low_to_close_rebound_pct": 1.6961,
+                  "open_to_low_drawdown_pct": -1.049,
+                  "intraday_range_pct": 2.5442,
+                  "has_large_intraday_swing": true,
+                  "has_large_low_to_close_rebound": false,
                   "has_large_open_to_low_drawdown": false,
-                  "close_location": 0.5,
-                  "lower_shadow_ratio": 0.3235,
-                  "amount_ratio_vs_20d": 1.396
+                  "close_location": 0.6667,
+                  "lower_shadow_ratio": 0.4167,
+                  "amount_ratio_vs_20d": 1.1911
+                },
+                {
+                  "trade_date": "2026-06-16",
+                  "reversal_proxy_score": 71.0,
+                  "reversal_proxy_label": "strong_intraday_reversal_proxy",
+                  "low_to_close_rebound_pct": 4.4669,
+                  "open_to_low_drawdown_pct": -2.5281,
+                  "intraday_range_pct": 6.3401,
+                  "has_large_intraday_swing": true,
+                  "has_large_low_to_close_rebound": true,
+                  "has_large_open_to_low_drawdown": true,
+                  "close_location": 0.7045,
+                  "lower_shadow_ratio": 0.4091,
+                  "amount_ratio_vs_20d": 1.2625
                 }
               ],
               "method_note": "日线OHLC代理信号，只能判断低点是否被收回、是否长下影、是否放量但收盘不弱；不能证明盘中先急跌再急拉，也不能识别多次波动。"
             },
             "limit_up_count_60d": 2,
-            "limit_up_count_120d": 3,
-            "limit_up_count_240d": 8,
-            "limit_up_count_300d": 8,
-            "amount_expansion_3d_vs_20d": 1.4701,
-            "avg_amount_20d_yi": 5.4963,
-            "avg_turnover_rate_20d": 2.4612
+            "limit_up_count_120d": 2,
+            "limit_up_count_240d": 2,
+            "limit_up_count_300d": 7,
+            "amount_expansion_3d_vs_20d": 1.2866,
+            "avg_amount_20d_yi": 3.5538,
+            "avg_turnover_rate_20d": 6.9428
           },
           "speculation_carrier_signal": {
             "carrier_score": 90.0,
             "carrier_label": "strong",
-            "latest_circ_mv_yi": 229.4803,
-            "avg_turnover_rate_20d": 2.4612,
-            "concept_count": 13
+            "latest_circ_mv_yi": 52.8623,
+            "avg_turnover_rate_20d": 6.9428,
+            "concept_count": 7
           },
-          "why_capital_may_choose_it": "方大炭素当前匹配主题为未明显命中当前主线；近5/10/20日涨跌幅分别为-2.23%/13.32%/5.17%，洗盘/出货判断为controlled_pullback；提前点火蓄势判断为pre_breakout_accumulation，距60日高点回撤-14.54%，距MA20为5.87%，换手收缩=True，放量不大涨=True；资金意愿为strong，日线急跌回拉代理为medium_intraday_reversal_proxy，近5日代理均分52.60，近5日大振幅/低点回拉天数为5/3；60/120/240/300日涨停记忆分别为2/3/8/8次，20日均成交额约5.50亿元；短线载体适配度为strong。",
+          "why_capital_may_choose_it": "西昌电力当前匹配主题为未明显命中当前主线；近5/10/20日涨跌幅分别为-1.43%/11.20%/6.30%，洗盘/出货判断为healthy_wash；提前点火蓄势判断为pre_breakout_accumulation，距60日高点回撤-8.11%，距MA20为6.21%，换手收缩=False，放量不大涨=True；资金意愿为medium，日线急跌回拉代理为medium_intraday_reversal_proxy，近5日代理均分63.00，近5日大振幅/低点回拉天数为5/4；60/120/240/300日涨停记忆分别为2/2/2/7次，20日均成交额约3.55亿元；短线载体适配度为strong。",
           "failure_condition": "当前主线继续退潮或主题前排不再修复；股价继续放量下跌并跌破近20日支撑；下跌日成交额持续放大且收盘靠近低位。"
         }
       },
       {
         "rank": 3,
-        "stock_code": "002584",
-        "stock_name": "西陇科学",
-        "industry_name": "化工原料",
-        "latest_trade_date": "2026-06-12",
-        "feature_summary_text": "近20日涨幅约-3.29%，近60日涨幅约-8.22%，20/60日涨停记忆分别为1/1次，20日平均换手约7.30%，60日平均换手约4.74%，20日平均成交额约2.72亿元。",
+        "stock_code": "002422",
+        "stock_name": "科伦药业",
+        "industry_name": "化学制药",
+        "latest_trade_date": "2026-06-16",
+        "feature_summary_text": "近20日涨幅约11.32%，近60日涨幅约7.98%，20/60日涨停记忆分别为0/0次，20日平均换手约1.54%，60日平均换手约1.49%，20日平均成交额约7.07亿元。",
         "pre_ignition_setup": {
-          "pct_change_5d": 5.0331,
-          "pct_change_10d": 5.5925,
-          "pct_change_20d": -3.2927,
-          "pct_change_60d": -8.2176,
-          "position_in_60d_range": 0.5432
+          "pct_change_5d": 2.8571,
+          "pct_change_10d": 2.1277,
+          "pct_change_20d": 11.3173,
+          "pct_change_60d": 7.9784,
+          "position_in_60d_range": 0.7152
         },
         "ignition_signal": {
           "limit_up_count_3d": 0,
-          "limit_up_count_5d": 1,
-          "limit_up_count_10d": 1,
-          "limit_up_count_20d": 1,
-          "limit_up_count_60d": 1,
-          "limit_up_count_120d": 3,
-          "limit_up_count_240d": 4,
-          "limit_up_count_300d": 9,
-          "latest_limit_up_date": "2026-06-09",
+          "limit_up_count_5d": 0,
+          "limit_up_count_10d": 0,
+          "limit_up_count_20d": 0,
+          "limit_up_count_60d": 0,
+          "limit_up_count_120d": 0,
+          "limit_up_count_240d": 1,
+          "limit_up_count_300d": 3,
+          "latest_limit_up_date": "2025-09-01",
           "days_since_latest_limit_up": null
         },
         "intraday_reversal_proxy_signal": {
           "lookback_trade_days": 5,
           "latest_reversal_day_signal": {
-            "trade_date": "2026-06-12",
-            "reversal_proxy_score": 24.0,
+            "trade_date": "2026-06-16",
+            "reversal_proxy_score": 19.0,
             "reversal_proxy_label": "no_clear_reversal_proxy",
-            "low_to_close_rebound_pct": 0.6345,
-            "open_to_low_drawdown_pct": -4.0195,
-            "intraday_range_pct": 4.5685,
+            "low_to_close_rebound_pct": 0.6993,
+            "open_to_low_drawdown_pct": -1.9204,
+            "intraday_range_pct": 2.2937,
             "has_large_intraday_swing": true,
             "has_large_low_to_close_rebound": false,
-            "has_large_open_to_low_drawdown": true,
-            "close_location": 0.1389,
-            "lower_shadow_ratio": 0.1389,
-            "amount_ratio_vs_20d": 1.4493
+            "has_large_open_to_low_drawdown": false,
+            "close_location": 0.3049,
+            "lower_shadow_ratio": 0.3049,
+            "amount_ratio_vs_20d": 0.56
           },
           "strong_reversal_day_count_5d": 3,
           "large_swing_day_count_5d": 5,
           "large_rebound_day_count_5d": 3,
-          "average_reversal_score_5d": 49.0,
+          "average_reversal_score_5d": 42.6,
           "reversal_proxy_label": "weak_intraday_reversal_proxy",
           "large_swing_threshold_pct": 2.0,
           "method_note": "日线OHLC代理信号，只能判断低点是否被收回、是否长下影、是否放量但收盘不弱；不能证明盘中先急跌再急拉，也不能识别多次波动。"
         },
         "capital_intent_prediction_signal": {
-          "capital_intent_score": 66.79,
+          "capital_intent_score": 62.92,
           "capital_intent_label": "medium",
           "ignition_probability_1_3d": "medium",
           "prediction_type": "pre_breakout_accumulation",
           "theme_intent_signal": {
-            "theme_score": 100.0,
-            "theme_intent_label": "strong",
-            "matched_current_theme_list": [
-              "氟化工",
-              "PCB"
-            ],
-            "matched_fine_grained_board_list": [
-              "氟化工概念",
-              "光刻胶"
-            ],
-            "matched_top_board_signal_list": [
-              {
-                "context_rank_no": 1,
-                "trade_date": "2026-06-11",
-                "rank_no": 2,
-                "board_name": "氟化工概念",
-                "board_type": "concept",
-                "pct_change": 3.0204,
-                "appearance_count": 2,
-                "average_rank_no": 4.0,
-                "signal_source": "ths_concept_board"
-              },
-              {
-                "context_rank_no": 3,
-                "trade_date": "2026-06-09",
-                "rank_no": 6,
-                "board_name": "光刻胶",
-                "board_type": "concept",
-                "pct_change": 5.1381,
-                "appearance_count": 5,
-                "average_rank_no": 8.0,
-                "signal_source": "ths_concept_board"
-              }
-            ],
-            "is_in_main_theme_top_candidates": true,
-            "main_theme_candidate_signal": {
-              "selection_score": 191,
-              "matched_theme_list": [
-                "光刻机",
-                "氟化工",
-                "PCB"
-              ],
-              "matched_weekly_theme_list": [
-                "光刻机",
-                "氟化工",
-                "PCB"
-              ],
-              "business_relevance_label": "core_business_related",
-              "resonance_type": "strong"
-            }
+            "theme_score": 0.0,
+            "theme_intent_label": "weak",
+            "matched_current_theme_list": [],
+            "matched_fine_grained_board_list": [],
+            "matched_top_board_signal_list": [],
+            "is_in_main_theme_top_candidates": false,
+            "main_theme_candidate_signal": {}
           },
           "ignore_theme_score": true,
           "wash_or_distribution_signal": {
-            "wash_score": 56.0,
-            "wash_or_distribution_label": "controlled_pullback",
-            "pct_change_5d": 5.0331,
-            "pct_change_10d": 5.5925,
-            "pct_change_20d": -3.2927,
-            "recent_down_day_count_8d": 3,
-            "down_day_amount_ratio_vs_20d": 0.8661,
-            "down_day_close_strength": 0.3132,
-            "pullback_from_20d_high_pct": -6.7059,
+            "wash_score": 76.0,
+            "wash_or_distribution_label": "healthy_wash",
+            "pct_change_5d": 2.8571,
+            "pct_change_10d": 2.1277,
+            "pct_change_20d": 11.3173,
+            "recent_down_day_count_8d": 4,
+            "down_day_amount_ratio_vs_20d": 0.9075,
+            "down_day_close_strength": 0.3309,
+            "pullback_from_20d_high_pct": -5.9315,
             "has_broken_20d_support": false
           },
           "pre_breakout_accumulation_signal": {
-            "accumulation_score": 63.0,
+            "accumulation_score": 88.0,
             "accumulation_label": "pre_breakout_accumulation",
-            "pullback_from_60d_high_pct": -8.5352,
-            "ma20_distance_pct": 0.1769,
+            "pullback_from_60d_high_pct": -5.9315,
+            "ma20_distance_pct": 2.4109,
             "has_broken_20d_support": false,
-            "consolidation_range_10d_pct": 17.305,
+            "consolidation_range_10d_pct": 14.6466,
             "turnover_contraction_signal": {
-              "is_turnover_contracting": false,
-              "turnover_contraction_ratio": 1.6793,
-              "decreasing_step_count_5d": 2,
+              "is_turnover_contracting": true,
+              "turnover_contraction_ratio": 0.6063,
+              "decreasing_step_count_5d": 3,
               "recent_turnover_rate_list": [
-                4.7846,
-                9.1328,
-                14.4133,
-                13.1391,
-                10.2317
+                1.8207,
+                1.7052,
+                2.2789,
+                1.2628,
+                0.8749
               ]
             },
             "lower_shadow_support_signal": {
-              "lower_shadow_support_count_5d": 0,
+              "lower_shadow_support_count_5d": 1,
               "lower_shadow_ratio_list_5d": [
-                0.2292,
-                0.2,
-                0.2162,
-                0.2703,
-                0.1389
+                0.0269,
+                0.2886,
+                0.5722,
+                0.2407,
+                0.3049
               ]
             },
             "volume_probe_signal": {
               "has_volume_probe_without_breakout": true,
               "latest_volume_probe_item": {
-                "trade_date": "2026-06-11",
-                "amount_ratio_vs_prior_20d": 2.0023,
-                "volume_probe_strength_label": "medium",
-                "pct_change": 1.9851,
-                "close_location": 0.8649
+                "trade_date": "2026-06-12",
+                "amount_ratio_vs_prior_20d": 1.603,
+                "volume_probe_strength_label": "mild",
+                "pct_change": -2.0221,
+                "close_location": 0.5722
               },
               "amount_sustain_after_probe_label": "faded",
-              "amount_sustain_after_probe_ratio": 0.7686,
-              "post_probe_pct_change": -3.528
+              "amount_sustain_after_probe_ratio": 0.4589,
+              "post_probe_pct_change": -3.5111
             },
             "recent_overheat_signal": {
               "recent_overheat_penalty": 0.0,
@@ -758,137 +701,622 @@
             }
           },
           "funding_willingness_signal": {
-            "funding_willingness_score": 74.56,
-            "funding_willingness_label": "strong",
-            "capital_absorption_score": 49.43,
+            "funding_willingness_score": 38.84,
+            "funding_willingness_label": "weak",
+            "capital_absorption_score": 36.91,
             "intraday_reversal_proxy_signal": {
               "lookback_trade_days": 5,
               "latest_reversal_day_signal": {
-                "trade_date": "2026-06-12",
-                "reversal_proxy_score": 24.0,
+                "trade_date": "2026-06-16",
+                "reversal_proxy_score": 19.0,
                 "reversal_proxy_label": "no_clear_reversal_proxy",
-                "low_to_close_rebound_pct": 0.6345,
-                "open_to_low_drawdown_pct": -4.0195,
-                "intraday_range_pct": 4.5685,
+                "low_to_close_rebound_pct": 0.6993,
+                "open_to_low_drawdown_pct": -1.9204,
+                "intraday_range_pct": 2.2937,
                 "has_large_intraday_swing": true,
                 "has_large_low_to_close_rebound": false,
-                "has_large_open_to_low_drawdown": true,
-                "close_location": 0.1389,
-                "lower_shadow_ratio": 0.1389,
-                "amount_ratio_vs_20d": 1.4493
+                "has_large_open_to_low_drawdown": false,
+                "close_location": 0.3049,
+                "lower_shadow_ratio": 0.3049,
+                "amount_ratio_vs_20d": 0.56
               },
               "strong_reversal_day_count_5d": 3,
               "large_swing_day_count_5d": 5,
               "large_rebound_day_count_5d": 3,
-              "average_reversal_score_5d": 49.0,
+              "average_reversal_score_5d": 42.6,
               "reversal_proxy_label": "weak_intraday_reversal_proxy",
               "large_swing_threshold_pct": 2.0,
               "recent_reversal_day_signal_list": [
                 {
-                  "trade_date": "2026-06-08",
-                  "reversal_proxy_score": 34.0,
-                  "reversal_proxy_label": "no_clear_reversal_proxy",
-                  "low_to_close_rebound_pct": 1.5603,
-                  "open_to_low_drawdown_pct": -3.8199,
-                  "intraday_range_pct": 6.8085,
-                  "has_large_intraday_swing": true,
-                  "has_large_low_to_close_rebound": false,
-                  "has_large_open_to_low_drawdown": true,
-                  "close_location": 0.2292,
-                  "lower_shadow_ratio": 0.2292,
-                  "amount_ratio_vs_20d": 0.7435
-                },
-                {
-                  "trade_date": "2026-06-09",
-                  "reversal_proxy_score": 67.0,
-                  "reversal_proxy_label": "medium_intraday_reversal_proxy",
-                  "low_to_close_rebound_pct": 10.5189,
-                  "open_to_low_drawdown_pct": -2.0604,
-                  "intraday_range_pct": 10.5189,
-                  "has_large_intraday_swing": true,
-                  "has_large_low_to_close_rebound": true,
-                  "has_large_open_to_low_drawdown": true,
-                  "close_location": 1.0,
-                  "lower_shadow_ratio": 0.2,
-                  "amount_ratio_vs_20d": 1.5033
-                },
-                {
                   "trade_date": "2026-06-10",
-                  "reversal_proxy_score": 60.0,
+                  "reversal_proxy_score": 52.0,
                   "reversal_proxy_label": "medium_intraday_reversal_proxy",
-                  "low_to_close_rebound_pct": 3.3333,
-                  "open_to_low_drawdown_pct": -1.0152,
-                  "intraday_range_pct": 4.7436,
+                  "low_to_close_rebound_pct": 7.1098,
+                  "open_to_low_drawdown_pct": -0.2019,
+                  "intraday_range_pct": 7.5145,
                   "has_large_intraday_swing": true,
                   "has_large_low_to_close_rebound": true,
                   "has_large_open_to_low_drawdown": false,
-                  "close_location": 0.7027,
-                  "lower_shadow_ratio": 0.2162,
-                  "amount_ratio_vs_20d": 2.3798
+                  "close_location": 0.9462,
+                  "lower_shadow_ratio": 0.0269,
+                  "amount_ratio_vs_20d": 1.3257
                 },
                 {
                   "trade_date": "2026-06-11",
-                  "reversal_proxy_score": 60.0,
+                  "reversal_proxy_score": 58.0,
                   "reversal_proxy_label": "medium_intraday_reversal_proxy",
-                  "low_to_close_rebound_pct": 4.0506,
-                  "open_to_low_drawdown_pct": -1.25,
-                  "intraday_range_pct": 4.6835,
+                  "low_to_close_rebound_pct": 5.4556,
+                  "open_to_low_drawdown_pct": -1.5808,
+                  "intraday_range_pct": 5.5663,
                   "has_large_intraday_swing": true,
                   "has_large_low_to_close_rebound": true,
                   "has_large_open_to_low_drawdown": false,
-                  "close_location": 0.8649,
-                  "lower_shadow_ratio": 0.2703,
-                  "amount_ratio_vs_20d": 2.0023
+                  "close_location": 0.9801,
+                  "lower_shadow_ratio": 0.2886,
+                  "amount_ratio_vs_20d": 1.2559
                 },
                 {
                   "trade_date": "2026-06-12",
-                  "reversal_proxy_score": 24.0,
+                  "reversal_proxy_score": 72.0,
+                  "reversal_proxy_label": "strong_intraday_reversal_proxy",
+                  "low_to_close_rebound_pct": 2.839,
+                  "open_to_low_drawdown_pct": -4.2491,
+                  "intraday_range_pct": 4.9614,
+                  "has_large_intraday_swing": true,
+                  "has_large_low_to_close_rebound": true,
+                  "has_large_open_to_low_drawdown": true,
+                  "close_location": 0.5722,
+                  "lower_shadow_ratio": 0.5722,
+                  "amount_ratio_vs_20d": 1.603
+                },
+                {
+                  "trade_date": "2026-06-15",
+                  "reversal_proxy_score": 12.0,
                   "reversal_proxy_label": "no_clear_reversal_proxy",
-                  "low_to_close_rebound_pct": 0.6345,
-                  "open_to_low_drawdown_pct": -4.0195,
-                  "intraday_range_pct": 4.5685,
+                  "low_to_close_rebound_pct": 0.7176,
+                  "open_to_low_drawdown_pct": -2.8947,
+                  "intraday_range_pct": 2.981,
                   "has_large_intraday_swing": true,
                   "has_large_low_to_close_rebound": false,
                   "has_large_open_to_low_drawdown": true,
-                  "close_location": 0.1389,
-                  "lower_shadow_ratio": 0.1389,
-                  "amount_ratio_vs_20d": 1.4493
+                  "close_location": 0.2407,
+                  "lower_shadow_ratio": 0.2407,
+                  "amount_ratio_vs_20d": 0.8276
+                },
+                {
+                  "trade_date": "2026-06-16",
+                  "reversal_proxy_score": 19.0,
+                  "reversal_proxy_label": "no_clear_reversal_proxy",
+                  "low_to_close_rebound_pct": 0.6993,
+                  "open_to_low_drawdown_pct": -1.9204,
+                  "intraday_range_pct": 2.2937,
+                  "has_large_intraday_swing": true,
+                  "has_large_low_to_close_rebound": false,
+                  "has_large_open_to_low_drawdown": false,
+                  "close_location": 0.3049,
+                  "lower_shadow_ratio": 0.3049,
+                  "amount_ratio_vs_20d": 0.56
                 }
               ],
               "method_note": "日线OHLC代理信号，只能判断低点是否被收回、是否长下影、是否放量但收盘不弱；不能证明盘中先急跌再急拉，也不能识别多次波动。"
             },
-            "limit_up_count_60d": 1,
-            "limit_up_count_120d": 3,
-            "limit_up_count_240d": 4,
-            "limit_up_count_300d": 9,
-            "amount_expansion_3d_vs_20d": 1.7445,
-            "avg_amount_20d_yi": 2.7224,
-            "avg_turnover_rate_20d": 7.2974
+            "limit_up_count_60d": 0,
+            "limit_up_count_120d": 0,
+            "limit_up_count_240d": 1,
+            "limit_up_count_300d": 3,
+            "amount_expansion_3d_vs_20d": 0.9927,
+            "avg_amount_20d_yi": 7.0746,
+            "avg_turnover_rate_20d": 1.5379
           },
           "speculation_carrier_signal": {
-            "carrier_score": 90.0,
-            "carrier_label": "strong",
-            "latest_circ_mv_yi": 37.1462,
-            "avg_turnover_rate_20d": 7.2974,
-            "concept_count": 18
+            "carrier_score": 64.0,
+            "carrier_label": "medium",
+            "latest_circ_mv_yi": 467.5004,
+            "avg_turnover_rate_20d": 1.5379,
+            "concept_count": 10
           },
-          "why_capital_may_choose_it": "西陇科学当前匹配主题为氟化工、PCB；前排细分概念命中氟化工概念、光刻胶；近5/10/20日涨跌幅分别为5.03%/5.59%/-3.29%，洗盘/出货判断为controlled_pullback；提前点火蓄势判断为pre_breakout_accumulation，距60日高点回撤-8.54%，距MA20为0.18%，换手收缩=False，放量不大涨=True；资金意愿为strong，日线急跌回拉代理为weak_intraday_reversal_proxy，近5日代理均分49.00，近5日大振幅/低点回拉天数为5/3；60/120/240/300日涨停记忆分别为1/3/4/9次，20日均成交额约2.72亿元；短线载体适配度为strong。",
-          "failure_condition": "股价继续放量下跌并跌破近20日支撑；下跌日成交额持续放大且收盘靠近低位。"
+          "why_capital_may_choose_it": "科伦药业当前匹配主题为未明显命中当前主线；近5/10/20日涨跌幅分别为2.86%/2.13%/11.32%，洗盘/出货判断为healthy_wash；提前点火蓄势判断为pre_breakout_accumulation，距60日高点回撤-5.93%，距MA20为2.41%，换手收缩=True，放量不大涨=True；资金意愿为weak，日线急跌回拉代理为weak_intraday_reversal_proxy，近5日代理均分42.60，近5日大振幅/低点回拉天数为5/3；60/120/240/300日涨停记忆分别为0/0/1/3次，20日均成交额约7.07亿元；短线载体适配度为medium。",
+          "failure_condition": "当前主线继续退潮或主题前排不再修复；股价继续放量下跌并跌破近20日支撑；下跌日成交额持续放大且收盘靠近低位。"
         }
       },
       {
         "rank": 4,
+        "stock_code": "601212",
+        "stock_name": "白银有色",
+        "industry_name": "铜",
+        "latest_trade_date": "2026-06-16",
+        "feature_summary_text": "近20日涨幅约-9.84%，近60日涨幅约-31.33%，20/60日涨停记忆分别为0/0次，20日平均换手约1.54%，60日平均换手约1.72%，20日平均成交额约7.01亿元。",
+        "pre_ignition_setup": {
+          "pct_change_5d": 5.7692,
+          "pct_change_10d": -5.6162,
+          "pct_change_20d": -9.8361,
+          "pct_change_60d": -31.328,
+          "position_in_60d_range": 0.1933
+        },
+        "ignition_signal": {
+          "limit_up_count_3d": 0,
+          "limit_up_count_5d": 0,
+          "limit_up_count_10d": 0,
+          "limit_up_count_20d": 0,
+          "limit_up_count_60d": 0,
+          "limit_up_count_120d": 11,
+          "limit_up_count_240d": 18,
+          "limit_up_count_300d": 19,
+          "latest_limit_up_date": "2026-03-02",
+          "days_since_latest_limit_up": null
+        },
+        "intraday_reversal_proxy_signal": {
+          "lookback_trade_days": 5,
+          "latest_reversal_day_signal": {
+            "trade_date": "2026-06-16",
+            "reversal_proxy_score": 52.0,
+            "reversal_proxy_label": "medium_intraday_reversal_proxy",
+            "low_to_close_rebound_pct": 2.5424,
+            "open_to_low_drawdown_pct": -1.6667,
+            "intraday_range_pct": 4.2373,
+            "has_large_intraday_swing": true,
+            "has_large_low_to_close_rebound": true,
+            "has_large_open_to_low_drawdown": false,
+            "close_location": 0.6,
+            "lower_shadow_ratio": 0.4,
+            "amount_ratio_vs_20d": 1.2483
+          },
+          "strong_reversal_day_count_5d": 3,
+          "large_swing_day_count_5d": 5,
+          "large_rebound_day_count_5d": 5,
+          "average_reversal_score_5d": 50.2,
+          "reversal_proxy_label": "medium_intraday_reversal_proxy",
+          "large_swing_threshold_pct": 2.0,
+          "method_note": "日线OHLC代理信号，只能判断低点是否被收回、是否长下影、是否放量但收盘不弱；不能证明盘中先急跌再急拉，也不能识别多次波动。"
+        },
+        "capital_intent_prediction_signal": {
+          "capital_intent_score": 62.71,
+          "capital_intent_label": "medium",
+          "ignition_probability_1_3d": "medium",
+          "prediction_type": "low_position_supplement",
+          "theme_intent_signal": {
+            "theme_score": 24.0,
+            "theme_intent_label": "weak",
+            "matched_current_theme_list": [
+              "小金属",
+              "锂"
+            ],
+            "matched_fine_grained_board_list": [],
+            "matched_top_board_signal_list": [],
+            "is_in_main_theme_top_candidates": false,
+            "main_theme_candidate_signal": {}
+          },
+          "ignore_theme_score": true,
+          "wash_or_distribution_signal": {
+            "wash_score": 56.0,
+            "wash_or_distribution_label": "controlled_pullback",
+            "pct_change_5d": 5.7692,
+            "pct_change_10d": -5.6162,
+            "pct_change_20d": -9.8361,
+            "recent_down_day_count_8d": 3,
+            "down_day_amount_ratio_vs_20d": 0.895,
+            "down_day_close_strength": 0.3335,
+            "pullback_from_20d_high_pct": -12.6984,
+            "has_broken_20d_support": false
+          },
+          "pre_breakout_accumulation_signal": {
+            "accumulation_score": 56.0,
+            "accumulation_label": "controlled_pullback_watch",
+            "pullback_from_60d_high_pct": -30.2995,
+            "ma20_distance_pct": -2.159,
+            "has_broken_20d_support": false,
+            "consolidation_range_10d_pct": 19.3727,
+            "turnover_contraction_signal": {
+              "is_turnover_contracting": false,
+              "turnover_contraction_ratio": 1.4983,
+              "decreasing_step_count_5d": 3,
+              "recent_turnover_rate_list": [
+                1.5539,
+                1.4792,
+                3.1456,
+                2.5994,
+                1.9452
+              ]
+            },
+            "lower_shadow_support_signal": {
+              "lower_shadow_support_count_5d": 3,
+              "lower_shadow_ratio_list_5d": [
+                0.5455,
+                0.15,
+                0.1389,
+                0.5,
+                0.4
+              ]
+            },
+            "volume_probe_signal": {
+              "has_volume_probe_without_breakout": true,
+              "latest_volume_probe_item": {
+                "trade_date": "2026-06-15",
+                "amount_ratio_vs_prior_20d": 1.6985,
+                "volume_probe_strength_label": "mild",
+                "pct_change": 4.6875,
+                "close_location": 0.6818
+              },
+              "amount_sustain_after_probe_label": "sustained",
+              "amount_sustain_after_probe_ratio": 0.7509,
+              "post_probe_pct_change": 0.3317
+            },
+            "recent_overheat_signal": {
+              "recent_overheat_penalty": 0.0,
+              "recent_overheat_reason_list": []
+            }
+          },
+          "funding_willingness_signal": {
+            "funding_willingness_score": 80.61,
+            "funding_willingness_label": "strong",
+            "capital_absorption_score": 29.82,
+            "intraday_reversal_proxy_signal": {
+              "lookback_trade_days": 5,
+              "latest_reversal_day_signal": {
+                "trade_date": "2026-06-16",
+                "reversal_proxy_score": 52.0,
+                "reversal_proxy_label": "medium_intraday_reversal_proxy",
+                "low_to_close_rebound_pct": 2.5424,
+                "open_to_low_drawdown_pct": -1.6667,
+                "intraday_range_pct": 4.2373,
+                "has_large_intraday_swing": true,
+                "has_large_low_to_close_rebound": true,
+                "has_large_open_to_low_drawdown": false,
+                "close_location": 0.6,
+                "lower_shadow_ratio": 0.4,
+                "amount_ratio_vs_20d": 1.2483
+              },
+              "strong_reversal_day_count_5d": 3,
+              "large_swing_day_count_5d": 5,
+              "large_rebound_day_count_5d": 5,
+              "average_reversal_score_5d": 50.2,
+              "reversal_proxy_label": "medium_intraday_reversal_proxy",
+              "large_swing_threshold_pct": 2.0,
+              "recent_reversal_day_signal_list": [
+                {
+                  "trade_date": "2026-06-10",
+                  "reversal_proxy_score": 57.0,
+                  "reversal_proxy_label": "medium_intraday_reversal_proxy",
+                  "low_to_close_rebound_pct": 2.214,
+                  "open_to_low_drawdown_pct": -2.8674,
+                  "intraday_range_pct": 4.059,
+                  "has_large_intraday_swing": true,
+                  "has_large_low_to_close_rebound": true,
+                  "has_large_open_to_low_drawdown": true,
+                  "close_location": 0.5455,
+                  "lower_shadow_ratio": 0.5455,
+                  "amount_ratio_vs_20d": 0.8504
+                },
+                {
+                  "trade_date": "2026-06-11",
+                  "reversal_proxy_score": 30.0,
+                  "reversal_proxy_label": "no_clear_reversal_proxy",
+                  "low_to_close_rebound_pct": 2.0183,
+                  "open_to_low_drawdown_pct": -0.5474,
+                  "intraday_range_pct": 3.6697,
+                  "has_large_intraday_swing": true,
+                  "has_large_low_to_close_rebound": true,
+                  "has_large_open_to_low_drawdown": false,
+                  "close_location": 0.55,
+                  "lower_shadow_ratio": 0.15,
+                  "amount_ratio_vs_20d": 0.8626
+                },
+                {
+                  "trade_date": "2026-06-12",
+                  "reversal_proxy_score": 38.0,
+                  "reversal_proxy_label": "weak_intraday_reversal_proxy",
+                  "low_to_close_rebound_pct": 2.3091,
+                  "open_to_low_drawdown_pct": -0.8803,
+                  "intraday_range_pct": 6.3943,
+                  "has_large_intraday_swing": true,
+                  "has_large_low_to_close_rebound": true,
+                  "has_large_open_to_low_drawdown": false,
+                  "close_location": 0.3611,
+                  "lower_shadow_ratio": 0.1389,
+                  "amount_ratio_vs_20d": 1.9884
+                },
+                {
+                  "trade_date": "2026-06-15",
+                  "reversal_proxy_score": 74.0,
+                  "reversal_proxy_label": "strong_intraday_reversal_proxy",
+                  "low_to_close_rebound_pct": 2.551,
+                  "open_to_low_drawdown_pct": -1.8364,
+                  "intraday_range_pct": 3.7415,
+                  "has_large_intraday_swing": true,
+                  "has_large_low_to_close_rebound": true,
+                  "has_large_open_to_low_drawdown": false,
+                  "close_location": 0.6818,
+                  "lower_shadow_ratio": 0.5,
+                  "amount_ratio_vs_20d": 1.6985
+                },
+                {
+                  "trade_date": "2026-06-16",
+                  "reversal_proxy_score": 52.0,
+                  "reversal_proxy_label": "medium_intraday_reversal_proxy",
+                  "low_to_close_rebound_pct": 2.5424,
+                  "open_to_low_drawdown_pct": -1.6667,
+                  "intraday_range_pct": 4.2373,
+                  "has_large_intraday_swing": true,
+                  "has_large_low_to_close_rebound": true,
+                  "has_large_open_to_low_drawdown": false,
+                  "close_location": 0.6,
+                  "lower_shadow_ratio": 0.4,
+                  "amount_ratio_vs_20d": 1.2483
+                }
+              ],
+              "method_note": "日线OHLC代理信号，只能判断低点是否被收回、是否长下影、是否放量但收盘不弱；不能证明盘中先急跌再急拉，也不能识别多次波动。"
+            },
+            "limit_up_count_60d": 0,
+            "limit_up_count_120d": 11,
+            "limit_up_count_240d": 18,
+            "limit_up_count_300d": 19,
+            "amount_expansion_3d_vs_20d": 1.6041,
+            "avg_amount_20d_yi": 7.0061,
+            "avg_turnover_rate_20d": 1.5385
+          },
+          "speculation_carrier_signal": {
+            "carrier_score": 64.0,
+            "carrier_label": "medium",
+            "latest_circ_mv_yi": 447.9889,
+            "avg_turnover_rate_20d": 1.5385,
+            "concept_count": 10
+          },
+          "why_capital_may_choose_it": "白银有色当前匹配主题为小金属、锂；近5/10/20日涨跌幅分别为5.77%/-5.62%/-9.84%，洗盘/出货判断为controlled_pullback；提前点火蓄势判断为controlled_pullback_watch，距60日高点回撤-30.30%，距MA20为-2.16%，换手收缩=False，放量不大涨=True；资金意愿为strong，日线急跌回拉代理为medium_intraday_reversal_proxy，近5日代理均分50.20，近5日大振幅/低点回拉天数为5/5；60/120/240/300日涨停记忆分别为0/11/18/19次，20日均成交额约7.01亿元；短线载体适配度为medium。",
+          "failure_condition": "当前主线继续退潮或主题前排不再修复；股价继续放量下跌并跌破近20日支撑；下跌日成交额持续放大且收盘靠近低位。"
+        }
+      },
+      {
+        "rank": 5,
+        "stock_code": "603933",
+        "stock_name": "睿能科技",
+        "industry_name": "元器件",
+        "latest_trade_date": "2026-06-16",
+        "feature_summary_text": "近20日涨幅约-9.67%，近60日涨幅约未知%，20/60日涨停记忆分别为0/4次，20日平均换手约3.39%，60日平均换手约4.71%，20日平均成交额约1.73亿元。",
+        "pre_ignition_setup": {
+          "pct_change_5d": 2.3043,
+          "pct_change_10d": -0.0425,
+          "pct_change_20d": -9.6737,
+          "pct_change_60d": null,
+          "position_in_60d_range": 0.518
+        },
+        "ignition_signal": {
+          "limit_up_count_3d": 0,
+          "limit_up_count_5d": 0,
+          "limit_up_count_10d": 0,
+          "limit_up_count_20d": 0,
+          "limit_up_count_60d": 4,
+          "limit_up_count_120d": 9,
+          "limit_up_count_240d": 13,
+          "limit_up_count_300d": 15,
+          "latest_limit_up_date": "2026-04-29",
+          "days_since_latest_limit_up": null
+        },
+        "intraday_reversal_proxy_signal": {
+          "lookback_trade_days": 5,
+          "latest_reversal_day_signal": {
+            "trade_date": "2026-06-16",
+            "reversal_proxy_score": 42.0,
+            "reversal_proxy_label": "weak_intraday_reversal_proxy",
+            "low_to_close_rebound_pct": 3.1565,
+            "open_to_low_drawdown_pct": -0.8261,
+            "intraday_range_pct": 3.6826,
+            "has_large_intraday_swing": true,
+            "has_large_low_to_close_rebound": true,
+            "has_large_open_to_low_drawdown": false,
+            "close_location": 0.8571,
+            "lower_shadow_ratio": 0.2262,
+            "amount_ratio_vs_20d": 0.5094
+          },
+          "strong_reversal_day_count_5d": 0,
+          "large_swing_day_count_5d": 5,
+          "large_rebound_day_count_5d": 2,
+          "average_reversal_score_5d": 26.0,
+          "reversal_proxy_label": "no_clear_reversal_proxy",
+          "large_swing_threshold_pct": 2.0,
+          "method_note": "日线OHLC代理信号，只能判断低点是否被收回、是否长下影、是否放量但收盘不弱；不能证明盘中先急跌再急拉，也不能识别多次波动。"
+        },
+        "capital_intent_prediction_signal": {
+          "capital_intent_score": 62.56,
+          "capital_intent_label": "medium",
+          "ignition_probability_1_3d": "medium",
+          "prediction_type": "theme_pullback_repair",
+          "theme_intent_signal": {
+            "theme_score": 10.0,
+            "theme_intent_label": "weak",
+            "matched_current_theme_list": [
+              "芯片"
+            ],
+            "matched_fine_grained_board_list": [],
+            "matched_top_board_signal_list": [],
+            "is_in_main_theme_top_candidates": false,
+            "main_theme_candidate_signal": {}
+          },
+          "ignore_theme_score": true,
+          "wash_or_distribution_signal": {
+            "wash_score": 76.0,
+            "wash_or_distribution_label": "healthy_wash",
+            "pct_change_5d": 2.3043,
+            "pct_change_10d": -0.0425,
+            "pct_change_20d": -9.6737,
+            "recent_down_day_count_8d": 3,
+            "down_day_amount_ratio_vs_20d": 0.6784,
+            "down_day_close_strength": 0.2812,
+            "pullback_from_20d_high_pct": -12.6902,
+            "has_broken_20d_support": false
+          },
+          "pre_breakout_accumulation_signal": {
+            "accumulation_score": 52.0,
+            "accumulation_label": "controlled_pullback_watch",
+            "pullback_from_60d_high_pct": -14.1867,
+            "ma20_distance_pct": -2.0053,
+            "has_broken_20d_support": false,
+            "consolidation_range_10d_pct": 13.2041,
+            "turnover_contraction_signal": {
+              "is_turnover_contracting": false,
+              "turnover_contraction_ratio": 0.9574,
+              "decreasing_step_count_5d": 2,
+              "recent_turnover_rate_list": [
+                2.4247,
+                1.999,
+                2.3083,
+                2.3387,
+                1.8967
+              ]
+            },
+            "lower_shadow_support_signal": {
+              "lower_shadow_support_count_5d": 0,
+              "lower_shadow_ratio_list_5d": [
+                0.3205,
+                0.1899,
+                0.1739,
+                0.2059,
+                0.2262
+              ]
+            },
+            "volume_probe_signal": {
+              "has_volume_probe_without_breakout": false,
+              "latest_volume_probe_item": null,
+              "amount_sustain_after_probe_label": "no_probe",
+              "amount_sustain_after_probe_ratio": null,
+              "post_probe_pct_change": null
+            },
+            "recent_overheat_signal": {
+              "recent_overheat_penalty": 0.0,
+              "recent_overheat_reason_list": []
+            }
+          },
+          "funding_willingness_signal": {
+            "funding_willingness_score": 56.16,
+            "funding_willingness_label": "medium",
+            "capital_absorption_score": 36.83,
+            "intraday_reversal_proxy_signal": {
+              "lookback_trade_days": 5,
+              "latest_reversal_day_signal": {
+                "trade_date": "2026-06-16",
+                "reversal_proxy_score": 42.0,
+                "reversal_proxy_label": "weak_intraday_reversal_proxy",
+                "low_to_close_rebound_pct": 3.1565,
+                "open_to_low_drawdown_pct": -0.8261,
+                "intraday_range_pct": 3.6826,
+                "has_large_intraday_swing": true,
+                "has_large_low_to_close_rebound": true,
+                "has_large_open_to_low_drawdown": false,
+                "close_location": 0.8571,
+                "lower_shadow_ratio": 0.2262,
+                "amount_ratio_vs_20d": 0.5094
+              },
+              "strong_reversal_day_count_5d": 0,
+              "large_swing_day_count_5d": 5,
+              "large_rebound_day_count_5d": 2,
+              "average_reversal_score_5d": 26.0,
+              "reversal_proxy_label": "no_clear_reversal_proxy",
+              "large_swing_threshold_pct": 2.0,
+              "recent_reversal_day_signal_list": [
+                {
+                  "trade_date": "2026-06-10",
+                  "reversal_proxy_score": 34.0,
+                  "reversal_proxy_label": "no_clear_reversal_proxy",
+                  "low_to_close_rebound_pct": 1.139,
+                  "open_to_low_drawdown_pct": -3.2187,
+                  "intraday_range_pct": 3.5535,
+                  "has_large_intraday_swing": true,
+                  "has_large_low_to_close_rebound": false,
+                  "has_large_open_to_low_drawdown": true,
+                  "close_location": 0.3205,
+                  "lower_shadow_ratio": 0.3205,
+                  "amount_ratio_vs_20d": 0.4928
+                },
+                {
+                  "trade_date": "2026-06-11",
+                  "reversal_proxy_score": 6.0,
+                  "reversal_proxy_label": "no_clear_reversal_proxy",
+                  "low_to_close_rebound_pct": 0.6925,
+                  "open_to_low_drawdown_pct": -1.411,
+                  "intraday_range_pct": 3.6473,
+                  "has_large_intraday_swing": true,
+                  "has_large_low_to_close_rebound": false,
+                  "has_large_open_to_low_drawdown": false,
+                  "close_location": 0.1899,
+                  "lower_shadow_ratio": 0.1899,
+                  "amount_ratio_vs_20d": 0.4174
+                },
+                {
+                  "trade_date": "2026-06-12",
+                  "reversal_proxy_score": 6.0,
+                  "reversal_proxy_label": "no_clear_reversal_proxy",
+                  "low_to_close_rebound_pct": 0.5888,
+                  "open_to_low_drawdown_pct": -0.5405,
+                  "intraday_range_pct": 3.125,
+                  "has_large_intraday_swing": true,
+                  "has_large_low_to_close_rebound": false,
+                  "has_large_open_to_low_drawdown": false,
+                  "close_location": 0.1884,
+                  "lower_shadow_ratio": 0.1739,
+                  "amount_ratio_vs_20d": 0.5075
+                },
+                {
+                  "trade_date": "2026-06-15",
+                  "reversal_proxy_score": 42.0,
+                  "reversal_proxy_label": "weak_intraday_reversal_proxy",
+                  "low_to_close_rebound_pct": 4.1498,
+                  "open_to_low_drawdown_pct": -0.9383,
+                  "intraday_range_pct": 4.6008,
+                  "has_large_intraday_swing": true,
+                  "has_large_low_to_close_rebound": true,
+                  "has_large_open_to_low_drawdown": false,
+                  "close_location": 0.902,
+                  "lower_shadow_ratio": 0.2059,
+                  "amount_ratio_vs_20d": 0.575
+                },
+                {
+                  "trade_date": "2026-06-16",
+                  "reversal_proxy_score": 42.0,
+                  "reversal_proxy_label": "weak_intraday_reversal_proxy",
+                  "low_to_close_rebound_pct": 3.1565,
+                  "open_to_low_drawdown_pct": -0.8261,
+                  "intraday_range_pct": 3.6826,
+                  "has_large_intraday_swing": true,
+                  "has_large_low_to_close_rebound": true,
+                  "has_large_open_to_low_drawdown": false,
+                  "close_location": 0.8571,
+                  "lower_shadow_ratio": 0.2262,
+                  "amount_ratio_vs_20d": 0.5094
+                }
+              ],
+              "method_note": "日线OHLC代理信号，只能判断低点是否被收回、是否长下影、是否放量但收盘不弱；不能证明盘中先急跌再急拉，也不能识别多次波动。"
+            },
+            "limit_up_count_60d": 4,
+            "limit_up_count_120d": 9,
+            "limit_up_count_240d": 13,
+            "limit_up_count_300d": 15,
+            "amount_expansion_3d_vs_20d": 0.5975,
+            "avg_amount_20d_yi": 1.7321,
+            "avg_turnover_rate_20d": 3.3947
+          },
+          "speculation_carrier_signal": {
+            "carrier_score": 90.0,
+            "carrier_label": "strong",
+            "latest_circ_mv_yi": 48.8352,
+            "avg_turnover_rate_20d": 3.3947,
+            "concept_count": 18
+          },
+          "why_capital_may_choose_it": "睿能科技当前匹配主题为芯片；近5/10/20日涨跌幅分别为2.30%/-0.04%/-9.67%，洗盘/出货判断为healthy_wash；提前点火蓄势判断为controlled_pullback_watch，距60日高点回撤-14.19%，距MA20为-2.01%，换手收缩=False，放量不大涨=False；资金意愿为medium，日线急跌回拉代理为no_clear_reversal_proxy，近5日代理均分26.00，近5日大振幅/低点回拉天数为5/2；60/120/240/300日涨停记忆分别为4/9/13/15次，20日均成交额约1.73亿元；短线载体适配度为strong。",
+          "failure_condition": "当前主线继续退潮或主题前排不再修复；股价继续放量下跌并跌破近20日支撑；下跌日成交额持续放大且收盘靠近低位。"
+        }
+      },
+      {
+        "rank": 6,
         "stock_code": "002915",
         "stock_name": "中欣氟材",
         "industry_name": "化工原料",
-        "latest_trade_date": "2026-06-12",
-        "feature_summary_text": "近20日涨幅约-6.36%，近60日涨幅约-3.74%，20/60日涨停记忆分别为0/2次，20日平均换手约7.11%，60日平均换手约4.13%，20日平均成交额约4.47亿元。",
+        "latest_trade_date": "2026-06-16",
+        "feature_summary_text": "近20日涨幅约-7.21%，近60日涨幅约2.30%，20/60日涨停记忆分别为0/2次，20日平均换手约6.60%，60日平均换手约4.42%，20日平均成交额约4.06亿元。",
         "pre_ignition_setup": {
-          "pct_change_5d": 6.6535,
-          "pct_change_10d": 14.0148,
-          "pct_change_20d": -6.3609,
-          "pct_change_60d": -3.7367,
-          "position_in_60d_range": 0.4821
+          "pct_change_5d": 7.3014,
+          "pct_change_10d": 14.3533,
+          "pct_change_20d": -7.2099,
+          "pct_change_60d": 2.3048,
+          "position_in_60d_range": 0.4973
         },
         "ignition_signal": {
           "limit_up_count_3d": 0,
@@ -905,103 +1333,96 @@
         "intraday_reversal_proxy_signal": {
           "lookback_trade_days": 5,
           "latest_reversal_day_signal": {
-            "trade_date": "2026-06-12",
-            "reversal_proxy_score": 68.0,
+            "trade_date": "2026-06-16",
+            "reversal_proxy_score": 59.0,
             "reversal_proxy_label": "medium_intraday_reversal_proxy",
-            "low_to_close_rebound_pct": 4.0385,
-            "open_to_low_drawdown_pct": -1.8868,
-            "intraday_range_pct": 5.4808,
+            "low_to_close_rebound_pct": 5.9942,
+            "open_to_low_drawdown_pct": -2.7488,
+            "intraday_range_pct": 9.4542,
             "has_large_intraday_swing": true,
             "has_large_low_to_close_rebound": true,
-            "has_large_open_to_low_drawdown": false,
-            "close_location": 0.7368,
-            "lower_shadow_ratio": 0.3509,
-            "amount_ratio_vs_20d": 1.2264
+            "has_large_open_to_low_drawdown": true,
+            "close_location": 0.634,
+            "lower_shadow_ratio": 0.299,
+            "amount_ratio_vs_20d": 1.6084
           },
           "strong_reversal_day_count_5d": 3,
           "large_swing_day_count_5d": 5,
-          "large_rebound_day_count_5d": 5,
-          "average_reversal_score_5d": 60.8,
+          "large_rebound_day_count_5d": 4,
+          "average_reversal_score_5d": 55.8,
           "reversal_proxy_label": "medium_intraday_reversal_proxy",
           "large_swing_threshold_pct": 2.0,
           "method_note": "日线OHLC代理信号，只能判断低点是否被收回、是否长下影、是否放量但收盘不弱；不能证明盘中先急跌再急拉，也不能识别多次波动。"
         },
         "capital_intent_prediction_signal": {
-          "capital_intent_score": 63.95,
+          "capital_intent_score": 59.7,
           "capital_intent_label": "medium",
-          "ignition_probability_1_3d": "medium",
+          "ignition_probability_1_3d": "low",
           "prediction_type": "theme_pullback_repair",
           "theme_intent_signal": {
-            "theme_score": 54.0,
-            "theme_intent_label": "medium",
+            "theme_score": 32.0,
+            "theme_intent_label": "weak",
             "matched_current_theme_list": [
-              "氟化工"
+              "电子化学品",
+              "固态电池"
             ],
-            "matched_fine_grained_board_list": [
-              "氟化工概念"
-            ],
-            "matched_top_board_signal_list": [
-              {
-                "context_rank_no": 1,
-                "trade_date": "2026-06-11",
-                "rank_no": 2,
-                "board_name": "氟化工概念",
-                "board_type": "concept",
-                "pct_change": 3.0204,
-                "appearance_count": 2,
-                "average_rank_no": 4.0,
-                "signal_source": "ths_concept_board"
-              }
-            ],
+            "matched_fine_grained_board_list": [],
+            "matched_top_board_signal_list": [],
             "is_in_main_theme_top_candidates": false,
             "main_theme_candidate_signal": {}
           },
           "ignore_theme_score": true,
           "wash_or_distribution_signal": {
-            "wash_score": 58.0,
-            "wash_or_distribution_label": "healthy_wash",
-            "pct_change_5d": 6.6535,
-            "pct_change_10d": 14.0148,
-            "pct_change_20d": -6.3609,
-            "recent_down_day_count_8d": 2,
-            "down_day_amount_ratio_vs_20d": 0.8387,
-            "down_day_close_strength": 0.7018,
-            "pullback_from_20d_high_pct": -14.8367,
+            "wash_score": 38.0,
+            "wash_or_distribution_label": "controlled_pullback",
+            "pct_change_5d": 7.3014,
+            "pct_change_10d": 14.3533,
+            "pct_change_20d": -7.2099,
+            "recent_down_day_count_8d": 3,
+            "down_day_amount_ratio_vs_20d": 1.1639,
+            "down_day_close_strength": 0.6792,
+            "pullback_from_20d_high_pct": -11.2245,
             "has_broken_20d_support": false
           },
           "pre_breakout_accumulation_signal": {
-            "accumulation_score": 52.0,
+            "accumulation_score": 48.0,
             "accumulation_label": "controlled_pullback_watch",
-            "pullback_from_60d_high_pct": -14.8367,
-            "ma20_distance_pct": 3.4244,
+            "pullback_from_60d_high_pct": -14.4038,
+            "ma20_distance_pct": 4.8597,
             "has_broken_20d_support": false,
-            "consolidation_range_10d_pct": 18.8039,
+            "consolidation_range_10d_pct": 26.6631,
             "turnover_contraction_signal": {
               "is_turnover_contracting": false,
-              "turnover_contraction_ratio": 2.2669,
+              "turnover_contraction_ratio": 1.4718,
               "decreasing_step_count_5d": 2,
               "recent_turnover_rate_list": [
-                4.501,
-                3.8617,
                 4.7412,
                 10.3608,
-                8.5962
+                8.5962,
+                11.3522,
+                10.8756
               ]
             },
             "lower_shadow_support_signal": {
-              "lower_shadow_support_count_5d": 2,
+              "lower_shadow_support_count_5d": 1,
               "lower_shadow_ratio_list_5d": [
-                0.104,
-                0.6667,
                 0.0429,
                 0.3137,
-                0.3509
+                0.3509,
+                0.0745,
+                0.299
               ]
             },
             "volume_probe_signal": {
-              "has_volume_probe_without_breakout": false,
-              "latest_volume_probe_item": null,
-              "amount_sustain_after_probe_label": "no_probe",
+              "has_volume_probe_without_breakout": true,
+              "latest_volume_probe_item": {
+                "trade_date": "2026-06-16",
+                "amount_ratio_vs_prior_20d": 1.6084,
+                "volume_probe_strength_label": "mild",
+                "pct_change": -1.4053,
+                "close_location": 0.634
+              },
+              "amount_sustain_after_probe_label": "same_day_probe",
               "amount_sustain_after_probe_ratio": null,
               "post_probe_pct_change": null
             },
@@ -1011,60 +1432,32 @@
             }
           },
           "funding_willingness_signal": {
-            "funding_willingness_score": 79.97,
+            "funding_willingness_score": 89.27,
             "funding_willingness_label": "strong",
-            "capital_absorption_score": 50.63,
+            "capital_absorption_score": 58.43,
             "intraday_reversal_proxy_signal": {
               "lookback_trade_days": 5,
               "latest_reversal_day_signal": {
-                "trade_date": "2026-06-12",
-                "reversal_proxy_score": 68.0,
+                "trade_date": "2026-06-16",
+                "reversal_proxy_score": 59.0,
                 "reversal_proxy_label": "medium_intraday_reversal_proxy",
-                "low_to_close_rebound_pct": 4.0385,
-                "open_to_low_drawdown_pct": -1.8868,
-                "intraday_range_pct": 5.4808,
+                "low_to_close_rebound_pct": 5.9942,
+                "open_to_low_drawdown_pct": -2.7488,
+                "intraday_range_pct": 9.4542,
                 "has_large_intraday_swing": true,
                 "has_large_low_to_close_rebound": true,
-                "has_large_open_to_low_drawdown": false,
-                "close_location": 0.7368,
-                "lower_shadow_ratio": 0.3509,
-                "amount_ratio_vs_20d": 1.2264
+                "has_large_open_to_low_drawdown": true,
+                "close_location": 0.634,
+                "lower_shadow_ratio": 0.299,
+                "amount_ratio_vs_20d": 1.6084
               },
               "strong_reversal_day_count_5d": 3,
               "large_swing_day_count_5d": 5,
-              "large_rebound_day_count_5d": 5,
-              "average_reversal_score_5d": 60.8,
+              "large_rebound_day_count_5d": 4,
+              "average_reversal_score_5d": 55.8,
               "reversal_proxy_label": "medium_intraday_reversal_proxy",
               "large_swing_threshold_pct": 2.0,
               "recent_reversal_day_signal_list": [
-                {
-                  "trade_date": "2026-06-08",
-                  "reversal_proxy_score": 46.0,
-                  "reversal_proxy_label": "weak_intraday_reversal_proxy",
-                  "low_to_close_rebound_pct": 5.9252,
-                  "open_to_low_drawdown_pct": -0.9269,
-                  "intraday_range_pct": 8.9917,
-                  "has_large_intraday_swing": true,
-                  "has_large_low_to_close_rebound": true,
-                  "has_large_open_to_low_drawdown": false,
-                  "close_location": 0.659,
-                  "lower_shadow_ratio": 0.104,
-                  "amount_ratio_vs_20d": 0.6306
-                },
-                {
-                  "trade_date": "2026-06-09",
-                  "reversal_proxy_score": 72.0,
-                  "reversal_proxy_label": "strong_intraday_reversal_proxy",
-                  "low_to_close_rebound_pct": 3.1552,
-                  "open_to_low_drawdown_pct": -4.0059,
-                  "intraday_range_pct": 4.7328,
-                  "has_large_intraday_swing": true,
-                  "has_large_low_to_close_rebound": true,
-                  "has_large_open_to_low_drawdown": true,
-                  "close_location": 0.6667,
-                  "lower_shadow_ratio": 0.6667,
-                  "amount_ratio_vs_20d": 0.5412
-                },
                 {
                   "trade_date": "2026-06-10",
                   "reversal_proxy_score": 38.0,
@@ -1106,6 +1499,34 @@
                   "close_location": 0.7368,
                   "lower_shadow_ratio": 0.3509,
                   "amount_ratio_vs_20d": 1.2264
+                },
+                {
+                  "trade_date": "2026-06-15",
+                  "reversal_proxy_score": 34.0,
+                  "reversal_proxy_label": "no_clear_reversal_proxy",
+                  "low_to_close_rebound_pct": 0.6387,
+                  "open_to_low_drawdown_pct": -7.8992,
+                  "intraday_range_pct": 8.5766,
+                  "has_large_intraday_swing": true,
+                  "has_large_low_to_close_rebound": false,
+                  "has_large_open_to_low_drawdown": true,
+                  "close_location": 0.0745,
+                  "lower_shadow_ratio": 0.0745,
+                  "amount_ratio_vs_20d": 1.6715
+                },
+                {
+                  "trade_date": "2026-06-16",
+                  "reversal_proxy_score": 59.0,
+                  "reversal_proxy_label": "medium_intraday_reversal_proxy",
+                  "low_to_close_rebound_pct": 5.9942,
+                  "open_to_low_drawdown_pct": -2.7488,
+                  "intraday_range_pct": 9.4542,
+                  "has_large_intraday_swing": true,
+                  "has_large_low_to_close_rebound": true,
+                  "has_large_open_to_low_drawdown": true,
+                  "close_location": 0.634,
+                  "lower_shadow_ratio": 0.299,
+                  "amount_ratio_vs_20d": 1.6084
                 }
               ],
               "method_note": "日线OHLC代理信号，只能判断低点是否被收回、是否长下影、是否放量但收盘不弱；不能证明盘中先急跌再急拉，也不能识别多次波动。"
@@ -1114,34 +1535,759 @@
             "limit_up_count_120d": 2,
             "limit_up_count_240d": 10,
             "limit_up_count_300d": 17,
-            "amount_expansion_3d_vs_20d": 1.0706,
-            "avg_amount_20d_yi": 4.4721,
-            "avg_turnover_rate_20d": 7.1052
+            "amount_expansion_3d_vs_20d": 1.5951,
+            "avg_amount_20d_yi": 4.0553,
+            "avg_turnover_rate_20d": 6.6022
           },
           "speculation_carrier_signal": {
             "carrier_score": 90.0,
             "carrier_label": "strong",
-            "latest_circ_mv_yi": 62.3392,
-            "avg_turnover_rate_20d": 7.1052,
+            "latest_circ_mv_yi": 62.6561,
+            "avg_turnover_rate_20d": 6.6022,
             "concept_count": 7
           },
-          "why_capital_may_choose_it": "中欣氟材当前匹配主题为氟化工；前排细分概念命中氟化工概念；近5/10/20日涨跌幅分别为6.65%/14.01%/-6.36%，洗盘/出货判断为healthy_wash；提前点火蓄势判断为controlled_pullback_watch，距60日高点回撤-14.84%，距MA20为3.42%，换手收缩=False，放量不大涨=False；资金意愿为strong，日线急跌回拉代理为medium_intraday_reversal_proxy，近5日代理均分60.80，近5日大振幅/低点回拉天数为5/5；60/120/240/300日涨停记忆分别为2/2/10/17次，20日均成交额约4.47亿元；短线载体适配度为strong。",
+          "why_capital_may_choose_it": "中欣氟材当前匹配主题为电子化学品、固态电池；近5/10/20日涨跌幅分别为7.30%/14.35%/-7.21%，洗盘/出货判断为controlled_pullback；提前点火蓄势判断为controlled_pullback_watch，距60日高点回撤-14.40%，距MA20为4.86%，换手收缩=False，放量不大涨=True；资金意愿为strong，日线急跌回拉代理为medium_intraday_reversal_proxy，近5日代理均分55.80，近5日大振幅/低点回拉天数为5/4；60/120/240/300日涨停记忆分别为2/2/10/17次，20日均成交额约4.06亿元；短线载体适配度为strong。",
           "failure_condition": "当前主线继续退潮或主题前排不再修复；股价继续放量下跌并跌破近20日支撑；下跌日成交额持续放大且收盘靠近低位。"
         }
       },
       {
-        "rank": 5,
+        "rank": 7,
+        "stock_code": "600010",
+        "stock_name": "包钢股份",
+        "industry_name": "普钢",
+        "latest_trade_date": "2026-06-16",
+        "feature_summary_text": "近20日涨幅约-5.36%，近60日涨幅约-10.18%，20/60日涨停记忆分别为0/0次，20日平均换手约1.93%，60日平均换手约2.73%，20日平均成交额约14.66亿元。",
+        "pre_ignition_setup": {
+          "pct_change_5d": 4.2194,
+          "pct_change_10d": 4.2194,
+          "pct_change_20d": -5.364,
+          "pct_change_60d": -10.1818,
+          "position_in_60d_range": 0.25
+        },
+        "ignition_signal": {
+          "limit_up_count_3d": 0,
+          "limit_up_count_5d": 0,
+          "limit_up_count_10d": 0,
+          "limit_up_count_20d": 0,
+          "limit_up_count_60d": 0,
+          "limit_up_count_120d": 1,
+          "limit_up_count_240d": 6,
+          "limit_up_count_300d": 6,
+          "latest_limit_up_date": "2026-02-25",
+          "days_since_latest_limit_up": null
+        },
+        "intraday_reversal_proxy_signal": {
+          "lookback_trade_days": 5,
+          "latest_reversal_day_signal": {
+            "trade_date": "2026-06-16",
+            "reversal_proxy_score": 58.0,
+            "reversal_proxy_label": "medium_intraday_reversal_proxy",
+            "low_to_close_rebound_pct": 3.7815,
+            "open_to_low_drawdown_pct": -0.8333,
+            "intraday_range_pct": 5.4622,
+            "has_large_intraday_swing": true,
+            "has_large_low_to_close_rebound": true,
+            "has_large_open_to_low_drawdown": false,
+            "close_location": 0.6923,
+            "lower_shadow_ratio": 0.1538,
+            "amount_ratio_vs_20d": 1.6708
+          },
+          "strong_reversal_day_count_5d": 1,
+          "large_swing_day_count_5d": 5,
+          "large_rebound_day_count_5d": 2,
+          "average_reversal_score_5d": 39.0,
+          "reversal_proxy_label": "weak_intraday_reversal_proxy",
+          "large_swing_threshold_pct": 2.0,
+          "method_note": "日线OHLC代理信号，只能判断低点是否被收回、是否长下影、是否放量但收盘不弱；不能证明盘中先急跌再急拉，也不能识别多次波动。"
+        },
+        "capital_intent_prediction_signal": {
+          "capital_intent_score": 58.48,
+          "capital_intent_label": "medium",
+          "ignition_probability_1_3d": "low",
+          "prediction_type": "pre_breakout_accumulation",
+          "theme_intent_signal": {
+            "theme_score": 10.0,
+            "theme_intent_label": "weak",
+            "matched_current_theme_list": [
+              "稀土"
+            ],
+            "matched_fine_grained_board_list": [],
+            "matched_top_board_signal_list": [],
+            "is_in_main_theme_top_candidates": false,
+            "main_theme_candidate_signal": {}
+          },
+          "ignore_theme_score": true,
+          "wash_or_distribution_signal": {
+            "wash_score": 56.0,
+            "wash_or_distribution_label": "controlled_pullback",
+            "pct_change_5d": 4.2194,
+            "pct_change_10d": 4.2194,
+            "pct_change_20d": -5.364,
+            "recent_down_day_count_8d": 3,
+            "down_day_amount_ratio_vs_20d": 0.8701,
+            "down_day_close_strength": 0.2963,
+            "pullback_from_20d_high_pct": -6.4394,
+            "has_broken_20d_support": false
+          },
+          "pre_breakout_accumulation_signal": {
+            "accumulation_score": 66.0,
+            "accumulation_label": "pre_breakout_accumulation",
+            "pullback_from_60d_high_pct": -19.544,
+            "ma20_distance_pct": 1.9818,
+            "has_broken_20d_support": false,
+            "consolidation_range_10d_pct": 10.5727,
+            "turnover_contraction_signal": {
+              "is_turnover_contracting": false,
+              "turnover_contraction_ratio": 1.5553,
+              "decreasing_step_count_5d": 2,
+              "recent_turnover_rate_list": [
+                1.8496,
+                1.4798,
+                2.8527,
+                2.1221,
+                3.056
+              ]
+            },
+            "lower_shadow_support_signal": {
+              "lower_shadow_support_count_5d": 2,
+              "lower_shadow_ratio_list_5d": [
+                0.2222,
+                0.5,
+                0.0909,
+                0.4286,
+                0.1538
+              ]
+            },
+            "volume_probe_signal": {
+              "has_volume_probe_without_breakout": true,
+              "latest_volume_probe_item": {
+                "trade_date": "2026-06-16",
+                "amount_ratio_vs_prior_20d": 1.6708,
+                "volume_probe_strength_label": "mild",
+                "pct_change": 2.4896,
+                "close_location": 0.6923
+              },
+              "amount_sustain_after_probe_label": "same_day_probe",
+              "amount_sustain_after_probe_ratio": null,
+              "post_probe_pct_change": null
+            },
+            "recent_overheat_signal": {
+              "recent_overheat_penalty": 0.0,
+              "recent_overheat_reason_list": []
+            }
+          },
+          "funding_willingness_signal": {
+            "funding_willingness_score": 57.99,
+            "funding_willingness_label": "medium",
+            "capital_absorption_score": 39.76,
+            "intraday_reversal_proxy_signal": {
+              "lookback_trade_days": 5,
+              "latest_reversal_day_signal": {
+                "trade_date": "2026-06-16",
+                "reversal_proxy_score": 58.0,
+                "reversal_proxy_label": "medium_intraday_reversal_proxy",
+                "low_to_close_rebound_pct": 3.7815,
+                "open_to_low_drawdown_pct": -0.8333,
+                "intraday_range_pct": 5.4622,
+                "has_large_intraday_swing": true,
+                "has_large_low_to_close_rebound": true,
+                "has_large_open_to_low_drawdown": false,
+                "close_location": 0.6923,
+                "lower_shadow_ratio": 0.1538,
+                "amount_ratio_vs_20d": 1.6708
+              },
+              "strong_reversal_day_count_5d": 1,
+              "large_swing_day_count_5d": 5,
+              "large_rebound_day_count_5d": 2,
+              "average_reversal_score_5d": 39.0,
+              "reversal_proxy_label": "weak_intraday_reversal_proxy",
+              "large_swing_threshold_pct": 2.0,
+              "recent_reversal_day_signal_list": [
+                {
+                  "trade_date": "2026-06-10",
+                  "reversal_proxy_score": 21.0,
+                  "reversal_proxy_label": "no_clear_reversal_proxy",
+                  "low_to_close_rebound_pct": 0.8696,
+                  "open_to_low_drawdown_pct": -2.1277,
+                  "intraday_range_pct": 3.913,
+                  "has_large_intraday_swing": true,
+                  "has_large_low_to_close_rebound": false,
+                  "has_large_open_to_low_drawdown": true,
+                  "close_location": 0.2222,
+                  "lower_shadow_ratio": 0.2222,
+                  "amount_ratio_vs_20d": 0.9001
+                },
+                {
+                  "trade_date": "2026-06-11",
+                  "reversal_proxy_score": 49.0,
+                  "reversal_proxy_label": "weak_intraday_reversal_proxy",
+                  "low_to_close_rebound_pct": 1.7621,
+                  "open_to_low_drawdown_pct": -1.3043,
+                  "intraday_range_pct": 2.6432,
+                  "has_large_intraday_swing": true,
+                  "has_large_low_to_close_rebound": false,
+                  "has_large_open_to_low_drawdown": false,
+                  "close_location": 0.6667,
+                  "lower_shadow_ratio": 0.5,
+                  "amount_ratio_vs_20d": 0.7259
+                },
+                {
+                  "trade_date": "2026-06-12",
+                  "reversal_proxy_score": 42.0,
+                  "reversal_proxy_label": "weak_intraday_reversal_proxy",
+                  "low_to_close_rebound_pct": 2.5751,
+                  "open_to_low_drawdown_pct": -0.4274,
+                  "intraday_range_pct": 4.721,
+                  "has_large_intraday_swing": true,
+                  "has_large_low_to_close_rebound": true,
+                  "has_large_open_to_low_drawdown": false,
+                  "close_location": 0.5455,
+                  "lower_shadow_ratio": 0.0909,
+                  "amount_ratio_vs_20d": 1.5128
+                },
+                {
+                  "trade_date": "2026-06-15",
+                  "reversal_proxy_score": 25.0,
+                  "reversal_proxy_label": "no_clear_reversal_proxy",
+                  "low_to_close_rebound_pct": 1.2605,
+                  "open_to_low_drawdown_pct": -1.6529,
+                  "intraday_range_pct": 2.9412,
+                  "has_large_intraday_swing": true,
+                  "has_large_low_to_close_rebound": false,
+                  "has_large_open_to_low_drawdown": false,
+                  "close_location": 0.4286,
+                  "lower_shadow_ratio": 0.4286,
+                  "amount_ratio_vs_20d": 1.1443
+                },
+                {
+                  "trade_date": "2026-06-16",
+                  "reversal_proxy_score": 58.0,
+                  "reversal_proxy_label": "medium_intraday_reversal_proxy",
+                  "low_to_close_rebound_pct": 3.7815,
+                  "open_to_low_drawdown_pct": -0.8333,
+                  "intraday_range_pct": 5.4622,
+                  "has_large_intraday_swing": true,
+                  "has_large_low_to_close_rebound": true,
+                  "has_large_open_to_low_drawdown": false,
+                  "close_location": 0.6923,
+                  "lower_shadow_ratio": 0.1538,
+                  "amount_ratio_vs_20d": 1.6708
+                }
+              ],
+              "method_note": "日线OHLC代理信号，只能判断低点是否被收回、是否长下影、是否放量但收盘不弱；不能证明盘中先急跌再急拉，也不能识别多次波动。"
+            },
+            "limit_up_count_60d": 0,
+            "limit_up_count_120d": 1,
+            "limit_up_count_240d": 6,
+            "limit_up_count_300d": 6,
+            "amount_expansion_3d_vs_20d": 1.3868,
+            "avg_amount_20d_yi": 14.6553,
+            "avg_turnover_rate_20d": 1.9271
+          },
+          "speculation_carrier_signal": {
+            "carrier_score": 34.0,
+            "carrier_label": "weak",
+            "latest_circ_mv_yi": 773.5598,
+            "avg_turnover_rate_20d": 1.9271,
+            "concept_count": 14
+          },
+          "why_capital_may_choose_it": "包钢股份当前匹配主题为稀土；近5/10/20日涨跌幅分别为4.22%/4.22%/-5.36%，洗盘/出货判断为controlled_pullback；提前点火蓄势判断为pre_breakout_accumulation，距60日高点回撤-19.54%，距MA20为1.98%，换手收缩=False，放量不大涨=True；资金意愿为medium，日线急跌回拉代理为weak_intraday_reversal_proxy，近5日代理均分39.00，近5日大振幅/低点回拉天数为5/2；60/120/240/300日涨停记忆分别为0/1/6/6次，20日均成交额约14.66亿元；短线载体适配度为weak。",
+          "failure_condition": "当前主线继续退潮或主题前排不再修复；股价继续放量下跌并跌破近20日支撑；下跌日成交额持续放大且收盘靠近低位。"
+        }
+      },
+      {
+        "rank": 8,
+        "stock_code": "000681",
+        "stock_name": "视觉中国",
+        "industry_name": "互联网",
+        "latest_trade_date": "2026-06-16",
+        "feature_summary_text": "近20日涨幅约-4.36%，近60日涨幅约-3.71%，20/60日涨停记忆分别为2/2次，20日平均换手约9.33%，60日平均换手约6.04%，20日平均成交额约14.25亿元。",
+        "pre_ignition_setup": {
+          "pct_change_5d": -13.0505,
+          "pct_change_10d": -7.2014,
+          "pct_change_20d": -4.3556,
+          "pct_change_60d": -3.7136,
+          "position_in_60d_range": 0.3853
+        },
+        "ignition_signal": {
+          "limit_up_count_3d": 0,
+          "limit_up_count_5d": 0,
+          "limit_up_count_10d": 1,
+          "limit_up_count_20d": 2,
+          "limit_up_count_60d": 2,
+          "limit_up_count_120d": 6,
+          "limit_up_count_240d": 9,
+          "limit_up_count_300d": 10,
+          "latest_limit_up_date": "2026-06-09",
+          "days_since_latest_limit_up": null
+        },
+        "intraday_reversal_proxy_signal": {
+          "lookback_trade_days": 5,
+          "latest_reversal_day_signal": {
+            "trade_date": "2026-06-16",
+            "reversal_proxy_score": 24.0,
+            "reversal_proxy_label": "no_clear_reversal_proxy",
+            "low_to_close_rebound_pct": 0.9381,
+            "open_to_low_drawdown_pct": -3.1349,
+            "intraday_range_pct": 3.6585,
+            "has_large_intraday_swing": true,
+            "has_large_low_to_close_rebound": false,
+            "has_large_open_to_low_drawdown": true,
+            "close_location": 0.2564,
+            "lower_shadow_ratio": 0.2564,
+            "amount_ratio_vs_20d": 0.7713
+          },
+          "strong_reversal_day_count_5d": 0,
+          "large_swing_day_count_5d": 5,
+          "large_rebound_day_count_5d": 1,
+          "average_reversal_score_5d": 32.2,
+          "reversal_proxy_label": "no_clear_reversal_proxy",
+          "large_swing_threshold_pct": 2.0,
+          "method_note": "日线OHLC代理信号，只能判断低点是否被收回、是否长下影、是否放量但收盘不弱；不能证明盘中先急跌再急拉，也不能识别多次波动。"
+        },
+        "capital_intent_prediction_signal": {
+          "capital_intent_score": 55.82,
+          "capital_intent_label": "weak",
+          "ignition_probability_1_3d": "low",
+          "prediction_type": "theme_pullback_repair",
+          "theme_intent_signal": {
+            "theme_score": 0.0,
+            "theme_intent_label": "weak",
+            "matched_current_theme_list": [],
+            "matched_fine_grained_board_list": [],
+            "matched_top_board_signal_list": [],
+            "is_in_main_theme_top_candidates": false,
+            "main_theme_candidate_signal": {}
+          },
+          "ignore_theme_score": true,
+          "wash_or_distribution_signal": {
+            "wash_score": 56.0,
+            "wash_or_distribution_label": "controlled_pullback",
+            "pct_change_5d": -13.0505,
+            "pct_change_10d": -7.2014,
+            "pct_change_20d": -4.3556,
+            "recent_down_day_count_8d": 5,
+            "down_day_amount_ratio_vs_20d": 1.3578,
+            "down_day_close_strength": 0.0963,
+            "pullback_from_20d_high_pct": -15.4753,
+            "has_broken_20d_support": false
+          },
+          "pre_breakout_accumulation_signal": {
+            "accumulation_score": 42.0,
+            "accumulation_label": "controlled_pullback_watch",
+            "pullback_from_60d_high_pct": -15.4753,
+            "ma20_distance_pct": -1.5914,
+            "has_broken_20d_support": false,
+            "consolidation_range_10d_pct": 20.2645,
+            "turnover_contraction_signal": {
+              "is_turnover_contracting": true,
+              "turnover_contraction_ratio": 0.5285,
+              "decreasing_step_count_5d": 4,
+              "recent_turnover_rate_list": [
+                17.5842,
+                13.0824,
+                12.1066,
+                8.7101,
+                7.4983
+              ]
+            },
+            "lower_shadow_support_signal": {
+              "lower_shadow_support_count_5d": 0,
+              "lower_shadow_ratio_list_5d": [
+                0.1065,
+                0.0,
+                0.1187,
+                0.0255,
+                0.2564
+              ]
+            },
+            "volume_probe_signal": {
+              "has_volume_probe_without_breakout": false,
+              "latest_volume_probe_item": null,
+              "amount_sustain_after_probe_label": "no_probe",
+              "amount_sustain_after_probe_ratio": null,
+              "post_probe_pct_change": null
+            },
+            "recent_overheat_signal": {
+              "recent_overheat_penalty": 0.0,
+              "recent_overheat_reason_list": []
+            }
+          },
+          "funding_willingness_signal": {
+            "funding_willingness_score": 65.58,
+            "funding_willingness_label": "medium",
+            "capital_absorption_score": 32.7,
+            "intraday_reversal_proxy_signal": {
+              "lookback_trade_days": 5,
+              "latest_reversal_day_signal": {
+                "trade_date": "2026-06-16",
+                "reversal_proxy_score": 24.0,
+                "reversal_proxy_label": "no_clear_reversal_proxy",
+                "low_to_close_rebound_pct": 0.9381,
+                "open_to_low_drawdown_pct": -3.1349,
+                "intraday_range_pct": 3.6585,
+                "has_large_intraday_swing": true,
+                "has_large_low_to_close_rebound": false,
+                "has_large_open_to_low_drawdown": true,
+                "close_location": 0.2564,
+                "lower_shadow_ratio": 0.2564,
+                "amount_ratio_vs_20d": 0.7713
+              },
+              "strong_reversal_day_count_5d": 0,
+              "large_swing_day_count_5d": 5,
+              "large_rebound_day_count_5d": 1,
+              "average_reversal_score_5d": 32.2,
+              "reversal_proxy_label": "no_clear_reversal_proxy",
+              "large_swing_threshold_pct": 2.0,
+              "recent_reversal_day_signal_list": [
+                {
+                  "trade_date": "2026-06-10",
+                  "reversal_proxy_score": 37.0,
+                  "reversal_proxy_label": "weak_intraday_reversal_proxy",
+                  "low_to_close_rebound_pct": 0.7573,
+                  "open_to_low_drawdown_pct": -2.1811,
+                  "intraday_range_pct": 7.1098,
+                  "has_large_intraday_swing": true,
+                  "has_large_low_to_close_rebound": false,
+                  "has_large_open_to_low_drawdown": true,
+                  "close_location": 0.1065,
+                  "lower_shadow_ratio": 0.1065,
+                  "amount_ratio_vs_20d": 2.5075
+                },
+                {
+                  "trade_date": "2026-06-11",
+                  "reversal_proxy_score": 34.0,
+                  "reversal_proxy_label": "no_clear_reversal_proxy",
+                  "low_to_close_rebound_pct": 0.0,
+                  "open_to_low_drawdown_pct": -10.0917,
+                  "intraday_range_pct": 11.8275,
+                  "has_large_intraday_swing": true,
+                  "has_large_low_to_close_rebound": false,
+                  "has_large_open_to_low_drawdown": true,
+                  "close_location": 0.0,
+                  "lower_shadow_ratio": 0.0,
+                  "amount_ratio_vs_20d": 1.5363
+                },
+                {
+                  "trade_date": "2026-06-12",
+                  "reversal_proxy_score": 28.0,
+                  "reversal_proxy_label": "no_clear_reversal_proxy",
+                  "low_to_close_rebound_pct": 0.8975,
+                  "open_to_low_drawdown_pct": -1.9453,
+                  "intraday_range_pct": 7.5579,
+                  "has_large_intraday_swing": true,
+                  "has_large_low_to_close_rebound": false,
+                  "has_large_open_to_low_drawdown": false,
+                  "close_location": 0.1187,
+                  "lower_shadow_ratio": 0.1187,
+                  "amount_ratio_vs_20d": 1.3297
+                },
+                {
+                  "trade_date": "2026-06-15",
+                  "reversal_proxy_score": 38.0,
+                  "reversal_proxy_label": "weak_intraday_reversal_proxy",
+                  "low_to_close_rebound_pct": 4.0692,
+                  "open_to_low_drawdown_pct": -0.1867,
+                  "intraday_range_pct": 7.3433,
+                  "has_large_intraday_swing": true,
+                  "has_large_low_to_close_rebound": true,
+                  "has_large_open_to_low_drawdown": false,
+                  "close_location": 0.5541,
+                  "lower_shadow_ratio": 0.0255,
+                  "amount_ratio_vs_20d": 0.9444
+                },
+                {
+                  "trade_date": "2026-06-16",
+                  "reversal_proxy_score": 24.0,
+                  "reversal_proxy_label": "no_clear_reversal_proxy",
+                  "low_to_close_rebound_pct": 0.9381,
+                  "open_to_low_drawdown_pct": -3.1349,
+                  "intraday_range_pct": 3.6585,
+                  "has_large_intraday_swing": true,
+                  "has_large_low_to_close_rebound": false,
+                  "has_large_open_to_low_drawdown": true,
+                  "close_location": 0.2564,
+                  "lower_shadow_ratio": 0.2564,
+                  "amount_ratio_vs_20d": 0.7713
+                }
+              ],
+              "method_note": "日线OHLC代理信号，只能判断低点是否被收回、是否长下影、是否放量但收盘不弱；不能证明盘中先急跌再急拉，也不能识别多次波动。"
+            },
+            "limit_up_count_60d": 2,
+            "limit_up_count_120d": 6,
+            "limit_up_count_240d": 9,
+            "limit_up_count_300d": 10,
+            "amount_expansion_3d_vs_20d": 0.9779,
+            "avg_amount_20d_yi": 14.2535,
+            "avg_turnover_rate_20d": 9.3332
+          },
+          "speculation_carrier_signal": {
+            "carrier_score": 90.0,
+            "carrier_label": "strong",
+            "latest_circ_mv_yi": 145.5043,
+            "avg_turnover_rate_20d": 9.3332,
+            "concept_count": 25
+          },
+          "why_capital_may_choose_it": "视觉中国当前匹配主题为未明显命中当前主线；近5/10/20日涨跌幅分别为-13.05%/-7.20%/-4.36%，洗盘/出货判断为controlled_pullback；提前点火蓄势判断为controlled_pullback_watch，距60日高点回撤-15.48%，距MA20为-1.59%，换手收缩=True，放量不大涨=False；资金意愿为medium，日线急跌回拉代理为no_clear_reversal_proxy，近5日代理均分32.20，近5日大振幅/低点回拉天数为5/1；60/120/240/300日涨停记忆分别为2/6/9/10次，20日均成交额约14.25亿元；短线载体适配度为strong。",
+          "failure_condition": "当前主线继续退潮或主题前排不再修复；股价继续放量下跌并跌破近20日支撑；下跌日成交额持续放大且收盘靠近低位。"
+        }
+      },
+      {
+        "rank": 9,
+        "stock_code": "603859",
+        "stock_name": "能科科技",
+        "industry_name": "软件服务",
+        "latest_trade_date": "2026-06-16",
+        "feature_summary_text": "近20日涨幅约13.02%，近60日涨幅约24.57%，20/60日涨停记忆分别为2/3次，20日平均换手约9.09%，60日平均换手约4.77%，20日平均成交额约10.93亿元。",
+        "pre_ignition_setup": {
+          "pct_change_5d": -3.305,
+          "pct_change_10d": 18.2721,
+          "pct_change_20d": 13.0243,
+          "pct_change_60d": 24.5742,
+          "position_in_60d_range": 0.6988
+        },
+        "ignition_signal": {
+          "limit_up_count_3d": 0,
+          "limit_up_count_5d": 0,
+          "limit_up_count_10d": 2,
+          "limit_up_count_20d": 2,
+          "limit_up_count_60d": 3,
+          "limit_up_count_120d": 4,
+          "limit_up_count_240d": 9,
+          "limit_up_count_300d": 9,
+          "latest_limit_up_date": "2026-06-08",
+          "days_since_latest_limit_up": null
+        },
+        "intraday_reversal_proxy_signal": {
+          "lookback_trade_days": 5,
+          "latest_reversal_day_signal": {
+            "trade_date": "2026-06-16",
+            "reversal_proxy_score": 12.0,
+            "reversal_proxy_label": "no_clear_reversal_proxy",
+            "low_to_close_rebound_pct": 1.2258,
+            "open_to_low_drawdown_pct": -0.9401,
+            "intraday_range_pct": 3.7762,
+            "has_large_intraday_swing": true,
+            "has_large_low_to_close_rebound": false,
+            "has_large_open_to_low_drawdown": false,
+            "close_location": 0.3246,
+            "lower_shadow_ratio": 0.2513,
+            "amount_ratio_vs_20d": 1.1297
+          },
+          "strong_reversal_day_count_5d": 3,
+          "large_swing_day_count_5d": 5,
+          "large_rebound_day_count_5d": 3,
+          "average_reversal_score_5d": 45.8,
+          "reversal_proxy_label": "weak_intraday_reversal_proxy",
+          "large_swing_threshold_pct": 2.0,
+          "method_note": "日线OHLC代理信号，只能判断低点是否被收回、是否长下影、是否放量但收盘不弱；不能证明盘中先急跌再急拉，也不能识别多次波动。"
+        },
+        "capital_intent_prediction_signal": {
+          "capital_intent_score": 55.39,
+          "capital_intent_label": "weak",
+          "ignition_probability_1_3d": "low",
+          "prediction_type": "theme_pullback_repair",
+          "theme_intent_signal": {
+            "theme_score": 0.0,
+            "theme_intent_label": "weak",
+            "matched_current_theme_list": [],
+            "matched_fine_grained_board_list": [],
+            "matched_top_board_signal_list": [],
+            "is_in_main_theme_top_candidates": false,
+            "main_theme_candidate_signal": {}
+          },
+          "ignore_theme_score": true,
+          "wash_or_distribution_signal": {
+            "wash_score": 42.0,
+            "wash_or_distribution_label": "controlled_pullback",
+            "pct_change_5d": -3.305,
+            "pct_change_10d": 18.2721,
+            "pct_change_20d": 13.0243,
+            "recent_down_day_count_8d": 3,
+            "down_day_amount_ratio_vs_20d": 1.3945,
+            "down_day_close_strength": 0.2723,
+            "pullback_from_20d_high_pct": -11.7241,
+            "has_broken_20d_support": false
+          },
+          "pre_breakout_accumulation_signal": {
+            "accumulation_score": 42.0,
+            "accumulation_label": "controlled_pullback_watch",
+            "pullback_from_60d_high_pct": -11.7241,
+            "ma20_distance_pct": 8.338,
+            "has_broken_20d_support": false,
+            "consolidation_range_10d_pct": 41.4634,
+            "turnover_contraction_signal": {
+              "is_turnover_contracting": false,
+              "turnover_contraction_ratio": 0.9359,
+              "decreasing_step_count_5d": 3,
+              "recent_turnover_rate_list": [
+                18.6181,
+                5.1131,
+                21.1488,
+                12.322,
+                9.8883
+              ]
+            },
+            "lower_shadow_support_signal": {
+              "lower_shadow_support_count_5d": 1,
+              "lower_shadow_ratio_list_5d": [
+                0.0,
+                0.0,
+                0.1677,
+                0.5194,
+                0.2513
+              ]
+            },
+            "volume_probe_signal": {
+              "has_volume_probe_without_breakout": true,
+              "latest_volume_probe_item": {
+                "trade_date": "2026-06-12",
+                "amount_ratio_vs_prior_20d": 2.791,
+                "volume_probe_strength_label": "strong",
+                "pct_change": -0.925,
+                "close_location": 0.4922
+              },
+              "amount_sustain_after_probe_label": "faded",
+              "amount_sustain_after_probe_ratio": 0.5237,
+              "post_probe_pct_change": -0.4085
+            },
+            "recent_overheat_signal": {
+              "recent_overheat_penalty": 0.0,
+              "recent_overheat_reason_list": []
+            }
+          },
+          "funding_willingness_signal": {
+            "funding_willingness_score": 77.79,
+            "funding_willingness_label": "strong",
+            "capital_absorption_score": 48.51,
+            "intraday_reversal_proxy_signal": {
+              "lookback_trade_days": 5,
+              "latest_reversal_day_signal": {
+                "trade_date": "2026-06-16",
+                "reversal_proxy_score": 12.0,
+                "reversal_proxy_label": "no_clear_reversal_proxy",
+                "low_to_close_rebound_pct": 1.2258,
+                "open_to_low_drawdown_pct": -0.9401,
+                "intraday_range_pct": 3.7762,
+                "has_large_intraday_swing": true,
+                "has_large_low_to_close_rebound": false,
+                "has_large_open_to_low_drawdown": false,
+                "close_location": 0.3246,
+                "lower_shadow_ratio": 0.2513,
+                "amount_ratio_vs_20d": 1.1297
+              },
+              "strong_reversal_day_count_5d": 3,
+              "large_swing_day_count_5d": 5,
+              "large_rebound_day_count_5d": 3,
+              "average_reversal_score_5d": 45.8,
+              "reversal_proxy_label": "weak_intraday_reversal_proxy",
+              "large_swing_threshold_pct": 2.0,
+              "recent_reversal_day_signal_list": [
+                {
+                  "trade_date": "2026-06-10",
+                  "reversal_proxy_score": 64.0,
+                  "reversal_proxy_label": "medium_intraday_reversal_proxy",
+                  "low_to_close_rebound_pct": 10.2084,
+                  "open_to_low_drawdown_pct": 0.0,
+                  "intraday_range_pct": 10.8775,
+                  "has_large_intraday_swing": true,
+                  "has_large_low_to_close_rebound": true,
+                  "has_large_open_to_low_drawdown": false,
+                  "close_location": 0.9385,
+                  "lower_shadow_ratio": 0.0,
+                  "amount_ratio_vs_20d": 3.1153
+                },
+                {
+                  "trade_date": "2026-06-11",
+                  "reversal_proxy_score": 22.0,
+                  "reversal_proxy_label": "no_clear_reversal_proxy",
+                  "low_to_close_rebound_pct": 0.0,
+                  "open_to_low_drawdown_pct": -5.6545,
+                  "intraday_range_pct": 7.2654,
+                  "has_large_intraday_swing": true,
+                  "has_large_low_to_close_rebound": false,
+                  "has_large_open_to_low_drawdown": true,
+                  "close_location": 0.0,
+                  "lower_shadow_ratio": 0.0,
+                  "amount_ratio_vs_20d": 0.702
+                },
+                {
+                  "trade_date": "2026-06-12",
+                  "reversal_proxy_score": 57.0,
+                  "reversal_proxy_label": "medium_intraday_reversal_proxy",
+                  "low_to_close_rebound_pct": 8.6892,
+                  "open_to_low_drawdown_pct": -2.8747,
+                  "intraday_range_pct": 17.6533,
+                  "has_large_intraday_swing": true,
+                  "has_large_low_to_close_rebound": true,
+                  "has_large_open_to_low_drawdown": true,
+                  "close_location": 0.4922,
+                  "lower_shadow_ratio": 0.1677,
+                  "amount_ratio_vs_20d": 2.791
+                },
+                {
+                  "trade_date": "2026-06-15",
+                  "reversal_proxy_score": 74.0,
+                  "reversal_proxy_label": "strong_intraday_reversal_proxy",
+                  "low_to_close_rebound_pct": 4.6263,
+                  "open_to_low_drawdown_pct": -3.6403,
+                  "intraday_range_pct": 7.2727,
+                  "has_large_intraday_swing": true,
+                  "has_large_low_to_close_rebound": true,
+                  "has_large_open_to_low_drawdown": true,
+                  "close_location": 0.6361,
+                  "lower_shadow_ratio": 0.5194,
+                  "amount_ratio_vs_20d": 1.459
+                },
+                {
+                  "trade_date": "2026-06-16",
+                  "reversal_proxy_score": 12.0,
+                  "reversal_proxy_label": "no_clear_reversal_proxy",
+                  "low_to_close_rebound_pct": 1.2258,
+                  "open_to_low_drawdown_pct": -0.9401,
+                  "intraday_range_pct": 3.7762,
+                  "has_large_intraday_swing": true,
+                  "has_large_low_to_close_rebound": false,
+                  "has_large_open_to_low_drawdown": false,
+                  "close_location": 0.3246,
+                  "lower_shadow_ratio": 0.2513,
+                  "amount_ratio_vs_20d": 1.1297
+                }
+              ],
+              "method_note": "日线OHLC代理信号，只能判断低点是否被收回、是否长下影、是否放量但收盘不弱；不能证明盘中先急跌再急拉，也不能识别多次波动。"
+            },
+            "limit_up_count_60d": 3,
+            "limit_up_count_120d": 4,
+            "limit_up_count_240d": 9,
+            "limit_up_count_300d": 9,
+            "amount_expansion_3d_vs_20d": 1.6692,
+            "avg_amount_20d_yi": 10.929,
+            "avg_turnover_rate_20d": 9.089
+          },
+          "speculation_carrier_signal": {
+            "carrier_score": 90.0,
+            "carrier_label": "strong",
+            "latest_circ_mv_yi": 125.2852,
+            "avg_turnover_rate_20d": 9.089,
+            "concept_count": 28
+          },
+          "why_capital_may_choose_it": "能科科技当前匹配主题为未明显命中当前主线；近5/10/20日涨跌幅分别为-3.31%/18.27%/13.02%，洗盘/出货判断为controlled_pullback；提前点火蓄势判断为controlled_pullback_watch，距60日高点回撤-11.72%，距MA20为8.34%，换手收缩=False，放量不大涨=True；资金意愿为strong，日线急跌回拉代理为weak_intraday_reversal_proxy，近5日代理均分45.80，近5日大振幅/低点回拉天数为5/3；60/120/240/300日涨停记忆分别为3/4/9/9次，20日均成交额约10.93亿元；短线载体适配度为strong。",
+          "failure_condition": "当前主线继续退潮或主题前排不再修复；股价继续放量下跌并跌破近20日支撑；下跌日成交额持续放大且收盘靠近低位。"
+        }
+      },
+      {
+        "rank": 10,
         "stock_code": "002326",
         "stock_name": "永太科技",
         "industry_name": "化工原料",
-        "latest_trade_date": "2026-06-12",
-        "feature_summary_text": "近20日涨幅约-8.08%，近60日涨幅约-11.18%，20/60日涨停记忆分别为0/0次，20日平均换手约4.86%，60日平均换手约5.36%，20日平均成交额约8.81亿元。",
+        "latest_trade_date": "2026-06-16",
+        "feature_summary_text": "近20日涨幅约0.36%，近60日涨幅约-6.15%，20/60日涨停记忆分别为0/0次，20日平均换手约4.91%，60日平均换手约5.36%，20日平均成交额约8.88亿元。",
         "pre_ignition_setup": {
-          "pct_change_5d": -1.2785,
-          "pct_change_10d": 4.4444,
-          "pct_change_20d": -8.0782,
-          "pct_change_60d": -11.175,
-          "position_in_60d_range": 0.1449
+          "pct_change_5d": -2.1379,
+          "pct_change_10d": 7.218,
+          "pct_change_20d": 0.3579,
+          "pct_change_60d": -6.1506,
+          "position_in_60d_range": 0.2588
         },
         "ignition_signal": {
           "limit_up_count_3d": 0,
@@ -1158,54 +2304,40 @@
         "intraday_reversal_proxy_signal": {
           "lookback_trade_days": 5,
           "latest_reversal_day_signal": {
-            "trade_date": "2026-06-12",
-            "reversal_proxy_score": 24.0,
-            "reversal_proxy_label": "no_clear_reversal_proxy",
-            "low_to_close_rebound_pct": 0.8396,
-            "open_to_low_drawdown_pct": -3.4234,
-            "intraday_range_pct": 3.8246,
+            "trade_date": "2026-06-16",
+            "reversal_proxy_score": 65.0,
+            "reversal_proxy_label": "medium_intraday_reversal_proxy",
+            "low_to_close_rebound_pct": 5.3052,
+            "open_to_low_drawdown_pct": -2.6508,
+            "intraday_range_pct": 6.9484,
             "has_large_intraday_swing": true,
-            "has_large_low_to_close_rebound": false,
+            "has_large_low_to_close_rebound": true,
             "has_large_open_to_low_drawdown": true,
-            "close_location": 0.2195,
-            "lower_shadow_ratio": 0.2195,
-            "amount_ratio_vs_20d": 0.6656
+            "close_location": 0.7635,
+            "lower_shadow_ratio": 0.3919,
+            "amount_ratio_vs_20d": 1.081
           },
-          "strong_reversal_day_count_5d": 3,
+          "strong_reversal_day_count_5d": 2,
           "large_swing_day_count_5d": 5,
-          "large_rebound_day_count_5d": 3,
-          "average_reversal_score_5d": 50.4,
-          "reversal_proxy_label": "medium_intraday_reversal_proxy",
+          "large_rebound_day_count_5d": 2,
+          "average_reversal_score_5d": 41.2,
+          "reversal_proxy_label": "weak_intraday_reversal_proxy",
           "large_swing_threshold_pct": 2.0,
           "method_note": "日线OHLC代理信号，只能判断低点是否被收回、是否长下影、是否放量但收盘不弱；不能证明盘中先急跌再急拉，也不能识别多次波动。"
         },
         "capital_intent_prediction_signal": {
-          "capital_intent_score": 63.81,
-          "capital_intent_label": "medium",
-          "ignition_probability_1_3d": "medium",
-          "prediction_type": "pre_breakout_accumulation",
+          "capital_intent_score": 55.19,
+          "capital_intent_label": "weak",
+          "ignition_probability_1_3d": "low",
+          "prediction_type": "low_position_supplement",
           "theme_intent_signal": {
-            "theme_score": 54.0,
-            "theme_intent_label": "medium",
+            "theme_score": 10.0,
+            "theme_intent_label": "weak",
             "matched_current_theme_list": [
-              "氟化工"
+              "锂"
             ],
-            "matched_fine_grained_board_list": [
-              "氟化工概念"
-            ],
-            "matched_top_board_signal_list": [
-              {
-                "context_rank_no": 1,
-                "trade_date": "2026-06-11",
-                "rank_no": 2,
-                "board_name": "氟化工概念",
-                "board_type": "concept",
-                "pct_change": 3.0204,
-                "appearance_count": 2,
-                "average_rank_no": 4.0,
-                "signal_source": "ths_concept_board"
-              }
-            ],
+            "matched_fine_grained_board_list": [],
+            "matched_top_board_signal_list": [],
             "is_in_main_theme_top_candidates": false,
             "main_theme_candidate_signal": {}
           },
@@ -1213,56 +2345,50 @@
           "wash_or_distribution_signal": {
             "wash_score": 56.0,
             "wash_or_distribution_label": "controlled_pullback",
-            "pct_change_5d": -1.2785,
-            "pct_change_10d": 4.4444,
-            "pct_change_20d": -8.0782,
+            "pct_change_5d": -2.1379,
+            "pct_change_10d": 7.218,
+            "pct_change_20d": 0.3579,
             "recent_down_day_count_8d": 4,
-            "down_day_amount_ratio_vs_20d": 1.0165,
+            "down_day_amount_ratio_vs_20d": 1.0087,
             "down_day_close_strength": 0.3678,
-            "pullback_from_20d_high_pct": -12.963,
+            "pullback_from_20d_high_pct": -9.7021,
             "has_broken_20d_support": false
           },
           "pre_breakout_accumulation_signal": {
-            "accumulation_score": 64.0,
-            "accumulation_label": "pre_breakout_accumulation",
-            "pullback_from_60d_high_pct": -21.9495,
-            "ma20_distance_pct": -2.5468,
+            "accumulation_score": 48.0,
+            "accumulation_label": "controlled_pullback_watch",
+            "pullback_from_60d_high_pct": -19.0253,
+            "ma20_distance_pct": 1.319,
             "has_broken_20d_support": false,
-            "consolidation_range_10d_pct": 16.2621,
+            "consolidation_range_10d_pct": 15.8124,
             "turnover_contraction_signal": {
-              "is_turnover_contracting": true,
-              "turnover_contraction_ratio": 0.4716,
+              "is_turnover_contracting": false,
+              "turnover_contraction_ratio": 0.9271,
               "decreasing_step_count_5d": 3,
               "recent_turnover_rate_list": [
-                8.1576,
-                8.3164,
                 4.7185,
                 4.2406,
-                3.5278
+                3.5278,
+                3.0246,
+                5.2817
               ]
             },
             "lower_shadow_support_signal": {
               "lower_shadow_support_count_5d": 2,
               "lower_shadow_ratio_list_5d": [
-                0.1273,
-                0.4635,
                 0.0155,
                 0.5197,
-                0.2195
+                0.2195,
+                0.3448,
+                0.3919
               ]
             },
             "volume_probe_signal": {
-              "has_volume_probe_without_breakout": true,
-              "latest_volume_probe_item": {
-                "trade_date": "2026-06-09",
-                "amount_ratio_vs_prior_20d": 1.715,
-                "volume_probe_strength_label": "mild",
-                "pct_change": -0.9079,
-                "close_location": 0.4635
-              },
-              "amount_sustain_after_probe_label": "faded",
-              "amount_sustain_after_probe_ratio": 0.4861,
-              "post_probe_pct_change": -5.6719
+              "has_volume_probe_without_breakout": false,
+              "latest_volume_probe_item": null,
+              "amount_sustain_after_probe_label": "no_probe",
+              "amount_sustain_after_probe_ratio": null,
+              "post_probe_pct_change": null
             },
             "recent_overheat_signal": {
               "recent_overheat_penalty": 0.0,
@@ -1270,60 +2396,32 @@
             }
           },
           "funding_willingness_signal": {
-            "funding_willingness_score": 60.36,
+            "funding_willingness_score": 52.45,
             "funding_willingness_label": "medium",
-            "capital_absorption_score": 37.62,
+            "capital_absorption_score": 20.68,
             "intraday_reversal_proxy_signal": {
               "lookback_trade_days": 5,
               "latest_reversal_day_signal": {
-                "trade_date": "2026-06-12",
-                "reversal_proxy_score": 24.0,
-                "reversal_proxy_label": "no_clear_reversal_proxy",
-                "low_to_close_rebound_pct": 0.8396,
-                "open_to_low_drawdown_pct": -3.4234,
-                "intraday_range_pct": 3.8246,
+                "trade_date": "2026-06-16",
+                "reversal_proxy_score": 65.0,
+                "reversal_proxy_label": "medium_intraday_reversal_proxy",
+                "low_to_close_rebound_pct": 5.3052,
+                "open_to_low_drawdown_pct": -2.6508,
+                "intraday_range_pct": 6.9484,
                 "has_large_intraday_swing": true,
-                "has_large_low_to_close_rebound": false,
+                "has_large_low_to_close_rebound": true,
                 "has_large_open_to_low_drawdown": true,
-                "close_location": 0.2195,
-                "lower_shadow_ratio": 0.2195,
-                "amount_ratio_vs_20d": 0.6656
+                "close_location": 0.7635,
+                "lower_shadow_ratio": 0.3919,
+                "amount_ratio_vs_20d": 1.081
               },
-              "strong_reversal_day_count_5d": 3,
+              "strong_reversal_day_count_5d": 2,
               "large_swing_day_count_5d": 5,
-              "large_rebound_day_count_5d": 3,
-              "average_reversal_score_5d": 50.4,
-              "reversal_proxy_label": "medium_intraday_reversal_proxy",
+              "large_rebound_day_count_5d": 2,
+              "average_reversal_score_5d": 41.2,
+              "reversal_proxy_label": "weak_intraday_reversal_proxy",
               "large_swing_threshold_pct": 2.0,
               "recent_reversal_day_signal_list": [
-                {
-                  "trade_date": "2026-06-08",
-                  "reversal_proxy_score": 58.0,
-                  "reversal_proxy_label": "medium_intraday_reversal_proxy",
-                  "low_to_close_rebound_pct": 9.7249,
-                  "open_to_low_drawdown_pct": -1.3109,
-                  "intraday_range_pct": 10.4364,
-                  "has_large_intraday_swing": true,
-                  "has_large_low_to_close_rebound": true,
-                  "has_large_open_to_low_drawdown": false,
-                  "close_location": 0.9318,
-                  "lower_shadow_ratio": 0.1273,
-                  "amount_ratio_vs_20d": 1.7351
-                },
-                {
-                  "trade_date": "2026-06-09",
-                  "reversal_proxy_score": 72.0,
-                  "reversal_proxy_label": "strong_intraday_reversal_proxy",
-                  "low_to_close_rebound_pct": 4.0399,
-                  "open_to_low_drawdown_pct": -7.3591,
-                  "intraday_range_pct": 8.7154,
-                  "has_large_intraday_swing": true,
-                  "has_large_low_to_close_rebound": true,
-                  "has_large_open_to_low_drawdown": true,
-                  "close_location": 0.4635,
-                  "lower_shadow_ratio": 0.4635,
-                  "amount_ratio_vs_20d": 1.715
-                },
                 {
                   "trade_date": "2026-06-10",
                   "reversal_proxy_score": 22.0,
@@ -1365,6 +2463,34 @@
                   "close_location": 0.2195,
                   "lower_shadow_ratio": 0.2195,
                   "amount_ratio_vs_20d": 0.6656
+                },
+                {
+                  "trade_date": "2026-06-15",
+                  "reversal_proxy_score": 19.0,
+                  "reversal_proxy_label": "no_clear_reversal_proxy",
+                  "low_to_close_rebound_pct": 0.9221,
+                  "open_to_low_drawdown_pct": -1.1395,
+                  "intraday_range_pct": 2.674,
+                  "has_large_intraday_swing": true,
+                  "has_large_low_to_close_rebound": false,
+                  "has_large_open_to_low_drawdown": false,
+                  "close_location": 0.3448,
+                  "lower_shadow_ratio": 0.3448,
+                  "amount_ratio_vs_20d": 0.6081
+                },
+                {
+                  "trade_date": "2026-06-16",
+                  "reversal_proxy_score": 65.0,
+                  "reversal_proxy_label": "medium_intraday_reversal_proxy",
+                  "low_to_close_rebound_pct": 5.3052,
+                  "open_to_low_drawdown_pct": -2.6508,
+                  "intraday_range_pct": 6.9484,
+                  "has_large_intraday_swing": true,
+                  "has_large_low_to_close_rebound": true,
+                  "has_large_open_to_low_drawdown": true,
+                  "close_location": 0.7635,
+                  "lower_shadow_ratio": 0.3919,
+                  "amount_ratio_vs_20d": 1.081
                 }
               ],
               "method_note": "日线OHLC代理信号，只能判断低点是否被收回、是否长下影、是否放量但收盘不弱；不能证明盘中先急跌再急拉，也不能识别多次波动。"
@@ -1373,1254 +2499,40 @@
             "limit_up_count_120d": 2,
             "limit_up_count_240d": 8,
             "limit_up_count_300d": 8,
-            "amount_expansion_3d_vs_20d": 0.8375,
-            "avg_amount_20d_yi": 8.8131,
-            "avg_turnover_rate_20d": 4.8602
+            "amount_expansion_3d_vs_20d": 0.7884,
+            "avg_amount_20d_yi": 8.8817,
+            "avg_turnover_rate_20d": 4.9082
           },
           "speculation_carrier_signal": {
             "carrier_score": 90.0,
             "carrier_label": "strong",
-            "latest_circ_mv_yi": 174.724,
-            "avg_turnover_rate_20d": 4.8602,
+            "latest_circ_mv_yi": 181.2701,
+            "avg_turnover_rate_20d": 4.9082,
             "concept_count": 6
           },
-          "why_capital_may_choose_it": "永太科技当前匹配主题为氟化工；前排细分概念命中氟化工概念；近5/10/20日涨跌幅分别为-1.28%/4.44%/-8.08%，洗盘/出货判断为controlled_pullback；提前点火蓄势判断为pre_breakout_accumulation，距60日高点回撤-21.95%，距MA20为-2.55%，换手收缩=True，放量不大涨=True；资金意愿为medium，日线急跌回拉代理为medium_intraday_reversal_proxy，近5日代理均分50.40，近5日大振幅/低点回拉天数为5/3；60/120/240/300日涨停记忆分别为0/2/8/8次，20日均成交额约8.81亿元；短线载体适配度为strong。",
-          "failure_condition": "当前主线继续退潮或主题前排不再修复；股价继续放量下跌并跌破近20日支撑；下跌日成交额持续放大且收盘靠近低位。"
-        }
-      },
-      {
-        "rank": 6,
-        "stock_code": "600198",
-        "stock_name": "大唐电信",
-        "industry_name": "",
-        "latest_trade_date": "2026-06-12",
-        "feature_summary_text": "近20日涨幅约-1.29%，近60日涨幅约3.84%，20/60日涨停记忆分别为2/3次，20日平均换手约3.84%，60日平均换手约2.84%，20日平均成交额约4.48亿元。",
-        "pre_ignition_setup": {
-          "pct_change_5d": 2.4526,
-          "pct_change_10d": 14.875,
-          "pct_change_20d": -1.2889,
-          "pct_change_60d": 3.8418,
-          "position_in_60d_range": 0.4863
-        },
-        "ignition_signal": {
-          "limit_up_count_3d": 0,
-          "limit_up_count_5d": 1,
-          "limit_up_count_10d": 2,
-          "limit_up_count_20d": 2,
-          "limit_up_count_60d": 3,
-          "limit_up_count_120d": 7,
-          "limit_up_count_240d": 7,
-          "limit_up_count_300d": 8,
-          "latest_limit_up_date": "2026-06-09",
-          "days_since_latest_limit_up": null
-        },
-        "intraday_reversal_proxy_signal": {
-          "lookback_trade_days": 5,
-          "latest_reversal_day_signal": {
-            "trade_date": "2026-06-12",
-            "reversal_proxy_score": 24.0,
-            "reversal_proxy_label": "no_clear_reversal_proxy",
-            "low_to_close_rebound_pct": 0.4372,
-            "open_to_low_drawdown_pct": -3.9874,
-            "intraday_range_pct": 4.918,
-            "has_large_intraday_swing": true,
-            "has_large_low_to_close_rebound": false,
-            "has_large_open_to_low_drawdown": true,
-            "close_location": 0.0889,
-            "lower_shadow_ratio": 0.0889,
-            "amount_ratio_vs_20d": 1.247
-          },
-          "strong_reversal_day_count_5d": 1,
-          "large_swing_day_count_5d": 5,
-          "large_rebound_day_count_5d": 2,
-          "average_reversal_score_5d": 38.2,
-          "reversal_proxy_label": "weak_intraday_reversal_proxy",
-          "large_swing_threshold_pct": 2.0,
-          "method_note": "日线OHLC代理信号，只能判断低点是否被收回、是否长下影、是否放量但收盘不弱；不能证明盘中先急跌再急拉，也不能识别多次波动。"
-        },
-        "capital_intent_prediction_signal": {
-          "capital_intent_score": 61.42,
-          "capital_intent_label": "medium",
-          "ignition_probability_1_3d": "medium",
-          "prediction_type": "pre_breakout_accumulation",
-          "theme_intent_signal": {
-            "theme_score": 0.0,
-            "theme_intent_label": "weak",
-            "matched_current_theme_list": [],
-            "matched_fine_grained_board_list": [],
-            "matched_top_board_signal_list": [],
-            "is_in_main_theme_top_candidates": false,
-            "main_theme_candidate_signal": {}
-          },
-          "ignore_theme_score": true,
-          "wash_or_distribution_signal": {
-            "wash_score": 42.0,
-            "wash_or_distribution_label": "controlled_pullback",
-            "pct_change_5d": 2.4526,
-            "pct_change_10d": 14.875,
-            "pct_change_20d": -1.2889,
-            "recent_down_day_count_8d": 4,
-            "down_day_amount_ratio_vs_20d": 1.4458,
-            "down_day_close_strength": 0.2526,
-            "pullback_from_20d_high_pct": -5.2577,
-            "has_broken_20d_support": false
-          },
-          "pre_breakout_accumulation_signal": {
-            "accumulation_score": 68.0,
-            "accumulation_label": "pre_breakout_accumulation",
-            "pullback_from_60d_high_pct": -14.0318,
-            "ma20_distance_pct": 4.3133,
-            "has_broken_20d_support": false,
-            "consolidation_range_10d_pct": 24.1997,
-            "turnover_contraction_signal": {
-              "is_turnover_contracting": false,
-              "turnover_contraction_ratio": 1.7223,
-              "decreasing_step_count_5d": 3,
-              "recent_turnover_rate_list": [
-                4.1305,
-                2.0726,
-                7.6178,
-                6.009,
-                4.6747
-              ]
-            },
-            "lower_shadow_support_signal": {
-              "lower_shadow_support_count_5d": 0,
-              "lower_shadow_ratio_list_5d": [
-                0.2241,
-                0.0476,
-                0.1667,
-                0.1667,
-                0.0889
-              ]
-            },
-            "volume_probe_signal": {
-              "has_volume_probe_without_breakout": true,
-              "latest_volume_probe_item": {
-                "trade_date": "2026-06-11",
-                "amount_ratio_vs_prior_20d": 1.5616,
-                "volume_probe_strength_label": "mild",
-                "pct_change": 1.1828,
-                "close_location": 0.6296
-              },
-              "amount_sustain_after_probe_label": "sustained",
-              "amount_sustain_after_probe_ratio": 0.7742,
-              "post_probe_pct_change": -2.3379
-            },
-            "recent_overheat_signal": {
-              "recent_overheat_penalty": 0.0,
-              "recent_overheat_reason_list": []
-            }
-          },
-          "funding_willingness_signal": {
-            "funding_willingness_score": 57.41,
-            "funding_willingness_label": "medium",
-            "capital_absorption_score": 21.92,
-            "intraday_reversal_proxy_signal": {
-              "lookback_trade_days": 5,
-              "latest_reversal_day_signal": {
-                "trade_date": "2026-06-12",
-                "reversal_proxy_score": 24.0,
-                "reversal_proxy_label": "no_clear_reversal_proxy",
-                "low_to_close_rebound_pct": 0.4372,
-                "open_to_low_drawdown_pct": -3.9874,
-                "intraday_range_pct": 4.918,
-                "has_large_intraday_swing": true,
-                "has_large_low_to_close_rebound": false,
-                "has_large_open_to_low_drawdown": true,
-                "close_location": 0.0889,
-                "lower_shadow_ratio": 0.0889,
-                "amount_ratio_vs_20d": 1.247
-              },
-              "strong_reversal_day_count_5d": 1,
-              "large_swing_day_count_5d": 5,
-              "large_rebound_day_count_5d": 2,
-              "average_reversal_score_5d": 38.2,
-              "reversal_proxy_label": "weak_intraday_reversal_proxy",
-              "large_swing_threshold_pct": 2.0,
-              "recent_reversal_day_signal_list": [
-                {
-                  "trade_date": "2026-06-08",
-                  "reversal_proxy_score": 31.0,
-                  "reversal_proxy_label": "no_clear_reversal_proxy",
-                  "low_to_close_rebound_pct": 1.555,
-                  "open_to_low_drawdown_pct": -2.9036,
-                  "intraday_range_pct": 6.9378,
-                  "has_large_intraday_swing": true,
-                  "has_large_low_to_close_rebound": false,
-                  "has_large_open_to_low_drawdown": true,
-                  "close_location": 0.2241,
-                  "lower_shadow_ratio": 0.2241,
-                  "amount_ratio_vs_20d": 0.7675
-                },
-                {
-                  "trade_date": "2026-06-09",
-                  "reversal_proxy_score": 46.0,
-                  "reversal_proxy_label": "weak_intraday_reversal_proxy",
-                  "low_to_close_rebound_pct": 9.8824,
-                  "open_to_low_drawdown_pct": -0.4684,
-                  "intraday_range_pct": 9.8824,
-                  "has_large_intraday_swing": true,
-                  "has_large_low_to_close_rebound": true,
-                  "has_large_open_to_low_drawdown": false,
-                  "close_location": 1.0,
-                  "lower_shadow_ratio": 0.0476,
-                  "amount_ratio_vs_20d": 0.415
-                },
-                {
-                  "trade_date": "2026-06-10",
-                  "reversal_proxy_score": 40.0,
-                  "reversal_proxy_label": "weak_intraday_reversal_proxy",
-                  "low_to_close_rebound_pct": 0.8677,
-                  "open_to_low_drawdown_pct": -4.6536,
-                  "intraday_range_pct": 5.2061,
-                  "has_large_intraday_swing": true,
-                  "has_large_low_to_close_rebound": false,
-                  "has_large_open_to_low_drawdown": true,
-                  "close_location": 0.1667,
-                  "lower_shadow_ratio": 0.1667,
-                  "amount_ratio_vs_20d": 1.8717
-                },
-                {
-                  "trade_date": "2026-06-11",
-                  "reversal_proxy_score": 50.0,
-                  "reversal_proxy_label": "medium_intraday_reversal_proxy",
-                  "low_to_close_rebound_pct": 3.7486,
-                  "open_to_low_drawdown_pct": -0.9825,
-                  "intraday_range_pct": 5.9537,
-                  "has_large_intraday_swing": true,
-                  "has_large_low_to_close_rebound": true,
-                  "has_large_open_to_low_drawdown": false,
-                  "close_location": 0.6296,
-                  "lower_shadow_ratio": 0.1667,
-                  "amount_ratio_vs_20d": 1.5616
-                },
-                {
-                  "trade_date": "2026-06-12",
-                  "reversal_proxy_score": 24.0,
-                  "reversal_proxy_label": "no_clear_reversal_proxy",
-                  "low_to_close_rebound_pct": 0.4372,
-                  "open_to_low_drawdown_pct": -3.9874,
-                  "intraday_range_pct": 4.918,
-                  "has_large_intraday_swing": true,
-                  "has_large_low_to_close_rebound": false,
-                  "has_large_open_to_low_drawdown": true,
-                  "close_location": 0.0889,
-                  "lower_shadow_ratio": 0.0889,
-                  "amount_ratio_vs_20d": 1.247
-                }
-              ],
-              "method_note": "日线OHLC代理信号，只能判断低点是否被收回、是否长下影、是否放量但收盘不弱；不能证明盘中先急跌再急拉，也不能识别多次波动。"
-            },
-            "limit_up_count_60d": 3,
-            "limit_up_count_120d": 7,
-            "limit_up_count_240d": 7,
-            "limit_up_count_300d": 8,
-            "amount_expansion_3d_vs_20d": 1.6643,
-            "avg_amount_20d_yi": 4.4797,
-            "avg_turnover_rate_20d": 3.839
-          },
-          "speculation_carrier_signal": {
-            "carrier_score": 90.0,
-            "carrier_label": "strong",
-            "latest_circ_mv_yi": 119.6492,
-            "avg_turnover_rate_20d": 3.839,
-            "concept_count": 24
-          },
-          "why_capital_may_choose_it": "大唐电信当前匹配主题为未明显命中当前主线；近5/10/20日涨跌幅分别为2.45%/14.88%/-1.29%，洗盘/出货判断为controlled_pullback；提前点火蓄势判断为pre_breakout_accumulation，距60日高点回撤-14.03%，距MA20为4.31%，换手收缩=False，放量不大涨=True；资金意愿为medium，日线急跌回拉代理为weak_intraday_reversal_proxy，近5日代理均分38.20，近5日大振幅/低点回拉天数为5/2；60/120/240/300日涨停记忆分别为3/7/7/8次，20日均成交额约4.48亿元；短线载体适配度为strong。",
-          "failure_condition": "当前主线继续退潮或主题前排不再修复；股价继续放量下跌并跌破近20日支撑；下跌日成交额持续放大且收盘靠近低位。"
-        }
-      },
-      {
-        "rank": 7,
-        "stock_code": "600063",
-        "stock_name": "皖维高新",
-        "industry_name": "化纤",
-        "latest_trade_date": "2026-06-12",
-        "feature_summary_text": "近20日涨幅约13.82%，近60日涨幅约-0.94%，20/60日涨停记忆分别为2/3次，20日平均换手约6.63%，60日平均换手约3.82%，20日平均成交额约10.24亿元。",
-        "pre_ignition_setup": {
-          "pct_change_5d": -9.854,
-          "pct_change_10d": 5.8571,
-          "pct_change_20d": 13.8249,
-          "pct_change_60d": -0.9358,
-          "position_in_60d_range": 0.5808
-        },
-        "ignition_signal": {
-          "limit_up_count_3d": 0,
-          "limit_up_count_5d": 0,
-          "limit_up_count_10d": 1,
-          "limit_up_count_20d": 2,
-          "limit_up_count_60d": 3,
-          "limit_up_count_120d": 4,
-          "limit_up_count_240d": 5,
-          "limit_up_count_300d": 6,
-          "latest_limit_up_date": "2026-06-05",
-          "days_since_latest_limit_up": null
-        },
-        "intraday_reversal_proxy_signal": {
-          "lookback_trade_days": 5,
-          "latest_reversal_day_signal": {
-            "trade_date": "2026-06-12",
-            "reversal_proxy_score": 40.0,
-            "reversal_proxy_label": "weak_intraday_reversal_proxy",
-            "low_to_close_rebound_pct": 1.5068,
-            "open_to_low_drawdown_pct": -8.2915,
-            "intraday_range_pct": 10.9589,
-            "has_large_intraday_swing": true,
-            "has_large_low_to_close_rebound": false,
-            "has_large_open_to_low_drawdown": true,
-            "close_location": 0.1375,
-            "lower_shadow_ratio": 0.1375,
-            "amount_ratio_vs_20d": 1.4239
-          },
-          "strong_reversal_day_count_5d": 3,
-          "large_swing_day_count_5d": 5,
-          "large_rebound_day_count_5d": 3,
-          "average_reversal_score_5d": 58.2,
-          "reversal_proxy_label": "medium_intraday_reversal_proxy",
-          "large_swing_threshold_pct": 2.0,
-          "method_note": "日线OHLC代理信号，只能判断低点是否被收回、是否长下影、是否放量但收盘不弱；不能证明盘中先急跌再急拉，也不能识别多次波动。"
-        },
-        "capital_intent_prediction_signal": {
-          "capital_intent_score": 61.22,
-          "capital_intent_label": "medium",
-          "ignition_probability_1_3d": "medium",
-          "prediction_type": "theme_pullback_repair",
-          "theme_intent_signal": {
-            "theme_score": 0.0,
-            "theme_intent_label": "weak",
-            "matched_current_theme_list": [],
-            "matched_fine_grained_board_list": [],
-            "matched_top_board_signal_list": [],
-            "is_in_main_theme_top_candidates": false,
-            "main_theme_candidate_signal": {}
-          },
-          "ignore_theme_score": true,
-          "wash_or_distribution_signal": {
-            "wash_score": 56.0,
-            "wash_or_distribution_label": "controlled_pullback",
-            "pct_change_5d": -9.854,
-            "pct_change_10d": 5.8571,
-            "pct_change_20d": 13.8249,
-            "recent_down_day_count_8d": 4,
-            "down_day_amount_ratio_vs_20d": 1.4725,
-            "down_day_close_strength": 0.1555,
-            "pullback_from_20d_high_pct": -12.8235,
-            "has_broken_20d_support": false
-          },
-          "pre_breakout_accumulation_signal": {
-            "accumulation_score": 53.0,
-            "accumulation_label": "controlled_pullback_watch",
-            "pullback_from_60d_high_pct": -12.8235,
-            "ma20_distance_pct": 5.1735,
-            "has_broken_20d_support": false,
-            "consolidation_range_10d_pct": 27.2455,
-            "turnover_contraction_signal": {
-              "is_turnover_contracting": false,
-              "turnover_contraction_ratio": 0.9652,
-              "decreasing_step_count_5d": 3,
-              "recent_turnover_rate_list": [
-                10.3659,
-                9.7677,
-                10.9741,
-                10.6961,
-                8.7365
-              ]
-            },
-            "lower_shadow_support_signal": {
-              "lower_shadow_support_count_5d": 1,
-              "lower_shadow_ratio_list_5d": [
-                0.1346,
-                0.8525,
-                0.0519,
-                0.225,
-                0.1375
-              ]
-            },
-            "volume_probe_signal": {
-              "has_volume_probe_without_breakout": true,
-              "latest_volume_probe_item": {
-                "trade_date": "2026-06-09",
-                "amount_ratio_vs_prior_20d": 2.13,
-                "volume_probe_strength_label": "medium",
-                "pct_change": 3.3766,
-                "close_location": 0.9016
-              },
-              "amount_sustain_after_probe_label": "faded",
-              "amount_sustain_after_probe_ratio": 1.0628,
-              "post_probe_pct_change": -6.9095
-            },
-            "recent_overheat_signal": {
-              "recent_overheat_penalty": 0.0,
-              "recent_overheat_reason_list": []
-            }
-          },
-          "funding_willingness_signal": {
-            "funding_willingness_score": 68.85,
-            "funding_willingness_label": "strong",
-            "capital_absorption_score": 52.52,
-            "intraday_reversal_proxy_signal": {
-              "lookback_trade_days": 5,
-              "latest_reversal_day_signal": {
-                "trade_date": "2026-06-12",
-                "reversal_proxy_score": 40.0,
-                "reversal_proxy_label": "weak_intraday_reversal_proxy",
-                "low_to_close_rebound_pct": 1.5068,
-                "open_to_low_drawdown_pct": -8.2915,
-                "intraday_range_pct": 10.9589,
-                "has_large_intraday_swing": true,
-                "has_large_low_to_close_rebound": false,
-                "has_large_open_to_low_drawdown": true,
-                "close_location": 0.1375,
-                "lower_shadow_ratio": 0.1375,
-                "amount_ratio_vs_20d": 1.4239
-              },
-              "strong_reversal_day_count_5d": 3,
-              "large_swing_day_count_5d": 5,
-              "large_rebound_day_count_5d": 3,
-              "average_reversal_score_5d": 58.2,
-              "reversal_proxy_label": "medium_intraday_reversal_proxy",
-              "large_swing_threshold_pct": 2.0,
-              "recent_reversal_day_signal_list": [
-                {
-                  "trade_date": "2026-06-08",
-                  "reversal_proxy_score": 43.0,
-                  "reversal_proxy_label": "weak_intraday_reversal_proxy",
-                  "low_to_close_rebound_pct": 0.9174,
-                  "open_to_low_drawdown_pct": -2.1795,
-                  "intraday_range_pct": 6.8152,
-                  "has_large_intraday_swing": true,
-                  "has_large_low_to_close_rebound": false,
-                  "has_large_open_to_low_drawdown": true,
-                  "close_location": 0.1346,
-                  "lower_shadow_ratio": 0.1346,
-                  "amount_ratio_vs_20d": 2.5273
-                },
-                {
-                  "trade_date": "2026-06-09",
-                  "reversal_proxy_score": 94.0,
-                  "reversal_proxy_label": "strong_intraday_reversal_proxy",
-                  "low_to_close_rebound_pct": 7.4224,
-                  "open_to_low_drawdown_pct": -6.5574,
-                  "intraday_range_pct": 8.2321,
-                  "has_large_intraday_swing": true,
-                  "has_large_low_to_close_rebound": true,
-                  "has_large_open_to_low_drawdown": true,
-                  "close_location": 0.9016,
-                  "lower_shadow_ratio": 0.8525,
-                  "amount_ratio_vs_20d": 2.13
-                },
-                {
-                  "trade_date": "2026-06-10",
-                  "reversal_proxy_score": 64.0,
-                  "reversal_proxy_label": "medium_intraday_reversal_proxy",
-                  "low_to_close_rebound_pct": 8.7969,
-                  "open_to_low_drawdown_pct": -0.5148,
-                  "intraday_range_pct": 9.9612,
-                  "has_large_intraday_swing": true,
-                  "has_large_low_to_close_rebound": true,
-                  "has_large_open_to_low_drawdown": false,
-                  "close_location": 0.8831,
-                  "lower_shadow_ratio": 0.0519,
-                  "amount_ratio_vs_20d": 2.3435
-                },
-                {
-                  "trade_date": "2026-06-11",
-                  "reversal_proxy_score": 50.0,
-                  "reversal_proxy_label": "medium_intraday_reversal_proxy",
-                  "low_to_close_rebound_pct": 2.3778,
-                  "open_to_low_drawdown_pct": -7.7954,
-                  "intraday_range_pct": 10.568,
-                  "has_large_intraday_swing": true,
-                  "has_large_low_to_close_rebound": true,
-                  "has_large_open_to_low_drawdown": true,
-                  "close_location": 0.225,
-                  "lower_shadow_ratio": 0.225,
-                  "amount_ratio_vs_20d": 1.9771
-                },
-                {
-                  "trade_date": "2026-06-12",
-                  "reversal_proxy_score": 40.0,
-                  "reversal_proxy_label": "weak_intraday_reversal_proxy",
-                  "low_to_close_rebound_pct": 1.5068,
-                  "open_to_low_drawdown_pct": -8.2915,
-                  "intraday_range_pct": 10.9589,
-                  "has_large_intraday_swing": true,
-                  "has_large_low_to_close_rebound": false,
-                  "has_large_open_to_low_drawdown": true,
-                  "close_location": 0.1375,
-                  "lower_shadow_ratio": 0.1375,
-                  "amount_ratio_vs_20d": 1.4239
-                }
-              ],
-              "method_note": "日线OHLC代理信号，只能判断低点是否被收回、是否长下影、是否放量但收盘不弱；不能证明盘中先急跌再急拉，也不能识别多次波动。"
-            },
-            "limit_up_count_60d": 3,
-            "limit_up_count_120d": 4,
-            "limit_up_count_240d": 5,
-            "limit_up_count_300d": 6,
-            "amount_expansion_3d_vs_20d": 1.632,
-            "avg_amount_20d_yi": 10.2358,
-            "avg_turnover_rate_20d": 6.6263
-          },
-          "speculation_carrier_signal": {
-            "carrier_score": 90.0,
-            "carrier_label": "strong",
-            "latest_circ_mv_yi": 153.3208,
-            "avg_turnover_rate_20d": 6.6263,
-            "concept_count": 8
-          },
-          "why_capital_may_choose_it": "皖维高新当前匹配主题为未明显命中当前主线；近5/10/20日涨跌幅分别为-9.85%/5.86%/13.82%，洗盘/出货判断为controlled_pullback；提前点火蓄势判断为controlled_pullback_watch，距60日高点回撤-12.82%，距MA20为5.17%，换手收缩=False，放量不大涨=True；资金意愿为strong，日线急跌回拉代理为medium_intraday_reversal_proxy，近5日代理均分58.20，近5日大振幅/低点回拉天数为5/3；60/120/240/300日涨停记忆分别为3/4/5/6次，20日均成交额约10.24亿元；短线载体适配度为strong。",
-          "failure_condition": "当前主线继续退潮或主题前排不再修复；股价继续放量下跌并跌破近20日支撑；下跌日成交额持续放大且收盘靠近低位。"
-        }
-      },
-      {
-        "rank": 8,
-        "stock_code": "002471",
-        "stock_name": "中超控股",
-        "industry_name": "电气设备",
-        "latest_trade_date": "2026-06-12",
-        "feature_summary_text": "近20日涨幅约-10.11%，近60日涨幅约-15.49%，20/60日涨停记忆分别为1/2次，20日平均换手约6.41%，60日平均换手约11.31%，20日平均成交额约6.55亿元。",
-        "pre_ignition_setup": {
-          "pct_change_5d": -9.434,
-          "pct_change_10d": 3.1519,
-          "pct_change_20d": -10.1124,
-          "pct_change_60d": -15.493,
-          "position_in_60d_range": 0.1599
-        },
-        "ignition_signal": {
-          "limit_up_count_3d": 0,
-          "limit_up_count_5d": 0,
-          "limit_up_count_10d": 1,
-          "limit_up_count_20d": 1,
-          "limit_up_count_60d": 2,
-          "limit_up_count_120d": 16,
-          "limit_up_count_240d": 20,
-          "limit_up_count_300d": 36,
-          "latest_limit_up_date": "2026-06-05",
-          "days_since_latest_limit_up": null
-        },
-        "intraday_reversal_proxy_signal": {
-          "lookback_trade_days": 5,
-          "latest_reversal_day_signal": {
-            "trade_date": "2026-06-12",
-            "reversal_proxy_score": 54.0,
-            "reversal_proxy_label": "medium_intraday_reversal_proxy",
-            "low_to_close_rebound_pct": 3.4483,
-            "open_to_low_drawdown_pct": -1.9718,
-            "intraday_range_pct": 6.3218,
-            "has_large_intraday_swing": true,
-            "has_large_low_to_close_rebound": true,
-            "has_large_open_to_low_drawdown": false,
-            "close_location": 0.5455,
-            "lower_shadow_ratio": 0.3182,
-            "amount_ratio_vs_20d": 0.9426
-          },
-          "strong_reversal_day_count_5d": 3,
-          "large_swing_day_count_5d": 5,
-          "large_rebound_day_count_5d": 4,
-          "average_reversal_score_5d": 51.2,
-          "reversal_proxy_label": "medium_intraday_reversal_proxy",
-          "large_swing_threshold_pct": 2.0,
-          "method_note": "日线OHLC代理信号，只能判断低点是否被收回、是否长下影、是否放量但收盘不弱；不能证明盘中先急跌再急拉，也不能识别多次波动。"
-        },
-        "capital_intent_prediction_signal": {
-          "capital_intent_score": 60.57,
-          "capital_intent_label": "medium",
-          "ignition_probability_1_3d": "medium",
-          "prediction_type": "theme_pullback_repair",
-          "theme_intent_signal": {
-            "theme_score": 20.0,
-            "theme_intent_label": "weak",
-            "matched_current_theme_list": [
-              "航空发动机"
-            ],
-            "matched_fine_grained_board_list": [],
-            "matched_top_board_signal_list": [],
-            "is_in_main_theme_top_candidates": false,
-            "main_theme_candidate_signal": {}
-          },
-          "ignore_theme_score": true,
-          "wash_or_distribution_signal": {
-            "wash_score": 56.0,
-            "wash_or_distribution_label": "controlled_pullback",
-            "pct_change_5d": -9.434,
-            "pct_change_10d": 3.1519,
-            "pct_change_20d": -10.1124,
-            "recent_down_day_count_8d": 4,
-            "down_day_amount_ratio_vs_20d": 1.0357,
-            "down_day_close_strength": 0.3796,
-            "pullback_from_20d_high_pct": -14.7929,
-            "has_broken_20d_support": false
-          },
-          "pre_breakout_accumulation_signal": {
-            "accumulation_score": 42.0,
-            "accumulation_label": "controlled_pullback_watch",
-            "pullback_from_60d_high_pct": -30.0971,
-            "ma20_distance_pct": -4.1278,
-            "has_broken_20d_support": false,
-            "consolidation_range_10d_pct": 26.3238,
-            "turnover_contraction_signal": {
-              "is_turnover_contracting": true,
-              "turnover_contraction_ratio": 0.4091,
-              "decreasing_step_count_5d": 3,
-              "recent_turnover_rate_list": [
-                16.1888,
-                10.7135,
-                8.2282,
-                4.6078,
-                6.3984
-              ]
-            },
-            "lower_shadow_support_signal": {
-              "lower_shadow_support_count_5d": 1,
-              "lower_shadow_ratio_list_5d": [
-                0.25,
-                0.5814,
-                0.0141,
-                0.1,
-                0.3182
-              ]
-            },
-            "volume_probe_signal": {
-              "has_volume_probe_without_breakout": true,
-              "latest_volume_probe_item": {
-                "trade_date": "2026-06-08",
-                "amount_ratio_vs_prior_20d": 2.6798,
-                "volume_probe_strength_label": "strong",
-                "pct_change": 1.8868,
-                "close_location": 0.5833
-              },
-              "amount_sustain_after_probe_label": "faded",
-              "amount_sustain_after_probe_ratio": 0.4187,
-              "post_probe_pct_change": -11.1111
-            },
-            "recent_overheat_signal": {
-              "recent_overheat_penalty": 0.0,
-              "recent_overheat_reason_list": []
-            }
-          },
-          "funding_willingness_signal": {
-            "funding_willingness_score": 85.36,
-            "funding_willingness_label": "strong",
-            "capital_absorption_score": 60.97,
-            "intraday_reversal_proxy_signal": {
-              "lookback_trade_days": 5,
-              "latest_reversal_day_signal": {
-                "trade_date": "2026-06-12",
-                "reversal_proxy_score": 54.0,
-                "reversal_proxy_label": "medium_intraday_reversal_proxy",
-                "low_to_close_rebound_pct": 3.4483,
-                "open_to_low_drawdown_pct": -1.9718,
-                "intraday_range_pct": 6.3218,
-                "has_large_intraday_swing": true,
-                "has_large_low_to_close_rebound": true,
-                "has_large_open_to_low_drawdown": false,
-                "close_location": 0.5455,
-                "lower_shadow_ratio": 0.3182,
-                "amount_ratio_vs_20d": 0.9426
-              },
-              "strong_reversal_day_count_5d": 3,
-              "large_swing_day_count_5d": 5,
-              "large_rebound_day_count_5d": 4,
-              "average_reversal_score_5d": 51.2,
-              "reversal_proxy_label": "medium_intraday_reversal_proxy",
-              "large_swing_threshold_pct": 2.0,
-              "recent_reversal_day_signal_list": [
-                {
-                  "trade_date": "2026-06-08",
-                  "reversal_proxy_score": 62.0,
-                  "reversal_proxy_label": "medium_intraday_reversal_proxy",
-                  "low_to_close_rebound_pct": 4.5161,
-                  "open_to_low_drawdown_pct": -1.8987,
-                  "intraday_range_pct": 7.7419,
-                  "has_large_intraday_swing": true,
-                  "has_large_low_to_close_rebound": true,
-                  "has_large_open_to_low_drawdown": false,
-                  "close_location": 0.5833,
-                  "lower_shadow_ratio": 0.25,
-                  "amount_ratio_vs_20d": 2.6798
-                },
-                {
-                  "trade_date": "2026-06-09",
-                  "reversal_proxy_score": 80.0,
-                  "reversal_proxy_label": "strong_intraday_reversal_proxy",
-                  "low_to_close_rebound_pct": 3.3245,
-                  "open_to_low_drawdown_pct": -4.8101,
-                  "intraday_range_pct": 5.7181,
-                  "has_large_intraday_swing": true,
-                  "has_large_low_to_close_rebound": true,
-                  "has_large_open_to_low_drawdown": true,
-                  "close_location": 0.5814,
-                  "lower_shadow_ratio": 0.5814,
-                  "amount_ratio_vs_20d": 1.619
-                },
-                {
-                  "trade_date": "2026-06-10",
-                  "reversal_proxy_score": 22.0,
-                  "reversal_proxy_label": "no_clear_reversal_proxy",
-                  "low_to_close_rebound_pct": 0.1422,
-                  "open_to_low_drawdown_pct": -8.1046,
-                  "intraday_range_pct": 10.0996,
-                  "has_large_intraday_swing": true,
-                  "has_large_low_to_close_rebound": false,
-                  "has_large_open_to_low_drawdown": true,
-                  "close_location": 0.0141,
-                  "lower_shadow_ratio": 0.0141,
-                  "amount_ratio_vs_20d": 1.1597
-                },
-                {
-                  "trade_date": "2026-06-11",
-                  "reversal_proxy_score": 38.0,
-                  "reversal_proxy_label": "weak_intraday_reversal_proxy",
-                  "low_to_close_rebound_pct": 3.3873,
-                  "open_to_low_drawdown_pct": -0.5857,
-                  "intraday_range_pct": 5.891,
-                  "has_large_intraday_swing": true,
-                  "has_large_low_to_close_rebound": true,
-                  "has_large_open_to_low_drawdown": false,
-                  "close_location": 0.575,
-                  "lower_shadow_ratio": 0.1,
-                  "amount_ratio_vs_20d": 0.6318
-                },
-                {
-                  "trade_date": "2026-06-12",
-                  "reversal_proxy_score": 54.0,
-                  "reversal_proxy_label": "medium_intraday_reversal_proxy",
-                  "low_to_close_rebound_pct": 3.4483,
-                  "open_to_low_drawdown_pct": -1.9718,
-                  "intraday_range_pct": 6.3218,
-                  "has_large_intraday_swing": true,
-                  "has_large_low_to_close_rebound": true,
-                  "has_large_open_to_low_drawdown": false,
-                  "close_location": 0.5455,
-                  "lower_shadow_ratio": 0.3182,
-                  "amount_ratio_vs_20d": 0.9426
-                }
-              ],
-              "method_note": "日线OHLC代理信号，只能判断低点是否被收回、是否长下影、是否放量但收盘不弱；不能证明盘中先急跌再急拉，也不能识别多次波动。"
-            },
-            "limit_up_count_60d": 2,
-            "limit_up_count_120d": 16,
-            "limit_up_count_240d": 20,
-            "limit_up_count_300d": 36,
-            "amount_expansion_3d_vs_20d": 0.9441,
-            "avg_amount_20d_yi": 6.546,
-            "avg_turnover_rate_20d": 6.4137
-          },
-          "speculation_carrier_signal": {
-            "carrier_score": 90.0,
-            "carrier_label": "strong",
-            "latest_circ_mv_yi": 96.7328,
-            "avg_turnover_rate_20d": 6.4137,
-            "concept_count": 23
-          },
-          "why_capital_may_choose_it": "中超控股当前匹配主题为航空发动机；近5/10/20日涨跌幅分别为-9.43%/3.15%/-10.11%，洗盘/出货判断为controlled_pullback；提前点火蓄势判断为controlled_pullback_watch，距60日高点回撤-30.10%，距MA20为-4.13%，换手收缩=True，放量不大涨=True；资金意愿为strong，日线急跌回拉代理为medium_intraday_reversal_proxy，近5日代理均分51.20，近5日大振幅/低点回拉天数为5/4；60/120/240/300日涨停记忆分别为2/16/20/36次，20日均成交额约6.55亿元；短线载体适配度为strong。",
-          "failure_condition": "当前主线继续退潮或主题前排不再修复；股价继续放量下跌并跌破近20日支撑；下跌日成交额持续放大且收盘靠近低位。"
-        }
-      },
-      {
-        "rank": 9,
-        "stock_code": "002201",
-        "stock_name": "九鼎新材",
-        "industry_name": "",
-        "latest_trade_date": "2026-06-12",
-        "feature_summary_text": "近20日涨幅约-14.41%，近60日涨幅约-6.90%，20/60日涨停记忆分别为0/2次，20日平均换手约5.88%，60日平均换手约8.26%，20日平均成交额约4.03亿元。",
-        "pre_ignition_setup": {
-          "pct_change_5d": 3.4059,
-          "pct_change_10d": -1.1754,
-          "pct_change_20d": -14.4088,
-          "pct_change_60d": -6.8995,
-          "position_in_60d_range": 0.123
-        },
-        "ignition_signal": {
-          "limit_up_count_3d": 0,
-          "limit_up_count_5d": 0,
-          "limit_up_count_10d": 0,
-          "limit_up_count_20d": 0,
-          "limit_up_count_60d": 2,
-          "limit_up_count_120d": 12,
-          "limit_up_count_240d": 15,
-          "limit_up_count_300d": 18,
-          "latest_limit_up_date": "2026-04-22",
-          "days_since_latest_limit_up": null
-        },
-        "intraday_reversal_proxy_signal": {
-          "lookback_trade_days": 5,
-          "latest_reversal_day_signal": {
-            "trade_date": "2026-06-12",
-            "reversal_proxy_score": 54.0,
-            "reversal_proxy_label": "medium_intraday_reversal_proxy",
-            "low_to_close_rebound_pct": 2.1495,
-            "open_to_low_drawdown_pct": -5.8927,
-            "intraday_range_pct": 7.0093,
-            "has_large_intraday_swing": true,
-            "has_large_low_to_close_rebound": true,
-            "has_large_open_to_low_drawdown": true,
-            "close_location": 0.3067,
-            "lower_shadow_ratio": 0.3067,
-            "amount_ratio_vs_20d": 1.3677
-          },
-          "strong_reversal_day_count_5d": 4,
-          "large_swing_day_count_5d": 5,
-          "large_rebound_day_count_5d": 4,
-          "average_reversal_score_5d": 51.2,
-          "reversal_proxy_label": "medium_intraday_reversal_proxy",
-          "large_swing_threshold_pct": 2.0,
-          "method_note": "日线OHLC代理信号，只能判断低点是否被收回、是否长下影、是否放量但收盘不弱；不能证明盘中先急跌再急拉，也不能识别多次波动。"
-        },
-        "capital_intent_prediction_signal": {
-          "capital_intent_score": 60.54,
-          "capital_intent_label": "medium",
-          "ignition_probability_1_3d": "medium",
-          "prediction_type": "theme_pullback_repair",
-          "theme_intent_signal": {
-            "theme_score": 0.0,
-            "theme_intent_label": "weak",
-            "matched_current_theme_list": [],
-            "matched_fine_grained_board_list": [],
-            "matched_top_board_signal_list": [],
-            "is_in_main_theme_top_candidates": false,
-            "main_theme_candidate_signal": {}
-          },
-          "ignore_theme_score": true,
-          "wash_or_distribution_signal": {
-            "wash_score": 56.0,
-            "wash_or_distribution_label": "controlled_pullback",
-            "pct_change_5d": 3.4059,
-            "pct_change_10d": -1.1754,
-            "pct_change_20d": -14.4088,
-            "recent_down_day_count_8d": 4,
-            "down_day_amount_ratio_vs_20d": 0.7867,
-            "down_day_close_strength": 0.2584,
-            "pullback_from_20d_high_pct": -15.5985,
-            "has_broken_20d_support": false
-          },
-          "pre_breakout_accumulation_signal": {
-            "accumulation_score": 46.0,
-            "accumulation_label": "controlled_pullback_watch",
-            "pullback_from_60d_high_pct": -35.1335,
-            "ma20_distance_pct": -3.5006,
-            "has_broken_20d_support": false,
-            "consolidation_range_10d_pct": 13.3663,
-            "turnover_contraction_signal": {
-              "is_turnover_contracting": false,
-              "turnover_contraction_ratio": 1.3479,
-              "decreasing_step_count_5d": 2,
-              "recent_turnover_rate_list": [
-                3.8063,
-                9.318,
-                7.8393,
-                9.3674,
-                8.3227
-              ]
-            },
-            "lower_shadow_support_signal": {
-              "lower_shadow_support_count_5d": 0,
-              "lower_shadow_ratio_list_5d": [
-                0.2034,
-                0.0471,
-                0.3462,
-                0.2278,
-                0.3067
-              ]
-            },
-            "volume_probe_signal": {
-              "has_volume_probe_without_breakout": true,
-              "latest_volume_probe_item": {
-                "trade_date": "2026-06-11",
-                "amount_ratio_vs_prior_20d": 1.5211,
-                "volume_probe_strength_label": "mild",
-                "pct_change": 2.459,
-                "close_location": 0.8101
-              },
-              "amount_sustain_after_probe_label": "sustained",
-              "amount_sustain_after_probe_ratio": 0.878,
-              "post_probe_pct_change": -2.8444
-            },
-            "recent_overheat_signal": {
-              "recent_overheat_penalty": 0.0,
-              "recent_overheat_reason_list": []
-            }
-          },
-          "funding_willingness_signal": {
-            "funding_willingness_score": 78.26,
-            "funding_willingness_label": "strong",
-            "capital_absorption_score": 37.55,
-            "intraday_reversal_proxy_signal": {
-              "lookback_trade_days": 5,
-              "latest_reversal_day_signal": {
-                "trade_date": "2026-06-12",
-                "reversal_proxy_score": 54.0,
-                "reversal_proxy_label": "medium_intraday_reversal_proxy",
-                "low_to_close_rebound_pct": 2.1495,
-                "open_to_low_drawdown_pct": -5.8927,
-                "intraday_range_pct": 7.0093,
-                "has_large_intraday_swing": true,
-                "has_large_low_to_close_rebound": true,
-                "has_large_open_to_low_drawdown": true,
-                "close_location": 0.3067,
-                "lower_shadow_ratio": 0.3067,
-                "amount_ratio_vs_20d": 1.3677
-              },
-              "strong_reversal_day_count_5d": 4,
-              "large_swing_day_count_5d": 5,
-              "large_rebound_day_count_5d": 4,
-              "average_reversal_score_5d": 51.2,
-              "reversal_proxy_label": "medium_intraday_reversal_proxy",
-              "large_swing_threshold_pct": 2.0,
-              "recent_reversal_day_signal_list": [
-                {
-                  "trade_date": "2026-06-08",
-                  "reversal_proxy_score": 28.0,
-                  "reversal_proxy_label": "no_clear_reversal_proxy",
-                  "low_to_close_rebound_pct": 1.1881,
-                  "open_to_low_drawdown_pct": -3.5339,
-                  "intraday_range_pct": 5.8416,
-                  "has_large_intraday_swing": true,
-                  "has_large_low_to_close_rebound": false,
-                  "has_large_open_to_low_drawdown": true,
-                  "close_location": 0.2034,
-                  "lower_shadow_ratio": 0.2034,
-                  "amount_ratio_vs_20d": 0.4968
-                },
-                {
-                  "trade_date": "2026-06-09",
-                  "reversal_proxy_score": 52.0,
-                  "reversal_proxy_label": "medium_intraday_reversal_proxy",
-                  "low_to_close_rebound_pct": 5.684,
-                  "open_to_low_drawdown_pct": -0.3839,
-                  "intraday_range_pct": 8.1888,
-                  "has_large_intraday_swing": true,
-                  "has_large_low_to_close_rebound": true,
-                  "has_large_open_to_low_drawdown": false,
-                  "close_location": 0.6941,
-                  "lower_shadow_ratio": 0.0471,
-                  "amount_ratio_vs_20d": 1.3711
-                },
-                {
-                  "trade_date": "2026-06-10",
-                  "reversal_proxy_score": 58.0,
-                  "reversal_proxy_label": "medium_intraday_reversal_proxy",
-                  "low_to_close_rebound_pct": 3.8789,
-                  "open_to_low_drawdown_pct": -1.6744,
-                  "intraday_range_pct": 4.9196,
-                  "has_large_intraday_swing": true,
-                  "has_large_low_to_close_rebound": true,
-                  "has_large_open_to_low_drawdown": false,
-                  "close_location": 0.7885,
-                  "lower_shadow_ratio": 0.3462,
-                  "amount_ratio_vs_20d": 1.1767
-                },
-                {
-                  "trade_date": "2026-06-11",
-                  "reversal_proxy_score": 64.0,
-                  "reversal_proxy_label": "medium_intraday_reversal_proxy",
-                  "low_to_close_rebound_pct": 6.032,
-                  "open_to_low_drawdown_pct": -1.6682,
-                  "intraday_range_pct": 7.4458,
-                  "has_large_intraday_swing": true,
-                  "has_large_low_to_close_rebound": true,
-                  "has_large_open_to_low_drawdown": false,
-                  "close_location": 0.8101,
-                  "lower_shadow_ratio": 0.2278,
-                  "amount_ratio_vs_20d": 1.5211
-                },
-                {
-                  "trade_date": "2026-06-12",
-                  "reversal_proxy_score": 54.0,
-                  "reversal_proxy_label": "medium_intraday_reversal_proxy",
-                  "low_to_close_rebound_pct": 2.1495,
-                  "open_to_low_drawdown_pct": -5.8927,
-                  "intraday_range_pct": 7.0093,
-                  "has_large_intraday_swing": true,
-                  "has_large_low_to_close_rebound": true,
-                  "has_large_open_to_low_drawdown": true,
-                  "close_location": 0.3067,
-                  "lower_shadow_ratio": 0.3067,
-                  "amount_ratio_vs_20d": 1.3677
-                }
-              ],
-              "method_note": "日线OHLC代理信号，只能判断低点是否被收回、是否长下影、是否放量但收盘不弱；不能证明盘中先急跌再急拉，也不能识别多次波动。"
-            },
-            "limit_up_count_60d": 2,
-            "limit_up_count_120d": 12,
-            "limit_up_count_240d": 15,
-            "limit_up_count_300d": 18,
-            "amount_expansion_3d_vs_20d": 1.4002,
-            "avg_amount_20d_yi": 4.0266,
-            "avg_turnover_rate_20d": 5.8793
-          },
-          "speculation_carrier_signal": {
-            "carrier_score": 90.0,
-            "carrier_label": "strong",
-            "latest_circ_mv_yi": 65.8011,
-            "avg_turnover_rate_20d": 5.8793,
-            "concept_count": 8
-          },
-          "why_capital_may_choose_it": "九鼎新材当前匹配主题为未明显命中当前主线；近5/10/20日涨跌幅分别为3.41%/-1.18%/-14.41%，洗盘/出货判断为controlled_pullback；提前点火蓄势判断为controlled_pullback_watch，距60日高点回撤-35.13%，距MA20为-3.50%，换手收缩=False，放量不大涨=True；资金意愿为strong，日线急跌回拉代理为medium_intraday_reversal_proxy，近5日代理均分51.20，近5日大振幅/低点回拉天数为5/4；60/120/240/300日涨停记忆分别为2/12/15/18次，20日均成交额约4.03亿元；短线载体适配度为strong。",
-          "failure_condition": "当前主线继续退潮或主题前排不再修复；股价继续放量下跌并跌破近20日支撑；下跌日成交额持续放大且收盘靠近低位。"
-        }
-      },
-      {
-        "rank": 10,
-        "stock_code": "600255",
-        "stock_name": "鑫科材料",
-        "industry_name": "小金属",
-        "latest_trade_date": "2026-06-12",
-        "feature_summary_text": "近20日涨幅约18.91%，近60日涨幅约15.92%，20/60日涨停记忆分别为3/3次，20日平均换手约11.94%，60日平均换手约5.68%，20日平均成交额约9.26亿元。",
-        "pre_ignition_setup": {
-          "pct_change_5d": -7.5724,
-          "pct_change_10d": 17.2316,
-          "pct_change_20d": 18.9112,
-          "pct_change_60d": 15.9218,
-          "position_in_60d_range": 0.6201
-        },
-        "ignition_signal": {
-          "limit_up_count_3d": 0,
-          "limit_up_count_5d": 0,
-          "limit_up_count_10d": 3,
-          "limit_up_count_20d": 3,
-          "limit_up_count_60d": 3,
-          "limit_up_count_120d": 3,
-          "limit_up_count_240d": 5,
-          "limit_up_count_300d": 5,
-          "latest_limit_up_date": "2026-06-04",
-          "days_since_latest_limit_up": null
-        },
-        "intraday_reversal_proxy_signal": {
-          "lookback_trade_days": 5,
-          "latest_reversal_day_signal": {
-            "trade_date": "2026-06-12",
-            "reversal_proxy_score": 34.0,
-            "reversal_proxy_label": "no_clear_reversal_proxy",
-            "low_to_close_rebound_pct": 1.467,
-            "open_to_low_drawdown_pct": -1.9185,
-            "intraday_range_pct": 5.1345,
-            "has_large_intraday_swing": true,
-            "has_large_low_to_close_rebound": false,
-            "has_large_open_to_low_drawdown": false,
-            "close_location": 0.2857,
-            "lower_shadow_ratio": 0.2857,
-            "amount_ratio_vs_20d": 1.5997
-          },
-          "strong_reversal_day_count_5d": 3,
-          "large_swing_day_count_5d": 5,
-          "large_rebound_day_count_5d": 2,
-          "average_reversal_score_5d": 48.0,
-          "reversal_proxy_label": "weak_intraday_reversal_proxy",
-          "large_swing_threshold_pct": 2.0,
-          "method_note": "日线OHLC代理信号，只能判断低点是否被收回、是否长下影、是否放量但收盘不弱；不能证明盘中先急跌再急拉，也不能识别多次波动。"
-        },
-        "capital_intent_prediction_signal": {
-          "capital_intent_score": 59.1,
-          "capital_intent_label": "medium",
-          "ignition_probability_1_3d": "low",
-          "prediction_type": "pre_breakout_accumulation",
-          "theme_intent_signal": {
-            "theme_score": 0.0,
-            "theme_intent_label": "weak",
-            "matched_current_theme_list": [],
-            "matched_fine_grained_board_list": [],
-            "matched_top_board_signal_list": [],
-            "is_in_main_theme_top_candidates": false,
-            "main_theme_candidate_signal": {}
-          },
-          "ignore_theme_score": true,
-          "wash_or_distribution_signal": {
-            "wash_score": 42.0,
-            "wash_or_distribution_label": "controlled_pullback",
-            "pct_change_5d": -7.5724,
-            "pct_change_10d": 17.2316,
-            "pct_change_20d": 18.9112,
-            "recent_down_day_count_8d": 4,
-            "down_day_amount_ratio_vs_20d": 1.9162,
-            "down_day_close_strength": 0.1512,
-            "pullback_from_20d_high_pct": -14.0787,
-            "has_broken_20d_support": false
-          },
-          "pre_breakout_accumulation_signal": {
-            "accumulation_score": 62.0,
-            "accumulation_label": "pre_breakout_accumulation",
-            "pullback_from_60d_high_pct": -14.0787,
-            "ma20_distance_pct": 4.798,
-            "has_broken_20d_support": false,
-            "consolidation_range_10d_pct": 38.7931,
-            "turnover_contraction_signal": {
-              "is_turnover_contracting": false,
-              "turnover_contraction_ratio": 0.8877,
-              "decreasing_step_count_5d": 3,
-              "recent_turnover_rate_list": [
-                27.4945,
-                21.6866,
-                16.8667,
-                25.3766,
-                18.2825
-              ]
-            },
-            "lower_shadow_support_signal": {
-              "lower_shadow_support_count_5d": 0,
-              "lower_shadow_ratio_list_5d": [
-                0.0943,
-                0.2222,
-                0.0,
-                0.0,
-                0.2857
-              ]
-            },
-            "volume_probe_signal": {
-              "has_volume_probe_without_breakout": true,
-              "latest_volume_probe_item": {
-                "trade_date": "2026-06-08",
-                "amount_ratio_vs_prior_20d": 4.2332,
-                "volume_probe_strength_label": "very_strong",
-                "pct_change": 2.6726,
-                "close_location": 0.5849
-              },
-              "amount_sustain_after_probe_label": "faded",
-              "amount_sustain_after_probe_ratio": 0.7005,
-              "post_probe_pct_change": -9.9783
-            },
-            "recent_overheat_signal": {
-              "recent_overheat_penalty": 0.0,
-              "recent_overheat_reason_list": []
-            }
-          },
-          "funding_willingness_signal": {
-            "funding_willingness_score": 58.25,
-            "funding_willingness_label": "medium",
-            "capital_absorption_score": 43.86,
-            "intraday_reversal_proxy_signal": {
-              "lookback_trade_days": 5,
-              "latest_reversal_day_signal": {
-                "trade_date": "2026-06-12",
-                "reversal_proxy_score": 34.0,
-                "reversal_proxy_label": "no_clear_reversal_proxy",
-                "low_to_close_rebound_pct": 1.467,
-                "open_to_low_drawdown_pct": -1.9185,
-                "intraday_range_pct": 5.1345,
-                "has_large_intraday_swing": true,
-                "has_large_low_to_close_rebound": false,
-                "has_large_open_to_low_drawdown": false,
-                "close_location": 0.2857,
-                "lower_shadow_ratio": 0.2857,
-                "amount_ratio_vs_20d": 1.5997
-              },
-              "strong_reversal_day_count_5d": 3,
-              "large_swing_day_count_5d": 5,
-              "large_rebound_day_count_5d": 2,
-              "average_reversal_score_5d": 48.0,
-              "reversal_proxy_label": "weak_intraday_reversal_proxy",
-              "large_swing_threshold_pct": 2.0,
-              "recent_reversal_day_signal_list": [
-                {
-                  "trade_date": "2026-06-08",
-                  "reversal_proxy_score": 56.0,
-                  "reversal_proxy_label": "medium_intraday_reversal_proxy",
-                  "low_to_close_rebound_pct": 7.2093,
-                  "open_to_low_drawdown_pct": -1.1494,
-                  "intraday_range_pct": 12.3256,
-                  "has_large_intraday_swing": true,
-                  "has_large_low_to_close_rebound": true,
-                  "has_large_open_to_low_drawdown": false,
-                  "close_location": 0.5849,
-                  "lower_shadow_ratio": 0.0943,
-                  "amount_ratio_vs_20d": 4.2332
-                },
-                {
-                  "trade_date": "2026-06-09",
-                  "reversal_proxy_score": 52.0,
-                  "reversal_proxy_label": "medium_intraday_reversal_proxy",
-                  "low_to_close_rebound_pct": 1.8265,
-                  "open_to_low_drawdown_pct": -4.9892,
-                  "intraday_range_pct": 8.2192,
-                  "has_large_intraday_swing": true,
-                  "has_large_low_to_close_rebound": false,
-                  "has_large_open_to_low_drawdown": true,
-                  "close_location": 0.2222,
-                  "lower_shadow_ratio": 0.2222,
-                  "amount_ratio_vs_20d": 2.7596
-                },
-                {
-                  "trade_date": "2026-06-10",
-                  "reversal_proxy_score": 34.0,
-                  "reversal_proxy_label": "no_clear_reversal_proxy",
-                  "low_to_close_rebound_pct": 0.0,
-                  "open_to_low_drawdown_pct": -7.8161,
-                  "intraday_range_pct": 9.2269,
-                  "has_large_intraday_swing": true,
-                  "has_large_low_to_close_rebound": false,
-                  "has_large_open_to_low_drawdown": true,
-                  "close_location": 0.0,
-                  "lower_shadow_ratio": 0.0,
-                  "amount_ratio_vs_20d": 1.7307
-                },
-                {
-                  "trade_date": "2026-06-11",
-                  "reversal_proxy_score": 64.0,
-                  "reversal_proxy_label": "medium_intraday_reversal_proxy",
-                  "low_to_close_rebound_pct": 9.4872,
-                  "open_to_low_drawdown_pct": 0.0,
-                  "intraday_range_pct": 13.0769,
-                  "has_large_intraday_swing": true,
-                  "has_large_low_to_close_rebound": true,
-                  "has_large_open_to_low_drawdown": false,
-                  "close_location": 0.7255,
-                  "lower_shadow_ratio": 0.0,
-                  "amount_ratio_vs_20d": 2.5449
-                },
-                {
-                  "trade_date": "2026-06-12",
-                  "reversal_proxy_score": 34.0,
-                  "reversal_proxy_label": "no_clear_reversal_proxy",
-                  "low_to_close_rebound_pct": 1.467,
-                  "open_to_low_drawdown_pct": -1.9185,
-                  "intraday_range_pct": 5.1345,
-                  "has_large_intraday_swing": true,
-                  "has_large_low_to_close_rebound": false,
-                  "has_large_open_to_low_drawdown": false,
-                  "close_location": 0.2857,
-                  "lower_shadow_ratio": 0.2857,
-                  "amount_ratio_vs_20d": 1.5997
-                }
-              ],
-              "method_note": "日线OHLC代理信号，只能判断低点是否被收回、是否长下影、是否放量但收盘不弱；不能证明盘中先急跌再急拉，也不能识别多次波动。"
-            },
-            "limit_up_count_60d": 3,
-            "limit_up_count_120d": 3,
-            "limit_up_count_240d": 5,
-            "limit_up_count_300d": 5,
-            "amount_expansion_3d_vs_20d": 1.659,
-            "avg_amount_20d_yi": 9.2598,
-            "avg_turnover_rate_20d": 11.9379
-          },
-          "speculation_carrier_signal": {
-            "carrier_score": 90.0,
-            "carrier_label": "strong",
-            "latest_circ_mv_yi": 74.9551,
-            "avg_turnover_rate_20d": 11.9379,
-            "concept_count": 5
-          },
-          "why_capital_may_choose_it": "鑫科材料当前匹配主题为未明显命中当前主线；近5/10/20日涨跌幅分别为-7.57%/17.23%/18.91%，洗盘/出货判断为controlled_pullback；提前点火蓄势判断为pre_breakout_accumulation，距60日高点回撤-14.08%，距MA20为4.80%，换手收缩=False，放量不大涨=True；资金意愿为medium，日线急跌回拉代理为weak_intraday_reversal_proxy，近5日代理均分48.00，近5日大振幅/低点回拉天数为5/2；60/120/240/300日涨停记忆分别为3/3/5/5次，20日均成交额约9.26亿元；短线载体适配度为strong。",
+          "why_capital_may_choose_it": "永太科技当前匹配主题为锂；近5/10/20日涨跌幅分别为-2.14%/7.22%/0.36%，洗盘/出货判断为controlled_pullback；提前点火蓄势判断为controlled_pullback_watch，距60日高点回撤-19.03%，距MA20为1.32%，换手收缩=False，放量不大涨=False；资金意愿为medium，日线急跌回拉代理为weak_intraday_reversal_proxy，近5日代理均分41.20，近5日大振幅/低点回拉天数为5/2；60/120/240/300日涨停记忆分别为0/2/8/8次，20日均成交额约8.88亿元；短线载体适配度为strong。",
           "failure_condition": "当前主线继续退潮或主题前排不再修复；股价继续放量下跌并跌破近20日支撑；下跌日成交额持续放大且收盘靠近低位。"
         }
       }
     ],
     "summary": {
-      "total_stock_profile_count": 500,
-      "predicted_candidate_count": 36,
+      "total_stock_profile_count": 501,
+      "predicted_candidate_count": 39,
       "selected_candidate_count": 10,
-      "strong_or_medium_intent_count": 10,
+      "strong_or_medium_intent_count": 7,
       "prediction_type_count_map": {
-        "pre_breakout_accumulation": 6,
-        "theme_pullback_repair": 4
+        "theme_pullback_repair": 5,
+        "pre_breakout_accumulation": 3,
+        "low_position_supplement": 2
       },
       "theme_count_map": {
-        "氟化工": 3,
-        "氟化工概念": 3,
-        "PCB": 1,
-        "光刻胶": 1,
-        "航空发动机": 1
+        "芯片": 2,
+        "锂": 2,
+        "半导体": 1,
+        "小金属": 1,
+        "电子化学品": 1,
+        "固态电池": 1,
+        "稀土": 1
       }
     }
   }
