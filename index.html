@@ -4626,7 +4626,7 @@ const INLINE_OPEN_DIP = {
   "open_dip_buy_db": {}
 };
 const INLINE_PUBLISH_GENERATED_AT = {
-  "generated_at": "2026-06-16 22:00:05"
+  "generated_at": "2026-06-17 10:26:08"
 };
 
 const STOCK_SEARCH_INDEX_URL = 'data/stock_search_index.json';
@@ -4783,6 +4783,20 @@ function renderCANSLIM(verdict) {
   return '<div class="canslim-row">' + dims.map(([k,v]) =>
     `<span class="canslim-dim ${dimClass(v)}">${k}: ${esc(v)}</span>`
   ).join('') + '</div>';
+}
+
+function buildTop8DimensionSummary(verdict) {
+  if (!verdict) return '';
+  const summaryPartList = [
+    `M主线 ${verdict.M_market_theme || '-'}`,
+    `C业绩 ${verdict.C_current_earnings || '-'}`,
+    `A成长 ${verdict.A_annual_growth || '-'}`,
+    `N新变量 ${verdict.N_new_factor || '-'}`,
+    `S承接 ${verdict.S_supply_demand || '-'}`,
+    `L地位 ${verdict.L_leader_laggard || '-'}`,
+    `I机构 ${verdict.I_institutional_sponsorship || '-'}`,
+  ];
+  return `7维判断：${summaryPartList.join(' · ')}`;
 }
 
 function formatTargetRange(targetRange) {
@@ -5096,6 +5110,7 @@ function renderStock(stock, openDipData, stopLossData) {
   const gaps = stock.evidence_gap || [];
   const targetPriceJudgment = stock.target_price_judgment || null;
   const calculatorSignal = stock.oneil_calculator_signal || null;
+  const dimensionSummaryText = buildTop8DimensionSummary(verdict);
 
   return `
   <div class="card">
@@ -5110,6 +5125,7 @@ function renderStock(stock, openDipData, stopLossData) {
     <div style="margin-bottom:6px">${themes.map(t => `<span class="theme-tag">${esc(t)}</span>`).join('')}
       <span class="theme-tag" style="background:rgba(240,136,62,0.12);color:var(--orange)">${esc(stock.primary_theme)}</span>
     </div>
+    ${dimensionSummaryText ? `<div style="margin-bottom:8px;font-size:0.76em;color:var(--text2)">这只股票是通过 CAN SLIM 七个维度综合分析后入选的：${esc(dimensionSummaryText)}</div>` : ''}
     ${renderTargetPriceJudgment(targetPriceJudgment, calculatorSignal)}
     <div class="collapsible" onclick="toggleCollapse(this)">
       <strong style="font-size:0.85em">入选理由</strong><span class="collapse-icon">▶</span>
@@ -5323,12 +5339,13 @@ async function render() {
 
   html += renderThemes(themeData);
   html += renderFutureEvents(futureData);
-  html += renderBoardStockCapitalIntent(boardStockData);
-  html += renderStaticStockSearch(searchLibrary);
 
   html += `<div class="section"><h2>推荐 Top 8</h2>`;
   html += selected.map(s => renderStock(s, openDipData, stopLossData)).join('');
   html += `</div>`;
+
+  html += renderBoardStockCapitalIntent(boardStockData);
+  html += renderStaticStockSearch(searchLibrary);
 
   html += `<div class="footer">AI智能股票推荐 · 数据仅供参考，不构成投资建议</div>`;
 
