@@ -4626,7 +4626,7 @@ const INLINE_OPEN_DIP = {
   "open_dip_buy_db": {}
 };
 const INLINE_PUBLISH_GENERATED_AT = {
-  "generated_at": "2026-06-17 10:26:08"
+  "generated_at": "2026-06-17 10:26:50"
 };
 
 const STOCK_SEARCH_INDEX_URL = 'data/stock_search_index.json';
@@ -5274,7 +5274,7 @@ function renderBoardStockCapitalIntent(boardStockData) {
     .filter(Boolean);
   return `
     <div class="section">
-      <h2>短线投资</h2>
+      <h2>短线投资 <span style="color:var(--red);font-weight:700">! 高风险投资</span></h2>
       <div class="subtitle">
         About：搜寻游资、量化潜在的埋伏股，博涨停机会。<br>
         数据日期: ${esc(resultDate)} &nbsp;|&nbsp; 展示前 ${visibleList.length} / ${candidateList.length} 只
