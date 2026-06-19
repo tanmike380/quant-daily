@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-06-15",
-  "source_result_date": "2026-06-12",
+  "updated_at": "2026-06-19",
+  "source_result_date": "2026-06-18",
   "target_price_calculator_db": {
     "000001": {
       "stock_code": "000001",
@@ -14906,10 +14906,10 @@
     "600673": {
       "stock_code": "600673",
       "stock_name": "东阳光",
-      "updated_at": "2026-06-11",
-      "source_result_date": "2026-06-11",
-      "latest_trade_date": "2026-06-11",
-      "latest_close_price": 33.14,
+      "updated_at": "2026-06-19",
+      "source_result_date": "2026-06-18",
+      "latest_trade_date": "2026-06-18",
+      "latest_close_price": 36.26,
       "research_coverage_status": "limited_fallback",
       "target_price_calculator_signal": {
         "version": "oneil_calculator_v2",
@@ -14918,28 +14918,28 @@
           "source": "rule_fallback",
           "reason_text": "行业/主题包含电力、煤炭、油气、航运或资源周期属性。"
         },
-        "current_price": 33.14,
+        "current_price": 36.26,
         "predicted_upside_pct_range": {
           "low": 0.0,
           "center": 0.0,
-          "high": 4.0133
+          "high": 3.9989
         },
         "predicted_target_price_range": {
-          "low": 33.14,
-          "center": 33.14,
-          "high": 34.47,
+          "low": 36.26,
+          "center": 36.26,
+          "high": 37.71,
           "currency": "CNY"
         },
         "target_price_calculation_signal": {
           "status": "new_calculation",
           "source": "oneil_calculator",
           "target_price_range": {
-            "low": 33.14,
-            "center": 33.14,
-            "high": 34.47,
+            "low": 36.26,
+            "center": 36.26,
+            "high": 37.71,
             "currency": "CNY"
           },
-          "current_price": 33.14,
+          "current_price": 36.26,
           "reason_text": "使用本次 calculator 刷新计算区间。"
         },
         "expert_target_validation_signal": {
@@ -14947,7 +14947,7 @@
           "reason_text": "机构目标区间没有可用中枢。"
         },
         "confidence_label": "low",
-        "reason_text": "已读取最新收盘价，预估增长0.0%，CAN SLIM 重估溢价-0.44%，估值/风险折价0.0%；根据增长兑现、估值重估、主线相关度、相对强度和风险惩罚计算参考上行区间为 +0.00% 至 +4.01%，未融合有效机构目标区间；目标区间计算状态=new_calculation。"
+        "reason_text": "已读取最新收盘价，预估增长0.0%，CAN SLIM 重估溢价-0.44%，估值/风险折价0.0%；根据增长兑现、估值重估、主线相关度、相对强度和风险惩罚计算参考上行区间为 +0.00% 至 +4.00%，未融合有效机构目标区间；目标区间计算状态=new_calculation。"
       }
     },
     "600683": {
@@ -23697,6 +23697,100 @@
         },
         "confidence_label": "high",
         "reason_text": "已读取最新收盘价，预估增长3.5924%，CAN SLIM 重估溢价-8.025%，估值/风险折价12.0%；根据增长兑现、估值重估、主线相关度、相对强度和风险惩罚计算参考上行区间为 +17.00% 至 +27.00%，并融合机构目标区间隐含涨幅 63.00%；目标区间计算状态=new_calculation。"
+      }
+    },
+    "002837": {
+      "stock_code": "002837",
+      "stock_name": "英维克",
+      "updated_at": "2026-06-19",
+      "source_result_date": "2026-06-18",
+      "latest_trade_date": "2026-06-18",
+      "latest_close_price": 74.37,
+      "research_coverage_status": "limited_fallback",
+      "target_price_calculator_signal": {
+        "version": "oneil_calculator_v2",
+        "weight_profile_signal": {
+          "profile_name": "high_beta_breakout",
+          "source": "rule_fallback",
+          "reason_text": "科技主线但龙头地位不够明确，按高波动弹性配置。"
+        },
+        "current_price": 74.37,
+        "predicted_upside_pct_range": {
+          "low": 0.0,
+          "center": 0.0,
+          "high": 5.002
+        },
+        "predicted_target_price_range": {
+          "low": 74.37,
+          "center": 74.37,
+          "high": 78.09,
+          "currency": "CNY"
+        },
+        "target_price_calculation_signal": {
+          "status": "new_calculation",
+          "source": "oneil_calculator",
+          "target_price_range": {
+            "low": 74.37,
+            "center": 74.37,
+            "high": 78.09,
+            "currency": "CNY"
+          },
+          "current_price": 74.37,
+          "reason_text": "使用本次 calculator 刷新计算区间。"
+        },
+        "expert_target_validation_signal": {
+          "status": "missing",
+          "reason_text": "机构目标区间没有可用中枢。"
+        },
+        "confidence_label": "low",
+        "reason_text": "已读取最新收盘价，预估增长0.0%，CAN SLIM 重估溢价-0.6%，估值/风险折价0.0%；根据增长兑现、估值重估、主线相关度、相对强度和风险惩罚计算参考上行区间为 +0.00% 至 +5.00%，未融合有效机构目标区间；目标区间计算状态=new_calculation。"
+      }
+    },
+    "300395": {
+      "stock_code": "300395",
+      "stock_name": "菲利华",
+      "updated_at": "2026-06-19",
+      "source_result_date": "2026-06-18",
+      "latest_trade_date": "2026-06-18",
+      "latest_close_price": 135.75,
+      "research_coverage_status": "limited_fallback",
+      "target_price_calculator_signal": {
+        "version": "oneil_calculator_v2",
+        "weight_profile_signal": {
+          "profile_name": "high_beta_breakout",
+          "source": "rule_fallback",
+          "reason_text": "科技主线但龙头地位不够明确，按高波动弹性配置。"
+        },
+        "current_price": 135.75,
+        "predicted_upside_pct_range": {
+          "low": 0.0,
+          "center": 0.0,
+          "high": 5.0018
+        },
+        "predicted_target_price_range": {
+          "low": 135.75,
+          "center": 135.75,
+          "high": 142.54,
+          "currency": "CNY"
+        },
+        "target_price_calculation_signal": {
+          "status": "new_calculation",
+          "source": "oneil_calculator",
+          "target_price_range": {
+            "low": 135.75,
+            "center": 135.75,
+            "high": 142.54,
+            "currency": "CNY"
+          },
+          "current_price": 135.75,
+          "reason_text": "使用本次 calculator 刷新计算区间。"
+        },
+        "expert_target_validation_signal": {
+          "status": "missing",
+          "reason_text": "机构目标区间没有可用中枢。"
+        },
+        "confidence_label": "low",
+        "reason_text": "已读取最新收盘价，预估增长0.0%，CAN SLIM 重估溢价-0.6%，估值/风险折价0.0%；根据增长兑现、估值重估、主线相关度、相对强度和风险惩罚计算参考上行区间为 +0.00% 至 +5.00%，未融合有效机构目标区间；目标区间计算状态=new_calculation。"
       }
     }
   }
