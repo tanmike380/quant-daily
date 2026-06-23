@@ -4711,7 +4711,7 @@ const INLINE_OPEN_DIP = {
   "open_dip_buy_db": {}
 };
 const INLINE_PUBLISH_GENERATED_AT = {
-  "generated_at": "2026-06-23 00:08:27"
+  "generated_at": "2026-06-23 10:33:30"
 };
 
 const STOCK_SEARCH_INDEX_URL = 'data/stock_search_index.json';
@@ -4720,6 +4720,7 @@ const STOP_LOSS_DB_URL = 'data/intraday_stop_loss_db.json';
 const CAN_SLIM_RESEARCH_DB_URL = 'data/can_slim_research_db.json';
 const TARGET_PRICE_CALCULATOR_DB_URL = 'data/target_price_calculator_db.json';
 const BOARD_STOCK_DB_URL = 'data/board_stock_capital_intent_prediction.json';
+const AI_PREFERENCE_STOCK_STATS_URL = 'data/ai_preference_stock_stats.json';
 
 async function loadJSON(url) {
   try {
@@ -5372,6 +5373,40 @@ function renderBoardStockCapitalIntent(boardStockData) {
     </div>`;
 }
 
+function renderAiPreferenceStockStats(aiPreferenceData) {
+  const root = aiPreferenceData && aiPreferenceData.ai_preference_stock_stats
+    ? aiPreferenceData.ai_preference_stock_stats
+    : {};
+  const stockList = root.top_stock_list || [];
+  if (!stockList.length) return '';
+  return `
+    <div class="section">
+      <h2>AI偏好股</h2>
+      <div class="subtitle">
+        About：统计主系统历史 Top8 中出现次数最多的 10 只股票，可作为重点观察池。<br>
+        统计区间: ${esc(root.start_date || '-')} ~ ${esc(root.end_date || '-')}
+        &nbsp;|&nbsp; 覆盖天数: ${esc(root.coverage_day_count ?? '-')}
+      </div>
+      ${stockList.map((stock, index) => `
+        <div class="card">
+          <div class="card-header">
+            <span class="rank-badge ${index + 1 <= 3 ? 'rank-' + (index + 1) : ''}">${index + 1}</span>
+            <span class="stock-name">${esc(stock.stock_name || '-')}</span>
+            <span class="stock-code">${esc(stock.stock_code || '')}</span>
+            <span class="score-badge score-mid">出现 ${esc(stock.appearance_count ?? '-')} 次</span>
+          </div>
+          <div class="meta">
+            Top3 次数: ${esc(stock.top3_count ?? '-')}
+            &nbsp;|&nbsp; 最佳排名: ${esc(stock.best_rank ?? '-')}
+            &nbsp;|&nbsp; 平均排名: ${esc(stock.avg_rank ?? '-')}
+            &nbsp;|&nbsp; 最近出现: ${esc(stock.last_seen_date || '-')}
+            ${stock.primary_theme ? `&nbsp;|&nbsp; 主主题: ${esc(stock.primary_theme)}` : ''}
+          </div>
+        </div>
+      `).join('')}
+    </div>`;
+}
+
 function toggleCollapse(el) {
   const content = el.nextElementSibling;
   const icon = el.querySelector('.collapse-icon');
@@ -5391,6 +5426,7 @@ async function render() {
   const themeData = INLINE_THEME;
   const openDipData = await loadJSON(OPEN_DIP_DB_URL) || INLINE_OPEN_DIP;
   const boardStockData = await loadJSON(BOARD_STOCK_DB_URL) || {board_stock_capital_intent_prediction_result: {}};
+  const aiPreferenceData = await loadJSON(AI_PREFERENCE_STOCK_STATS_URL) || {ai_preference_stock_stats: {}};
 
   const app = document.getElementById('app');
 
@@ -5429,6 +5465,7 @@ async function render() {
   html += selected.map(s => renderStock(s, openDipData, stopLossData)).join('');
   html += `</div>`;
 
+  html += renderAiPreferenceStockStats(aiPreferenceData);
   html += renderBoardStockCapitalIntent(boardStockData);
   html += renderStaticStockSearch(searchLibrary);
 
