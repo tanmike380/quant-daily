@@ -4711,7 +4711,7 @@ const INLINE_OPEN_DIP = {
   "open_dip_buy_db": {}
 };
 const INLINE_PUBLISH_GENERATED_AT = {
-  "generated_at": "2026-06-23 11:18:11"
+  "generated_at": "2026-06-23 15:04:30"
 };
 
 const STOCK_SEARCH_INDEX_URL = 'data/stock_search_index.json';
@@ -5195,7 +5195,6 @@ function renderStock(stock, openDipData, stopLossData) {
   const gaps = stock.evidence_gap || [];
   const targetPriceJudgment = stock.target_price_judgment || null;
   const calculatorSignal = stock.oneil_calculator_signal || null;
-  const dimensionSummaryText = buildTop8DimensionSummary(verdict);
 
   return `
   <div class="card">
@@ -5210,7 +5209,7 @@ function renderStock(stock, openDipData, stopLossData) {
     <div style="margin-bottom:6px">${themes.map(t => `<span class="theme-tag">${esc(t)}</span>`).join('')}
       <span class="theme-tag" style="background:rgba(240,136,62,0.12);color:var(--orange)">${esc(stock.primary_theme)}</span>
     </div>
-    ${dimensionSummaryText ? `<div style="margin-bottom:8px;font-size:0.76em;color:var(--text2)">这只股票是通过 CAN SLIM 七个维度综合分析后入选的：${esc(dimensionSummaryText)}</div>` : ''}
+    ${renderCANSLIM(verdict)}
     ${renderTargetPriceJudgment(targetPriceJudgment, calculatorSignal)}
     <div class="collapsible" onclick="toggleCollapse(this)">
       <strong style="font-size:0.85em">入选理由</strong><span class="collapse-icon">▶</span>
