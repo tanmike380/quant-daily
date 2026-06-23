@@ -4711,7 +4711,7 @@ const INLINE_OPEN_DIP = {
   "open_dip_buy_db": {}
 };
 const INLINE_PUBLISH_GENERATED_AT = {
-  "generated_at": "2026-06-23 10:48:13"
+  "generated_at": "2026-06-23 11:08:44"
 };
 
 const STOCK_SEARCH_INDEX_URL = 'data/stock_search_index.json';
@@ -4719,7 +4719,6 @@ const OPEN_DIP_DB_URL = 'data/open_dip_buy_db.json';
 const STOP_LOSS_DB_URL = 'data/intraday_stop_loss_db.json';
 const CAN_SLIM_RESEARCH_DB_URL = 'data/can_slim_research_db.json';
 const TARGET_PRICE_CALCULATOR_DB_URL = 'data/target_price_calculator_db.json';
-const BOARD_STOCK_DB_URL = 'data/board_stock_capital_intent_prediction.json';
 const AI_PREFERENCE_STOCK_STATS_URL = 'data/ai_preference_stock_stats.json';
 
 async function loadJSON(url) {
@@ -5287,92 +5286,6 @@ function renderFutureEvents(futureData) {
   </div>`;
 }
 
-function boardIntentScoreClass(score) {
-  const numericScore = Number(score);
-  if (numericScore >= 70) return 'score-high';
-  if (numericScore >= 50) return 'score-mid';
-  return 'score-low';
-}
-
-function formatBoardThemeList(themeSignal) {
-  const themeList = themeSignal && themeSignal.matched_current_theme_list
-    ? themeSignal.matched_current_theme_list
-    : [];
-  if (!themeList.length) return '<span class="theme-tag">主线证据不足</span>';
-  return themeList.map(themeName => `<span class="theme-tag">${esc(themeName)}</span>`).join('');
-}
-
-function renderBoardStockCard(stock) {
-  const signal = stock.capital_intent_prediction_signal || {};
-  const themeSignal = signal.theme_intent_signal || {};
-  const washSignal = signal.wash_or_distribution_signal || {};
-  const fundingSignal = signal.funding_willingness_signal || {};
-  const carrierSignal = signal.speculation_carrier_signal || {};
-  const setup = stock.pre_ignition_setup || {};
-  const detailHtml = `
-      <div class="board-stock-meta">
-        ${esc(signal.capital_intent_label || '-')} · ${esc(signal.ignition_probability_1_3d || '-')} · ${esc(signal.prediction_type || '-')}
-      </div>
-      <div class="board-stock-line">
-        洗盘/出货: ${esc(washSignal.wash_or_distribution_label || '-')}
-        · 5/10/20日: ${formatPct(setup.pct_change_5d)} / ${formatPct(setup.pct_change_10d)} / ${formatPct(setup.pct_change_20d)}
-      </div>
-      <div class="board-stock-line">
-        资金: ${esc(fundingSignal.funding_willingness_label || '-')}
-        · 60日涨停 ${esc(fundingSignal.limit_up_count_60d ?? '-')} 次
-        · 20日均额 ${esc(fundingSignal.avg_amount_20d_yi ?? '-')} 亿
-      </div>
-      <div class="board-stock-line">
-        载体: ${esc(carrierSignal.carrier_label || '-')}
-        · 流通市值 ${esc(carrierSignal.latest_circ_mv_yi ?? '-')} 亿
-        · 20日换手 ${formatPct(carrierSignal.avg_turnover_rate_20d)}
-      </div>
-      ${signal.why_capital_may_choose_it ? `<div class="board-stock-reason">${esc(signal.why_capital_may_choose_it)}</div>` : ''}
-      ${signal.failure_condition ? `<div class="board-stock-risk">失效条件: ${esc(signal.failure_condition)}</div>` : ''}
-  `;
-  return `
-    <div class="board-stock-card">
-      <div class="card-header" style="margin-bottom:6px">
-        <span class="rank-badge">${esc(stock.rank || '-')}</span>
-        <span class="stock-name">${esc(stock.stock_name || '-')}</span>
-        <span class="stock-code">${esc(stock.stock_code || '')}</span>
-        <span class="score-badge ${boardIntentScoreClass(signal.capital_intent_score)}">意愿 ${esc(signal.capital_intent_score || '-')}</span>
-      </div>
-      <div>${formatBoardThemeList(themeSignal)}</div>
-      <details class="board-stock-details">
-        <summary>展开短线逻辑</summary>
-        ${detailHtml}
-      </details>
-    </div>`;
-}
-
-function renderBoardStockCapitalIntent(boardStockData) {
-  const root = boardStockData && boardStockData.board_stock_capital_intent_prediction_result
-    ? boardStockData.board_stock_capital_intent_prediction_result
-    : {};
-  const candidateList = root.candidate_list || [];
-  if (!candidateList.length) return '';
-  const visibleList = candidateList.slice(0, 10);
-  const summary = root.summary || {};
-  const resultDate = root.result_date || root.published_source_date || '';
-  const themeList = ((root.theme_context || {}).theme_pool || [])
-    .map(theme => theme.theme_name)
-    .filter(Boolean);
-  return `
-    <div class="section">
-      <h2>短线投资 <span style="color:var(--red);font-weight:700">! 高风险投资</span></h2>
-      <div class="subtitle">
-        About：搜寻游资、量化潜在的埋伏股，博涨停机会。<br>
-        数据日期: ${esc(resultDate)} &nbsp;|&nbsp; 展示前 ${visibleList.length} / ${candidateList.length} 只
-        ${themeList.length ? `&nbsp;|&nbsp; 当前主线: ${themeList.map(themeName => esc(themeName)).join('、')}` : ''}
-      </div>
-      ${summary.summary_text ? `<div class="card" style="font-size:0.78em;color:var(--text2)">${esc(summary.summary_text)}</div>` : ''}
-      <div class="board-stock-grid">
-        ${visibleList.map(renderBoardStockCard).join('')}
-      </div>
-    </div>`;
-}
-
 function renderAiPreferenceStockStats(aiPreferenceData) {
   const root = aiPreferenceData && aiPreferenceData.ai_preference_stock_stats
     ? aiPreferenceData.ai_preference_stock_stats
@@ -5436,7 +5349,6 @@ async function render() {
   const futureData = INLINE_FUTURE;
   const themeData = INLINE_THEME;
   const openDipData = await loadJSON(OPEN_DIP_DB_URL) || INLINE_OPEN_DIP;
-  const boardStockData = await loadJSON(BOARD_STOCK_DB_URL) || {board_stock_capital_intent_prediction_result: {}};
   const aiPreferenceData = await loadJSON(AI_PREFERENCE_STOCK_STATS_URL) || {ai_preference_stock_stats: {}};
 
   const app = document.getElementById('app');
@@ -5477,7 +5389,6 @@ async function render() {
   html += `</div>`;
 
   html += renderAiPreferenceStockStats(aiPreferenceData);
-  html += renderBoardStockCapitalIntent(boardStockData);
   html += renderStaticStockSearch(searchLibrary);
 
   html += `<div class="footer">AI智能股票推荐 · 数据仅供参考，不构成投资建议</div>`;
