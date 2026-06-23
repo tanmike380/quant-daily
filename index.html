@@ -4711,7 +4711,7 @@ const INLINE_OPEN_DIP = {
   "open_dip_buy_db": {}
 };
 const INLINE_PUBLISH_GENERATED_AT = {
-  "generated_at": "2026-06-23 11:10:09"
+  "generated_at": "2026-06-23 11:18:11"
 };
 
 const STOCK_SEARCH_INDEX_URL = 'data/stock_search_index.json';
@@ -5297,7 +5297,12 @@ function renderAiPreferenceStockStats(aiPreferenceData) {
     const numberValue = Number(value);
     if (Number.isNaN(numberValue)) return esc(value);
     const sign = numberValue > 0 ? '+' : '';
-    return `${sign}${numberValue.toFixed(2)}%`;
+    const color = numberValue > 0
+      ? 'var(--red)'
+      : numberValue < 0
+        ? 'var(--green)'
+        : 'var(--text)';
+    return `<span style="color:${color};font-weight:700">${sign}${numberValue.toFixed(2)}%</span>`;
   }
   return `
     <div class="section">
