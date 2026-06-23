@@ -4711,7 +4711,7 @@ const INLINE_OPEN_DIP = {
   "open_dip_buy_db": {}
 };
 const INLINE_PUBLISH_GENERATED_AT = {
-  "generated_at": "2026-06-23 10:33:30"
+  "generated_at": "2026-06-23 10:44:15"
 };
 
 const STOCK_SEARCH_INDEX_URL = 'data/stock_search_index.json';
@@ -5379,6 +5379,13 @@ function renderAiPreferenceStockStats(aiPreferenceData) {
     : {};
   const stockList = root.top_stock_list || [];
   if (!stockList.length) return '';
+  function formatSignedPct(value) {
+    if (value === null || value === undefined || value === '') return '-';
+    const numberValue = Number(value);
+    if (Number.isNaN(numberValue)) return esc(value);
+    const sign = numberValue > 0 ? '+' : '';
+    return `${sign}${numberValue.toFixed(2)}%`;
+  }
   return `
     <div class="section">
       <h2>AI偏好股</h2>
@@ -5401,6 +5408,10 @@ function renderAiPreferenceStockStats(aiPreferenceData) {
             &nbsp;|&nbsp; 平均排名: ${esc(stock.avg_rank ?? '-')}
             &nbsp;|&nbsp; 最近出现: ${esc(stock.last_seen_date || '-')}
             ${stock.primary_theme ? `&nbsp;|&nbsp; 主主题: ${esc(stock.primary_theme)}` : ''}
+          </div>
+          <div class="meta">
+            首次推荐: ${esc(stock.first_recommend_date || '-')}
+            &nbsp;|&nbsp; 距今涨幅: ${formatSignedPct(stock.return_since_first_recommend_pct)}
           </div>
         </div>
       `).join('')}
