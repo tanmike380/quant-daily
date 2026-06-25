@@ -3,75 +3,86 @@
     "trade_week": "2026-W24",
     "theme_pool": [
       {
-        "theme": "半导体设备",
-        "source": "weekly_confirmed",
+        "theme": "CPO",
+        "source": "weekly_and_reference",
         "rank": 1,
-        "reason_text": "来自 final_result. 的周级确认主线，国家大基金持股与光刻机方向共振极强"
+        "reason_text": "AI算力硬件核心方向，周内多次进入强势板块，产业新闻持续催化"
+      },
+      {
+        "theme": "存储芯片",
+        "source": "weekly_and_reference",
+        "rank": 2,
+        "reason_text": "产业景气度反转预期强烈，板块一周6次出现且近期持续走强"
       },
       {
         "theme": "先进封装",
         "source": "weekly_confirmed",
-        "rank": 2,
-        "reason_text": "来自 final_result. 的周级确认主线，与AI算力HBM需求及半导体国产替代双线共振"
-      },
-      {
-        "theme": "CPO",
-        "source": "weekly_and_reference",
         "rank": 3,
-        "reason_text": "周级确认主线且在参考主题中出现，AI算力硬件核心方向"
+        "reason_text": "半导体与AI算力交叉核心，频次全周最高且近期未明显退潮"
       },
       {
-        "theme": "氟化工",
+        "theme": "PCB概念",
         "source": "weekly_and_reference",
         "rank": 4,
-        "reason_text": "周级确认主线且在参考主题中出现，顺周期涨价与半导体材料需求双重催化"
+        "reason_text": "算力硬件向上下游扩散的核心方向，高频出现且与CPO共振"
       },
       {
-        "theme": "消费电子",
+        "theme": "AI PC",
         "source": "weekly_confirmed",
         "rank": 5,
-        "reason_text": "来自 final_result. 的周级确认主线，AI终端换机潮驱动"
+        "reason_text": "AI终端落地预期驱动，与消费电子果链共振，处于确认期"
       },
       {
         "theme": "创新药",
         "source": "weekly_and_reference",
         "rank": 6,
-        "reason_text": "周级确认主线且在参考主题中出现，弱势防御事件驱动"
+        "reason_text": "仅在市场risk_off单日爆发，缺乏持续性，属于防御性轮动"
       }
     ],
     "candidate_stock_list": [
       {
-        "stock_code": "000988",
-        "stock_name": "华工科技",
-        "selection_score": 253,
+        "stock_code": "002579",
+        "stock_name": "中京电子",
+        "selection_score": 288,
         "matched_theme_list": [
           "CPO",
+          "存储芯片",
           "先进封装",
-          "半导体设备",
-          "消费电子"
+          "PCB概念",
+          "AI PC",
+          "PCB",
+          "pcb",
+          "6G",
+          "人形机器人",
+          "AI",
+          "半导体",
+          "存储半导体"
         ],
         "matched_weekly_theme_list": [
           "CPO",
+          "存储芯片",
           "先进封装",
-          "半导体设备",
-          "消费电子"
+          "PCB概念",
+          "AI PC"
         ],
         "matched_reference_theme_list": [
-          "光通信",
-          "CPO",
-          "半导体",
-          "6G",
           "PCB",
+          "pcb",
+          "6G",
+          "人形机器人",
           "AI",
-          "东数西算(算力)"
+          "半导体",
+          "存储半导体"
         ],
-        "matched_future_theme_list": [],
+        "matched_future_theme_list": [
+          "人形机器人"
+        ],
         "resonance_type": "strong",
         "industry_chain_path": [
           "AI算力",
-          "光模块/CPO",
-          "硅光/光芯片",
-          "先进封装"
+          "CPO/PCB",
+          "先进封装/存储",
+          "AI PC终端"
         ],
         "business_relevance_label": "core_business_related",
         "noise_label_list": [
@@ -81,14 +92,14 @@
           "none"
         ],
         "holding_style_label": "main_theme_trend",
-        "reason_text": "公司是全球光模块Top10厂商，主营光模块、光通信器件及硅光芯片，深度受益于AI算力硬件需求，CPO与先进封装双主线强共振，业务支撑极强。",
-        "risk_text": "光模块板块前期涨幅较大，需警惕AI算力硬件需求预期兑现后的高位回调风险。",
+        "reason_text": "公司主营PCB及IC封装载板，直接命中CPO、存储芯片、先进封装、PCB、AI PC五大周级主线，产业链覆盖从算力硬件到终端，业务支撑极强。",
+        "risk_text": "概念覆盖面广，若整体科技板块退潮，可能面临系统性回调；IC封装载板业务尚在爬坡期。",
         "score_factor_signal": {
           "selection_score_config_version": "main_theme_v2",
           "ranked_weekly_theme_hit_count": 3,
-          "weekly_theme_hit_count": 4,
-          "reference_theme_hit_count": 6,
-          "future_theme_hit_count": 0,
+          "weekly_theme_hit_count": 5,
+          "reference_theme_hit_count": 7,
+          "future_theme_hit_count": 1,
           "related_sub_theme_hit_count": 0,
           "resonance_label": "strong",
           "resonance_score": 2,
@@ -105,36 +116,36 @@
         }
       },
       {
-        "stock_code": "002156",
-        "stock_name": "通富微电",
-        "selection_score": 228,
+        "stock_code": "601609",
+        "stock_name": "金田股份",
+        "selection_score": 238,
         "matched_theme_list": [
-          "半导体设备",
-          "先进封装",
-          "CPO",
-          "消费电子",
-          "半导体",
-          "存储半导体",
-          "PC"
+          "铜缆高速连接",
+          "液冷服务器",
+          "人形机器人",
+          "PCB概念"
         ],
         "matched_weekly_theme_list": [
-          "半导体设备",
-          "先进封装",
           "CPO",
-          "消费电子"
+          "先进封装",
+          "PCB概念",
+          "AI PC"
         ],
         "matched_reference_theme_list": [
+          "光缆光纤",
           "半导体",
-          "CPO",
-          "存储半导体",
-          "PC"
+          "人形机器人",
+          "覆铜板",
+          "小金属"
         ],
-        "matched_future_theme_list": [],
+        "matched_future_theme_list": [
+          "人形机器人"
+        ],
         "resonance_type": "strong",
         "industry_chain_path": [
-          "半导体设备",
-          "先进封装",
-          "AI算力硬件"
+          "AI算力",
+          "铜缆高速连接/CPO",
+          "金属铜/先进材料"
         ],
         "business_relevance_label": "core_business_related",
         "noise_label_list": [
@@ -144,8 +155,72 @@
           "none"
         ],
         "holding_style_label": "main_theme_trend",
-        "reason_text": "公司是国内半导体封测龙头，同时获国家大基金一期和二期投资，业务深度覆盖先进封装，且产品应用于AI、存储等领域，与本周半导体设备、先进封装、CPO等多条前排主线强共振。",
-        "risk_text": "半导体周期复苏不及预期，或先进封装技术迭代导致竞争加剧。",
+        "reason_text": "公司主营铜产品，为AI算力服务器提供铜缆高速连接、液冷等先进材料，同时命中CPO、先进封装、PCB等多个周级主线及人形机器人未来事件，产业链路径清晰，多主线强共振。",
+        "risk_text": "若AI算力硬件链退潮，铜连接细分可能同步回调；概念较多需防范情绪退潮后的杀估值。",
+        "score_factor_signal": {
+          "selection_score_config_version": "main_theme_v2",
+          "ranked_weekly_theme_hit_count": 2,
+          "weekly_theme_hit_count": 4,
+          "reference_theme_hit_count": 5,
+          "future_theme_hit_count": 1,
+          "related_sub_theme_hit_count": 2,
+          "resonance_label": "strong",
+          "resonance_score": 2,
+          "business_relevance_label": "core_business_related",
+          "business_relevance_score": 1,
+          "noise_label_list": [
+            "none"
+          ],
+          "noise_score": 0,
+          "reflection_risk_label_list": [
+            "none"
+          ],
+          "reflection_risk_score": 0
+        }
+      },
+      {
+        "stock_code": "000988",
+        "stock_name": "华工科技",
+        "selection_score": 228,
+        "matched_theme_list": [
+          "CPO",
+          "存储芯片",
+          "先进封装",
+          "PCB概念",
+          "光通信",
+          "半导体"
+        ],
+        "matched_weekly_theme_list": [
+          "CPO",
+          "存储芯片",
+          "先进封装",
+          "PCB概念"
+        ],
+        "matched_reference_theme_list": [
+          "光通信",
+          "CPO",
+          "半导体",
+          "PCB"
+        ],
+        "matched_future_theme_list": [],
+        "resonance_type": "strong",
+        "industry_chain_path": [
+          "AI算力",
+          "光模块/光通信",
+          "CPO",
+          "先进封装",
+          "高速PCB"
+        ],
+        "business_relevance_label": "core_business_related",
+        "noise_label_list": [
+          "none"
+        ],
+        "reflection_risk_label_list": [
+          "none"
+        ],
+        "holding_style_label": "main_theme_trend",
+        "reason_text": "公司主营光模块及光通信器件，全球光模块Top10，直接命中CPO、存储芯片、先进封装、PCB四大前排主线，多主线强共振，产业链路径极其清晰且主营业务完全支撑。",
+        "risk_text": "若AI算力资本开支不及预期或光模块技术路线发生变更，可能对业绩预期造成冲击。",
         "score_factor_signal": {
           "selection_score_config_version": "main_theme_v2",
           "ranked_weekly_theme_hit_count": 3,
@@ -168,97 +243,34 @@
         }
       },
       {
-        "stock_code": "605358",
-        "stock_name": "立昂微",
-        "selection_score": 217,
+        "stock_code": "600183",
+        "stock_name": "生益科技",
+        "selection_score": 228,
         "matched_theme_list": [
-          "半导体设备",
-          "先进封装",
+          "PCB概念",
           "CPO",
-          "半导体",
-          "存储半导体",
-          "人形机器人"
+          "先进封装",
+          "存储芯片"
         ],
         "matched_weekly_theme_list": [
-          "半导体设备",
+          "PCB概念",
+          "CPO",
           "先进封装",
-          "CPO"
+          "存储芯片"
         ],
         "matched_reference_theme_list": [
-          "半导体",
+          "PCB",
           "CPO",
-          "存储半导体"
-        ],
-        "matched_future_theme_list": [
-          "人形机器人"
-        ],
-        "resonance_type": "strong",
-        "industry_chain_path": [
-          "半导体硅片",
-          "分立器件",
-          "先进封装",
-          "CPO光模块"
-        ],
-        "business_relevance_label": "core_business_related",
-        "noise_label_list": [
-          "none"
-        ],
-        "reflection_risk_label_list": [
-          "none"
-        ],
-        "holding_style_label": "main_theme_trend",
-        "reason_text": "公司主营半导体硅片和分立器件，属于半导体设备与先进封装上游核心材料，同时命中CPO与半导体多主线，产业链共振极强。",
-        "risk_text": "半导体周期波动风险，若半导体设备链退潮可能同步回调。",
-        "score_factor_signal": {
-          "selection_score_config_version": "main_theme_v2",
-          "ranked_weekly_theme_hit_count": 3,
-          "weekly_theme_hit_count": 3,
-          "reference_theme_hit_count": 3,
-          "future_theme_hit_count": 1,
-          "related_sub_theme_hit_count": 1,
-          "resonance_label": "strong",
-          "resonance_score": 2,
-          "business_relevance_label": "core_business_related",
-          "business_relevance_score": 1,
-          "noise_label_list": [
-            "none"
-          ],
-          "noise_score": 0,
-          "reflection_risk_label_list": [
-            "none"
-          ],
-          "reflection_risk_score": 0
-        }
-      },
-      {
-        "stock_code": "002185",
-        "stock_name": "华天科技",
-        "selection_score": 215,
-        "matched_theme_list": [
-          "半导体设备",
-          "先进封装",
-          "CPO",
-          "消费电子",
-          "半导体",
-          "存储半导体"
-        ],
-        "matched_weekly_theme_list": [
-          "半导体设备",
-          "先进封装",
-          "CPO",
-          "消费电子"
-        ],
-        "matched_reference_theme_list": [
-          "半导体",
-          "CPO",
-          "存储半导体"
+          "覆铜板",
+          "pcb"
         ],
         "matched_future_theme_list": [],
         "resonance_type": "strong",
         "industry_chain_path": [
-          "半导体设备",
-          "先进封装",
-          "AI算力硬件"
+          "AI算力",
+          "CPO/先进封装/存储",
+          "PCB",
+          "覆铜板"
         ],
         "business_relevance_label": "core_business_related",
         "noise_label_list": [
@@ -268,13 +280,13 @@
           "none"
         ],
         "holding_style_label": "main_theme_trend",
-        "reason_text": "公司主营集成电路封装测试，重点布局先进封装，且有大基金持股背景，深度契合半导体设备与先进封装主线，CPO与消费电子概念亦有共振。",
-        "risk_text": "封测行业竞争激烈，先进封装产能释放可能带来价格压力。",
+        "reason_text": "公司主营覆铜板和PCB，是全球电子电路基材核心供应商。覆铜板是AI服务器PCB的核心上游材料，同时命中CPO、先进封装、存储芯片等多个强相关主线，产业链共振极强。",
+        "risk_text": "若AI算力硬件链整体退潮，覆铜板与PCB方向可能同步回调。",
         "score_factor_signal": {
           "selection_score_config_version": "main_theme_v2",
           "ranked_weekly_theme_hit_count": 3,
           "weekly_theme_hit_count": 4,
-          "reference_theme_hit_count": 3,
+          "reference_theme_hit_count": 4,
           "future_theme_hit_count": 0,
           "related_sub_theme_hit_count": 0,
           "resonance_label": "strong",
@@ -294,31 +306,32 @@
       {
         "stock_code": "603773",
         "stock_name": "沃格光电",
-        "selection_score": 204,
+        "selection_score": 215,
         "matched_theme_list": [
-          "先进封装",
           "CPO",
-          "消费电子",
+          "存储芯片",
+          "先进封装",
+          "PCB概念",
           "玻璃基板"
         ],
         "matched_weekly_theme_list": [
-          "先进封装",
           "CPO",
-          "消费电子"
+          "存储芯片",
+          "先进封装",
+          "PCB概念"
         ],
         "matched_reference_theme_list": [
           "玻璃基板",
-          "光通信",
-          "6G",
-          "半导体",
+          "PCB",
           "存储半导体"
         ],
         "matched_future_theme_list": [],
         "resonance_type": "strong",
         "industry_chain_path": [
           "AI算力",
-          "先进封装",
-          "玻璃基板/CPO"
+          "先进封装/玻璃基板",
+          "CPO/存储",
+          "光电玻璃精加工"
         ],
         "business_relevance_label": "core_business_related",
         "noise_label_list": [
@@ -328,13 +341,13 @@
           "none"
         ],
         "holding_style_label": "main_theme_trend",
-        "reason_text": "公司主营玻璃基线路板，在半导体先进封装和CPO光模块中具有明确应用，同时覆盖消费电子显示，多主线强共振且主营支撑。",
-        "risk_text": "玻璃基板在先进封装的渗透率仍需观察，若技术迭代不及预期可能影响估值。",
+        "reason_text": "公司主营玻璃基线路板及半导体先进封装，直接命中CPO、存储芯片、先进封装、PCB四大前排周级主线，且与玻璃基板参考主题共振，产业链路径极度清晰，属于强共振标的。",
+        "risk_text": "先进封装及玻璃基板产业化进度若不及预期，可能影响业绩兑现。",
         "score_factor_signal": {
           "selection_score_config_version": "main_theme_v2",
-          "ranked_weekly_theme_hit_count": 2,
-          "weekly_theme_hit_count": 3,
-          "reference_theme_hit_count": 5,
+          "ranked_weekly_theme_hit_count": 3,
+          "weekly_theme_hit_count": 4,
+          "reference_theme_hit_count": 3,
           "future_theme_hit_count": 0,
           "related_sub_theme_hit_count": 0,
           "resonance_label": "strong",
@@ -352,152 +365,96 @@
         }
       },
       {
-        "stock_code": "002049",
-        "stock_name": "紫光国微",
-        "selection_score": 189,
+        "stock_code": "603936",
+        "stock_name": "博敏电子",
+        "selection_score": 215,
         "matched_theme_list": [
-          "半导体设备",
-          "先进封装",
           "CPO",
-          "半导体",
-          "存储半导体"
-        ],
-        "matched_weekly_theme_list": [
-          "半导体设备",
-          "先进封装",
-          "CPO"
-        ],
-        "matched_reference_theme_list": [
-          "半导体",
-          "存储半导体"
-        ],
-        "matched_future_theme_list": [],
-        "resonance_type": "strong",
-        "industry_chain_path": [
-          "半导体设计",
-          "特种集成电路",
           "存储芯片",
-          "先进封装"
-        ],
-        "business_relevance_label": "core_business_related",
-        "noise_label_list": [
-          "none"
-        ],
-        "reflection_risk_label_list": [
-          "none"
-        ],
-        "holding_style_label": "main_theme_trend",
-        "reason_text": "国内集成电路设计龙头，主营特种集成电路与智能安全芯片，同时布局存储与先进封装，精准命中本周多条核心半导体主线，业务支撑极强。",
-        "risk_text": "若半导体国产替代逻辑短期兑现或大基金投资节奏放缓，可能面临高位回调压力。",
-        "score_factor_signal": {
-          "selection_score_config_version": "main_theme_v2",
-          "ranked_weekly_theme_hit_count": 3,
-          "weekly_theme_hit_count": 3,
-          "reference_theme_hit_count": 2,
-          "future_theme_hit_count": 0,
-          "related_sub_theme_hit_count": 0,
-          "resonance_label": "strong",
-          "resonance_score": 2,
-          "business_relevance_label": "core_business_related",
-          "business_relevance_score": 1,
-          "noise_label_list": [
-            "none"
-          ],
-          "noise_score": 0,
-          "reflection_risk_label_list": [
-            "none"
-          ],
-          "reflection_risk_score": 0
-        }
-      },
-      {
-        "stock_code": "600171",
-        "stock_name": "上海贝岭",
-        "selection_score": 189,
-        "matched_theme_list": [
-          "半导体设备",
           "先进封装",
-          "CPO",
-          "半导体",
-          "存储半导体"
-        ],
-        "matched_weekly_theme_list": [
-          "半导体设备",
-          "先进封装",
-          "CPO"
-        ],
-        "matched_reference_theme_list": [
-          "半导体",
-          "存储半导体"
-        ],
-        "matched_future_theme_list": [],
-        "resonance_type": "strong",
-        "industry_chain_path": [
-          "半导体设备",
-          "芯片设计",
-          "先进封装",
-          "CPO光模块芯片"
-        ],
-        "business_relevance_label": "core_business_related",
-        "noise_label_list": [
-          "none"
-        ],
-        "reflection_risk_label_list": [
-          "none"
-        ],
-        "holding_style_label": "main_theme_trend",
-        "reason_text": "公司主营模拟及数模混合集成电路，属于半导体产业链核心设计环节，命中半导体设备、先进封装和CPO三大前排主线，产业链共振极强。",
-        "risk_text": "半导体板块短期涨幅较大，若大基金利好兑现或市场风格切换，可能面临高位回调压力。",
-        "score_factor_signal": {
-          "selection_score_config_version": "main_theme_v2",
-          "ranked_weekly_theme_hit_count": 3,
-          "weekly_theme_hit_count": 3,
-          "reference_theme_hit_count": 2,
-          "future_theme_hit_count": 0,
-          "related_sub_theme_hit_count": 0,
-          "resonance_label": "strong",
-          "resonance_score": 2,
-          "business_relevance_label": "core_business_related",
-          "business_relevance_score": 1,
-          "noise_label_list": [
-            "none"
-          ],
-          "noise_score": 0,
-          "reflection_risk_label_list": [
-            "none"
-          ],
-          "reflection_risk_score": 0
-        }
-      },
-      {
-        "stock_code": "002815",
-        "stock_name": "崇达技术",
-        "selection_score": 187,
-        "matched_theme_list": [
-          "CPO",
-          "先进封装",
-          "消费电子",
+          "PCB概念",
+          "AI PC",
           "PCB",
           "6G"
         ],
         "matched_weekly_theme_list": [
           "CPO",
+          "存储芯片",
           "先进封装",
-          "消费电子"
+          "PCB概念",
+          "AI PC"
         ],
         "matched_reference_theme_list": [
           "PCB",
-          "6G",
-          "光通信"
+          "6G"
+        ],
+        "matched_future_theme_list": [],
+        "resonance_type": "strong",
+        "industry_chain_path": [
+          "AI算力/半导体",
+          "CPO/先进封装/存储",
+          "高频高速PCB"
+        ],
+        "business_relevance_label": "core_business_related",
+        "noise_label_list": [
+          "none"
+        ],
+        "reflection_risk_label_list": [
+          "none"
+        ],
+        "holding_style_label": "main_theme_trend",
+        "reason_text": "公司主营高精密PCB，产品涵盖HDI、高频高速板等，直接受益于AI服务器CPO及先进封装对高端PCB的需求，同时布局存储芯片与AI PC相关板卡，多主线强共振。",
+        "risk_text": "PCB行业竞争激烈，若AI算力与半导体扩产不及预期，可能面临量价压力。",
+        "score_factor_signal": {
+          "selection_score_config_version": "main_theme_v2",
+          "ranked_weekly_theme_hit_count": 3,
+          "weekly_theme_hit_count": 5,
+          "reference_theme_hit_count": 2,
+          "future_theme_hit_count": 0,
+          "related_sub_theme_hit_count": 0,
+          "resonance_label": "strong",
+          "resonance_score": 2,
+          "business_relevance_label": "core_business_related",
+          "business_relevance_score": 1,
+          "noise_label_list": [
+            "none"
+          ],
+          "noise_score": 0,
+          "reflection_risk_label_list": [
+            "none"
+          ],
+          "reflection_risk_score": 0
+        }
+      },
+      {
+        "stock_code": "605358",
+        "stock_name": "立昂微",
+        "selection_score": 211,
+        "matched_theme_list": [
+          "CPO",
+          "存储芯片",
+          "先进封装",
+          "半导体",
+          "人形机器人"
+        ],
+        "matched_weekly_theme_list": [
+          "CPO",
+          "存储芯片",
+          "先进封装"
+        ],
+        "matched_reference_theme_list": [
+          "半导体",
+          "人形机器人",
+          "CPO"
         ],
         "matched_future_theme_list": [
           "人形机器人"
         ],
         "resonance_type": "strong",
         "industry_chain_path": [
-          "AI算力",
-          "高速PCB",
-          "CPO/先进封装载板"
+          "半导体硅片",
+          "芯片制造",
+          "存储芯片/先进封装/CPO光芯片"
         ],
         "business_relevance_label": "core_business_related",
         "noise_label_list": [
@@ -507,11 +464,11 @@
           "none"
         ],
         "holding_style_label": "main_theme_trend",
-        "reason_text": "公司主营PCB，产品涵盖高多层板、HDI板等，直接应用于服务器、通信等领域，是CPO和先进封装的硬载体，多主线强共振。",
-        "risk_text": "若AI算力硬件链退潮，PCB需求可能同步回调；PCB行业竞争激烈可能影响毛利率。",
+        "reason_text": "公司主营半导体硅片和分立器件芯片，是存储芯片和先进封装的上游核心材料，同时概念覆盖CPO与未来事件人形机器人，多主线强共振，业务支撑极强。",
+        "risk_text": "半导体周期复苏若不及预期，硅片价格可能承压；人形机器人催化属于未来事件，需关注兑现情况。",
         "score_factor_signal": {
           "selection_score_config_version": "main_theme_v2",
-          "ranked_weekly_theme_hit_count": 2,
+          "ranked_weekly_theme_hit_count": 3,
           "weekly_theme_hit_count": 3,
           "reference_theme_hit_count": 3,
           "future_theme_hit_count": 1,
@@ -531,27 +488,29 @@
         }
       },
       {
-        "stock_code": "601138",
-        "stock_name": "工业富联",
-        "selection_score": 182,
+        "stock_code": "600522",
+        "stock_name": "中天科技",
+        "selection_score": 210,
         "matched_theme_list": [
           "CPO",
-          "消费电子",
-          "算力租赁",
-          "AI",
+          "PCB概念",
           "光通信",
-          "人形机器人"
+          "6G",
+          "算力租赁"
         ],
         "matched_weekly_theme_list": [
           "CPO",
-          "消费电子"
+          "PCB概念"
         ],
         "matched_reference_theme_list": [
-          "CPO",
-          "算力租赁",
-          "AI",
           "光通信",
-          "机器人"
+          "CPO",
+          "光缆光纤",
+          "6G",
+          "AI",
+          "PCB",
+          "覆铜板",
+          "pcb"
         ],
         "matched_future_theme_list": [
           "人形机器人"
@@ -559,8 +518,68 @@
         "resonance_type": "strong",
         "industry_chain_path": [
           "AI算力",
-          "光通信/CPO",
-          "云服务设备/服务器"
+          "光通信",
+          "CPO",
+          "PCB"
+        ],
+        "business_relevance_label": "core_business_related",
+        "noise_label_list": [
+          "concept_stacking"
+        ],
+        "reflection_risk_label_list": [
+          "none"
+        ],
+        "holding_style_label": "main_theme_trend",
+        "reason_text": "公司主营光纤光缆与通信设备，是CPO与PCB产业链上游核心，同时命中多个前排主线及参考主题，产业链共振极强，且有机器人未来事件催化。",
+        "risk_text": "概念标签极多，部分概念与主营关联度低；若AI算力硬件链退潮，光通信与PCB方向可能同步回调。",
+        "score_factor_signal": {
+          "selection_score_config_version": "main_theme_v2",
+          "ranked_weekly_theme_hit_count": 1,
+          "weekly_theme_hit_count": 2,
+          "reference_theme_hit_count": 8,
+          "future_theme_hit_count": 1,
+          "related_sub_theme_hit_count": 1,
+          "resonance_label": "strong",
+          "resonance_score": 2,
+          "business_relevance_label": "core_business_related",
+          "business_relevance_score": 1,
+          "noise_label_list": [
+            "concept_stacking"
+          ],
+          "noise_score": -1,
+          "reflection_risk_label_list": [
+            "none"
+          ],
+          "reflection_risk_score": 0
+        }
+      },
+      {
+        "stock_code": "000021",
+        "stock_name": "深科技",
+        "selection_score": 202,
+        "matched_theme_list": [
+          "存储芯片",
+          "先进封装",
+          "CPO",
+          "存储半导体",
+          "智能电网"
+        ],
+        "matched_weekly_theme_list": [
+          "存储芯片",
+          "先进封装",
+          "CPO"
+        ],
+        "matched_reference_theme_list": [
+          "CPO",
+          "存储半导体",
+          "智能电网"
+        ],
+        "matched_future_theme_list": [],
+        "resonance_type": "strong",
+        "industry_chain_path": [
+          "存储半导体",
+          "先进封装",
+          "存储芯片"
         ],
         "business_relevance_label": "core_business_related",
         "noise_label_list": [
@@ -570,15 +589,15 @@
           "none"
         ],
         "holding_style_label": "main_theme_trend",
-        "reason_text": "公司是通信设备和云服务设备全球龙头，主营完美支撑CPO和AI算力硬件需求，同时命中消费电子和未来人形机器人催化，多主线强共振。",
-        "risk_text": "若AI算力资本开支不及预期，或CPO技术迭代路径变化，可能影响估值支撑。",
+        "reason_text": "公司主营聚焦存储半导体及高端制造，深度命中存储芯片与先进封装双主线，且具备CPO概念，产业链逻辑清晰，主营业务强支撑。",
+        "risk_text": "存储周期反转若不及预期，或CPO概念退潮，可能面临回调。",
         "score_factor_signal": {
           "selection_score_config_version": "main_theme_v2",
-          "ranked_weekly_theme_hit_count": 1,
-          "weekly_theme_hit_count": 2,
-          "reference_theme_hit_count": 5,
-          "future_theme_hit_count": 1,
-          "related_sub_theme_hit_count": 1,
+          "ranked_weekly_theme_hit_count": 3,
+          "weekly_theme_hit_count": 3,
+          "reference_theme_hit_count": 3,
+          "future_theme_hit_count": 0,
+          "related_sub_theme_hit_count": 0,
           "resonance_label": "strong",
           "resonance_score": 2,
           "business_relevance_label": "core_business_related",
@@ -596,32 +615,30 @@
       {
         "stock_code": "002436",
         "stock_name": "兴森科技",
-        "selection_score": 178,
+        "selection_score": 202,
         "matched_theme_list": [
-          "先进封装",
           "CPO",
-          "PCB",
-          "存储半导体",
-          "半导体"
+          "存储芯片",
+          "先进封装",
+          "PCB概念"
         ],
         "matched_weekly_theme_list": [
+          "CPO",
+          "存储芯片",
           "先进封装",
-          "CPO"
+          "PCB概念"
         ],
         "matched_reference_theme_list": [
-          "先进封装",
-          "CPO",
           "PCB",
-          "存储半导体",
           "半导体"
         ],
         "matched_future_theme_list": [],
         "resonance_type": "strong",
         "industry_chain_path": [
-          "AI算力硬件",
-          "CPO/光模块",
-          "先进封装载板",
-          "PCB"
+          "AI算力",
+          "先进封装",
+          "存储芯片",
+          "高速PCB"
         ],
         "business_relevance_label": "core_business_related",
         "noise_label_list": [
@@ -631,12 +648,74 @@
           "none"
         ],
         "holding_style_label": "main_theme_trend",
-        "reason_text": "公司主营PCB及半导体封装载板，是先进封装和CPO硬件的核心上游，命中两大前排主线，产业链路径清晰，业务支撑强。",
-        "risk_text": "半导体周期复苏不及预期可能影响封装载板需求；CPO技术路线变化带来的替代风险。",
+        "reason_text": "公司主营PCB及半导体业务，精准命中CPO、存储芯片、先进封装、PCB四大前排主线，产业链路径清晰，主营业务强支撑。",
+        "risk_text": "半导体周期复苏若不及预期，可能影响封装及PCB订单放量。",
+        "score_factor_signal": {
+          "selection_score_config_version": "main_theme_v2",
+          "ranked_weekly_theme_hit_count": 3,
+          "weekly_theme_hit_count": 4,
+          "reference_theme_hit_count": 2,
+          "future_theme_hit_count": 0,
+          "related_sub_theme_hit_count": 0,
+          "resonance_label": "strong",
+          "resonance_score": 2,
+          "business_relevance_label": "core_business_related",
+          "business_relevance_score": 1,
+          "noise_label_list": [
+            "none"
+          ],
+          "noise_score": 0,
+          "reflection_risk_label_list": [
+            "none"
+          ],
+          "reflection_risk_score": 0
+        }
+      },
+      {
+        "stock_code": "605589",
+        "stock_name": "圣泉集团",
+        "selection_score": 191,
+        "matched_theme_list": [
+          "PCB概念",
+          "先进封装",
+          "存储芯片",
+          "覆铜板",
+          "半导体",
+          "6G"
+        ],
+        "matched_weekly_theme_list": [
+          "PCB概念",
+          "先进封装",
+          "存储芯片"
+        ],
+        "matched_reference_theme_list": [
+          "PCB",
+          "覆铜板",
+          "半导体",
+          "6G"
+        ],
+        "matched_future_theme_list": [],
+        "resonance_type": "strong",
+        "industry_chain_path": [
+          "特种树脂",
+          "覆铜板/PCB基材",
+          "AI服务器硬件",
+          "半导体封装材料"
+        ],
+        "business_relevance_label": "core_business_related",
+        "noise_label_list": [
+          "none"
+        ],
+        "reflection_risk_label_list": [
+          "none"
+        ],
+        "holding_style_label": "main_theme_trend",
+        "reason_text": "公司主营合成树脂及衍生品，是PCB覆铜板的核心基材，同时布局半导体电子化学品与光刻胶树脂，与PCB、先进封装、存储芯片多主线强共振，产业链路径清晰。",
+        "risk_text": "化工原料价格波动风险，若AI算力硬件链退潮，PCB材料方向可能同步回调。",
         "score_factor_signal": {
           "selection_score_config_version": "main_theme_v2",
           "ranked_weekly_theme_hit_count": 2,
-          "weekly_theme_hit_count": 2,
+          "weekly_theme_hit_count": 3,
           "reference_theme_hit_count": 4,
           "future_theme_hit_count": 0,
           "related_sub_theme_hit_count": 0,
@@ -655,61 +734,58 @@
         }
       },
       {
-        "stock_code": "002579",
-        "stock_name": "中京电子",
-        "selection_score": 177,
+        "stock_code": "002156",
+        "stock_name": "通富微电",
+        "selection_score": 189,
         "matched_theme_list": [
-          "先进封装",
           "CPO",
-          "消费电子",
-          "PCB"
+          "存储芯片",
+          "先进封装",
+          "AI PC",
+          "半导体"
         ],
         "matched_weekly_theme_list": [
-          "先进封装",
           "CPO",
-          "消费电子"
+          "存储芯片",
+          "先进封装",
+          "AI PC"
         ],
         "matched_reference_theme_list": [
-          "PCB",
-          "先进封装",
-          "CPO",
-          "人形机器人"
+          "半导体"
         ],
-        "matched_future_theme_list": [
-          "人形机器人"
-        ],
+        "matched_future_theme_list": [],
         "resonance_type": "strong",
         "industry_chain_path": [
-          "半导体封装",
-          "IC载板",
-          "PCB",
-          "CPO/消费电子应用"
+          "AI算力",
+          "先进封装",
+          "存储芯片",
+          "CPO"
         ],
         "business_relevance_label": "core_business_related",
         "noise_label_list": [
-          "concept_stacking"
+          "none"
         ],
         "reflection_risk_label_list": [
           "none"
         ],
         "holding_style_label": "main_theme_trend",
-        "reason_text": "公司主营PCB及IC载板，产品直接应用于先进封装、CPO光模块及消费电子领域，产业链路径清晰，且命中未来事件催化主题。",
-        "risk_text": "概念标签较多，部分边缘概念可能分散资金注意力；PCB行业竞争激烈。",
+        "reason_text": "公司主营集成电路封装测试，业务覆盖CPO、存储芯片及先进封装，同时具备AI PC概念，精准命中本周多条核心主线，产业链共振极强且业务支撑明确。",
+        "risk_text": "半导体周期复苏若不及预期，或先进封装技术迭代加速导致公司研发掉队，可能面临回调风险。",
         "score_factor_signal": {
           "selection_score_config_version": "main_theme_v2",
-          "ranked_weekly_theme_hit_count": 2,
-          "weekly_theme_hit_count": 3,
-          "reference_theme_hit_count": 3,
-          "future_theme_hit_count": 1,
+          "ranked_weekly_theme_hit_count": 3,
+          "weekly_theme_hit_count": 4,
+          "reference_theme_hit_count": 1,
+          "future_theme_hit_count": 0,
           "related_sub_theme_hit_count": 0,
           "resonance_label": "strong",
           "resonance_score": 2,
           "business_relevance_label": "core_business_related",
           "business_relevance_score": 1,
           "noise_label_list": [
-            "concept_stacking"
+            "none"
           ],
-          "noise_score": -1,
+          "noise_score": 0,
           "reflection_risk_label_list": [
             "none"
           ],
@@ -717,35 +793,34 @@
         }
       },
       {
-        "stock_code": "000063",
-        "stock_name": "中兴通讯",
-        "selection_score": 176,
+        "stock_code": "002384",
+        "stock_name": "东山精密",
+        "selection_score": 189,
         "matched_theme_list": [
           "CPO",
-          "消费电子",
-          "光通信",
-          "6G"
+          "PCB概念",
+          "AI PC"
         ],
         "matched_weekly_theme_list": [
           "CPO",
-          "消费电子"
+          "PCB概念",
+          "AI PC"
         ],
         "matched_reference_theme_list": [
-          "光通信",
-          "6G",
           "CPO",
-          "人形机器人",
+          "PCB",
+          "光通信",
           "AI",
-          "消费电子概念"
+          "PC"
         ],
         "matched_future_theme_list": [
           "人形机器人"
         ],
         "resonance_type": "strong",
         "industry_chain_path": [
-          "通信设备",
-          "光通信/CPO",
-          "AI算力基础设施",
+          "AI服务器",
+          "高速PCB",
+          "CPO光模块",
           "消费电子终端"
         ],
         "business_relevance_label": "core_business_related",
@@ -756,12 +831,12 @@
           "none"
         ],
         "holding_style_label": "main_theme_trend",
-        "reason_text": "全球领先通信设备商，主营光通信系统与终端，CPO与消费电子主线双命中且业务强支撑，同时具备AI算力与未来机器人催化。",
-        "risk_text": "大盘股弹性相对有限，受海外制裁政策影响。",
+        "reason_text": "公司主营精密制造与PCB，深度覆盖CPO、PCB及AI PC三大前排主线，产业链路径从算力硬件到终端清晰，主营业务强支撑。",
+        "risk_text": "若AI算力硬件链退潮及消费电子复苏不及预期，公司多主线可能同步回调。",
         "score_factor_signal": {
           "selection_score_config_version": "main_theme_v2",
           "ranked_weekly_theme_hit_count": 1,
-          "weekly_theme_hit_count": 2,
+          "weekly_theme_hit_count": 3,
           "reference_theme_hit_count": 5,
           "future_theme_hit_count": 1,
           "related_sub_theme_hit_count": 0,
@@ -780,33 +855,32 @@
         }
       },
       {
-        "stock_code": "002409",
-        "stock_name": "雅克科技",
-        "selection_score": 173,
+        "stock_code": "603459",
+        "stock_name": "红板科技",
+        "selection_score": 184,
         "matched_theme_list": [
-          "先进封装",
-          "氟化工",
-          "半导体设备",
-          "光刻胶",
-          "国家大基金持股"
+          "CPO",
+          "PCB概念",
+          "存储芯片",
+          "消费电子概念"
         ],
         "matched_weekly_theme_list": [
-          "先进封装",
-          "氟化工"
+          "CPO",
+          "PCB概念",
+          "存储芯片"
         ],
         "matched_reference_theme_list": [
-          "先进封装",
-          "半导体",
-          "氟化工",
-          "磷化工",
+          "PCB",
+          "CPO",
           "存储半导体"
         ],
         "matched_future_theme_list": [],
         "resonance_type": "strong",
         "industry_chain_path": [
-          "半导体材料",
-          "先进封装/光刻胶",
-          "电子特气/氟化工"
+          "AI服务器",
+          "高速PCB",
+          "IC载板",
+          "存储芯片"
         ],
         "business_relevance_label": "core_business_related",
         "noise_label_list": [
@@ -816,128 +890,12 @@
           "none"
         ],
         "holding_style_label": "main_theme_trend",
-        "reason_text": "公司切入半导体封装材料与电子特气，同时具备氟化工/磷化工背景，完美共振先进封装与氟化工双主线，且有大基金持股加持。",
-        "risk_text": "半导体材料验证周期长，外延并购整合存在不确定性。",
-        "score_factor_signal": {
-          "selection_score_config_version": "main_theme_v2",
-          "ranked_weekly_theme_hit_count": 1,
-          "weekly_theme_hit_count": 2,
-          "reference_theme_hit_count": 4,
-          "future_theme_hit_count": 0,
-          "related_sub_theme_hit_count": 3,
-          "resonance_label": "strong",
-          "resonance_score": 2,
-          "business_relevance_label": "core_business_related",
-          "business_relevance_score": 1,
-          "noise_label_list": [
-            "none"
-          ],
-          "noise_score": 0,
-          "reflection_risk_label_list": [
-            "none"
-          ],
-          "reflection_risk_score": 0
-        }
-      },
-      {
-        "stock_code": "000725",
-        "stock_name": "京东方A",
-        "selection_score": 171,
-        "matched_theme_list": [
-          "先进封装",
-          "CPO",
-          "消费电子",
-          "OLED"
-        ],
-        "matched_weekly_theme_list": [
-          "先进封装",
-          "CPO",
-          "消费电子"
-        ],
-        "matched_reference_theme_list": [
-          "PC",
-          "CPO"
-        ],
-        "matched_future_theme_list": [],
-        "resonance_type": "strong",
-        "industry_chain_path": [
-          "消费电子",
-          "显示面板",
-          "OLED/MiniLED",
-          "先进封装"
-        ],
-        "business_relevance_label": "core_business_related",
-        "noise_label_list": [
-          "none"
-        ],
-        "reflection_risk_label_list": [
-          "none"
-        ],
-        "holding_style_label": "main_theme_trend",
-        "reason_text": "公司主营显示器件，是消费电子核心标的。概念覆盖先进封装、CPO、消费电子等多个本周前排主线，产业链共振极强，主营业务完全支撑。",
-        "risk_text": "面板周期性波动风险，以及先进封装和CPO业务占比尚需确认。",
+        "reason_text": "公司主营PCB及IC载板，直接命中CPO、PCB、存储芯片三大前排主线，属于AI算力硬件核心产业链，业务支撑极强。",
+        "risk_text": "次新股波动较大，若算力硬件链退潮，PCB方向可能同步回调。",
         "score_factor_signal": {
           "selection_score_config_version": "main_theme_v2",
           "ranked_weekly_theme_hit_count": 2,
           "weekly_theme_hit_count": 3,
-          "reference_theme_hit_count": 2,
-          "future_theme_hit_count": 0,
-          "related_sub_theme_hit_count": 1,
-          "resonance_label": "strong",
-          "resonance_score": 2,
-          "business_relevance_label": "core_business_related",
-          "business_relevance_score": 1,
-          "noise_label_list": [
-            "none"
-          ],
-          "noise_score": 0,
-          "reflection_risk_label_list": [
-            "none"
-          ],
-          "reflection_risk_score": 0
-        }
-      },
-      {
-        "stock_code": "003031",
-        "stock_name": "中瓷电子",
-        "selection_score": 171,
-        "matched_theme_list": [
-          "CPO",
-          "半导体设备",
-          "光刻机",
-          "6G"
-        ],
-        "matched_weekly_theme_list": [
-          "CPO",
-          "半导体设备"
-        ],
-        "matched_reference_theme_list": [
-          "CPO",
-          "半导体",
-          "6G"
-        ],
-        "matched_future_theme_list": [],
-        "resonance_type": "strong",
-        "industry_chain_path": [
-          "AI算力硬件",
-          "CPO光通信器件",
-          "电子陶瓷外壳",
-          "半导体器件外壳"
-        ],
-        "business_relevance_label": "core_business_related",
-        "noise_label_list": [
-          "none"
-        ],
-        "reflection_risk_label_list": [
-          "none"
-        ],
-        "holding_style_label": "main_theme_trend",
-        "reason_text": "公司主营电子陶瓷外壳产品，是国内能与国际知名企业竞争的少数厂商之一。产品直接用于1.6Tbps光通信器件及半导体功率器件，同时命中CPO与半导体设备双主线，产业链路径极清晰，主营业务强支撑。",
-        "risk_text": "若AI算力硬件资本开支不及预期，CPO方向可能承压；半导体国产替代进程若放缓，将影响估值。",
-        "score_factor_signal": {
-          "selection_score_config_version": "main_theme_v2",
-          "ranked_weekly_theme_hit_count": 2,
-          "weekly_theme_hit_count": 2,
           "reference_theme_hit_count": 3,
           "future_theme_hit_count": 0,
           "related_sub_theme_hit_count": 1,
@@ -956,30 +914,85 @@
         }
       },
       {
-        "stock_code": "300395",
-        "stock_name": "菲利华",
-        "selection_score": 171,
+        "stock_code": "603203",
+        "stock_name": "快克智能",
+        "selection_score": 177,
         "matched_theme_list": [
-          "半导体设备",
+          "先进封装",
+          "存储芯片",
           "CPO",
-          "光纤",
-          "PCB"
+          "PCB概念"
         ],
         "matched_weekly_theme_list": [
-          "半导体设备",
-          "CPO"
+          "先进封装",
+          "存储芯片",
+          "CPO",
+          "PCB概念"
+        ],
+        "matched_reference_theme_list": [],
+        "matched_future_theme_list": [],
+        "resonance_type": "strong",
+        "industry_chain_path": [
+          "半导体封装",
+          "固晶键合设备",
+          "先进封装/存储芯片"
+        ],
+        "business_relevance_label": "core_business_related",
+        "noise_label_list": [
+          "none"
+        ],
+        "reflection_risk_label_list": [
+          "none"
+        ],
+        "holding_style_label": "main_theme_trend",
+        "reason_text": "公司主营精密电子组装和半导体封装检测设备，固晶键合封装设备直接对应先进封装与存储芯片制程，同时覆盖CPO与PCB的组装环节，多主线强共振且业务支撑明确。",
+        "risk_text": "半导体封装设备订单周期较长，若行业资本开支放缓可能影响业绩兑现。",
+        "score_factor_signal": {
+          "selection_score_config_version": "main_theme_v2",
+          "ranked_weekly_theme_hit_count": 3,
+          "weekly_theme_hit_count": 4,
+          "reference_theme_hit_count": 0,
+          "future_theme_hit_count": 0,
+          "related_sub_theme_hit_count": 0,
+          "resonance_label": "strong",
+          "resonance_score": 2,
+          "business_relevance_label": "core_business_related",
+          "business_relevance_score": 1,
+          "noise_label_list": [
+            "none"
+          ],
+          "noise_score": 0,
+          "reflection_risk_label_list": [
+            "none"
+          ],
+          "reflection_risk_score": 0
+        }
+      },
+      {
+        "stock_code": "002185",
+        "stock_name": "华天科技",
+        "selection_score": 176,
+        "matched_theme_list": [
+          "CPO",
+          "存储芯片",
+          "先进封装",
+          "半导体"
+        ],
+        "matched_weekly_theme_list": [
+          "CPO",
+          "存储芯片",
+          "先进封装"
         ],
         "matched_reference_theme_list": [
-          "PCB",
-          "光纤光缆",
           "半导体"
         ],
         "matched_future_theme_list": [],
         "resonance_type": "strong",
         "industry_chain_path": [
-          "半导体制造/光刻",
-          "石英玻璃材料",
-          "光通信光纤材料"
+          "AI算力",
+          "先进封装",
+          "存储芯片",
+          "CPO"
         ],
         "business_relevance_label": "core_business_related",
         "noise_label_list": [
@@ -989,75 +1002,15 @@
           "none"
         ],
         "holding_style_label": "main_theme_trend",
-        "reason_text": "公司主营高性能石英玻璃材料，是半导体光刻/刻蚀环节的核心耗材，同时石英材料广泛应用于光纤制造，命中半导体设备与CPO双主线，产业链真实共振。",
-        "risk_text": "半导体行业周期波动可能影响材料需求；石英材料在CPO中的需求放量需视光模块产能落地情况。",
+        "reason_text": "公司为专业集成电路封测代工企业，重点布局先进封装，命中CPO、存储芯片和先进封装三大主线，业务相关性强，产业链逻辑清晰。",
+        "risk_text": "封测行业竞争激烈，若AI算力需求拉动效应边际减弱，业绩弹性可能受限。",
         "score_factor_signal": {
           "selection_score_config_version": "main_theme_v2",
-          "ranked_weekly_theme_hit_count": 2,
-          "weekly_theme_hit_count": 2,
-          "reference_theme_hit_count": 3,
-          "future_theme_hit_count": 0,
-          "related_sub_theme_hit_count": 1,
-          "resonance_label": "strong",
-          "resonance_score": 2,
-          "business_relevance_label": "core_business_related",
-          "business_relevance_score": 1,
-          "noise_label_list": [
-            "none"
-          ],
-          "noise_score": 0,
-          "reflection_risk_label_list": [
-            "none"
-          ],
-          "reflection_risk_score": 0
-        }
-      },
-      {
-        "stock_code": "600703",
-        "stock_name": "三安光电",
-        "selection_score": 171,
-        "matched_theme_list": [
-          "半导体设备",
-          "先进封装",
-          "CPO",
-          "消费电子",
-          "半导体",
-          "光通信"
-        ],
-        "matched_weekly_theme_list": [
-          "先进封装",
-          "CPO",
-          "消费电子"
-        ],
-        "matched_reference_theme_list": [
-          "半导体",
-          "光通信"
-        ],
-        "matched_future_theme_list": [],
-        "resonance_type": "strong",
-        "industry_chain_path": [
-          "化合物半导体",
-          "光技术/CPO",
-          "先进封装",
-          "MiniLED消费电子"
-        ],
-        "business_relevance_label": "core_business_related",
-        "noise_label_list": [
-          "none"
-        ],
-        "reflection_risk_label_list": [
-          "none"
-        ],
-        "holding_style_label": "main_theme_trend",
-        "reason_text": "国内化合物半导体龙头，业务覆盖Mini/Micro LED（消费电子）、射频/电力电子（半导体设备材料）及光技术（CPO/光通信），与本周多条主线强共振，产业链路径清晰。",
-        "risk_text": "化合物半导体产能释放与消化情况，以及消费电子复苏不及预期风险。",
-        "score_factor_signal": {
-          "selection_score_config_version": "main_theme_v2",
-          "ranked_weekly_theme_hit_count": 2,
+          "ranked_weekly_theme_hit_count": 3,
           "weekly_theme_hit_count": 3,
-          "reference_theme_hit_count": 2,
+          "reference_theme_hit_count": 1,
           "future_theme_hit_count": 0,
-          "related_sub_theme_hit_count": 1,
+          "related_sub_theme_hit_count": 0,
           "resonance_label": "strong",
           "resonance_score": 2,
           "business_relevance_label": "core_business_related",
@@ -1073,36 +1026,35 @@
         }
       },
       {
-        "stock_code": "600487",
-        "stock_name": "亨通光电",
-        "selection_score": 169,
+        "stock_code": "002938",
+        "stock_name": "鹏鼎控股",
+        "selection_score": 176,
         "matched_theme_list": [
           "CPO",
-          "光通信",
-          "6G",
-          "光缆光纤",
-          "智能电网",
+          "PCB概念",
+          "AI PC",
           "人形机器人"
         ],
         "matched_weekly_theme_list": [
-          "CPO"
+          "CPO",
+          "PCB概念",
+          "AI PC"
         ],
         "matched_reference_theme_list": [
           "CPO",
-          "光通信",
-          "6G",
-          "光缆光纤",
-          "智能电网"
+          "PCB",
+          "人形机器人",
+          "PC"
         ],
         "matched_future_theme_list": [
           "人形机器人"
         ],
         "resonance_type": "strong",
         "industry_chain_path": [
-          "AI算力硬件",
-          "CPO光模块",
-          "光纤光缆",
-          "通信网络"
+          "AI服务器",
+          "高速PCB",
+          "CPO基板",
+          "AI终端PCB"
         ],
         "business_relevance_label": "core_business_related",
         "noise_label_list": [
@@ -1112,15 +1064,136 @@
           "none"
         ],
         "holding_style_label": "main_theme_trend",
-        "reason_text": "公司是全球光纤通信前3强，主营通信网络与能源互联，命中CPO核心主线及光通信等多条参考线，且有人形机器人未来事件催化，产业链真实。",
-        "risk_text": "CPO技术路线迭代及海缆业务竞争加剧，可能影响毛利率。",
+        "reason_text": "全球最大PCB生产企业，主营各类印制电路板，同时命中CPO、PCB、AI PC三大前排主线，业务与算力硬件及AI终端产业链高度契合，共振极强。",
+        "risk_text": "作为大盘龙头股，弹性可能不及中小盘标的；若消费电子复苏不及预期，可能拖累业绩。",
+        "score_factor_signal": {
+          "selection_score_config_version": "main_theme_v2",
+          "ranked_weekly_theme_hit_count": 1,
+          "weekly_theme_hit_count": 3,
+          "reference_theme_hit_count": 4,
+          "future_theme_hit_count": 1,
+          "related_sub_theme_hit_count": 0,
+          "resonance_label": "strong",
+          "resonance_score": 2,
+          "business_relevance_label": "core_business_related",
+          "business_relevance_score": 1,
+          "noise_label_list": [
+            "none"
+          ],
+          "noise_score": 0,
+          "reflection_risk_label_list": [
+            "none"
+          ],
+          "reflection_risk_score": 0
+        }
+      },
+      {
+        "stock_code": "600584",
+        "stock_name": "长电科技",
+        "selection_score": 176,
+        "matched_theme_list": [
+          "CPO",
+          "存储芯片",
+          "先进封装",
+          "半导体"
+        ],
+        "matched_weekly_theme_list": [
+          "CPO",
+          "存储芯片",
+          "先进封装"
+        ],
+        "matched_reference_theme_list": [
+          "半导体"
+        ],
+        "matched_future_theme_list": [],
+        "resonance_type": "strong",
+        "industry_chain_path": [
+          "AI算力芯片",
+          "先进封装/2.5D/3D封装",
+          "存储芯片封装测试",
+          "CPO光电共封装"
+        ],
+        "business_relevance_label": "core_business_related",
+        "noise_label_list": [
+          "none"
+        ],
+        "reflection_risk_label_list": [
+          "none"
+        ],
+        "holding_style_label": "main_theme_trend",
+        "reason_text": "公司是全球领先的集成电路封测企业，主营业务全面覆盖先进封装、存储芯片封装及CPO光电共封装，完美命中本周前三强主线，产业链路径极其清晰，且具备全球领先地位。",
+        "risk_text": "半导体周期复苏不及预期可能影响封测产能利用率；先进封装技术迭代快，资本开支压力较大。",
+        "score_factor_signal": {
+          "selection_score_config_version": "main_theme_v2",
+          "ranked_weekly_theme_hit_count": 3,
+          "weekly_theme_hit_count": 3,
+          "reference_theme_hit_count": 1,
+          "future_theme_hit_count": 0,
+          "related_sub_theme_hit_count": 0,
+          "resonance_label": "strong",
+          "resonance_score": 2,
+          "business_relevance_label": "core_business_related",
+          "business_relevance_score": 1,
+          "noise_label_list": [
+            "none"
+          ],
+          "noise_score": 0,
+          "reflection_risk_label_list": [
+            "none"
+          ],
+          "reflection_risk_score": 0
+        }
+      },
+      {
+        "stock_code": "002475",
+        "stock_name": "立讯精密",
+        "selection_score": 175,
+        "matched_theme_list": [
+          "CPO",
+          "人形机器人",
+          "AI",
+          "PC",
+          "光纤光缆",
+          "6G"
+        ],
+        "matched_weekly_theme_list": [
+          "CPO"
+        ],
+        "matched_reference_theme_list": [
+          "CPO",
+          "人形机器人",
+          "AI",
+          "PC",
+          "光纤光缆",
+          "6G"
+        ],
+        "matched_future_theme_list": [
+          "人形机器人"
+        ],
+        "resonance_type": "strong",
+        "industry_chain_path": [
+          "AI算力",
+          "CPO/光通信",
+          "连接器",
+          "AI终端/机器人"
+        ],
+        "business_relevance_label": "core_business_related",
+        "noise_label_list": [
+          "none"
+        ],
+        "reflection_risk_label_list": [
+          "none"
+        ],
+        "holding_style_label": "main_theme_trend",
+        "reason_text": "核心业务为连接器与消费电子，深度布局光通信与CPO，同时命中CPO主线及人形机器人未来催化，产业链逻辑清晰。",
+        "risk_text": "体量较大，弹性可能不如小盘股；消费电子复苏不及预期可能拖累业绩。",
         "score_factor_signal": {
           "selection_score_config_version": "main_theme_v2",
           "ranked_weekly_theme_hit_count": 1,
           "weekly_theme_hit_count": 1,
-          "reference_theme_hit_count": 5,
+          "reference_theme_hit_count": 6,
           "future_theme_hit_count": 1,
-          "related_sub_theme_hit_count": 1,
+          "related_sub_theme_hit_count": 0,
           "resonance_label": "strong",
           "resonance_score": 2,
           "business_relevance_label": "core_business_related",
@@ -1142,9 +1215,10 @@
         "matched_theme_list": [
           "CPO",
           "光通信",
+          "光缆光纤",
           "半导体",
-          "人形机器人",
-          "光缆光纤"
+          "6G",
+          "人形机器人"
         ],
         "matched_weekly_theme_list": [
           "CPO"
@@ -1152,9 +1226,9 @@
         "matched_reference_theme_list": [
           "光通信",
           "CPO",
+          "光缆光纤",
           "半导体",
-          "机器人",
-          "光缆光纤"
+          "6G"
         ],
         "matched_future_theme_list": [
           "人形机器人"
@@ -1162,9 +1236,9 @@
         "resonance_type": "strong",
         "industry_chain_path": [
           "AI算力",
-          "光通信",
-          "CPO",
-          "光纤光缆"
+          "光通信基础设施",
+          "CPO/光模块",
+          "光纤预制棒与光纤光缆"
         ],
         "business_relevance_label": "core_business_related",
         "noise_label_list": [
@@ -1174,8 +1248,8 @@
           "none"
         ],
         "holding_style_label": "main_theme_trend",
-        "reason_text": "公司是全球领先的光纤预制棒、光纤、光缆及光模块企业，主营核心受益于AI算力硬件CPO与光通信需求，产业链路径极清晰，多主线强共振。",
-        "risk_text": "若AI算力硬件需求不及预期或光模块技术路线变更，可能影响公司业绩弹性。",
+        "reason_text": "公司是全球领先的光纤预制棒、光纤、光缆及光模块企业，主营核心受益于CPO与光通信产业链，且同时命中多个前排主线及参考主题，产业链路径极为清晰。",
+        "risk_text": "若AI算力建设需求不及预期或光通信技术路线发生变更，可能影响公司相关业务弹性。",
         "score_factor_signal": {
           "selection_score_config_version": "main_theme_v2",
           "ranked_weekly_theme_hit_count": 1,
@@ -1198,94 +1272,28 @@
         }
       },
       {
-        "stock_code": "603936",
-        "stock_name": "博敏电子",
-        "selection_score": 168,
+        "stock_code": "600171",
+        "stock_name": "上海贝岭",
+        "selection_score": 165,
         "matched_theme_list": [
-          "先进封装",
-          "CPO",
-          "消费电子",
-          "PCB",
-          "6G"
+          "存储芯片",
+          "CPO"
         ],
         "matched_weekly_theme_list": [
-          "先进封装",
-          "CPO",
-          "消费电子"
-        ],
-        "matched_reference_theme_list": [
-          "CPO",
-          "PCB",
-          "6G"
-        ],
-        "matched_future_theme_list": [],
-        "resonance_type": "strong",
-        "industry_chain_path": [
-          "AI算力",
-          "CPO/先进封装",
-          "PCB"
-        ],
-        "business_relevance_label": "core_business_related",
-        "noise_label_list": [
-          "concept_stacking"
-        ],
-        "reflection_risk_label_list": [
-          "none"
-        ],
-        "holding_style_label": "main_theme_trend",
-        "reason_text": "公司主营高精密PCB，产品覆盖HDI及高频高速板，命中先进封装、CPO与消费电子三大前排主线，产业链路径清晰，业务支撑强。",
-        "risk_text": "概念标签过多过杂，部分概念如商业航天、脑机接口等与主营关联度弱，易受概念退潮拖累。",
-        "score_factor_signal": {
-          "selection_score_config_version": "main_theme_v2",
-          "ranked_weekly_theme_hit_count": 2,
-          "weekly_theme_hit_count": 3,
-          "reference_theme_hit_count": 3,
-          "future_theme_hit_count": 0,
-          "related_sub_theme_hit_count": 0,
-          "resonance_label": "strong",
-          "resonance_score": 2,
-          "business_relevance_label": "core_business_related",
-          "business_relevance_score": 1,
-          "noise_label_list": [
-            "concept_stacking"
-          ],
-          "noise_score": -1,
-          "reflection_risk_label_list": [
-            "none"
-          ],
-          "reflection_risk_score": 0
-        }
-      },
-      {
-        "stock_code": "000938",
-        "stock_name": "紫光股份",
-        "selection_score": 166,
-        "matched_theme_list": [
-          "CPO",
-          "光通信",
-          "算力租赁",
-          "半导体",
-          "AI应用",
-          "6G"
-        ],
-        "matched_weekly_theme_list": [
+          "存储芯片",
           "CPO"
         ],
         "matched_reference_theme_list": [
-          "光通信",
-          "算力租赁",
-          "CPO",
           "半导体",
-          "AI应用",
-          "6G"
+          "CPO",
+          "存储半导体"
         ],
         "matched_future_theme_list": [],
         "resonance_type": "strong",
         "industry_chain_path": [
           "AI算力",
-          "CPO",
-          "光通信",
-          "ICT设备"
+          "CPO/存储芯片",
+          "模拟及数模混合IC"
         ],
         "business_relevance_label": "core_business_related",
         "noise_label_list": [
@@ -1295,362 +1303,8 @@
           "none"
         ],
         "holding_style_label": "main_theme_trend",
-        "reason_text": "公司是新一代信息通信领域领军企业，深度布局云-网-安-算-存-端全产业链，提供网络设备、服务器等ICT基础设施。命中CPO、光通信、算力租赁等多个强相关主线，主营业务与AI算力硬件及CPO产业链高度契合，共振极强。",
-        "risk_text": "若AI算力硬件需求不及预期，或CPO技术迭代放缓，可能影响公司相关业务增速。",
-        "score_factor_signal": {
-          "selection_score_config_version": "main_theme_v2",
-          "ranked_weekly_theme_hit_count": 1,
-          "weekly_theme_hit_count": 1,
-          "reference_theme_hit_count": 6,
-          "future_theme_hit_count": 0,
-          "related_sub_theme_hit_count": 0,
-          "resonance_label": "strong",
-          "resonance_score": 2,
-          "business_relevance_label": "core_business_related",
-          "business_relevance_score": 1,
-          "noise_label_list": [
-            "none"
-          ],
-          "noise_score": 0,
-          "reflection_risk_label_list": [
-            "none"
-          ],
-          "reflection_risk_score": 0
-        }
-      },
-      {
-        "stock_code": "001314",
-        "stock_name": "亿道信息",
-        "selection_score": 165,
-        "matched_theme_list": [
-          "先进封装",
-          "消费电子",
-          "AI PC",
-          "AI",
-          "人形机器人"
-        ],
-        "matched_weekly_theme_list": [
-          "先进封装",
-          "消费电子"
-        ],
-        "matched_reference_theme_list": [
-          "PCB",
-          "AI",
-          "PC",
-          "机器人"
-        ],
-        "matched_future_theme_list": [
-          "人形机器人"
-        ],
-        "resonance_type": "strong",
-        "industry_chain_path": [
-          "AI终端",
-          "AI PC",
-          "消费电子",
-          "先进封装"
-        ],
-        "business_relevance_label": "core_business_related",
-        "noise_label_list": [
-          "concept_stacking"
-        ],
-        "reflection_risk_label_list": [
-          "none"
-        ],
-        "holding_style_label": "main_theme_trend",
-        "reason_text": "公司主营智能电子产品及方案，AI PC与消费电子是核心业务，命中先进封装与消费电子双周级主线，且命中未来事件催化的人形机器人主题，产业链逻辑通顺。",
-        "risk_text": "概念标签过多（如元宇宙、空间计算等），部分概念属于拼凑；消费电子复苏力度需持续观察。",
-        "score_factor_signal": {
-          "selection_score_config_version": "main_theme_v2",
-          "ranked_weekly_theme_hit_count": 1,
-          "weekly_theme_hit_count": 2,
-          "reference_theme_hit_count": 4,
-          "future_theme_hit_count": 1,
-          "related_sub_theme_hit_count": 2,
-          "resonance_label": "strong",
-          "resonance_score": 2,
-          "business_relevance_label": "core_business_related",
-          "business_relevance_score": 1,
-          "noise_label_list": [
-            "concept_stacking"
-          ],
-          "noise_score": -1,
-          "reflection_risk_label_list": [
-            "none"
-          ],
-          "reflection_risk_score": 0
-        }
-      },
-      {
-        "stock_code": "002008",
-        "stock_name": "大族激光",
-        "selection_score": 165,
-        "matched_theme_list": [
-          "半导体设备",
-          "先进封装",
-          "消费电子",
-          "PCB",
-          "半导体"
-        ],
-        "matched_weekly_theme_list": [
-          "半导体设备",
-          "先进封装",
-          "消费电子"
-        ],
-        "matched_reference_theme_list": [
-          "PCB",
-          "半导体"
-        ],
-        "matched_future_theme_list": [],
-        "resonance_type": "strong",
-        "industry_chain_path": [
-          "半导体设备",
-          "光刻机",
-          "先进封装激光焊接",
-          "PCB钻孔设备",
-          "消费电子组装"
-        ],
-        "business_relevance_label": "core_business_related",
-        "noise_label_list": [
-          "none"
-        ],
-        "reflection_risk_label_list": [
-          "none"
-        ],
-        "holding_style_label": "main_theme_trend",
-        "reason_text": "全球领先的激光加工设备商，产品覆盖光刻机、PCB钻孔机及半导体封装设备，同时深度绑定消费电子大客户，多主线强共振且主营完全支撑。",
-        "risk_text": "消费电子复苏不及预期可能拖累传统业务，半导体设备领域面临国内同行激烈竞争。",
-        "score_factor_signal": {
-          "selection_score_config_version": "main_theme_v2",
-          "ranked_weekly_theme_hit_count": 2,
-          "weekly_theme_hit_count": 3,
-          "reference_theme_hit_count": 2,
-          "future_theme_hit_count": 0,
-          "related_sub_theme_hit_count": 0,
-          "resonance_label": "strong",
-          "resonance_score": 2,
-          "business_relevance_label": "core_business_related",
-          "business_relevance_score": 1,
-          "noise_label_list": [
-            "none"
-          ],
-          "noise_score": 0,
-          "reflection_risk_label_list": [
-            "none"
-          ],
-          "reflection_risk_score": 0
-        }
-      },
-      {
-        "stock_code": "600584",
-        "stock_name": "长电科技",
-        "selection_score": 165,
-        "matched_theme_list": [
-          "先进封装",
-          "CPO",
-          "消费电子",
-          "半导体",
-          "存储半导体"
-        ],
-        "matched_weekly_theme_list": [
-          "先进封装",
-          "CPO",
-          "消费电子"
-        ],
-        "matched_reference_theme_list": [
-          "半导体",
-          "存储半导体"
-        ],
-        "matched_future_theme_list": [],
-        "resonance_type": "strong",
-        "industry_chain_path": [
-          "AI算力硬件",
-          "先进封装/CPO",
-          "集成电路封测"
-        ],
-        "business_relevance_label": "core_business_related",
-        "noise_label_list": [
-          "none"
-        ],
-        "reflection_risk_label_list": [
-          "none"
-        ],
-        "holding_style_label": "main_theme_trend",
-        "reason_text": "公司是全球领先的集成电路封测企业，主营业务涵盖先进封装、CPO及存储芯片等，直接受益于半导体国产替代及AI算力硬件需求爆发，多主线强共振且业务支撑极强。",
-        "risk_text": "半导体周期复苏不及预期或AI算力资本开支放缓可能导致订单下滑。",
-        "score_factor_signal": {
-          "selection_score_config_version": "main_theme_v2",
-          "ranked_weekly_theme_hit_count": 2,
-          "weekly_theme_hit_count": 3,
-          "reference_theme_hit_count": 2,
-          "future_theme_hit_count": 0,
-          "related_sub_theme_hit_count": 0,
-          "resonance_label": "strong",
-          "resonance_score": 2,
-          "business_relevance_label": "core_business_related",
-          "business_relevance_score": 1,
-          "noise_label_list": [
-            "none"
-          ],
-          "noise_score": 0,
-          "reflection_risk_label_list": [
-            "none"
-          ],
-          "reflection_risk_score": 0
-        }
-      },
-      {
-        "stock_code": "601133",
-        "stock_name": "柏诚股份",
-        "selection_score": 165,
-        "matched_theme_list": [
-          "半导体设备",
-          "先进封装",
-          "消费电子",
-          "半导体",
-          "存储半导体"
-        ],
-        "matched_weekly_theme_list": [
-          "半导体设备",
-          "先进封装",
-          "消费电子"
-        ],
-        "matched_reference_theme_list": [
-          "半导体",
-          "存储半导体"
-        ],
-        "matched_future_theme_list": [],
-        "resonance_type": "strong",
-        "industry_chain_path": [
-          "半导体设备",
-          "晶圆厂/先进封装建厂",
-          "洁净室系统集成"
-        ],
-        "business_relevance_label": "core_business_related",
-        "noise_label_list": [
-          "none"
-        ],
-        "reflection_risk_label_list": [
-          "none"
-        ],
-        "holding_style_label": "main_theme_trend",
-        "reason_text": "公司主营洁净室系统集成，直接服务于半导体建厂与技改，命中半导体设备、先进封装及消费电子(OLED)多条主线，产业链路径清晰且主营业务强支撑。",
-        "risk_text": "若半导体资本开支周期不及预期，洁净室订单可能受影响。",
-        "score_factor_signal": {
-          "selection_score_config_version": "main_theme_v2",
-          "ranked_weekly_theme_hit_count": 2,
-          "weekly_theme_hit_count": 3,
-          "reference_theme_hit_count": 2,
-          "future_theme_hit_count": 0,
-          "related_sub_theme_hit_count": 0,
-          "resonance_label": "strong",
-          "resonance_score": 2,
-          "business_relevance_label": "core_business_related",
-          "business_relevance_score": 1,
-          "noise_label_list": [
-            "none"
-          ],
-          "noise_score": 0,
-          "reflection_risk_label_list": [
-            "none"
-          ],
-          "reflection_risk_score": 0
-        }
-      },
-      {
-        "stock_code": "603203",
-        "stock_name": "快克智能",
-        "selection_score": 165,
-        "matched_theme_list": [
-          "先进封装",
-          "CPO",
-          "消费电子",
-          "半导体",
-          "PCB"
-        ],
-        "matched_weekly_theme_list": [
-          "先进封装",
-          "CPO",
-          "消费电子"
-        ],
-        "matched_reference_theme_list": [
-          "半导体",
-          "PCB"
-        ],
-        "matched_future_theme_list": [],
-        "resonance_type": "strong",
-        "industry_chain_path": [
-          "半导体设备",
-          "先进封装",
-          "固晶键合"
-        ],
-        "business_relevance_label": "core_business_related",
-        "noise_label_list": [
-          "none"
-        ],
-        "reflection_risk_label_list": [
-          "none"
-        ],
-        "holding_style_label": "main_theme_trend",
-        "reason_text": "公司主营精密电子组装和半导体封装检测智能装备，固晶键合封装设备直接受益于先进封装主线，同时覆盖CPO和消费电子组装，产业链共振极强。",
-        "risk_text": "半导体设备资本开支周期波动可能影响订单增速。",
-        "score_factor_signal": {
-          "selection_score_config_version": "main_theme_v2",
-          "ranked_weekly_theme_hit_count": 2,
-          "weekly_theme_hit_count": 3,
-          "reference_theme_hit_count": 2,
-          "future_theme_hit_count": 0,
-          "related_sub_theme_hit_count": 0,
-          "resonance_label": "strong",
-          "resonance_score": 2,
-          "business_relevance_label": "core_business_related",
-          "business_relevance_score": 1,
-          "noise_label_list": [
-            "none"
-          ],
-          "noise_score": 0,
-          "reflection_risk_label_list": [
-            "none"
-          ],
-          "reflection_risk_score": 0
-        }
-      },
-      {
-        "stock_code": "603678",
-        "stock_name": "火炬电子",
-        "selection_score": 165,
-        "matched_theme_list": [
-          "半导体设备",
-          "先进封装",
-          "MLCC",
-          "半导体",
-          "存储半导体"
-        ],
-        "matched_weekly_theme_list": [
-          "半导体设备",
-          "先进封装"
-        ],
-        "matched_reference_theme_list": [
-          "MLCC",
-          "半导体",
-          "存储半导体"
-        ],
-        "matched_future_theme_list": [],
-        "resonance_type": "strong",
-        "industry_chain_path": [
-          "半导体设备",
-          "先进封装",
-          "MLCC"
-        ],
-        "business_relevance_label": "core_business_related",
-        "noise_label_list": [
-          "none"
-        ],
-        "reflection_risk_label_list": [
-          "none"
-        ],
-        "holding_style_label": "main_theme_trend",
-        "reason_text": "公司主营高端MLCC等电容器，是半导体设备与先进封装产业链的关键被动元器件供应商，与本周最强主线高度共振。",
-        "risk_text": "若半导体设备与先进封装主线退潮，公司作为上游核心供应商将同步承压。",
+        "reason_text": "公司主营模拟及数模混合集成电路，产品涵盖非挥发存储器和电源管理。属于半导体核心标的，同时命中存储芯片和CPO两大前排主线，业务支撑强。",
+        "risk_text": "半导体周期复苏若不及预期，可能影响存储芯片业务弹性。",
         "score_factor_signal": {
           "selection_score_config_version": "main_theme_v2",
           "ranked_weekly_theme_hit_count": 2,
@@ -1673,34 +1327,36 @@
         }
       },
       {
-        "stock_code": "002886",
-        "stock_name": "沃特股份",
+        "stock_code": "002815",
+        "stock_name": "崇达技术",
         "selection_score": 163,
         "matched_theme_list": [
+          "PCB概念",
+          "共封装光学(CPO)",
           "先进封装",
-          "消费电子",
-          "半导体",
-          "人形机器人",
-          "6G"
+          "AI PC"
         ],
         "matched_weekly_theme_list": [
+          "PCB概念",
+          "共封装光学(CPO)",
           "先进封装",
-          "消费电子"
+          "AI PC"
         ],
         "matched_reference_theme_list": [
+          "PCB概念",
+          "CPO",
           "半导体",
-          "人形机器人",
-          "6G",
-          "PCB"
+          "AI PC",
+          "人形机器人"
         ],
         "matched_future_theme_list": [
           "人形机器人"
         ],
         "resonance_type": "strong",
         "industry_chain_path": [
-          "AI算力/先进封装",
-          "特种高分子材料",
-          "LCP/PTFE"
+          "AI算力硬件",
+          "CPO/先进封装",
+          "高频高速PCB"
         ],
         "business_relevance_label": "core_business_related",
         "noise_label_list": [
@@ -1710,13 +1366,13 @@
           "none"
         ],
         "holding_style_label": "main_theme_trend",
-        "reason_text": "公司主营LCP、PTFE等特种高分子材料，是高频高速通信和先进封装的关键材料，同时命中多主线及未来事件催化。",
-        "risk_text": "特种材料产能释放和客户认证进度可能不及预期，原材料价格波动风险。",
+        "reason_text": "公司主营印制电路板(PCB)，产品包含高频高速板、HDI板等，直接受益于AI服务器升级带来的PCB用量与规格提升，同时命中CPO、先进封装、AI PC等多个核心主线，产业链路径清晰，主营业务强支撑。",
+        "risk_text": "若AI算力硬件链退潮，PCB板块将同步回调；概念较多需警惕市场风格切换时的杀估值风险。",
         "score_factor_signal": {
           "selection_score_config_version": "main_theme_v2",
           "ranked_weekly_theme_hit_count": 1,
-          "weekly_theme_hit_count": 2,
-          "reference_theme_hit_count": 4,
+          "weekly_theme_hit_count": 3,
+          "reference_theme_hit_count": 3,
           "future_theme_hit_count": 1,
           "related_sub_theme_hit_count": 0,
           "resonance_label": "strong",
@@ -1739,28 +1395,28 @@
         "selection_score": 163,
         "matched_theme_list": [
           "CPO",
-          "消费电子",
-          "光通信",
-          "6G"
+          "AI PC",
+          "6G",
+          "人形机器人"
         ],
         "matched_weekly_theme_list": [
           "CPO",
-          "消费电子"
+          "AI PC"
         ],
         "matched_reference_theme_list": [
-          "光通信",
           "6G",
-          "半导体",
-          "人形机器人"
+          "人形机器人",
+          "AI",
+          "PC"
         ],
         "matched_future_theme_list": [
           "人形机器人"
         ],
         "resonance_type": "strong",
         "industry_chain_path": [
-          "AI算力/CPO",
-          "光通信频率器件",
-          "消费电子"
+          "AI算力/终端",
+          "光通信/6G",
+          "频率元器件"
         ],
         "business_relevance_label": "core_business_related",
         "noise_label_list": [
@@ -1770,8 +1426,8 @@
           "none"
         ],
         "holding_style_label": "main_theme_trend",
-        "reason_text": "公司主营石英晶体频率元器件，是光通信、CPO和消费电子的核心被动元件，多主线共振清晰，且具备国产替代逻辑。",
-        "risk_text": "频率器件属于成熟被动元件，弹性可能弱于核心算力芯片，且需关注消费电子复苏节奏。",
+        "reason_text": "公司主营石英晶体频率元器件，是光通信、AI算力、6G等硬件的基础元器件，命中CPO与AI PC双主线，且与6G及人形机器人未来催化共振，产业链逻辑清晰。",
+        "risk_text": "若AI算力及通信硬件需求不及预期，公司相关产品订单可能受影响。",
         "score_factor_signal": {
           "selection_score_config_version": "main_theme_v2",
           "ranked_weekly_theme_hit_count": 1,
@@ -1794,35 +1450,382 @@
         }
       },
       {
-        "stock_code": "605589",
-        "stock_name": "圣泉集团",
+        "stock_code": "002429",
+        "stock_name": "兆驰股份",
         "selection_score": 157,
         "matched_theme_list": [
+          "CPO",
           "先进封装",
-          "创新药",
-          "PCB",
-          "存储半导体",
-          "6G",
-          "覆铜板"
+          "PCB概念",
+          "AI应用"
         ],
         "matched_weekly_theme_list": [
+          "CPO",
           "先进封装",
-          "创新药"
+          "PCB概念"
         ],
         "matched_reference_theme_list": [
+          "CPO",
           "PCB",
-          "创新药",
-          "存储半导体",
-          "6G",
-          "覆铜板"
+          "AI应用",
+          "半导体"
         ],
         "matched_future_theme_list": [],
         "resonance_type": "strong",
         "industry_chain_path": [
-          "半导体电子化学品",
-          "光刻胶",
+          "AI算力",
+          "CPO",
+          "PCB",
+          "先进封装"
+        ],
+        "business_relevance_label": "partial_business_related",
+        "noise_label_list": [
+          "concept_stacking"
+        ],
+        "reflection_risk_label_list": [
+          "none"
+        ],
+        "holding_style_label": "main_theme_trend",
+        "reason_text": "命中CPO、先进封装、PCB多个强相关主线，产业链共振明显，但主营业务偏向家电和LED，概念标签较多存在一定拼凑。",
+        "risk_text": "CPO和先进封装业务占比尚不明确，若主线退潮，缺乏业绩支撑易回调。",
+        "score_factor_signal": {
+          "selection_score_config_version": "main_theme_v2",
+          "ranked_weekly_theme_hit_count": 2,
+          "weekly_theme_hit_count": 3,
+          "reference_theme_hit_count": 4,
+          "future_theme_hit_count": 0,
+          "related_sub_theme_hit_count": 0,
+          "resonance_label": "strong",
+          "resonance_score": 2,
+          "business_relevance_label": "partial_business_related",
+          "business_relevance_score": 0,
+          "noise_label_list": [
+            "concept_stacking"
+          ],
+          "noise_score": -1,
+          "reflection_risk_label_list": [
+            "none"
+          ],
+          "reflection_risk_score": 0
+        }
+      },
+      {
+        "stock_code": "600487",
+        "stock_name": "亨通光电",
+        "selection_score": 156,
+        "matched_theme_list": [
+          "CPO",
+          "光通信",
+          "光缆光纤",
+          "6G",
+          "人形机器人"
+        ],
+        "matched_weekly_theme_list": [
+          "CPO"
+        ],
+        "matched_reference_theme_list": [
+          "光通信",
+          "CPO",
+          "光缆光纤",
+          "6G"
+        ],
+        "matched_future_theme_list": [
+          "人形机器人"
+        ],
+        "resonance_type": "strong",
+        "industry_chain_path": [
+          "AI算力",
+          "CPO",
+          "光纤光缆",
+          "通信设备"
+        ],
+        "business_relevance_label": "core_business_related",
+        "noise_label_list": [
+          "none"
+        ],
+        "reflection_risk_label_list": [
+          "none"
+        ],
+        "holding_style_label": "main_theme_trend",
+        "reason_text": "公司是全球光纤通信前3强，具备CPO及光通信全产业链能力，且命中人形机器人未来事件催化，属于AI算力硬件核心标的。",
+        "risk_text": "CPO产业化进度不及预期，或光通信行业竞争加剧导致毛利下降。",
+        "score_factor_signal": {
+          "selection_score_config_version": "main_theme_v2",
+          "ranked_weekly_theme_hit_count": 1,
+          "weekly_theme_hit_count": 1,
+          "reference_theme_hit_count": 4,
+          "future_theme_hit_count": 1,
+          "related_sub_theme_hit_count": 1,
+          "resonance_label": "strong",
+          "resonance_score": 2,
+          "business_relevance_label": "core_business_related",
+          "business_relevance_score": 1,
+          "noise_label_list": [
+            "none"
+          ],
+          "noise_score": 0,
+          "reflection_risk_label_list": [
+            "none"
+          ],
+          "reflection_risk_score": 0
+        }
+      },
+      {
+        "stock_code": "000063",
+        "stock_name": "中兴通讯",
+        "selection_score": 154,
+        "matched_theme_list": [
+          "CPO",
+          "AI PC",
+          "光通信",
+          "6G",
+          "AI应用",
+          "算力租赁"
+        ],
+        "matched_weekly_theme_list": [
+          "CPO",
+          "AI PC"
+        ],
+        "matched_reference_theme_list": [
+          "光通信",
+          "6G",
+          "AI应用",
+          "算力租赁"
+        ],
+        "matched_future_theme_list": [],
+        "resonance_type": "strong",
+        "industry_chain_path": [
+          "光通信",
+          "CPO",
+          "AI算力",
+          "AI PC"
+        ],
+        "business_relevance_label": "core_business_related",
+        "noise_label_list": [
+          "none"
+        ],
+        "reflection_risk_label_list": [
+          "none"
+        ],
+        "holding_style_label": "main_theme_trend",
+        "reason_text": "全球领先的通信设备提供商，主营光通信系统与算力产品，深度受益于CPO及AI PC/AI算力需求，多主线强共振。",
+        "risk_text": "海外市场制裁风险，以及AI算力资本开支不及预期风险。",
+        "score_factor_signal": {
+          "selection_score_config_version": "main_theme_v2",
+          "ranked_weekly_theme_hit_count": 1,
+          "weekly_theme_hit_count": 2,
+          "reference_theme_hit_count": 4,
+          "future_theme_hit_count": 0,
+          "related_sub_theme_hit_count": 0,
+          "resonance_label": "strong",
+          "resonance_score": 2,
+          "business_relevance_label": "core_business_related",
+          "business_relevance_score": 1,
+          "noise_label_list": [
+            "none"
+          ],
+          "noise_score": 0,
+          "reflection_risk_label_list": [
+            "none"
+          ],
+          "reflection_risk_score": 0
+        }
+      },
+      {
+        "stock_code": "002008",
+        "stock_name": "大族激光",
+        "selection_score": 152,
+        "matched_theme_list": [
+          "PCB概念",
           "先进封装",
-          "PCB覆铜板"
+          "存储芯片"
+        ],
+        "matched_weekly_theme_list": [
+          "PCB概念",
+          "先进封装",
+          "存储芯片"
+        ],
+        "matched_reference_theme_list": [
+          "PCB"
+        ],
+        "matched_future_theme_list": [],
+        "resonance_type": "strong",
+        "industry_chain_path": [
+          "半导体设备",
+          "PCB钻孔设备",
+          "先进封装激光设备"
+        ],
+        "business_relevance_label": "core_business_related",
+        "noise_label_list": [
+          "none"
+        ],
+        "reflection_risk_label_list": [
+          "none"
+        ],
+        "holding_style_label": "main_theme_trend",
+        "reason_text": "公司主营激光加工设备及PCB钻孔机，直接受益于PCB和先进封装需求，命中多个周级主线且业务支撑强。",
+        "risk_text": "半导体周期波动可能影响设备订单；概念较多需警惕情绪退潮。",
+        "score_factor_signal": {
+          "selection_score_config_version": "main_theme_v2",
+          "ranked_weekly_theme_hit_count": 2,
+          "weekly_theme_hit_count": 3,
+          "reference_theme_hit_count": 1,
+          "future_theme_hit_count": 0,
+          "related_sub_theme_hit_count": 0,
+          "resonance_label": "strong",
+          "resonance_score": 2,
+          "business_relevance_label": "core_business_related",
+          "business_relevance_score": 1,
+          "noise_label_list": [
+            "none"
+          ],
+          "noise_score": 0,
+          "reflection_risk_label_list": [
+            "none"
+          ],
+          "reflection_risk_score": 0
+        }
+      },
+      {
+        "stock_code": "002741",
+        "stock_name": "光华科技",
+        "selection_score": 152,
+        "matched_theme_list": [
+          "CPO",
+          "先进封装",
+          "PCB概念",
+          "PCB"
+        ],
+        "matched_weekly_theme_list": [
+          "CPO",
+          "先进封装",
+          "PCB概念"
+        ],
+        "matched_reference_theme_list": [
+          "PCB"
+        ],
+        "matched_future_theme_list": [],
+        "resonance_type": "strong",
+        "industry_chain_path": [
+          "AI服务器",
+          "高速PCB",
+          "PCB化学品",
+          "先进封装材料"
+        ],
+        "business_relevance_label": "core_business_related",
+        "noise_label_list": [
+          "none"
+        ],
+        "reflection_risk_label_list": [
+          "none"
+        ],
+        "holding_style_label": "main_theme_trend",
+        "reason_text": "公司主营PCB化学品，属于PCB上游核心材料，同时布局先进封装与CPO相关化学品，多主线强共振且业务支撑明确。",
+        "risk_text": "若AI算力硬件链退潮，PCB及封装化学品需求可能同步回调；锂电池材料业务可能带来业绩拖累。",
+        "score_factor_signal": {
+          "selection_score_config_version": "main_theme_v2",
+          "ranked_weekly_theme_hit_count": 2,
+          "weekly_theme_hit_count": 3,
+          "reference_theme_hit_count": 1,
+          "future_theme_hit_count": 0,
+          "related_sub_theme_hit_count": 0,
+          "resonance_label": "strong",
+          "resonance_score": 2,
+          "business_relevance_label": "core_business_related",
+          "business_relevance_score": 1,
+          "noise_label_list": [
+            "none"
+          ],
+          "noise_score": 0,
+          "reflection_risk_label_list": [
+            "none"
+          ],
+          "reflection_risk_score": 0
+        }
+      },
+      {
+        "stock_code": "600667",
+        "stock_name": "太极实业",
+        "selection_score": 152,
+        "matched_theme_list": [
+          "存储芯片",
+          "先进封装",
+          "半导体",
+          "存储半导体"
+        ],
+        "matched_weekly_theme_list": [
+          "存储芯片",
+          "先进封装"
+        ],
+        "matched_reference_theme_list": [
+          "半导体",
+          "存储半导体"
+        ],
+        "matched_future_theme_list": [],
+        "resonance_type": "strong",
+        "industry_chain_path": [
+          "半导体",
+          "存储芯片",
+          "先进封装"
+        ],
+        "business_relevance_label": "core_business_related",
+        "noise_label_list": [
+          "none"
+        ],
+        "reflection_risk_label_list": [
+          "none"
+        ],
+        "holding_style_label": "main_theme_trend",
+        "reason_text": "公司主营半导体后工序服务，包括IC芯片封装与测试，精准命中本周第二和第三主线，产业链共振极强。",
+        "risk_text": "半导体周期复苏不及预期，或存储芯片价格回落。",
+        "score_factor_signal": {
+          "selection_score_config_version": "main_theme_v2",
+          "ranked_weekly_theme_hit_count": 2,
+          "weekly_theme_hit_count": 2,
+          "reference_theme_hit_count": 2,
+          "future_theme_hit_count": 0,
+          "related_sub_theme_hit_count": 0,
+          "resonance_label": "strong",
+          "resonance_score": 2,
+          "business_relevance_label": "core_business_related",
+          "business_relevance_score": 1,
+          "noise_label_list": [
+            "none"
+          ],
+          "noise_score": 0,
+          "reflection_risk_label_list": [
+            "none"
+          ],
+          "reflection_risk_score": 0
+        }
+      },
+      {
+        "stock_code": "600498",
+        "stock_name": "烽火通信",
+        "selection_score": 150,
+        "matched_theme_list": [
+          "CPO",
+          "光通信",
+          "6G",
+          "算力租赁"
+        ],
+        "matched_weekly_theme_list": [
+          "CPO"
+        ],
+        "matched_reference_theme_list": [
+          "光通信",
+          "CPO",
+          "光缆光纤",
+          "6G",
+          "AI"
+        ],
+        "matched_future_theme_list": [],
+        "resonance_type": "strong",
+        "industry_chain_path": [
+          "AI算力",
+          "光通信",
+          "CPO",
+          "光纤光缆"
         ],
         "business_relevance_label": "core_business_related",
         "noise_label_list": [
@@ -1832,15 +1835,15 @@
           "none"
         ],
         "holding_style_label": "main_theme_trend",
-        "reason_text": "公司是半导体电子化学材料国产化平台型企业，主营酚醛树脂等是PCB覆铜板和先进封装核心材料，同时命中先进封装、PCB、创新药多主线，产业链逻辑清晰。",
-        "risk_text": "概念标签极多，部分概念与主营业务关联度低，易受市场概念轮动干扰。",
+        "reason_text": "公司主营通信设备与光纤光缆，属于CPO与光通信产业链核心标的，主营业务与第一主线高度契合，产业链路径清晰。",
+        "risk_text": "概念标签较多较杂，部分属于远期概念；若CPO产业化落地不及预期，股价可能面临估值回调。",
         "score_factor_signal": {
           "selection_score_config_version": "main_theme_v2",
           "ranked_weekly_theme_hit_count": 1,
-          "weekly_theme_hit_count": 2,
+          "weekly_theme_hit_count": 1,
           "reference_theme_hit_count": 5,
           "future_theme_hit_count": 0,
-          "related_sub_theme_hit_count": 0,
+          "related_sub_theme_hit_count": 1,
           "resonance_label": "strong",
           "resonance_score": 2,
           "business_relevance_label": "core_business_related",
@@ -1857,6 +1860,6 @@
       }
     ],
     "summary_text": "分批主线候选召回完成，已按程序计算的 selection_score 合并排序并保留最终候选池。",
-    "published_source_date": "2026-06-24"
+    "published_source_date": "2026-06-25"
   }
 }
