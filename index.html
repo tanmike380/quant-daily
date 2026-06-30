@@ -4268,6 +4268,81 @@ const INLINE_FUTURE = {
     "scan_date": "2026-06-30",
     "event_list": [
       {
+        "event_date": "2026-07-08",
+        "event_name": "美联储 6 月会议纪要公布",
+        "event_type": "macro_event",
+        "event_detail_text": "美联储将于 7 月 8 日公布 6 月 16-17 日 FOMC 会议纪要，是 7 月正式议息前的重要预期校准窗口，会直接影响全球成长风格和高估值主线的风险偏好。",
+        "catalyzed_theme_list": [
+          {
+            "catalyzed_theme_name": "光通信",
+            "is_current_theme_match": true,
+            "catalysis_strength": "medium",
+            "catalysis_reason_text": "会议纪要会影响成长风格折现率预期，算力链和高景气成长主线通常最敏感。"
+          },
+          {
+            "catalyzed_theme_name": "消费电子",
+            "is_current_theme_match": true,
+            "catalysis_strength": "weak",
+            "catalysis_reason_text": "纪要如果偏鸽，有利于外资偏好的成长消费电子链估值回暖。"
+          }
+        ],
+        "before_days": 3,
+        "after_days": 2,
+        "source_text": "Federal Reserve 官方 2026 年 7 月日历"
+      },
+      {
+        "event_date": "2026-07-09",
+        "event_name": "OCP China Day 2026",
+        "event_type": "industry_conference",
+        "event_detail_text": "Open Compute Project 将于 7 月 9 日在北京举办 OCP China Day，重点围绕开放算力、数据中心基础设施、AI 服务器、光互连和产业链协同，是 7 月上旬少数与 AI 数据中心直接相关的正式产业活动。",
+        "catalyzed_theme_list": [
+          {
+            "catalyzed_theme_name": "光通信",
+            "is_current_theme_match": true,
+            "catalysis_strength": "strong",
+            "catalysis_reason_text": "OCP China Day 直接关联 AI 数据中心互连、交换和光链路基础设施，利好光模块与 CPO 预期。"
+          },
+          {
+            "catalyzed_theme_name": "先进封装",
+            "is_current_theme_match": true,
+            "catalysis_strength": "medium",
+            "catalysis_reason_text": "AI 服务器和算力基础设施景气延续，会间接强化 GPU、载板与封测链条预期。"
+          },
+          {
+            "catalyzed_theme_name": "消费电子",
+            "is_current_theme_match": true,
+            "catalysis_strength": "weak",
+            "catalysis_reason_text": "直接关系不大，但若大会强化边缘 AI 或端侧基础设施，可能边际提振相关情绪。"
+          }
+        ],
+        "before_days": 5,
+        "after_days": 2,
+        "source_text": "Open Compute Project 官方活动页"
+      },
+      {
+        "event_date": "2026-07-15",
+        "event_name": "美联储 Beige Book 公布",
+        "event_type": "macro_event",
+        "event_detail_text": "美联储将于 7 月 15 日公布 Beige Book，属于 7 月议息前的重要经济景气与通胀体感材料，会影响市场对月底议息路径的押注。",
+        "catalyzed_theme_list": [
+          {
+            "catalyzed_theme_name": "光通信",
+            "is_current_theme_match": true,
+            "catalysis_strength": "weak",
+            "catalysis_reason_text": "本质是宏观风格扰动，不是产业直接催化，但会影响高成长板块风险偏好。"
+          },
+          {
+            "catalyzed_theme_name": "消费电子",
+            "is_current_theme_match": true,
+            "catalysis_strength": "weak",
+            "catalysis_reason_text": "若宏观数据偏弱引发降息押注提升，可能边际改善成长消费电子估值。"
+          }
+        ],
+        "before_days": 2,
+        "after_days": 1,
+        "source_text": "Federal Reserve Beige Book 官方发布时间表"
+      },
+      {
         "event_date": "2026-07-17",
         "event_name": "世界人工智能大会 WAIC 2026",
         "event_type": "industry_conference",
@@ -4418,7 +4493,7 @@ const INLINE_FUTURE = {
         "source_text": "ChinaJoy 官方 / BTOB 官方公告"
       }
     ],
-    "summary_text": "2026 年 7 月的关键前瞻事件更集中在 AI 与半导体大会、海外宏观议息和 ChinaJoy 消费电子窗口。产业催化上，WAIC、AMD Advancing AI、DAC 更偏算力、光通信、先进封装和半导体设备；宏观催化上，ECB 与 FOMC 更偏成长风格估值扰动；月底 ChinaJoy 对消费电子、AI 终端和 XR 更值得提前埋伏。"
+    "summary_text": "2026 年 7 月的关键前瞻事件更集中在 AI 与半导体大会、海外宏观议息和 ChinaJoy 消费电子窗口。17 日前更值得关注的是 7 月 8 日美联储会议纪要、7 月 9 日 OCP China Day 和 7 月 15 日 Beige Book；产业催化上，WAIC、AMD Advancing AI、DAC 更偏算力、光通信、先进封装和半导体设备；宏观催化上，FOMC 与欧洲央行议息更偏成长风格估值扰动；月底 ChinaJoy 对消费电子、AI 终端和 XR 更值得提前埋伏。"
   }
 };
 const INLINE_THEME = {
@@ -4555,7 +4630,7 @@ const INLINE_OPEN_DIP = {
   "open_dip_buy_db": {}
 };
 const INLINE_PUBLISH_GENERATED_AT = {
-  "generated_at": "2026-06-30 15:41:26"
+  "generated_at": "2026-06-30 15:57:24"
 };
 
 const STOCK_SEARCH_INDEX_URL = 'data/stock_search_index.json';
