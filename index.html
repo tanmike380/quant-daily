@@ -198,7 +198,8 @@ h2 { font-size: 1.15em; margin-bottom: 12px; color: var(--blue); }
   .ai-pref-sidebar { position: static; }
 }
 .stoploss-box,
-.open-dip-box {
+.open-dip-box,
+.takeprofit-box {
   background: rgba(210,153,34,0.06);
   border-left: 3px solid var(--yellow);
   padding: 8px 12px;
@@ -215,6 +216,11 @@ h2 { font-size: 1.15em; margin-bottom: 12px; color: var(--blue); }
   border-left-color: var(--red);
 }
 .open-dip-box .label { color: var(--red); font-weight: 600; }
+.takeprofit-box {
+  background: rgba(88,166,255,0.06);
+  border-left-color: var(--blue);
+}
+.takeprofit-box .label { color: var(--blue); font-weight: 600; }
 .freshness-ok { color: var(--green); }
 .freshness-warn { color: var(--yellow); }
 .rejected-table {
@@ -6095,12 +6101,13 @@ const INLINE_OPEN_DIP = {
   "open_dip_buy_db": {}
 };
 const INLINE_PUBLISH_GENERATED_AT = {
-  "generated_at": "2026-07-01 22:00:06"
+  "generated_at": "2026-07-02 14:35:23"
 };
 
 const STOCK_SEARCH_INDEX_URL = 'data/stock_search_index.json';
 const OPEN_DIP_DB_URL = 'data/open_dip_buy_db.json';
 const STOP_LOSS_DB_URL = 'data/intraday_stop_loss_db.json';
+const TAKE_PROFIT_DB_URL = 'data/take_profit_db.json';
 const CAN_SLIM_RESEARCH_DB_URL = 'data/can_slim_research_db.json';
 const TARGET_PRICE_CALCULATOR_DB_URL = 'data/target_price_calculator_db.json';
 const AI_PREFERENCE_STOCK_STATS_URL = 'data/ai_preference_stock_stats.json';
@@ -6202,6 +6209,12 @@ function findStopLossSignal(stockCode, stopLossData) {
   return record.intraday_stop_loss_signal || null;
 }
 
+function findTakeProfitSignal(stockCode, takeProfitData) {
+  const db = takeProfitData && takeProfitData.take_profit_db ? takeProfitData.take_profit_db : {};
+  const record = db[String(stockCode || '').trim()] || {};
+  return record.take_profit_signal || null;
+}
+
 function buildOpenDipReasonText(signal, stat) {
   const lookback = signal.lookback_trade_day_count;
   const threshold = formatPct(signal.optimal_open_dip_buy_pct);
@@ -6235,6 +6248,32 @@ function renderOpenDipSignal(stock, openDipData) {
       <span class="label">T+5期望:</span> ${executionExpected} &nbsp;|&nbsp;
       <span class="label">置信度:</span> ${esc(confidence)}
       ${reasonText ? `<div style="margin-top:4px;color:var(--text2)">${esc(reasonText)}</div>` : ''}
+    </div>`;
+}
+
+function renderTakeProfitSignal(signal) {
+  if (!signal) return '';
+  const avgDays = signal.avg_holding_days_before_take_profit;
+  const medianDays = signal.median_holding_days_before_take_profit;
+  const avgReturn = formatPct(signal.avg_take_profit_return_pct);
+  const expected = formatPct(signal.expected_take_profit_value_pct);
+  const avgGain = formatPct(signal.avg_pullback_start_gain_pct);
+  const medianGain = formatPct(signal.median_pullback_start_gain_pct);
+  const giveback = formatPct(signal.avg_giveback_from_peak_pct);
+  const triggerRate = signal.first_close_weaken_trigger_rate !== undefined
+    ? formatPct(Number(signal.first_close_weaken_trigger_rate) * 100)
+    : '-';
+  const confidence = signal.confidence_label || signal.status || '';
+  return `
+    <div class="takeprofit-box">
+      <span class="label">统计止盈:</span> 平均 ${avgDays === null || avgDays === undefined ? '-' : esc(Number(avgDays).toFixed(2))} 天 / 中位 ${medianDays === null || medianDays === undefined ? '-' : esc(Number(medianDays).toFixed(0))} 天
+      &nbsp;|&nbsp; <span class="label">平均收益:</span> ${avgReturn}
+      &nbsp;|&nbsp; <span class="label">期望值:</span> ${expected}
+      &nbsp;|&nbsp; <span class="label">置信度:</span> ${esc(confidence)}<br>
+      <span class="label">通常涨到回调:</span> 均值 ${avgGain} / 中位 ${medianGain}
+      &nbsp;|&nbsp; <span class="label">转弱触发率:</span> ${triggerRate}
+      &nbsp;|&nbsp; <span class="label">平均回吐:</span> ${giveback}
+      ${signal.reason_text ? `<div style="margin-top:4px;color:var(--text2)">${esc(signal.reason_text)}</div>` : ''}
     </div>`;
 }
 
@@ -6330,15 +6369,17 @@ let STATIC_DATABASE_CACHE = null;
 
 async function loadStaticDatabaseMap() {
   if (STATIC_DATABASE_CACHE) return STATIC_DATABASE_CACHE;
-  const [openDipData, stopLossData, canSlimData, targetPriceData] = await Promise.all([
+  const [openDipData, stopLossData, takeProfitData, canSlimData, targetPriceData] = await Promise.all([
     loadJSON(OPEN_DIP_DB_URL),
     loadJSON(STOP_LOSS_DB_URL),
+    loadJSON(TAKE_PROFIT_DB_URL),
     loadJSON(CAN_SLIM_RESEARCH_DB_URL),
     loadJSON(TARGET_PRICE_CALCULATOR_DB_URL),
   ]);
   STATIC_DATABASE_CACHE = {
     open_dip_buy_db: openDipData && openDipData.open_dip_buy_db ? openDipData.open_dip_buy_db : {},
     intraday_stop_loss_db: stopLossData && stopLossData.intraday_stop_loss_db ? stopLossData.intraday_stop_loss_db : {},
+    take_profit_db: takeProfitData && takeProfitData.take_profit_db ? takeProfitData.take_profit_db : {},
     can_slim_research_db: canSlimData && canSlimData.can_slim_research_db ? canSlimData.can_slim_research_db : {},
     target_price_calculator_db: targetPriceData && targetPriceData.target_price_calculator_db ? targetPriceData.target_price_calculator_db : {},
   };
@@ -6463,6 +6504,7 @@ function renderStaticSearchResult(record, databaseMap) {
   const institutional = canSlim.institutional_sponsorship || {};
   const targetView = institutional.institutional_target_price_view || {};
   const stopSignal = ((databaseMap.intraday_stop_loss_db || {})[code] || {}).intraday_stop_loss_signal || stock.intraday_stop_loss_signal || null;
+  const takeProfitSignal = ((databaseMap.take_profit_db || {})[code] || {}).take_profit_signal || null;
   const openDipSignal = ((databaseMap.open_dip_buy_db || {})[code] || {}).open_dip_buy_signal || null;
   const targetCalculatorRecord = ((databaseMap.target_price_calculator_db || {})[code]) || null;
   const topStatus = stock.stock_code
@@ -6487,6 +6529,7 @@ function renderStaticSearchResult(record, databaseMap) {
         </div>` : ''}
       ${renderOpenDipSignal({stock_code: code}, {open_dip_buy_db: {[code]: {open_dip_buy_signal: openDipSignal}}})}
       ${renderIntradayStopLoss(stopSignal)}
+      ${renderTakeProfitSignal(takeProfitSignal)}
     </div>
     <div class="stock-library-grid">
       ${renderResearchBox('C 当前业绩', canSlim.current_earnings, [
@@ -6535,7 +6578,7 @@ function renderStaticStockSearch(searchLibrary) {
           <input id="stockSearchInput" class="stock-search-input" placeholder="输入股票代码或名称，例如 601138 / 工业富联">
           <button id="stockSearchButton" class="stock-search-button">查询</button>
         </div>
-        <div class="stock-search-hint">已加载 ${count} 只股票索引；查询时会从 GitHub 数据库读取目标区间、统计低吸、统计止损和基础调研日期与描述。</div>
+        <div class="stock-search-hint">已加载 ${count} 只股票索引；查询时会从 GitHub 数据库读取目标区间、统计低吸、统计止损、统计止盈和基础调研日期与描述。</div>
         <div id="stockSearchResult" class="stock-search-result"></div>
       </div>
     </div>`;
@@ -6568,13 +6611,14 @@ function bindStaticStockSearch(searchLibrary) {
   });
 }
 
-function renderStock(stock, openDipData, stopLossData) {
+function renderStock(stock, openDipData, stopLossData, takeProfitData) {
   const rank = stock.final_rank || 0;
   const verdict = stock.oneil_canslim_verdict || {};
   const why = stock.why_selected || [];
   const risk = stock.risk_judgment || {};
   const op = stock.operation_view || {};
   const stopLossSignal = findStopLossSignal(stock.stock_code, stopLossData) || stock.intraday_stop_loss_signal || null;
+  const takeProfitSignal = findTakeProfitSignal(stock.stock_code, takeProfitData) || stock.take_profit_signal || null;
   const themes = stock.matched_theme_list || [];
   const gaps = stock.evidence_gap || [];
   const targetPriceJudgment = stock.target_price_judgment || null;
@@ -6595,6 +6639,9 @@ function renderStock(stock, openDipData, stopLossData) {
     </div>
     ${renderCANSLIM(verdict)}
     ${renderTargetPriceJudgment(targetPriceJudgment, calculatorSignal)}
+    ${renderOpenDipSignal(stock, openDipData)}
+    ${renderIntradayStopLoss(stopLossSignal)}
+    ${renderTakeProfitSignal(takeProfitSignal)}
     <div class="collapsible" onclick="toggleCollapse(this)">
       <strong style="font-size:0.85em">入选理由</strong><span class="collapse-icon">▶</span>
     </div>
@@ -6605,8 +6652,6 @@ function renderStock(stock, openDipData, stopLossData) {
         <span class="label">操作:</span> ${esc(op.action)}<br>
         <span class="label">失效条件:</span> ${esc(op.invalid_condition)}
       </div>
-      ${renderOpenDipSignal(stock, openDipData)}
-      ${renderIntradayStopLoss(stopLossSignal)}
       ${gaps.length ? `<div style="margin-top:6px;font-size:0.72em;color:var(--yellow)">证据缺口: ${gaps.map(g => esc(g)).join('；')}</div>` : ''}
     </div>
   </div>`;
@@ -6772,6 +6817,7 @@ async function render() {
   const futureData = INLINE_FUTURE;
   const themeData = INLINE_THEME;
   const openDipData = await loadJSON(OPEN_DIP_DB_URL) || INLINE_OPEN_DIP;
+  const takeProfitData = await loadJSON(TAKE_PROFIT_DB_URL) || {take_profit_db: {}};
   const aiPreferenceData = await loadJSON(AI_PREFERENCE_STOCK_STATS_URL) || {ai_preference_stock_stats: {}};
 
   const app = document.getElementById('app');
@@ -6808,7 +6854,7 @@ async function render() {
   html += renderFutureEvents(futureData);
 
   html += `<div class="section"><h2>推荐 Top 8</h2>`;
-  html += selected.map(s => renderStock(s, openDipData, stopLossData)).join('');
+  html += selected.map(s => renderStock(s, openDipData, stopLossData, takeProfitData)).join('');
   html += `</div>`;
 
   html += renderAiPreferenceStockStats(aiPreferenceData);
