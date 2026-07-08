@@ -6065,7 +6065,7 @@ const INLINE_OPEN_DIP = {
   "open_dip_buy_db": {}
 };
 const INLINE_PUBLISH_GENERATED_AT = {
-  "generated_at": "2026-07-09 00:45:09"
+  "generated_at": "2026-07-09 01:03:31"
 };
 
 const STOCK_SEARCH_INDEX_URL = 'data/stock_search_index.json';
@@ -6700,6 +6700,38 @@ function renderAiPreferenceStockStats(aiPreferenceData) {
   }
   function renderRecentHotSidebar() {
     if (!recentHotStockList.length) return '';
+    const winRateSignalMap = root.win_rate_signal_map || {};
+    const t5WinRateSignal = winRateSignalMap['5'] || {};
+    const t10WinRateSignal = winRateSignalMap['10'] || root.t10_win_rate_signal || {};
+    const t20WinRateSignal = winRateSignalMap['20'] || {};
+    function formatRedPct(value) {
+      if (value === null || value === undefined || value === '') return '-';
+      const numberValue = Number(value);
+      if (Number.isNaN(numberValue)) return '-';
+      return `<span style="color:var(--red);font-weight:700">${numberValue.toFixed(2)}%</span>`;
+    }
+    function renderOneWinRateLine(label, signal) {
+      const perRankStatList = signal.per_rank_stat_list || [];
+      const rankText = perRankStatList.map(item => {
+        const winRatePct = item.win_rate_pct === null || item.win_rate_pct === undefined
+          ? '-'
+          : `${Number(item.win_rate_pct).toFixed(2)}%`;
+        return `Top${item.final_rank} ${winRatePct}`;
+      }).join(' · ');
+      return `
+        <div class="ai-pref-sidebar-meta" style="margin-top:6px">
+          <span style="color:var(--red);font-weight:700">${esc(label)}</span>
+          &nbsp;|&nbsp; 总胜率 ${formatRedPct(signal.win_rate_pct)}
+          &nbsp;|&nbsp; 已验证 ${esc(signal.validated_sample_count ?? '-')}
+          &nbsp;|&nbsp; 太新未统计 ${esc(signal.pending_sample_count ?? '-')}
+        </div>
+        <div class="ai-pref-sidebar-meta" style="line-height:1.6;color:var(--red)">
+          ${rankText || 'Top1-8 胜率暂无数据'}
+        </div>
+      `;
+    }
+    const t10CoverageStart = t10WinRateSignal.coverage_start_date || '-';
+    const t10CoverageEnd = t10WinRateSignal.coverage_end_date || '-';
     return `
       <div class="ai-pref-sidebar">
         <div class="ai-pref-sidebar-card">
@@ -6722,6 +6754,15 @@ function renderAiPreferenceStockStats(aiPreferenceData) {
               </div>
             </div>
           `).join('')}
+          <div class="ai-pref-sidebar-item" style="border-top:1px solid rgba(255,255,255,0.08);margin-top:8px;padding-top:10px">
+            <div class="ai-pref-sidebar-rank">系统胜率</div>
+            ${renderOneWinRateLine('T+5', t5WinRateSignal)}
+            ${renderOneWinRateLine('T+10', t10WinRateSignal)}
+            ${renderOneWinRateLine('T+20', t20WinRateSignal)}
+            <div class="ai-pref-sidebar-meta">
+              统计区间 ${esc(t10CoverageStart)} ~ ${esc(t10CoverageEnd)}
+            </div>
+          </div>
         </div>
       </div>`;
   }
