@@ -1,116 +1,118 @@
 {
-  "week_start_date": "2026-07-01",
-  "week_end_date": "2026-07-14",
-  "weekly_summary_text": "本周市场整体呈现弱势震荡，风格在防御与成长间反复切换；前半周创新药与防御板块活跃，后半周成长风格企稳，资金集中攻击以PCB和CPO为代表的算力硬件方向，成为近期最具持续性的主线。",
+  "week_start_date": "2026-07-02",
+  "week_end_date": "2026-07-15",
+  "weekly_summary_text": "本周市场整体处于risk_off环境，指数震荡下行，资金在防御与成长之间反复切换。医药主线贯穿全周且近期持续加强，成为弱势避风港；AI算力硬件（PCB、CPO）及半导体在反弹日表现极致但持续性不足，呈现典型的结构性行情。",
   "industry_list": [
     {
       "rank_no": 1,
-      "industry_name": "元件",
-      "strength_level": "周内多只龙头股涨停，主力资金大幅流入",
-      "reason_text": "受AI服务器出货放量拉动，覆铜板及PCB需求强劲，周末多只代表性个股获巨量资金封板，确认行业高景气",
+      "industry_name": "医药生物",
+      "strength_level": "防御主线，细分多点开花，全周反复活跃",
+      "reason_text": "在市场风险偏好极低的背景下，创新药、仿制药、中药等细分方向集群式走强，具备极强的防御避险逻辑与产业催化共振",
       "reference_list": [
-        "limit_up_stock_signal_list: 东山精密封单11.79亿",
-        "limit_up_stock_signal_list: 生益科技封单10.5亿",
-        "theme_news_signal_list: 元件获61.44亿元主力净流入"
+        "0702创新药ETF大涨8.18%",
+        "0713中药ETF大涨4.47%",
+        "仿制药一致性评价一周6次进入强势板块"
       ]
     },
     {
       "rank_no": 2,
-      "industry_name": "通信设备",
-      "strength_level": "高动量股周内大涨近11%",
-      "reason_text": "算力硬件方向反弹带动光通信设备走强，核心标的成交额居前且涨幅显著",
+      "industry_name": "电子",
+      "strength_level": "0709多只半导体ETF涨停，0714 PCB领涨",
+      "reason_text": "半导体设备材料及PCB等算力硬件方向资金介入深，在成长风格反弹日弹性极大，但受制于整体市场弱势，波动剧烈",
       "reference_list": [
-        "high_momentum_stock_signal_list: 新易盛涨10.99%",
-        "high_momentum_stock_signal_list: 中际旭创涨6.86%",
-        "theme_news_signal_list: 算力硬件方向反弹，通信设备板块走强"
+        "0709半导体材料设备ETF批量涨停",
+        "0714 PCB概念涨幅4.13%居首",
+        "0714生益科技等元器件股放量"
       ]
     },
     {
       "rank_no": 3,
-      "industry_name": "半导体",
-      "strength_level": "周内代表ETF涨超10%",
-      "reason_text": "前半周半导体材料设备ETF批量涨停，后半周扩散至封测等细分个股，AI需求引发全链涨价潮",
+      "industry_name": "通信设备",
+      "strength_level": "CPO板块在反弹日涨幅居前",
+      "reason_text": "AI算力硬件链核心分支，与PCB、玻璃基板等形成产业链共振，在成长风格占优时表现突出",
       "reference_list": [
-        "strong_fund_signal_list: 鹏华上证科创板半导体材料设备主题ETF涨10.1%",
-        "high_momentum_stock_signal_list: 华天科技涨6.42%创20日新高",
-        "theme_news_signal_list: AI需求蔓延引发半导体全链涨价潮"
+        "0709共封装光学(CPO)涨幅4.35%",
+        "0714共封装光学(CPO)涨幅3.31%",
+        "0714新易盛大涨近10%"
       ]
     },
     {
       "rank_no": 4,
-      "industry_name": "医药生物",
-      "strength_level": "周初代表基金涨近10%",
-      "reason_text": "周初创新药ETF集体暴涨体现极强防御独立性，后半周切换至中药与医疗器械避险，但整体持续性较弱",
+      "industry_name": "传媒",
+      "strength_level": "0715游戏ETF大涨近6%",
+      "reason_text": "短剧游戏及AI应用端在周末爆发，受游戏公司半年报预增及AI应用落地预期催化，但更多表现为超跌反弹",
       "reference_list": [
-        "daily_market_scheme_list: 富国中证沪港深创新药产业ETF涨9.99%",
-        "daily_market_scheme_list: 银华中证中药ETF涨4.47%",
-        "theme_news_signal_list: 14部门联合发文支持康复辅助器具产业"
+        "0715动漫游戏ETF大涨5.97%",
+        "0715短剧游戏板块走强",
+        "0710短剧游戏板块涨幅3.12%"
       ]
     }
   ],
   "theme_list": [
     {
       "rank_no": 1,
-      "theme_name": "PCB",
-      "strength_level": "周内多只龙头股涨停",
-      "reason_text": "周末涨停股高度集中在PCB及覆铜板方向，且获巨量主力资金流入验证，AI服务器需求拉动产业景气，近期强度极高",
+      "theme_name": "创新药",
+      "strength_level": "周内代表基金涨8.18%，板块多次领涨",
+      "reason_text": "作为弱势市场最强防御主线，创新药ETF与细分板块多次强共振，且近期3天仍保持前排活跃度，频次与近期强度俱佳",
       "reference_list": [
-        "limit_up_stock_signal_list: 沪电股份、金安国纪涨停",
-        "theme_news_signal_list: 印制电路板及被动元件受益于AI服务器出货放量",
-        "reference_note_list: 历史主线多次提及PCB"
+        "0702创新药ETF暴涨8.18%",
+        "0706/0710/0714/0715创新药板块持续活跃",
+        "0702医保目录初审结果催化"
       ]
     },
     {
       "rank_no": 2,
-      "theme_name": "CPO",
-      "strength_level": "龙头股周内大涨近11%",
-      "reason_text": "算力硬件反弹带动CPO方向走强，高动量股密集验证，与通信设备行业形成共振，近期活跃度明显回升",
+      "theme_name": "PCB",
+      "strength_level": "0714板块涨幅4.13%居首",
+      "reason_text": "AI算力硬件核心细分，在0714市场反弹时强度位列全市场第一，资金认可度极高，且0709亦有表现，近期强度加权靠前",
       "reference_list": [
-        "high_momentum_stock_signal_list: 新易盛涨10.99%",
-        "high_momentum_stock_signal_list: 中际旭创涨6.86%",
-        "reference_note_list: 历史主线多次提及CPO"
+        "0714 PCB概念涨幅第一(4.13%)",
+        "0709 PCB概念涨幅3.17%",
+        "0714生益科技等高动量股共振"
       ]
     },
     {
       "rank_no": 3,
-      "theme_name": "半导体材料设备",
-      "strength_level": "周内代表ETF涨停",
-      "reason_text": "前半周ETF批量涨停确立大方向，后半周向封测等细分领域扩散，产业逻辑有AI涨价潮支撑，但个股分化明显",
+      "theme_name": "仿制药",
+      "strength_level": "一周6次进入强势板块，0715涨3.71%",
+      "reason_text": "仿制药一致性评价板块一周内6次进入强势榜单，频次极高，且0715仍处于涨幅第二的位置，近期毫无退潮迹象",
       "reference_list": [
-        "strong_fund_signal_list: 鹏华上证科创板半导体材料设备主题ETF涨10.1%",
-        "high_momentum_stock_signal_list: 通富微电涨5.84%创20日新高",
-        "theme_news_signal_list: AI需求蔓延引发半导体全链涨价潮"
+        "board_signal_list显示appearance_count为6",
+        "0715仿制药一致性评价涨幅3.71%",
+        "0702仿制药一致性评价涨幅1.24%"
       ]
     },
     {
       "rank_no": 4,
-      "theme_name": "创新药",
-      "strength_level": "周初代表基金涨近10%",
-      "reason_text": "周初在市场暴跌时逆势大涨，资金防御抱团明显，但后半周明显退潮，缺乏持续催化，仅剩个别个股活跃",
+      "theme_name": "CPO",
+      "strength_level": "0709及0714板块涨幅均超3%",
+      "reason_text": "算力硬件核心方向，与PCB共振明显，在成长风格反弹日表现稳定，近期0714强度依然保持在前三",
       "reference_list": [
-        "daily_market_scheme_list: 富国中证沪港深创新药产业ETF涨9.99%",
-        "limit_up_stock_signal_list: 迪哲医药-U涨停",
-        "theme_news_signal_list: 医保目录初审结果公布"
+        "0709共封装光学(CPO)涨幅4.35%",
+        "0714共封装光学(CPO)涨幅3.31%",
+        "0714新易盛等通信设备股大涨"
       ]
     },
     {
       "rank_no": 5,
-      "theme_name": "商业航天",
-      "strength_level": "周内代表ETF涨超8%",
-      "reason_text": "卫星产业ETF在市场大跌时逆势异动，资金方向明确，但缺乏细分板块与强势个股的二次验证，仅为事件驱动",
+      "theme_name": "半导体设备",
+      "strength_level": "0709多只ETF涨停，近期有所分化",
+      "reason_text": "0709曾出现批量涨停的极强共振，但随后几个交易日未能持续走强，0715半导体核心股大幅杀跌，近期强度明显回落",
       "reference_list": [
-        "daily_market_scheme_list: 广发中证卫星产业ETF涨8.29%",
-        "daily_market_scheme_list: 南方中证通用航空主题ETF涨8.13%"
+        "0709半导体材料设备ETF批量涨停",
+        "0707国家大基金持股板块走强",
+        "0715兆易创新、长电科技等大跌"
       ]
     },
     {
       "rank_no": 6,
-      "theme_name": "中药",
-      "strength_level": "周内代表ETF涨超4%",
-      "reason_text": "市场普跌时ETF逆势大涨，体现典型的避险防御属性，但无连板股或高动量股验证，持续性存疑",
+      "theme_name": "短剧游戏",
+      "strength_level": "0715游戏ETF涨近6%",
+      "reason_text": "受游戏公司半年报预增及AI应用落地预期催化，0715与游戏ETF强共振爆发，但前半周表现平平，属于单日爆发的典型事件驱动特征",
       "reference_list": [
-        "daily_market_scheme_list: 银华中证中药ETF涨4.47%",
-        "daily_market_scheme_list: 汇添富中证中药ETF涨4.17%"
+        "0715动漫游戏ETF大涨5.97%",
+        "0715短剧游戏板块走强",
+        "0710短剧游戏板块涨幅3.12%"
       ]
     }
   ]
