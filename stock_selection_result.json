@@ -3,722 +3,126 @@
     "trade_week": "2026-W28",
     "theme_pool": [
       {
-        "theme": "创新药",
+        "theme": "高股息",
         "source": "weekly_confirmed",
         "rank": 1,
-        "reason_text": "弱势市场下防御资金持续抱团，医药细分板块频次极高且近3日仍在前排"
+        "reason_text": "在市场恐慌性暴跌中，资金极致抱团防御，高股息板块跌幅极小甚至逆势上涨，是当前最确定的趋势主线"
       },
       {
-        "theme": "电力公用事业",
+        "theme": "电力",
         "source": "weekly_confirmed",
         "rank": 2,
-        "reason_text": "极端下跌市中资金首选避风港，叠加用电负荷创历史新高与AI用电需求催化"
+        "reason_text": "电力板块在周内反复活跃，既有夏季高温用电需求催化，又有央国企市值管理逻辑，资金认可度极高"
       },
       {
-        "theme": "短剧游戏",
+        "theme": "油气开采",
         "source": "weekly_confirmed",
         "rank": 3,
-        "reason_text": "近3个交易日持续活跃，与港股互联网ETF共振，属于弱势下的轻资产防御分支"
+        "reason_text": "地缘风险升温与国际油价大涨构成持续催化，油气板块爆发，产业链联动明显"
       },
       {
-        "theme": "CPO",
+        "theme": "中特估",
         "source": "weekly_confirmed",
         "rank": 4,
-        "reason_text": "前半周强势但周五放量杀跌，高动量股大跌导致短期趋势破坏"
+        "reason_text": "与高股息逻辑共振，中特估板块在大盘暴跌时表现出极强的防御属性，大盘价值风格占优的核心载体"
       },
       {
-        "theme": "半导体设备",
+        "theme": "煤炭",
         "source": "weekly_confirmed",
         "rank": 5,
-        "reason_text": "周初受大基金及国产替代催化大涨，但周五随成长股恐慌抛售"
+        "reason_text": "作为能源与高股息的交叉点，煤炭板块在后半周大盘调整时逆势走强，与油气、电力形成能源防御共振"
       },
       {
-        "theme": "商业航天",
+        "theme": "创新药",
         "source": "weekly_confirmed",
         "rank": 6,
-        "reason_text": "仅在07-10单日爆发，后续缺乏持续验证，属于孤立的事件驱动题材"
+        "reason_text": "前半周作为弱势防御主线资金抱团明显，但后半周随市场风格切向高股息而明显退潮，仅为事件驱动而非趋势"
       }
     ],
     "candidate_stock_list": [
       {
-        "stock_code": "600487",
-        "stock_name": "亨通光电",
-        "selection_score": 224,
+        "stock_code": "600642",
+        "stock_name": "申能股份",
+        "selection_score": 194,
         "matched_theme_list": [
-          "CPO",
-          "电力公用事业",
-          "光通信",
-          "智能电网",
-          "6G",
-          "光纤光缆"
+          "高股息",
+          "电力",
+          "油气开采",
+          "绿电"
         ],
         "matched_weekly_theme_list": [
-          "CPO",
-          "电力公用事业"
+          "高股息",
+          "电力",
+          "油气开采"
         ],
         "matched_reference_theme_list": [
-          "光通信",
-          "CPO",
-          "智能电网",
-          "6G",
-          "光缆光纤",
-          "光纤光缆",
+          "绿电"
+        ],
+        "matched_future_theme_list": [],
+        "resonance_type": "strong",
+        "industry_chain_path": [
+          "电力",
+          "油气开采",
+          "高股息防御"
+        ],
+        "business_relevance_label": "core_business_related",
+        "noise_label_list": [
+          "none"
+        ],
+        "reflection_risk_label_list": [
+          "none"
+        ],
+        "holding_style_label": "main_theme_trend",
+        "reason_text": "公司主营电力和石油天然气，同时具备高股息属性，完美命中本周前三大主线，产业链路径清晰，业务支撑极强。",
+        "risk_text": "需警惕国际油气价格回落及夏季用电高峰过后电力需求的季节性走弱。",
+        "score_factor_signal": {
+          "selection_score_config_version": "main_theme_v2_2026_06_29",
+          "ranked_weekly_theme_hit_count": 3,
+          "weekly_theme_hit_count": 3,
+          "reference_theme_hit_count": 1,
+          "future_theme_hit_count": 0,
+          "related_sub_theme_hit_count": 0,
+          "resonance_label": "strong",
+          "resonance_score": 2,
+          "business_relevance_label": "core_business_related",
+          "business_relevance_score": 1,
+          "noise_label_list": [
+            "none"
+          ],
+          "noise_score": 0,
+          "reflection_risk_label_list": [
+            "none"
+          ],
+          "reflection_risk_score": 0
+        }
+      },
+      {
+        "stock_code": "600578",
+        "stock_name": "京能电力",
+        "selection_score": 193,
+        "matched_theme_list": [
+          "高股息",
+          "电力",
+          "煤炭",
+          "中特估",
+          "绿电"
+        ],
+        "matched_weekly_theme_list": [
+          "高股息",
+          "电力",
+          "煤炭",
+          "中特估"
+        ],
+        "matched_reference_theme_list": [
+          "绿电",
           "电力"
         ],
-        "matched_future_theme_list": [
-          "光通信"
-        ],
-        "resonance_type": "strong",
-        "industry_chain_path": [
-          "光通信",
-          "CPO",
-          "光纤光缆",
-          "智能电网"
-        ],
-        "business_relevance_label": "core_business_related",
-        "noise_label_list": [
-          "none"
-        ],
-        "reflection_risk_label_list": [
-          "none"
-        ],
-        "holding_style_label": "main_theme_trend",
-        "reason_text": "公司是全球光纤通信前3强，主营光通信与能源互联业务，同时命中CPO与电力公用事业双主线，且受益于WAIC与AMD大会对光通信的催化预期。",
-        "risk_text": "CPO板块周五龙头重挫带来的情绪拖累；海缆竞争加剧。",
-        "score_factor_signal": {
-          "selection_score_config_version": "main_theme_v2_2026_06_29",
-          "ranked_weekly_theme_hit_count": 1,
-          "weekly_theme_hit_count": 2,
-          "reference_theme_hit_count": 7,
-          "future_theme_hit_count": 1,
-          "related_sub_theme_hit_count": 0,
-          "resonance_label": "strong",
-          "resonance_score": 2,
-          "business_relevance_label": "core_business_related",
-          "business_relevance_score": 1,
-          "noise_label_list": [
-            "none"
-          ],
-          "noise_score": 0,
-          "reflection_risk_label_list": [
-            "none"
-          ],
-          "reflection_risk_score": 0
-        }
-      },
-      {
-        "stock_code": "601609",
-        "stock_name": "金田股份",
-        "selection_score": 207,
-        "matched_theme_list": [
-          "CPO",
-          "半导体设备",
-          "商业航天",
-          "人形机器人",
-          "光通信",
-          "算力租赁",
-          "PCB"
-        ],
-        "matched_weekly_theme_list": [
-          "CPO",
-          "半导体设备",
-          "商业航天"
-        ],
-        "matched_reference_theme_list": [
-          "光通信",
-          "算力租赁",
-          "半导体",
-          "人形机器人",
-          "PCB",
-          "覆铜板",
-          "小金属"
-        ],
-        "matched_future_theme_list": [
-          "人形机器人",
-          "半导体设备"
-        ],
-        "resonance_type": "strong",
-        "industry_chain_path": [
-          "AI算力",
-          "铜缆高速连接",
-          "液冷服务器",
-          "先进铜合金材料"
-        ],
-        "business_relevance_label": "core_business_related",
-        "noise_label_list": [
-          "concept_stacking"
-        ],
-        "reflection_risk_label_list": [
-          "none"
-        ],
-        "holding_style_label": "main_theme_trend",
-        "reason_text": "公司主营铜产品，为AI算力(CPO/液冷)、人形机器人提供先进材料，产业链路径真实，且命中多个未来事件催化主题。",
-        "risk_text": "概念标签过多且跨度大，易受市场题材轮动干扰；若AI算力硬件链退潮，材料端可能同步回调。",
-        "score_factor_signal": {
-          "selection_score_config_version": "main_theme_v2_2026_06_29",
-          "ranked_weekly_theme_hit_count": 0,
-          "weekly_theme_hit_count": 3,
-          "reference_theme_hit_count": 7,
-          "future_theme_hit_count": 2,
-          "related_sub_theme_hit_count": 0,
-          "resonance_label": "strong",
-          "resonance_score": 2,
-          "business_relevance_label": "core_business_related",
-          "business_relevance_score": 1,
-          "noise_label_list": [
-            "concept_stacking"
-          ],
-          "noise_score": -1,
-          "reflection_risk_label_list": [
-            "none"
-          ],
-          "reflection_risk_score": 0
-        }
-      },
-      {
-        "stock_code": "600522",
-        "stock_name": "中天科技",
-        "selection_score": 205,
-        "matched_theme_list": [
-          "CPO",
-          "商业航天",
-          "光通信",
-          "智能电网",
-          "6G",
-          "PCB"
-        ],
-        "matched_weekly_theme_list": [
-          "CPO",
-          "商业航天"
-        ],
-        "matched_reference_theme_list": [
-          "光通信",
-          "CPO",
-          "智能电网",
-          "光缆光纤",
-          "电力",
-          "PCB",
-          "光纤光缆",
-          "6G",
-          "pcb"
-        ],
-        "matched_future_theme_list": [
-          "光通信"
-        ],
-        "resonance_type": "strong",
-        "industry_chain_path": [
-          "通信设备",
-          "光通信",
-          "CPO"
-        ],
-        "business_relevance_label": "core_business_related",
-        "noise_label_list": [
-          "concept_stacking"
-        ],
-        "reflection_risk_label_list": [
-          "same_stock_recent_negative_feedback"
-        ],
-        "holding_style_label": "short_term_speculation",
-        "reason_text": "公司主营光纤光缆和电力传输，命中CPO和商业航天双主线，且与光通信、智能电网、PCB等多条参考主题强共振，WAIC和AMD大会催化光通信预期。",
-        "risk_text": "CPO板块周五龙头重挫，短期趋势破坏，需警惕高动量成长股资金退潮风险。",
-        "score_factor_signal": {
-          "selection_score_config_version": "main_theme_v2_2026_06_29",
-          "ranked_weekly_theme_hit_count": 0,
-          "weekly_theme_hit_count": 2,
-          "reference_theme_hit_count": 9,
-          "future_theme_hit_count": 1,
-          "related_sub_theme_hit_count": 0,
-          "resonance_label": "strong",
-          "resonance_score": 2,
-          "business_relevance_label": "core_business_related",
-          "business_relevance_score": 1,
-          "noise_label_list": [
-            "concept_stacking"
-          ],
-          "noise_score": -1,
-          "reflection_risk_label_list": [
-            "same_stock_recent_negative_feedback"
-          ],
-          "reflection_risk_score": -2
-        }
-      },
-      {
-        "stock_code": "000988",
-        "stock_name": "华工科技",
-        "selection_score": 199,
-        "matched_theme_list": [
-          "CPO",
-          "半导体设备",
-          "光通信",
-          "先进封装"
-        ],
-        "matched_weekly_theme_list": [
-          "CPO",
-          "半导体设备"
-        ],
-        "matched_reference_theme_list": [
-          "光通信",
-          "CPO",
-          "半导体",
-          "6G",
-          "AI"
-        ],
-        "matched_future_theme_list": [
-          "光通信",
-          "先进封装",
-          "半导体设备",
-          "消费电子"
-        ],
-        "resonance_type": "strong",
-        "industry_chain_path": [
-          "AI算力",
-          "光模块/CPO",
-          "先进封装/半导体"
-        ],
-        "business_relevance_label": "core_business_related",
-        "noise_label_list": [
-          "none"
-        ],
-        "reflection_risk_label_list": [
-          "none"
-        ],
-        "holding_style_label": "main_theme_trend",
-        "reason_text": "公司是全球领先的光模块及激光装备制造商，核心业务覆盖CPO、光通信及半导体先进封装，多主线强共振且命中多个未来事件催化。",
-        "risk_text": "CPO与半导体板块周五遭遇重挫，短期高动量杀跌风险需警惕，需观察资金修复情况。",
-        "score_factor_signal": {
-          "selection_score_config_version": "main_theme_v2_2026_06_29",
-          "ranked_weekly_theme_hit_count": 0,
-          "weekly_theme_hit_count": 2,
-          "reference_theme_hit_count": 5,
-          "future_theme_hit_count": 4,
-          "related_sub_theme_hit_count": 1,
-          "resonance_label": "strong",
-          "resonance_score": 2,
-          "business_relevance_label": "core_business_related",
-          "business_relevance_score": 1,
-          "noise_label_list": [
-            "none"
-          ],
-          "noise_score": 0,
-          "reflection_risk_label_list": [
-            "none"
-          ],
-          "reflection_risk_score": 0
-        }
-      },
-      {
-        "stock_code": "000063",
-        "stock_name": "中兴通讯",
-        "selection_score": 192,
-        "matched_theme_list": [
-          "CPO",
-          "商业航天",
-          "光通信",
-          "6G",
-          "AI应用",
-          "消费电子概念",
-          "人形机器人",
-          "半导体",
-          "先进封装",
-          "半导体设备"
-        ],
-        "matched_weekly_theme_list": [
-          "CPO",
-          "商业航天"
-        ],
-        "matched_reference_theme_list": [
-          "光通信",
-          "6G",
-          "AI应用",
-          "消费电子概念",
-          "半导体"
-        ],
-        "matched_future_theme_list": [
-          "光通信",
-          "消费电子",
-          "人形机器人",
-          "先进封装",
-          "半导体设备"
-        ],
-        "resonance_type": "strong",
-        "industry_chain_path": [
-          "通信设备",
-          "光通信系统",
-          "CPO/算力基础设施"
-        ],
-        "business_relevance_label": "core_business_related",
-        "noise_label_list": [
-          "concept_stacking"
-        ],
-        "reflection_risk_label_list": [
-          "none"
-        ],
-        "holding_style_label": "main_theme_trend",
-        "reason_text": "公司是全球领先的通信设备商，主营光通信系统，与CPO、6G、算力基础设施强相关，产业链路径清晰，且命中多个未来事件催化主题。",
-        "risk_text": "CPO板块周五龙头重挫，短期趋势破坏，高动量成长股可能继续面临恐慌抛售压力。",
-        "score_factor_signal": {
-          "selection_score_config_version": "main_theme_v2_2026_06_29",
-          "ranked_weekly_theme_hit_count": 0,
-          "weekly_theme_hit_count": 2,
-          "reference_theme_hit_count": 4,
-          "future_theme_hit_count": 5,
-          "related_sub_theme_hit_count": 3,
-          "resonance_label": "strong",
-          "resonance_score": 2,
-          "business_relevance_label": "core_business_related",
-          "business_relevance_score": 1,
-          "noise_label_list": [
-            "concept_stacking"
-          ],
-          "noise_score": -1,
-          "reflection_risk_label_list": [
-            "none"
-          ],
-          "reflection_risk_score": 0
-        }
-      },
-      {
-        "stock_code": "002886",
-        "stock_name": "沃特股份",
-        "selection_score": 179,
-        "matched_theme_list": [
-          "商业航天",
-          "半导体设备",
-          "5G",
-          "6G",
-          "人形机器人",
-          "先进封装"
-        ],
-        "matched_weekly_theme_list": [
-          "商业航天",
-          "半导体设备"
-        ],
-        "matched_reference_theme_list": [
-          "5G",
-          "6G",
-          "机器人",
-          "PCB",
-          "半导体"
-        ],
-        "matched_future_theme_list": [
-          "人形机器人",
-          "先进封装",
-          "半导体设备"
-        ],
-        "resonance_type": "strong",
-        "industry_chain_path": [
-          "5G/机器人/半导体",
-          "高频/轻量化结构件",
-          "LCP/PEEK特种高分子"
-        ],
-        "business_relevance_label": "core_business_related",
-        "noise_label_list": [
-          "none"
-        ],
-        "reflection_risk_label_list": [
-          "none"
-        ],
-        "holding_style_label": "main_theme_trend",
-        "reason_text": "公司主营LCP、PEEK等特种高分子材料，是5G/6G天线、机器人轻量化及先进封装的核心基材，多主线上游材料共振。",
-        "risk_text": "特种新材料研发周期长，若下游商业航天或半导体需求不及预期，可能影响业绩释放。",
-        "score_factor_signal": {
-          "selection_score_config_version": "main_theme_v2_2026_06_29",
-          "ranked_weekly_theme_hit_count": 0,
-          "weekly_theme_hit_count": 2,
-          "reference_theme_hit_count": 4,
-          "future_theme_hit_count": 3,
-          "related_sub_theme_hit_count": 2,
-          "resonance_label": "strong",
-          "resonance_score": 2,
-          "business_relevance_label": "core_business_related",
-          "business_relevance_score": 1,
-          "noise_label_list": [
-            "none"
-          ],
-          "noise_score": 0,
-          "reflection_risk_label_list": [
-            "none"
-          ],
-          "reflection_risk_score": 0
-        }
-      },
-      {
-        "stock_code": "600941",
-        "stock_name": "中国移动",
-        "selection_score": 178,
-        "matched_theme_list": [
-          "CPO",
-          "短剧游戏",
-          "光通信",
-          "算力租赁",
-          "AI应用",
-          "6G"
-        ],
-        "matched_weekly_theme_list": [
-          "CPO",
-          "短剧游戏"
-        ],
-        "matched_reference_theme_list": [
-          "光通信",
-          "算力租赁",
-          "AI应用",
-          "6G"
-        ],
-        "matched_future_theme_list": [
-          "光通信"
-        ],
-        "resonance_type": "strong",
-        "industry_chain_path": [
-          "算力基础设施",
-          "光通信",
-          "AI应用与短剧"
-        ],
-        "business_relevance_label": "core_business_related",
-        "noise_label_list": [
-          "none"
-        ],
-        "reflection_risk_label_list": [
-          "none"
-        ],
-        "holding_style_label": "main_theme_trend",
-        "reason_text": "电信运营商提供算力与网络基础设施，同时是AI应用与短剧游戏的分发渠道，多主线共振清晰且有未来光通信事件催化。",
-        "risk_text": "CPO与算力方向短期动量破坏，若成长股继续杀估值，相关概念弹性可能受压制。",
-        "score_factor_signal": {
-          "selection_score_config_version": "main_theme_v2_2026_06_29",
-          "ranked_weekly_theme_hit_count": 1,
-          "weekly_theme_hit_count": 2,
-          "reference_theme_hit_count": 4,
-          "future_theme_hit_count": 1,
-          "related_sub_theme_hit_count": 0,
-          "resonance_label": "strong",
-          "resonance_score": 2,
-          "business_relevance_label": "core_business_related",
-          "business_relevance_score": 1,
-          "noise_label_list": [
-            "none"
-          ],
-          "noise_score": 0,
-          "reflection_risk_label_list": [
-            "none"
-          ],
-          "reflection_risk_score": 0
-        }
-      },
-      {
-        "stock_code": "603803",
-        "stock_name": "瑞斯康达",
-        "selection_score": 178,
-        "matched_theme_list": [
-          "CPO",
-          "电力公用事业",
-          "光通信",
-          "智能电网"
-        ],
-        "matched_weekly_theme_list": [
-          "CPO",
-          "电力公用事业"
-        ],
-        "matched_reference_theme_list": [
-          "光通信",
-          "智能电网",
-          "6G",
-          "算力租赁",
-          "数据中心"
-        ],
-        "matched_future_theme_list": [
-          "光通信"
-        ],
-        "resonance_type": "strong",
-        "industry_chain_path": [
-          "AI算力",
-          "光通信网络",
-          "光网络设备"
-        ],
-        "business_relevance_label": "core_business_related",
-        "noise_label_list": [
-          "none"
-        ],
-        "reflection_risk_label_list": [
-          "none"
-        ],
-        "holding_style_label": "main_theme_trend",
-        "reason_text": "公司是光网络产品及系统解决方案提供商，主营直接受益于CPO和算力基础设施建设，同时智能电网概念契合电力主线。",
-        "risk_text": "通信行业周五随成长股大跌，高动量龙头重挫可能导致板块情绪受挫。",
-        "score_factor_signal": {
-          "selection_score_config_version": "main_theme_v2_2026_06_29",
-          "ranked_weekly_theme_hit_count": 1,
-          "weekly_theme_hit_count": 2,
-          "reference_theme_hit_count": 4,
-          "future_theme_hit_count": 1,
-          "related_sub_theme_hit_count": 0,
-          "resonance_label": "strong",
-          "resonance_score": 2,
-          "business_relevance_label": "core_business_related",
-          "business_relevance_score": 1,
-          "noise_label_list": [
-            "none"
-          ],
-          "noise_score": 0,
-          "reflection_risk_label_list": [
-            "none"
-          ],
-          "reflection_risk_score": 0
-        }
-      },
-      {
-        "stock_code": "002008",
-        "stock_name": "大族激光",
-        "selection_score": 174,
-        "matched_theme_list": [
-          "半导体设备",
-          "商业航天",
-          "PCB",
-          "先进封装"
-        ],
-        "matched_weekly_theme_list": [
-          "半导体设备",
-          "商业航天"
-        ],
-        "matched_reference_theme_list": [
-          "PCB",
-          "光通信",
-          "机器人",
-          "消费电子",
-          "半导体"
-        ],
-        "matched_future_theme_list": [
-          "先进封装",
-          "半导体设备",
-          "消费电子"
-        ],
-        "resonance_type": "strong",
-        "industry_chain_path": [
-          "半导体制造",
-          "光刻/封装设备",
-          "PCB钻孔设备"
-        ],
-        "business_relevance_label": "core_business_related",
-        "noise_label_list": [
-          "none"
-        ],
-        "reflection_risk_label_list": [
-          "none"
-        ],
-        "holding_style_label": "main_theme_trend",
-        "reason_text": "公司主营激光加工设备，包含PCB钻孔机系列，且涉及光刻机、先进封装等概念，与半导体设备产业链高度契合，同时具备商业航天概念。",
-        "risk_text": "半导体设备板块周五大幅回调，短期趋势破坏，需警惕高动量股补跌风险。",
-        "score_factor_signal": {
-          "selection_score_config_version": "main_theme_v2_2026_06_29",
-          "ranked_weekly_theme_hit_count": 0,
-          "weekly_theme_hit_count": 2,
-          "reference_theme_hit_count": 4,
-          "future_theme_hit_count": 3,
-          "related_sub_theme_hit_count": 1,
-          "resonance_label": "strong",
-          "resonance_score": 2,
-          "business_relevance_label": "core_business_related",
-          "business_relevance_score": 1,
-          "noise_label_list": [
-            "none"
-          ],
-          "noise_score": 0,
-          "reflection_risk_label_list": [
-            "none"
-          ],
-          "reflection_risk_score": 0
-        }
-      },
-      {
-        "stock_code": "601869",
-        "stock_name": "长飞光纤",
-        "selection_score": 170,
-        "matched_theme_list": [
-          "CPO",
-          "光通信",
-          "商业航天",
-          "6G",
-          "人形机器人"
-        ],
-        "matched_weekly_theme_list": [
-          "CPO",
-          "商业航天"
-        ],
-        "matched_reference_theme_list": [
-          "光通信",
-          "CPO",
-          "光缆光纤",
-          "6G",
-          "机器人"
-        ],
-        "matched_future_theme_list": [
-          "光通信",
-          "人形机器人"
-        ],
-        "resonance_type": "strong",
-        "industry_chain_path": [
-          "AI算力基础设施",
-          "光通信/光模块",
-          "光纤预制棒与光缆"
-        ],
-        "business_relevance_label": "core_business_related",
-        "noise_label_list": [
-          "none"
-        ],
-        "reflection_risk_label_list": [
-          "same_stock_recent_negative_feedback"
-        ],
-        "holding_style_label": "main_theme_trend",
-        "reason_text": "公司是全球光纤光缆龙头，主营光纤预制棒、光纤、光缆及光模块，属于CPO和光通信产业链核心上游，且受益于AI算力需求。同时命中CPO、光通信等多个强相关主线及未来事件催化。",
-        "risk_text": "CPO板块周五龙头重挫，短期高动量退潮风险较大，需警惕资金恐慌抛售蔓延。",
-        "score_factor_signal": {
-          "selection_score_config_version": "main_theme_v2_2026_06_29",
-          "ranked_weekly_theme_hit_count": 0,
-          "weekly_theme_hit_count": 2,
-          "reference_theme_hit_count": 5,
-          "future_theme_hit_count": 2,
-          "related_sub_theme_hit_count": 1,
-          "resonance_label": "strong",
-          "resonance_score": 2,
-          "business_relevance_label": "core_business_related",
-          "business_relevance_score": 1,
-          "noise_label_list": [
-            "none"
-          ],
-          "noise_score": 0,
-          "reflection_risk_label_list": [
-            "same_stock_recent_negative_feedback"
-          ],
-          "reflection_risk_score": -2
-        }
-      },
-      {
-        "stock_code": "601615",
-        "stock_name": "明阳智能",
-        "selection_score": 169,
-        "matched_theme_list": [
-          "电力公用事业",
-          "商业航天",
-          "绿色电力",
-          "储能"
-        ],
-        "matched_weekly_theme_list": [
-          "电力公用事业",
-          "商业航天"
-        ],
-        "matched_reference_theme_list": [
-          "智能电网",
-          "绿电",
-          "光伏",
-          "电力",
-          "储能",
-          "绿色电力"
-        ],
         "matched_future_theme_list": [],
         "resonance_type": "strong",
         "industry_chain_path": [
-          "电力公用事业",
-          "风电/光伏",
-          "绿色电力"
+          "火力发电",
+          "高股息防御",
+          "央国企改革"
         ],
         "business_relevance_label": "core_business_related",
         "noise_label_list": [
@@ -728,13 +132,13 @@
           "none"
         ],
         "holding_style_label": "main_theme_trend",
-        "reason_text": "公司主营新能源高端制造及绿电运营，直接受益于电力公用事业主线及用电负荷创新高逻辑，业务高度匹配。",
-        "risk_text": "商业航天仅为概念标签，无实质业务支撑；新能源装机不及预期可能影响业绩。",
+        "reason_text": "公司主营火力发电，同时命中高股息、电力、煤炭和中特估四大周级主线，属于能源防御与高股息避险的完美共振标的，业务高度契合。",
+        "risk_text": "煤价若超预期上涨可能侵蚀火电利润，且需警惕高股息风格在市场风险偏好回升时的资金流出。",
         "score_factor_signal": {
           "selection_score_config_version": "main_theme_v2_2026_06_29",
-          "ranked_weekly_theme_hit_count": 1,
-          "weekly_theme_hit_count": 2,
-          "reference_theme_hit_count": 4,
+          "ranked_weekly_theme_hit_count": 2,
+          "weekly_theme_hit_count": 4,
+          "reference_theme_hit_count": 2,
           "future_theme_hit_count": 0,
           "related_sub_theme_hit_count": 0,
           "resonance_label": "strong",
@@ -752,456 +156,29 @@
         }
       },
       {
-        "stock_code": "605589",
-        "stock_name": "圣泉集团",
-        "selection_score": 169,
+        "stock_code": "600027",
+        "stock_name": "华电国际",
+        "selection_score": 180,
         "matched_theme_list": [
-          "创新药",
-          "CPO",
-          "商业航天",
-          "PCB",
-          "先进封装"
+          "电力",
+          "煤炭",
+          "高股息"
         ],
         "matched_weekly_theme_list": [
-          "创新药",
-          "CPO",
-          "商业航天"
+          "电力",
+          "煤炭",
+          "高股息"
         ],
         "matched_reference_theme_list": [
-          "PCB",
-          "创新药",
-          "存储半导体"
-        ],
-        "matched_future_theme_list": [
-          "先进封装"
-        ],
-        "resonance_type": "strong",
-        "industry_chain_path": [
-          "CPO/半导体/商业航天",
-          "电子化学品/先进材料",
-          "酚醛树脂/封装材料"
-        ],
-        "business_relevance_label": "core_business_related",
-        "noise_label_list": [
-          "concept_stacking"
-        ],
-        "reflection_risk_label_list": [
-          "none"
-        ],
-        "holding_style_label": "main_theme_trend",
-        "reason_text": "公司主营酚醛树脂等化工新材料，是PCB覆铜板核心材料，且涉及半导体封装材料及商业航天热防护材料，多主线强共振。",
-        "risk_text": "概念标签极多，部分概念如CRO、代糖等属于边缘业务或概念延伸；CPO与半导体链周五遭遇重挫，短期有回调风险。",
-        "score_factor_signal": {
-          "selection_score_config_version": "main_theme_v2_2026_06_29",
-          "ranked_weekly_theme_hit_count": 1,
-          "weekly_theme_hit_count": 3,
-          "reference_theme_hit_count": 3,
-          "future_theme_hit_count": 1,
-          "related_sub_theme_hit_count": 1,
-          "resonance_label": "strong",
-          "resonance_score": 2,
-          "business_relevance_label": "core_business_related",
-          "business_relevance_score": 1,
-          "noise_label_list": [
-            "concept_stacking"
-          ],
-          "noise_score": -1,
-          "reflection_risk_label_list": [
-            "none"
-          ],
-          "reflection_risk_score": 0
-        }
-      },
-      {
-        "stock_code": "002230",
-        "stock_name": "科大讯飞",
-        "selection_score": 168,
-        "matched_theme_list": [
-          "短剧游戏",
-          "CPO",
-          "AI应用",
-          "算力租赁",
-          "人形机器人"
-        ],
-        "matched_weekly_theme_list": [
-          "短剧游戏",
-          "CPO"
-        ],
-        "matched_reference_theme_list": [
-          "AI应用",
-          "算力租赁",
-          "游戏"
-        ],
-        "matched_future_theme_list": [
-          "人形机器人"
-        ],
-        "resonance_type": "strong",
-        "industry_chain_path": [
-          "AI大模型",
-          "AI应用",
-          "算力基础设施",
-          "人形机器人"
-        ],
-        "business_relevance_label": "core_business_related",
-        "noise_label_list": [
-          "none"
-        ],
-        "reflection_risk_label_list": [
-          "none"
-        ],
-        "holding_style_label": "main_theme_trend",
-        "reason_text": "AI核心标的，命中短剧游戏、CPO等多个主线及参考主题，且WAIC大会催化AI应用与机器人预期。",
-        "risk_text": "CPO硬件链周五重挫可能拖累AI整体情绪，需观察资金是否切向应用端。",
-        "score_factor_signal": {
-          "selection_score_config_version": "main_theme_v2_2026_06_29",
-          "ranked_weekly_theme_hit_count": 1,
-          "weekly_theme_hit_count": 2,
-          "reference_theme_hit_count": 3,
-          "future_theme_hit_count": 1,
-          "related_sub_theme_hit_count": 1,
-          "resonance_label": "strong",
-          "resonance_score": 2,
-          "business_relevance_label": "core_business_related",
-          "business_relevance_score": 1,
-          "noise_label_list": [
-            "none"
-          ],
-          "noise_score": 0,
-          "reflection_risk_label_list": [
-            "none"
-          ],
-          "reflection_risk_score": 0
-        }
-      },
-      {
-        "stock_code": "000021",
-        "stock_name": "深科技",
-        "selection_score": 167,
-        "matched_theme_list": [
-          "CPO",
-          "电力公用事业",
-          "智能电网",
-          "存储半导体",
-          "先进封装",
-          "光通信",
-          "半导体设备"
-        ],
-        "matched_weekly_theme_list": [
-          "CPO",
-          "电力公用事业"
-        ],
-        "matched_reference_theme_list": [
-          "智能电网",
-          "存储半导体",
-          "CPO"
-        ],
-        "matched_future_theme_list": [
-          "光通信",
-          "先进封装",
-          "半导体设备"
-        ],
-        "resonance_type": "medium",
-        "industry_chain_path": [
-          "存储半导体",
-          "先进封装",
-          "智能电表/智能电网"
-        ],
-        "business_relevance_label": "core_business_related",
-        "noise_label_list": [
-          "concept_stacking"
-        ],
-        "reflection_risk_label_list": [
-          "none"
-        ],
-        "holding_style_label": "main_theme_trend",
-        "reason_text": "公司聚焦存储半导体和智能计量终端，命中CPO/先进封装及电力公用事业/智能电网双主线，业务支撑较强。",
-        "risk_text": "概念标签过多且跨度较大，部分概念如CPO与主营的存储半导体关联度需进一步验证，受成长股退潮影响。",
-        "score_factor_signal": {
-          "selection_score_config_version": "main_theme_v2_2026_06_29",
-          "ranked_weekly_theme_hit_count": 1,
-          "weekly_theme_hit_count": 2,
-          "reference_theme_hit_count": 3,
-          "future_theme_hit_count": 3,
-          "related_sub_theme_hit_count": 3,
-          "resonance_label": "medium",
-          "resonance_score": 1,
-          "business_relevance_label": "core_business_related",
-          "business_relevance_score": 1,
-          "noise_label_list": [
-            "concept_stacking"
-          ],
-          "noise_score": -1,
-          "reflection_risk_label_list": [
-            "none"
-          ],
-          "reflection_risk_score": 0
-        }
-      },
-      {
-        "stock_code": "002156",
-        "stock_name": "通富微电",
-        "selection_score": 165,
-        "matched_theme_list": [
-          "CPO",
-          "半导体设备",
-          "先进封装",
-          "存储半导体"
-        ],
-        "matched_weekly_theme_list": [
-          "CPO",
-          "半导体设备"
-        ],
-        "matched_reference_theme_list": [
-          "CPO",
-          "半导体",
-          "存储半导体",
-          "PC"
-        ],
-        "matched_future_theme_list": [
-          "先进封装",
-          "消费电子"
-        ],
-        "resonance_type": "strong",
-        "industry_chain_path": [
-          "AI算力",
-          "先进封装/CPO",
-          "集成电路封测"
-        ],
-        "business_relevance_label": "core_business_related",
-        "noise_label_list": [
-          "none"
-        ],
-        "reflection_risk_label_list": [
-          "none"
-        ],
-        "holding_style_label": "main_theme_trend",
-        "reason_text": "公司主营集成电路封装测试，具备先进封装技术，同时命中CPO与半导体设备主线，且受未来先进封装事件催化，产业链共振清晰。",
-        "risk_text": "CPO与半导体主线周五遭遇重挫，短期趋势破坏，需警惕高动量成长股继续回调风险。",
-        "score_factor_signal": {
-          "selection_score_config_version": "main_theme_v2_2026_06_29",
-          "ranked_weekly_theme_hit_count": 0,
-          "weekly_theme_hit_count": 2,
-          "reference_theme_hit_count": 4,
-          "future_theme_hit_count": 2,
-          "related_sub_theme_hit_count": 1,
-          "resonance_label": "strong",
-          "resonance_score": 2,
-          "business_relevance_label": "core_business_related",
-          "business_relevance_score": 1,
-          "noise_label_list": [
-            "none"
-          ],
-          "noise_score": 0,
-          "reflection_risk_label_list": [
-            "none"
-          ],
-          "reflection_risk_score": 0
-        }
-      },
-      {
-        "stock_code": "003031",
-        "stock_name": "中瓷电子",
-        "selection_score": 165,
-        "matched_theme_list": [
-          "CPO",
-          "商业航天",
-          "光通信",
-          "消费电子",
-          "6G",
-          "半导体"
-        ],
-        "matched_weekly_theme_list": [
-          "CPO",
-          "商业航天"
-        ],
-        "matched_reference_theme_list": [
-          "CPO",
-          "光通信",
-          "6G",
-          "半导体"
-        ],
-        "matched_future_theme_list": [
-          "光通信",
-          "消费电子"
-        ],
-        "resonance_type": "strong",
-        "industry_chain_path": [
-          "光通信",
-          "CPO",
-          "陶瓷外壳",
-          "消费电子"
-        ],
-        "business_relevance_label": "core_business_related",
-        "noise_label_list": [
-          "none"
-        ],
-        "reflection_risk_label_list": [
-          "none"
-        ],
-        "holding_style_label": "main_theme_trend",
-        "reason_text": "公司主营电子陶瓷外壳，是国内能与国际知名企业竞争的少数厂商之一，直接受益于光通信器件外壳和CPO需求，同时命中CPO、商业航天等多个周级主线及未来事件催化，产业链路径清晰。",
-        "risk_text": "CPO板块周五龙头重挫，短期趋势破坏，需警惕高动量成长股回调风险。",
-        "score_factor_signal": {
-          "selection_score_config_version": "main_theme_v2_2026_06_29",
-          "ranked_weekly_theme_hit_count": 0,
-          "weekly_theme_hit_count": 2,
-          "reference_theme_hit_count": 4,
-          "future_theme_hit_count": 2,
-          "related_sub_theme_hit_count": 1,
-          "resonance_label": "strong",
-          "resonance_score": 2,
-          "business_relevance_label": "core_business_related",
-          "business_relevance_score": 1,
-          "noise_label_list": [
-            "none"
-          ],
-          "noise_score": 0,
-          "reflection_risk_label_list": [
-            "none"
-          ],
-          "reflection_risk_score": 0
-        }
-      },
-      {
-        "stock_code": "002050",
-        "stock_name": "三花智控",
-        "selection_score": 163,
-        "matched_theme_list": [
-          "电力公用事业",
-          "CPO"
-        ],
-        "matched_weekly_theme_list": [
-          "电力公用事业",
-          "CPO"
-        ],
-        "matched_reference_theme_list": [
-          "人形机器人",
-          "机器人",
+          "绿电",
           "电力"
         ],
-        "matched_future_theme_list": [
-          "人形机器人"
-        ],
-        "resonance_type": "strong",
-        "industry_chain_path": [
-          "电力公用事业/CPO",
-          "热管理系统",
-          "液冷服务器/储能热管理"
-        ],
-        "business_relevance_label": "core_business_related",
-        "noise_label_list": [
-          "none"
-        ],
-        "reflection_risk_label_list": [
-          "none"
-        ],
-        "holding_style_label": "main_theme_trend",
-        "reason_text": "公司是全球领先的制冷与热管理元器件制造商，热管理业务支撑液冷服务器（CPO算力散热）与储能（电力公用事业）逻辑，同时人形机器人催化未来预期。",
-        "risk_text": "CPO板块周五大幅杀跌，短期情绪受损；人形机器人属于未来催化，尚未兑现。",
-        "score_factor_signal": {
-          "selection_score_config_version": "main_theme_v2_2026_06_29",
-          "ranked_weekly_theme_hit_count": 1,
-          "weekly_theme_hit_count": 2,
-          "reference_theme_hit_count": 3,
-          "future_theme_hit_count": 1,
-          "related_sub_theme_hit_count": 0,
-          "resonance_label": "strong",
-          "resonance_score": 2,
-          "business_relevance_label": "core_business_related",
-          "business_relevance_score": 1,
-          "noise_label_list": [
-            "none"
-          ],
-          "noise_score": 0,
-          "reflection_risk_label_list": [
-            "none"
-          ],
-          "reflection_risk_score": 0
-        }
-      },
-      {
-        "stock_code": "603618",
-        "stock_name": "杭电股份",
-        "selection_score": 163,
-        "matched_theme_list": [
-          "电力公用事业",
-          "CPO",
-          "智能电网",
-          "光通信"
-        ],
-        "matched_weekly_theme_list": [
-          "电力公用事业",
-          "CPO"
-        ],
-        "matched_reference_theme_list": [
-          "智能电网",
-          "光缆光纤",
-          "光通信"
-        ],
-        "matched_future_theme_list": [
-          "光通信"
-        ],
-        "resonance_type": "strong",
-        "industry_chain_path": [
-          "电力电缆",
-          "光纤光缆",
-          "CPO/光通信"
-        ],
-        "business_relevance_label": "core_business_related",
-        "noise_label_list": [
-          "none"
-        ],
-        "reflection_risk_label_list": [
-          "none"
-        ],
-        "holding_style_label": "main_theme_trend",
-        "reason_text": "公司主营电力电缆与光通信产品，同时命中电力公用事业与CPO两大周级主线，且光通信受未来事件催化，产业链路径清晰，主营业务强支撑。",
-        "risk_text": "若电力投资或AI算力硬件链退潮，公司相关业务预期可能同步回调。",
-        "score_factor_signal": {
-          "selection_score_config_version": "main_theme_v2_2026_06_29",
-          "ranked_weekly_theme_hit_count": 1,
-          "weekly_theme_hit_count": 2,
-          "reference_theme_hit_count": 3,
-          "future_theme_hit_count": 1,
-          "related_sub_theme_hit_count": 0,
-          "resonance_label": "strong",
-          "resonance_score": 2,
-          "business_relevance_label": "core_business_related",
-          "business_relevance_score": 1,
-          "noise_label_list": [
-            "none"
-          ],
-          "noise_score": 0,
-          "reflection_risk_label_list": [
-            "none"
-          ],
-          "reflection_risk_score": 0
-        }
-      },
-      {
-        "stock_code": "600875",
-        "stock_name": "东方电气",
-        "selection_score": 161,
-        "matched_theme_list": [
-          "电力公用事业",
-          "绿色电力",
-          "超超临界发电",
-          "核电",
-          "风电"
-        ],
-        "matched_weekly_theme_list": [
-          "电力公用事业"
-        ],
-        "matched_reference_theme_list": [
-          "绿电",
-          "电力",
-          "光伏"
-        ],
         "matched_future_theme_list": [],
         "resonance_type": "strong",
         "industry_chain_path": [
-          "发电设备",
-          "火电/水电/核电/风电设备"
+          "火力发电",
+          "煤炭成本联动",
+          "高股息防御"
         ],
         "business_relevance_label": "core_business_related",
         "noise_label_list": [
@@ -1211,318 +188,13 @@
           "none"
         ],
         "holding_style_label": "main_theme_trend",
-        "reason_text": "公司提供火电、水电、核电等全套发电设备，直接受益于电力投资与用电负荷提升的设备需求，业务支撑强。",
-        "risk_text": "发电设备订单交付周期长，原材料价格波动影响毛利率。",
+        "reason_text": "全国性大型综合发电企业，火电为主兼具煤炭概念，与电力、煤炭、高股息三大主线共振，业务匹配度高。",
+        "risk_text": "煤价波动对火电盈利影响较大，存在业绩不确定性。",
         "score_factor_signal": {
           "selection_score_config_version": "main_theme_v2_2026_06_29",
-          "ranked_weekly_theme_hit_count": 1,
-          "weekly_theme_hit_count": 1,
-          "reference_theme_hit_count": 3,
-          "future_theme_hit_count": 0,
-          "related_sub_theme_hit_count": 4,
-          "resonance_label": "strong",
-          "resonance_score": 2,
-          "business_relevance_label": "core_business_related",
-          "business_relevance_score": 1,
-          "noise_label_list": [
-            "none"
-          ],
-          "noise_score": 0,
-          "reflection_risk_label_list": [
-            "none"
-          ],
-          "reflection_risk_score": 0
-        }
-      },
-      {
-        "stock_code": "601208",
-        "stock_name": "东材科技",
-        "selection_score": 160,
-        "matched_theme_list": [
-          "电力公用事业",
-          "CPO",
-          "半导体设备",
-          "PCB",
-          "智能电网"
-        ],
-        "matched_weekly_theme_list": [
-          "电力公用事业",
-          "CPO",
-          "半导体设备"
-        ],
-        "matched_reference_theme_list": [
-          "PCB",
-          "智能电网"
-        ],
-        "matched_future_theme_list": [
-          "半导体设备"
-        ],
-        "resonance_type": "strong",
-        "industry_chain_path": [
-          "特高压绝缘材料",
-          "高速PCB基膜",
-          "电子级树脂"
-        ],
-        "business_relevance_label": "core_business_related",
-        "noise_label_list": [
-          "none"
-        ],
-        "reflection_risk_label_list": [
-          "none"
-        ],
-        "holding_style_label": "main_theme_trend",
-        "reason_text": "公司新型绝缘材料受益于特高压电网建设，光学膜和电子材料受益于CPO和半导体封装，多主线共振且均有核心业务支撑。",
-        "risk_text": "材料端竞争格局恶化，或下游CPO与半导体需求波动带来的业绩不确定性。",
-        "score_factor_signal": {
-          "selection_score_config_version": "main_theme_v2_2026_06_29",
-          "ranked_weekly_theme_hit_count": 1,
+          "ranked_weekly_theme_hit_count": 2,
           "weekly_theme_hit_count": 3,
           "reference_theme_hit_count": 2,
-          "future_theme_hit_count": 1,
-          "related_sub_theme_hit_count": 0,
-          "resonance_label": "strong",
-          "resonance_score": 2,
-          "business_relevance_label": "core_business_related",
-          "business_relevance_score": 1,
-          "noise_label_list": [
-            "none"
-          ],
-          "noise_score": 0,
-          "reflection_risk_label_list": [
-            "none"
-          ],
-          "reflection_risk_score": 0
-        }
-      },
-      {
-        "stock_code": "002815",
-        "stock_name": "崇达技术",
-        "selection_score": 159,
-        "matched_theme_list": [
-          "CPO",
-          "商业航天",
-          "PCB概念",
-          "先进封装",
-          "数据中心(AIDC)"
-        ],
-        "matched_weekly_theme_list": [
-          "CPO",
-          "商业航天"
-        ],
-        "matched_reference_theme_list": [
-          "PCB",
-          "光通信",
-          "6G"
-        ],
-        "matched_future_theme_list": [
-          "先进封装",
-          "人形机器人",
-          "半导体设备"
-        ],
-        "resonance_type": "strong",
-        "industry_chain_path": [
-          "AI算力",
-          "服务器/交换机",
-          "高速PCB",
-          "CPO基板"
-        ],
-        "business_relevance_label": "core_business_related",
-        "noise_label_list": [
-          "none"
-        ],
-        "reflection_risk_label_list": [
-          "same_stock_recent_negative_feedback"
-        ],
-        "holding_style_label": "main_theme_trend",
-        "reason_text": "公司主营PCB，产品应用于通信、服务器等领域，属于CPO和算力硬件上游核心环节，产业链路径清晰，且命中多个周级主线与未来催化主题。",
-        "risk_text": "CPO板块周五龙头重挫，短期趋势破坏，需警惕算力硬件链退潮带来的同步回调风险。",
-        "score_factor_signal": {
-          "selection_score_config_version": "main_theme_v2_2026_06_29",
-          "ranked_weekly_theme_hit_count": 0,
-          "weekly_theme_hit_count": 2,
-          "reference_theme_hit_count": 3,
-          "future_theme_hit_count": 3,
-          "related_sub_theme_hit_count": 3,
-          "resonance_label": "strong",
-          "resonance_score": 2,
-          "business_relevance_label": "core_business_related",
-          "business_relevance_score": 1,
-          "noise_label_list": [
-            "none"
-          ],
-          "noise_score": 0,
-          "reflection_risk_label_list": [
-            "same_stock_recent_negative_feedback"
-          ],
-          "reflection_risk_score": -2
-        }
-      },
-      {
-        "stock_code": "600498",
-        "stock_name": "烽火通信",
-        "selection_score": 159,
-        "matched_theme_list": [
-          "CPO",
-          "商业航天",
-          "光通信",
-          "6G",
-          "AI"
-        ],
-        "matched_weekly_theme_list": [
-          "CPO",
-          "商业航天"
-        ],
-        "matched_reference_theme_list": [
-          "光通信",
-          "CPO",
-          "光缆光纤",
-          "6G",
-          "AI",
-          "光纤光缆"
-        ],
-        "matched_future_theme_list": [
-          "光通信"
-        ],
-        "resonance_type": "strong",
-        "industry_chain_path": [
-          "通信设备",
-          "光通信",
-          "CPO"
-        ],
-        "business_relevance_label": "core_business_related",
-        "noise_label_list": [
-          "concept_stacking"
-        ],
-        "reflection_risk_label_list": [
-          "same_stock_recent_negative_feedback"
-        ],
-        "holding_style_label": "short_term_speculation",
-        "reason_text": "公司主营光通信设备，直接命中CPO和商业航天双主线，且与光通信、6G等参考主题共振，产业链路径清晰，WAIC和AMD大会催化光通信预期。",
-        "risk_text": "CPO板块周五龙头重挫，短期趋势破坏，需警惕高动量成长股资金退潮风险。",
-        "score_factor_signal": {
-          "selection_score_config_version": "main_theme_v2_2026_06_29",
-          "ranked_weekly_theme_hit_count": 0,
-          "weekly_theme_hit_count": 2,
-          "reference_theme_hit_count": 6,
-          "future_theme_hit_count": 1,
-          "related_sub_theme_hit_count": 0,
-          "resonance_label": "strong",
-          "resonance_score": 2,
-          "business_relevance_label": "core_business_related",
-          "business_relevance_score": 1,
-          "noise_label_list": [
-            "concept_stacking"
-          ],
-          "noise_score": -1,
-          "reflection_risk_label_list": [
-            "same_stock_recent_negative_feedback"
-          ],
-          "reflection_risk_score": -2
-        }
-      },
-      {
-        "stock_code": "603738",
-        "stock_name": "泰晶科技",
-        "selection_score": 158,
-        "matched_theme_list": [
-          "CPO",
-          "半导体设备",
-          "光通信",
-          "消费电子"
-        ],
-        "matched_weekly_theme_list": [
-          "CPO",
-          "半导体设备"
-        ],
-        "matched_reference_theme_list": [
-          "光通信",
-          "6G",
-          "消费电子"
-        ],
-        "matched_future_theme_list": [
-          "光通信",
-          "消费电子",
-          "人形机器人",
-          "先进封装",
-          "半导体设备"
-        ],
-        "resonance_type": "strong",
-        "industry_chain_path": [
-          "AI算力",
-          "光通信/6G",
-          "石英晶体元器件"
-        ],
-        "business_relevance_label": "core_business_related",
-        "noise_label_list": [
-          "none"
-        ],
-        "reflection_risk_label_list": [
-          "none"
-        ],
-        "holding_style_label": "main_theme_trend",
-        "reason_text": "公司主营石英晶体元器件，是光通信和算力硬件的基础频率器件，直接受益于CPO和半导体国产替代，且命中多个未来事件催化主题。",
-        "risk_text": "CPO周五龙头重挫，短期趋势破坏，需警惕硬件链退潮风险。",
-        "score_factor_signal": {
-          "selection_score_config_version": "main_theme_v2_2026_06_29",
-          "ranked_weekly_theme_hit_count": 0,
-          "weekly_theme_hit_count": 2,
-          "reference_theme_hit_count": 2,
-          "future_theme_hit_count": 5,
-          "related_sub_theme_hit_count": 0,
-          "resonance_label": "strong",
-          "resonance_score": 2,
-          "business_relevance_label": "core_business_related",
-          "business_relevance_score": 1,
-          "noise_label_list": [
-            "none"
-          ],
-          "noise_score": 0,
-          "reflection_risk_label_list": [
-            "none"
-          ],
-          "reflection_risk_score": 0
-        }
-      },
-      {
-        "stock_code": "002181",
-        "stock_name": "粤传媒",
-        "selection_score": 156,
-        "matched_theme_list": [
-          "短剧游戏",
-          "AI应用",
-          "影视"
-        ],
-        "matched_weekly_theme_list": [
-          "短剧游戏"
-        ],
-        "matched_reference_theme_list": [
-          "短剧",
-          "AI应用",
-          "影视",
-          "游戏"
-        ],
-        "matched_future_theme_list": [],
-        "resonance_type": "strong",
-        "industry_chain_path": [
-          "短剧游戏/AI应用",
-          "传媒IP",
-          "广告与内容运营"
-        ],
-        "business_relevance_label": "core_business_related",
-        "noise_label_list": [
-          "none"
-        ],
-        "reflection_risk_label_list": [
-          "none"
-        ],
-        "holding_style_label": "main_theme_trend",
-        "reason_text": "公司主营广告与媒体经营，拥有多个系列报及IP资源，精准命中短剧游戏与AI应用主线，属于轻资产防御分支。",
-        "risk_text": "短剧游戏属于弱势防御题材，若市场风险偏好回升，资金可能流出防御板块。",
-        "score_factor_signal": {
-          "selection_score_config_version": "main_theme_v2_2026_06_29",
-          "ranked_weekly_theme_hit_count": 1,
-          "weekly_theme_hit_count": 1,
-          "reference_theme_hit_count": 4,
           "future_theme_hit_count": 0,
           "related_sub_theme_hit_count": 0,
           "resonance_label": "strong",
@@ -1540,30 +212,30 @@
         }
       },
       {
-        "stock_code": "600089",
-        "stock_name": "特变电工",
-        "selection_score": 156,
+        "stock_code": "600900",
+        "stock_name": "长江电力",
+        "selection_score": 180,
         "matched_theme_list": [
-          "电力公用事业",
-          "智能电网",
-          "绿电",
-          "光伏"
+          "高股息",
+          "电力",
+          "中特估",
+          "绿电"
         ],
         "matched_weekly_theme_list": [
-          "电力公用事业"
+          "高股息",
+          "电力",
+          "中特估"
         ],
         "matched_reference_theme_list": [
-          "智能电网",
           "绿电",
-          "电力",
-          "光伏"
+          "电力"
         ],
         "matched_future_theme_list": [],
         "resonance_type": "strong",
         "industry_chain_path": [
-          "电力设备",
-          "输变电",
-          "智能电网/绿电"
+          "水电生产",
+          "高股息防御",
+          "央国企市值管理"
         ],
         "business_relevance_label": "core_business_related",
         "noise_label_list": [
@@ -1573,13 +245,13 @@
           "none"
         ],
         "holding_style_label": "main_theme_trend",
-        "reason_text": "公司主营变压器、电线电缆及新能源业务，属于电力设备核心标的，同时命中电力公用事业周级主线及智能电网、绿电等多条参考主线，产业链路径清晰，业务支撑强。",
-        "risk_text": "电网投资节奏及新能源政策变化可能影响公司订单预期，且大盘系统性风险下高弹性品种易受波及。",
+        "reason_text": "全球最大水电上市公司，主营业务完全契合电力主线，同时具备高股息与中特估属性，多主线强共振，防御属性极致。",
+        "risk_text": "若夏季来水不及预期，可能影响发电量与分红预期。",
         "score_factor_signal": {
           "selection_score_config_version": "main_theme_v2_2026_06_29",
-          "ranked_weekly_theme_hit_count": 1,
-          "weekly_theme_hit_count": 1,
-          "reference_theme_hit_count": 4,
+          "ranked_weekly_theme_hit_count": 2,
+          "weekly_theme_hit_count": 3,
+          "reference_theme_hit_count": 2,
           "future_theme_hit_count": 0,
           "related_sub_theme_hit_count": 0,
           "resonance_label": "strong",
@@ -1599,26 +271,998 @@
       {
         "stock_code": "600863",
         "stock_name": "华能蒙电",
-        "selection_score": 156,
+        "selection_score": 178,
         "matched_theme_list": [
-          "电力公用事业",
-          "绿色电力",
-          "煤炭概念",
-          "超超临界发电"
+          "高股息",
+          "电力",
+          "煤炭",
+          "中特估"
         ],
         "matched_weekly_theme_list": [
-          "电力公用事业"
+          "高股息",
+          "电力",
+          "煤炭",
+          "中特估"
         ],
         "matched_reference_theme_list": [
-          "绿电",
-          "电力",
+          "绿色电力",
           "煤炭"
         ],
         "matched_future_theme_list": [],
         "resonance_type": "strong",
         "industry_chain_path": [
-          "电力公用事业",
+          "电力",
           "煤电一体化",
+          "高股息央企"
+        ],
+        "business_relevance_label": "core_business_related",
+        "noise_label_list": [
+          "none"
+        ],
+        "reflection_risk_label_list": [
+          "none"
+        ],
+        "holding_style_label": "main_theme_trend",
+        "reason_text": "公司主营电力与煤炭，完美命中高股息、电力、煤炭和中特估四大周级主线，且煤电一体化产业链逻辑极硬，是弱势下确定性最高的防御标的。",
+        "risk_text": "若夏季高温预期证伪或煤价大幅上涨侵蚀火电利润，可能影响高股息逻辑。",
+        "score_factor_signal": {
+          "selection_score_config_version": "main_theme_v2_2026_06_29",
+          "ranked_weekly_theme_hit_count": 2,
+          "weekly_theme_hit_count": 4,
+          "reference_theme_hit_count": 1,
+          "future_theme_hit_count": 0,
+          "related_sub_theme_hit_count": 0,
+          "resonance_label": "strong",
+          "resonance_score": 2,
+          "business_relevance_label": "core_business_related",
+          "business_relevance_score": 1,
+          "noise_label_list": [
+            "none"
+          ],
+          "noise_score": 0,
+          "reflection_risk_label_list": [
+            "none"
+          ],
+          "reflection_risk_score": 0
+        }
+      },
+      {
+        "stock_code": "600025",
+        "stock_name": "华能水电",
+        "selection_score": 168,
+        "matched_theme_list": [
+          "电力",
+          "高股息",
+          "中特估"
+        ],
+        "matched_weekly_theme_list": [
+          "电力",
+          "高股息",
+          "中特估"
+        ],
+        "matched_reference_theme_list": [
+          "绿电",
+          "电力"
+        ],
+        "matched_future_theme_list": [],
+        "resonance_type": "strong",
+        "industry_chain_path": [
+          "水力发电",
+          "绿电",
+          "高股息防御"
+        ],
+        "business_relevance_label": "core_business_related",
+        "noise_label_list": [
+          "concept_stacking"
+        ],
+        "reflection_risk_label_list": [
+          "none"
+        ],
+        "holding_style_label": "main_theme_trend",
+        "reason_text": "大型流域水电企业，核心业务水力发电完全契合电力主线与绿电参考主题，水电现金流优异支撑高股息与中特估防御逻辑，多主线强共振。",
+        "risk_text": "若流域来水不及预期，将直接影响发电量与利润表现。",
+        "score_factor_signal": {
+          "selection_score_config_version": "main_theme_v2_2026_06_29",
+          "ranked_weekly_theme_hit_count": 2,
+          "weekly_theme_hit_count": 3,
+          "reference_theme_hit_count": 2,
+          "future_theme_hit_count": 0,
+          "related_sub_theme_hit_count": 0,
+          "resonance_label": "strong",
+          "resonance_score": 2,
+          "business_relevance_label": "core_business_related",
+          "business_relevance_score": 1,
+          "noise_label_list": [
+            "concept_stacking"
+          ],
+          "noise_score": -1,
+          "reflection_risk_label_list": [
+            "none"
+          ],
+          "reflection_risk_score": 0
+        }
+      },
+      {
+        "stock_code": "600941",
+        "stock_name": "中国移动",
+        "selection_score": 168,
+        "matched_theme_list": [
+          "高股息",
+          "中特估",
+          "算力租赁",
+          "6G",
+          "AI应用",
+          "光通信"
+        ],
+        "matched_weekly_theme_list": [
+          "高股息",
+          "中特估"
+        ],
+        "matched_reference_theme_list": [
+          "算力租赁",
+          "6G",
+          "AI应用"
+        ],
+        "matched_future_theme_list": [
+          "光通信"
+        ],
+        "resonance_type": "strong",
+        "industry_chain_path": [
+          "电信运营",
+          "高股息防御",
+          "算力基础设施"
+        ],
+        "business_relevance_label": "core_business_related",
+        "noise_label_list": [
+          "none"
+        ],
+        "reflection_risk_label_list": [
+          "none"
+        ],
+        "holding_style_label": "main_theme_trend",
+        "reason_text": "核心业务为通信服务，是典型的高股息与中特估避风港；同时涉及算力租赁与AI应用，命中未来光通信催化，兼具防御与成长属性。",
+        "risk_text": "资本开支较大，若AI算力需求不及预期可能影响估值弹性。",
+        "score_factor_signal": {
+          "selection_score_config_version": "main_theme_v2_2026_06_29",
+          "ranked_weekly_theme_hit_count": 1,
+          "weekly_theme_hit_count": 2,
+          "reference_theme_hit_count": 3,
+          "future_theme_hit_count": 1,
+          "related_sub_theme_hit_count": 1,
+          "resonance_label": "strong",
+          "resonance_score": 2,
+          "business_relevance_label": "core_business_related",
+          "business_relevance_score": 1,
+          "noise_label_list": [
+            "none"
+          ],
+          "noise_score": 0,
+          "reflection_risk_label_list": [
+            "none"
+          ],
+          "reflection_risk_score": 0
+        }
+      },
+      {
+        "stock_code": "600396",
+        "stock_name": "华电辽能",
+        "selection_score": 165,
+        "matched_theme_list": [
+          "电力",
+          "高股息",
+          "中特估"
+        ],
+        "matched_weekly_theme_list": [
+          "电力",
+          "高股息",
+          "中特估"
+        ],
+        "matched_reference_theme_list": [
+          "绿电"
+        ],
+        "matched_future_theme_list": [],
+        "resonance_type": "strong",
+        "industry_chain_path": [
+          "火力发电",
+          "电力供应",
+          "高股息央企"
+        ],
+        "business_relevance_label": "core_business_related",
+        "noise_label_list": [
+          "none"
+        ],
+        "reflection_risk_label_list": [
+          "none"
+        ],
+        "holding_style_label": "main_theme_trend",
+        "reason_text": "公司主营电力与热力供应，属于辽宁省重要能源供应商，同时具备央企背景，完美命中电力、高股息和中特估三大前排主线，产业链与风格共振极强。",
+        "risk_text": "煤价若大幅反弹将侵蚀火电利润，且夏季用电高峰过后催化可能减弱。",
+        "score_factor_signal": {
+          "selection_score_config_version": "main_theme_v2_2026_06_29",
+          "ranked_weekly_theme_hit_count": 2,
+          "weekly_theme_hit_count": 3,
+          "reference_theme_hit_count": 1,
+          "future_theme_hit_count": 0,
+          "related_sub_theme_hit_count": 0,
+          "resonance_label": "strong",
+          "resonance_score": 2,
+          "business_relevance_label": "core_business_related",
+          "business_relevance_score": 1,
+          "noise_label_list": [
+            "none"
+          ],
+          "noise_score": 0,
+          "reflection_risk_label_list": [
+            "none"
+          ],
+          "reflection_risk_score": 0
+        }
+      },
+      {
+        "stock_code": "600487",
+        "stock_name": "亨通光电",
+        "selection_score": 165,
+        "matched_theme_list": [
+          "电力",
+          "光通信",
+          "智能电网",
+          "CPO"
+        ],
+        "matched_weekly_theme_list": [
+          "电力"
+        ],
+        "matched_reference_theme_list": [
+          "光通信",
+          "智能电网",
+          "CPO",
+          "光缆光纤"
+        ],
+        "matched_future_theme_list": [
+          "光通信"
+        ],
+        "resonance_type": "strong",
+        "industry_chain_path": [
+          "特高压导线/海缆",
+          "智能电网/能源互联",
+          "光通信/CPO"
+        ],
+        "business_relevance_label": "core_business_related",
+        "noise_label_list": [
+          "none"
+        ],
+        "reflection_risk_label_list": [
+          "none"
+        ],
+        "holding_style_label": "main_theme_trend",
+        "reason_text": "公司主营能源互联与通信网络，特高压导线业务受益电力主线，光通信业务命中参考与未来主题，多产业链强共振。",
+        "risk_text": "光通信与海缆行业竞争加剧，铜价波动影响线缆毛利。",
+        "score_factor_signal": {
+          "selection_score_config_version": "main_theme_v2_2026_06_29",
+          "ranked_weekly_theme_hit_count": 1,
+          "weekly_theme_hit_count": 1,
+          "reference_theme_hit_count": 4,
+          "future_theme_hit_count": 1,
+          "related_sub_theme_hit_count": 0,
+          "resonance_label": "strong",
+          "resonance_score": 2,
+          "business_relevance_label": "core_business_related",
+          "business_relevance_score": 1,
+          "noise_label_list": [
+            "none"
+          ],
+          "noise_score": 0,
+          "reflection_risk_label_list": [
+            "none"
+          ],
+          "reflection_risk_score": 0
+        }
+      },
+      {
+        "stock_code": "603318",
+        "stock_name": "水发燃气",
+        "selection_score": 165,
+        "matched_theme_list": [
+          "油气开采",
+          "高股息",
+          "中特估",
+          "绿电"
+        ],
+        "matched_weekly_theme_list": [
+          "油气开采",
+          "高股息",
+          "中特估"
+        ],
+        "matched_reference_theme_list": [
+          "绿电"
+        ],
+        "matched_future_theme_list": [],
+        "resonance_type": "strong",
+        "industry_chain_path": [
+          "天然气",
+          "LNG生产与燃气设备",
+          "城镇燃气供应"
+        ],
+        "business_relevance_label": "core_business_related",
+        "noise_label_list": [
+          "none"
+        ],
+        "reflection_risk_label_list": [
+          "none"
+        ],
+        "holding_style_label": "main_theme_trend",
+        "reason_text": "公司主营天然气全产业链，涵盖LNG、燃气设备及城镇燃气，属于油气开采与能源防御板块，且为山东国资控股，具备中特估与高股息防御属性，与本周risk_off主线高度共振。",
+        "risk_text": "天然气价格波动风险，以及若市场风格切回成长，防御板块可能跑输。",
+        "score_factor_signal": {
+          "selection_score_config_version": "main_theme_v2_2026_06_29",
+          "ranked_weekly_theme_hit_count": 2,
+          "weekly_theme_hit_count": 3,
+          "reference_theme_hit_count": 1,
+          "future_theme_hit_count": 0,
+          "related_sub_theme_hit_count": 0,
+          "resonance_label": "strong",
+          "resonance_score": 2,
+          "business_relevance_label": "core_business_related",
+          "business_relevance_score": 1,
+          "noise_label_list": [
+            "none"
+          ],
+          "noise_score": 0,
+          "reflection_risk_label_list": [
+            "none"
+          ],
+          "reflection_risk_score": 0
+        }
+      },
+      {
+        "stock_code": "002384",
+        "stock_name": "东山精密",
+        "selection_score": 154,
+        "matched_theme_list": [
+          "PCB",
+          "CPO",
+          "光纤光缆",
+          "消费电子",
+          "人形机器人",
+          "光通信"
+        ],
+        "matched_weekly_theme_list": [],
+        "matched_reference_theme_list": [
+          "PCB",
+          "CPO",
+          "光纤光缆",
+          "人形机器人"
+        ],
+        "matched_future_theme_list": [
+          "消费电子",
+          "人形机器人",
+          "光通信"
+        ],
+        "resonance_type": "strong",
+        "industry_chain_path": [
+          "算力基础设施",
+          "光通信",
+          "CPO",
+          "PCB"
+        ],
+        "business_relevance_label": "core_business_related",
+        "noise_label_list": [
+          "none"
+        ],
+        "reflection_risk_label_list": [
+          "none"
+        ],
+        "holding_style_label": "observe_only",
+        "reason_text": "公司主营精密钣金、PCB等，是光通信、CPO和算力产业链核心PCB供应商，同时受益于消费电子和机器人预期，产业链强共振。",
+        "risk_text": "未命中本周高股息和能源防御主线，若成长风格继续杀跌，可能跟随调整。",
+        "score_factor_signal": {
+          "selection_score_config_version": "main_theme_v2_2026_06_29",
+          "ranked_weekly_theme_hit_count": 0,
+          "weekly_theme_hit_count": 0,
+          "reference_theme_hit_count": 4,
+          "future_theme_hit_count": 3,
+          "related_sub_theme_hit_count": 2,
+          "resonance_label": "strong",
+          "resonance_score": 2,
+          "business_relevance_label": "core_business_related",
+          "business_relevance_score": 1,
+          "noise_label_list": [
+            "none"
+          ],
+          "noise_score": 0,
+          "reflection_risk_label_list": [
+            "none"
+          ],
+          "reflection_risk_score": 0
+        }
+      },
+      {
+        "stock_code": "600575",
+        "stock_name": "淮河能源",
+        "selection_score": 151,
+        "matched_theme_list": [
+          "电力",
+          "煤炭",
+          "中特估",
+          "绿电"
+        ],
+        "matched_weekly_theme_list": [
+          "电力",
+          "煤炭",
+          "中特估"
+        ],
+        "matched_reference_theme_list": [
+          "绿电",
+          "电力"
+        ],
+        "matched_future_theme_list": [],
+        "resonance_type": "strong",
+        "industry_chain_path": [
+          "火力发电",
+          "煤炭物流",
+          "央国企改革"
+        ],
+        "business_relevance_label": "core_business_related",
+        "noise_label_list": [
+          "none"
+        ],
+        "reflection_risk_label_list": [
+          "none"
+        ],
+        "holding_style_label": "main_theme_trend",
+        "reason_text": "公司主营火力发电及铁路运输配煤，命中电力、煤炭和中特估主线，能源+物流模式在防御行情下具备确定性，业务支撑强。",
+        "risk_text": "火电业务受煤价波动影响，且重组后协同效应需观察。",
+        "score_factor_signal": {
+          "selection_score_config_version": "main_theme_v2_2026_06_29",
+          "ranked_weekly_theme_hit_count": 1,
+          "weekly_theme_hit_count": 3,
+          "reference_theme_hit_count": 2,
+          "future_theme_hit_count": 0,
+          "related_sub_theme_hit_count": 0,
+          "resonance_label": "strong",
+          "resonance_score": 2,
+          "business_relevance_label": "core_business_related",
+          "business_relevance_score": 1,
+          "noise_label_list": [
+            "none"
+          ],
+          "noise_score": 0,
+          "reflection_risk_label_list": [
+            "none"
+          ],
+          "reflection_risk_score": 0
+        }
+      },
+      {
+        "stock_code": "600744",
+        "stock_name": "华银电力",
+        "selection_score": 151,
+        "matched_theme_list": [
+          "电力",
+          "煤炭",
+          "中特估"
+        ],
+        "matched_weekly_theme_list": [
+          "电力",
+          "煤炭",
+          "中特估"
+        ],
+        "matched_reference_theme_list": [
+          "绿电",
+          "电力"
+        ],
+        "matched_future_theme_list": [],
+        "resonance_type": "strong",
+        "industry_chain_path": [
+          "火力发电",
+          "煤炭燃料",
+          "央国企改革"
+        ],
+        "business_relevance_label": "core_business_related",
+        "noise_label_list": [
+          "none"
+        ],
+        "reflection_risk_label_list": [
+          "none"
+        ],
+        "holding_style_label": "main_theme_trend",
+        "reason_text": "公司主营火力发电，同时命中电力、煤炭和中特估三大周级主线，属于能源防御链核心标的，业务与主题高度契合。",
+        "risk_text": "若夏季高温预期证伪或煤价大幅上涨侵蚀利润，电力板块可能回调。",
+        "score_factor_signal": {
+          "selection_score_config_version": "main_theme_v2_2026_06_29",
+          "ranked_weekly_theme_hit_count": 1,
+          "weekly_theme_hit_count": 3,
+          "reference_theme_hit_count": 2,
+          "future_theme_hit_count": 0,
+          "related_sub_theme_hit_count": 0,
+          "resonance_label": "strong",
+          "resonance_score": 2,
+          "business_relevance_label": "core_business_related",
+          "business_relevance_score": 1,
+          "noise_label_list": [
+            "none"
+          ],
+          "noise_score": 0,
+          "reflection_risk_label_list": [
+            "none"
+          ],
+          "reflection_risk_score": 0
+        }
+      },
+      {
+        "stock_code": "601088",
+        "stock_name": "中国神华",
+        "selection_score": 151,
+        "matched_theme_list": [
+          "高股息",
+          "中特估",
+          "煤炭",
+          "绿电"
+        ],
+        "matched_weekly_theme_list": [
+          "高股息",
+          "中特估",
+          "煤炭"
+        ],
+        "matched_reference_theme_list": [
+          "煤炭",
+          "绿电"
+        ],
+        "matched_future_theme_list": [],
+        "resonance_type": "strong",
+        "industry_chain_path": [
+          "煤炭开采",
+          "煤电一体化",
+          "高股息防御",
+          "中特估"
+        ],
+        "business_relevance_label": "core_business_related",
+        "noise_label_list": [
+          "none"
+        ],
+        "reflection_risk_label_list": [
+          "none"
+        ],
+        "holding_style_label": "main_theme_trend",
+        "reason_text": "公司是最大煤炭生产企业，主营煤炭与电力，完美命中高股息、中特估、煤炭三大周级主线，且与绿电参考主题共振，产业链路径极清晰。",
+        "risk_text": "若煤价大幅回落或市场风格极端切向成长，高股息防御逻辑可能暂时弱化。",
+        "score_factor_signal": {
+          "selection_score_config_version": "main_theme_v2_2026_06_29",
+          "ranked_weekly_theme_hit_count": 1,
+          "weekly_theme_hit_count": 3,
+          "reference_theme_hit_count": 2,
+          "future_theme_hit_count": 0,
+          "related_sub_theme_hit_count": 0,
+          "resonance_label": "strong",
+          "resonance_score": 2,
+          "business_relevance_label": "core_business_related",
+          "business_relevance_score": 1,
+          "noise_label_list": [
+            "none"
+          ],
+          "noise_score": 0,
+          "reflection_risk_label_list": [
+            "none"
+          ],
+          "reflection_risk_score": 0
+        }
+      },
+      {
+        "stock_code": "600522",
+        "stock_name": "中天科技",
+        "selection_score": 150,
+        "matched_theme_list": [
+          "电力",
+          "光通信",
+          "智能电网",
+          "CPO"
+        ],
+        "matched_weekly_theme_list": [
+          "电力"
+        ],
+        "matched_reference_theme_list": [
+          "光通信",
+          "智能电网",
+          "CPO"
+        ],
+        "matched_future_theme_list": [
+          "光通信"
+        ],
+        "resonance_type": "strong",
+        "industry_chain_path": [
+          "电力",
+          "智能电网",
+          "特高压",
+          "光通信"
+        ],
+        "business_relevance_label": "core_business_related",
+        "noise_label_list": [
+          "none"
+        ],
+        "reflection_risk_label_list": [
+          "none"
+        ],
+        "holding_style_label": "main_theme_trend",
+        "reason_text": "公司业务覆盖电力传输与光通信，同时命中电力主线与光通信/CPO等未来催化主题，产业链路径清晰，兼具防御与成长属性。",
+        "risk_text": "光通信板块受海外算力事件催化，但若宏观风险偏好持续低迷，成长部分估值可能受压制。",
+        "score_factor_signal": {
+          "selection_score_config_version": "main_theme_v2_2026_06_29",
+          "ranked_weekly_theme_hit_count": 1,
+          "weekly_theme_hit_count": 1,
+          "reference_theme_hit_count": 3,
+          "future_theme_hit_count": 1,
+          "related_sub_theme_hit_count": 0,
+          "resonance_label": "strong",
+          "resonance_score": 2,
+          "business_relevance_label": "core_business_related",
+          "business_relevance_score": 1,
+          "noise_label_list": [
+            "none"
+          ],
+          "noise_score": 0,
+          "reflection_risk_label_list": [
+            "none"
+          ],
+          "reflection_risk_score": 0
+        }
+      },
+      {
+        "stock_code": "600938",
+        "stock_name": "中国海油",
+        "selection_score": 150,
+        "matched_theme_list": [
+          "油气开采",
+          "高股息",
+          "中特估"
+        ],
+        "matched_weekly_theme_list": [
+          "油气开采",
+          "高股息",
+          "中特估"
+        ],
+        "matched_reference_theme_list": [],
+        "matched_future_theme_list": [],
+        "resonance_type": "strong",
+        "industry_chain_path": [
+          "海上油气勘探",
+          "高股息防御",
+          "中字头价值重估"
+        ],
+        "business_relevance_label": "core_business_related",
+        "noise_label_list": [
+          "none"
+        ],
+        "reflection_risk_label_list": [
+          "none"
+        ],
+        "holding_style_label": "main_theme_trend",
+        "reason_text": "国内最大海上原油及天然气生产商，核心业务直接受益于油气开采主线，同时兼具高股息与中特估防御属性，产业链与主线高度共振。",
+        "risk_text": "受国际油价波动影响大，若地缘风险降温或油价回落，板块可能承压。",
+        "score_factor_signal": {
+          "selection_score_config_version": "main_theme_v2_2026_06_29",
+          "ranked_weekly_theme_hit_count": 2,
+          "weekly_theme_hit_count": 3,
+          "reference_theme_hit_count": 0,
+          "future_theme_hit_count": 0,
+          "related_sub_theme_hit_count": 0,
+          "resonance_label": "strong",
+          "resonance_score": 2,
+          "business_relevance_label": "core_business_related",
+          "business_relevance_score": 1,
+          "noise_label_list": [
+            "none"
+          ],
+          "noise_score": 0,
+          "reflection_risk_label_list": [
+            "none"
+          ],
+          "reflection_risk_score": 0
+        }
+      },
+      {
+        "stock_code": "601857",
+        "stock_name": "中国石油",
+        "selection_score": 150,
+        "matched_theme_list": [
+          "高股息",
+          "油气开采",
+          "中特估"
+        ],
+        "matched_weekly_theme_list": [
+          "高股息",
+          "油气开采",
+          "中特估"
+        ],
+        "matched_reference_theme_list": [],
+        "matched_future_theme_list": [],
+        "resonance_type": "strong",
+        "industry_chain_path": [
+          "石油开采",
+          "油气",
+          "高股息",
+          "中特估"
+        ],
+        "business_relevance_label": "core_business_related",
+        "noise_label_list": [
+          "none"
+        ],
+        "reflection_risk_label_list": [
+          "none"
+        ],
+        "holding_style_label": "main_theme_trend",
+        "reason_text": "公司是国内最大的油气生产和销售商，主营业务完全支撑油气开采主线；同时具备高股息与中特估属性，三大前排周级主线强共振。",
+        "risk_text": "若国际油价因地缘局势缓和大幅回落，将直接削弱油气开采主线逻辑与公司盈利预期。",
+        "score_factor_signal": {
+          "selection_score_config_version": "main_theme_v2_2026_06_29",
+          "ranked_weekly_theme_hit_count": 2,
+          "weekly_theme_hit_count": 3,
+          "reference_theme_hit_count": 0,
+          "future_theme_hit_count": 0,
+          "related_sub_theme_hit_count": 0,
+          "resonance_label": "strong",
+          "resonance_score": 2,
+          "business_relevance_label": "core_business_related",
+          "business_relevance_score": 1,
+          "noise_label_list": [
+            "none"
+          ],
+          "noise_score": 0,
+          "reflection_risk_label_list": [
+            "none"
+          ],
+          "reflection_risk_score": 0
+        }
+      },
+      {
+        "stock_code": "603618",
+        "stock_name": "杭电股份",
+        "selection_score": 150,
+        "matched_theme_list": [
+          "电力",
+          "光通信",
+          "智能电网",
+          "光纤光缆"
+        ],
+        "matched_weekly_theme_list": [
+          "电力"
+        ],
+        "matched_reference_theme_list": [
+          "光通信",
+          "智能电网",
+          "光纤光缆"
+        ],
+        "matched_future_theme_list": [
+          "光通信"
+        ],
+        "resonance_type": "strong",
+        "industry_chain_path": [
+          "电力电缆",
+          "智能电网",
+          "光通信"
+        ],
+        "business_relevance_label": "core_business_related",
+        "noise_label_list": [
+          "none"
+        ],
+        "reflection_risk_label_list": [
+          "none"
+        ],
+        "holding_style_label": "main_theme_trend",
+        "reason_text": "公司主营电力电缆与光通信产品，同时命中本周电力主线与光通信/智能电网参考主题，且光通信受未来事件催化，产业链路径清晰，主营业务强支撑。",
+        "risk_text": "若大盘风格从防御切换回成长，电力与光通信的共振可能减弱。",
+        "score_factor_signal": {
+          "selection_score_config_version": "main_theme_v2_2026_06_29",
+          "ranked_weekly_theme_hit_count": 1,
+          "weekly_theme_hit_count": 1,
+          "reference_theme_hit_count": 3,
+          "future_theme_hit_count": 1,
+          "related_sub_theme_hit_count": 0,
+          "resonance_label": "strong",
+          "resonance_score": 2,
+          "business_relevance_label": "core_business_related",
+          "business_relevance_score": 1,
+          "noise_label_list": [
+            "none"
+          ],
+          "noise_score": 0,
+          "reflection_risk_label_list": [
+            "none"
+          ],
+          "reflection_risk_score": 0
+        }
+      },
+      {
+        "stock_code": "600956",
+        "stock_name": "新天绿能",
+        "selection_score": 149,
+        "matched_theme_list": [
+          "电力",
+          "油气开采",
+          "绿电",
+          "光伏"
+        ],
+        "matched_weekly_theme_list": [
+          "电力",
+          "油气开采"
+        ],
+        "matched_reference_theme_list": [
+          "绿电",
+          "光伏"
+        ],
+        "matched_future_theme_list": [],
+        "resonance_type": "medium",
+        "industry_chain_path": [
+          "风电运营",
+          "天然气销售",
+          "清洁能源"
+        ],
+        "business_relevance_label": "core_business_related",
+        "noise_label_list": [
+          "none"
+        ],
+        "reflection_risk_label_list": [
+          "none"
+        ],
+        "holding_style_label": "main_theme_trend",
+        "reason_text": "主营风电与天然气销售，同时命中电力和油气开采两条周级主线，业务具备一定协同性，受益于能源防御共振。",
+        "risk_text": "天然气采购成本波动较大，风电业务受自然条件制约。",
+        "score_factor_signal": {
+          "selection_score_config_version": "main_theme_v2_2026_06_29",
+          "ranked_weekly_theme_hit_count": 2,
+          "weekly_theme_hit_count": 2,
+          "reference_theme_hit_count": 2,
+          "future_theme_hit_count": 0,
+          "related_sub_theme_hit_count": 0,
+          "resonance_label": "medium",
+          "resonance_score": 1,
+          "business_relevance_label": "core_business_related",
+          "business_relevance_score": 1,
+          "noise_label_list": [
+            "none"
+          ],
+          "noise_score": 0,
+          "reflection_risk_label_list": [
+            "none"
+          ],
+          "reflection_risk_score": 0
+        }
+      },
+      {
+        "stock_code": "601179",
+        "stock_name": "中国西电",
+        "selection_score": 143,
+        "matched_theme_list": [
+          "电力",
+          "中特估",
+          "智能电网",
+          "特高压"
+        ],
+        "matched_weekly_theme_list": [
+          "电力",
+          "中特估"
+        ],
+        "matched_reference_theme_list": [
+          "智能电网",
+          "绿电"
+        ],
+        "matched_future_theme_list": [],
+        "resonance_type": "strong",
+        "industry_chain_path": [
+          "电力设备",
+          "特高压",
+          "智能电网"
+        ],
+        "business_relevance_label": "core_business_related",
+        "noise_label_list": [
+          "none"
+        ],
+        "reflection_risk_label_list": [
+          "none"
+        ],
+        "holding_style_label": "main_theme_trend",
+        "reason_text": "央企控股的高压/特高压输配电设备龙头，同时命中电力和中特估两大周级主线，且与智能电网参考主题共振，产业链路径清晰，主营业务支撑极强。",
+        "risk_text": "电网投资节奏可能受宏观影响，若夏季高温用电预期证伪，板块可能面临催化减弱。",
+        "score_factor_signal": {
+          "selection_score_config_version": "main_theme_v2_2026_06_29",
+          "ranked_weekly_theme_hit_count": 1,
+          "weekly_theme_hit_count": 2,
+          "reference_theme_hit_count": 2,
+          "future_theme_hit_count": 0,
+          "related_sub_theme_hit_count": 1,
+          "resonance_label": "strong",
+          "resonance_score": 2,
+          "business_relevance_label": "core_business_related",
+          "business_relevance_score": 1,
+          "noise_label_list": [
+            "none"
+          ],
+          "noise_score": 0,
+          "reflection_risk_label_list": [
+            "none"
+          ],
+          "reflection_risk_score": 0
+        }
+      },
+      {
+        "stock_code": "601669",
+        "stock_name": "中国电建",
+        "selection_score": 142,
+        "matched_theme_list": [
+          "电力",
+          "中特估",
+          "绿电",
+          "光伏",
+          "智能电网"
+        ],
+        "matched_weekly_theme_list": [
+          "电力",
+          "中特估"
+        ],
+        "matched_reference_theme_list": [
+          "绿电",
+          "光伏",
+          "智能电网"
+        ],
+        "matched_future_theme_list": [],
+        "resonance_type": "strong",
+        "industry_chain_path": [
+          "电力投资与工程",
+          "新能源运营",
+          "中特估"
+        ],
+        "business_relevance_label": "core_business_related",
+        "noise_label_list": [
+          "concept_stacking"
+        ],
+        "reflection_risk_label_list": [
+          "none"
+        ],
+        "holding_style_label": "main_theme_trend",
+        "reason_text": "公司主营工程承包及电力投资运营，直接命中电力和中特估双主线，且与绿电、光伏等参考主题强共振，是电力产业链核心央企。",
+        "risk_text": "概念标签过多（如AI、算力等），存在概念拼凑噪声；若电力板块退潮，缺乏纯高股息防御属性可能回调较深。",
+        "score_factor_signal": {
+          "selection_score_config_version": "main_theme_v2_2026_06_29",
+          "ranked_weekly_theme_hit_count": 1,
+          "weekly_theme_hit_count": 2,
+          "reference_theme_hit_count": 3,
+          "future_theme_hit_count": 0,
+          "related_sub_theme_hit_count": 0,
+          "resonance_label": "strong",
+          "resonance_score": 2,
+          "business_relevance_label": "core_business_related",
+          "business_relevance_score": 1,
+          "noise_label_list": [
+            "concept_stacking"
+          ],
+          "noise_score": -1,
+          "reflection_risk_label_list": [
+            "none"
+          ],
+          "reflection_risk_score": 0
+        }
+      },
+      {
+        "stock_code": "603050",
+        "stock_name": "科林电气",
+        "selection_score": 141,
+        "matched_theme_list": [
+          "电力",
+          "智能电网",
+          "绿电",
+          "光伏"
+        ],
+        "matched_weekly_theme_list": [
+          "电力"
+        ],
+        "matched_reference_theme_list": [
+          "智能电网",
+          "绿电",
+          "光伏"
+        ],
+        "matched_future_theme_list": [],
+        "resonance_type": "strong",
+        "industry_chain_path": [
+          "电力设备",
+          "智能电网",
           "绿色电力"
         ],
         "business_relevance_label": "core_business_related",
@@ -1629,15 +1273,15 @@
           "none"
         ],
         "holding_style_label": "main_theme_trend",
-        "reason_text": "内蒙古综合能源企业，主营发电与煤炭，煤电一体化协同发展，受益于电力主线及高股息防御逻辑。",
-        "risk_text": "煤价波动可能影响煤电一体化利润，电价市场化改革存在不确定性。",
+        "reason_text": "公司主营智能电网变配电设备及分布式光伏，直接命中周级主线电力及多个强相关参考主题，产业链路径清晰，主营业务强支撑。",
+        "risk_text": "电网投资节奏不及预期或大盘系统性风险导致防御主线退潮。",
         "score_factor_signal": {
           "selection_score_config_version": "main_theme_v2_2026_06_29",
           "ranked_weekly_theme_hit_count": 1,
           "weekly_theme_hit_count": 1,
           "reference_theme_hit_count": 3,
           "future_theme_hit_count": 0,
-          "related_sub_theme_hit_count": 3,
+          "related_sub_theme_hit_count": 0,
           "resonance_label": "strong",
           "resonance_score": 2,
           "business_relevance_label": "core_business_related",
@@ -1653,146 +1297,80 @@
         }
       },
       {
-        "stock_code": "603050",
-        "stock_name": "科林电气",
-        "selection_score": 156,
+        "stock_code": "600023",
+        "stock_name": "浙能电力",
+        "selection_score": 140,
         "matched_theme_list": [
-          "电力公用事业",
-          "智能电网",
-          "绿电"
-        ],
-        "matched_weekly_theme_list": [
-          "电力公用事业"
-        ],
-        "matched_reference_theme_list": [
-          "智能电网",
-          "绿电",
           "电力",
-          "光伏"
-        ],
-        "matched_future_theme_list": [],
-        "resonance_type": "strong",
-        "industry_chain_path": [
-          "电力公用事业",
-          "智能电网",
-          "虚拟电厂"
-        ],
-        "business_relevance_label": "core_business_related",
-        "noise_label_list": [
-          "none"
-        ],
-        "reflection_risk_label_list": [
-          "none"
-        ],
-        "holding_style_label": "main_theme_trend",
-        "reason_text": "公司主营智能电网变配电设备与新能源业务，直接受益于用电负荷创新高及电力公用事业主线，产业链路径清晰。",
-        "risk_text": "若极端高温天气缓解或电力需求不及预期，板块防御逻辑可能弱化。",
-        "score_factor_signal": {
-          "selection_score_config_version": "main_theme_v2_2026_06_29",
-          "ranked_weekly_theme_hit_count": 1,
-          "weekly_theme_hit_count": 1,
-          "reference_theme_hit_count": 4,
-          "future_theme_hit_count": 0,
-          "related_sub_theme_hit_count": 0,
-          "resonance_label": "strong",
-          "resonance_score": 2,
-          "business_relevance_label": "core_business_related",
-          "business_relevance_score": 1,
-          "noise_label_list": [
-            "none"
-          ],
-          "noise_score": 0,
-          "reflection_risk_label_list": [
-            "none"
-          ],
-          "reflection_risk_score": 0
-        }
-      },
-      {
-        "stock_code": "000737",
-        "stock_name": "北方铜业",
-        "selection_score": 154,
-        "matched_theme_list": [
-          "CPO",
-          "电力公用事业",
-          "PCB",
-          "覆铜板"
+          "高股息"
         ],
         "matched_weekly_theme_list": [
-          "CPO",
-          "电力公用事业"
+          "电力",
+          "高股息"
         ],
         "matched_reference_theme_list": [
-          "PCB",
-          "小金属",
-          "覆铜板"
-        ],
-        "matched_future_theme_list": [],
-        "resonance_type": "strong",
-        "industry_chain_path": [
-          "铜冶炼",
-          "压延铜箔",
-          "高频高速PCB/CPO",
-          "电力设备"
-        ],
-        "business_relevance_label": "core_business_related",
-        "noise_label_list": [
-          "none"
-        ],
-        "reflection_risk_label_list": [
-          "none"
-        ],
-        "holding_style_label": "main_theme_trend",
-        "reason_text": "公司新建高性能压延铜带箔及覆铜板项目，产品用于5G通讯和新能源领域，同时命中CPO上游(覆铜板/PCB)和电力设备上游双主线，产业链逻辑清晰。",
-        "risk_text": "铜价大幅波动风险，以及CPO主线周五杀跌带来的短期情绪拖累。",
-        "score_factor_signal": {
-          "selection_score_config_version": "main_theme_v2_2026_06_29",
-          "ranked_weekly_theme_hit_count": 1,
-          "weekly_theme_hit_count": 2,
-          "reference_theme_hit_count": 3,
-          "future_theme_hit_count": 0,
-          "related_sub_theme_hit_count": 0,
-          "resonance_label": "strong",
-          "resonance_score": 2,
-          "business_relevance_label": "core_business_related",
-          "business_relevance_score": 1,
-          "noise_label_list": [
-            "none"
-          ],
-          "noise_score": 0,
-          "reflection_risk_label_list": [
-            "none"
-          ],
-          "reflection_risk_score": 0
-        }
-      },
-      {
-        "stock_code": "002335",
-        "stock_name": "科华数据",
-        "selection_score": 154,
-        "matched_theme_list": [
-          "电力公用事业",
-          "CPO",
-          "智能电网"
-        ],
-        "matched_weekly_theme_list": [
-          "电力公用事业",
-          "CPO"
-        ],
-        "matched_reference_theme_list": [
-          "智能电网",
-          "算力租赁",
           "电力"
         ],
         "matched_future_theme_list": [],
         "resonance_type": "strong",
         "industry_chain_path": [
-          "电力设备",
+          "火力发电",
+          "夏季用电高峰",
+          "高股息防御"
+        ],
+        "business_relevance_label": "core_business_related",
+        "noise_label_list": [
+          "old_or_weak_concept_noise"
+        ],
+        "reflection_risk_label_list": [
+          "none"
+        ],
+        "holding_style_label": "main_theme_trend",
+        "reason_text": "浙江省规模最大的火力发电企业，主营电力与热力供应，直接受益于夏季高温用电需求与高股息防御逻辑，同时命中weekly与reference主线。",
+        "risk_text": "煤价若出现反季节大幅上涨，将侵蚀火电利润，影响高股息兑现。",
+        "score_factor_signal": {
+          "selection_score_config_version": "main_theme_v2_2026_06_29",
+          "ranked_weekly_theme_hit_count": 2,
+          "weekly_theme_hit_count": 2,
+          "reference_theme_hit_count": 1,
+          "future_theme_hit_count": 0,
+          "related_sub_theme_hit_count": 0,
+          "resonance_label": "strong",
+          "resonance_score": 2,
+          "business_relevance_label": "core_business_related",
+          "business_relevance_score": 1,
+          "noise_label_list": [
+            "old_or_weak_concept_noise"
+          ],
+          "noise_score": -1,
+          "reflection_risk_label_list": [
+            "none"
+          ],
+          "reflection_risk_score": 0
+        }
+      },
+      {
+        "stock_code": "000400",
+        "stock_name": "许继电气",
+        "selection_score": 138,
+        "matched_theme_list": [
+          "电力",
+          "中特估"
+        ],
+        "matched_weekly_theme_list": [
+          "电力",
+          "中特估"
+        ],
+        "matched_reference_theme_list": [
           "智能电网",
-          "高端电源",
-          "AI算力",
-          "数据中心",
-          "液冷电源"
+          "绿电"
+        ],
+        "matched_future_theme_list": [],
+        "resonance_type": "strong",
+        "industry_chain_path": [
+          "特高压/智能电网",
+          "电力设备",
+          "央企中特估"
         ],
         "business_relevance_label": "core_business_related",
         "noise_label_list": [
@@ -1802,13 +1380,13 @@
           "none"
         ],
         "holding_style_label": "main_theme_trend",
-        "reason_text": "公司主营高端电源与新能源业务，同时覆盖电力公用事业与算力数据中心两大主线，产业链路径清晰，防御与成长兼具。",
-        "risk_text": "若市场风格在防御与成长间剧烈摇摆，可能面临双线资金拉扯。",
+        "reason_text": "电力设备龙头，主营特高压与智能电网，直接受益于电力主线与夏季用电催化，且具备中特估央企属性，多主线强共振。",
+        "risk_text": "电力板块若受大盘系统性风险拖累可能跟随回调；特高压订单落地节奏影响业绩弹性。",
         "score_factor_signal": {
           "selection_score_config_version": "main_theme_v2_2026_06_29",
           "ranked_weekly_theme_hit_count": 1,
           "weekly_theme_hit_count": 2,
-          "reference_theme_hit_count": 3,
+          "reference_theme_hit_count": 2,
           "future_theme_hit_count": 0,
           "related_sub_theme_hit_count": 0,
           "resonance_label": "strong",
@@ -1826,35 +1404,82 @@
         }
       },
       {
-        "stock_code": "002859",
-        "stock_name": "洁美科技",
-        "selection_score": 153,
+        "stock_code": "600028",
+        "stock_name": "中国石化",
+        "selection_score": 138,
         "matched_theme_list": [
-          "半导体设备",
-          "CPO",
-          "PCB概念",
-          "消费电子概念",
-          "先进封装"
+          "油气开采",
+          "高股息",
+          "中特估"
         ],
         "matched_weekly_theme_list": [
-          "半导体设备",
-          "CPO"
+          "油气开采",
+          "高股息",
+          "中特估"
         ],
-        "matched_reference_theme_list": [
-          "PCB",
-          "消费电子",
-          "半导体"
-        ],
-        "matched_future_theme_list": [
-          "先进封装",
-          "消费电子",
-          "半导体设备"
-        ],
+        "matched_reference_theme_list": [],
+        "matched_future_theme_list": [],
         "resonance_type": "strong",
         "industry_chain_path": [
-          "半导体/PCB",
-          "电子元器件",
-          "封装耗材(载带/离型膜)"
+          "油气勘探开采",
+          "高股息防御",
+          "中特估央国企"
+        ],
+        "business_relevance_label": "core_business_related",
+        "noise_label_list": [
+          "old_or_weak_concept_noise"
+        ],
+        "reflection_risk_label_list": [
+          "none"
+        ],
+        "holding_style_label": "main_theme_trend",
+        "reason_text": "公司是国内最大的一体化能源化工公司之一，主营油气勘探开采与炼化，直接命中油气开采、高股息与中特估三大前排主线，产业链与防御逻辑极度清晰。",
+        "risk_text": "国际油价若受宏观衰退预期影响大幅回落，将拖累勘探开采利润与股息率预期。",
+        "score_factor_signal": {
+          "selection_score_config_version": "main_theme_v2_2026_06_29",
+          "ranked_weekly_theme_hit_count": 2,
+          "weekly_theme_hit_count": 3,
+          "reference_theme_hit_count": 0,
+          "future_theme_hit_count": 0,
+          "related_sub_theme_hit_count": 0,
+          "resonance_label": "strong",
+          "resonance_score": 2,
+          "business_relevance_label": "core_business_related",
+          "business_relevance_score": 1,
+          "noise_label_list": [
+            "old_or_weak_concept_noise"
+          ],
+          "noise_score": -1,
+          "reflection_risk_label_list": [
+            "none"
+          ],
+          "reflection_risk_score": 0
+        }
+      },
+      {
+        "stock_code": "600089",
+        "stock_name": "特变电工",
+        "selection_score": 138,
+        "matched_theme_list": [
+          "电力",
+          "煤炭",
+          "智能电网",
+          "绿电"
+        ],
+        "matched_weekly_theme_list": [
+          "电力",
+          "煤炭"
+        ],
+        "matched_reference_theme_list": [
+          "智能电网",
+          "绿电"
+        ],
+        "matched_future_theme_list": [],
+        "resonance_type": "strong",
+        "industry_chain_path": [
+          "电网设备",
+          "特高压",
+          "煤炭电力"
         ],
         "business_relevance_label": "core_business_related",
         "noise_label_list": [
@@ -1864,15 +1489,236 @@
           "none"
         ],
         "holding_style_label": "main_theme_trend",
-        "reason_text": "公司主营电子封装耗材，是半导体和PCB上游关键材料，受益于半导体设备及先进封装催化，业务相关性强。",
-        "risk_text": "作为上游耗材，弹性可能弱于中游设备或下游终端，且受消费电子周期影响较大。",
+        "reason_text": "公司主营变压器与电线电缆，是电网设备核心供应商，同时具备煤炭概念与绿电属性，完美命中电力与煤炭双周级主线，产业链共振极强。",
+        "risk_text": "若夏季高温用电预期落空或煤炭价格大幅回调，可能影响板块整体热度。",
         "score_factor_signal": {
           "selection_score_config_version": "main_theme_v2_2026_06_29",
-          "ranked_weekly_theme_hit_count": 0,
+          "ranked_weekly_theme_hit_count": 1,
           "weekly_theme_hit_count": 2,
           "reference_theme_hit_count": 2,
-          "future_theme_hit_count": 3,
-          "related_sub_theme_hit_count": 3,
+          "future_theme_hit_count": 0,
+          "related_sub_theme_hit_count": 0,
+          "resonance_label": "strong",
+          "resonance_score": 2,
+          "business_relevance_label": "core_business_related",
+          "business_relevance_score": 1,
+          "noise_label_list": [
+            "none"
+          ],
+          "noise_score": 0,
+          "reflection_risk_label_list": [
+            "none"
+          ],
+          "reflection_risk_score": 0
+        }
+      },
+      {
+        "stock_code": "600406",
+        "stock_name": "国电南瑞",
+        "selection_score": 138,
+        "matched_theme_list": [
+          "电力",
+          "中特估",
+          "智能电网"
+        ],
+        "matched_weekly_theme_list": [
+          "电力",
+          "中特估"
+        ],
+        "matched_reference_theme_list": [
+          "智能电网",
+          "电力"
+        ],
+        "matched_future_theme_list": [],
+        "resonance_type": "strong",
+        "industry_chain_path": [
+          "电网调度自动化",
+          "智能电网",
+          "电力系统"
+        ],
+        "business_relevance_label": "core_business_related",
+        "noise_label_list": [
+          "none"
+        ],
+        "reflection_risk_label_list": [
+          "none"
+        ],
+        "holding_style_label": "main_theme_trend",
+        "reason_text": "公司是能源电力智能化领军企业，主营电网调度自动化等，同时命中电力和中特估双主线，且与智能电网参考主题共振，产业链路径极清晰。",
+        "risk_text": "电网投资节奏若不及预期，可能影响公司订单释放速度。",
+        "score_factor_signal": {
+          "selection_score_config_version": "main_theme_v2_2026_06_29",
+          "ranked_weekly_theme_hit_count": 1,
+          "weekly_theme_hit_count": 2,
+          "reference_theme_hit_count": 2,
+          "future_theme_hit_count": 0,
+          "related_sub_theme_hit_count": 0,
+          "resonance_label": "strong",
+          "resonance_score": 2,
+          "business_relevance_label": "core_business_related",
+          "business_relevance_score": 1,
+          "noise_label_list": [
+            "none"
+          ],
+          "noise_score": 0,
+          "reflection_risk_label_list": [
+            "none"
+          ],
+          "reflection_risk_score": 0
+        }
+      },
+      {
+        "stock_code": "600475",
+        "stock_name": "华光环能",
+        "selection_score": 138,
+        "matched_theme_list": [
+          "电力",
+          "中特估",
+          "绿电"
+        ],
+        "matched_weekly_theme_list": [
+          "电力",
+          "中特估"
+        ],
+        "matched_reference_theme_list": [
+          "绿电",
+          "电力"
+        ],
+        "matched_future_theme_list": [],
+        "resonance_type": "strong",
+        "industry_chain_path": [
+          "热电运营",
+          "光伏发电",
+          "绿色电力"
+        ],
+        "business_relevance_label": "core_business_related",
+        "noise_label_list": [
+          "none"
+        ],
+        "reflection_risk_label_list": [
+          "none"
+        ],
+        "holding_style_label": "main_theme_trend",
+        "reason_text": "公司主营涵盖热电运营及光伏发电，属于电力核心环节，同时具备国企改革属性命中中特估，业务与主线高度契合。",
+        "risk_text": "煤炭等燃料价格波动可能影响热电业务毛利率。",
+        "score_factor_signal": {
+          "selection_score_config_version": "main_theme_v2_2026_06_29",
+          "ranked_weekly_theme_hit_count": 1,
+          "weekly_theme_hit_count": 2,
+          "reference_theme_hit_count": 2,
+          "future_theme_hit_count": 0,
+          "related_sub_theme_hit_count": 0,
+          "resonance_label": "strong",
+          "resonance_score": 2,
+          "business_relevance_label": "core_business_related",
+          "business_relevance_score": 1,
+          "noise_label_list": [
+            "none"
+          ],
+          "noise_score": 0,
+          "reflection_risk_label_list": [
+            "none"
+          ],
+          "reflection_risk_score": 0
+        }
+      },
+      {
+        "stock_code": "600886",
+        "stock_name": "国投电力",
+        "selection_score": 138,
+        "matched_theme_list": [
+          "电力",
+          "中特估",
+          "绿电"
+        ],
+        "matched_weekly_theme_list": [
+          "电力",
+          "中特估"
+        ],
+        "matched_reference_theme_list": [
+          "绿电",
+          "电力"
+        ],
+        "matched_future_theme_list": [],
+        "resonance_type": "strong",
+        "industry_chain_path": [
+          "水风光清洁能源",
+          "电力供需",
+          "央国企改革"
+        ],
+        "business_relevance_label": "core_business_related",
+        "noise_label_list": [
+          "none"
+        ],
+        "reflection_risk_label_list": [
+          "none"
+        ],
+        "holding_style_label": "main_theme_trend",
+        "reason_text": "清洁能源为主的综合电力公司，水电装机占比高，受益于电力防御主线与绿电政策，同时具备中特估属性。",
+        "risk_text": "水电依赖来水情况，火电部分可能受煤价波动影响。",
+        "score_factor_signal": {
+          "selection_score_config_version": "main_theme_v2_2026_06_29",
+          "ranked_weekly_theme_hit_count": 1,
+          "weekly_theme_hit_count": 2,
+          "reference_theme_hit_count": 2,
+          "future_theme_hit_count": 0,
+          "related_sub_theme_hit_count": 0,
+          "resonance_label": "strong",
+          "resonance_score": 2,
+          "business_relevance_label": "core_business_related",
+          "business_relevance_score": 1,
+          "noise_label_list": [
+            "none"
+          ],
+          "noise_score": 0,
+          "reflection_risk_label_list": [
+            "none"
+          ],
+          "reflection_risk_score": 0
+        }
+      },
+      {
+        "stock_code": "600905",
+        "stock_name": "三峡能源",
+        "selection_score": 138,
+        "matched_theme_list": [
+          "电力",
+          "中特估",
+          "绿电",
+          "光伏"
+        ],
+        "matched_weekly_theme_list": [
+          "电力",
+          "中特估"
+        ],
+        "matched_reference_theme_list": [
+          "绿电",
+          "光伏"
+        ],
+        "matched_future_theme_list": [],
+        "resonance_type": "strong",
+        "industry_chain_path": [
+          "风电光伏运营",
+          "新型电力系统",
+          "央企改革"
+        ],
+        "business_relevance_label": "core_business_related",
+        "noise_label_list": [
+          "none"
+        ],
+        "reflection_risk_label_list": [
+          "none"
+        ],
+        "holding_style_label": "main_theme_trend",
+        "reason_text": "主营风能与太阳能开发，属于新型电力体系，直接受益于电力主线与绿电/光伏参考主题，叠加中特估属性。",
+        "risk_text": "新能源补贴回款与消纳问题可能影响利润兑现。",
+        "score_factor_signal": {
+          "selection_score_config_version": "main_theme_v2_2026_06_29",
+          "ranked_weekly_theme_hit_count": 1,
+          "weekly_theme_hit_count": 2,
+          "reference_theme_hit_count": 2,
+          "future_theme_hit_count": 0,
+          "related_sub_theme_hit_count": 0,
           "resonance_label": "strong",
           "resonance_score": 2,
           "business_relevance_label": "core_business_related",
@@ -1889,6 +1735,6 @@
       }
     ],
     "summary_text": "分批主线候选召回完成，已按程序计算的 selection_score 合并排序并保留最终候选池。",
-    "published_source_date": "2026-07-17"
+    "published_source_date": "2026-07-20"
   }
 }
