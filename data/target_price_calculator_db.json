@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-07-01",
-  "source_result_date": "2026-07-01",
+  "updated_at": "2026-07-21",
+  "source_result_date": "2026-07-20",
   "target_price_calculator_db": {
     "000001": {
       "stock_code": "000001",
@@ -12605,48 +12605,54 @@
     "600298": {
       "stock_code": "600298",
       "stock_name": "安琪酵母",
-      "updated_at": "2026-07-01",
-      "source_result_date": "2026-07-01",
-      "latest_trade_date": "2026-07-01",
-      "latest_close_price": 36.65,
-      "research_coverage_status": "limited_fallback",
+      "updated_at": "2026-07-21",
+      "source_result_date": "2026-07-20",
+      "latest_trade_date": "2026-07-20",
+      "latest_close_price": 38.85,
+      "research_coverage_status": "can_slim_available",
       "target_price_calculator_signal": {
         "version": "oneil_calculator_v2",
         "weight_profile_signal": {
-          "profile_name": "default_growth",
+          "profile_name": "institutional_capacity_core",
           "source": "rule_fallback",
-          "reason_text": "未命中特定行业类型，使用默认成长股配置。"
+          "reason_text": "近20日平均换手率约1.3154%，20日平均成交额约419666.8139，20日平均流通市值约3175014.0246，符合低换手、高容量承接或容量核心识别的机构大票/中军特征。"
         },
-        "current_price": 36.65,
+        "current_price": 38.85,
         "predicted_upside_pct_range": {
-          "low": 0.0,
-          "center": 0.0,
-          "high": 3.0014
+          "low": 4.9678,
+          "center": 7.9794,
+          "high": 10.991
         },
         "predicted_target_price_range": {
-          "low": 36.65,
-          "center": 36.65,
-          "high": 37.75,
+          "low": 40.78,
+          "center": 41.95,
+          "high": 43.12,
           "currency": "CNY"
         },
         "target_price_calculation_signal": {
           "status": "new_calculation",
           "source": "oneil_calculator",
           "target_price_range": {
-            "low": 36.65,
-            "center": 36.65,
-            "high": 37.75,
+            "low": 40.78,
+            "center": 41.95,
+            "high": 43.12,
             "currency": "CNY"
           },
-          "current_price": 36.65,
+          "current_price": 38.85,
           "reason_text": "使用本次 calculator 刷新计算区间。"
         },
         "expert_target_validation_signal": {
-          "status": "missing",
-          "reason_text": "机构目标区间没有可用中枢。"
+          "status": "usable_for_live_blend",
+          "expert_target_center": 45.63,
+          "current_price": 38.85,
+          "implied_upside_pct": 17.4517,
+          "source_name": "国金证券, 太平洋, 群益证券",
+          "source_observed_at": "2025-11-26",
+          "evidence_freshness_label": "older_one_year_reference",
+          "training_usage_text": "可按配置权重融合进当前预测。"
         },
-        "confidence_label": "low",
-        "reason_text": "已读取最新收盘价，预估增长0.0%，CAN SLIM 重估溢价-0.72%，估值/风险折价0.0%；根据增长兑现、估值重估、主线相关度、相对强度和风险惩罚计算参考上行区间为 +0.00% 至 +3.00%，未融合有效机构目标区间；目标区间计算状态=new_calculation。"
+        "confidence_label": "high",
+        "reason_text": "已读取最新收盘价，预估增长9.8671%，CAN SLIM 重估溢价8.08%，估值/风险折价9.5278%；根据增长兑现、估值重估、主线相关度、相对强度和风险惩罚计算参考上行区间为 +4.97% 至 +10.99%，并融合机构目标区间隐含涨幅 17.45%；目标区间计算状态=new_calculation。"
       }
     },
     "600301": {
