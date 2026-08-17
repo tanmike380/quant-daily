@@ -157,7 +157,7 @@ h2 { font-size: 1.15em; margin-bottom: 12px; color: var(--blue); }
 .target-price-meta { color: var(--text2); margin-top: 4px; }
 .trade-snapshot-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 8px;
   margin-top: 10px;
 }
@@ -187,9 +187,6 @@ h2 { font-size: 1.15em; margin-bottom: 12px; color: var(--blue); }
 }
 .trade-snapshot-item.open-dip .trade-snapshot-value {
   color: var(--red);
-}
-.trade-snapshot-item.main-theme .trade-snapshot-value {
-  color: var(--blue);
 }
 .trade-snapshot-meta {
   color: var(--text2);
@@ -5878,7 +5875,7 @@ const INLINE_ONEIL = {
       "after_count": 2005,
       "added_count": 2
     },
-    "published_price_refreshed_at": "2026-08-17T22:11:45",
+    "published_price_refreshed_at": "2026-08-17T22:16:18",
     "published_price_refresh_source": "tushare.daily"
   }
 };
@@ -6265,7 +6262,7 @@ const INLINE_OPEN_DIP = {
   "open_dip_buy_db": {}
 };
 const INLINE_PUBLISH_GENERATED_AT = {
-  "generated_at": "2026-08-17 22:11:44"
+  "generated_at": "2026-08-17 22:16:17"
 };
 
 const STOCK_SEARCH_INDEX_URL = 'data/stock_search_index.json';
@@ -6578,29 +6575,12 @@ function renderCompactCANSLIM(verdict) {
     ${renderCANSLIM(verdict)}`;
 }
 
-function buildCompactThemeText(stock) {
-  const themeList = [];
-  const seenThemeSet = new Set();
-  const rawThemeList = [
-    ...((stock.matched_theme_list || [])),
-    stock.primary_theme,
-  ];
-  rawThemeList.forEach(theme => {
-    const themeText = String(theme || '').trim();
-    if (!themeText || seenThemeSet.has(themeText)) return;
-    themeList.push(themeText);
-    seenThemeSet.add(themeText);
-  });
-  return themeList.length ? themeList.join(' / ') : '-';
-}
-
 function renderTradeSnapshot(stock, openDipData, stopLossSignal, targetPriceJudgment, calculatorSignal) {
   return `
     <div class="trade-snapshot-grid">
       ${renderCompactTargetPrice(stock, targetPriceJudgment, calculatorSignal)}
       ${renderCompactStopLossSignal(stopLossSignal)}
       ${renderCompactOpenDipSignal(stock, openDipData)}
-      ${renderTradeSnapshotItem('主线', esc(buildCompactThemeText(stock)), '', 'main-theme')}
     </div>`;
 }
 
