@@ -179,6 +179,16 @@ h2 { font-size: 1.15em; margin-bottom: 12px; color: var(--blue); }
   font-weight: 700;
   overflow-wrap: anywhere;
 }
+.trade-snapshot-item.target-price .trade-snapshot-value,
+.trade-snapshot-item.stop-loss .trade-snapshot-value {
+  color: var(--green);
+}
+.trade-snapshot-item.open-dip .trade-snapshot-value {
+  color: var(--red);
+}
+.trade-snapshot-item.main-theme .trade-snapshot-value {
+  color: var(--blue);
+}
 .trade-snapshot-meta {
   color: var(--text2);
   font-size: 0.72em;
@@ -5866,7 +5876,7 @@ const INLINE_ONEIL = {
       "after_count": 2005,
       "added_count": 2
     },
-    "published_price_refreshed_at": "2026-08-17T22:00:07",
+    "published_price_refreshed_at": "2026-08-17T22:02:48",
     "published_price_refresh_source": "tushare.daily"
   }
 };
@@ -6253,7 +6263,7 @@ const INLINE_OPEN_DIP = {
   "open_dip_buy_db": {}
 };
 const INLINE_PUBLISH_GENERATED_AT = {
-  "generated_at": "2026-08-17 22:00:05"
+  "generated_at": "2026-08-17 22:02:46"
 };
 
 const STOCK_SEARCH_INDEX_URL = 'data/stock_search_index.json';
@@ -6525,7 +6535,7 @@ function renderCompactTargetPrice(stock, targetPriceJudgment, calculatorSignal) 
     '预期价',
     formatTargetRange(targetSignal.target_range),
     [currentPriceText, upsideText, expertText].filter(Boolean).join(' · '),
-    'calculator',
+    'target-price',
   );
 }
 
@@ -6535,11 +6545,11 @@ function renderCompactStopLossSignal(stopLossSignal) {
   }
   const optimal = formatPct(stopLossSignal.optimal_stop_loss_pct);
   const expected = formatPct(stopLossSignal.optimal_expected_value_pct);
-  const confidence = stopLossSignal.confidence_label || stopLossSignal.status || '';
   return renderTradeSnapshotItem(
     '止损点',
     optimal,
-    [`期望 ${expected}`, confidence ? `置信 ${esc(confidence)}` : ''].filter(Boolean).join(' · '),
+    `期望 ${expected}`,
+    'stop-loss',
   );
 }
 
@@ -6551,11 +6561,11 @@ function renderCompactOpenDipSignal(stock, openDipData) {
   const optimal = formatPct(signal.optimal_open_dip_buy_pct);
   const stat = findThresholdStat(signal, signal.optimal_open_dip_buy_pct) || {};
   const netReturn = formatPct(signal.optimal_5d_close_net_return_pct || stat.avg_5d_close_net_return_pct);
-  const confidence = signal.confidence_label || signal.status || '';
   return renderTradeSnapshotItem(
     '低吸点',
     optimal,
-    [`T+5净 ${netReturn}`, confidence ? `置信 ${esc(confidence)}` : ''].filter(Boolean).join(' · '),
+    `T+5净 ${netReturn}`,
+    'open-dip',
   );
 }
 
@@ -6572,7 +6582,7 @@ function renderTradeSnapshot(stock, openDipData, stopLossSignal, targetPriceJudg
       ${renderCompactTargetPrice(stock, targetPriceJudgment, calculatorSignal)}
       ${renderCompactStopLossSignal(stopLossSignal)}
       ${renderCompactOpenDipSignal(stock, openDipData)}
-      ${renderTradeSnapshotItem('主线', esc(stock.primary_theme || '-'), `Selection ${esc(stock.selection_score || '-')}`)}
+      ${renderTradeSnapshotItem('主线', esc(stock.primary_theme || '-'), '', 'main-theme')}
     </div>`;
 }
 
