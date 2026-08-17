@@ -1,148 +1,219 @@
 {
-  "week_start_date": "2026-07-31",
-  "week_end_date": "2026-08-13",
-  "weekly_summary_text": "本周市场震荡分化，成长与防御交替主导，创业板指在反弹日领涨但20日趋势仍为负。医药生物产业链后半周持续走强成为最强主线，CPO/光通信方向全周反复活跃但近2日有所降温，半导体设备前半周强势后半周走弱，房地产8/12单日爆发后快速退潮。",
+  "week_start_date": "2026-08-03",
+  "week_end_date": "2026-08-14",
+  "weekly_summary_text": "GLM weekly ranking did not return in time; used deterministic fallback ranking from daily themes, board strength, ETF, limit-up, momentum and news signals. reason=Manual fallback cache because glm-5.2 weekly ranking request stalled before HTTP status.",
   "industry_list": [
     {
       "rank_no": 1,
-      "industry_name": "医药生物",
-      "strength_level": "周内5只医药ETF暴涨6.8%-8.55%，8/13 top30中超25个医药板块走强",
-      "reason_text": "医药生物产业链后半周持续走强，8/7约17个医药细分板块同步大涨，8/11和8/13连续成为当日最强主线，减肥药、创新药、重组蛋白、细胞免疫治疗等多子方向轮动共振，且生物科技基金20日趋势为正，具备持续性。",
+      "industry_name": "通信设备",
+      "strength_level": "中强",
+      "reason_text": "Fallback score 19.0; ranked by repeated weekly board, limit-up and high-momentum evidence.",
       "reference_list": [
-        "8/7减肥药+6.62%、重组蛋白+6.61%、细胞免疫治疗+5.98%、创新药+4.86%等17个板块同步走强",
-        "8/7五只医药ETF暴涨6.8%-8.55%，8/13生物科技基金+3.21%（20日+10.09%）",
-        "8/13 top30中超过25个医药生物板块集体走强",
-        "减肥药appearance_count=3 avg_rank=2.0，细胞免疫治疗appearance_count=4 avg_rank=7.5"
+        "limit-up stock 亨通光电(600487.SH)",
+        "limit-up stock 剑桥科技(603083.SH)",
+        "limit-up stock 阿莱德(301419.SZ)",
+        "momentum stock 亨通光电(600487.SH)",
+        "momentum stock 中际旭创(300308.SZ)"
       ]
     },
     {
       "rank_no": 2,
-      "industry_name": "通信设备",
-      "strength_level": "CPO板块周内5次进入top30，8/12光纤+CPO+F5G六板块共振",
-      "reason_text": "CPO/光通信方向全周反复活跃，8/4 CPO+6.76%领涨，8/12光纤+3.29%、CPO+2.98%、F5G+2.71%等6个细分板块再次共振。高动量股天孚通信8/13创20日新高+7.13%，中际旭创、新易盛等龙头持续在高成交额榜单。新闻催化方面，腾讯拟Q4部署NPO近封装光学超级节点。",
+      "industry_name": "共封装光学(CPO)",
+      "strength_level": "观察",
+      "reason_text": "Fallback score 8.0; ranked by repeated weekly board, limit-up and high-momentum evidence.",
       "reference_list": [
-        "CPO appearance_count=5 avg_rank=9.4，F5G appearance_count=5 avg_rank=16.8",
-        "8/4 CPO+6.76%、光纤+5.77%、F5G+5.74%、PCB+5.66%、铜缆+5.62%八板块同步大涨",
-        "8/12光纤+3.29%、CPO+2.98%、F5G+2.71%、铜缆+2.46%、PCB+2.0%、6G+1.95%六板块共振",
-        "天孚通信8/13涨7.13%创20日新高，中际旭创、新易盛在高动量股榜单",
-        "新闻：腾讯拟Q4部署NPO近封装光学超级节点，通信设备指数强势涨超3%"
+        "board rank 1: pct_change=6.76"
       ]
     },
     {
       "rank_no": 3,
-      "industry_name": "半导体",
-      "strength_level": "8/5五只半导体材料设备ETF接近涨停，光刻机等9个细分板块同步大涨",
-      "reason_text": "半导体产业链前半周强势，8/4-8/5光刻机、先进封装、存储芯片、中芯国际概念等9个细分板块同步大涨，8/5五只半导体材料设备ETF全部接近涨停。但8/10后板块验证减弱，8/13已无明显半导体板块在前排。新闻端仍有催化，半导体设备ETF连续4日吸金，Omdia上调全球半导体增速。",
+      "industry_name": "减肥药",
+      "strength_level": "观察",
+      "reason_text": "Fallback score 8.0; ranked by repeated weekly board, limit-up and high-momentum evidence.",
       "reference_list": [
-        "8/4光刻机+6.64%、先进封装+6.04%、存储芯片+6.0%等9个细分板块同步大涨",
-        "8/5五只半导体材料设备ETF全部接近涨停（9.67%-9.88%）",
-        "8/6中芯国际概念+2.67%、国家大基金+2.65%、光刻机+2.49%仍在top30",
-        "8/12光刻机+2.44%、存储芯片+2.38%、先进封装+2.31%中等共振",
-        "新闻：半导体设备ETF连续4日吸金，Omdia上调2026全球半导体增速至94.1%"
+        "board rank 1: pct_change=6.6175"
       ]
     },
     {
       "rank_no": 4,
-      "industry_name": "电子元器件",
-      "strength_level": "PCB概念周内5次进入top30，8/7涨幅4.73%",
-      "reason_text": "PCB及元器件方向全周反复出现，8/4 PCB+5.66%、8/5 PCB+5.04%、8/7 PCB+4.73%连续走强，MLCC概念8/5涨幅7.01%排名第一。与CPO/光通信方向高度联动，属于AI算力硬件产业链的PCB/覆铜板分支。但近2日排名下滑，8/12 PCB仅排第24位。",
+      "industry_name": "半导体",
+      "strength_level": "观察",
+      "reason_text": "Fallback score 8.0; ranked by repeated weekly board, limit-up and high-momentum evidence.",
       "reference_list": [
-        "8/4 PCB+5.66% rank 11，8/5 PCB+5.04% rank 11，8/7 PCB+4.73% rank 6",
-        "8/5 MLCC概念+7.01%排名第一，appearance_count=3 avg_rank=8.33",
-        "8/12 PCB+2.0% rank 24，近3日排名明显下滑",
-        "高动量股东山精密、胜宏科技在榜单但近期下跌"
+        "momentum stock 长鑫科技(688825.SH)",
+        "momentum stock 兆易创新(603986.SH)",
+        "momentum stock 寒武纪(688256.SH)",
+        "momentum stock 中芯国际(688981.SH)"
       ]
     },
     {
       "rank_no": 5,
-      "industry_name": "房地产",
-      "strength_level": "8/12五只地产ETF大涨4-5%，20日涨幅6-14%",
-      "reason_text": "房地产方向8/12单日爆发，5只地产ETF全部大涨4-5%且20日趋势为正，租售同权、物业管理、特色小镇等细分板块同步走强。但8/13板块盘初走弱，仅持续1天，属于事件驱动而非趋势主线。",
+      "industry_name": "中芯国际概念",
+      "strength_level": "观察",
+      "reason_text": "Fallback score 7.0; ranked by repeated weekly board, limit-up and high-momentum evidence.",
       "reference_list": [
-        "8/12五只地产ETF大涨4.09%-4.97%，20日涨幅6.36%-13.69%",
-        "8/12租售同权+3.58%、物业管理+2.45%、特色小镇+2.53%、横琴新区+2.71%",
-        "8/13房地产板块盘初走弱，首开股份等跌超4%",
-        "8/12京投发展涨停，房地产行业净流入11.81亿元"
+        "board rank 2: pct_change=6.55"
+      ]
+    },
+    {
+      "rank_no": 6,
+      "industry_name": "光刻机",
+      "strength_level": "观察",
+      "reason_text": "Fallback score 7.0; ranked by repeated weekly board, limit-up and high-momentum evidence.",
+      "reference_list": [
+        "board rank 2: pct_change=6.64"
+      ]
+    },
+    {
+      "rank_no": 7,
+      "industry_name": "租售同权",
+      "strength_level": "观察",
+      "reason_text": "Fallback score 7.0; ranked by repeated weekly board, limit-up and high-momentum evidence.",
+      "reference_list": [
+        "board rank 2: pct_change=3.58"
+      ]
+    },
+    {
+      "rank_no": 8,
+      "industry_name": "重组蛋白",
+      "strength_level": "观察",
+      "reason_text": "Fallback score 7.0; ranked by repeated weekly board, limit-up and high-momentum evidence.",
+      "reference_list": [
+        "board rank 2: pct_change=6.6093"
       ]
     }
   ],
   "theme_list": [
     {
       "rank_no": 1,
-      "theme_name": "创新药",
-      "strength_level": "8/7约17个医药板块同步大涨，8/13 top30中超25个医药板块走强",
-      "reason_text": "创新药方向后半周持续走强，8/7约17个医药细分板块同步大涨且5只医药ETF暴涨6.8%-8.55%，8/11和8/13连续成为当日最强主线。减肥药、重组蛋白、细胞免疫治疗、基因测序等多子方向轮动共振，生物科技基金20日趋势+10.09%表明并非单日脉冲而是持续性行情。近3天（8/11、8/12、8/13）仍在前排，符合趋势主线条件。",
+      "theme_name": "AI算力硬件链",
+      "strength_level": "中强",
+      "reason_text": "Fallback score 15.0; ranked by daily main-theme frequency plus board, ETF and news resonance.",
       "reference_list": [
-        "8/7减肥药+6.62%、重组蛋白+6.61%、细胞免疫治疗+5.98%、创新药+4.86%等17个板块同步走强",
-        "8/7五只医药ETF暴涨6.8%-8.55%（科创板创新药ETF+8.55%、精准医疗+7.91%）",
-        "8/13 top30中超过25个医药板块走强，生物科技基金+3.21%（20日+10.09%）",
-        "8/11减肥药+1.26%、创新药+0.62%、细胞免疫治疗+0.92%在缩量环境下仍走强",
-        "减肥药appearance_count=3 avg_rank=2.0，细胞免疫治疗appearance_count=4 avg_rank=7.5"
+        "2026-08-04 daily theme rank 1: AI算力硬件链为今日最强主线，CPO、光纤、F5G、PCB、铜缆高速连接、英伟达概念、算力租赁、液冷",
+        "2026-08-05 daily theme rank 2: AI算力硬件链方向有CPO、PCB、光纤、英伟达概念等多个板块同步走强，属于同一产业链，但缺乏直接E"
       ]
     },
     {
       "rank_no": 2,
-      "theme_name": "CPO",
-      "strength_level": "周内5次进入top30，8/4涨幅6.76%领涨，8/12仍涨2.98%",
-      "reason_text": "CPO方向全周反复活跃，appearance_count=5为所有板块中最高，8/4涨幅6.76%领涨全场。8/12光纤+CPO+F5G+铜缆+PCB+6G六板块再次共振，说明产业链仍在扩散。高动量股天孚通信8/13创20日新高+7.13%，中际旭创、新易盛持续在高成交额榜单。新闻催化：腾讯拟Q4部署NPO近封装光学超级节点。但8/13板块整体走弱，需关注后续能否重新放量。",
+      "theme_name": "医药医疗",
+      "strength_level": "中强",
+      "reason_text": "Fallback score 14.0; ranked by daily main-theme frequency plus board, ETF and news resonance.",
       "reference_list": [
-        "CPO appearance_count=5 avg_rank=9.4，8/4涨幅6.76%排名第一",
-        "8/4 CPO+6.76%、光纤+5.77%、F5G+5.74%、铜缆+5.62%八板块同步大涨",
-        "8/12光纤+3.29%、CPO+2.98%、F5G+2.71%六板块再次共振",
-        "天孚通信8/13涨7.13%创20日新高，中际旭创、新易盛在高动量股榜单",
-        "新闻：腾讯拟Q4部署NPO近封装光学超级节点，通信设备指数强势涨超3%",
-        "8/4五只创业板人工智能ETF集体涨停验证AI大方向"
+        "2026-08-10 daily theme rank 3: 4个医药相关板块走强且有精准医疗ETF +4.2%验证，基金与板块方向一致，但板块数量和涨幅不及农业",
+        "2026-08-11 daily theme rank 1: 在市场缩量调整环境下，医药医疗板块多个细分方向如减肥药、创新药、细胞免疫治疗等同步走强，属于典型的防"
       ]
     },
     {
       "rank_no": 3,
-      "theme_name": "半导体设备",
-      "strength_level": "8/5五只ETF接近涨停9.67%-9.88%，光刻机周内4次进入top30",
-      "reason_text": "半导体设备方向前半周强势，8/4-8/5光刻机、先进封装、存储芯片等9个细分板块同步大涨，8/5五只半导体材料设备ETF全部接近涨停。8/6-8/7仍有多个细分板块在top30。但8/10后板块验证明显减弱，8/12仅中等共振，8/13已无半导体板块在前排。新闻端仍有催化（ETF连续吸金、Omdia上调增速），但板块端已进入冷却阶段。",
+      "theme_name": "半导体材料设备",
+      "strength_level": "中强",
+      "reason_text": "Fallback score 12.0; ranked by daily main-theme frequency plus board, ETF and news resonance.",
       "reference_list": [
-        "8/4光刻机+6.64%、先进封装+6.04%、存储芯片+6.0%等9个细分板块同步大涨",
-        "8/5五只半导体材料设备ETF全部接近涨停（9.67%-9.88%）",
-        "8/6光刻机+2.49%、先进封装+2.42%、存储芯片+2.31%仍在top30",
-        "8/12光刻机+2.44%、存储芯片+2.38%、先进封装+2.31%中等共振",
-        "8/13无半导体板块进入top30前排",
-        "新闻：半导体设备ETF连续4日吸金，Omdia上调2026全球半导体增速至94.1%"
+        "2026-08-05 daily theme rank 1: 今日半导体材料设备方向呈现ETF与板块的强共振：5只ETF全部接近涨停，同时光刻机、光刻胶、先进封装",
+        "2026-08-10 daily theme rank 5: 两只半导体材料设备ETF同步涨超4%，但当日top30强势板块中无任何半导体相关板块出现，ETF强势"
       ]
     },
     {
       "rank_no": 4,
-      "theme_name": "PCB",
-      "strength_level": "周内5次进入top30，8/7涨幅4.73%排名第六",
-      "reason_text": "PCB方向全周反复出现，8/4-8/7连续4天在top15，8/7涨幅4.73%排名第六。与CPO/光通信方向高度联动，属于AI算力硬件产业链的核心分支。8/12仍在top30（rank 24）但排名下滑，8/13掉出前排。MLCC概念8/5涨幅7.01%排名第一，显示元器件方向整体有资金关注。近3天走弱但全周频次高，仍可作为扩散阶段关注。",
+      "theme_name": "减肥药",
+      "strength_level": "中强",
+      "reason_text": "Fallback score 11.5; ranked by daily main-theme frequency plus board, ETF and news resonance.",
       "reference_list": [
-        "8/4 PCB+5.66% rank 11，8/5 PCB+5.04% rank 11，8/7 PCB+4.73% rank 6",
-        "8/5 MLCC概念+7.01%排名第一，appearance_count=3 avg_rank=8.33",
-        "8/12 PCB+2.0% rank 24，近3天排名下滑",
-        "8/4铜缆高速连接+5.62%，appearance_count=3 avg_rank=12.33",
-        "高动量股东山精密、胜宏科技在榜单但近期走弱"
+        "2026-08-07 board signal pct_change=6.6175",
+        "2026-08-11 board signal pct_change=1.26",
+        "2026-08-13 board signal pct_change=1.92",
+        "weekly board rank 1: appearance=3"
       ]
     },
     {
       "rank_no": 5,
-      "theme_name": "房地产",
-      "strength_level": "8/12五只地产ETF大涨4-5%，20日涨幅6-14%",
-      "reason_text": "房地产方向8/12单日爆发，5只地产ETF全部大涨4-5%且20日趋势为正，租售同权、物业管理、特色小镇等细分板块同步走强。但8/13板块盘初走弱，首开股份等跌超4%，仅持续1天。属于事件驱动题材，不适合作为中期主线。",
+      "theme_name": "共封装光学(CPO)",
+      "strength_level": "中强",
+      "reason_text": "Fallback score 10.0; ranked by daily main-theme frequency plus board, ETF and news resonance.",
       "reference_list": [
-        "8/12五只地产ETF大涨4.09%-4.97%，20日涨幅6.36%-13.69%",
-        "8/12租售同权+3.58%、物业管理+2.45%、特色小镇+2.53%、横琴新区+2.71%",
-        "8/13房地产板块盘初走弱，首开股份等跌超4%",
-        "8/12京投发展涨停，房地产行业净流入11.81亿元"
+        "2026-08-04 board signal pct_change=6.76",
+        "2026-08-12 board signal pct_change=2.98",
+        "weekly board rank 1: appearance=6"
       ]
     },
     {
       "rank_no": 6,
-      "theme_name": "电力",
-      "strength_level": "8/3十二个板块共振为当日最强主线，8/13大唐发电涨停",
-      "reason_text": "电力方向8/3作为当日最强主线出现，12个板块覆盖发电、电网、储能全产业链共振。8/13大唐发电涨停，电力板块午后异动。新闻催化较强：迎峰度夏用电负荷持续走高、十五五电网巨额投资规划落地、全球AI算力遭遇电力供给瓶颈。但中间多日未持续，仅2天有表现，属于事件驱动观察方向。",
+      "theme_name": "国家大基金持股",
+      "strength_level": "观察",
+      "reason_text": "Fallback score 9.5; ranked by daily main-theme frequency plus board, ETF and news resonance.",
       "reference_list": [
-        "8/3光热发电+3.21%、柔性直流输电+2.99%、可控核聚变+2.88%、核电+2.68%等12个板块共振",
-        "8/13大唐发电涨停，封单额3.77亿元",
-        "新闻：电力板块走强，迎峰度夏用电负荷持续走高、十五五电网巨额投资规划落地",
-        "新闻：全球AI算力遭遇电力供给瓶颈，多重中长期逻辑形成共振"
+        "2026-08-05 board signal pct_change=6.44",
+        "2026-08-06 board signal pct_change=2.65",
+        "2026-08-14 board signal pct_change=5.6",
+        "weekly board rank 3: appearance=5"
+      ]
+    },
+    {
+      "rank_no": 7,
+      "theme_name": "细胞免疫治疗",
+      "strength_level": "观察",
+      "reason_text": "Fallback score 9.5; ranked by daily main-theme frequency plus board, ETF and news resonance.",
+      "reference_list": [
+        "2026-08-07 board signal pct_change=5.9828",
+        "2026-08-11 board signal pct_change=0.92",
+        "2026-08-13 board signal pct_change=2.06",
+        "weekly board rank 3: appearance=4"
+      ]
+    },
+    {
+      "rank_no": 8,
+      "theme_name": "中芯国际概念",
+      "strength_level": "观察",
+      "reason_text": "Fallback score 9.0; ranked by daily main-theme frequency plus board, ETF and news resonance.",
+      "reference_list": [
+        "2026-08-05 board signal pct_change=6.55",
+        "2026-08-06 board signal pct_change=2.67",
+        "weekly board rank 2: appearance=5"
+      ]
+    },
+    {
+      "rank_no": 9,
+      "theme_name": "光刻机",
+      "strength_level": "观察",
+      "reason_text": "Fallback score 9.0; ranked by daily main-theme frequency plus board, ETF and news resonance.",
+      "reference_list": [
+        "2026-08-04 board signal pct_change=6.64",
+        "2026-08-05 board signal pct_change=6.09",
+        "weekly board rank 2: appearance=6"
+      ]
+    },
+    {
+      "rank_no": 10,
+      "theme_name": "重组蛋白",
+      "strength_level": "观察",
+      "reason_text": "Fallback score 9.0; ranked by daily main-theme frequency plus board, ETF and news resonance.",
+      "reference_list": [
+        "2026-08-07 board signal pct_change=6.6093",
+        "2026-08-13 board signal pct_change=2.5",
+        "weekly board rank 2: appearance=3"
+      ]
+    },
+    {
+      "rank_no": 11,
+      "theme_name": "存储芯片",
+      "strength_level": "观察",
+      "reason_text": "Fallback score 8.5; ranked by daily main-theme frequency plus board, ETF and news resonance.",
+      "reference_list": [
+        "2026-08-04 board signal pct_change=6.0",
+        "2026-08-05 board signal pct_change=6.17",
+        "2026-08-14 board signal pct_change=4.67",
+        "weekly board rank 4: appearance=6"
+      ]
+    },
+    {
+      "rank_no": 12,
+      "theme_name": "消费电子",
+      "strength_level": "观察",
+      "reason_text": "Fallback score 8.4; ranked by daily main-theme frequency plus board, ETF and news resonance.",
+      "reference_list": [
+        "2026-08-05 daily theme rank 3: 消费电子方向有苹果概念、富士康概念、AI PC、AI手机、OLED、MiniLED、柔性屏等7个以上",
+        "news articles=3"
       ]
     }
   ]
