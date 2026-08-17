@@ -5878,7 +5878,7 @@ const INLINE_ONEIL = {
       "after_count": 2005,
       "added_count": 2
     },
-    "published_price_refreshed_at": "2026-08-17T22:05:21",
+    "published_price_refreshed_at": "2026-08-17T22:11:45",
     "published_price_refresh_source": "tushare.daily"
   }
 };
@@ -6265,7 +6265,7 @@ const INLINE_OPEN_DIP = {
   "open_dip_buy_db": {}
 };
 const INLINE_PUBLISH_GENERATED_AT = {
-  "generated_at": "2026-08-17 22:05:20"
+  "generated_at": "2026-08-17 22:11:44"
 };
 
 const STOCK_SEARCH_INDEX_URL = 'data/stock_search_index.json';
@@ -6578,13 +6578,29 @@ function renderCompactCANSLIM(verdict) {
     ${renderCANSLIM(verdict)}`;
 }
 
+function buildCompactThemeText(stock) {
+  const themeList = [];
+  const seenThemeSet = new Set();
+  const rawThemeList = [
+    ...((stock.matched_theme_list || [])),
+    stock.primary_theme,
+  ];
+  rawThemeList.forEach(theme => {
+    const themeText = String(theme || '').trim();
+    if (!themeText || seenThemeSet.has(themeText)) return;
+    themeList.push(themeText);
+    seenThemeSet.add(themeText);
+  });
+  return themeList.length ? themeList.join(' / ') : '-';
+}
+
 function renderTradeSnapshot(stock, openDipData, stopLossSignal, targetPriceJudgment, calculatorSignal) {
   return `
     <div class="trade-snapshot-grid">
       ${renderCompactTargetPrice(stock, targetPriceJudgment, calculatorSignal)}
       ${renderCompactStopLossSignal(stopLossSignal)}
       ${renderCompactOpenDipSignal(stock, openDipData)}
-      ${renderTradeSnapshotItem('主线', esc(stock.primary_theme || '-'), '', 'main-theme')}
+      ${renderTradeSnapshotItem('主线', esc(buildCompactThemeText(stock)), '', 'main-theme')}
     </div>`;
 }
 
