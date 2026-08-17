@@ -155,6 +155,55 @@ h2 { font-size: 1.15em; margin-bottom: 12px; color: var(--blue); }
 }
 .target-price-box.calculator .target-price-title { color: var(--green); }
 .target-price-meta { color: var(--text2); margin-top: 4px; }
+.trade-snapshot-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 10px;
+}
+.trade-snapshot-item {
+  border: 1px solid rgba(48,54,61,0.85);
+  border-radius: 6px;
+  padding: 9px 10px;
+  background: rgba(13,17,23,0.42);
+  min-width: 0;
+}
+.trade-snapshot-label {
+  color: var(--text2);
+  font-size: 0.72em;
+  margin-bottom: 3px;
+}
+.trade-snapshot-value {
+  color: var(--text);
+  font-size: 0.94em;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+.trade-snapshot-meta {
+  color: var(--text2);
+  font-size: 0.72em;
+  margin-top: 3px;
+  overflow-wrap: anywhere;
+}
+.stock-detail-panel {
+  margin-top: 10px;
+  border-top: 1px solid rgba(48,54,61,0.65);
+  padding-top: 8px;
+}
+.stock-detail-panel summary {
+  color: var(--blue);
+  cursor: pointer;
+  font-size: 0.82em;
+  font-weight: 700;
+  outline: none;
+}
+.stock-detail-panel summary:hover { color: var(--text); }
+.stock-detail-panel-body { margin-top: 8px; }
+.compact-canslim-title {
+  color: var(--text2);
+  font-size: 0.74em;
+  margin-top: 10px;
+}
 .ai-pref-layout {
   display: grid;
   grid-template-columns: minmax(0, 1.6fr) minmax(280px, 0.9fr);
@@ -194,6 +243,7 @@ h2 { font-size: 1.15em; margin-bottom: 12px; color: var(--blue); }
 }
 @media (max-width: 700px) {
   .target-price-grid { grid-template-columns: 1fr; }
+  .trade-snapshot-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .ai-pref-layout { grid-template-columns: 1fr; }
   .ai-pref-sidebar { position: static; }
 }
@@ -393,6 +443,7 @@ h2 { font-size: 1.15em; margin-bottom: 12px; color: var(--blue); }
 .collapse-icon { font-size: 0.7em; color: var(--text2); margin-left: 4px; }
 @media (max-width: 600px) {
   .detail-grid { grid-template-columns: 1fr; }
+  .trade-snapshot-grid { grid-template-columns: 1fr; }
   .stock-library-grid { grid-template-columns: 1fr; }
   .board-stock-grid { grid-template-columns: 1fr; }
   body { padding: 12px; }
@@ -5815,7 +5866,7 @@ const INLINE_ONEIL = {
       "after_count": 2005,
       "added_count": 2
     },
-    "published_price_refreshed_at": "2026-08-17T21:47:33",
+    "published_price_refreshed_at": "2026-08-17T21:55:07",
     "published_price_refresh_source": "tushare.daily"
   }
 };
@@ -6202,7 +6253,7 @@ const INLINE_OPEN_DIP = {
   "open_dip_buy_db": {}
 };
 const INLINE_PUBLISH_GENERATED_AT = {
-  "generated_at": "2026-08-17 21:47:31"
+  "generated_at": "2026-08-17 21:55:05"
 };
 
 const STOCK_SEARCH_INDEX_URL = 'data/stock_search_index.json';
@@ -6422,6 +6473,107 @@ function formatTargetRange(targetRange) {
   }
   if (Number.isFinite(center)) return `${center} ${esc(currency)}`;
   return '证据不足';
+}
+
+function formatPriceValue(value) {
+  if (value === null || value === undefined || value === '') return '-';
+  const numberValue = Number(value);
+  if (!Number.isFinite(numberValue)) return esc(value);
+  return numberValue.toFixed(2);
+}
+
+function pickCalculatorTargetSignal(calculatorSignal, judgment) {
+  const signal = calculatorSignal || {};
+  const judgmentView = judgment && judgment.oneil_canslim_view ? judgment.oneil_canslim_view : {};
+  const targetRange = signal.predicted_target_price_range
+    || judgmentView.target_price_range
+    || {};
+  const upsideRange = signal.predicted_upside_pct_range || {};
+  return {
+    target_range: targetRange,
+    upside_range: upsideRange,
+    current_price: signal.current_price,
+    confidence_label: signal.confidence_label || judgmentView.level || 'insufficient_data',
+  };
+}
+
+function renderTradeSnapshotItem(label, value, meta, className = '') {
+  return `
+    <div class="trade-snapshot-item ${className}">
+      <div class="trade-snapshot-label">${esc(label)}</div>
+      <div class="trade-snapshot-value">${value}</div>
+      ${meta ? `<div class="trade-snapshot-meta">${meta}</div>` : ''}
+    </div>`;
+}
+
+function renderCompactTargetPrice(stock, targetPriceJudgment, calculatorSignal) {
+  const targetSignal = pickCalculatorTargetSignal(calculatorSignal, targetPriceJudgment);
+  const expert = targetPriceJudgment && targetPriceJudgment.institutional_expert_view
+    ? targetPriceJudgment.institutional_expert_view
+    : {};
+  const upsideRange = targetSignal.upside_range || {};
+  const upsideText = upsideRange.low !== undefined && upsideRange.high !== undefined
+    ? `参考涨幅 ${formatPct(upsideRange.low)}-${formatPct(upsideRange.high)}`
+    : '';
+  const currentPriceText = targetSignal.current_price !== null && targetSignal.current_price !== undefined
+    ? `当前 ${formatPriceValue(targetSignal.current_price)}`
+    : '';
+  const expertText = expert.target_price_range
+    ? `机构 ${formatTargetRange(expert.target_price_range)}`
+    : '';
+  return renderTradeSnapshotItem(
+    '预期价',
+    formatTargetRange(targetSignal.target_range),
+    [currentPriceText, upsideText, expertText].filter(Boolean).join(' · '),
+    'calculator',
+  );
+}
+
+function renderCompactStopLossSignal(stopLossSignal) {
+  if (!stopLossSignal) {
+    return renderTradeSnapshotItem('止损点', '-', '缺少统计止损样本');
+  }
+  const optimal = formatPct(stopLossSignal.optimal_stop_loss_pct);
+  const expected = formatPct(stopLossSignal.optimal_expected_value_pct);
+  const confidence = stopLossSignal.confidence_label || stopLossSignal.status || '';
+  return renderTradeSnapshotItem(
+    '止损点',
+    optimal,
+    [`期望 ${expected}`, confidence ? `置信 ${esc(confidence)}` : ''].filter(Boolean).join(' · '),
+  );
+}
+
+function renderCompactOpenDipSignal(stock, openDipData) {
+  const signal = findOpenDipSignal(stock.stock_code, openDipData);
+  if (!signal || signal.optimal_open_dip_buy_pct === undefined || signal.optimal_open_dip_buy_pct === null) {
+    return renderTradeSnapshotItem('低吸点', '-', '缺少统计低吸样本');
+  }
+  const optimal = formatPct(signal.optimal_open_dip_buy_pct);
+  const stat = findThresholdStat(signal, signal.optimal_open_dip_buy_pct) || {};
+  const netReturn = formatPct(signal.optimal_5d_close_net_return_pct || stat.avg_5d_close_net_return_pct);
+  const confidence = signal.confidence_label || signal.status || '';
+  return renderTradeSnapshotItem(
+    '低吸点',
+    optimal,
+    [`T+5净 ${netReturn}`, confidence ? `置信 ${esc(confidence)}` : ''].filter(Boolean).join(' · '),
+  );
+}
+
+function renderCompactCANSLIM(verdict) {
+  if (!verdict) return '';
+  return `
+    <div class="compact-canslim-title">CANSLIM 维度 Level</div>
+    ${renderCANSLIM(verdict)}`;
+}
+
+function renderTradeSnapshot(stock, openDipData, stopLossSignal, targetPriceJudgment, calculatorSignal) {
+  return `
+    <div class="trade-snapshot-grid">
+      ${renderCompactTargetPrice(stock, targetPriceJudgment, calculatorSignal)}
+      ${renderCompactStopLossSignal(stopLossSignal)}
+      ${renderCompactOpenDipSignal(stock, openDipData)}
+      ${renderTradeSnapshotItem('主线', esc(stock.primary_theme || '-'), `Selection ${esc(stock.selection_score || '-')}`)}
+    </div>`;
 }
 
 function renderCalculatorTargetPrice(calculatorSignal, judgment) {
@@ -6738,23 +6890,24 @@ function renderStock(stock, openDipData, stopLossData, takeProfitData) {
     <div style="margin-bottom:6px">${themes.map(t => `<span class="theme-tag">${esc(t)}</span>`).join('')}
       <span class="theme-tag" style="background:rgba(240,136,62,0.12);color:var(--orange)">${esc(stock.primary_theme)}</span>
     </div>
-    ${renderCANSLIM(verdict)}
-    ${renderTargetPriceJudgment(targetPriceJudgment, calculatorSignal)}
-    ${renderOpenDipSignal(stock, openDipData)}
-    ${renderIntradayStopLoss(stopLossSignal)}
-    ${renderTakeProfitSignal(takeProfitSignal)}
-    <div class="collapsible" onclick="toggleCollapse(this)">
-      <strong style="font-size:0.85em">入选理由</strong><span class="collapse-icon">▶</span>
-    </div>
-    <div class="collapsible-content">
+    ${renderTradeSnapshot(stock, openDipData, stopLossSignal, targetPriceJudgment, calculatorSignal)}
+    ${renderCompactCANSLIM(verdict)}
+    <details class="stock-detail-panel">
+      <summary>展开详细分析</summary>
+      <div class="stock-detail-panel-body">
+        ${renderTargetPriceJudgment(targetPriceJudgment, calculatorSignal)}
+        ${renderOpenDipSignal(stock, openDipData)}
+        ${renderIntradayStopLoss(stopLossSignal)}
+        ${renderTakeProfitSignal(takeProfitSignal)}
+        <div class="operation-box">
+          <span class="label">操作:</span> ${esc(op.action)}<br>
+          <span class="label">失效条件:</span> ${esc(op.invalid_condition)}
+        </div>
       <div class="why-list">${why.map(w => `<div class="why-item">${esc(w)}</div>`).join('')}</div>
       ${risk.main_risk_text ? `<div class="risk-text">⚠ ${esc(risk.main_risk_text)}</div>` : ''}
-      <div class="operation-box">
-        <span class="label">操作:</span> ${esc(op.action)}<br>
-        <span class="label">失效条件:</span> ${esc(op.invalid_condition)}
-      </div>
       ${gaps.length ? `<div style="margin-top:6px;font-size:0.72em;color:var(--yellow)">证据缺口: ${gaps.map(g => esc(g)).join('；')}</div>` : ''}
-    </div>
+      </div>
+    </details>
   </div>`;
 }
 
