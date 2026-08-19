@@ -5967,7 +5967,7 @@ const INLINE_ONEIL = {
       "after_count": 2039,
       "added_count": 2
     },
-    "published_price_refreshed_at": "2026-08-20T00:01:29",
+    "published_price_refreshed_at": "2026-08-20T00:03:01",
     "published_price_refresh_source": "tushare.daily"
   }
 };
@@ -6367,7 +6367,7 @@ const INLINE_OPEN_DIP = {
   "open_dip_buy_db": {}
 };
 const INLINE_PUBLISH_GENERATED_AT = {
-  "generated_at": "2026-08-20 00:01:27"
+  "generated_at": "2026-08-20 00:03:00"
 };
 
 const STOCK_SEARCH_INDEX_URL = 'data/stock_search_index.json';
@@ -7238,7 +7238,6 @@ function renderMarketDefense(defenseData, root) {
   const signal = defenseData && defenseData.market_defense_signal
     ? defenseData.market_defense_signal
     : {};
-  const affectedThemeText = (signal.affected_theme_list || []).join(' / ');
   return `
     <div class="section">
       <div class="defense-panel">
@@ -7256,10 +7255,6 @@ function renderMarketDefense(defenseData, root) {
             <div class="defense-box-title">触发规则</div>
             ${signal.calculation_method_text ? `<div class="defense-rule-text" style="margin-bottom:8px">${esc(signal.calculation_method_text)}</div>` : ''}
             ${renderDefenseRuleList(signal.trigger_rule_list || [])}
-          </div>
-          <div class="defense-box">
-            <div class="defense-box-title">受冲击方向</div>
-            <div class="defense-summary" style="font-size:0.82em;margin-bottom:0">${esc(affectedThemeText || '-')}</div>
           </div>
           <div class="defense-box">
             <div class="defense-box-title">当日证据</div>
