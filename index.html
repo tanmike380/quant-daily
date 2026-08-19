@@ -5963,7 +5963,7 @@ const INLINE_ONEIL = {
       "after_count": 2039,
       "added_count": 2
     },
-    "published_price_refreshed_at": "2026-08-19T13:22:53",
+    "published_price_refreshed_at": "2026-08-19T13:24:42",
     "published_price_refresh_source": "tushare.daily"
   }
 };
@@ -6363,7 +6363,7 @@ const INLINE_OPEN_DIP = {
   "open_dip_buy_db": {}
 };
 const INLINE_PUBLISH_GENERATED_AT = {
-  "generated_at": "2026-08-19 13:22:51"
+  "generated_at": "2026-08-19 13:24:41"
 };
 
 const STOCK_SEARCH_INDEX_URL = 'data/stock_search_index.json';
@@ -7272,7 +7272,7 @@ function renderMarketDefense(defenseData, root) {
   `;
 }
 
-async const INLINE_MARKET_DEFENSE = {
+const INLINE_MARKET_DEFENSE = {
   "market_defense_signal": {
     "is_active": true,
     "signal_date": "2026-08-19",
@@ -7341,7 +7341,7 @@ async const INLINE_MARKET_DEFENSE = {
   }
 };
 
-function render() {
+async function render() {
   const data = INLINE_ONEIL;
   const defenseData = INLINE_MARKET_DEFENSE || {};
   const stockSelectionData = null;
