@@ -4,9 +4,49 @@
     "signal_date": "2026-08-19",
     "defense_level": "empty_position_defense",
     "headline_text": "全球科技成长资产共振下跌，系统进入空仓防守模式",
-    "summary_text": "8月19日亚太市场出现全球风险资产共振下跌：韩国股市触发程序化卖盘暂停机制，隔夜美股半导体大跌，美债收益率上行压制高估值科技股，A股CPO、半导体、AI硬件等近期主线快速回撤。当前不适合继续按进攻模型推荐个股，先空仓/轻仓防守，等待恐慌释放和市场重新站稳。",
+    "summary_text": "8月19日的防守信号不是因为单一指数下跌，而是全球科技成长资产、亚太股市、美债利率压力与A股高beta主线同一天共振。系统保留历史胜率和股票库，但暂停展示当日进攻型TOP8推荐。",
     "suggested_action_text": "暂停新开仓，已有高beta科技仓位优先降风险；等全球股债波动缓和、A股主线止跌并重新出现放量修复后，再恢复进攻型TOP8推荐。",
     "cool_down_text": "建议至少观察1-3个交易日：如果指数继续放量下跌或海外科技股延续杀估值，继续防守；如果CPO/半导体/AI硬件出现缩量止跌并有强势股率先修复，再恢复观察。",
+    "trigger_score": 9,
+    "trigger_threshold": 7,
+    "calculation_method_text": "防守分数满分10分，达到7分进入防守模式；达到9分进入空仓防守。单一市场下跌不会直接触发，必须出现跨市场共振或A股主线自身破位。",
+    "trigger_rule_list": [
+      {
+        "rule_name": "海外科技股急跌",
+        "score": 3,
+        "threshold_text": "纳指或费城半导体指数单日跌幅达到约3%，或AI/半导体权重股集体大跌。",
+        "observed_text": "隔夜美股AI和半导体链条大跌，费城半导体指数跌幅约5%。",
+        "is_triggered": true
+      },
+      {
+        "rule_name": "亚太市场风险扩散",
+        "score": 2,
+        "threshold_text": "韩国、日本、香港等亚太主要市场出现2%以上普跌，或韩国程序化卖盘暂停/类似熔断事件。",
+        "observed_text": "韩国股市盘中大跌并触发程序化卖盘暂停机制，三星电子、SK海力士重挫。",
+        "is_triggered": true
+      },
+      {
+        "rule_name": "利率/美债压力",
+        "score": 2,
+        "threshold_text": "10年或30年美债收益率快速上行，并对高估值成长资产形成明显压制。",
+        "observed_text": "美债长端收益率处在高位，全球高估值科技成长资产承压。",
+        "is_triggered": true
+      },
+      {
+        "rule_name": "A股主线高beta杀跌",
+        "score": 2,
+        "threshold_text": "系统近期主线，如CPO、半导体、光通信、先进封装等，当日板块跌幅达到约4%-5%。",
+        "observed_text": "A股CPO概念盘中跌幅达到5%，半导体、PCB、算力硬件等高位主线同步跳水。",
+        "is_triggered": true
+      },
+      {
+        "rule_name": "系统候选股集中受损",
+        "score": 1,
+        "threshold_text": "最新TOP8候选集中暴露在同一批高beta主线，且当日多数低开低走或触发统计止损。",
+        "observed_text": "最新候选集中在CPO、半导体、光通信、先进封装方向，防守信号先于个股推荐展示。",
+        "is_triggered": false
+      }
+    ],
     "trigger_list": [
       "韩国KOSPI盘中大跌并触发程序化卖盘暂停机制，三星电子、SK海力士等权重科技股重挫。",
       "隔夜美股半导体和AI硬件股大跌，费城半导体指数大跌约5%，科技成长估值承压。",
@@ -19,38 +59,6 @@
       "半导体",
       "先进封装",
       "AI算力硬件"
-    ],
-    "affected_stock_list": [
-      {
-        "stock_code": "601138",
-        "stock_name": "工业富联",
-        "reason_text": "最新TOP8候选，CPO/AI硬件高beta方向，全球半导体与AI硬件杀估值时优先进入防守观察。"
-      },
-      {
-        "stock_code": "002156",
-        "stock_name": "通富微电",
-        "reason_text": "最新TOP8候选，先进封装/半导体方向，海外芯片链共振下跌时不适合继续追攻。"
-      },
-      {
-        "stock_code": "600584",
-        "stock_name": "长电科技",
-        "reason_text": "最新TOP8候选，先进封装主线，受半导体风险偏好收缩影响较大。"
-      },
-      {
-        "stock_code": "601869",
-        "stock_name": "长飞光纤",
-        "reason_text": "最新TOP8候选，CPO/光通信方向，板块急跌时优先等待止跌信号。"
-      },
-      {
-        "stock_code": "000938",
-        "stock_name": "紫光股份",
-        "reason_text": "最新TOP8候选，CPO+半导体方向，进攻模型暂时让位于风险控制。"
-      },
-      {
-        "stock_code": "000988",
-        "stock_name": "华工科技",
-        "reason_text": "最新TOP8候选，光通信/半导体高弹性方向，全球科技股共振杀跌时暂停推荐。"
-      }
     ],
     "resume_condition_list": [
       "韩国、日本、美国科技股停止连续急跌，半导体指数不再放量破位。",
