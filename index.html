@@ -282,6 +282,84 @@ h2 { font-size: 1.15em; margin-bottom: 12px; color: var(--blue); }
 .takeprofit-box .label { color: var(--blue); font-weight: 600; }
 .freshness-ok { color: var(--green); }
 .freshness-warn { color: var(--yellow); }
+.defense-panel {
+  border: 1px solid rgba(248,81,73,0.55);
+  border-left: 4px solid var(--red);
+  border-radius: 8px;
+  background: rgba(248,81,73,0.08);
+  padding: 16px;
+  margin-bottom: 18px;
+}
+.defense-level {
+  display: inline-block;
+  color: var(--red);
+  background: rgba(248,81,73,0.16);
+  border-radius: 999px;
+  padding: 2px 9px;
+  font-size: 0.72em;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.defense-headline {
+  color: var(--text);
+  font-size: 1.08em;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+.defense-summary {
+  color: var(--text);
+  font-size: 0.86em;
+  margin-bottom: 10px;
+}
+.defense-action {
+  color: var(--yellow);
+  font-size: 0.86em;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.defense-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+.defense-box {
+  border: 1px solid rgba(48,54,61,0.85);
+  border-radius: 6px;
+  background: rgba(13,17,23,0.42);
+  padding: 10px;
+}
+.defense-box-title {
+  color: var(--blue);
+  font-size: 0.82em;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+.defense-list {
+  color: var(--text2);
+  font-size: 0.78em;
+  padding-left: 16px;
+}
+.defense-list li { margin: 4px 0; }
+.defense-stock {
+  border-top: 1px solid rgba(48,54,61,0.55);
+  padding-top: 7px;
+  margin-top: 7px;
+}
+.defense-stock:first-child {
+  border-top: none;
+  padding-top: 0;
+  margin-top: 0;
+}
+.defense-stock-name {
+  color: var(--text);
+  font-weight: 700;
+}
+.defense-stock-reason {
+  color: var(--text2);
+  font-size: 0.92em;
+  margin-top: 2px;
+}
 .rejected-table {
   width: 100%;
   border-collapse: collapse;
@@ -453,6 +531,7 @@ h2 { font-size: 1.15em; margin-bottom: 12px; color: var(--blue); }
 @media (max-width: 600px) {
   .detail-grid { grid-template-columns: 1fr; }
   .trade-snapshot-grid { grid-template-columns: 1fr; }
+  .defense-grid { grid-template-columns: 1fr; }
   .stock-library-grid { grid-template-columns: 1fr; }
   .board-stock-grid { grid-template-columns: 1fr; }
   body { padding: 12px; }
@@ -5884,7 +5963,7 @@ const INLINE_ONEIL = {
       "after_count": 2039,
       "added_count": 2
     },
-    "published_price_refreshed_at": "2026-08-19T00:10:30",
+    "published_price_refreshed_at": "2026-08-19T13:22:53",
     "published_price_refresh_source": "tushare.daily"
   }
 };
@@ -6284,7 +6363,7 @@ const INLINE_OPEN_DIP = {
   "open_dip_buy_db": {}
 };
 const INLINE_PUBLISH_GENERATED_AT = {
-  "generated_at": "2026-08-19 00:10:28"
+  "generated_at": "2026-08-19 13:22:51"
 };
 
 const STOCK_SEARCH_INDEX_URL = 'data/stock_search_index.json';
@@ -7124,8 +7203,147 @@ function toggleCollapse(el) {
   }
 }
 
-async function render() {
+function isMarketDefenseActive(defenseData) {
+  const signal = defenseData && defenseData.market_defense_signal
+    ? defenseData.market_defense_signal
+    : {};
+  return signal.is_active === true;
+}
+
+function renderDefenseList(itemList) {
+  if (!itemList || !itemList.length) return '';
+  return `<ul class="defense-list">${itemList.map(item => `<li>${esc(item)}</li>`).join('')}</ul>`;
+}
+
+function renderDefenseStockList(stockList) {
+  if (!stockList || !stockList.length) return '';
+  return stockList.map(stock => `
+    <div class="defense-stock">
+      <div class="defense-stock-name">${esc(stock.stock_name || '-')} <span class="stock-code">${esc(stock.stock_code || '')}</span></div>
+      ${stock.reason_text ? `<div class="defense-stock-reason">${esc(stock.reason_text)}</div>` : ''}
+    </div>
+  `).join('');
+}
+
+function renderMarketDefense(defenseData, root) {
+  const signal = defenseData && defenseData.market_defense_signal
+    ? defenseData.market_defense_signal
+    : {};
+  const affectedThemeText = (signal.affected_theme_list || []).join(' / ');
+  return `
+    <div class="section">
+      <div class="defense-panel">
+        <div class="defense-level">${esc(signal.defense_level || 'defense_mode')}</div>
+        <div class="defense-headline">${esc(signal.headline_text || '市场进入防守模式')}</div>
+        <div class="defense-summary">${esc(signal.summary_text || '')}</div>
+        <div class="defense-action">${esc(signal.suggested_action_text || '暂停推荐，等待市场重新企稳。')}</div>
+        ${signal.cool_down_text ? `<div class="subtitle" style="margin-bottom:0">${esc(signal.cool_down_text)}</div>` : ''}
+        <div class="defense-grid">
+          <div class="defense-box">
+            <div class="defense-box-title">触发信号</div>
+            ${renderDefenseList(signal.trigger_list || [])}
+          </div>
+          <div class="defense-box">
+            <div class="defense-box-title">受冲击方向</div>
+            <div class="defense-summary" style="font-size:0.82em;margin-bottom:0">${esc(affectedThemeText || '-')}</div>
+          </div>
+          <div class="defense-box">
+            <div class="defense-box-title">重点回避股票</div>
+            ${renderDefenseStockList(signal.affected_stock_list || [])}
+          </div>
+          <div class="defense-box">
+            <div class="defense-box-title">恢复进攻条件</div>
+            ${renderDefenseList(signal.resume_condition_list || [])}
+          </div>
+        </div>
+        <details class="stock-detail-panel">
+          <summary>查看信息来源和系统状态</summary>
+          <div class="stock-detail-panel-body">
+            ${renderDefenseList(signal.source_note_list || [])}
+            <div class="target-price-meta">
+              防守信号日期: ${esc(signal.signal_date || '-')}
+              &nbsp;|&nbsp; 最新推荐数据日期: ${esc(root.source_result_date || root.published_source_date || '-')}
+              &nbsp;|&nbsp; 防守模式下隐藏TOP8推荐。
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+  `;
+}
+
+async const INLINE_MARKET_DEFENSE = {
+  "market_defense_signal": {
+    "is_active": true,
+    "signal_date": "2026-08-19",
+    "defense_level": "empty_position_defense",
+    "headline_text": "全球科技成长资产共振下跌，系统进入空仓防守模式",
+    "summary_text": "8月19日亚太市场出现全球风险资产共振下跌：韩国股市触发程序化卖盘暂停机制，隔夜美股半导体大跌，美债收益率上行压制高估值科技股，A股CPO、半导体、AI硬件等近期主线快速回撤。当前不适合继续按进攻模型推荐个股，先空仓/轻仓防守，等待恐慌释放和市场重新站稳。",
+    "suggested_action_text": "暂停新开仓，已有高beta科技仓位优先降风险；等全球股债波动缓和、A股主线止跌并重新出现放量修复后，再恢复进攻型TOP8推荐。",
+    "cool_down_text": "建议至少观察1-3个交易日：如果指数继续放量下跌或海外科技股延续杀估值，继续防守；如果CPO/半导体/AI硬件出现缩量止跌并有强势股率先修复，再恢复观察。",
+    "trigger_list": [
+      "韩国KOSPI盘中大跌并触发程序化卖盘暂停机制，三星电子、SK海力士等权重科技股重挫。",
+      "隔夜美股半导体和AI硬件股大跌，费城半导体指数大跌约5%，科技成长估值承压。",
+      "美债长端收益率处在高位并继续冲击高估值科技资产，全球风险偏好同步收缩。",
+      "A股CPO概念盘中跌幅达到5%，近期系统偏好的CPO、半导体、光通信、先进封装方向进入高波动杀跌。"
+    ],
+    "affected_theme_list": [
+      "CPO",
+      "光通信",
+      "半导体",
+      "先进封装",
+      "AI算力硬件"
+    ],
+    "affected_stock_list": [
+      {
+        "stock_code": "601138",
+        "stock_name": "工业富联",
+        "reason_text": "最新TOP8候选，CPO/AI硬件高beta方向，全球半导体与AI硬件杀估值时优先进入防守观察。"
+      },
+      {
+        "stock_code": "002156",
+        "stock_name": "通富微电",
+        "reason_text": "最新TOP8候选，先进封装/半导体方向，海外芯片链共振下跌时不适合继续追攻。"
+      },
+      {
+        "stock_code": "600584",
+        "stock_name": "长电科技",
+        "reason_text": "最新TOP8候选，先进封装主线，受半导体风险偏好收缩影响较大。"
+      },
+      {
+        "stock_code": "601869",
+        "stock_name": "长飞光纤",
+        "reason_text": "最新TOP8候选，CPO/光通信方向，板块急跌时优先等待止跌信号。"
+      },
+      {
+        "stock_code": "000938",
+        "stock_name": "紫光股份",
+        "reason_text": "最新TOP8候选，CPO+半导体方向，进攻模型暂时让位于风险控制。"
+      },
+      {
+        "stock_code": "000988",
+        "stock_name": "华工科技",
+        "reason_text": "最新TOP8候选，光通信/半导体高弹性方向，全球科技股共振杀跌时暂停推荐。"
+      }
+    ],
+    "resume_condition_list": [
+      "韩国、日本、美国科技股停止连续急跌，半导体指数不再放量破位。",
+      "10年/30年美债收益率不再快速上行，油价和地缘风险不继续推升通胀预期。",
+      "A股CPO、半导体、光通信、先进封装至少出现1-2天缩量止跌或强势股率先修复。",
+      "系统日线市场强度重新回到 neutral 以上，并且TOP8候选不再集中出现大幅低开低走。"
+    ],
+    "source_note_list": [
+      "财联社/新浪财经：韩国股市8月19日大幅下跌并触发程序化卖盘暂停，三星电子、SK海力士重挫。",
+      "AP：亚洲市场8月19日普跌，KOSPI大跌，三星电子、SK海力士跟随美股科技股下挫。",
+      "东方财富Choice：8月19日CPO概念板块盘中跌幅达5%。",
+      "WSJ/多家财经媒体：美债收益率高位与隔夜美股半导体下跌压制全球科技成长风险偏好。"
+    ]
+  }
+};
+
+function render() {
   const data = INLINE_ONEIL;
+  const defenseData = INLINE_MARKET_DEFENSE || {};
   const stockSelectionData = null;
   const futureData = INLINE_FUTURE;
   const themeData = INLINE_THEME;
@@ -7162,6 +7380,13 @@ async function render() {
       ${stockSelectionDate ? `&nbsp;|&nbsp; 最新粗筛: ${esc(stockSelectionDate)}` : ''}
       ${!isFresh ? `&nbsp;|&nbsp; <span class="freshness-warn">注意：最新粗筛为 ${esc(stockSelectionDate)}，推荐结果仍为 ${esc(sourceDate)}</span>` : ''}
     </div>`;
+
+  if (isMarketDefenseActive(defenseData)) {
+    html += renderMarketDefense(defenseData, root);
+    html += `<div class="footer">AI智能股票推荐 · 防守模式不构成投资建议</div>`;
+    app.innerHTML = html;
+    return;
+  }
 
   html += renderThemes(themeData);
   html += renderFutureEvents(futureData);
