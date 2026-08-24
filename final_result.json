@@ -1,136 +1,205 @@
 {
-  "week_start_date": "2026-08-10",
-  "week_end_date": "2026-08-21",
-  "weekly_summary_text": "本周市场风格频繁切换，前半周成长主导下CPO与半导体反复走强，中段农业爆发后08-19暴跌，随后医药疫苗与有色金属接力，缩量环境下主线快速轮动",
+  "week_start_date": "2026-08-11",
+  "week_end_date": "2026-08-24",
+  "weekly_summary_text": "GLM weekly ranking did not return in time; used deterministic fallback ranking from daily themes, board strength, ETF, limit-up, momentum and news signals. reason=GLM request url_error model_name=glm-5.2 timeout_s=300 reason=[Errno 8] nodename nor servname provided, or not known",
   "industry_list": [
     {
       "rank_no": 1,
-      "industry_name": "医药生物",
-      "strength_level": "08-20生物疫苗板块涨8.06%，疫苗ETF涨10.02%",
-      "reason_text": "医药生物方向本周4次进入日度强主线，08-20疫苗ETF涨停，生物疫苗、细胞免疫治疗、创新药等多分支同步爆发，且08-21键凯科技、汉森制药仍涨停，是本周持续性最强的方向",
+      "industry_name": "半导体",
+      "strength_level": "观察",
+      "reason_text": "Fallback score 8.0; ranked by repeated weekly board, limit-up and high-momentum evidence.",
       "reference_list": [
-        "08-20生物疫苗板块涨8.06%排名第一",
-        "招商中证疫苗与生物技术ETF涨10.02%",
-        "细胞免疫治疗周内4次上榜均排名7.25",
-        "08-21键凯科技涨停封单4.72亿"
+        "momentum stock 兆易创新(603986.SH)",
+        "momentum stock 寒武纪(688256.SH)",
+        "momentum stock 长鑫科技(688825.SH)",
+        "momentum stock 士兰微(600460.SH)"
       ]
     },
     {
       "rank_no": 2,
-      "industry_name": "通信设备",
-      "strength_level": "08-12 CPO板块涨2.98%成交4071亿，08-21新易盛涨6.76%",
-      "reason_text": "CPO与光通信方向在08-12多板块同步走强，F5G概念周内7次上榜为全周最高频次，08-21中际旭创、新易盛等龙头仍保持高动量，星网锐捷、通鼎互联涨停，SK海力士发布CPO路线图提供产业催化",
+      "industry_name": "生物疫苗",
+      "strength_level": "观察",
+      "reason_text": "Fallback score 8.0; ranked by repeated weekly board, limit-up and high-momentum evidence.",
       "reference_list": [
-        "08-12 CPO板块涨2.98%成交额4071亿",
-        "F5G概念周内7次上榜为全周最高",
-        "08-21新易盛涨6.76%、中际旭创涨4.29%",
-        "08-21星网锐捷、通鼎互联涨停",
-        "SK海力士首发CPO技术路线图"
+        "board rank 1: pct_change=8.0618"
       ]
     },
     {
       "rank_no": 3,
-      "industry_name": "半导体",
-      "strength_level": "08-14/17国家大基金持股连续涨5.6%，士兰微08-21涨停",
-      "reason_text": "半导体方向在08-14和08-17连续两日多板块同步爆发，国家大基金持股、存储芯片、玻璃基板均进入前排，08-21士兰微涨停且寒武纪、兆易创新保持高动量，功率半导体涨价潮提供基本面支撑",
+      "industry_name": "转基因",
+      "strength_level": "观察",
+      "reason_text": "Fallback score 8.0; ranked by repeated weekly board, limit-up and high-momentum evidence.",
       "reference_list": [
-        "08-14/08-17国家大基金持股连续涨5.6%排名第一",
-        "存储芯片涨4.67%成交4461亿",
-        "08-21士兰微涨停封单4.83亿",
-        "08-21寒武纪涨2.39%、兆易创新涨1.38%",
-        "功率半导体涨价潮新闻催化"
+        "board rank 1: pct_change=9.3"
       ]
     },
     {
       "rank_no": 4,
-      "industry_name": "有色金属",
-      "strength_level": "08-21金属铅涨3.6%，黄金产业ETF涨4.74%且20日涨27%",
-      "reason_text": "有色金属方向在08-10和08-21两次进入日度强主线，08-21五个金属板块包揽涨幅前五，黄金产业ETF 20日涨幅27%显示中期趋势，湖南白银涨停、紫金矿业高动量，贵金属受资金青睐的新闻验证",
+      "industry_name": "通信设备",
+      "strength_level": "观察",
+      "reason_text": "Fallback score 8.0; ranked by repeated weekly board, limit-up and high-momentum evidence.",
       "reference_list": [
-        "08-21金属铅涨3.6%、金属锌涨3.34%、黄金概念涨2.46%",
-        "沪深港黄金产业ETF涨4.74% 20日涨27.33%",
-        "08-21湖南白银涨停（贵金属）",
-        "08-21紫金矿业涨2.69%",
-        "贵金属受资金青睐、美股贵金属大涨"
+        "momentum stock 中际旭创(300308.SZ)",
+        "momentum stock 新易盛(300502.SZ)",
+        "momentum stock 天孚通信(300394.SZ)",
+        "momentum stock 亨通光电(600487.SH)"
+      ]
+    },
+    {
+      "rank_no": 5,
+      "industry_name": "金属铅",
+      "strength_level": "观察",
+      "reason_text": "Fallback score 8.0; ranked by repeated weekly board, limit-up and high-momentum evidence.",
+      "reference_list": [
+        "board rank 1: pct_change=3.6"
+      ]
+    },
+    {
+      "rank_no": 6,
+      "industry_name": "玉米",
+      "strength_level": "观察",
+      "reason_text": "Fallback score 7.0; ranked by repeated weekly board, limit-up and high-momentum evidence.",
+      "reference_list": [
+        "board rank 2: pct_change=7.47"
+      ]
+    },
+    {
+      "rank_no": 7,
+      "industry_name": "细胞免疫治疗",
+      "strength_level": "观察",
+      "reason_text": "Fallback score 7.0; ranked by repeated weekly board, limit-up and high-momentum evidence.",
+      "reference_list": [
+        "board rank 2: pct_change=6.9296"
+      ]
+    },
+    {
+      "rank_no": 8,
+      "industry_name": "金属锌",
+      "strength_level": "观察",
+      "reason_text": "Fallback score 7.0; ranked by repeated weekly board, limit-up and high-momentum evidence.",
+      "reference_list": [
+        "board rank 2: pct_change=3.34"
       ]
     }
   ],
   "theme_list": [
     {
       "rank_no": 1,
-      "theme_name": "生物疫苗",
-      "strength_level": "08-20板块涨8.06%，疫苗ETF涨10.02%",
-      "reason_text": "本周4次进入日度强主线（08-10/11/13/20），08-20疫苗ETF涨停且生物疫苗板块涨8%排名第一，细胞免疫治疗周内4次上榜，重组蛋白、基因测序、猴痘等多分支同步爆发，莫德纳大涨180%提供海外催化，08-21键凯科技仍涨停确认持续性",
+      "theme_name": "有色金属/贵金属",
+      "strength_level": "中强",
+      "reason_text": "Fallback score 15.0; ranked by daily main-theme frequency plus board, ETF and news resonance.",
       "reference_list": [
-        "08-20生物疫苗板块涨8.06%排名第一",
-        "招商中证疫苗与生物技术ETF涨10.02%",
-        "细胞免疫治疗周内4次上榜均排名7.25",
-        "08-21键凯科技涨停封单4.72亿",
-        "莫德纳股价大涨180%催化化学制药概念"
+        "2026-08-21 daily theme rank 1: 基金与板块高度共振，资源品涨价逻辑明确，是今日最强主线。",
+        "2026-08-24 daily theme rank 2: 有色金属矿业ETF涨幅2.20%且20日涨幅最高达12.64%，板块端黄金概念、金属铅、金属锌、金属"
       ]
     },
     {
       "rank_no": 2,
-      "theme_name": "CPO",
-      "strength_level": "08-12板块涨2.98%成交4071亿，F5G概念周内7次上榜",
-      "reason_text": "F5G概念周内7次上榜为全周最高频次，08-12 CPO、光纤、F5G三板块同步进入前排，08-21中际旭创涨4.29%、新易盛涨6.76%保持高动量，星网锐捷与通鼎互联涨停验证，SK海力士发布CPO路线图提供产业催化，手工投研备注中CPO与光通信反复出现",
+      "theme_name": "细胞免疫治疗",
+      "strength_level": "中强",
+      "reason_text": "Fallback score 10.5; ranked by daily main-theme frequency plus board, ETF and news resonance.",
       "reference_list": [
-        "08-12 CPO板块涨2.98%成交额4071亿",
-        "F5G概念周内7次上榜为全周最高",
-        "08-21新易盛涨6.76%、中际旭创涨4.29%",
-        "08-21星网锐捷、通鼎互联涨停（通信设备）",
-        "SK海力士首发CPO技术路线图"
+        "2026-08-11 board signal pct_change=0.92",
+        "2026-08-13 board signal pct_change=2.06",
+        "2026-08-20 board signal pct_change=6.9296",
+        "weekly board rank 2: appearance=3"
       ]
     },
     {
       "rank_no": 3,
-      "theme_name": "贵金属",
-      "strength_level": "08-21黄金产业ETF涨4.74%，20日涨27%，金属板块包揽涨幅前五",
-      "reason_text": "有色金属在08-10和08-21两次成为日度强主线，08-21金属铅、锌、金、铜、小金属包揽涨幅前五，黄金产业ETF 20日涨27%显示中期上行趋势，湖南白银涨停、紫金矿业高动量，新闻端贵金属受资金青睐与美股贵金属大涨双重验证",
+      "theme_name": "转基因",
+      "strength_level": "中强",
+      "reason_text": "Fallback score 10.0; ranked by daily main-theme frequency plus board, ETF and news resonance.",
       "reference_list": [
-        "08-21金属铅涨3.6%、金属锌涨3.34%、黄金概念涨2.46%",
-        "沪深港黄金产业ETF涨4.74% 20日涨27.33%",
-        "08-21湖南白银涨停（贵金属）",
-        "08-21紫金矿业涨2.69%",
-        "贵金属受资金青睐、美股贵金属市场集体大涨"
+        "2026-08-18 board signal pct_change=9.3",
+        "2026-08-24 board signal pct_change=1.23",
+        "weekly board rank 1: appearance=5"
       ]
     },
     {
       "rank_no": 4,
-      "theme_name": "半导体",
-      "strength_level": "08-14/17国家大基金持股连续涨5.6%，士兰微08-21涨停",
-      "reason_text": "08-14和08-17连续两日国家大基金持股、存储芯片、玻璃基板多板块同步爆发，但最近3个交易日细分板块已退出前排，仅靠士兰微涨停和寒武纪等个股维持热度，板块层面进入扩散后降温阶段，功率半导体涨价潮提供一定基本面支撑",
+      "theme_name": "金属铅",
+      "strength_level": "中强",
+      "reason_text": "Fallback score 10.0; ranked by daily main-theme frequency plus board, ETF and news resonance.",
       "reference_list": [
-        "08-14/08-17国家大基金持股连续涨5.6%排名第一",
-        "存储芯片涨4.67%成交4461亿",
-        "08-21士兰微涨停封单4.83亿",
-        "08-21寒武纪涨2.39%、兆易创新涨1.38%",
-        "功率半导体涨价潮新闻催化"
+        "2026-08-21 board signal pct_change=3.6",
+        "2026-08-24 board signal pct_change=1.0",
+        "weekly board rank 1: appearance=2"
       ]
     },
     {
       "rank_no": 5,
-      "theme_name": "粮食种业",
-      "strength_level": "08-18粮食产业ETF涨10.05%，转基因板块涨9.3%",
-      "reason_text": "08-18粮食种业全线爆发，转基因涨9.3%、玉米涨7.47%，粮食产业ETF涨停，但最近3个交易日已完全退出前排板块，08-19暴跌后资金快速撤离，当前处于退潮阶段需等待重新催化",
+      "theme_name": "玉米",
+      "strength_level": "观察",
+      "reason_text": "Fallback score 9.0; ranked by daily main-theme frequency plus board, ETF and news resonance.",
       "reference_list": [
-        "08-18转基因涨9.3%排名第一",
-        "08-18粮食产业ETF涨10.05% 20日涨18.89%",
-        "08-18玉米涨7.47%、粮食概念涨6.52%",
-        "08-10养鸡涨4.3%、猪肉涨4.07%为农业产业链延伸"
+        "2026-08-18 board signal pct_change=7.47",
+        "2026-08-24 board signal pct_change=0.99",
+        "weekly board rank 2: appearance=5"
       ]
     },
     {
       "rank_no": 6,
-      "theme_name": "消费电子",
-      "strength_level": "08-21可川科技与科森科技涨停，周内多次弱共振",
-      "reason_text": "消费电子在08-14、08-17、08-21三次进入日度主线但均为中等或弱共振，缺乏专属ETF验证，08-21可川科技与科森科技涨停提供个股端信号，生益科技涨5.16%但整体板块涨幅有限，更适合观察等待更强信号确认",
+      "theme_name": "生物疫苗",
+      "strength_level": "观察",
+      "reason_text": "Fallback score 8.5; ranked by daily main-theme frequency plus board, ETF and news resonance.",
       "reference_list": [
-        "08-14/08-17同花顺果指数涨4.58%",
-        "08-21可川科技涨停（消费电子）封单1.57亿",
-        "08-21科森科技涨停（消费电子）封单1.45亿",
-        "08-21生益科技涨5.16%（元器件）",
-        "消费电子板块震荡走高新闻"
+        "2026-08-20 board signal pct_change=8.0618",
+        "weekly board rank 1: appearance=3"
+      ]
+    },
+    {
+      "rank_no": 7,
+      "theme_name": "医药医疗",
+      "strength_level": "观察",
+      "reason_text": "Fallback score 8.0; ranked by daily main-theme frequency plus board, ETF and news resonance.",
+      "reference_list": [
+        "2026-08-11 daily theme rank 1: 在市场缩量调整环境下，医药医疗板块多个细分方向如减肥药、创新药、细胞免疫治疗等同步走强，属于典型的防"
+      ]
+    },
+    {
+      "rank_no": 8,
+      "theme_name": "医药生物产业链（创新药+生物科技+疫苗）",
+      "strength_level": "观察",
+      "reason_text": "Fallback score 8.0; ranked by daily main-theme frequency plus board, ETF and news resonance.",
+      "reference_list": [
+        "2026-08-13 daily theme rank 1: 当日医药生物方向呈现压倒性集体走强，top30中超过25个板块属于医药生物产业链，从上游生物科技（重"
+      ]
+    },
+    {
+      "rank_no": 9,
+      "theme_name": "半导体/自主可控",
+      "strength_level": "观察",
+      "reason_text": "Fallback score 8.0; ranked by daily main-theme frequency plus board, ETF and news resonance.",
+      "reference_list": [
+        "2026-08-14 daily theme rank 1: 国家大基金持股领涨，存储芯片、先进封装、光刻机等大量细分板块同步爆发，产业链共振强烈，确认为强主线。"
+      ]
+    },
+    {
+      "rank_no": 10,
+      "theme_name": "半导体材料设备与先进制造",
+      "strength_level": "观察",
+      "reason_text": "Fallback score 8.0; ranked by daily main-theme frequency plus board, ETF and news resonance.",
+      "reference_list": [
+        "2026-08-17 daily theme rank 1: 半导体方向被ETF和板块双重验证，11个细分板块同步走强覆盖全产业链，国家大基金持股涨幅第一提供核心"
+      ]
+    },
+    {
+      "rank_no": 11,
+      "theme_name": "房地产/地产链",
+      "strength_level": "观察",
+      "reason_text": "Fallback score 8.0; ranked by daily main-theme frequency plus board, ETF and news resonance.",
+      "reference_list": [
+        "2026-08-12 daily theme rank 1: 5只地产ETF全部大涨4-5%且20日涨幅6-14%，细分板块租售同权、物业管理、特色小镇、横琴新区"
+      ]
+    },
+    {
+      "rank_no": 12,
+      "theme_name": "煤炭/能源",
+      "strength_level": "观察",
+      "reason_text": "Fallback score 8.0; ranked by daily main-theme frequency plus board, ETF and news resonance.",
+      "reference_list": [
+        "2026-08-24 daily theme rank 1: 四只煤炭主题基金同步大涨2.4%以上且20日趋势均在9%以上，煤炭概念板块同步走强，超超临界发电作为"
       ]
     }
   ]
