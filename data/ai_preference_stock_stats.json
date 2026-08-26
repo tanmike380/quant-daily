@@ -309,7 +309,7 @@
         "win_rate_pct": 55.7,
         "coverage_start_date": "2026-04-01",
         "coverage_end_date": "2026-08-18",
-        "current_date": "2026-08-25",
+        "current_date": "2026-08-26",
         "per_rank_stat_list": [
           {
             "final_rank": 1,
@@ -366,194 +366,194 @@
       "10": {
         "horizon_day_count": 10,
         "metric_definition": "T+10 胜率：每只 Top8 推荐股为一个样本，按推荐日后首个交易日开盘买入，若 T+N 收盘相对基准价上涨则记为赢。",
-        "validated_sample_count": 592,
-        "pending_sample_count": 64,
-        "win_count": 349,
-        "loss_or_flat_count": 243,
-        "win_rate_pct": 58.95,
+        "validated_sample_count": 600,
+        "pending_sample_count": 56,
+        "win_count": 350,
+        "loss_or_flat_count": 250,
+        "win_rate_pct": 58.33,
         "coverage_start_date": "2026-04-01",
-        "coverage_end_date": "2026-08-11",
-        "current_date": "2026-08-25",
+        "coverage_end_date": "2026-08-12",
+        "current_date": "2026-08-26",
         "per_rank_stat_list": [
           {
             "final_rank": 1,
-            "sample_count": 74,
+            "sample_count": 75,
             "win_count": 44,
-            "win_rate_pct": 59.46
+            "win_rate_pct": 58.67
           },
           {
             "final_rank": 2,
-            "sample_count": 74,
+            "sample_count": 75,
             "win_count": 41,
-            "win_rate_pct": 55.41
+            "win_rate_pct": 54.67
           },
           {
             "final_rank": 3,
-            "sample_count": 74,
+            "sample_count": 75,
             "win_count": 44,
-            "win_rate_pct": 59.46
+            "win_rate_pct": 58.67
           },
           {
             "final_rank": 4,
-            "sample_count": 74,
+            "sample_count": 75,
             "win_count": 45,
-            "win_rate_pct": 60.81
+            "win_rate_pct": 60.0
           },
           {
             "final_rank": 5,
-            "sample_count": 74,
-            "win_count": 43,
-            "win_rate_pct": 58.11
+            "sample_count": 75,
+            "win_count": 44,
+            "win_rate_pct": 58.67
           },
           {
             "final_rank": 6,
-            "sample_count": 74,
+            "sample_count": 75,
             "win_count": 50,
-            "win_rate_pct": 67.57
+            "win_rate_pct": 66.67
           },
           {
             "final_rank": 7,
-            "sample_count": 74,
+            "sample_count": 75,
             "win_count": 37,
-            "win_rate_pct": 50.0
+            "win_rate_pct": 49.33
           },
           {
             "final_rank": 8,
-            "sample_count": 74,
+            "sample_count": 75,
             "win_count": 45,
-            "win_rate_pct": 60.81
+            "win_rate_pct": 60.0
           }
         ],
-        "reason_text": "仅统计已经走满 T+10 的历史推荐；太新的推荐样本 64 个暂不计入。",
+        "reason_text": "仅统计已经走满 T+10 的历史推荐；太新的推荐样本 56 个暂不计入。",
         "status": "ready"
       },
       "20": {
         "horizon_day_count": 20,
         "metric_definition": "T+20 胜率：每只 Top8 推荐股为一个样本，按推荐日后首个交易日开盘买入，若 T+N 收盘相对基准价上涨则记为赢。",
-        "validated_sample_count": 536,
-        "pending_sample_count": 120,
-        "win_count": 299,
-        "loss_or_flat_count": 237,
-        "win_rate_pct": 55.78,
+        "validated_sample_count": 544,
+        "pending_sample_count": 112,
+        "win_count": 306,
+        "loss_or_flat_count": 238,
+        "win_rate_pct": 56.25,
         "coverage_start_date": "2026-04-01",
-        "coverage_end_date": "2026-07-28",
-        "current_date": "2026-08-25",
+        "coverage_end_date": "2026-07-29",
+        "current_date": "2026-08-26",
         "per_rank_stat_list": [
           {
             "final_rank": 1,
-            "sample_count": 67,
-            "win_count": 35,
-            "win_rate_pct": 52.24
+            "sample_count": 68,
+            "win_count": 36,
+            "win_rate_pct": 52.94
           },
           {
             "final_rank": 2,
-            "sample_count": 67,
-            "win_count": 37,
-            "win_rate_pct": 55.22
+            "sample_count": 68,
+            "win_count": 38,
+            "win_rate_pct": 55.88
           },
           {
             "final_rank": 3,
-            "sample_count": 67,
-            "win_count": 41,
-            "win_rate_pct": 61.19
+            "sample_count": 68,
+            "win_count": 42,
+            "win_rate_pct": 61.76
           },
           {
             "final_rank": 4,
-            "sample_count": 67,
-            "win_count": 42,
-            "win_rate_pct": 62.69
+            "sample_count": 68,
+            "win_count": 43,
+            "win_rate_pct": 63.24
           },
           {
             "final_rank": 5,
-            "sample_count": 67,
+            "sample_count": 68,
             "win_count": 35,
-            "win_rate_pct": 52.24
+            "win_rate_pct": 51.47
           },
           {
             "final_rank": 6,
-            "sample_count": 67,
-            "win_count": 40,
-            "win_rate_pct": 59.7
+            "sample_count": 68,
+            "win_count": 41,
+            "win_rate_pct": 60.29
           },
           {
             "final_rank": 7,
-            "sample_count": 67,
-            "win_count": 35,
-            "win_rate_pct": 52.24
+            "sample_count": 68,
+            "win_count": 36,
+            "win_rate_pct": 52.94
           },
           {
             "final_rank": 8,
-            "sample_count": 67,
-            "win_count": 34,
-            "win_rate_pct": 50.75
+            "sample_count": 68,
+            "win_count": 35,
+            "win_rate_pct": 51.47
           }
         ],
-        "reason_text": "仅统计已经走满 T+20 的历史推荐；太新的推荐样本 120 个暂不计入。",
+        "reason_text": "仅统计已经走满 T+20 的历史推荐；太新的推荐样本 112 个暂不计入。",
         "status": "ready"
       }
     },
     "t10_win_rate_signal": {
       "horizon_day_count": 10,
       "metric_definition": "T+10 胜率：每只 Top8 推荐股为一个样本，按推荐日后首个交易日开盘买入，若 T+N 收盘相对基准价上涨则记为赢。",
-      "validated_sample_count": 592,
-      "pending_sample_count": 64,
-      "win_count": 349,
-      "loss_or_flat_count": 243,
-      "win_rate_pct": 58.95,
+      "validated_sample_count": 600,
+      "pending_sample_count": 56,
+      "win_count": 350,
+      "loss_or_flat_count": 250,
+      "win_rate_pct": 58.33,
       "coverage_start_date": "2026-04-01",
-      "coverage_end_date": "2026-08-11",
-      "current_date": "2026-08-25",
+      "coverage_end_date": "2026-08-12",
+      "current_date": "2026-08-26",
       "per_rank_stat_list": [
         {
           "final_rank": 1,
-          "sample_count": 74,
+          "sample_count": 75,
           "win_count": 44,
-          "win_rate_pct": 59.46
+          "win_rate_pct": 58.67
         },
         {
           "final_rank": 2,
-          "sample_count": 74,
+          "sample_count": 75,
           "win_count": 41,
-          "win_rate_pct": 55.41
+          "win_rate_pct": 54.67
         },
         {
           "final_rank": 3,
-          "sample_count": 74,
+          "sample_count": 75,
           "win_count": 44,
-          "win_rate_pct": 59.46
+          "win_rate_pct": 58.67
         },
         {
           "final_rank": 4,
-          "sample_count": 74,
+          "sample_count": 75,
           "win_count": 45,
-          "win_rate_pct": 60.81
+          "win_rate_pct": 60.0
         },
         {
           "final_rank": 5,
-          "sample_count": 74,
-          "win_count": 43,
-          "win_rate_pct": 58.11
+          "sample_count": 75,
+          "win_count": 44,
+          "win_rate_pct": 58.67
         },
         {
           "final_rank": 6,
-          "sample_count": 74,
+          "sample_count": 75,
           "win_count": 50,
-          "win_rate_pct": 67.57
+          "win_rate_pct": 66.67
         },
         {
           "final_rank": 7,
-          "sample_count": 74,
+          "sample_count": 75,
           "win_count": 37,
-          "win_rate_pct": 50.0
+          "win_rate_pct": 49.33
         },
         {
           "final_rank": 8,
-          "sample_count": 74,
+          "sample_count": 75,
           "win_count": 45,
-          "win_rate_pct": 60.81
+          "win_rate_pct": 60.0
         }
       ],
-      "reason_text": "仅统计已经走满 T+10 的历史推荐；太新的推荐样本 64 个暂不计入。",
+      "reason_text": "仅统计已经走满 T+10 的历史推荐；太新的推荐样本 56 个暂不计入。",
       "status": "ready"
     }
   }

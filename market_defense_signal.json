@@ -1,8 +1,8 @@
 {
   "market_defense_signal": {
     "is_active": false,
-    "signal_date": "2026-08-25",
-    "generated_at": "2026-08-25T17:00:31",
+    "signal_date": "2026-08-26",
+    "generated_at": "2026-08-26T20:00:43",
     "defense_level": "normal_attack",
     "headline_text": "市场防守信号未触发，系统维持正常进攻模式",
     "summary_text": "当前防守分数为0，未达到7分阈值；full pipeline 将继续原始股票筛选链路。",
@@ -103,7 +103,7 @@
         "rule_name": "A股主线高beta杀跌",
         "score": 2,
         "threshold_text": "CPO、PCB、先进封装、AI算力等系统近期高beta主线中，至少一个板块单日跌幅达到4%。",
-        "observed_text": "共封装光学(CPO)+0.94%，PCB概念+0.67%，先进封装+0.01%，存储芯片-0.13%，英伟达概念+1.10%，算力租赁+1.63%。",
+        "observed_text": "共封装光学(CPO)-0.28%，PCB概念-0.16%，先进封装-0.25%，存储芯片-0.10%，英伟达概念-0.68%，算力租赁+0.27%。",
         "is_triggered": false,
         "data_source_list": [
           {
@@ -113,7 +113,7 @@
             "source_url": null,
             "is_available": true,
             "close": null,
-            "pct_change": 0.94,
+            "pct_change": -0.28,
             "error_text": null
           },
           {
@@ -123,7 +123,7 @@
             "source_url": null,
             "is_available": true,
             "close": null,
-            "pct_change": 0.67,
+            "pct_change": -0.16,
             "error_text": null
           },
           {
@@ -133,7 +133,7 @@
             "source_url": null,
             "is_available": true,
             "close": null,
-            "pct_change": 0.01,
+            "pct_change": -0.25,
             "error_text": null
           },
           {
@@ -143,7 +143,7 @@
             "source_url": null,
             "is_available": true,
             "close": null,
-            "pct_change": -0.13,
+            "pct_change": -0.1,
             "error_text": null
           },
           {
@@ -153,7 +153,7 @@
             "source_url": null,
             "is_available": true,
             "close": null,
-            "pct_change": 1.1,
+            "pct_change": -0.68,
             "error_text": null
           },
           {
@@ -163,7 +163,7 @@
             "source_url": null,
             "is_available": true,
             "close": null,
-            "pct_change": 1.63,
+            "pct_change": 0.27,
             "error_text": null
           }
         ]
@@ -251,8 +251,8 @@
         "name": "共封装光学(CPO)",
         "source": "akshare_ths_concept_info",
         "is_available": true,
-        "pct_change": 0.94,
-        "amount_yi": 3196.9
+        "pct_change": -0.28,
+        "amount_yi": 2935.84
       },
       {
         "market": "a_share_theme",
@@ -260,8 +260,8 @@
         "name": "PCB概念",
         "source": "akshare_ths_concept_info",
         "is_available": true,
-        "pct_change": 0.67,
-        "amount_yi": 1877.76
+        "pct_change": -0.16,
+        "amount_yi": 1852.26
       },
       {
         "market": "a_share_theme",
@@ -269,8 +269,8 @@
         "name": "先进封装",
         "source": "akshare_ths_concept_info",
         "is_available": true,
-        "pct_change": 0.01,
-        "amount_yi": 2242.37
+        "pct_change": -0.25,
+        "amount_yi": 2084.62
       },
       {
         "market": "a_share_theme",
@@ -278,8 +278,8 @@
         "name": "存储芯片",
         "source": "akshare_ths_concept_info",
         "is_available": true,
-        "pct_change": -0.13,
-        "amount_yi": 2501.81
+        "pct_change": -0.1,
+        "amount_yi": 2302.07
       },
       {
         "market": "a_share_theme",
@@ -287,8 +287,8 @@
         "name": "英伟达概念",
         "source": "akshare_ths_concept_info",
         "is_available": true,
-        "pct_change": 1.1,
-        "amount_yi": 840.13
+        "pct_change": -0.68,
+        "amount_yi": 810.69
       },
       {
         "market": "a_share_theme",
@@ -296,8 +296,8 @@
         "name": "算力租赁",
         "source": "akshare_ths_concept_info",
         "is_available": true,
-        "pct_change": 1.63,
-        "amount_yi": 766.09
+        "pct_change": 0.27,
+        "amount_yi": 707.3
       }
     ],
     "source_note_list": [
