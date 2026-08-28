@@ -1,8 +1,8 @@
 {
   "market_defense_signal": {
     "is_active": false,
-    "signal_date": "2026-08-27",
-    "generated_at": "2026-08-27T20:49:35",
+    "signal_date": "2026-08-28",
+    "generated_at": "2026-08-28T20:12:52",
     "defense_level": "normal_attack",
     "headline_text": "市场防守信号未触发，系统维持正常进攻模式",
     "summary_text": "当前防守分数为0，未达到7分阈值；full pipeline 将继续原始股票筛选链路。",
@@ -27,7 +27,7 @@
             "is_available": false,
             "close": null,
             "pct_change": null,
-            "error_text": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+            "error_text": "HTTPError: HTTP Error 403: Forbidden"
           },
           {
             "name": "费城半导体指数",
@@ -37,7 +37,7 @@
             "is_available": false,
             "close": null,
             "pct_change": null,
-            "error_text": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+            "error_text": "HTTPError: HTTP Error 403: Forbidden"
           }
         ]
       },
@@ -56,7 +56,7 @@
             "is_available": false,
             "close": null,
             "pct_change": null,
-            "error_text": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+            "error_text": "HTTPError: HTTP Error 403: Forbidden"
           },
           {
             "name": "日经225",
@@ -66,7 +66,7 @@
             "is_available": false,
             "close": null,
             "pct_change": null,
-            "error_text": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+            "error_text": "HTTPError: HTTP Error 403: Forbidden"
           }
         ]
       },
@@ -85,7 +85,7 @@
             "is_available": false,
             "close": null,
             "pct_change": null,
-            "error_text": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+            "error_text": "URLError: <urlopen error _ssl.c:1112: The handshake operation timed out>"
           },
           {
             "name": "美国30年期国债收益率",
@@ -95,7 +95,7 @@
             "is_available": false,
             "close": null,
             "pct_change": null,
-            "error_text": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+            "error_text": "HTTPError: HTTP Error 403: Forbidden"
           }
         ]
       },
@@ -103,7 +103,7 @@
         "rule_name": "A股主线高beta杀跌",
         "score": 2,
         "threshold_text": "CPO、PCB、先进封装、AI算力等系统近期高beta主线中，至少一个板块单日跌幅达到4%。",
-        "observed_text": "数据源暂不可用，未触发该规则。",
+        "observed_text": "共封装光学(CPO)-1.14%，PCB概念-0.61%，先进封装-1.24%，存储芯片-1.44%，英伟达概念-0.50%，算力租赁-0.09%。",
         "is_triggered": false,
         "data_source_list": [
           {
@@ -111,60 +111,60 @@
             "symbol": "共封装光学(CPO)",
             "source": "akshare_ths_concept_info",
             "source_url": null,
-            "is_available": false,
+            "is_available": true,
             "close": null,
-            "pct_change": null,
-            "error_text": "ConnectionError: HTTPSConnectionPool(host='q.10jqka.com.cn', port=443): Max retries exceeded with url: /gn/detail/code/307822/ (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x10aa54d30>: Failed to resolve 'q.10jqka.com.cn' ([Errno 8] nodename nor servname provided, or not known)\"))"
+            "pct_change": -1.14,
+            "error_text": null
           },
           {
             "name": "PCB概念",
             "symbol": "PCB概念",
             "source": "akshare_ths_concept_info",
             "source_url": null,
-            "is_available": false,
+            "is_available": true,
             "close": null,
-            "pct_change": null,
-            "error_text": "ConnectionError: HTTPSConnectionPool(host='q.10jqka.com.cn', port=443): Max retries exceeded with url: /gn/detail/code/307822/ (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x10aa82a00>: Failed to resolve 'q.10jqka.com.cn' ([Errno 8] nodename nor servname provided, or not known)\"))"
+            "pct_change": -0.61,
+            "error_text": null
           },
           {
             "name": "先进封装",
             "symbol": "先进封装",
             "source": "akshare_ths_concept_info",
             "source_url": null,
-            "is_available": false,
+            "is_available": true,
             "close": null,
-            "pct_change": null,
-            "error_text": "ConnectionError: HTTPSConnectionPool(host='q.10jqka.com.cn', port=443): Max retries exceeded with url: /gn/detail/code/307822/ (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x10b4c14f0>: Failed to resolve 'q.10jqka.com.cn' ([Errno 8] nodename nor servname provided, or not known)\"))"
+            "pct_change": -1.24,
+            "error_text": null
           },
           {
             "name": "存储芯片",
             "symbol": "存储芯片",
             "source": "akshare_ths_concept_info",
             "source_url": null,
-            "is_available": false,
+            "is_available": true,
             "close": null,
-            "pct_change": null,
-            "error_text": "ConnectionError: HTTPSConnectionPool(host='q.10jqka.com.cn', port=443): Max retries exceeded with url: /gn/detail/code/307822/ (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x10b4c1fa0>: Failed to resolve 'q.10jqka.com.cn' ([Errno 8] nodename nor servname provided, or not known)\"))"
+            "pct_change": -1.44,
+            "error_text": null
           },
           {
             "name": "英伟达概念",
             "symbol": "英伟达概念",
             "source": "akshare_ths_concept_info",
             "source_url": null,
-            "is_available": false,
+            "is_available": true,
             "close": null,
-            "pct_change": null,
-            "error_text": "ConnectionError: HTTPSConnectionPool(host='q.10jqka.com.cn', port=443): Max retries exceeded with url: /gn/detail/code/307822/ (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x10aa82d30>: Failed to resolve 'q.10jqka.com.cn' ([Errno 8] nodename nor servname provided, or not known)\"))"
+            "pct_change": -0.5,
+            "error_text": null
           },
           {
             "name": "算力租赁",
             "symbol": "算力租赁",
             "source": "akshare_ths_concept_info",
             "source_url": null,
-            "is_available": false,
+            "is_available": true,
             "close": null,
-            "pct_change": null,
-            "error_text": "ConnectionError: HTTPSConnectionPool(host='q.10jqka.com.cn', port=443): Max retries exceeded with url: /gn/detail/code/307822/ (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x10aa7c190>: Failed to resolve 'q.10jqka.com.cn' ([Errno 8] nodename nor servname provided, or not known)\"))"
+            "pct_change": -0.09,
+            "error_text": null
           }
         ]
       },
@@ -198,7 +198,7 @@
         "source": "yahoo_chart",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EIXIC?range=5d&interval=1d",
         "is_available": false,
-        "error_text": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+        "error_text": "HTTPError: HTTP Error 403: Forbidden"
       },
       {
         "market": "overseas",
@@ -207,7 +207,7 @@
         "source": "yahoo_chart",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ESOX?range=5d&interval=1d",
         "is_available": false,
-        "error_text": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+        "error_text": "HTTPError: HTTP Error 403: Forbidden"
       },
       {
         "market": "overseas",
@@ -216,7 +216,7 @@
         "source": "yahoo_chart",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EKS11?range=5d&interval=1d",
         "is_available": false,
-        "error_text": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+        "error_text": "HTTPError: HTTP Error 403: Forbidden"
       },
       {
         "market": "overseas",
@@ -225,7 +225,7 @@
         "source": "yahoo_chart",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EN225?range=5d&interval=1d",
         "is_available": false,
-        "error_text": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+        "error_text": "HTTPError: HTTP Error 403: Forbidden"
       },
       {
         "market": "overseas",
@@ -234,7 +234,7 @@
         "source": "yahoo_chart",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ETNX?range=5d&interval=1d",
         "is_available": false,
-        "error_text": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+        "error_text": "URLError: <urlopen error _ssl.c:1112: The handshake operation timed out>"
       },
       {
         "market": "overseas",
@@ -243,55 +243,61 @@
         "source": "yahoo_chart",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ETYX?range=5d&interval=1d",
         "is_available": false,
-        "error_text": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+        "error_text": "HTTPError: HTTP Error 403: Forbidden"
       },
       {
         "market": "a_share_theme",
         "symbol": "共封装光学(CPO)",
         "name": "共封装光学(CPO)",
         "source": "akshare_ths_concept_info",
-        "is_available": false,
-        "error_text": "ConnectionError: HTTPSConnectionPool(host='q.10jqka.com.cn', port=443): Max retries exceeded with url: /gn/detail/code/307822/ (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x10aa54d30>: Failed to resolve 'q.10jqka.com.cn' ([Errno 8] nodename nor servname provided, or not known)\"))"
+        "is_available": true,
+        "pct_change": -1.14,
+        "amount_yi": 4261.98
       },
       {
         "market": "a_share_theme",
         "symbol": "PCB概念",
         "name": "PCB概念",
         "source": "akshare_ths_concept_info",
-        "is_available": false,
-        "error_text": "ConnectionError: HTTPSConnectionPool(host='q.10jqka.com.cn', port=443): Max retries exceeded with url: /gn/detail/code/307822/ (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x10aa82a00>: Failed to resolve 'q.10jqka.com.cn' ([Errno 8] nodename nor servname provided, or not known)\"))"
+        "is_available": true,
+        "pct_change": -0.61,
+        "amount_yi": 2614.53
       },
       {
         "market": "a_share_theme",
         "symbol": "先进封装",
         "name": "先进封装",
         "source": "akshare_ths_concept_info",
-        "is_available": false,
-        "error_text": "ConnectionError: HTTPSConnectionPool(host='q.10jqka.com.cn', port=443): Max retries exceeded with url: /gn/detail/code/307822/ (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x10b4c14f0>: Failed to resolve 'q.10jqka.com.cn' ([Errno 8] nodename nor servname provided, or not known)\"))"
+        "is_available": true,
+        "pct_change": -1.24,
+        "amount_yi": 2510.62
       },
       {
         "market": "a_share_theme",
         "symbol": "存储芯片",
         "name": "存储芯片",
         "source": "akshare_ths_concept_info",
-        "is_available": false,
-        "error_text": "ConnectionError: HTTPSConnectionPool(host='q.10jqka.com.cn', port=443): Max retries exceeded with url: /gn/detail/code/307822/ (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x10b4c1fa0>: Failed to resolve 'q.10jqka.com.cn' ([Errno 8] nodename nor servname provided, or not known)\"))"
+        "is_available": true,
+        "pct_change": -1.44,
+        "amount_yi": 3120.35
       },
       {
         "market": "a_share_theme",
         "symbol": "英伟达概念",
         "name": "英伟达概念",
         "source": "akshare_ths_concept_info",
-        "is_available": false,
-        "error_text": "ConnectionError: HTTPSConnectionPool(host='q.10jqka.com.cn', port=443): Max retries exceeded with url: /gn/detail/code/307822/ (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x10aa82d30>: Failed to resolve 'q.10jqka.com.cn' ([Errno 8] nodename nor servname provided, or not known)\"))"
+        "is_available": true,
+        "pct_change": -0.5,
+        "amount_yi": 1206.99
       },
       {
         "market": "a_share_theme",
         "symbol": "算力租赁",
         "name": "算力租赁",
         "source": "akshare_ths_concept_info",
-        "is_available": false,
-        "error_text": "ConnectionError: HTTPSConnectionPool(host='q.10jqka.com.cn', port=443): Max retries exceeded with url: /gn/detail/code/307822/ (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x10aa7c190>: Failed to resolve 'q.10jqka.com.cn' ([Errno 8] nodename nor servname provided, or not known)\"))"
+        "is_available": true,
+        "pct_change": -0.09,
+        "amount_yi": 1033.61
       }
     ],
     "source_note_list": [
