@@ -1,211 +1,144 @@
 {
   "week_start_date": "2026-08-18",
   "week_end_date": "2026-08-31",
-  "weekly_summary_text": "GLM weekly ranking did not return in time; used deterministic fallback ranking from daily themes, board strength, ETF, limit-up, momentum and news signals. reason=Weekly GLM theme ranking exceeded wall timeout 90s.",
+  "weekly_summary_text": "本周市场分化震荡，大盘价值风格总体占优，成长阶段性表现。粮食安全全周持续走强为最强主线，半导体与CPO在8月27日放量爆发后延续，AI视频在周末单日爆发，有色金属前半周强后半周降温，疫苗主线后半周明显退潮。",
   "industry_list": [
     {
       "rank_no": 1,
-      "industry_name": "半导体",
-      "strength_level": "观察",
-      "reason_text": "Fallback score 9.0; ranked by repeated weekly board, limit-up and high-momentum evidence.",
+      "industry_name": "种植业",
+      "strength_level": "转基因板块周内6次进入top30，8月18日涨9.30%，粮食产业ETF周内涨超10%",
+      "reason_text": "粮食安全方向全周持续走强，转基因、玉米、粮食概念、大豆、化肥、供销社等10余个细分板块多次同步上涨，粮食产业ETF提供强力验证，摩根大通粮食危机研报形成持续催化，是本周频次最高、近期仍在前排的最强行业方向。",
       "reference_list": [
-        "limit-up stock 瑞芯微(603893.SH)",
-        "momentum stock 长鑫科技(688825.SH)",
-        "momentum stock 寒武纪(688256.SH)",
-        "momentum stock 兆易创新(603986.SH)"
+        "转基因板块8月18日涨9.30%，appearance_count=6，为全周出现频次最高的板块",
+        "5只粮食产业ETF 8月18日涨7.76%-10.05%，20日涨幅16%-19%",
+        "8月28日供销社涨3.05%、化肥涨3.02%、大豆涨3.00%、转基因涨2.93%、粮食概念涨2.92%，10+板块同步走强",
+        "新赛股份8月31日涨停（种植业），摩根大通研报指出全球粮食危机可能于2027年爆发"
       ]
     },
     {
       "rank_no": 2,
-      "industry_name": "通信设备",
-      "strength_level": "观察",
-      "reason_text": "Fallback score 9.0; ranked by repeated weekly board, limit-up and high-momentum evidence.",
+      "industry_name": "半导体",
+      "strength_level": "芯片设计ETF 8月27日涨5.71%-6.18%，8月31日涨4.36%，20日涨幅超13%",
+      "reason_text": "8月27日半导体全产业链爆发，国家大基金持股、存储芯片、光刻机、先进封装等10余个板块同步大涨，5只芯片设计ETF集体暴涨提供强力验证，8月31日瑞芯微涨停、寒武纪涨6.26%延续强势，AI算力需求与先进封装设备订单排至2028年构成产业景气支撑。",
       "reference_list": [
-        "limit-up stock 星网锐捷(002396.SZ)",
-        "momentum stock 中际旭创(300308.SZ)",
-        "momentum stock 亨通光电(600487.SH)",
-        "momentum stock 新易盛(300502.SZ)"
+        "5只芯片设计ETF 8月27日涨5.71%-6.18%，20日涨幅12.4%-13.3%",
+        "8月27日国家大基金持股涨4.63%、存储芯片涨4.55%、光刻机涨4.37%、先进封装涨4.29%，10+板块同步走强",
+        "瑞芯微8月31日涨停（半导体），寒武纪涨6.26%，兆易创新涨2.31%，长鑫科技高成交额",
+        "申万宏源半导体产业发展大会召开，先进封装设备订单排至2028年，三星与SK海力士加码HBM4"
       ]
     },
     {
       "rank_no": 3,
-      "industry_name": "AI视频",
-      "strength_level": "观察",
-      "reason_text": "Fallback score 8.0; ranked by repeated weekly board, limit-up and high-momentum evidence.",
+      "industry_name": "通信设备",
+      "strength_level": "CPO板块8月27日涨4.47%成交额4216亿为全场最高，多只通信设备股高动量",
+      "reason_text": "AI算力硬件链在8月21日、27日、31日三次走强，CPO成交额全场最高体现资金深度参与，中际旭创、新易盛、亨通光电持续高动量，英伟达业绩超预期与CPO商业化进展构成产业催化。",
       "reference_list": [
-        "board rank 1: pct_change=5.74"
+        "CPO板块8月27日涨4.47%，成交额4216亿为全场最高，appearance_count=2",
+        "8月21日CPO、铜缆高速连接、PCB、液冷服务器、F5G、6G 6个板块同步走强",
+        "中际旭创、新易盛8月31日高动量高成交额，星网锐捷8月31日涨停（通信设备）",
+        "英伟达业绩与营收指引双双超预期，机构称CPO已正式进入商业化阶段"
       ]
     },
     {
       "rank_no": 4,
-      "industry_name": "供销社",
-      "strength_level": "观察",
-      "reason_text": "Fallback score 8.0; ranked by repeated weekly board, limit-up and high-momentum evidence.",
+      "industry_name": "有色金属",
+      "strength_level": "黄金产业ETF 20日涨27%，工业有色金属ETF 8月26日涨3.11%",
+      "reason_text": "有色金属在8月21日、24日、26日、28日四天走强，黄金产业ETF 20日涨幅超26%为全周最强趋势基金，铅锌铜镍钴等多个细分板块同步上涨，但8月31日掉出前排，近期有所降温。",
       "reference_list": [
-        "board rank 1: pct_change=3.0548"
+        "5只黄金产业ETF 8月21日涨3.95%-4.74%，20日涨幅26.6%-27.3%为全周最高",
+        "8月21日金属铅涨3.60%、金属锌涨3.34%、黄金概念涨2.46%、金属铜涨2.31%",
+        "8月26日金属锌涨2.37%、金属铅涨2.37%、金属铜涨2.24%，工业有色金属ETF涨3.0%-3.11%",
+        "紫金矿业8月31日高成交额但跌2.83%，有色金属板块8月31日未进入top30"
       ]
     },
     {
       "rank_no": 5,
-      "industry_name": "国家大基金持股",
-      "strength_level": "观察",
-      "reason_text": "Fallback score 8.0; ranked by repeated weekly board, limit-up and high-momentum evidence.",
+      "industry_name": "医药生物",
+      "strength_level": "疫苗与生物技术ETF 8月20日涨8.5%-10%，港股通医疗ETF 8月25日涨超4%",
+      "reason_text": "8月20日生物医药全面爆发，25+个医药细分板块同步大涨，疫苗与生物技术ETF涨停验证，8月25日港股通医疗ETF延续，但后半周明显降温，8月27日之后板块整体退出前排。",
       "reference_list": [
-        "board rank 1: pct_change=4.6298"
-      ]
-    },
-    {
-      "rank_no": 6,
-      "industry_name": "转基因",
-      "strength_level": "观察",
-      "reason_text": "Fallback score 8.0; ranked by repeated weekly board, limit-up and high-momentum evidence.",
-      "reference_list": [
-        "board rank 1: pct_change=9.3"
-      ]
-    },
-    {
-      "rank_no": 7,
-      "industry_name": "化肥",
-      "strength_level": "观察",
-      "reason_text": "Fallback score 7.0; ranked by repeated weekly board, limit-up and high-momentum evidence.",
-      "reference_list": [
-        "board rank 2: pct_change=3.0207"
-      ]
-    },
-    {
-      "rank_no": 8,
-      "industry_name": "存储芯片",
-      "strength_level": "观察",
-      "reason_text": "Fallback score 7.0; ranked by repeated weekly board, limit-up and high-momentum evidence.",
-      "reference_list": [
-        "board rank 2: pct_change=4.5488"
+        "5只疫苗与生物技术ETF 8月20日涨8.5%-10.02%，20日涨幅9.6%-13.3%",
+        "8月20日生物疫苗涨8.06%、细胞免疫治疗涨6.93%、重组蛋白涨6.64%、基因测序涨6.40%，25+板块同步走强",
+        "港股通医疗ETF 8月25日涨3.59%-4.66%，20日涨幅18.6%-19.7%",
+        "8月26日生物疫苗仅涨1.70%，8月27日之后医药板块整体退出top30"
       ]
     }
   ],
   "theme_list": [
     {
       "rank_no": 1,
-      "theme_name": "有色金属/贵金属",
-      "strength_level": "中强",
-      "reason_text": "Fallback score 15.0; ranked by daily main-theme frequency plus board, ETF and news resonance.",
+      "theme_name": "粮食安全",
+      "strength_level": "转基因板块周内6次进入top30，8月18日涨9.30%，8月28日多个农业板块涨幅超3%",
+      "reason_text": "粮食安全是本周频次最高、持续性最强的主线，转基因、玉米、粮食概念appearance_count均为6次，8月18日、24日、25日、27日、28日反复走强，最近3个交易日仍有多板块位居前排。粮食产业ETF多次验证，摩根大通粮食危机研报提供持续催化，产业链覆盖转基因、种植、化肥、农资、土地流转等全链条，新赛股份8月31日涨停进一步确认。",
       "reference_list": [
-        "2026-08-21 daily theme rank 1: 基金与板块高度共振，资源品涨价逻辑明确，是今日最强主线。",
-        "2026-08-24 daily theme rank 2: 有色金属矿业ETF涨幅2.20%且20日涨幅最高达12.64%，板块端黄金概念、金属铅、金属锌、金属"
+        "转基因板块8月18日涨9.30%，appearance_count=6，average_rank_no=5.0",
+        "5只粮食产业ETF 8月18日涨7.76%-10.05%，8月28日涨2.32%，20日涨幅12.54%",
+        "8月28日供销社涨3.05%、化肥涨3.02%、大豆涨3.00%、转基因涨2.93%、粮食概念涨2.92%、玉米涨2.85%，10+板块同步走强",
+        "摩根大通研报指出下一轮全球粮食危机可能于2027年上半年爆发",
+        "新赛股份8月31日涨停（种植业），封单额2.47亿"
       ]
     },
     {
       "rank_no": 2,
-      "theme_name": "转基因",
-      "strength_level": "中强",
-      "reason_text": "Fallback score 13.0; ranked by daily main-theme frequency plus board, ETF and news resonance.",
+      "theme_name": "半导体",
+      "strength_level": "芯片设计ETF 8月27日涨5.71%-6.18%，8月31日涨4.36%，20日涨幅超13%",
+      "reason_text": "8月27日半导体全产业链爆发，10余个细分板块同步大涨4%以上，5只芯片设计ETF集体暴涨验证，8月31日ETF继续涨4.36%且瑞芯微涨停延续。AI算力需求推动半导体产业景气，先进封装设备订单排至2028年，三星与SK海力士加码HBM4。高动量股寒武纪、兆易创新、长鑫科技集中验证，产业链覆盖设计、存储、设备、封装、材料全链条。",
       "reference_list": [
-        "2026-08-18 board signal pct_change=9.3",
-        "2026-08-24 board signal pct_change=1.23",
-        "2026-08-25 board signal pct_change=3.81",
-        "2026-08-28 board signal pct_change=2.9306",
-        "weekly board rank 1: appearance=6"
+        "5只芯片设计ETF 8月27日涨5.71%-6.18%，20日涨幅12.4%-13.3%；8月31日涨4.36%，20日涨幅14%",
+        "8月27日国家大基金持股涨4.63%、存储芯片涨4.55%、光刻机涨4.37%、先进封装涨4.29%、第三代半导体涨3.86%，10+板块同步走强",
+        "瑞芯微8月31日涨停（半导体），寒武纪涨6.26%，兆易创新涨2.31%，长鑫科技高成交额2093万",
+        "申万宏源2026半导体产业发展大会举办，先进封装设备订单排至2028年，三星与SK海力士加码8层HBM4"
       ]
     },
     {
       "rank_no": 3,
-      "theme_name": "农业种植",
-      "strength_level": "中强",
-      "reason_text": "Fallback score 11.5; ranked by daily main-theme frequency plus board, ETF and news resonance.",
+      "theme_name": "CPO",
+      "strength_level": "CPO板块8月27日涨4.47%成交额4216亿全场最高，周内3次进入强势板块",
+      "reason_text": "CPO在8月21日、27日、31日三次走强，8月27日成交额4216亿为全场最高，体现资金深度参与。液冷服务器appearance_count=3，PCB、光纤、铜缆高速连接等AI算力硬件链多板块同步共振。英伟达业绩超预期与CPO商业化进展构成产业催化，中际旭创、新易盛持续高动量验证。虽无直接ETF但板块强度与成交额足以确认为主线。",
       "reference_list": [
-        "2026-08-18 board signal pct_change=3.88",
-        "2026-08-25 daily theme rank 2: 转基因、粮食概念、玉米、农业种植四个板块同步走强且涨幅居前，方向一致性较好，但缺少ETF验证和龙头股",
-        "weekly board rank 5: appearance=3"
+        "CPO板块8月27日涨4.47%，成交额4216亿为全场最高，appearance_count=2",
+        "8月21日CPO涨1.42%、铜缆高速连接涨1.62%、PCB涨1.21%、液冷服务器涨1.27%、F5G涨1.53%、6G涨1.42%，6个板块同步走强",
+        "液冷服务器appearance_count=3，8月31日涨2.95%延续走强",
+        "英伟达业绩与营收指引双双超预期，机构称CPO已正式进入商业化阶段",
+        "中际旭创、新易盛8月31日高动量高成交额，星网锐捷涨停（通信设备）"
       ]
     },
     {
       "rank_no": 4,
-      "theme_name": "粮食概念",
-      "strength_level": "中强",
-      "reason_text": "Fallback score 11.0; ranked by daily main-theme frequency plus board, ETF and news resonance.",
+      "theme_name": "AI视频",
+      "strength_level": "AI视频板块8月31日涨5.74%，影视ETF涨6.33%-7.07%",
+      "reason_text": "8月31日AI+影视传媒/内容生成方向单日爆发，AI视频涨5.74%、短剧游戏涨5.35%，12个内容/传媒/游戏板块同步走强形成全产业链共振。两只影视ETF暴涨6.33%-7.07%提供基金端验证，芒果超媒、中文在线双双涨停。但仅单日爆发，需观察后续能否持续放量及是否有持续产业催化。",
       "reference_list": [
-        "2026-08-18 board signal pct_change=6.52",
-        "2026-08-24 board signal pct_change=1.01",
-        "2026-08-25 board signal pct_change=3.6",
-        "2026-08-28 board signal pct_change=2.915",
-        "weekly board rank 3: appearance=6"
+        "AI视频板块8月31日涨5.74%，短剧游戏涨5.35%，为当日涨幅前二",
+        "两只影视ETF 8月31日涨6.33%-7.07%",
+        "芒果超媒、中文在线8月31日双双涨停（数字媒体），封单额分别为3.88亿、3.66亿",
+        "8月31日12个内容/传媒/游戏板块同步走强：AI视频、短剧游戏、快手概念、AI语料、知识产权保护、文化传媒、手机游戏等",
+        "新闻催化：短剧概念掀涨停潮，数字媒体、影视院线、AI语料等板块涨幅居前"
       ]
     },
     {
       "rank_no": 5,
-      "theme_name": "玉米",
-      "strength_level": "中强",
-      "reason_text": "Fallback score 10.5; ranked by daily main-theme frequency plus board, ETF and news resonance.",
+      "theme_name": "有色金属",
+      "strength_level": "黄金产业ETF 20日涨27%，工业有色金属ETF 8月26日涨3.11%",
+      "reason_text": "有色金属在8月21日、24日、26日、28日四天走强，黄金产业ETF 20日涨幅超26%为全周最强趋势基金，铅锌铜镍钴等多个细分板块同步上涨形成产业链共振。但8月31日有色金属板块整体掉出top30，紫金矿业跌2.83%，近期3天明显降温。前半周强、后半周走弱，标记为cooling。",
       "reference_list": [
-        "2026-08-18 board signal pct_change=7.47",
-        "2026-08-24 board signal pct_change=0.99",
-        "2026-08-25 board signal pct_change=3.31",
-        "weekly board rank 2: appearance=6"
+        "5只黄金产业ETF 8月21日涨3.95%-4.74%，20日涨幅26.6%-27.3%为全周最高",
+        "8月21日金属铅涨3.60%、金属锌涨3.34%、黄金概念涨2.46%、金属铜涨2.31%、金属钴涨1.55%、金属镍涨1.44%，8个细分板块同步走强",
+        "8月26日金属锌涨2.37%、金属铅涨2.37%、金属铜涨2.24%，工业有色金属ETF涨3.0%-3.11%",
+        "8月28日黄金概念涨1.46%、金属锌涨1.38%、金属铅涨1.37%，强度已明显下降",
+        "8月31日有色金属板块未进入top30，紫金矿业跌2.83%"
       ]
     },
     {
       "rank_no": 6,
-      "theme_name": "AI视频",
-      "strength_level": "观察",
-      "reason_text": "Fallback score 8.5; ranked by daily main-theme frequency plus board, ETF and news resonance.",
+      "theme_name": "疫苗",
+      "strength_level": "疫苗与生物技术ETF 8月20日涨8.5%-10%，生物疫苗板块涨8.06%",
+      "reason_text": "8月20日疫苗与生物医药全面爆发，5只疫苗ETF涨停或接近涨停，25+个医药板块同步大涨，生物疫苗涨8.06%为当日最强。8月25日港股通医疗ETF延续走强。但8月26日之后板块整体退出前排，最近3个交易日已明显降温，标记为cooling，不适合追高。",
       "reference_list": [
-        "2026-08-31 board signal pct_change=5.74",
-        "weekly board rank 1: appearance=1"
-      ]
-    },
-    {
-      "rank_no": 7,
-      "theme_name": "供销社",
-      "strength_level": "观察",
-      "reason_text": "Fallback score 8.5; ranked by daily main-theme frequency plus board, ETF and news resonance.",
-      "reference_list": [
-        "2026-08-28 board signal pct_change=3.0548",
-        "weekly board rank 1: appearance=3"
-      ]
-    },
-    {
-      "rank_no": 8,
-      "theme_name": "国家大基金持股",
-      "strength_level": "观察",
-      "reason_text": "Fallback score 8.5; ranked by daily main-theme frequency plus board, ETF and news resonance.",
-      "reference_list": [
-        "2026-08-27 board signal pct_change=4.6298",
-        "weekly board rank 1: appearance=1"
-      ]
-    },
-    {
-      "rank_no": 9,
-      "theme_name": "AI应用与传媒游戏",
-      "strength_level": "观察",
-      "reason_text": "Fallback score 8.0; ranked by daily main-theme frequency plus board, ETF and news resonance.",
-      "reference_list": [
-        "2026-08-31 daily theme rank 1: 影视ETF大涨提供大方向，细分板块中AI视频、短剧游戏、多模态AI、文化传媒等多板块同步爆发，属于同"
-      ]
-    },
-    {
-      "rank_no": 10,
-      "theme_name": "农业种植与农化产业链",
-      "strength_level": "观察",
-      "reason_text": "Fallback score 8.0; ranked by daily main-theme frequency plus board, ETF and news resonance.",
-      "reference_list": [
-        "2026-08-28 daily theme rank 1: 粮食产业ETF与化肥、转基因、粮食概念等多个细分板块同步走强，形成产业链强共振，确认为今日强主线"
-      ]
-    },
-    {
-      "rank_no": 11,
-      "theme_name": "医药医疗",
-      "strength_level": "观察",
-      "reason_text": "Fallback score 8.0; ranked by daily main-theme frequency plus board, ETF and news resonance.",
-      "reference_list": [
-        "2026-08-25 daily theme rank 1: 5只医疗ETF全面大涨且20日趋势强劲，同时top30中有11个医药相关板块同步走强，覆盖肝炎、流感"
-      ]
-    },
-    {
-      "rank_no": 12,
-      "theme_name": "半导体自主可控（芯片设计/存储/设备/材料）",
-      "strength_level": "观察",
-      "reason_text": "Fallback score 8.0; ranked by daily main-theme frequency plus board, ETF and news resonance.",
-      "reference_list": [
-        "2026-08-27 daily theme rank 1: 5只芯片设计ETF齐涨提供强力基金信号，板块端9个半导体细分同步走强，覆盖设计（存储/MCU/汽车芯"
+        "5只疫苗与生物技术ETF 8月20日涨8.5%-10.02%，20日涨幅9.6%-13.3%",
+        "8月20日生物疫苗涨8.06%、细胞免疫治疗涨6.93%、重组蛋白涨6.64%、基因测序涨6.40%、猴痘概念涨5.73%，25+板块同步走强",
+        "港股通医疗ETF 8月25日涨3.59%-4.66%，20日涨幅18.6%-19.7%",
+        "8月26日生物疫苗仅涨1.70%，8月27日之后医药板块整体退出top30，近期明显降温"
       ]
     }
   ]

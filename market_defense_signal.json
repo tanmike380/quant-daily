@@ -2,7 +2,7 @@
   "market_defense_signal": {
     "is_active": false,
     "signal_date": "2026-08-31",
-    "generated_at": "2026-09-01T01:10:44",
+    "generated_at": "2026-09-01T02:28:49",
     "defense_level": "normal_attack",
     "headline_text": "市场防守信号未触发，系统维持正常进攻模式",
     "summary_text": "当前防守分数为1，未达到7分阈值；full pipeline 将继续原始股票筛选链路。",
@@ -16,7 +16,7 @@
         "rule_name": "海外科技股急跌",
         "score": 3,
         "threshold_text": "纳指单日跌幅达到2.5%，或费城半导体指数单日跌幅达到3%。",
-        "observed_text": "纳指-0.40%，费城半导体指数+0.21%。",
+        "observed_text": "纳指-0.37%，费城半导体指数+0.38%。",
         "is_triggered": false,
         "data_source_list": [
           {
@@ -25,8 +25,8 @@
             "source": "yahoo_chart",
             "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EIXIC?range=5d&interval=1d",
             "is_available": true,
-            "close": 26296.2891,
-            "pct_change": -0.402,
+            "close": 26305.1113,
+            "pct_change": -0.3686,
             "error_text": null
           },
           {
@@ -35,8 +35,8 @@
             "source": "yahoo_chart",
             "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ESOX?range=5d&interval=1d",
             "is_available": true,
-            "close": 11493.4678,
-            "pct_change": 0.2076,
+            "close": 11513.4951,
+            "pct_change": 0.3822,
             "error_text": null
           }
         ]
@@ -45,7 +45,7 @@
         "rule_name": "亚太市场风险扩散",
         "score": 2,
         "threshold_text": "韩国、日本等亚太主要市场至少两个单日跌幅达到2%，或韩国KOSPI单日跌幅达到4%。",
-        "observed_text": "韩国KOSPI-1.79%，日经225+0.41%。",
+        "observed_text": "韩国KOSPI-1.79%。",
         "is_triggered": false,
         "data_source_list": [
           {
@@ -63,10 +63,10 @@
             "symbol": "^N225",
             "source": "yahoo_chart",
             "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EN225?range=5d&interval=1d",
-            "is_available": true,
-            "close": 66405.5625,
-            "pct_change": 0.4137,
-            "error_text": null
+            "is_available": false,
+            "close": null,
+            "pct_change": null,
+            "error_text": "URLError: <urlopen error _ssl.c:1112: The handshake operation timed out>"
           }
         ]
       },
@@ -74,7 +74,7 @@
         "rule_name": "利率/美债压力",
         "score": 1,
         "threshold_text": "10年或30年美债收益率单日上行约2%以上，或10年收益率高于4.6%、30年收益率高于5.0%，代表长端利率处于高压区。",
-        "observed_text": "美国10年期收益率4.76%/+0.76%，美国30年期收益率5.25%/+0.88%。",
+        "observed_text": "美国10年期收益率4.76%/+0.81%。",
         "is_triggered": true,
         "data_source_list": [
           {
@@ -83,8 +83,8 @@
             "source": "yahoo_chart",
             "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ETNX?range=5d&interval=1d",
             "is_available": true,
-            "close": 4.756,
-            "pct_change": 0.7627,
+            "close": 4.758,
+            "pct_change": 0.8051,
             "error_text": null
           },
           {
@@ -92,10 +92,10 @@
             "symbol": "^TYX",
             "source": "yahoo_chart",
             "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ETYX?range=5d&interval=1d",
-            "is_available": true,
-            "close": 5.252,
-            "pct_change": 0.8836,
-            "error_text": null
+            "is_available": false,
+            "close": null,
+            "pct_change": null,
+            "error_text": "URLError: <urlopen error _ssl.c:1112: The handshake operation timed out>"
           }
         ]
       },
@@ -178,7 +178,7 @@
       }
     ],
     "trigger_list": [
-      "利率/美债压力：美国10年期收益率4.76%/+0.76%，美国30年期收益率5.25%/+0.88%。"
+      "利率/美债压力：美国10年期收益率4.76%/+0.81%。"
     ],
     "affected_theme_list": [
       "CPO",
@@ -201,9 +201,9 @@
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EIXIC?range=5d&interval=1d",
         "is_available": true,
         "trade_date": "2026-08-31",
-        "close": 26296.2891,
+        "close": 26305.1113,
         "previous_close": 26402.4199,
-        "pct_change": -0.402
+        "pct_change": -0.3686
       },
       {
         "market": "overseas",
@@ -213,9 +213,9 @@
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ESOX?range=5d&interval=1d",
         "is_available": true,
         "trade_date": "2026-08-31",
-        "close": 11493.4678,
+        "close": 11513.4951,
         "previous_close": 11469.6602,
-        "pct_change": 0.2076
+        "pct_change": 0.3822
       },
       {
         "market": "overseas",
@@ -235,11 +235,8 @@
         "name": "日经225",
         "source": "yahoo_chart",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EN225?range=5d&interval=1d",
-        "is_available": true,
-        "trade_date": "2026-08-31",
-        "close": 66405.5625,
-        "previous_close": 66131.9766,
-        "pct_change": 0.4137
+        "is_available": false,
+        "error_text": "URLError: <urlopen error _ssl.c:1112: The handshake operation timed out>"
       },
       {
         "market": "overseas",
@@ -249,9 +246,9 @@
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ETNX?range=5d&interval=1d",
         "is_available": true,
         "trade_date": "2026-08-31",
-        "close": 4.756,
+        "close": 4.758,
         "previous_close": 4.72,
-        "pct_change": 0.7627
+        "pct_change": 0.8051
       },
       {
         "market": "overseas",
@@ -259,11 +256,8 @@
         "name": "美国30年期国债收益率",
         "source": "yahoo_chart",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ETYX?range=5d&interval=1d",
-        "is_available": true,
-        "trade_date": "2026-08-31",
-        "close": 5.252,
-        "previous_close": 5.206,
-        "pct_change": 0.8836
+        "is_available": false,
+        "error_text": "URLError: <urlopen error _ssl.c:1112: The handshake operation timed out>"
       },
       {
         "market": "a_share_theme",
@@ -322,7 +316,8 @@
     ],
     "source_note_list": [
       "海外指数和美债收益率：Yahoo Finance chart 公共行情接口。",
-      "A股高beta主线：Akshare 同花顺概念板块信息接口。"
+      "A股高beta主线：Akshare 同花顺概念板块信息接口。",
+      "部分数据源不可用：日经225，美国30年期国债收益率。不可用数据不会触发规则。"
     ]
   }
 }
