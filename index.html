@@ -5928,7 +5928,7 @@ const INLINE_ONEIL = {
       "after_count": 2247,
       "added_count": 30
     },
-    "published_price_refreshed_at": "2026-09-02T22:57:50",
+    "published_price_refreshed_at": "2026-09-02T23:47:39",
     "published_price_refresh_source": "tushare.daily"
   }
 };
@@ -6320,7 +6320,7 @@ const INLINE_OPEN_DIP = {
   "open_dip_buy_db": {}
 };
 const INLINE_PUBLISH_GENERATED_AT = {
-  "generated_at": "2026-09-02 22:57:49"
+  "generated_at": "2026-09-02 23:47:37"
 };
 
 const STOCK_SEARCH_INDEX_URL = 'data/stock_search_index.json';
@@ -7238,13 +7238,13 @@ const INLINE_MARKET_DEFENSE = {
   "market_defense_signal": {
     "is_active": false,
     "signal_date": "2026-09-02",
-    "generated_at": "2026-09-02T20:21:07",
+    "generated_at": "2026-09-02T23:26:02",
     "defense_level": "normal_attack",
     "headline_text": "市场防守信号未触发，系统维持正常进攻模式",
-    "summary_text": "当前防守分数为0，未达到7分阈值；full pipeline 将继续原始股票筛选链路。",
+    "summary_text": "当前防守分数为1，未达到7分阈值；full pipeline 将继续原始股票筛选链路。",
     "suggested_action_text": "维持正常股票筛选和TOP8推荐。",
     "cool_down_text": "建议观察1-3个交易日：海外科技股不再连续急跌、A股高beta主线缩量止跌，再恢复进攻型TOP8推荐。",
-    "trigger_score": 0,
+    "trigger_score": 1,
     "trigger_threshold": 7,
     "calculation_method_text": "防守分数满分10分，达到7分进入防守模式；达到9分进入空仓防守。单一市场下跌不会直接触发，必须出现跨市场共振或A股主线自身破位。",
     "trigger_rule_list": [
@@ -7252,7 +7252,7 @@ const INLINE_MARKET_DEFENSE = {
         "rule_name": "海外科技股急跌",
         "score": 3,
         "threshold_text": "纳指单日跌幅达到2.5%，或费城半导体指数单日跌幅达到3%。",
-        "observed_text": "数据源暂不可用，未触发该规则。",
+        "observed_text": "纳指+0.53%，费城半导体指数+0.43%。",
         "is_triggered": false,
         "data_source_list": [
           {
@@ -7260,20 +7260,20 @@ const INLINE_MARKET_DEFENSE = {
             "symbol": "^IXIC",
             "source": "yahoo_chart",
             "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EIXIC?range=5d&interval=1d",
-            "is_available": false,
-            "close": null,
-            "pct_change": null,
-            "error_text": "HTTPError: HTTP Error 403: Forbidden"
+            "is_available": true,
+            "close": 26237.1094,
+            "pct_change": 0.5262,
+            "error_text": null
           },
           {
             "name": "费城半导体指数",
             "symbol": "^SOX",
             "source": "yahoo_chart",
             "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ESOX?range=5d&interval=1d",
-            "is_available": false,
-            "close": null,
-            "pct_change": null,
-            "error_text": "HTTPError: HTTP Error 403: Forbidden"
+            "is_available": true,
+            "close": 11337.3691,
+            "pct_change": 0.4319,
+            "error_text": null
           }
         ]
       },
@@ -7281,7 +7281,7 @@ const INLINE_MARKET_DEFENSE = {
         "rule_name": "亚太市场风险扩散",
         "score": 2,
         "threshold_text": "韩国、日本等亚太主要市场至少两个单日跌幅达到2%，或韩国KOSPI单日跌幅达到4%。",
-        "observed_text": "数据源暂不可用，未触发该规则。",
+        "observed_text": "韩国KOSPI+0.23%，日经225-0.15%。",
         "is_triggered": false,
         "data_source_list": [
           {
@@ -7289,20 +7289,20 @@ const INLINE_MARKET_DEFENSE = {
             "symbol": "^KS11",
             "source": "yahoo_chart",
             "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EKS11?range=5d&interval=1d",
-            "is_available": false,
-            "close": null,
-            "pct_change": null,
-            "error_text": "HTTPError: HTTP Error 403: Forbidden"
+            "is_available": true,
+            "close": 6835.7998,
+            "pct_change": 0.2314,
+            "error_text": null
           },
           {
             "name": "日经225",
             "symbol": "^N225",
             "source": "yahoo_chart",
             "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EN225?range=5d&interval=1d",
-            "is_available": false,
-            "close": null,
-            "pct_change": null,
-            "error_text": "HTTPError: HTTP Error 403: Forbidden"
+            "is_available": true,
+            "close": 66215.3438,
+            "pct_change": -0.1457,
+            "error_text": null
           }
         ]
       },
@@ -7310,28 +7310,28 @@ const INLINE_MARKET_DEFENSE = {
         "rule_name": "利率/美债压力",
         "score": 1,
         "threshold_text": "10年或30年美债收益率单日上行约2%以上，或10年收益率高于4.6%、30年收益率高于5.0%，代表长端利率处于高压区。",
-        "observed_text": "数据源暂不可用，未触发该规则。",
-        "is_triggered": false,
+        "observed_text": "美国10年期收益率4.80%/+0.17%，美国30年期收益率5.28%/+0.13%。",
+        "is_triggered": true,
         "data_source_list": [
           {
             "name": "美国10年期国债收益率",
             "symbol": "^TNX",
             "source": "yahoo_chart",
             "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ETNX?range=5d&interval=1d",
-            "is_available": false,
-            "close": null,
-            "pct_change": null,
-            "error_text": "HTTPError: HTTP Error 403: Forbidden"
+            "is_available": true,
+            "close": 4.804,
+            "pct_change": 0.1668,
+            "error_text": null
           },
           {
             "name": "美国30年期国债收益率",
             "symbol": "^TYX",
             "source": "yahoo_chart",
             "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ETYX?range=5d&interval=1d",
-            "is_available": false,
-            "close": null,
-            "pct_change": null,
-            "error_text": "HTTPError: HTTP Error 403: Forbidden"
+            "is_available": true,
+            "close": 5.275,
+            "pct_change": 0.1329,
+            "error_text": null
           }
         ]
       },
@@ -7413,7 +7413,9 @@ const INLINE_MARKET_DEFENSE = {
         "data_source_list": []
       }
     ],
-    "trigger_list": [],
+    "trigger_list": [
+      "利率/美债压力：美国10年期收益率4.80%/+0.17%，美国30年期收益率5.28%/+0.13%。"
+    ],
     "affected_theme_list": [
       "CPO",
       "半导体",
@@ -7433,8 +7435,11 @@ const INLINE_MARKET_DEFENSE = {
         "name": "纳斯达克综合指数",
         "source": "yahoo_chart",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EIXIC?range=5d&interval=1d",
-        "is_available": false,
-        "error_text": "HTTPError: HTTP Error 403: Forbidden"
+        "is_available": true,
+        "trade_date": "2026-09-02",
+        "close": 26237.1094,
+        "previous_close": 26099.7695,
+        "pct_change": 0.5262
       },
       {
         "market": "overseas",
@@ -7442,8 +7447,11 @@ const INLINE_MARKET_DEFENSE = {
         "name": "费城半导体指数",
         "source": "yahoo_chart",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ESOX?range=5d&interval=1d",
-        "is_available": false,
-        "error_text": "HTTPError: HTTP Error 403: Forbidden"
+        "is_available": true,
+        "trade_date": "2026-09-02",
+        "close": 11337.3691,
+        "previous_close": 11288.6104,
+        "pct_change": 0.4319
       },
       {
         "market": "overseas",
@@ -7451,8 +7459,11 @@ const INLINE_MARKET_DEFENSE = {
         "name": "韩国KOSPI",
         "source": "yahoo_chart",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EKS11?range=5d&interval=1d",
-        "is_available": false,
-        "error_text": "HTTPError: HTTP Error 403: Forbidden"
+        "is_available": true,
+        "trade_date": "2026-09-02",
+        "close": 6835.7998,
+        "previous_close": 6820.02,
+        "pct_change": 0.2314
       },
       {
         "market": "overseas",
@@ -7460,8 +7471,11 @@ const INLINE_MARKET_DEFENSE = {
         "name": "日经225",
         "source": "yahoo_chart",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EN225?range=5d&interval=1d",
-        "is_available": false,
-        "error_text": "HTTPError: HTTP Error 403: Forbidden"
+        "is_available": true,
+        "trade_date": "2026-09-02",
+        "close": 66215.3438,
+        "previous_close": 66311.9297,
+        "pct_change": -0.1457
       },
       {
         "market": "overseas",
@@ -7469,8 +7483,11 @@ const INLINE_MARKET_DEFENSE = {
         "name": "美国10年期国债收益率",
         "source": "yahoo_chart",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ETNX?range=5d&interval=1d",
-        "is_available": false,
-        "error_text": "HTTPError: HTTP Error 403: Forbidden"
+        "is_available": true,
+        "trade_date": "2026-09-02",
+        "close": 4.804,
+        "previous_close": 4.796,
+        "pct_change": 0.1668
       },
       {
         "market": "overseas",
@@ -7478,8 +7495,11 @@ const INLINE_MARKET_DEFENSE = {
         "name": "美国30年期国债收益率",
         "source": "yahoo_chart",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ETYX?range=5d&interval=1d",
-        "is_available": false,
-        "error_text": "HTTPError: HTTP Error 403: Forbidden"
+        "is_available": true,
+        "trade_date": "2026-09-02",
+        "close": 5.275,
+        "previous_close": 5.268,
+        "pct_change": 0.1329
       },
       {
         "market": "a_share_theme",
@@ -7538,8 +7558,7 @@ const INLINE_MARKET_DEFENSE = {
     ],
     "source_note_list": [
       "海外指数和美债收益率：Yahoo Finance chart 公共行情接口。",
-      "A股高beta主线：Akshare 同花顺概念板块信息接口。",
-      "部分数据源不可用：纳斯达克综合指数，费城半导体指数，韩国KOSPI，日经225，美国10年期国债收益率。不可用数据不会触发规则。"
+      "A股高beta主线：Akshare 同花顺概念板块信息接口。"
     ]
   }
 };
