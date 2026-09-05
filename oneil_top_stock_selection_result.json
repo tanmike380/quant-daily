@@ -58,9 +58,9 @@
           "oneil_canslim_view": {
             "level": "strong",
             "target_price_range": {
-              "low": 216.58,
-              "center": 221.33,
-              "high": 226.07,
+              "low": 209.01,
+              "center": 213.59,
+              "high": 218.17,
               "currency": "CNY"
             },
             "bull_case_text": "目标区间由 oneil_calculator_signal 锁定；Top selector 只判断该区间是否能被 CAN SLIM 证据支持，不再自行改写数值。",
@@ -70,8 +70,8 @@
           "invalid_condition": "若AI算力资本开支放缓导致高端PCB订单不及预期，或产能投放后利用率不足导致毛利率下滑，目标区间将失效。",
           "calculator_lock_status": "locked",
           "current_price_reference": {
-            "latest_trade_date": "2026-09-03",
-            "latest_close_price": 158.15,
+            "latest_trade_date": "2026-09-04",
+            "latest_close_price": 152.62,
             "source": "publish_price_refresh.tushare_daily"
           },
           "target_price_consistency_status": "ready"
@@ -84,16 +84,16 @@
             "source": "rule_fallback",
             "reason_text": "近20日平均换手率约7.6982%，20日平均成交额约2340050.8646，20日平均流通市值约2995467.5042，符合低换手、高容量承接或容量核心识别的机构大票/中军特征。"
           },
-          "current_price": 158.15,
+          "current_price": 152.62,
           "predicted_upside_pct_range": {
-            "low": 36.9459,
-            "center": 39.9494,
-            "high": 42.9466
+            "low": 36.948,
+            "center": 39.9489,
+            "high": 42.9498
           },
           "predicted_target_price_range": {
-            "low": 216.58,
-            "center": 221.33,
-            "high": 226.07,
+            "low": 209.01,
+            "center": 213.59,
+            "high": 218.17,
             "currency": "CNY"
           },
           "fresh_calculation_upside_pct_range": {
@@ -102,21 +102,21 @@
             "high": 42.9509
           },
           "fresh_calculation_target_price_range": {
-            "low": 216.59,
-            "center": 221.33,
-            "high": 226.08,
+            "low": 209.01,
+            "center": 213.59,
+            "high": 218.17,
             "currency": "CNY"
           },
           "target_price_calculation_signal": {
             "status": "price_rebased_from_persisted_upside",
             "source": "oneil_calculator",
             "target_price_range": {
-              "low": 216.58,
-              "center": 221.33,
-              "high": 226.07,
+              "low": 209.01,
+              "center": 213.59,
+              "high": 218.17,
               "currency": "CNY"
             },
-            "current_price": 158.15,
+            "current_price": 152.62,
             "reason_text": "沿用低频维护的上涨百分比区间，并按最新收盘价重新映射为当前价格目标区间。"
           },
           "factor_score_map": {
@@ -171,7 +171,7 @@
             "stock_name": "广合科技",
             "updated_at": "2026-09-01",
             "source_result_date": "2026-09-01",
-            "latest_trade_date": "2026-09-03",
+            "latest_trade_date": "2026-09-04",
             "research_coverage_status": "can_slim_available",
             "source": "target_price_calculator_db",
             "price_refresh_source": "can_slim_research_db.current_fundamental_signal"
@@ -276,9 +276,9 @@
           "oneil_canslim_view": {
             "level": "strong",
             "target_price_range": {
-              "low": 159.76,
-              "center": 164.05,
-              "high": 168.34,
+              "low": 153.41,
+              "center": 157.53,
+              "high": 161.65,
               "currency": "CNY"
             },
             "bull_case_text": "目标区间由 oneil_calculator_signal 锁定；Top selector 只判断该区间是否能被 CAN SLIM 证据支持，不再自行改写数值。",
@@ -288,8 +288,8 @@
           "invalid_condition": "目标区间将在以下条件下失效：1）AI算力链主线退潮，CPO/半导体板块持续降温导致高端覆铜板需求不及预期；2）后续季度业绩增速大幅放缓（如单季净利增速降至30%以下），证明半年报高增为一次性脉冲；3）高端材料ASP提升逻辑被证伪，毛利率回落至28%以下；4）大单资金持续大幅净流出且融资余额继续减少，交易承接持续恶化；5）出现重大减持、解禁或财务风险事件。",
           "calculator_lock_status": "locked",
           "current_price_reference": {
-            "latest_trade_date": "2026-09-03",
-            "latest_close_price": 143.19,
+            "latest_trade_date": "2026-09-04",
+            "latest_close_price": 137.5,
             "source": "publish_price_refresh.tushare_daily"
           },
           "target_price_consistency_status": "ready"
@@ -302,16 +302,16 @@
             "source": "rule_fallback",
             "reason_text": "近20日平均换手率约2.9872%，20日平均成交额约9285960.6358，20日平均流通市值约30768801.585，符合低换手、高容量承接或容量核心识别的机构大票/中军特征。"
           },
-          "current_price": 143.19,
+          "current_price": 137.5,
           "predicted_upside_pct_range": {
-            "low": 11.572,
-            "center": 14.5681,
-            "high": 17.5641
+            "low": 11.5709,
+            "center": 14.5673,
+            "high": 17.5636
           },
           "predicted_target_price_range": {
-            "low": 159.76,
-            "center": 164.05,
-            "high": 168.34,
+            "low": 153.41,
+            "center": 157.53,
+            "high": 161.65,
             "currency": "CNY"
           },
           "fresh_calculation_upside_pct_range": {
@@ -320,21 +320,21 @@
             "high": 17.569
           },
           "fresh_calculation_target_price_range": {
-            "low": 159.76,
-            "center": 164.05,
-            "high": 168.35,
+            "low": 153.41,
+            "center": 157.53,
+            "high": 161.66,
             "currency": "CNY"
           },
           "target_price_calculation_signal": {
             "status": "price_rebased_from_persisted_upside",
             "source": "oneil_calculator",
             "target_price_range": {
-              "low": 159.76,
-              "center": 164.05,
-              "high": 168.34,
+              "low": 153.41,
+              "center": 157.53,
+              "high": 161.65,
               "currency": "CNY"
             },
-            "current_price": 143.19,
+            "current_price": 137.5,
             "reason_text": "沿用低频维护的上涨百分比区间，并按最新收盘价重新映射为当前价格目标区间。"
           },
           "factor_score_map": {
@@ -389,7 +389,7 @@
             "stock_name": "生益科技",
             "updated_at": "2026-09-01",
             "source_result_date": "2026-09-01",
-            "latest_trade_date": "2026-09-03",
+            "latest_trade_date": "2026-09-04",
             "research_coverage_status": "can_slim_available",
             "source": "target_price_calculator_db",
             "price_refresh_source": "can_slim_research_db.current_fundamental_signal"
@@ -497,9 +497,9 @@
           "oneil_canslim_view": {
             "level": "strong",
             "target_price_range": {
-              "low": 79.12,
-              "center": 81.07,
-              "high": 83.03,
+              "low": 75.4,
+              "center": 77.26,
+              "high": 79.13,
               "currency": "CNY"
             },
             "bull_case_text": "目标区间由 oneil_calculator_signal 锁定；Top selector 只判断该区间是否能被 CAN SLIM 证据支持，不再自行改写数值。",
@@ -509,8 +509,8 @@
           "invalid_condition": "下一季度财报经营现金流无改善甚至恶化；CPO/光通信主线整体退潮且资金大幅流出；跌破 MA20 且无法快速收回；融资余额持续大幅减少且大单资金转为持续净流出；光纤涨价预期落空或行业招标量价不及预期。",
           "calculator_lock_status": "locked",
           "current_price_reference": {
-            "latest_trade_date": "2026-09-03",
-            "latest_close_price": 65.29,
+            "latest_trade_date": "2026-09-04",
+            "latest_close_price": 62.22,
             "source": "publish_price_refresh.tushare_daily"
           },
           "target_price_consistency_status": "ready"
@@ -523,16 +523,16 @@
             "source": "rule_fallback",
             "reason_text": "近20日平均换手率约9.0872%，20日平均成交额约12655984.1378，20日平均流通市值约13812433.7989，符合低换手、高容量承接或容量核心识别的机构大票/中军特征。"
           },
-          "current_price": 65.29,
+          "current_price": 62.22,
           "predicted_upside_pct_range": {
-            "low": 21.1824,
-            "center": 24.1691,
-            "high": 27.1711
+            "low": 21.1829,
+            "center": 24.1723,
+            "high": 27.1778
           },
           "predicted_target_price_range": {
-            "low": 79.12,
-            "center": 81.07,
-            "high": 83.03,
+            "low": 75.4,
+            "center": 77.26,
+            "high": 79.13,
             "currency": "CNY"
           },
           "fresh_calculation_upside_pct_range": {
@@ -541,21 +541,21 @@
             "high": 27.1744
           },
           "fresh_calculation_target_price_range": {
-            "low": 79.11,
-            "center": 81.07,
-            "high": 83.03,
+            "low": 75.39,
+            "center": 77.26,
+            "high": 79.13,
             "currency": "CNY"
           },
           "target_price_calculation_signal": {
             "status": "price_rebased_from_persisted_upside",
             "source": "oneil_calculator",
             "target_price_range": {
-              "low": 79.12,
-              "center": 81.07,
-              "high": 83.03,
+              "low": 75.4,
+              "center": 77.26,
+              "high": 79.13,
               "currency": "CNY"
             },
-            "current_price": 65.29,
+            "current_price": 62.22,
             "reason_text": "沿用低频维护的上涨百分比区间，并按最新收盘价重新映射为当前价格目标区间。"
           },
           "factor_score_map": {
@@ -610,7 +610,7 @@
             "stock_name": "亨通光电",
             "updated_at": "2026-09-01",
             "source_result_date": "2026-09-01",
-            "latest_trade_date": "2026-09-03",
+            "latest_trade_date": "2026-09-04",
             "research_coverage_status": "can_slim_available",
             "source": "target_price_calculator_db",
             "price_refresh_source": "can_slim_research_db.current_fundamental_signal"
@@ -721,9 +721,9 @@
           "oneil_canslim_view": {
             "level": "medium",
             "target_price_range": {
-              "low": 56.51,
-              "center": 57.97,
-              "high": 59.43,
+              "low": 53.17,
+              "center": 54.53,
+              "high": 55.91,
               "currency": "CNY"
             },
             "bull_case_text": "目标区间由 oneil_calculator_signal 锁定；Top selector 只判断该区间是否能被 CAN SLIM 证据支持，不再自行改写数值。",
@@ -733,8 +733,8 @@
           "invalid_condition": "目标区间在以下条件下失效：1) 连续两季经营现金流无改善或扣非净利环比下滑；2) 半导体/CPO 主线退潮或氟化工产品价格大幅下跌；3) 大资金持续净流出且融资盘撤离；4) 跌破 60 日均线且短期无法收复；5) 在建产能投放延迟或高端氟材料需求不及预期。",
           "calculator_lock_status": "locked",
           "current_price_reference": {
-            "latest_trade_date": "2026-09-03",
-            "latest_close_price": 48.63,
+            "latest_trade_date": "2026-09-04",
+            "latest_close_price": 45.75,
             "source": "publish_price_refresh.tushare_daily"
           },
           "target_price_consistency_status": "ready"
@@ -747,16 +747,16 @@
             "source": "rule_fallback",
             "reason_text": "近20日平均换手率约8.9594%，20日平均成交额约6514275.2265，20日平均流通市值约7192355.431，符合低换手、高容量承接或容量核心识别的机构大票/中军特征。"
           },
-          "current_price": 48.63,
+          "current_price": 45.75,
           "predicted_upside_pct_range": {
-            "low": 16.204,
-            "center": 19.2063,
-            "high": 22.2085
+            "low": 16.2186,
+            "center": 19.1913,
+            "high": 22.2077
           },
           "predicted_target_price_range": {
-            "low": 56.51,
-            "center": 57.97,
-            "high": 59.43,
+            "low": 53.17,
+            "center": 54.53,
+            "high": 55.91,
             "currency": "CNY"
           },
           "fresh_calculation_upside_pct_range": {
@@ -765,21 +765,21 @@
             "high": 22.2075
           },
           "fresh_calculation_target_price_range": {
-            "low": 56.51,
-            "center": 57.97,
-            "high": 59.43,
+            "low": 53.16,
+            "center": 54.54,
+            "high": 55.91,
             "currency": "CNY"
           },
           "target_price_calculation_signal": {
             "status": "price_rebased_from_persisted_upside",
             "source": "oneil_calculator",
             "target_price_range": {
-              "low": 56.51,
-              "center": 57.97,
-              "high": 59.43,
+              "low": 53.17,
+              "center": 54.53,
+              "high": 55.91,
               "currency": "CNY"
             },
-            "current_price": 48.63,
+            "current_price": 45.75,
             "reason_text": "沿用低频维护的上涨百分比区间，并按最新收盘价重新映射为当前价格目标区间。"
           },
           "factor_score_map": {
@@ -834,7 +834,7 @@
             "stock_name": "昊华科技",
             "updated_at": "2026-09-01",
             "source_result_date": "2026-09-01",
-            "latest_trade_date": "2026-09-03",
+            "latest_trade_date": "2026-09-04",
             "research_coverage_status": "can_slim_available",
             "source": "target_price_calculator_db",
             "price_refresh_source": "can_slim_research_db.current_fundamental_signal"
@@ -947,9 +947,9 @@
           "oneil_canslim_view": {
             "level": "strong",
             "target_price_range": {
-              "low": 41.07,
-              "center": 42.06,
-              "high": 43.05,
+              "low": 39.56,
+              "center": 40.51,
+              "high": 41.46,
               "currency": "CNY"
             },
             "bull_case_text": "目标区间由 oneil_calculator_signal 锁定；Top selector 只判断该区间是否能被 CAN SLIM 证据支持，不再自行改写数值。",
@@ -959,8 +959,8 @@
           "invalid_condition": "目标区间将在以下条件下失效：1）2026H2营收或利润增速显著低于50%预告下限；2）经营现金流持续恶化或出现大额坏账计提；3）CPO/半导体主线整体退潮且资金持续大幅流出；4）空芯光纤商业化进展不及预期或被竞品替代；5）跌破20日均线且无法快速收回，技术结构进一步恶化。",
           "calculator_lock_status": "locked",
           "current_price_reference": {
-            "latest_trade_date": "2026-09-03",
-            "latest_close_price": 32.91,
+            "latest_trade_date": "2026-09-04",
+            "latest_close_price": 31.7,
             "source": "publish_price_refresh.tushare_daily"
           },
           "target_price_consistency_status": "ready"
@@ -973,16 +973,16 @@
             "source": "rule_fallback",
             "reason_text": "近20日平均换手率约7.3183%，20日平均成交额约8119974.9451，20日平均流通市值约11010175.7322，符合低换手、高容量承接或容量核心识别的机构大票/中军特征。"
           },
-          "current_price": 32.91,
+          "current_price": 31.7,
           "predicted_upside_pct_range": {
-            "low": 24.7949,
-            "center": 27.8031,
-            "high": 30.8113
+            "low": 24.795,
+            "center": 27.7918,
+            "high": 30.7886
           },
           "predicted_target_price_range": {
-            "low": 41.07,
-            "center": 42.06,
-            "high": 43.05,
+            "low": 39.56,
+            "center": 40.51,
+            "high": 41.46,
             "currency": "CNY"
           },
           "fresh_calculation_upside_pct_range": {
@@ -991,21 +991,21 @@
             "high": 30.788
           },
           "fresh_calculation_target_price_range": {
-            "low": 41.07,
-            "center": 42.06,
-            "high": 43.04,
+            "low": 39.56,
+            "center": 40.51,
+            "high": 41.46,
             "currency": "CNY"
           },
           "target_price_calculation_signal": {
             "status": "price_rebased_from_persisted_upside",
             "source": "oneil_calculator",
             "target_price_range": {
-              "low": 41.07,
-              "center": 42.06,
-              "high": 43.05,
+              "low": 39.56,
+              "center": 40.51,
+              "high": 41.46,
               "currency": "CNY"
             },
-            "current_price": 32.91,
+            "current_price": 31.7,
             "reason_text": "沿用低频维护的上涨百分比区间，并按最新收盘价重新映射为当前价格目标区间。"
           },
           "factor_score_map": {
@@ -1060,7 +1060,7 @@
             "stock_name": "中天科技",
             "updated_at": "2026-09-01",
             "source_result_date": "2026-09-01",
-            "latest_trade_date": "2026-09-03",
+            "latest_trade_date": "2026-09-04",
             "research_coverage_status": "can_slim_available",
             "source": "target_price_calculator_db",
             "price_refresh_source": "can_slim_research_db.current_fundamental_signal"
@@ -1169,9 +1169,9 @@
           "oneil_canslim_view": {
             "level": "medium",
             "target_price_range": {
-              "low": 38.13,
-              "center": 38.13,
-              "high": 40.04,
+              "low": 35.27,
+              "center": 35.27,
+              "high": 37.03,
               "currency": "CNY"
             },
             "bull_case_text": "目标区间由 oneil_calculator_signal 锁定；Top selector 只判断该区间是否能被 CAN SLIM 证据支持，不再自行改写数值。",
@@ -1181,8 +1181,8 @@
           "invalid_condition": "目标区间将失效如果：（1）下一季度财报利润增速显著放缓或现金流继续恶化；（2）AI算力资本开支周期放缓或大客户砍单；（3）CPO/半导体主线持续退潮且大资金持续净流出；（4）定增落地导致股本稀释；（5）新华三交换机/服务器市场份额因竞争下滑。",
           "calculator_lock_status": "locked",
           "current_price_reference": {
-            "latest_trade_date": "2026-09-03",
-            "latest_close_price": 38.13,
+            "latest_trade_date": "2026-09-04",
+            "latest_close_price": 35.27,
             "source": "publish_price_refresh.tushare_daily"
           },
           "target_price_consistency_status": "target_range_not_above_current_price",
@@ -1196,16 +1196,16 @@
             "source": "rule_fallback",
             "reason_text": "科技主线但龙头地位不够明确，按高波动弹性配置。"
           },
-          "current_price": 38.13,
+          "current_price": 35.27,
           "predicted_upside_pct_range": {
             "low": 0.0,
             "center": 0.0,
-            "high": 5.0092
+            "high": 4.9901
           },
           "predicted_target_price_range": {
-            "low": 38.13,
-            "center": 38.13,
-            "high": 40.04,
+            "low": 35.27,
+            "center": 35.27,
+            "high": 37.03,
             "currency": "CNY"
           },
           "fresh_calculation_upside_pct_range": {
@@ -1214,21 +1214,21 @@
             "high": 5.0
           },
           "fresh_calculation_target_price_range": {
-            "low": 38.13,
-            "center": 38.13,
-            "high": 40.04,
+            "low": 35.27,
+            "center": 35.27,
+            "high": 37.03,
             "currency": "CNY"
           },
           "target_price_calculation_signal": {
             "status": "price_rebased_from_persisted_upside",
             "source": "oneil_calculator",
             "target_price_range": {
-              "low": 38.13,
-              "center": 38.13,
-              "high": 40.04,
+              "low": 35.27,
+              "center": 35.27,
+              "high": 37.03,
               "currency": "CNY"
             },
-            "current_price": 38.13,
+            "current_price": 35.27,
             "reason_text": "沿用低频维护的上涨百分比区间，并按最新收盘价重新映射为当前价格目标区间。"
           },
           "factor_score_map": {
@@ -1283,7 +1283,7 @@
             "stock_name": "紫光股份",
             "updated_at": "2026-09-01",
             "source_result_date": "2026-09-01",
-            "latest_trade_date": "2026-09-03",
+            "latest_trade_date": "2026-09-04",
             "research_coverage_status": "can_slim_available",
             "source": "target_price_calculator_db",
             "price_refresh_source": "can_slim_research_db.current_fundamental_signal"
@@ -1392,9 +1392,9 @@
           "oneil_canslim_view": {
             "level": "strong",
             "target_price_range": {
-              "low": 118.02,
-              "center": 121.0,
-              "high": 123.97,
+              "low": 113.99,
+              "center": 116.86,
+              "high": 119.74,
               "currency": "CNY"
             },
             "bull_case_text": "目标区间由 oneil_calculator_signal 锁定；Top selector 只判断该区间是否能被 CAN SLIM 证据支持，不再自行改写数值。",
@@ -1404,8 +1404,8 @@
           "invalid_condition": "连续两季经营现金流无改善或扣非净利环比下滑，或CPO/半导体主线退潮，或放量跌破关键均线支撑。",
           "calculator_lock_status": "locked",
           "current_price_reference": {
-            "latest_trade_date": "2026-09-03",
-            "latest_close_price": 98.98,
+            "latest_trade_date": "2026-09-04",
+            "latest_close_price": 95.6,
             "source": "publish_price_refresh.tushare_daily"
           },
           "target_price_consistency_status": "ready"
@@ -1418,16 +1418,16 @@
             "source": "rule_fallback",
             "reason_text": "近20日平均换手率约6.3416%，20日平均成交额约6749935.1867，20日平均流通市值约10641090.0873，符合低换手、高容量承接或容量核心识别的机构大票/中军特征。"
           },
-          "current_price": 98.98,
+          "current_price": 95.6,
           "predicted_upside_pct_range": {
-            "low": 19.2362,
-            "center": 22.2469,
-            "high": 25.2475
+            "low": 19.2364,
+            "center": 22.2385,
+            "high": 25.251
           },
           "predicted_target_price_range": {
-            "low": 118.02,
-            "center": 121.0,
-            "high": 123.97,
+            "low": 113.99,
+            "center": 116.86,
+            "high": 119.74,
             "currency": "CNY"
           },
           "fresh_calculation_upside_pct_range": {
@@ -1436,21 +1436,21 @@
             "high": 25.2397
           },
           "fresh_calculation_target_price_range": {
-            "low": 118.02,
-            "center": 120.99,
-            "high": 123.96,
+            "low": 113.99,
+            "center": 116.86,
+            "high": 119.73,
             "currency": "CNY"
           },
           "target_price_calculation_signal": {
             "status": "price_rebased_from_persisted_upside",
             "source": "oneil_calculator",
             "target_price_range": {
-              "low": 118.02,
-              "center": 121.0,
-              "high": 123.97,
+              "low": 113.99,
+              "center": 116.86,
+              "high": 119.74,
               "currency": "CNY"
             },
-            "current_price": 98.98,
+            "current_price": 95.6,
             "reason_text": "沿用低频维护的上涨百分比区间，并按最新收盘价重新映射为当前价格目标区间。"
           },
           "factor_score_map": {
@@ -1505,7 +1505,7 @@
             "stock_name": "华工科技",
             "updated_at": "2026-09-01",
             "source_result_date": "2026-09-01",
-            "latest_trade_date": "2026-09-03",
+            "latest_trade_date": "2026-09-04",
             "research_coverage_status": "can_slim_available",
             "source": "target_price_calculator_db",
             "price_refresh_source": "can_slim_research_db.current_fundamental_signal"
@@ -1616,9 +1616,9 @@
           "oneil_canslim_view": {
             "level": "medium",
             "target_price_range": {
-              "low": 393.46,
-              "center": 393.46,
-              "high": 405.27,
+              "low": 378.8,
+              "center": 378.8,
+              "high": 390.17,
               "currency": "CNY"
             },
             "bull_case_text": "目标区间由 oneil_calculator_signal 锁定；Top selector 只判断该区间是否能被 CAN SLIM 证据支持，不再自行改写数值。",
@@ -1628,8 +1628,8 @@
           "invalid_condition": "若下一季度财报营收或利润增速显著放缓、AI算力/CPO主线整体退潮资金大幅流出、光纤光缆产品价格出现明显下行、或跌破20日均线且无法快速收回，则目标区间完全失效。",
           "calculator_lock_status": "locked",
           "current_price_reference": {
-            "latest_trade_date": "2026-09-03",
-            "latest_close_price": 393.46,
+            "latest_trade_date": "2026-09-04",
+            "latest_close_price": 378.8,
             "source": "publish_price_refresh.tushare_daily"
           },
           "target_price_consistency_status": "target_range_not_above_current_price",
@@ -1643,16 +1643,16 @@
             "source": "rule_fallback",
             "reason_text": "近20日平均换手率约3.6934%，20日平均成交额约5015343.6226，20日平均流通市值约13429480.815，符合低换手、高容量承接或容量核心识别的机构大票/中军特征。"
           },
-          "current_price": 393.46,
+          "current_price": 378.8,
           "predicted_upside_pct_range": {
             "low": 0.0,
             "center": 0.0,
             "high": 3.0016
           },
           "predicted_target_price_range": {
-            "low": 393.46,
-            "center": 393.46,
-            "high": 405.27,
+            "low": 378.8,
+            "center": 378.8,
+            "high": 390.17,
             "currency": "CNY"
           },
           "fresh_calculation_upside_pct_range": {
@@ -1661,21 +1661,21 @@
             "high": 3.0
           },
           "fresh_calculation_target_price_range": {
-            "low": 393.46,
-            "center": 393.46,
-            "high": 405.26,
+            "low": 378.8,
+            "center": 378.8,
+            "high": 390.16,
             "currency": "CNY"
           },
           "target_price_calculation_signal": {
             "status": "price_rebased_from_persisted_upside",
             "source": "oneil_calculator",
             "target_price_range": {
-              "low": 393.46,
-              "center": 393.46,
-              "high": 405.27,
+              "low": 378.8,
+              "center": 378.8,
+              "high": 390.17,
               "currency": "CNY"
             },
-            "current_price": 393.46,
+            "current_price": 378.8,
             "reason_text": "沿用低频维护的上涨百分比区间，并按最新收盘价重新映射为当前价格目标区间。"
           },
           "factor_score_map": {
@@ -1730,7 +1730,7 @@
             "stock_name": "长飞光纤",
             "updated_at": "2026-09-01",
             "source_result_date": "2026-09-01",
-            "latest_trade_date": "2026-09-03",
+            "latest_trade_date": "2026-09-04",
             "research_coverage_status": "can_slim_available",
             "source": "target_price_calculator_db",
             "price_refresh_source": "can_slim_research_db.current_fundamental_signal"
@@ -5374,7 +5374,7 @@
       "added_count": 30
     },
     "published_source_date": "2026-09-03",
-    "published_price_refreshed_at": "2026-09-04T03:14:44",
+    "published_price_refreshed_at": "2026-09-05T18:47:15",
     "published_price_refresh_source": "tushare.daily"
   }
 }
