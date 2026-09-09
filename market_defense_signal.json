@@ -1,8 +1,8 @@
 {
   "market_defense_signal": {
     "is_active": false,
-    "signal_date": "2026-09-08",
-    "generated_at": "2026-09-08T20:02:14",
+    "signal_date": "2026-09-09",
+    "generated_at": "2026-09-09T20:11:46",
     "defense_level": "normal_attack",
     "headline_text": "市场防守信号未触发，系统维持正常进攻模式",
     "summary_text": "当前防守分数为0，未达到7分阈值；full pipeline 将继续原始股票筛选链路。",
@@ -114,7 +114,7 @@
             "is_available": false,
             "close": null,
             "pct_change": null,
-            "error_text": "ConnectionError: HTTPSConnectionPool(host='q.10jqka.com.cn', port=443): Max retries exceeded with url: /gn/detail/code/307822/ (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x10919ad00>: Failed to resolve 'q.10jqka.com.cn' ([Errno 8] nodename nor servname provided, or not known)\"))"
+            "error_text": "ConnectionError: HTTPSConnectionPool(host='q.10jqka.com.cn', port=443): Max retries exceeded with url: /gn/detail/code/307822/ (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x112fade50>: Failed to resolve 'q.10jqka.com.cn' ([Errno 8] nodename nor servname provided, or not known)\"))"
           },
           {
             "name": "PCB概念",
@@ -124,7 +124,7 @@
             "is_available": false,
             "close": null,
             "pct_change": null,
-            "error_text": "ConnectionError: HTTPSConnectionPool(host='q.10jqka.com.cn', port=443): Max retries exceeded with url: /gn/detail/code/307822/ (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x1091c4a00>: Failed to resolve 'q.10jqka.com.cn' ([Errno 8] nodename nor servname provided, or not known)\"))"
+            "error_text": "ConnectionError: HTTPSConnectionPool(host='q.10jqka.com.cn', port=443): Max retries exceeded with url: /gn/detail/code/307822/ (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x112fd6b20>: Failed to resolve 'q.10jqka.com.cn' ([Errno 8] nodename nor servname provided, or not known)\"))"
           },
           {
             "name": "先进封装",
@@ -134,7 +134,7 @@
             "is_available": false,
             "close": null,
             "pct_change": null,
-            "error_text": "ConnectionError: HTTPSConnectionPool(host='q.10jqka.com.cn', port=443): Max retries exceeded with url: /gn/detail/code/307822/ (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x109c034f0>: Failed to resolve 'q.10jqka.com.cn' ([Errno 8] nodename nor servname provided, or not known)\"))"
+            "error_text": "ConnectionError: HTTPSConnectionPool(host='q.10jqka.com.cn', port=443): Max retries exceeded with url: /gn/detail/code/307822/ (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x113a16610>: Failed to resolve 'q.10jqka.com.cn' ([Errno 8] nodename nor servname provided, or not known)\"))"
           },
           {
             "name": "存储芯片",
@@ -144,7 +144,7 @@
             "is_available": false,
             "close": null,
             "pct_change": null,
-            "error_text": "ConnectionError: HTTPSConnectionPool(host='q.10jqka.com.cn', port=443): Max retries exceeded with url: /gn/detail/code/307822/ (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x109c03fa0>: Failed to resolve 'q.10jqka.com.cn' ([Errno 8] nodename nor servname provided, or not known)\"))"
+            "error_text": "ConnectionError: HTTPSConnectionPool(host='q.10jqka.com.cn', port=443): Max retries exceeded with url: /gn/detail/code/307822/ (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x113a21100>: Failed to resolve 'q.10jqka.com.cn' ([Errno 8] nodename nor servname provided, or not known)\"))"
           },
           {
             "name": "英伟达概念",
@@ -154,7 +154,7 @@
             "is_available": false,
             "close": null,
             "pct_change": null,
-            "error_text": "ConnectionError: HTTPSConnectionPool(host='q.10jqka.com.cn', port=443): Max retries exceeded with url: /gn/detail/code/307822/ (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x109c03a30>: Failed to resolve 'q.10jqka.com.cn' ([Errno 8] nodename nor servname provided, or not known)\"))"
+            "error_text": "ConnectionError: HTTPSConnectionPool(host='q.10jqka.com.cn', port=443): Max retries exceeded with url: /gn/detail/code/307822/ (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x113a16ca0>: Failed to resolve 'q.10jqka.com.cn' ([Errno 8] nodename nor servname provided, or not known)\"))"
           },
           {
             "name": "算力租赁",
@@ -164,7 +164,7 @@
             "is_available": false,
             "close": null,
             "pct_change": null,
-            "error_text": "ConnectionError: HTTPSConnectionPool(host='q.10jqka.com.cn', port=443): Max retries exceeded with url: /gn/detail/code/307822/ (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x1091768b0>: Failed to resolve 'q.10jqka.com.cn' ([Errno 8] nodename nor servname provided, or not known)\"))"
+            "error_text": "ConnectionError: HTTPSConnectionPool(host='q.10jqka.com.cn', port=443): Max retries exceeded with url: /gn/detail/code/307822/ (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x112f86a60>: Failed to resolve 'q.10jqka.com.cn' ([Errno 8] nodename nor servname provided, or not known)\"))"
           }
         ]
       },
@@ -251,7 +251,7 @@
         "name": "共封装光学(CPO)",
         "source": "akshare_ths_concept_info",
         "is_available": false,
-        "error_text": "ConnectionError: HTTPSConnectionPool(host='q.10jqka.com.cn', port=443): Max retries exceeded with url: /gn/detail/code/307822/ (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x10919ad00>: Failed to resolve 'q.10jqka.com.cn' ([Errno 8] nodename nor servname provided, or not known)\"))"
+        "error_text": "ConnectionError: HTTPSConnectionPool(host='q.10jqka.com.cn', port=443): Max retries exceeded with url: /gn/detail/code/307822/ (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x112fade50>: Failed to resolve 'q.10jqka.com.cn' ([Errno 8] nodename nor servname provided, or not known)\"))"
       },
       {
         "market": "a_share_theme",
@@ -259,7 +259,7 @@
         "name": "PCB概念",
         "source": "akshare_ths_concept_info",
         "is_available": false,
-        "error_text": "ConnectionError: HTTPSConnectionPool(host='q.10jqka.com.cn', port=443): Max retries exceeded with url: /gn/detail/code/307822/ (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x1091c4a00>: Failed to resolve 'q.10jqka.com.cn' ([Errno 8] nodename nor servname provided, or not known)\"))"
+        "error_text": "ConnectionError: HTTPSConnectionPool(host='q.10jqka.com.cn', port=443): Max retries exceeded with url: /gn/detail/code/307822/ (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x112fd6b20>: Failed to resolve 'q.10jqka.com.cn' ([Errno 8] nodename nor servname provided, or not known)\"))"
       },
       {
         "market": "a_share_theme",
@@ -267,7 +267,7 @@
         "name": "先进封装",
         "source": "akshare_ths_concept_info",
         "is_available": false,
-        "error_text": "ConnectionError: HTTPSConnectionPool(host='q.10jqka.com.cn', port=443): Max retries exceeded with url: /gn/detail/code/307822/ (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x109c034f0>: Failed to resolve 'q.10jqka.com.cn' ([Errno 8] nodename nor servname provided, or not known)\"))"
+        "error_text": "ConnectionError: HTTPSConnectionPool(host='q.10jqka.com.cn', port=443): Max retries exceeded with url: /gn/detail/code/307822/ (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x113a16610>: Failed to resolve 'q.10jqka.com.cn' ([Errno 8] nodename nor servname provided, or not known)\"))"
       },
       {
         "market": "a_share_theme",
@@ -275,7 +275,7 @@
         "name": "存储芯片",
         "source": "akshare_ths_concept_info",
         "is_available": false,
-        "error_text": "ConnectionError: HTTPSConnectionPool(host='q.10jqka.com.cn', port=443): Max retries exceeded with url: /gn/detail/code/307822/ (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x109c03fa0>: Failed to resolve 'q.10jqka.com.cn' ([Errno 8] nodename nor servname provided, or not known)\"))"
+        "error_text": "ConnectionError: HTTPSConnectionPool(host='q.10jqka.com.cn', port=443): Max retries exceeded with url: /gn/detail/code/307822/ (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x113a21100>: Failed to resolve 'q.10jqka.com.cn' ([Errno 8] nodename nor servname provided, or not known)\"))"
       },
       {
         "market": "a_share_theme",
@@ -283,7 +283,7 @@
         "name": "英伟达概念",
         "source": "akshare_ths_concept_info",
         "is_available": false,
-        "error_text": "ConnectionError: HTTPSConnectionPool(host='q.10jqka.com.cn', port=443): Max retries exceeded with url: /gn/detail/code/307822/ (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x109c03a30>: Failed to resolve 'q.10jqka.com.cn' ([Errno 8] nodename nor servname provided, or not known)\"))"
+        "error_text": "ConnectionError: HTTPSConnectionPool(host='q.10jqka.com.cn', port=443): Max retries exceeded with url: /gn/detail/code/307822/ (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x113a16ca0>: Failed to resolve 'q.10jqka.com.cn' ([Errno 8] nodename nor servname provided, or not known)\"))"
       },
       {
         "market": "a_share_theme",
@@ -291,7 +291,7 @@
         "name": "算力租赁",
         "source": "akshare_ths_concept_info",
         "is_available": false,
-        "error_text": "ConnectionError: HTTPSConnectionPool(host='q.10jqka.com.cn', port=443): Max retries exceeded with url: /gn/detail/code/307822/ (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x1091768b0>: Failed to resolve 'q.10jqka.com.cn' ([Errno 8] nodename nor servname provided, or not known)\"))"
+        "error_text": "ConnectionError: HTTPSConnectionPool(host='q.10jqka.com.cn', port=443): Max retries exceeded with url: /gn/detail/code/307822/ (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x112f86a60>: Failed to resolve 'q.10jqka.com.cn' ([Errno 8] nodename nor servname provided, or not known)\"))"
       }
     ],
     "source_note_list": [
