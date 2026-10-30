@@ -1,8 +1,8 @@
 {
   "market_defense_signal": {
     "is_active": false,
-    "signal_date": "2026-10-29",
-    "generated_at": "2026-10-29T17:11:25",
+    "signal_date": "2026-10-30",
+    "generated_at": "2026-10-30T22:31:19",
     "defense_level": "normal_attack",
     "headline_text": "市场防守信号未触发，系统维持正常进攻模式",
     "summary_text": "当前防守分数为2，未达到7分阈值；full pipeline 将继续原始股票筛选链路。",
@@ -27,7 +27,7 @@
             "is_available": false,
             "close": null,
             "pct_change": null,
-            "error_text": "HTTPError: HTTP Error 403: Forbidden"
+            "error_text": "URLError: <urlopen error _ssl.c:1112: The handshake operation timed out>"
           },
           {
             "name": "费城半导体指数",
@@ -37,7 +37,7 @@
             "is_available": false,
             "close": null,
             "pct_change": null,
-            "error_text": "HTTPError: HTTP Error 403: Forbidden"
+            "error_text": "URLError: <urlopen error _ssl.c:1112: The handshake operation timed out>"
           }
         ]
       },
@@ -56,7 +56,7 @@
             "is_available": false,
             "close": null,
             "pct_change": null,
-            "error_text": "HTTPError: HTTP Error 403: Forbidden"
+            "error_text": "URLError: <urlopen error _ssl.c:1112: The handshake operation timed out>"
           },
           {
             "name": "日经225",
@@ -66,7 +66,7 @@
             "is_available": false,
             "close": null,
             "pct_change": null,
-            "error_text": "HTTPError: HTTP Error 403: Forbidden"
+            "error_text": "URLError: <urlopen error _ssl.c:1112: The handshake operation timed out>"
           }
         ]
       },
@@ -85,7 +85,7 @@
             "is_available": false,
             "close": null,
             "pct_change": null,
-            "error_text": "HTTPError: HTTP Error 403: Forbidden"
+            "error_text": "URLError: <urlopen error _ssl.c:1112: The handshake operation timed out>"
           },
           {
             "name": "美国30年期国债收益率",
@@ -95,7 +95,7 @@
             "is_available": false,
             "close": null,
             "pct_change": null,
-            "error_text": "HTTPError: HTTP Error 403: Forbidden"
+            "error_text": "URLError: <urlopen error _ssl.c:1112: The handshake operation timed out>"
           }
         ]
       },
@@ -103,7 +103,7 @@
         "rule_name": "A股主线高beta杀跌",
         "score": 2,
         "threshold_text": "CPO、PCB、先进封装、AI算力等系统近期高beta主线中，至少一个板块单日跌幅达到4%。",
-        "observed_text": "共封装光学(CPO)-6.16%，PCB概念-5.36%，先进封装-5.39%，存储芯片-5.28%，英伟达概念-5.41%，算力租赁-3.29%。",
+        "observed_text": "PCB概念-3.92%，先进封装-4.79%，存储芯片-5.04%，英伟达概念-4.73%，算力租赁-5.12%。",
         "is_triggered": true,
         "data_source_list": [
           {
@@ -111,10 +111,10 @@
             "symbol": "共封装光学(CPO)",
             "source": "akshare_ths_concept_info",
             "source_url": null,
-            "is_available": true,
+            "is_available": false,
             "close": null,
-            "pct_change": -6.16,
-            "error_text": null
+            "pct_change": null,
+            "error_text": "ConnectionError: ('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))"
           },
           {
             "name": "PCB概念",
@@ -123,7 +123,7 @@
             "source_url": null,
             "is_available": true,
             "close": null,
-            "pct_change": -5.36,
+            "pct_change": -3.92,
             "error_text": null
           },
           {
@@ -133,7 +133,7 @@
             "source_url": null,
             "is_available": true,
             "close": null,
-            "pct_change": -5.39,
+            "pct_change": -4.79,
             "error_text": null
           },
           {
@@ -143,7 +143,7 @@
             "source_url": null,
             "is_available": true,
             "close": null,
-            "pct_change": -5.28,
+            "pct_change": -5.04,
             "error_text": null
           },
           {
@@ -153,7 +153,7 @@
             "source_url": null,
             "is_available": true,
             "close": null,
-            "pct_change": -5.41,
+            "pct_change": -4.73,
             "error_text": null
           },
           {
@@ -163,7 +163,7 @@
             "source_url": null,
             "is_available": true,
             "close": null,
-            "pct_change": -3.29,
+            "pct_change": -5.12,
             "error_text": null
           }
         ]
@@ -178,14 +178,13 @@
       }
     ],
     "trigger_list": [
-      "A股主线高beta杀跌：共封装光学(CPO)-6.16%，PCB概念-5.36%，先进封装-5.39%，存储芯片-5.28%，英伟达概念-5.41%，算力租赁-3.29%。"
+      "A股主线高beta杀跌：PCB概念-3.92%，先进封装-4.79%，存储芯片-5.04%，英伟达概念-4.73%，算力租赁-5.12%。"
     ],
     "affected_theme_list": [
-      "共封装光学(CPO)",
-      "PCB概念",
       "先进封装",
       "存储芯片",
-      "英伟达概念"
+      "英伟达概念",
+      "算力租赁"
     ],
     "resume_condition_list": [
       "最快：1-3天。昨天是恐慌错杀，今天/明天马上放量收回，SOX/SMH 不再新低，QQQM 收复大跌阴线一半以上。这个就是 V 型修复，可以小仓先上。",
@@ -200,7 +199,7 @@
         "source": "yahoo_chart",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EIXIC?range=5d&interval=1d",
         "is_available": false,
-        "error_text": "HTTPError: HTTP Error 403: Forbidden"
+        "error_text": "URLError: <urlopen error _ssl.c:1112: The handshake operation timed out>"
       },
       {
         "market": "overseas",
@@ -209,7 +208,7 @@
         "source": "yahoo_chart",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ESOX?range=5d&interval=1d",
         "is_available": false,
-        "error_text": "HTTPError: HTTP Error 403: Forbidden"
+        "error_text": "URLError: <urlopen error _ssl.c:1112: The handshake operation timed out>"
       },
       {
         "market": "overseas",
@@ -218,7 +217,7 @@
         "source": "yahoo_chart",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EKS11?range=5d&interval=1d",
         "is_available": false,
-        "error_text": "HTTPError: HTTP Error 403: Forbidden"
+        "error_text": "URLError: <urlopen error _ssl.c:1112: The handshake operation timed out>"
       },
       {
         "market": "overseas",
@@ -227,7 +226,7 @@
         "source": "yahoo_chart",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EN225?range=5d&interval=1d",
         "is_available": false,
-        "error_text": "HTTPError: HTTP Error 403: Forbidden"
+        "error_text": "URLError: <urlopen error _ssl.c:1112: The handshake operation timed out>"
       },
       {
         "market": "overseas",
@@ -236,7 +235,7 @@
         "source": "yahoo_chart",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ETNX?range=5d&interval=1d",
         "is_available": false,
-        "error_text": "HTTPError: HTTP Error 403: Forbidden"
+        "error_text": "URLError: <urlopen error _ssl.c:1112: The handshake operation timed out>"
       },
       {
         "market": "overseas",
@@ -245,16 +244,15 @@
         "source": "yahoo_chart",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ETYX?range=5d&interval=1d",
         "is_available": false,
-        "error_text": "HTTPError: HTTP Error 403: Forbidden"
+        "error_text": "URLError: <urlopen error _ssl.c:1112: The handshake operation timed out>"
       },
       {
         "market": "a_share_theme",
         "symbol": "共封装光学(CPO)",
         "name": "共封装光学(CPO)",
         "source": "akshare_ths_concept_info",
-        "is_available": true,
-        "pct_change": -6.16,
-        "amount_yi": 2630.42
+        "is_available": false,
+        "error_text": "ConnectionError: ('Connection aborted.', ConnectionResetError(54, 'Connection reset by peer'))"
       },
       {
         "market": "a_share_theme",
@@ -262,8 +260,8 @@
         "name": "PCB概念",
         "source": "akshare_ths_concept_info",
         "is_available": true,
-        "pct_change": -5.36,
-        "amount_yi": 1445.87
+        "pct_change": -3.92,
+        "amount_yi": 1639.35
       },
       {
         "market": "a_share_theme",
@@ -271,8 +269,8 @@
         "name": "先进封装",
         "source": "akshare_ths_concept_info",
         "is_available": true,
-        "pct_change": -5.39,
-        "amount_yi": 1647.76
+        "pct_change": -4.79,
+        "amount_yi": 1636.93
       },
       {
         "market": "a_share_theme",
@@ -280,8 +278,8 @@
         "name": "存储芯片",
         "source": "akshare_ths_concept_info",
         "is_available": true,
-        "pct_change": -5.28,
-        "amount_yi": 1944.79
+        "pct_change": -5.04,
+        "amount_yi": 1956.77
       },
       {
         "market": "a_share_theme",
@@ -289,8 +287,8 @@
         "name": "英伟达概念",
         "source": "akshare_ths_concept_info",
         "is_available": true,
-        "pct_change": -5.41,
-        "amount_yi": 802.45
+        "pct_change": -4.73,
+        "amount_yi": 792.91
       },
       {
         "market": "a_share_theme",
@@ -298,8 +296,8 @@
         "name": "算力租赁",
         "source": "akshare_ths_concept_info",
         "is_available": true,
-        "pct_change": -3.29,
-        "amount_yi": 679.13
+        "pct_change": -5.12,
+        "amount_yi": 690.26
       }
     ],
     "source_note_list": [
