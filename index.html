@@ -604,9 +604,9 @@ const INLINE_ONEIL = {
           "oneil_canslim_view": {
             "level": "weak",
             "target_price_range": {
-              "low": 34.55,
-              "center": 34.55,
-              "high": 35.59,
+              "low": 34.99,
+              "center": 34.99,
+              "high": 36.04,
               "currency": "CNY"
             },
             "bull_case_text": "目标区间由 oneil_calculator_signal 锁定；Top selector 只判断该区间是否能被 CAN SLIM 证据支持，不再自行改写数值。",
@@ -616,9 +616,8 @@ const INLINE_ONEIL = {
           "invalid_condition": "若 Q4 业绩增速显著放缓或扣非净利环比下滑，或海外业务因地缘政治出现重大不利变化，或 AI 端侧/人形机器人主线整体退潮资金大幅流出，或创新业务收入占比未提升反而下降，则目标区间失效。",
           "calculator_lock_status": "locked",
           "current_price_reference": {
-            "latest_trade_date": "2026-10-30",
-            "latest_close_price": 34.55,
-            "source": "publish_price_refresh.tushare_daily"
+            "latest_close_price": 34.99,
+            "source": "current_fundamental_signal.latest_close_price"
           },
           "target_price_consistency_status": "target_range_not_above_current_price",
           "target_price_consistency_warning": "O'Neil 目标区间没有完全高于最新收盘价，说明上涨空间判断可能已经被现价透支，或模型需要重新解释为什么仍值得入选。"
@@ -631,16 +630,16 @@ const INLINE_ONEIL = {
             "source": "rule_fallback",
             "reason_text": "未命中特定行业类型，使用默认成长股配置。"
           },
-          "current_price": 34.55,
+          "current_price": 34.99,
           "predicted_upside_pct_range": {
             "low": 0.0,
             "center": 0.0,
-            "high": 3.0101
+            "high": 3.0009
           },
           "predicted_target_price_range": {
-            "low": 34.55,
-            "center": 34.55,
-            "high": 35.59,
+            "low": 34.99,
+            "center": 34.99,
+            "high": 36.04,
             "currency": "CNY"
           },
           "fresh_calculation_upside_pct_range": {
@@ -649,21 +648,21 @@ const INLINE_ONEIL = {
             "high": 3.0
           },
           "fresh_calculation_target_price_range": {
-            "low": 34.55,
-            "center": 34.55,
-            "high": 35.59,
+            "low": 34.99,
+            "center": 34.99,
+            "high": 36.04,
             "currency": "CNY"
           },
           "target_price_calculation_signal": {
             "status": "price_rebased_from_persisted_upside",
             "source": "oneil_calculator",
             "target_price_range": {
-              "low": 34.55,
-              "center": 34.55,
-              "high": 35.59,
+              "low": 34.99,
+              "center": 34.99,
+              "high": 36.04,
               "currency": "CNY"
             },
-            "current_price": 34.55,
+            "current_price": 34.99,
             "reason_text": "沿用低频维护的上涨百分比区间，并按最新收盘价重新映射为当前价格目标区间。"
           },
           "factor_score_map": {
@@ -712,7 +711,7 @@ const INLINE_ONEIL = {
             "stock_name": "海康威视",
             "updated_at": "2026-09-01",
             "source_result_date": "2026-09-01",
-            "latest_trade_date": "2026-10-30",
+            "latest_trade_date": "2026-10-26",
             "research_coverage_status": "limited_fallback",
             "source": "target_price_calculator_db",
             "price_refresh_source": "can_slim_research_db.current_fundamental_signal"
@@ -5804,7 +5803,7 @@ const INLINE_ONEIL = {
       "after_count": 2823,
       "added_count": 30
     },
-    "published_price_refreshed_at": "2026-10-31T23:33:50",
+    "published_price_refreshed_at": "2026-11-02T00:01:15",
     "published_price_refresh_source": "tushare.daily"
   }
 };
@@ -6187,7 +6186,7 @@ const INLINE_OPEN_DIP = {
   "open_dip_buy_db": {}
 };
 const INLINE_PUBLISH_GENERATED_AT = {
-  "generated_at": "2026-10-31 23:33:48"
+  "generated_at": "2026-11-01 22:43:20"
 };
 
 const STOCK_SEARCH_INDEX_URL = 'data/stock_search_index.json';
