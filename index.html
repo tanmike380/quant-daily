@@ -604,9 +604,9 @@ const INLINE_ONEIL = {
           "oneil_canslim_view": {
             "level": "weak",
             "target_price_range": {
-              "low": 34.99,
-              "center": 34.99,
-              "high": 36.04,
+              "low": 35.17,
+              "center": 35.17,
+              "high": 36.23,
               "currency": "CNY"
             },
             "bull_case_text": "目标区间由 oneil_calculator_signal 锁定；Top selector 只判断该区间是否能被 CAN SLIM 证据支持，不再自行改写数值。",
@@ -616,8 +616,9 @@ const INLINE_ONEIL = {
           "invalid_condition": "若 Q4 业绩增速显著放缓或扣非净利环比下滑，或海外业务因地缘政治出现重大不利变化，或 AI 端侧/人形机器人主线整体退潮资金大幅流出，或创新业务收入占比未提升反而下降，则目标区间失效。",
           "calculator_lock_status": "locked",
           "current_price_reference": {
-            "latest_close_price": 34.99,
-            "source": "current_fundamental_signal.latest_close_price"
+            "latest_trade_date": "2026-11-04",
+            "latest_close_price": 35.17,
+            "source": "publish_price_refresh.tushare_daily"
           },
           "target_price_consistency_status": "target_range_not_above_current_price",
           "target_price_consistency_warning": "O'Neil 目标区间没有完全高于最新收盘价，说明上涨空间判断可能已经被现价透支，或模型需要重新解释为什么仍值得入选。"
@@ -630,16 +631,16 @@ const INLINE_ONEIL = {
             "source": "rule_fallback",
             "reason_text": "未命中特定行业类型，使用默认成长股配置。"
           },
-          "current_price": 34.99,
+          "current_price": 35.17,
           "predicted_upside_pct_range": {
             "low": 0.0,
             "center": 0.0,
-            "high": 3.0009
+            "high": 3.0139
           },
           "predicted_target_price_range": {
-            "low": 34.99,
-            "center": 34.99,
-            "high": 36.04,
+            "low": 35.17,
+            "center": 35.17,
+            "high": 36.23,
             "currency": "CNY"
           },
           "fresh_calculation_upside_pct_range": {
@@ -648,21 +649,21 @@ const INLINE_ONEIL = {
             "high": 3.0
           },
           "fresh_calculation_target_price_range": {
-            "low": 34.99,
-            "center": 34.99,
-            "high": 36.04,
+            "low": 35.17,
+            "center": 35.17,
+            "high": 36.23,
             "currency": "CNY"
           },
           "target_price_calculation_signal": {
             "status": "price_rebased_from_persisted_upside",
             "source": "oneil_calculator",
             "target_price_range": {
-              "low": 34.99,
-              "center": 34.99,
-              "high": 36.04,
+              "low": 35.17,
+              "center": 35.17,
+              "high": 36.23,
               "currency": "CNY"
             },
-            "current_price": 34.99,
+            "current_price": 35.17,
             "reason_text": "沿用低频维护的上涨百分比区间，并按最新收盘价重新映射为当前价格目标区间。"
           },
           "factor_score_map": {
@@ -711,7 +712,7 @@ const INLINE_ONEIL = {
             "stock_name": "海康威视",
             "updated_at": "2026-09-01",
             "source_result_date": "2026-09-01",
-            "latest_trade_date": "2026-10-26",
+            "latest_trade_date": "2026-11-04",
             "research_coverage_status": "limited_fallback",
             "source": "target_price_calculator_db",
             "price_refresh_source": "can_slim_research_db.current_fundamental_signal"
@@ -818,9 +819,9 @@ const INLINE_ONEIL = {
           "oneil_canslim_view": {
             "level": "strong",
             "target_price_range": {
-              "low": 46.99,
-              "center": 48.15,
-              "high": 49.3,
+              "low": 51.69,
+              "center": 52.96,
+              "high": 54.23,
               "currency": "CNY"
             },
             "bull_case_text": "目标区间由 oneil_calculator_signal 锁定；Top selector 只判断该区间是否能被 CAN SLIM 证据支持，不再自行改写数值。",
@@ -830,8 +831,8 @@ const INLINE_ONEIL = {
           "invalid_condition": "毛利率持续大幅下滑（超过 2 个百分点）、AMD 等大客户订单不及预期或流失、半导体/CPO/AI 端侧主线退潮、定增引发大规模减持或解禁抛售、股价放量跌破 MA20 且 3 日内无法收回、近 20 日大单净流出持续扩大。",
           "calculator_lock_status": "locked",
           "current_price_reference": {
-            "latest_trade_date": "2026-11-03",
-            "latest_close_price": 38.48,
+            "latest_trade_date": "2026-11-04",
+            "latest_close_price": 42.33,
             "source": "publish_price_refresh.tushare_daily"
           },
           "target_price_consistency_status": "ready"
@@ -844,16 +845,16 @@ const INLINE_ONEIL = {
             "source": "rule_fallback",
             "reason_text": "科技主线且具备龙头/核心弹性/容量核心地位。"
           },
-          "current_price": 38.48,
+          "current_price": 42.33,
           "predicted_upside_pct_range": {
-            "low": 22.1154,
-            "center": 25.1299,
-            "high": 28.1185
+            "low": 22.112,
+            "center": 25.1122,
+            "high": 28.1124
           },
           "predicted_target_price_range": {
-            "low": 46.99,
-            "center": 48.15,
-            "high": 49.3,
+            "low": 51.69,
+            "center": 52.96,
+            "high": 54.23,
             "currency": "CNY"
           },
           "fresh_calculation_upside_pct_range": {
@@ -862,21 +863,21 @@ const INLINE_ONEIL = {
             "high": 28.1204
           },
           "fresh_calculation_target_price_range": {
-            "low": 46.99,
-            "center": 48.15,
-            "high": 49.3,
+            "low": 51.69,
+            "center": 52.96,
+            "high": 54.23,
             "currency": "CNY"
           },
           "target_price_calculation_signal": {
             "status": "price_rebased_from_persisted_upside",
             "source": "oneil_calculator",
             "target_price_range": {
-              "low": 46.99,
-              "center": 48.15,
-              "high": 49.3,
+              "low": 51.69,
+              "center": 52.96,
+              "high": 54.23,
               "currency": "CNY"
             },
-            "current_price": 38.48,
+            "current_price": 42.33,
             "reason_text": "沿用低频维护的上涨百分比区间，并按最新收盘价重新映射为当前价格目标区间。"
           },
           "factor_score_map": {
@@ -931,7 +932,7 @@ const INLINE_ONEIL = {
             "stock_name": "通富微电",
             "updated_at": "2026-09-01",
             "source_result_date": "2026-09-01",
-            "latest_trade_date": "2026-11-03",
+            "latest_trade_date": "2026-11-04",
             "research_coverage_status": "can_slim_available",
             "source": "target_price_calculator_db",
             "price_refresh_source": "can_slim_research_db.current_fundamental_signal"
@@ -1041,9 +1042,9 @@ const INLINE_ONEIL = {
           "oneil_canslim_view": {
             "level": "medium",
             "target_price_range": {
-              "low": 25.66,
-              "center": 26.31,
-              "high": 26.96,
+              "low": 27.72,
+              "center": 28.42,
+              "high": 29.13,
               "currency": "CNY"
             },
             "bull_case_text": "目标区间由 oneil_calculator_signal 锁定；Top selector 只判断该区间是否能被 CAN SLIM 证据支持，不再自行改写数值。",
@@ -1053,8 +1054,8 @@ const INLINE_ONEIL = {
           "invalid_condition": "若下一季度财报营收/利润增速进一步放缓或毛利率继续下滑，或AI端侧/CPO主线退潮导致资金大幅流出，或大客户创新节奏低于预期，则目标区间失效。",
           "calculator_lock_status": "locked",
           "current_price_reference": {
-            "latest_trade_date": "2026-11-03",
-            "latest_close_price": 21.75,
+            "latest_trade_date": "2026-11-04",
+            "latest_close_price": 23.5,
             "source": "publish_price_refresh.tushare_daily"
           },
           "target_price_consistency_status": "ready"
@@ -1067,16 +1068,16 @@ const INLINE_ONEIL = {
             "source": "rule_fallback",
             "reason_text": "科技主线且具备龙头/核心弹性/容量核心地位。"
           },
-          "current_price": 21.75,
+          "current_price": 23.5,
           "predicted_upside_pct_range": {
-            "low": 17.977,
-            "center": 20.9655,
-            "high": 23.954
+            "low": 17.9574,
+            "center": 20.9362,
+            "high": 23.9574
           },
           "predicted_target_price_range": {
-            "low": 25.66,
-            "center": 26.31,
-            "high": 26.96,
+            "low": 27.72,
+            "center": 28.42,
+            "high": 29.13,
             "currency": "CNY"
           },
           "fresh_calculation_upside_pct_range": {
@@ -1085,21 +1086,21 @@ const INLINE_ONEIL = {
             "high": 23.9732
           },
           "fresh_calculation_target_price_range": {
-            "low": 25.66,
-            "center": 26.31,
-            "high": 26.96,
+            "low": 27.72,
+            "center": 28.43,
+            "high": 29.13,
             "currency": "CNY"
           },
           "target_price_calculation_signal": {
             "status": "price_rebased_from_persisted_upside",
             "source": "oneil_calculator",
             "target_price_range": {
-              "low": 25.66,
-              "center": 26.31,
-              "high": 26.96,
+              "low": 27.72,
+              "center": 28.42,
+              "high": 29.13,
               "currency": "CNY"
             },
-            "current_price": 21.75,
+            "current_price": 23.5,
             "reason_text": "沿用低频维护的上涨百分比区间，并按最新收盘价重新映射为当前价格目标区间。"
           },
           "factor_score_map": {
@@ -1148,7 +1149,7 @@ const INLINE_ONEIL = {
             "stock_name": "水晶光电",
             "updated_at": "2026-09-01",
             "source_result_date": "2026-09-01",
-            "latest_trade_date": "2026-11-03",
+            "latest_trade_date": "2026-11-04",
             "research_coverage_status": "can_slim_available",
             "source": "target_price_calculator_db",
             "price_refresh_source": "can_slim_research_db.current_fundamental_signal"
@@ -1255,9 +1256,9 @@ const INLINE_ONEIL = {
           "oneil_canslim_view": {
             "level": "strong",
             "target_price_range": {
-              "low": 15.42,
-              "center": 15.97,
-              "high": 16.54,
+              "low": 16.64,
+              "center": 17.24,
+              "high": 17.85,
               "currency": "CNY"
             },
             "bull_case_text": "目标区间由 oneil_calculator_signal 锁定；Top selector 只判断该区间是否能被 CAN SLIM 证据支持，不再自行改写数值。",
@@ -1267,8 +1268,8 @@ const INLINE_ONEIL = {
           "invalid_condition": "若下一季度营收增速跌破20%、毛利率未能从11.32%回升、先进封装订单/排产数据不及预期、或半导体/CPO主线退潮，目标区间将完全失效。若并购重组未能如期完成或产能投放延迟，增长预期也将被下修。",
           "calculator_lock_status": "locked",
           "current_price_reference": {
-            "latest_trade_date": "2026-11-03",
-            "latest_close_price": 13.88,
+            "latest_trade_date": "2026-11-04",
+            "latest_close_price": 14.98,
             "source": "publish_price_refresh.tushare_daily"
           },
           "target_price_consistency_status": "ready"
@@ -1281,16 +1282,16 @@ const INLINE_ONEIL = {
             "source": "rule_fallback",
             "reason_text": "行业/主题包含电力、煤炭、油气、航运或资源周期属性。"
           },
-          "current_price": 13.88,
+          "current_price": 14.98,
           "predicted_upside_pct_range": {
-            "low": 11.0951,
-            "center": 15.0576,
-            "high": 19.1643
+            "low": 11.0814,
+            "center": 15.0868,
+            "high": 19.1589
           },
           "predicted_target_price_range": {
-            "low": 15.42,
-            "center": 15.97,
-            "high": 16.54,
+            "low": 16.64,
+            "center": 17.24,
+            "high": 17.85,
             "currency": "CNY"
           },
           "fresh_calculation_upside_pct_range": {
@@ -1299,21 +1300,21 @@ const INLINE_ONEIL = {
             "high": 19.1001
           },
           "fresh_calculation_target_price_range": {
-            "low": 15.42,
-            "center": 15.98,
-            "high": 16.53,
+            "low": 16.64,
+            "center": 17.24,
+            "high": 17.84,
             "currency": "CNY"
           },
           "target_price_calculation_signal": {
             "status": "price_rebased_from_persisted_upside",
             "source": "oneil_calculator",
             "target_price_range": {
-              "low": 15.42,
-              "center": 15.97,
-              "high": 16.54,
+              "low": 16.64,
+              "center": 17.24,
+              "high": 17.85,
               "currency": "CNY"
             },
-            "current_price": 13.88,
+            "current_price": 14.98,
             "reason_text": "沿用低频维护的上涨百分比区间，并按最新收盘价重新映射为当前价格目标区间。"
           },
           "factor_score_map": {
@@ -1368,7 +1369,7 @@ const INLINE_ONEIL = {
             "stock_name": "华天科技",
             "updated_at": "2026-09-01",
             "source_result_date": "2026-09-01",
-            "latest_trade_date": "2026-11-03",
+            "latest_trade_date": "2026-11-04",
             "research_coverage_status": "can_slim_available",
             "source": "target_price_calculator_db",
             "price_refresh_source": "can_slim_research_db.current_fundamental_signal"
@@ -1477,9 +1478,9 @@ const INLINE_ONEIL = {
           "oneil_canslim_view": {
             "level": "strong",
             "target_price_range": {
-              "low": 106.38,
-              "center": 109.03,
-              "high": 111.67,
+              "low": 113.86,
+              "center": 116.7,
+              "high": 119.53,
               "currency": "CNY"
             },
             "bull_case_text": "目标区间由 oneil_calculator_signal 锁定；Top selector 只判断该区间是否能被 CAN SLIM 证据支持，不再自行改写数值。",
@@ -1489,8 +1490,8 @@ const INLINE_ONEIL = {
           "invalid_condition": "目标区间失效条件包括：1）连续季度营收或利润增速显著低于券商预测（如 2026 年 EPS 低于 3.5 元）；2）AI 算力资本开支放缓导致 CPO/PCB 订单不及预期；3）H 股发行引发重大抛压或股本摊薄超预期；4）大单资金持续净流出且融资余额继续锐减；5）CPO/AI 端侧主线退潮或被新方向替代；6）资产负债率持续恶化（当前 65.04%）引发债务风险。",
           "calculator_lock_status": "locked",
           "current_price_reference": {
-            "latest_trade_date": "2026-11-03",
-            "latest_close_price": 88.13,
+            "latest_trade_date": "2026-11-04",
+            "latest_close_price": 94.33,
             "source": "publish_price_refresh.tushare_daily"
           },
           "target_price_consistency_status": "ready"
@@ -1503,16 +1504,16 @@ const INLINE_ONEIL = {
             "source": "rule_fallback",
             "reason_text": "近20日平均换手率约7.7388%，20日平均成交额约23568029.9181，20日平均流通市值约30090736.3433，符合低换手、高容量承接或容量核心识别的机构大票/中军特征。"
           },
-          "current_price": 88.13,
+          "current_price": 94.33,
           "predicted_upside_pct_range": {
-            "low": 20.708,
-            "center": 23.715,
-            "high": 26.7105
+            "low": 20.7039,
+            "center": 23.7146,
+            "high": 26.7147
           },
           "predicted_target_price_range": {
-            "low": 106.38,
-            "center": 109.03,
-            "high": 111.67,
+            "low": 113.86,
+            "center": 116.7,
+            "high": 119.53,
             "currency": "CNY"
           },
           "fresh_calculation_upside_pct_range": {
@@ -1521,21 +1522,21 @@ const INLINE_ONEIL = {
             "high": 26.7122
           },
           "fresh_calculation_target_price_range": {
-            "low": 106.38,
-            "center": 109.03,
-            "high": 111.67,
+            "low": 113.87,
+            "center": 116.7,
+            "high": 119.53,
             "currency": "CNY"
           },
           "target_price_calculation_signal": {
             "status": "price_rebased_from_persisted_upside",
             "source": "oneil_calculator",
             "target_price_range": {
-              "low": 106.38,
-              "center": 109.03,
-              "high": 111.67,
+              "low": 113.86,
+              "center": 116.7,
+              "high": 119.53,
               "currency": "CNY"
             },
-            "current_price": 88.13,
+            "current_price": 94.33,
             "reason_text": "沿用低频维护的上涨百分比区间，并按最新收盘价重新映射为当前价格目标区间。"
           },
           "factor_score_map": {
@@ -1590,7 +1591,7 @@ const INLINE_ONEIL = {
             "stock_name": "东山精密",
             "updated_at": "2026-09-01",
             "source_result_date": "2026-09-01",
-            "latest_trade_date": "2026-11-03",
+            "latest_trade_date": "2026-11-04",
             "research_coverage_status": "can_slim_available",
             "source": "target_price_calculator_db",
             "price_refresh_source": "can_slim_research_db.current_fundamental_signal"
@@ -1702,9 +1703,9 @@ const INLINE_ONEIL = {
           "oneil_canslim_view": {
             "level": "weak",
             "target_price_range": {
-              "low": 21.2,
-              "center": 21.2,
-              "high": 22.26,
+              "low": 22.85,
+              "center": 22.85,
+              "high": 23.99,
               "currency": "CNY"
             },
             "bull_case_text": "目标区间由 oneil_calculator_signal 锁定；Top selector 只判断该区间是否能被 CAN SLIM 证据支持，不再自行改写数值。",
@@ -1714,8 +1715,8 @@ const INLINE_ONEIL = {
           "invalid_condition": "若Q4财报营收增速低于20%、扣非净利增速低于50%、经营现金流未显著修复、AI交换机收入占比未提升、CPO主线从周级主线退出top30、或出现股东减持/解禁公告，则目标区间完全失效。",
           "calculator_lock_status": "locked",
           "current_price_reference": {
-            "latest_trade_date": "2026-11-03",
-            "latest_close_price": 21.2,
+            "latest_trade_date": "2026-11-04",
+            "latest_close_price": 22.85,
             "source": "publish_price_refresh.tushare_daily"
           }
         },
@@ -1727,16 +1728,16 @@ const INLINE_ONEIL = {
             "source": "rule_fallback",
             "reason_text": "科技主线但龙头地位不够明确，按高波动弹性配置。"
           },
-          "current_price": 21.2,
+          "current_price": 22.85,
           "predicted_upside_pct_range": {
             "low": 0.0,
             "center": 0.0,
-            "high": 5.0
+            "high": 4.9891
           },
           "predicted_target_price_range": {
-            "low": 21.2,
-            "center": 21.2,
-            "high": 22.26,
+            "low": 22.85,
+            "center": 22.85,
+            "high": 23.99,
             "currency": "CNY"
           },
           "fresh_calculation_upside_pct_range": {
@@ -1745,21 +1746,21 @@ const INLINE_ONEIL = {
             "high": 5.0
           },
           "fresh_calculation_target_price_range": {
-            "low": 21.2,
-            "center": 21.2,
-            "high": 22.26,
+            "low": 22.85,
+            "center": 22.85,
+            "high": 23.99,
             "currency": "CNY"
           },
           "target_price_calculation_signal": {
             "status": "price_rebased_from_persisted_upside",
             "source": "oneil_calculator",
             "target_price_range": {
-              "low": 21.2,
-              "center": 21.2,
-              "high": 22.26,
+              "low": 22.85,
+              "center": 22.85,
+              "high": 23.99,
               "currency": "CNY"
             },
-            "current_price": 21.2,
+            "current_price": 22.85,
             "reason_text": "沿用低频维护的上涨百分比区间，并按最新收盘价重新映射为当前价格目标区间。"
           },
           "factor_score_map": {
@@ -1808,7 +1809,7 @@ const INLINE_ONEIL = {
             "stock_name": "星网锐捷",
             "updated_at": "2026-09-01",
             "source_result_date": "2026-09-01",
-            "latest_trade_date": "2026-11-03",
+            "latest_trade_date": "2026-11-04",
             "research_coverage_status": "limited_fallback",
             "source": "target_price_calculator_db",
             "price_refresh_source": "can_slim_research_db.current_fundamental_signal"
@@ -1917,9 +1918,9 @@ const INLINE_ONEIL = {
           "oneil_canslim_view": {
             "level": "strong",
             "target_price_range": {
-              "low": 35.62,
-              "center": 36.65,
-              "high": 37.66,
+              "low": 36.71,
+              "center": 37.76,
+              "high": 38.8,
               "currency": "CNY"
             },
             "bull_case_text": "目标区间由 oneil_calculator_signal 锁定；Top selector 只判断该区间是否能被 CAN SLIM 证据支持，不再自行改写数值。",
@@ -1929,8 +1930,8 @@ const INLINE_ONEIL = {
           "invalid_condition": "目标区间失效条件：1）三季报利润继续大幅下滑或扣非净利进一步恶化；2）CPO/半导体主线退潮或板块资金持续净流出；3）新业务（算力连接器）收入占比持续无法验证或贡献度极低；4）股价放量跌破当前整理平台且大单资金加速流出；5）出现减持、解禁或重大财务风险公告。",
           "calculator_lock_status": "locked",
           "current_price_reference": {
-            "latest_trade_date": "2026-11-03",
-            "latest_close_price": 33.86,
+            "latest_trade_date": "2026-11-04",
+            "latest_close_price": 34.89,
             "source": "publish_price_refresh.tushare_daily"
           },
           "target_price_consistency_status": "ready"
@@ -1943,16 +1944,16 @@ const INLINE_ONEIL = {
             "source": "rule_fallback",
             "reason_text": "近20日平均换手率约1.3176%，20日平均成交额约940014.7553，20日平均流通市值约7152915.0209，符合低换手、高容量承接或容量核心识别的机构大票/中军特征。"
           },
-          "current_price": 33.86,
+          "current_price": 34.89,
           "predicted_upside_pct_range": {
-            "low": 5.1979,
-            "center": 8.2398,
-            "high": 11.2227
+            "low": 5.2164,
+            "center": 8.2259,
+            "high": 11.2066
           },
           "predicted_target_price_range": {
-            "low": 35.62,
-            "center": 36.65,
-            "high": 37.66,
+            "low": 36.71,
+            "center": 37.76,
+            "high": 38.8,
             "currency": "CNY"
           },
           "fresh_calculation_upside_pct_range": {
@@ -1961,21 +1962,21 @@ const INLINE_ONEIL = {
             "high": 11.214
           },
           "fresh_calculation_target_price_range": {
-            "low": 35.63,
-            "center": 36.64,
-            "high": 37.66,
+            "low": 36.71,
+            "center": 37.76,
+            "high": 38.8,
             "currency": "CNY"
           },
           "target_price_calculation_signal": {
             "status": "price_rebased_from_persisted_upside",
             "source": "oneil_calculator",
             "target_price_range": {
-              "low": 35.62,
-              "center": 36.65,
-              "high": 37.66,
+              "low": 36.71,
+              "center": 37.76,
+              "high": 38.8,
               "currency": "CNY"
             },
-            "current_price": 33.86,
+            "current_price": 34.89,
             "reason_text": "沿用低频维护的上涨百分比区间，并按最新收盘价重新映射为当前价格目标区间。"
           },
           "factor_score_map": {
@@ -2030,7 +2031,7 @@ const INLINE_ONEIL = {
             "stock_name": "中航光电",
             "updated_at": "2026-09-01",
             "source_result_date": "2026-09-01",
-            "latest_trade_date": "2026-11-03",
+            "latest_trade_date": "2026-11-04",
             "research_coverage_status": "can_slim_available",
             "source": "target_price_calculator_db",
             "price_refresh_source": "can_slim_research_db.current_fundamental_signal"
@@ -2139,9 +2140,9 @@ const INLINE_ONEIL = {
           "oneil_canslim_view": {
             "level": "medium",
             "target_price_range": {
-              "low": 19.26,
-              "center": 19.94,
-              "high": 20.61,
+              "low": 20.68,
+              "center": 21.4,
+              "high": 22.12,
               "currency": "CNY"
             },
             "bull_case_text": "目标区间由 oneil_calculator_signal 锁定；Top selector 只判断该区间是否能被 CAN SLIM 证据支持，不再自行改写数值。",
@@ -2151,8 +2152,8 @@ const INLINE_ONEIL = {
           "invalid_condition": "钨价见顶回落导致利润环比下滑、经营现金流连续两季无改善、人形机器人/工业母机主线退潮、控股股东质押引发债务风险、或 PE 在业绩兑现不及预期下出现戴维斯双杀。",
           "calculator_lock_status": "locked",
           "current_price_reference": {
-            "latest_trade_date": "2026-11-03",
-            "latest_close_price": 16.77,
+            "latest_trade_date": "2026-11-04",
+            "latest_close_price": 18.0,
             "source": "publish_price_refresh.tushare_daily"
           },
           "target_price_consistency_status": "ready"
@@ -2165,16 +2166,16 @@ const INLINE_ONEIL = {
             "source": "rule_fallback",
             "reason_text": "行业/主题包含电力、煤炭、油气、航运或资源周期属性。"
           },
-          "current_price": 16.77,
+          "current_price": 18.0,
           "predicted_upside_pct_range": {
-            "low": 14.8479,
-            "center": 18.9028,
-            "high": 22.898
+            "low": 14.8889,
+            "center": 18.8889,
+            "high": 22.8889
           },
           "predicted_target_price_range": {
-            "low": 19.26,
-            "center": 19.94,
-            "high": 20.61,
+            "low": 20.68,
+            "center": 21.4,
+            "high": 22.12,
             "currency": "CNY"
           },
           "fresh_calculation_upside_pct_range": {
@@ -2183,21 +2184,21 @@ const INLINE_ONEIL = {
             "high": 22.8889
           },
           "fresh_calculation_target_price_range": {
-            "low": 19.27,
-            "center": 19.94,
-            "high": 20.61,
+            "low": 20.68,
+            "center": 21.4,
+            "high": 22.12,
             "currency": "CNY"
           },
           "target_price_calculation_signal": {
             "status": "price_rebased_from_persisted_upside",
             "source": "oneil_calculator",
             "target_price_range": {
-              "low": 19.26,
-              "center": 19.94,
-              "high": 20.61,
+              "low": 20.68,
+              "center": 21.4,
+              "high": 22.12,
               "currency": "CNY"
             },
-            "current_price": 16.77,
+            "current_price": 18.0,
             "reason_text": "沿用低频维护的上涨百分比区间，并按最新收盘价重新映射为当前价格目标区间。"
           },
           "factor_score_map": {
@@ -2246,7 +2247,7 @@ const INLINE_ONEIL = {
             "stock_name": "章源钨业",
             "updated_at": "2026-09-01",
             "source_result_date": "2026-09-01",
-            "latest_trade_date": "2026-11-03",
+            "latest_trade_date": "2026-11-04",
             "research_coverage_status": "can_slim_available",
             "source": "target_price_calculator_db",
             "price_refresh_source": "can_slim_research_db.current_fundamental_signal"
@@ -5803,7 +5804,7 @@ const INLINE_ONEIL = {
       "after_count": 2823,
       "added_count": 30
     },
-    "published_price_refreshed_at": "2026-11-03T22:36:42",
+    "published_price_refreshed_at": "2026-11-04T23:01:59",
     "published_price_refresh_source": "tushare.daily"
   }
 };
@@ -6186,7 +6187,7 @@ const INLINE_OPEN_DIP = {
   "open_dip_buy_db": {}
 };
 const INLINE_PUBLISH_GENERATED_AT = {
-  "generated_at": "2026-11-03 22:05:54"
+  "generated_at": "2026-11-04 22:14:03"
 };
 
 const STOCK_SEARCH_INDEX_URL = 'data/stock_search_index.json';
@@ -7103,8 +7104,8 @@ function renderMarketDefense(defenseData, root) {
 const INLINE_MARKET_DEFENSE = {
   "market_defense_signal": {
     "is_active": false,
-    "signal_date": "2026-11-03",
-    "generated_at": "2026-11-03T20:03:55",
+    "signal_date": "2026-11-04",
+    "generated_at": "2026-11-04T20:00:29",
     "defense_level": "normal_attack",
     "headline_text": "市场防守信号未触发，系统维持正常进攻模式",
     "summary_text": "当前防守分数为0，未达到7分阈值；full pipeline 将继续原始股票筛选链路。",
@@ -7129,7 +7130,7 @@ const INLINE_MARKET_DEFENSE = {
             "is_available": false,
             "close": null,
             "pct_change": null,
-            "error_text": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+            "error_text": "HTTPError: HTTP Error 403: Forbidden"
           },
           {
             "name": "费城半导体指数",
@@ -7139,7 +7140,7 @@ const INLINE_MARKET_DEFENSE = {
             "is_available": false,
             "close": null,
             "pct_change": null,
-            "error_text": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+            "error_text": "HTTPError: HTTP Error 403: Forbidden"
           }
         ]
       },
@@ -7158,7 +7159,7 @@ const INLINE_MARKET_DEFENSE = {
             "is_available": false,
             "close": null,
             "pct_change": null,
-            "error_text": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+            "error_text": "HTTPError: HTTP Error 403: Forbidden"
           },
           {
             "name": "日经225",
@@ -7168,7 +7169,7 @@ const INLINE_MARKET_DEFENSE = {
             "is_available": false,
             "close": null,
             "pct_change": null,
-            "error_text": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+            "error_text": "HTTPError: HTTP Error 403: Forbidden"
           }
         ]
       },
@@ -7187,7 +7188,7 @@ const INLINE_MARKET_DEFENSE = {
             "is_available": false,
             "close": null,
             "pct_change": null,
-            "error_text": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+            "error_text": "HTTPError: HTTP Error 403: Forbidden"
           },
           {
             "name": "美国30年期国债收益率",
@@ -7197,7 +7198,7 @@ const INLINE_MARKET_DEFENSE = {
             "is_available": false,
             "close": null,
             "pct_change": null,
-            "error_text": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+            "error_text": "HTTPError: HTTP Error 403: Forbidden"
           }
         ]
       },
@@ -7205,7 +7206,7 @@ const INLINE_MARKET_DEFENSE = {
         "rule_name": "A股主线高beta杀跌",
         "score": 2,
         "threshold_text": "CPO、PCB、先进封装、AI算力等系统近期高beta主线中，至少一个板块单日跌幅达到4%。",
-        "observed_text": "数据源暂不可用，未触发该规则。",
+        "observed_text": "共封装光学(CPO)+7.54%，PCB概念+6.41%，先进封装+8.32%，存储芯片+9.24%，英伟达概念+6.40%，算力租赁+2.80%。",
         "is_triggered": false,
         "data_source_list": [
           {
@@ -7213,60 +7214,60 @@ const INLINE_MARKET_DEFENSE = {
             "symbol": "共封装光学(CPO)",
             "source": "akshare_ths_concept_info",
             "source_url": null,
-            "is_available": false,
+            "is_available": true,
             "close": null,
-            "pct_change": null,
-            "error_text": "ConnectionError: HTTPSConnectionPool(host='q.10jqka.com.cn', port=443): Max retries exceeded with url: /gn/detail/code/307822/ (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x10840eeb0>: Failed to resolve 'q.10jqka.com.cn' ([Errno 8] nodename nor servname provided, or not known)\"))"
+            "pct_change": 7.54,
+            "error_text": null
           },
           {
             "name": "PCB概念",
             "symbol": "PCB概念",
             "source": "akshare_ths_concept_info",
             "source_url": null,
-            "is_available": false,
+            "is_available": true,
             "close": null,
-            "pct_change": null,
-            "error_text": "ConnectionError: HTTPSConnectionPool(host='q.10jqka.com.cn', port=443): Max retries exceeded with url: /gn/detail/code/307822/ (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x108439cd0>: Failed to resolve 'q.10jqka.com.cn' ([Errno 8] nodename nor servname provided, or not known)\"))"
+            "pct_change": 6.41,
+            "error_text": null
           },
           {
             "name": "先进封装",
             "symbol": "先进封装",
             "source": "akshare_ths_concept_info",
             "source_url": null,
-            "is_available": false,
+            "is_available": true,
             "close": null,
-            "pct_change": null,
-            "error_text": "ConnectionError: HTTPSConnectionPool(host='q.10jqka.com.cn', port=443): Max retries exceeded with url: /gn/detail/code/307822/ (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x10847f7c0>: Failed to resolve 'q.10jqka.com.cn' ([Errno 8] nodename nor servname provided, or not known)\"))"
+            "pct_change": 8.32,
+            "error_text": null
           },
           {
             "name": "存储芯片",
             "symbol": "存储芯片",
             "source": "akshare_ths_concept_info",
             "source_url": null,
-            "is_available": false,
+            "is_available": true,
             "close": null,
-            "pct_change": null,
-            "error_text": "ConnectionError: HTTPSConnectionPool(host='q.10jqka.com.cn', port=443): Max retries exceeded with url: /gn/detail/code/307822/ (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x1084862b0>: Failed to resolve 'q.10jqka.com.cn' ([Errno 8] nodename nor servname provided, or not known)\"))"
+            "pct_change": 9.24,
+            "error_text": null
           },
           {
             "name": "英伟达概念",
             "symbol": "英伟达概念",
             "source": "akshare_ths_concept_info",
             "source_url": null,
-            "is_available": false,
+            "is_available": true,
             "close": null,
-            "pct_change": null,
-            "error_text": "ConnectionError: HTTPSConnectionPool(host='q.10jqka.com.cn', port=443): Max retries exceeded with url: /gn/detail/code/307822/ (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x10847f9d0>: Failed to resolve 'q.10jqka.com.cn' ([Errno 8] nodename nor servname provided, or not known)\"))"
+            "pct_change": 6.4,
+            "error_text": null
           },
           {
             "name": "算力租赁",
             "symbol": "算力租赁",
             "source": "akshare_ths_concept_info",
             "source_url": null,
-            "is_available": false,
+            "is_available": true,
             "close": null,
-            "pct_change": null,
-            "error_text": "ConnectionError: HTTPSConnectionPool(host='q.10jqka.com.cn', port=443): Max retries exceeded with url: /gn/detail/code/307822/ (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x1083d4790>: Failed to resolve 'q.10jqka.com.cn' ([Errno 8] nodename nor servname provided, or not known)\"))"
+            "pct_change": 2.8,
+            "error_text": null
           }
         ]
       },
@@ -7300,7 +7301,7 @@ const INLINE_MARKET_DEFENSE = {
         "source": "yahoo_chart",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EIXIC?range=5d&interval=1d",
         "is_available": false,
-        "error_text": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+        "error_text": "HTTPError: HTTP Error 403: Forbidden"
       },
       {
         "market": "overseas",
@@ -7309,7 +7310,7 @@ const INLINE_MARKET_DEFENSE = {
         "source": "yahoo_chart",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ESOX?range=5d&interval=1d",
         "is_available": false,
-        "error_text": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+        "error_text": "HTTPError: HTTP Error 403: Forbidden"
       },
       {
         "market": "overseas",
@@ -7318,7 +7319,7 @@ const INLINE_MARKET_DEFENSE = {
         "source": "yahoo_chart",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EKS11?range=5d&interval=1d",
         "is_available": false,
-        "error_text": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+        "error_text": "HTTPError: HTTP Error 403: Forbidden"
       },
       {
         "market": "overseas",
@@ -7327,7 +7328,7 @@ const INLINE_MARKET_DEFENSE = {
         "source": "yahoo_chart",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5EN225?range=5d&interval=1d",
         "is_available": false,
-        "error_text": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+        "error_text": "HTTPError: HTTP Error 403: Forbidden"
       },
       {
         "market": "overseas",
@@ -7336,7 +7337,7 @@ const INLINE_MARKET_DEFENSE = {
         "source": "yahoo_chart",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ETNX?range=5d&interval=1d",
         "is_available": false,
-        "error_text": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+        "error_text": "HTTPError: HTTP Error 403: Forbidden"
       },
       {
         "market": "overseas",
@@ -7345,55 +7346,61 @@ const INLINE_MARKET_DEFENSE = {
         "source": "yahoo_chart",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/%5ETYX?range=5d&interval=1d",
         "is_available": false,
-        "error_text": "URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+        "error_text": "HTTPError: HTTP Error 403: Forbidden"
       },
       {
         "market": "a_share_theme",
         "symbol": "共封装光学(CPO)",
         "name": "共封装光学(CPO)",
         "source": "akshare_ths_concept_info",
-        "is_available": false,
-        "error_text": "ConnectionError: HTTPSConnectionPool(host='q.10jqka.com.cn', port=443): Max retries exceeded with url: /gn/detail/code/307822/ (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x10840eeb0>: Failed to resolve 'q.10jqka.com.cn' ([Errno 8] nodename nor servname provided, or not known)\"))"
+        "is_available": true,
+        "pct_change": 7.54,
+        "amount_yi": 3470.7
       },
       {
         "market": "a_share_theme",
         "symbol": "PCB概念",
         "name": "PCB概念",
         "source": "akshare_ths_concept_info",
-        "is_available": false,
-        "error_text": "ConnectionError: HTTPSConnectionPool(host='q.10jqka.com.cn', port=443): Max retries exceeded with url: /gn/detail/code/307822/ (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x108439cd0>: Failed to resolve 'q.10jqka.com.cn' ([Errno 8] nodename nor servname provided, or not known)\"))"
+        "is_available": true,
+        "pct_change": 6.41,
+        "amount_yi": 2024.66
       },
       {
         "market": "a_share_theme",
         "symbol": "先进封装",
         "name": "先进封装",
         "source": "akshare_ths_concept_info",
-        "is_available": false,
-        "error_text": "ConnectionError: HTTPSConnectionPool(host='q.10jqka.com.cn', port=443): Max retries exceeded with url: /gn/detail/code/307822/ (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x10847f7c0>: Failed to resolve 'q.10jqka.com.cn' ([Errno 8] nodename nor servname provided, or not known)\"))"
+        "is_available": true,
+        "pct_change": 8.32,
+        "amount_yi": 2253.73
       },
       {
         "market": "a_share_theme",
         "symbol": "存储芯片",
         "name": "存储芯片",
         "source": "akshare_ths_concept_info",
-        "is_available": false,
-        "error_text": "ConnectionError: HTTPSConnectionPool(host='q.10jqka.com.cn', port=443): Max retries exceeded with url: /gn/detail/code/307822/ (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x1084862b0>: Failed to resolve 'q.10jqka.com.cn' ([Errno 8] nodename nor servname provided, or not known)\"))"
+        "is_available": true,
+        "pct_change": 9.24,
+        "amount_yi": 2751.39
       },
       {
         "market": "a_share_theme",
         "symbol": "英伟达概念",
         "name": "英伟达概念",
         "source": "akshare_ths_concept_info",
-        "is_available": false,
-        "error_text": "ConnectionError: HTTPSConnectionPool(host='q.10jqka.com.cn', port=443): Max retries exceeded with url: /gn/detail/code/307822/ (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x10847f9d0>: Failed to resolve 'q.10jqka.com.cn' ([Errno 8] nodename nor servname provided, or not known)\"))"
+        "is_available": true,
+        "pct_change": 6.4,
+        "amount_yi": 935.07
       },
       {
         "market": "a_share_theme",
         "symbol": "算力租赁",
         "name": "算力租赁",
         "source": "akshare_ths_concept_info",
-        "is_available": false,
-        "error_text": "ConnectionError: HTTPSConnectionPool(host='q.10jqka.com.cn', port=443): Max retries exceeded with url: /gn/detail/code/307822/ (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x1083d4790>: Failed to resolve 'q.10jqka.com.cn' ([Errno 8] nodename nor servname provided, or not known)\"))"
+        "is_available": true,
+        "pct_change": 2.8,
+        "amount_yi": 829.47
       }
     ],
     "source_note_list": [
