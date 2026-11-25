@@ -1,14 +1,14 @@
 {
   "market_defense_signal": {
     "is_active": false,
-    "signal_date": "2026-11-09",
-    "generated_at": "2026-11-09T17:09:21",
+    "signal_date": "2026-11-25",
+    "generated_at": "2026-11-25T17:00:31",
     "defense_level": "normal_attack",
     "headline_text": "市场防守信号未触发，系统维持正常进攻模式",
-    "summary_text": "当前防守分数为0，未达到7分阈值；full pipeline 将继续原始股票筛选链路。",
+    "summary_text": "当前防守分数为2，未达到7分阈值；full pipeline 将继续原始股票筛选链路。",
     "suggested_action_text": "维持正常股票筛选和TOP8推荐。",
     "cool_down_text": "建议观察1-3个交易日：海外科技股不再连续急跌、A股高beta主线缩量止跌，再恢复进攻型TOP8推荐。",
-    "trigger_score": 0,
+    "trigger_score": 2,
     "trigger_threshold": 7,
     "calculation_method_text": "防守分数满分10分，达到7分进入防守模式；达到9分进入空仓防守。单一市场下跌不会直接触发，必须出现跨市场共振或A股主线自身破位。",
     "trigger_rule_list": [
@@ -103,8 +103,8 @@
         "rule_name": "A股主线高beta杀跌",
         "score": 2,
         "threshold_text": "CPO、PCB、先进封装、AI算力等系统近期高beta主线中，至少一个板块单日跌幅达到4%。",
-        "observed_text": "共封装光学(CPO)+1.58%，PCB概念+1.11%，先进封装+0.68%，存储芯片+0.42%，英伟达概念+1.01%，算力租赁+0.05%。",
-        "is_triggered": false,
+        "observed_text": "共封装光学(CPO)-5.58%，PCB概念-6.00%，先进封装-6.84%，存储芯片-7.30%，英伟达概念-4.92%，算力租赁-4.37%。",
+        "is_triggered": true,
         "data_source_list": [
           {
             "name": "共封装光学(CPO)",
@@ -113,7 +113,7 @@
             "source_url": null,
             "is_available": true,
             "close": null,
-            "pct_change": 1.58,
+            "pct_change": -5.58,
             "error_text": null
           },
           {
@@ -123,7 +123,7 @@
             "source_url": null,
             "is_available": true,
             "close": null,
-            "pct_change": 1.11,
+            "pct_change": -6.0,
             "error_text": null
           },
           {
@@ -133,7 +133,7 @@
             "source_url": null,
             "is_available": true,
             "close": null,
-            "pct_change": 0.68,
+            "pct_change": -6.84,
             "error_text": null
           },
           {
@@ -143,7 +143,7 @@
             "source_url": null,
             "is_available": true,
             "close": null,
-            "pct_change": 0.42,
+            "pct_change": -7.3,
             "error_text": null
           },
           {
@@ -153,7 +153,7 @@
             "source_url": null,
             "is_available": true,
             "close": null,
-            "pct_change": 1.01,
+            "pct_change": -4.92,
             "error_text": null
           },
           {
@@ -163,7 +163,7 @@
             "source_url": null,
             "is_available": true,
             "close": null,
-            "pct_change": 0.05,
+            "pct_change": -4.37,
             "error_text": null
           }
         ]
@@ -177,13 +177,16 @@
         "data_source_list": []
       }
     ],
-    "trigger_list": [],
+    "trigger_list": [
+      "A股主线高beta杀跌：共封装光学(CPO)-5.58%，PCB概念-6.00%，先进封装-6.84%，存储芯片-7.30%，英伟达概念-4.92%，算力租赁-4.37%。"
+    ],
     "affected_theme_list": [
-      "CPO",
-      "半导体",
-      "PCB",
+      "共封装光学(CPO)",
+      "PCB概念",
       "先进封装",
-      "AI算力硬件"
+      "存储芯片",
+      "英伟达概念",
+      "算力租赁"
     ],
     "resume_condition_list": [
       "最快：1-3天。昨天是恐慌错杀，今天/明天马上放量收回，SOX/SMH 不再新低，QQQM 收复大跌阴线一半以上。这个就是 V 型修复，可以小仓先上。",
@@ -251,8 +254,8 @@
         "name": "共封装光学(CPO)",
         "source": "akshare_ths_concept_info",
         "is_available": true,
-        "pct_change": 1.58,
-        "amount_yi": 2302.01
+        "pct_change": -5.58,
+        "amount_yi": 2369.52
       },
       {
         "market": "a_share_theme",
@@ -260,8 +263,8 @@
         "name": "PCB概念",
         "source": "akshare_ths_concept_info",
         "is_available": true,
-        "pct_change": 1.11,
-        "amount_yi": 1363.22
+        "pct_change": -6.0,
+        "amount_yi": 1299.25
       },
       {
         "market": "a_share_theme",
@@ -269,8 +272,8 @@
         "name": "先进封装",
         "source": "akshare_ths_concept_info",
         "is_available": true,
-        "pct_change": 0.68,
-        "amount_yi": 1494.75
+        "pct_change": -6.84,
+        "amount_yi": 1638.67
       },
       {
         "market": "a_share_theme",
@@ -278,8 +281,8 @@
         "name": "存储芯片",
         "source": "akshare_ths_concept_info",
         "is_available": true,
-        "pct_change": 0.42,
-        "amount_yi": 1732.98
+        "pct_change": -7.3,
+        "amount_yi": 1826.91
       },
       {
         "market": "a_share_theme",
@@ -287,8 +290,8 @@
         "name": "英伟达概念",
         "source": "akshare_ths_concept_info",
         "is_available": true,
-        "pct_change": 1.01,
-        "amount_yi": 634.53
+        "pct_change": -4.92,
+        "amount_yi": 701.71
       },
       {
         "market": "a_share_theme",
@@ -296,8 +299,8 @@
         "name": "算力租赁",
         "source": "akshare_ths_concept_info",
         "is_available": true,
-        "pct_change": 0.05,
-        "amount_yi": 688.93
+        "pct_change": -4.37,
+        "amount_yi": 655.41
       }
     ],
     "source_note_list": [
